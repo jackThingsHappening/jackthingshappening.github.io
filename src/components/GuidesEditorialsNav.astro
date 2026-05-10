@@ -1,5 +1,5 @@
 ---
-export type ActiveTab = 'all' | 'guides' | 'editorials';
+export type ActiveTab = 'all' | 'interactive' | 'guides' | 'editorials';
 
 interface Props {
   active: ActiveTab;
@@ -15,9 +15,10 @@ const linkClass = (tab: ActiveTab) =>
 
 <nav class="flex gap-5 pt-10 text-2xl md:text-[1.7rem]" aria-label="Guides and editorials">
   <a href="/" class={linkClass('all')}>All</a>
+  <a href="/chattanooga/guides/tag/interactive" class={linkClass('interactive')}>Interactive</a>
   <a href="/chattanooga/guides" class={linkClass('guides')}>
     <span class="md:hidden">Longform</span>
     <span class="hidden md:inline">Longform Guides</span>
   </a>
-  <a href="/chattanooga/editorials" class={linkClass('editorials')}>Editorials</a>
+
 </nav>

@@ -84,19 +84,20 @@ venue = eventDateDetails && eventDateDetails.venue ?  eventDateDetails.venue : v
 address = eventDateDetails && eventDateDetails.address ?  eventDateDetails.address : address
 ticketsLink = eventDateDetails && eventDateDetails.ticketsLink ?  eventDateDetails.ticketsLink : ticketsLink
 eventLink = eventDateDetails && eventDateDetails.eventLink ?  eventDateDetails.eventLink : eventLink
+const hasMetadata = !!(pubDate || time || venue || address || entranceCost || author || readTime || lastUpdated || originalDate || geoCoverage || (neighborhoods && neighborhoods.length) || seasonality || parking || accessibilityNotes || kidFriendly !== undefined || petFriendly !== undefined || (bestFor && bestFor.length) || eventLink || ticketsLink || (tags && tags.length > 0) || (sources && sources.length) || displayDates.length > 0);
 ---
-<div class="header-styles mb-10 pt-14 pb-14 lg:flex-wrap md:flex-wrap sm:flex-nowrap text-xl">
+<div class={`header-styles pt-14 pb-14 lg:flex-wrap md:flex-wrap sm:flex-nowrap text-xl ${!hasMetadata && !displaySeriesLabel ? 'mb-0' : 'mb-10'}`}>
   <header class="max-w-5xl content max-w-5xl mx-auto px-3 text-3xl tracking-wide">
     {displaySeriesLabel ? (
       <h2 class="text-xl font-semibold tracking-widest">
         {displaySeriesLabel}
       </h2>
     ) : null}
-    <h1 class="break-words" style="font-family: 'Libre Baskerville', serif; font-size: clamp(2.75rem, 5vw, 4.5rem);">{title} {pubDate && (
+    <h1 class="break-words mb-0" style="font-family: 'Libre Baskerville', serif; font-size: clamp(2.75rem, 5vw, 4.5rem);">{title} {pubDate && (
      `: ${subTitle}`
    )}</h1>
  </header>
-  <div class="max-w-5xl content max-w-5xl mx-auto px-3 text-lg">
+  {hasMetadata && <div class="max-w-5xl content max-w-5xl mx-auto px-3 text-lg">
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-1">
       {pubDate ? <div><span class="font-semibold">When:</span> {pubDate} {`(${dayOfWeek})`}</div> : ""}
       {time ? <div><span class="font-semibold">Time:</span> {time}</div> : ""}
@@ -162,7 +163,7 @@ eventLink = eventDateDetails && eventDateDetails.eventLink ?  eventDateDetails.e
         </ul>
       </div>
     )}
-  </div>
+  </div>}
 </div>
 
 <script>
@@ -176,7 +177,7 @@ eventLink = eventDateDetails && eventDateDetails.eventLink ?  eventDateDetails.e
     }
   }
 </script>
-<article class="max-w-5xl mx-auto px-3 text-xl tracking-wide">
+<article class={`max-w-5xl mx-auto px-3 text-xl tracking-wide ${!hasMetadata && !displaySeriesLabel ? 'pt-10' : ''}`}>
 
   <!-- Image -->
   {hero && <img class="rounded-xl mx-auto" style="min-width: 80%;" loading="lazy" src={hero} alt={title} />}
