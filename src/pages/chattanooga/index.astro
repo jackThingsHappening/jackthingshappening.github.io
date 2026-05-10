@@ -1,0 +1,222 @@
+---
+import BaseHead from '../../components/Head/BaseHead.astro';
+import Nav from '../../components/Nav.astro';
+import Card from '../../components/Card.astro';
+import GuidesEditorialsNav from '../../components/GuidesEditorialsNav.astro';
+import EventsNav from '../../components/EventsNav.astro';
+import ExploreHeader from '../../components/ExploreHeader.astro';
+import Footer from '../../components/Footer/Footer.astro';
+import Paginator from '../../components/Paginator.astro';
+
+interface MarkdownFrontmatter {
+  date: number;
+}
+
+const title = 'Things Happening';
+const seoDescription = 'Helping you explore and enjoy your local city! Things Happening guides you and your family to fun adventures and experiences in your city and beyond.';
+const city = "Chattanooga";
+
+const allGuides = (await Astro.glob('./guides/*.mdx')).filter(
+  (post) => post.frontmatter.published !== false
+);
+const allEditorials = (await Astro.glob('./editorials/*.mdx')).filter(
+  (post) => post.frontmatter.published !== false
+);
+const allEvents = (await Astro.glob('./**/**/*.mdx')).filter(
+  (post) => post.frontmatter.published !== false
+);
+
+// Format guides
+const guides = allGuides.map((p) => ({
+  ...p.frontmatter,
+  url: p.url,
+  type: 'guide',
+}));
+
+// Format editorials
+const editorials = allEditorials.map((p) => ({
+  ...p.frontmatter,
+  url: p.url,
+  type: 'editorial',
+}));
+
+// Format events similar to pagination logic
+const expanded = [];
+
+for (const file of allEvents) {
+  const frontmatter = file.frontmatter;
+  const baseUrl = file.url;
+
+  if (frontmatter.eventDatesDetails) {
+    frontmatter.eventDatesDetails.forEach((detail) => {
+      const slugifiedTitle = detail.eventTitle
+        ? detail.eventTitle
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-')
+            .replace(/^-|-$/g, '')
+        : '';
+
+      expanded.push({
+        ...frontmatter,
+        pubDate: detail.date,
+        eventTitle: detail.eventTitle,
+        entranceCost: detail.entranceCost,
+        time: detail.time,
+        topDetails: detail.topDetails,
+        url: `${baseUrl}/${detail.date}/${slugifiedTitle}`,
+        type: 'event',
+      });
+    });
+  } else if (frontmatter.eventDates) {
+    frontmatter.eventDates.forEach((date) => {
+      expanded.push({
+        ...frontmatter,
+        pubDate: date,
+        url: `${baseUrl}?date=${date}`,
+        type: 'event',
+      });
+    });
+  } else {
+    expanded.push({
+      ...frontmatter,
+      url: baseUrl,
+      type: 'event',
+    });
+  }
+}
+
+// Filter & sort events
+const today = new Date();
+today.setDate(today.getDate() - 1);
+today.setHours(0, 0, 0, 0);
+
+const sortedEvents = expanded
+  .filter((e) => new Date(e.pubDate) >= today)
+  .sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+
+// Merge guides and editorials, sort by lastUpdated
+const allContent = [...guides, ...editorials];
+const sortedContent = allContent.sort((a, b) => new Date(b.lastUpdated) - new Date(a.lastUpdated));
+
+// Map content tags to three homepage groupings
+const OUTDOORS_TAGS = ['outdoors', 'editorial'];
+const LIVE_EVENTS_TAGS = ['music', 'live-events', 'arts', 'sports'];
+
+function getSectionKey(item: { tags?: Array<{ type: string; tag: string }>; type?: string }) {
+  const tags = item.tags ?? [];
+  const first = tags.find((t) => t.tag !== 'longform');
+  const tag = first ? first.tag : (item.type === 'editorial' ? 'editorial' : 'around-the-city');
+  if (OUTDOORS_TAGS.includes(tag)) return 'outdoors';
+  if (LIVE_EVENTS_TAGS.includes(tag)) return 'live-events-and-performances';
+  return 'around-the-city';
+}
+
+const SECTION_LABELS: Record<string, string> = {
+  'outdoors': 'Outdoors in the National Park City',
+  'live-events-and-performances': 'Live Events and Performances',
+  'around-the-city': 'Around the city',
+};
+const SECTION_TAG_SLUG: Record<string, string> = {
+  'outdoors': 'outdoors',
+  'live-events-and-performances': 'live-events',
+  'around-the-city': 'around-the-city',
+};
+const SECTION_DESCRIPTIONS: Record<string, string> = {
+  'outdoors': 'Hikes, parks, trails, and outdoor adventures in and around Chattanooga',
+  'live-events-and-performances': 'Live music, theatre, performing arts, and sports to see in person',
+  'around-the-city': 'Tours, history, food, and ways to explore the city like a local',
+};
+const SECTION_ORDER = ['live-events-and-performances', 'around-the-city', 'outdoors'];
+
+// Group content by section, each section sorted by lastUpdated
+const bySection: Record<string, typeof sortedContent> = {};
+for (const item of sortedContent) {
+  const key = getSectionKey(item);
+  if (!bySection[key]) bySection[key] = [];
+  bySection[key].push(item);
+}
+const SECTION_PREVIEW_SIZE = 3;
+
+const eventsPage = sortedEvents.slice(0, 9);
+
+const page = {
+  currentPage: 1,
+  lastPage: Math.max(
+    Math.ceil(sortedEvents.length / 9),
+    Math.ceil(sortedContent.length / 9)
+  ),
+  url: '/chattanooga',
+};
+---
+
+<html lang="en">
+<head>
+  <BaseHead title={title} description={seoDescription} />
+</head>
+
+<body class="text-black font-body leading-normal personality-casual">
+  <Nav />
+  <main>
+    {eventsPage.length > 0 && (
+      <article id="events" class="w-full px-4 md:px-8 lg:px-16 mt-8 pb-4">
+        <header class="pt-10">
+          <h2 class="font-jakarta font-bold text-5xl md:text-6xl leading-[1.2]">
+            A simple way to find things happening in <span class="text-customGreen1">Chattanooga</span><span class="text-customGreen1">.</span>
+          </h2>
+          <p class="text-gray-600 text-3xl mt-3 mb-6">Also check out our <a href="/chattanooga/guides/tag/interactive" class="text-customGreen1 underline decoration-black underline-offset-8 [text-decoration-skip-ink:none] hover:opacity-70 transition-opacity">interactive</a> and <a href="/chattanooga/guides" class="text-customGreen1 underline decoration-black underline-offset-8 [text-decoration-skip-ink:none] hover:opacity-70 transition-opacity">longform</a> guides<span class="text-customGreen1 text-3xl">.</span></p>
+        </header>
+        <EventsNav active="all" />
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 py-8">
+          {eventsPage.map((e) => (
+            <div class="col-span-1">
+              <Card post={e} />
+            </div>
+          ))}
+        </section>
+        <div class="mt-4">
+          <a href="/chattanooga/events/page/1" class="text-customGreen1 font-semibold underline decoration-black hover:opacity-90 transition-colors text-3xl">View More Events</a>
+        </div>
+      </article>
+    )}
+
+    <article class="w-full px-4 md:px-8 lg:px-16 mt-8">
+      <ExploreHeader>
+        Explore <span class="text-customGreen1">{city}, TN</span> with our Guides<span class="text-customGreen1">.</span>
+      </ExploreHeader>
+      <GuidesEditorialsNav active="all" />
+      {SECTION_ORDER.filter((key) => bySection[key]?.length).map((key) => {
+        const items = bySection[key].slice(0, SECTION_PREVIEW_SIZE);
+        const label = SECTION_LABELS[key] ?? key;
+        const description = SECTION_DESCRIPTIONS[key] ?? '';
+        return (
+          <section class="pt-16 first:pt-8 pb-4" aria-labelledby={`section-${key}`}>
+            <h2 id={`section-${key}`} class="font-jakarta font-semibold text-4xl md:text-5xl text-gray-800 mb-3 leading-none">{label}<span class="text-customGreen1 font-bold text-5xl">.</span></h2>
+            {description && <p class="text-gray-600 text-2xl mb-8">{description}</p>}
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
+              {items.map((item) => (
+                <div class="col-span-1">
+                  <Card post={item} />
+                </div>
+              ))}
+            </div>
+            {bySection[key].length > SECTION_PREVIEW_SIZE && (
+              <div class="mt-4">
+                <a href={SECTION_TAG_SLUG[key] ? `/chattanooga/guides/tag/${SECTION_TAG_SLUG[key]}` : '/chattanooga/guides'} class="text-customGreen1 font-semibold underline decoration-black hover:opacity-90 transition-colors text-xl">View all in {label} →</a>
+              </div>
+            )}
+          </section>
+        );
+      })}
+      {sortedContent.length > 15 && (
+        <div class="text-center mt-10 pt-6 border-t border-gray-200">
+          <a href="/chattanooga/guides/page/2" class="text-customGreen1 font-semibold underline decoration-black hover:opacity-90 transition-colors text-xl">View more →</a>
+        </div>
+      )}
+    </article>
+
+    <Paginator page={page} />
+  </main>
+
+  <Footer />
+</body>
+</html>
