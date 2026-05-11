@@ -1,5 +1,5 @@
 ---
-// import EmailSignup from './Subscribe/EmailSignup.astro'
+import EmailSignup from './EmailSignup.astro'
 import dayjs from 'dayjs'
 
 export interface Props {
@@ -177,6 +177,11 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
     }
   }
 </script>
+<div class="max-w-5xl mx-auto px-3 mt-8 mb-4">
+  <p class="text-gray-600 text-xl mb-3">Get more local guides and events in your inbox.</p>
+  <EmailSignup />
+</div>
+
 <article class={`max-w-5xl mx-auto px-3 text-xl tracking-wide ${!hasMetadata && !displaySeriesLabel ? 'pt-10' : ''}`}>
 
   <!-- Image -->
@@ -212,8 +217,7 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
     )}
   </div>
 
-  <div>
-  </div>
+
 </article>
 <style>
   .date-pill {

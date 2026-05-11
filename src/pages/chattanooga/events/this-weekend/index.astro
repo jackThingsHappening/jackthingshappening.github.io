@@ -4,6 +4,7 @@ import Nav from '../../../../components/Nav.astro';
 import EventsNav from '../../../../components/EventsNav.astro';
 import Card from '../../../../components/Card.astro';
 import Footer from '../../../../components/Footer/Footer.astro';
+import EmailSignup from '../../../../components/EmailSignup.astro';
 
 const title = 'This Weekend in Chattanooga';
 const seoDescription = 'Events happening this weekend in Chattanooga, TN.';
@@ -66,6 +67,10 @@ allPostsIncludingMultipleDates = allPostsIncludingMultipleDates
           <p class="col-span-3 text-xl text-gray-500">No events this weekend — check back soon.</p>
         )}
       </section>
+      <div class="mt-12 pt-8 border-t border-gray-200">
+        <p class="text-gray-600 text-xl mb-3">Get more local guides and events in your inbox.</p>
+        <EmailSignup />
+      </div>
     </article>
   </main>
   <Footer />

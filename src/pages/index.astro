@@ -2,6 +2,7 @@
 import BaseHead from '../components/Head/BaseHead.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer/Footer.astro';
+import EmailSignup from '../components/EmailSignup.astro';
 
 const title = 'Things Happening';
 const seoDescription = 'A simpler way to find things happening in your city.';
@@ -29,6 +30,11 @@ const seoDescription = 'A simpler way to find things happening in your city.';
       <div class="inline-flex items-center gap-3 border-2 border-gray-300 rounded-lg px-6 py-4 text-2xl font-semibold text-gray-400 w-fit cursor-not-allowed">
         <span>→</span> Knoxville, TN <span class="text-lg font-normal ml-2">coming soon</span>
       </div>
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-gray-200 max-w-3xl">
+      <p class="text-gray-600 text-xl mb-3">Get local guides and events in your inbox.</p>
+      <EmailSignup />
     </div>
   </main>
 
