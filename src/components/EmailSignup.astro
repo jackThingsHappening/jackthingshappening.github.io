@@ -2,9 +2,9 @@
 ---
 
 <form
+  id="ml-signup-form"
   action="https://assets.mailerlite.com/jsonp/930023/forms/120101421906396888/subscribe"
   method="post"
-  target="_blank"
   class="flex flex-col sm:flex-row gap-2 mt-2"
 >
   <input
@@ -31,7 +31,32 @@
     Subscribe
   </button>
 </form>
+<p id="ml-signup-msg" class="mt-2 text-base hidden"></p>
 
 <script>
-  fetch("https://assets.mailerlite.com/jsonp/930023/forms/120101421906396888/takel");
+  const form = document.getElementById('ml-signup-form');
+  const msg = document.getElementById('ml-signup-msg');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    try {
+      const res = await fetch(form.action, { method: 'POST', body: data });
+      const json = await res.json();
+      if (json.success) {
+        form.classList.add('hidden');
+        msg.textContent = "You're in. Thanks for subscribing.";
+        msg.classList.remove('hidden', 'text-red-600');
+        msg.classList.add('text-green-700');
+      } else {
+        msg.textContent = 'Something went wrong. Please try again.';
+        msg.classList.remove('hidden');
+        msg.classList.add('text-red-600');
+      }
+    } catch {
+      msg.textContent = 'Something went wrong. Please try again.';
+      msg.classList.remove('hidden');
+      msg.classList.add('text-red-600');
+    }
+  });
 </script>
