@@ -14,21 +14,12 @@ const linkClass = (tab: ActiveTab) =>
 ---
 
 <nav class="flex flex-wrap gap-x-3 gap-y-2 pt-12 text-lg md:gap-x-5 md:text-[1.7rem]" aria-label="Event filters">
-  <a href="/chattanooga#events" class={linkClass('all')}>All</a>
-  <a href="/chattanooga/events/this-weekend" class={linkClass('this-weekend')}>
-    <span class="md:hidden">Weekend</span>
-    <span class="hidden md:inline">This Weekend</span>
+  <a href="/chattanooga#events" class={linkClass('all')}>
+    <span class="md:hidden">All</span>
+    <span class="hidden md:inline">All Events</span>
   </a>
-  <a href="/chattanooga/events/this-week" class={linkClass('this-week')}>
-    <span class="md:hidden">Week</span>
-    <span class="hidden md:inline">This Week</span>
-  </a>
-  <a href="/chattanooga/events/this-month" class={linkClass('this-month')}>
-    <span class="md:hidden">Month</span>
-    <span class="hidden md:inline">This Month</span>
-  </a>
-  <a href="/chattanooga/events/all-weekends" class={linkClass('all-weekends')}>
-    <span class="md:hidden">Weekends</span>
-    <span class="hidden md:inline">Future Weekends</span>
-  </a>
+  <a href="/chattanooga/events/this-weekend" class={linkClass('this-weekend')}>This Weekend</a>
+  <a href="/chattanooga/events/this-week" class={linkClass('this-week')}>This Week</a>
+  <a href="/chattanooga/events/this-month" class={linkClass('this-month')}>This Month</a>
+  <a href="/chattanooga/events/all-weekends" class={linkClass('all-weekends')}>Future Weekends</a>
 </nav>

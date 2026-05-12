@@ -59,9 +59,9 @@ export interface Props {
 
 let { address, author, readTime, matchedDetails, eventDatesDetails, eventDates, eventLink, entranceCost, lastUpdated, originalDate, title, time, pubDate, tags, ticketsLink, venue, venueDetails, hero, youtube,
   // Additional optional metadata
-  seoDescription, featured, geoCoverage, neighborhoods, seasonality, accessibilityNotes, parking, kidFriendly, petFriendly, bestFor, sources, pageItems, seriesLabel, pathname } = Astro.props;
+  seoDescription, featured, geoCoverage, neighborhoods, seasonality, accessibilityNotes, parking, kidFriendly, petFriendly, bestFor, sources, pageItems, seriesLabel, pathname, hideSignup } = Astro.props;
 
-const displaySeriesLabel = seriesLabel ?? (pathname?.includes('/editorials/') ? 'A Things Happening Chattanooga Editorial' : 'The Chattanooga Guides Series');
+const displaySeriesLabel = seriesLabel ?? (pathname?.includes('/editorials/') ? 'A Things Happening Chattanooga Editorial' : pathname?.includes('/events/') ? 'Things Happening In Chattanooga' : 'The Chattanooga Guides Series');
 const displayDates = eventDates?.length
   ? eventDates
   : (eventDatesDetails?.map((d: any) => d.date) ?? []);
@@ -148,7 +148,7 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
     {displayDates.length > 0 && (
       <div class="mt-4">
         <span class="font-semibold">Upcoming Dates:</span>
-        <ul class="mt-2 flex flex-wrap gap-2">
+        <ul class="mt-2 flex flex-wrap gap-2 list-none p-0 m-0">
           {displayDates.map((d: string) => (
             <li>
               <a
@@ -177,10 +177,12 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
     }
   }
 </script>
-<div class="max-w-5xl mx-auto px-3 mt-8 mb-4">
-  <p class="text-gray-600 text-xl mb-3">Get more local guides and events in your inbox.</p>
-  <EmailSignup />
-</div>
+{!hideSignup && !pathname?.includes('/events/') && (
+  <div class="max-w-5xl mx-auto px-3 mt-8 mb-4">
+    <p class="text-gray-600 text-xl mb-3">Get more local guides and events in your inbox.</p>
+    <EmailSignup />
+  </div>
+)}
 
 <article class={`max-w-5xl mx-auto px-3 text-xl tracking-wide ${!hasMetadata && !displaySeriesLabel ? 'pt-10' : ''}`}>
 
@@ -217,6 +219,12 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
     )}
   </div>
 
+  {!hideSignup && pathname?.includes('/events/') && (
+    <div class="mt-12 pt-8 border-t border-gray-200">
+      <p class="text-gray-600 text-xl mb-3">Get more local guides and events in your inbox.</p>
+      <EmailSignup />
+    </div>
+  )}
 
 </article>
 <style>
@@ -226,7 +234,7 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
     border-radius: 9999px;
     border: 1.5px solid #d1d5db;
     font-size: 0.95rem;
-    color: #374151;
+    color: #ffffff;
     text-decoration: none;
     transition: border-color 0.1s, color 0.1s;
   }

@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
         with:
-          persist-credentials: false  # we'll use a token manually
+          token: ${{ secrets.PERSONAL_TOKEN }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -34,7 +34,4 @@ jobs:
           git commit -m "build" --allow-empty || echo "No changes to commit"
 
       - name: Push changes
-        uses: ad-m/github-push-action@v0.6.0
-        with:
-          github_token: ${{ secrets.PERSONAL_TOKEN }}
-          branch: main
+        run: git push origin main
