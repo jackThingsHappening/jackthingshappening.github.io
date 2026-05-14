@@ -8,7 +8,9 @@ description: string;
 }
 const { title, description } = Astro.props;
 
-let permalink = 'https://thingshappening-com.github.io.com';
+const siteUrl = 'https://thingshappening.com';
+const permalink = `${siteUrl}${Astro.url.pathname}`;
+const ogImage = `${siteUrl}/images/social.jpg`;
 ---
 
 <GoogleAnalytics />
@@ -27,14 +29,14 @@ let permalink = 'https://thingshappening-com.github.io.com';
 <meta property="og:url" content={permalink} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content="/images/social.jpg" />
+<meta property="og:image" content={ogImage} />
 
 
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={permalink} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content="/images/social.jpg" />
+<meta property="twitter:image" content={ogImage} />
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/toolbar/prism-toolbar.min.css" />

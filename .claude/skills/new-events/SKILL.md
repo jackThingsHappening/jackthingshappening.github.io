@@ -23,6 +23,19 @@ All configs have:
 
 ---
 
+## Step 2 — Check robots.txt
+
+Before fetching any page, check whether crawling is permitted.
+
+1. Derive the robots.txt URL from `url` (e.g. `https://example.com/robots.txt`)
+2. Fetch it with WebFetch
+3. Parse the file for `User-agent: *` and `User-agent: Claude` blocks — check both
+4. If the target path (or a parent path) appears under a `Disallow:` directive, **stop and report** that the site disallows crawling — do not proceed with any fetching
+5. If robots.txt is unreachable (404 or connection error), treat as permitted and continue
+6. If robots.txt exists but has no rule covering the target path, treat as permitted and continue
+
+---
+
 ## Workflow A — type: "recurring"
 
 Use this when the business runs the same events on a repeating schedule (weekly shows, trivia nights, etc.). Each event series has its own MDX file that persists indefinitely; only the `eventDates` array changes.
@@ -33,7 +46,7 @@ Config also contains:
   - `matchHint` — how to identify this series in the crawled page
 
 ### A1. Fetch the events page
-Use WebFetch on `url`. Look for recurring shows, schedules, or day-of-week patterns.
+Use WebFetch on `url` (robots.txt already cleared in Step 2). Look for recurring shows, schedules, or day-of-week patterns.
 
 ### A2. Extract dates per series
 For each entry in `events`:

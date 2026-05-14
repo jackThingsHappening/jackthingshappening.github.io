@@ -13,11 +13,8 @@ const linkClass = (tab: ActiveTab) =>
     : 'text-gray-600 hover:text-customGreen1 pb-1 border-b-2 border-transparent hover:border-black transition-colors';
 ---
 
-<nav class="flex flex-wrap gap-x-3 gap-y-2 pt-12 text-lg md:gap-x-5 md:text-[1.7rem]" aria-label="Event filters">
-  <a href="/chattanooga#events" class={linkClass('all')}>
-    <span class="md:hidden">All</span>
-    <span class="hidden md:inline">All Events</span>
-  </a>
+<nav class="flex flex-wrap gap-x-3 gap-y-2 pt-12 text-xl md:gap-x-5 md:text-[1.7rem]" aria-label="Event filters">
+  <a href="/chattanooga#events" class={linkClass('all')}>All Events</a>
   <a href="/chattanooga/events/this-weekend" class={linkClass('this-weekend')}>This Weekend</a>
   <a href="/chattanooga/events/this-week" class={linkClass('this-week')}>This Week</a>
   <a href="/chattanooga/events/this-month" class={linkClass('this-month')}>This Month</a>
