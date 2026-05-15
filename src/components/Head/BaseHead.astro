@@ -5,12 +5,13 @@ import '../../styles/main.scss'
 export interface Props {
 title: string;
 description: string;
+ogImage?: string;
 }
-const { title, description } = Astro.props;
+const { title, description, ogImage: ogImageProp } = Astro.props;
 
 const siteUrl = 'https://thingshappening.com';
 const permalink = `${siteUrl}${Astro.url.pathname}`;
-const ogImage = `${siteUrl}/images/social.jpg`;
+const ogImage = ogImageProp || `${siteUrl}/images/social.jpg`;
 ---
 
 <GoogleAnalytics />

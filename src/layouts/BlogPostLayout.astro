@@ -7,7 +7,7 @@ import Footer from '../components/Footer/Footer.astro';
 const {content} = Astro.props;
 let {address, author, eventLink, readTime, originalDate, matchedDetails, eventDatesDetails, eventDates, entranceCost, lastUpdated, ticketsLink, tags, title, time, description, pubDate, venue, venueDetails, hero, youtube,
   // Additional optional metadata
-  seoDescription, featured, geoCoverage, neighborhoods, seasonality, accessibilityNotes, parking, kidFriendly, petFriendly, bestFor, sources, pageItems, hideSignup} = content;
+  seoDescription, featured, geoCoverage, neighborhoods, seasonality, accessibilityNotes, parking, kidFriendly, petFriendly, bestFor, sources, pageItems, hideSignup, ogImage} = content;
 console.log(content)
 console.log("above")
 
@@ -15,7 +15,7 @@ title = title ? title : "";
 ---
 <html lang={ content.lang || 'en' }>
   <head>
-    <BaseHead title={title} description={seoDescription || description} />
+    <BaseHead title={title} description={seoDescription || description} ogImage={ogImage ? `https://thingshappening.com${ogImage}` : undefined} />
     <link rel="canonical" href={`https://thingshappening.com${Astro.url.pathname}`} />
     <script is:inline>
       if (window.location.search.includes('tags=') || window.location.search.includes('date=')) {
