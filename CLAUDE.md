@@ -1,0 +1,16 @@
+# Things Happening — Claude Notes
+
+## MDX HTML Rules
+
+MDX is strict about HTML tag matching. Every edit that touches HTML in an MDX file must leave all tags balanced.
+
+- When removing a block (e.g. a `<div class="pb-5">...</div>`), always remove both the opening AND closing tag together
+- When adding new HTML, count opens and closes before writing
+- Never remove just the inner content of a div and leave the shell — either keep the whole block or delete the whole block
+- After any edit to an MDX file that touches HTML structure, mentally trace the open/close nesting before saving
+
+Failure to do this causes MDX parse errors that break the entire page and require manual fixing.
+
+## Token Efficiency
+
+When processing multiple MDX files in a batch, do not use Read+Edit per file — that doubles tool calls and burns tokens fast. Use a single Bash script with python3 to read and write all files in one pass. Reserve Read+Edit for single-file runs where precision matters.
