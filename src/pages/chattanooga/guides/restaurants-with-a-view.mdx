@@ -60,7 +60,11 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
     <div class="flex flex-col md:flex-row md:items-center mb-3 pb-3 gap-2 md:gap-6">
       <h2 class="text-[2.5rem] mb-0" style="font-family: 'Libre Baskerville', serif;">View<span class="color-pink ml-1"><b>:</b></span></h2>
       <div class="flex flex-wrap gap-3">
-        <a href="/chattanooga/guides/restaurants-with-a-view?tags=water" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="water">Water</a>
+        <div class="relative">
+          <span class="hidden md:block absolute -top-7 left-1/2 -translate-x-1/2 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200" style="font-size: 11px;">Try Me ↓</span>
+          <span class="md:hidden absolute top-1/2 -translate-y-1/2 -right-16 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200 z-10" style="font-size: 11px;">← Try Me</span>
+          <a href="/chattanooga/guides/restaurants-with-a-view?tags=water" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="water">Water</a>
+        </div>
         <a href="/chattanooga/guides/restaurants-with-a-view?tags=rooftop" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="rooftop">Rooftop</a>
         <a href="/chattanooga/guides/restaurants-with-a-view?tags=mountain" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="mountain">Mountain</a>
       </div>
