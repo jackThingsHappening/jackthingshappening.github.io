@@ -97,6 +97,7 @@ When you encounter these, rewrite without them:
 - Passive enthusiasm: *is a great place to, is perfect for, is ideal for* (replace with a specific claim)
 - Hyphens in prose: never use hyphens to join words (all-ages, wood-fired, drive-thru, etc.) — write them as two words or one word instead
 - Em dashes as clause connectors: never use — to connect clauses. Replace with a comma or split into two sentences.
+- Em dashes in pageItems: never use — anywhere in a pageItem title or description (e.g. "Mean Mug Coffeehouse — North Shore" is wrong). Use a comma, parentheses, or rewrite to eliminate the separator entirely.
 - Overly formal combinations: *pairs well with* → use "works well with" or rewrite as a direct suggestion
 
 ---

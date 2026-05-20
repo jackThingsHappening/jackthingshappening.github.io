@@ -9,8 +9,8 @@ const { active } = Astro.props;
 
 const linkClass = (tab: ActiveTab) =>
   active === tab
-    ? 'text-customGreen1 font-semibold border-b-2 border-black pb-1'
-    : 'text-gray-600 hover:text-customGreen1 pb-1 border-b-2 border-transparent hover:border-black transition-colors';
+    ? 'text-customGreen1 font-medium border-b-2 border-logoDarkGreen pb-1'
+    : 'text-gray-600 hover:text-customGreen1 pb-1 border-b-2 border-transparent hover:border-logoDarkGreen transition-colors';
 ---
 
 <nav class="flex flex-wrap gap-x-3 gap-y-2 pt-12 text-xl md:gap-x-5 md:text-[1.7rem]" aria-label="Event filters">

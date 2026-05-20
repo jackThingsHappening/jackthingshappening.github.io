@@ -1,0 +1,87 @@
+---
+import BaseHead from '../../../../components/Head/BaseHead.astro';
+import Nav from '../../../../components/Nav.astro';
+import EventsNav from '../../../../components/EventsNav.astro';
+import Card from '../../../../components/Card.astro';
+import Footer from '../../../../components/Footer/Footer.astro';
+import EmailSignup from '../../../../components/EmailSignup.astro';
+
+export async function getStaticPaths() {
+  const allEvents = (await Astro.glob('../*.mdx')).filter(
+    (post) => post.frontmatter.published !== false
+  );
+
+  const tagSet = new Set(
+    allEvents.flatMap((post) =>
+      post.frontmatter.tags
+        ? post.frontmatter.tags
+            .filter((t) => t.type === 'event')
+            .map((t) => t.tag)
+        : []
+    )
+  );
+
+  return Array.from(tagSet)
+    .filter((tag): tag is string => Boolean(tag))
+    .map((tag) => ({ params: { tag } }));
+}
+
+const { tag } = Astro.params;
+
+const allEvents = (await Astro.glob('../*.mdx')).filter(
+  (post) =>
+    post.frontmatter.published !== false &&
+    post.frontmatter.tags?.some((t) => t.tag === tag)
+);
+
+let allPostsIncludingMultipleDates = [];
+allEvents.forEach((p) => {
+  const baseData = { ...p.frontmatter, url: p.url };
+  if (baseData.eventDates) {
+    baseData.eventDates.forEach((date) => {
+      allPostsIncludingMultipleDates.push({ ...baseData, pubDate: date, url: `${baseData.url}?date=${date}` });
+    });
+  } else {
+    allPostsIncludingMultipleDates.push(baseData);
+  }
+});
+
+allPostsIncludingMultipleDates.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+
+const displayTag = tag.charAt(0).toUpperCase() + tag.slice(1);
+const title = `${displayTag} Events in Chattanooga`;
+const seoDescription = `${displayTag} events happening in Chattanooga, TN.`;
+---
+
+<html lang="en">
+<head>
+  <BaseHead title={title} description={seoDescription} />
+</head>
+<body class="text-black font-body leading-normal personality-casual">
+  <Nav />
+  <main>
+    <article class="w-full px-4 md:px-8 lg:px-16 mt-8 pb-4">
+      <header class="pt-8">
+        <h1 class="font-jakarta font-medium text-5xl md:text-6xl leading-[1.2]">
+          {displayTag} in <span class="text-customGreen1">Chattanooga</span><span class="text-customGreen1">.</span>
+        </h1>
+        <p class="text-gray-600 text-xl3 mt-3 mb-6">{displayTag} events in Chattanooga</p>
+      </header>
+      <EventsNav active="all" />
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 py-8" data-test="articles-section">
+        {allPostsIncludingMultipleDates.map(p => (
+          <div class="col-span-1"><Card post={p} highlighted={tag} /></div>
+        ))}
+        {allPostsIncludingMultipleDates.length === 0 && (
+          <p class="col-span-3 text-xl text-gray-500">No {displayTag.toLowerCase()} events found.</p>
+        )}
+      </section>
+      <div class="mt-12 pt-8 border-t border-gray-200">
+        <p class="text-gray-600 text-xl mb-3">Get more local guides and events in your inbox.</p>
+        <EmailSignup />
+      </div>
+    </article>
+  </main>
+  <Footer />
+</body>
+</html>
