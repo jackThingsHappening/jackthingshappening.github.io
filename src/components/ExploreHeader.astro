@@ -5,7 +5,7 @@ interface Props {
 }
 
 const { weight = 'bold' } = Astro.props;
-const fontClass = weight === 'medium' ? 'font-medium' : 'font-semibold';
+const fontClass = weight === 'medium' ? 'font-semibold md:font-medium' : 'font-semibold md:font-medium';
 ---
 
 <header class="pt-8 content">
