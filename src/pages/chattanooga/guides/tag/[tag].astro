@@ -3,6 +3,7 @@ import Card from '../../../../components/Card.astro';
 import Nav from '../../../../components/Nav.astro';
 import BaseHead from '../../../../components/Head/BaseHead.astro';
 import ExploreHeader from '../../../../components/ExploreHeader.astro';
+import { expandEvents } from '../../../../utils/expandEvents';
 import Footer from '../../../../components/Footer/Footer.astro';
 import GuidesEditorialsNav from '../../../../components/GuidesEditorialsNav.astro';
 import type { ActiveTab } from '../../../../components/GuidesEditorialsNav.astro';
@@ -50,20 +51,7 @@ const description = 'An easier way to find  things to do in greater Chattanooga'
 const title = 'thingshappening';
 const seoDescription = 'An easier way to find  things happening';
 
-let allPostsIncludingMultipleDates = [];
-filteredPosts.forEach((p) => {
-  let baseData = Object.assign({}, p.frontmatter, {url: p.url});  // Create a copy of the base data
-
-  if (baseData.eventDates) {
-    baseData.eventDates.forEach((date, i) => {
-      const again = Object.assign({}, baseData, {pubDate: date, title: `${baseData.title}`, url: `${baseData.url}?date=${date}`});
-
-      allPostsIncludingMultipleDates.push(again);
-    })
-  } else {
-    allPostsIncludingMultipleDates.push(baseData); // Push base data if no eventDates
-  }
-});
+const allPostsIncludingMultipleDates = expandEvents(filteredPosts);
 ---
 
 <html>

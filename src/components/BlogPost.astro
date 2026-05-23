@@ -156,26 +156,32 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
     {displayDates.length > 0 && (
       <div class="mt-4">
         <span class="font-semibold">Upcoming Dates:</span>
-        <ul class="mt-2 flex flex-wrap gap-2 list-none p-0 m-0">
-          {displayDates.map((d: string) => {
-            let href = `?date=${d}`;
-            if (eventDatesDetails && pathname) {
+        {eventDatesDetails ? (
+          <ul class="mt-2 flex flex-wrap gap-2 list-none p-0 m-0">
+            {displayDates.map((d: string) => {
               const detail = eventDatesDetails.find((ed: any) => ed.date === d);
-              if (detail?.eventTitle) {
+              let href = `?date=${d}`;
+              if (detail?.eventTitle && pathname) {
                 const slug = detail.eventTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
                 const basePath = '/' + pathname.split('/').filter(Boolean).slice(0, 3).join('/');
                 href = `${basePath}/${d}/${slug}`;
               }
-            }
-            return (
-              <li>
-                <a href={href} data-date={d} class="date-pill">
-                  {dayjs(d).format('ddd MMM D')}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+              return (
+                <li>
+                  <a href={href} data-date={d} class="date-pill">
+                    {dayjs(d).format('ddd MMM D')}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        ) : (
+          <p class="mt-1 text-gray-300">
+            {displayDates.map((d: string, i: number) => (
+              <span>{dayjs(d).format('ddd MMM D')}{i < displayDates.length - 1 ? ' · ' : ''}</span>
+            ))}
+          </p>
+        )}
       </div>
     )}
   </div>}
@@ -205,7 +211,7 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
 </script>
 {!hideSignup && !pathname?.includes('/events/') && (
   <div class="max-w-5xl mx-auto px-3 mt-8 mb-4">
-    <p class="text-gray-600 text-xl mb-3">Get more local guides and events in your inbox.</p>
+    <p class="text-logoDarkGreen-600 text-2xl mb-3">Get our local guides and events updates.</p>
     <EmailSignup />
   </div>
 )}
@@ -247,7 +253,7 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
 
   {!hideSignup && pathname?.includes('/events/') && (
     <div class="mt-12 pt-8 border-t border-gray-200">
-      <p class="text-gray-600 text-xl mb-3">Get more local guides and events in your inbox.</p>
+      <p class="text-logoDarkGreen-600 text-2xl mb-3">Get our local guides and events updates.</p>
       <EmailSignup />
     </div>
   )}

@@ -6,6 +6,7 @@ import Card from '../../../../components/Card.astro';
 import Footer from '../../../../components/Footer/Footer.astro';
 import EmailSignup from '../../../../components/EmailSignup.astro';
 import ExploreHeader from '../../../../components/ExploreHeader.astro';
+import { expandEvents } from '../../../../utils/expandEvents';
 
 const title = 'This Weekend in Chattanooga';
 const seoDescription = 'Events happening this weekend in Chattanooga, TN.';
@@ -14,18 +15,7 @@ let allPosts = (await Astro.glob('../*.mdx')).filter(
   (post) => post.frontmatter.published !== false
 );
 
-let allPostsIncludingMultipleDates = [];
-
-allPosts.forEach((p) => {
-  const baseData = { ...p.frontmatter, url: p.url };
-  if (baseData.eventDates) {
-    baseData.eventDates.forEach((date) => {
-      allPostsIncludingMultipleDates.push({ ...baseData, pubDate: date, url: `${baseData.url}?date=${date}` });
-    });
-  } else {
-    allPostsIncludingMultipleDates.push(baseData);
-  }
-});
+let allPostsIncludingMultipleDates = expandEvents(allPosts);
 
 const today = new Date();
 today.setHours(0, 0, 0, 0);
