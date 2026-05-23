@@ -5,6 +5,7 @@ import EventsNav from '../../../../components/EventsNav.astro';
 import Card from '../../../../components/Card.astro';
 import Footer from '../../../../components/Footer/Footer.astro';
 import EmailSignup from '../../../../components/EmailSignup.astro';
+import ExploreHeader from '../../../../components/ExploreHeader.astro';
 
 export async function getStaticPaths() {
   const allEvents = (await Astro.glob('../*.mdx')).filter(
@@ -61,12 +62,9 @@ const seoDescription = `${displayTag} events happening in Chattanooga, TN.`;
   <Nav />
   <main>
     <article class="w-full px-4 md:px-8 lg:px-16 mt-8 pb-4">
-      <header class="pt-8">
-        <h1 class="font-jakarta font-medium text-5xl md:text-6xl leading-[1.2]">
-          {displayTag} in <span class="text-customGreen1">Chattanooga</span><span class="text-customGreen1">.</span>
-        </h1>
-        <p class="text-gray-600 text-xl3 mt-3 mb-6">{displayTag} events in Chattanooga</p>
-      </header>
+      <ExploreHeader subheading={`${displayTag} events in Chattanooga`}>
+        {displayTag} in <span class="text-customGreen1">Chattanooga</span><span class="text-customGreen1">.</span>
+      </ExploreHeader>
       <EventsNav active="all" />
       <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 py-8" data-test="articles-section">
         {allPostsIncludingMultipleDates.map(p => (

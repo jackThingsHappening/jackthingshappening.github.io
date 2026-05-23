@@ -32,3 +32,17 @@
   color: white;
   background: #3CB371;
 }
+
+.shimmer-text {
+  background: linear-gradient(90deg, #3CB371 40%, #a8f0c6 50%, #3CB371 60%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 7s linear infinite;
+}
+
+@keyframes shimmer {
+  from { background-position: 100% center; }
+  to   { background-position: -100% center; }
+}

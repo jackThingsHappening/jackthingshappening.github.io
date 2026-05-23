@@ -1,15 +1,20 @@
 ---
 interface Props {
-  /** Font weight for the heading: bold (home) or medium (guides/editorials) */
-  weight?: 'bold' | 'medium';
+  subheading?: string;
+  headingClass?: string;
+  subheadingClass?: string;
 }
 
-const { weight = 'bold' } = Astro.props;
-const fontClass = weight === 'medium' ? 'font-semibold md:font-medium' : 'font-semibold md:font-medium';
+const {
+  subheading,
+  headingClass = 'font-jakarta font-semibold text-5xl md:text-6xl leading-[1.2]',
+  subheadingClass = 'text-gray-600 text-xl3 mt-3 mb-6',
+} = Astro.props;
 ---
 
-<header class="pt-8 content">
-  <h1 class={`font-jakarta ${fontClass} text-5xl md:text-6xl leading-[1.2]`}>
+<header class="pt-8">
+  <h1 class={headingClass}>
     <slot />
   </h1>
+  {subheading && <p class={subheadingClass}>{subheading}</p>}
 </header>

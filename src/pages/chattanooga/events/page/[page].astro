@@ -4,6 +4,7 @@ import Nav from '../../../../components/Nav.astro';
 import Card from '../../../../components/Card.astro';
 import Footer from '../../../../components/Footer/Footer.astro';
 import Paginator from '../../../../components/Paginator.astro';
+import ExploreHeader from '../../../../components/ExploreHeader.astro';
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = (await Astro.glob('../*.mdx')).filter(
@@ -76,12 +77,13 @@ const { page } = Astro.props;
   <Nav />
   <main>
     <article class="w-full px-4 md:px-8 lg:px-16 mt-8 pb-4">
-      <header class="pt-8">
-        <h1 class="font-jakarta font-bold text-5xl md:text-6xl leading-[1.2]">
-          ThingsHappening in <span class="text-customGreen1">Chattanooga</span><span class="text-customGreen1">.</span>
-        </h1>
-        <p class="text-gray-600 text-3xl mt-3 mb-6">A simpler way to find things happening in Chattanooga</p>
-      </header>
+      <ExploreHeader
+        subheading="A simpler way to find things happening in Chattanooga"
+        headingClass="font-jakarta font-bold text-5xl md:text-6xl leading-[1.2]"
+        subheadingClass="text-gray-600 text-3xl mt-3 mb-6"
+      >
+        ThingsHappening in <span class="text-customGreen1">Chattanooga</span><span class="text-customGreen1">.</span>
+      </ExploreHeader>
       <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 py-8" data-test="articles-section">
         {page.data.map((event) => (
           <div class="col-span-1"><Card post={event} /></div>
