@@ -183,7 +183,7 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
 
 <script>
   const params = new URLSearchParams(window.location.search);
-  const selectedDate = params.get('date');
+  const selectedDate = params.get('date') || (window.location.pathname.match(/\/(\d{4}-\d{2}-\d{2})\//) || [])[1];
   if (selectedDate) {
     const el = document.querySelector(`a[data-date="${selectedDate}"]`);
     if (el) {
