@@ -82,7 +82,7 @@ const { page } = Astro.props;
         headingClass="font-jakarta font-bold text-5xl md:text-6xl leading-[1.2]"
         subheadingClass="text-gray-600 text-3xl mt-3 mb-6"
       >
-        ThingsHappening in <span class="text-customGreen1">Chattanooga</span><span class="text-customGreen1">.</span>
+        <span class="text-customGreen1 shimmer-text">Events</span> in Chattanooga
       </ExploreHeader>
       <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 py-8" data-test="articles-section">
         {page.data.map((event) => (

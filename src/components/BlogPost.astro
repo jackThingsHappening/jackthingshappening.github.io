@@ -130,6 +130,14 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
         }
       }}
     </div>
+    {(pathname?.includes('/events/') || pathname?.includes('/guides/')) && (
+      <div class="mt-3">
+        <button id="copy-link-btn" class="inline-flex items-center gap-1.5 text-sm text-white hover:text-customGreen1 transition-colors cursor-pointer border border-gray-300 hover:border-customGreen1 rounded-full px-5 py-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          <span id="copy-link-label">Copy link</span>
+        </button>
+      </div>
+    )}
     <div class="mt-2">
       {tags && tags.length > 0 && (
         <div>
@@ -175,6 +183,17 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
       el.classList.add('date-pill--selected');
       el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
+  }
+
+  const copyBtn = document.getElementById('copy-link-btn');
+  const copyLabel = document.getElementById('copy-link-label');
+  if (copyBtn && copyLabel) {
+    copyBtn.addEventListener('click', () => {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+        copyLabel.textContent = 'Copied!';
+        setTimeout(() => { copyLabel.textContent = 'Copy link'; }, 2000);
+      });
+    });
   }
 </script>
 {!hideSignup && !pathname?.includes('/events/') && (

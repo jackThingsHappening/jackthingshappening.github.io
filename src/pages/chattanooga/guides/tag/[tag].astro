@@ -4,6 +4,8 @@ import Nav from '../../../../components/Nav.astro';
 import BaseHead from '../../../../components/Head/BaseHead.astro';
 import ExploreHeader from '../../../../components/ExploreHeader.astro';
 import Footer from '../../../../components/Footer/Footer.astro';
+import GuidesEditorialsNav from '../../../../components/GuidesEditorialsNav.astro';
+import type { ActiveTab } from '../../../../components/GuidesEditorialsNav.astro';
 
 export async function getStaticPaths() {
   const allPosts = (await Astro.glob('../../../**/*.mdx')).filter(
@@ -30,6 +32,7 @@ export async function getStaticPaths() {
 }
 
 const { tag } = Astro.params;
+const activeTab: ActiveTab = tag === 'interactive' ? 'interactive' : tag === 'longform' ? 'guides' : 'all';
 
 // Since we cannot share allPosts between getStaticPaths and the component,
 // we need to fetch them again here for filtering
@@ -76,11 +79,7 @@ filteredPosts.forEach((p) => {
         <ExploreHeader>
           Explore <span class="text-customGreen1">Chattanooga</span> Like a Local with Our Guides<span class="text-customGreen1">.</span>
         </ExploreHeader>
-        <nav class="flex gap-6 pt-6 text-xl">
-          <a href="/chattanooga" class="text-gray-600 hover:text-customGreen1 pb-1 border-b-2 border-transparent hover:border-black transition-colors">All</a>
-          <a href="/chattanooga/guides/tag/interactive" class={tag === 'interactive' ? 'text-customGreen1 font-medium border-b-2 border-black pb-1' : 'text-gray-600 hover:text-customGreen1 pb-1 border-b-2 border-transparent hover:border-black transition-colors'}>Interactive</a>
-          <a href="/chattanooga/guides/tag/longform" class={tag === 'longform' ? 'text-customGreen1 font-medium border-b-2 border-black pb-1' : 'text-gray-600 hover:text-customGreen1 pb-1 border-b-2 border-transparent hover:border-black transition-colors'}><span class="md:hidden">Longform</span><span class="hidden md:inline">Longform Guides</span></a>
-        </nav>
+        <GuidesEditorialsNav active={activeTab} />
 
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 py-8" data-test="articles-section">
           {allPostsIncludingMultipleDates.map(p => <div class="col-span-1">
