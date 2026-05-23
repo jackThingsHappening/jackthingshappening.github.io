@@ -157,17 +157,24 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
       <div class="mt-4">
         <span class="font-semibold">Upcoming Dates:</span>
         <ul class="mt-2 flex flex-wrap gap-2 list-none p-0 m-0">
-          {displayDates.map((d: string) => (
-            <li>
-              <a
-                href={`?date=${d}`}
-                data-date={d}
-                class="date-pill"
-              >
-                {dayjs(d).format('ddd MMM D')}
-              </a>
-            </li>
-          ))}
+          {displayDates.map((d: string) => {
+            let href = `?date=${d}`;
+            if (eventDatesDetails && pathname) {
+              const detail = eventDatesDetails.find((ed: any) => ed.date === d);
+              if (detail?.eventTitle) {
+                const slug = detail.eventTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+                const basePath = '/' + pathname.split('/').filter(Boolean).slice(0, 3).join('/');
+                href = `${basePath}/${d}/${slug}`;
+              }
+            }
+            return (
+              <li>
+                <a href={href} data-date={d} class="date-pill">
+                  {dayjs(d).format('ddd MMM D')}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </div>
     )}

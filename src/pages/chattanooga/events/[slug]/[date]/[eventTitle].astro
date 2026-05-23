@@ -1,0 +1,57 @@
+---
+import BlogPostLayout from "../../../../../layouts/BlogPostLayout.astro";
+
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob('../../*.mdx');
+
+  const paths = [];
+
+  for (const post of allPosts) {
+    const dates = post.frontmatter.eventDatesDetails;
+    if (!dates || dates.length === 0) continue;
+
+    const slug = post.url.split('/').filter(Boolean).pop();
+
+    for (const detail of dates) {
+      const eventTitleSlug = detail.eventTitle
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/^-|-$/g, '');
+
+      paths.push({
+        params: { slug, date: detail.date, eventTitle: eventTitleSlug },
+        props: { post, detail },
+      });
+    }
+  }
+
+  return paths;
+}
+
+const { date } = Astro.params;
+const { post, detail } = Astro.props;
+
+const postDetails = {
+  ...post.frontmatter,
+  matchedDetails: detail,
+  pubDate: date,
+};
+---
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script is:inline>
+      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},
+      l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
+      n.parentNode.insertBefore(l,n);})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account', '930023');
+    </script>
+  </head>
+  <body>
+    <BlogPostLayout content={postDetails}>
+      <post.Content />
+    </BlogPostLayout>
+    <div class="ml-embedded ml-embedded-left max-w-5xl mx-auto px-3" data-form="ZoK6PR"></div>
+  </body>
+</html>
