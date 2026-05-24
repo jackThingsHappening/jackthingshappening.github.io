@@ -1,9 +1,10 @@
 ---
 import Squiggle from './Squiggle.astro'
 // import Social from './Social.astro'
+const { dotGrid = false } = Astro.props;
 ---
 
-<footer class="py-6 lg:py-12 flex flex-col px-4 md:px-8 lg:px-16">
+<footer class={`py-6 lg:py-12 flex flex-col px-4 md:px-8 lg:px-16${dotGrid ? ' dot-grid-bg' : ''}`}>
   <div data-test="footer-text">&copy;<script type="text/javascript"> document.write(new Date().getFullYear()); </script> thingshappening</div>
   <a href="/about">About</a>
   <a href="/contact">Contact</a>
