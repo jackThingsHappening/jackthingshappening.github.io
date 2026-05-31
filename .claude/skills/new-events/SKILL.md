@@ -88,6 +88,7 @@ Use WebFetch on `url`. Extract all upcoming events with their title, date, time,
 ```mdx
 ---
 title: "{event title}"
+published: false
 pubDate: "{YYYY-MM-DD}"
 time: "{time or omit if unknown}"
 entranceCost: "{cost or 'Free' if none listed}"

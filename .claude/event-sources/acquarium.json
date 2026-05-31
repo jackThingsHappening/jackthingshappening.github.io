@@ -1,0 +1,20 @@
+{
+  "defaultFrontmatter": {
+    "address": "",
+    "eventLink": "https://www.tnaqua.org/events",
+    "iconPath": "/images/icons-new/events.png",
+    "layout": "../../../layouts/BlogPostLayout.astro",
+    "tags": [
+      {
+        "tag": "acquarium",
+        "type": "event"
+      }
+    ],
+    "venue": "Tennessee Aquarium"
+  },
+  "name": "Tennessee Aquarium",
+  "outputDir": "src/pages/chattanooga/events",
+  "slugPrefix": "acquarium",
+  "type": "calendar",
+  "url": "https://www.tnaqua.org/events"
+}

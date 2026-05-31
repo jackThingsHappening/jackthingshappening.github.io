@@ -1,6 +1,9 @@
 {
   "permissions": {
     "allow": [
+      "Write",
+      "Edit",
+      "WebFetch",
       "Bash(curl *)",
       "Bash(ls *)",
       "Bash(ls)",

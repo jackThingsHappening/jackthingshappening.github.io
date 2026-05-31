@@ -1,0 +1,10 @@
+slug,name,url,type,finished
+barrelhouse-ballroom,Barrelhouse Ballroom,https://www.barrelhouseballroom.com/shows,calendar,true
+chattanooga-market,Chattanooga Market,https://chattanoogamarket.com/calendar/,recurring,true
+hutton-and-smith,Hutton & Smith Brewing Co.,https://huttonandsmithbrewing.com/about-us/services/,recurring,true
+oddstory,Oddstory Brewing Co.,https://www.oddstorybrewing.co/central-events,mixed,true
+tap-house,The Tap House,https://taphousechatt.com/chattanooga-chattanooga-the-tap-house-events,calendar,true
+woodshop,The Woodshop Listening Room,https://thewoodshoplisteningroom.com/shows,recurring,true
+acquarium,Tennessee Aquarium,https://www.tnaqua.org/events,calendar,true
+convention-center,Chattanooga Convention Center,https://www.chattanoogaconventioncenter.org/chattanooga-events,calendar,false
+
