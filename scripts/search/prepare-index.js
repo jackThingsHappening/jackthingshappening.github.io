@@ -4,82 +4,80 @@ import { globby } from "globby";
 import os from "os";
 import grayMatter from "gray-matter";
 
+function slugify(str) {
+  return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+function stripHtml(content) {
+  return content
+    .replace(/import\s+\S+\s+from\s+['"][^'"]+['"]/g, '')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\{[^}]*\}/g, ' ')
+    .replace(/[#*`]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function getRelativeSlug(filePath) {
+  return filePath.split(/pages\//).pop().replace(/\.mdx$/, '');
+}
+
 (async function () {
-  // prepare the dirs
-  console.log("preparing index....")
+  console.log("preparing index....");
   const srcDir = path.join(process.cwd(), "src");
   const publicDir = path.join(process.cwd(), "public");
   const contentDir = path.join(srcDir, "pages");
   let contentFilePattern = path.join(contentDir, "**", "*.mdx");
 
-  if(os.platform().includes("win")) {
+  if (os.platform().includes("win")) {
     contentFilePattern = contentFilePattern.replaceAll("\\", "/");
   }
-  const indexFile = path.join(publicDir, "search-index.json");
 
+  const indexFile = path.join(publicDir, "search-index.json");
   const contentFilePaths = await globby([contentFilePattern]);
 
-  const getSlugFromPathname = (pathname, date = null) => {
-    if (date) {
-      pathname = pathname.replace(".mdx", `/${date}`)
-      pathname = pathname.split(/pages\//).pop();
-      return pathname
-    } else {
-      return path.basename(pathname, path.extname(pathname));
-    }
-  }
-    
+  if (!contentFilePaths.length) return;
 
-  if (contentFilePaths.length) {
-    const files = contentFilePaths.map(
-      async (filePath) => await fs.readFile(filePath, "utf8")
-    );
-    const index = [];
-    let i = 0;
-    for await (let file of files) {
-      const {
-        data: { title, description, tags, eventDates, published },
-        content,
-      } = grayMatter(file);
-      
-      // Skip files with published: false
-      if (published === false) {
-        i++;
-        continue;
-      }
+  const index = [];
 
-      // TODO: youll continuously need to update this when you add things like:
-      // new cities, new content types, etc
-      if(eventDates) {
-        eventDates.forEach((date) => {
-          console.log(getSlugFromPathname(contentFilePaths[i], date));
-          index.push({
-            slug: getSlugFromPathname(contentFilePaths[i], date),
-            category: "blog",
-            title: `${title} - ${date}`,
-            description,
-            tags,
-            body: content,
-          });
-        })
-      } else {
+  for (const filePath of contentFilePaths) {
+    const file = await fs.readFile(filePath, "utf8");
+    const {
+      data: { title, description, seoDescription, venue, eventDates, eventDatesDetails, published },
+      content,
+    } = grayMatter(file);
+
+    if (published === false) continue;
+    if (!title) continue;
+
+    const baseSlug = getRelativeSlug(filePath);
+    const cleanBody = stripHtml(content);
+    const desc = seoDescription || description || '';
+
+    if (eventDatesDetails?.length) {
+      for (const detail of eventDatesDetails) {
+        const titleSlug = detail.eventTitle ? slugify(detail.eventTitle) : '';
+        const slug = `${baseSlug}/${detail.date}/${titleSlug}`;
         index.push({
-          slug: getSlugFromPathname(contentFilePaths[i]),
-          category: "blog",
-          title,
-          description,
-          tags,
-          body: content,
+          slug,
+          title: detail.eventTitle ? `${title}: ${detail.eventTitle}` : title,
+          description: detail.topDetails?.text || desc,
+          venue: venue || '',
+          body: cleanBody,
         });
       }
-
-      i++;
+    } else {
+      // Single-date events and recurring eventDates events get one entry at the base URL
+      index.push({
+        slug: baseSlug,
+        title,
+        description: desc,
+        venue: venue || '',
+        body: cleanBody,
+      });
     }
-
-    console.log(index);
-    await fs.writeFile(indexFile, JSON.stringify(index));
-    console.log(
-      `Indexed ${index.length} documents from ${contentDir} to ${indexFile}`
-    );
   }
+
+  await fs.writeFile(indexFile, JSON.stringify(index));
+  console.log(`Indexed ${index.length} documents from ${contentDir} to ${indexFile}`);
 })();
