@@ -24,7 +24,7 @@ const allGuides = (await Astro.glob('./guides/*.mdx')).filter(
 const allEditorials = (await Astro.glob('./editorials/*.mdx')).filter(
   (post) => post.frontmatter.published !== false
 );
-const allEvents = (await Astro.glob('./events/*.mdx')).filter(
+const allEvents = (await Astro.glob('./events/**/*.mdx')).filter(
   (post) => post.frontmatter.published !== false
 );
 

@@ -2,7 +2,7 @@
 import BlogPostLayout from "../../../../../layouts/BlogPostLayout.astro";
 
 export async function getStaticPaths() {
-  const allPosts = await Astro.glob('../../*.mdx');
+  const allPosts = await Astro.glob('../../**/*.mdx');
 
   const paths = [];
 

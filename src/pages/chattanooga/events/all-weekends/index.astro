@@ -11,7 +11,7 @@ import { expandEvents } from '../../../../utils/expandEvents';
 const title = 'Future Weekends in Chattanooga';
 const seoDescription = 'Upcoming weekend events in Chattanooga, TN.';
 
-let allPosts = (await Astro.glob('../*.mdx')).filter(
+let allPosts = (await Astro.glob('../**/*.mdx')).filter(
   (post) => post.frontmatter.published !== false
 );
 

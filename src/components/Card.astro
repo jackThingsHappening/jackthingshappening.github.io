@@ -34,7 +34,8 @@ const positionClasses = {
 };
 
 const pubDate = post.pubDate || post.lastUpdated
-const date = new Date(pubDate);
+const pubDateLocal = typeof pubDate === 'string' && pubDate.length === 10 ? pubDate + 'T00:00:00' : pubDate;
+const date = new Date(pubDateLocal);
 const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const dayOfWeek = daysOfWeek[date.getDay()];
 
@@ -54,7 +55,7 @@ if (post.eventDatesDetails) {
       slugify(dateObj.eventTitle) === slugFromUrl
   );
 }
-const subTitle = eventDateDetails && eventDateDetails.eventTitle ? eventDateDetails.eventTitle : dayjs(post.pubDate).format('MM-DD-YYYY');
+const subTitle = eventDateDetails && eventDateDetails.eventTitle ? eventDateDetails.eventTitle : dayjs(pubDateLocal).format('MM-DD-YYYY');
 ---
 
 <div class="bg-white border-[1.5px] border-black hover:border-customGreen1 transition-all duration-75 ease-in-out h-full block shadow-lg hover:shadow-2xl rounded-xl overflow-hidden" data-test="article-card">
@@ -68,7 +69,7 @@ const subTitle = eventDateDetails && eventDateDetails.eventTitle ? eventDateDeta
       </h2>
       {(post.pubDate || post.lastUpdated) && (
         <p class="text-lg text-gray-600 mt-2 flex items-center">
-          {`${dayOfWeek}`} {dayjs(pubDate).format('MM-DD-YYYY')} &nbsp {iconPath ? <img class="w-8 h-8 inline-icon" src={iconPath} alt="icon" /> : ""}
+          {`${dayOfWeek}`} {dayjs(pubDateLocal).format('MM-DD-YYYY')} &nbsp {iconPath ? <img class="w-8 h-8 inline-icon" src={iconPath} alt="icon" /> : ""}
         </p>
       )}
     </div>

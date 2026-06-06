@@ -9,7 +9,7 @@ import ExploreHeader from '../../../../components/ExploreHeader.astro';
 import { expandEvents } from '../../../../utils/expandEvents';
 
 export async function getStaticPaths() {
-  const allEvents = (await Astro.glob('../*.mdx')).filter(
+  const allEvents = (await Astro.glob('../**/*.mdx')).filter(
     (post) => post.frontmatter.published !== false
   );
 
@@ -30,7 +30,7 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 
-const allEvents = (await Astro.glob('../*.mdx')).filter(
+const allEvents = (await Astro.glob('../**/*.mdx')).filter(
   (post) =>
     post.frontmatter.published !== false &&
     post.frontmatter.tags?.some((t) => t.tag === tag)
