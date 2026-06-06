@@ -1,0 +1,15 @@
+{
+  "name": "Chattanooga Convention Center",
+  "type": "calendar",
+  "url": "https://www.chattanoogaconventioncenter.org/chattanooga-events",
+  "outputDir": "src/pages/chattanooga/events",
+  "slugPrefix": "convention-center",
+  "defaultFrontmatter": {
+    "venue": "Chattanooga Convention Center",
+    "address": "",
+    "iconPath": "/images/icons-new/events.png",
+    "eventLink": "https://www.chattanoogaconventioncenter.org/chattanooga-events",
+    "tags": [{"type": "event", "tag": "convention-center"}],
+    "layout": "../../../layouts/BlogPostLayout.astro"
+  }
+}

@@ -1,0 +1,60 @@
+---
+import type { ActiveTab } from './EventsNav.astro';
+
+interface Props {
+  active: ActiveTab;
+}
+
+const { active } = Astro.props;
+const isActive = active === 'date';
+---
+
+<div class="relative flex items-center gap-2">
+  <button
+    type="button"
+    id="cal-btn"
+    class={`flex items-center pb-1 border-b-2 transition-colors ${isActive ? 'border-logoDarkGreen' : 'border-transparent hover:border-logoDarkGreen'}`}
+    aria-label="Pick a date to filter events"
+  >
+    <img src="/images/icons-new/calendar.png" alt="" class="w-6 h-6 md:w-9 md:h-9" aria-hidden="true" />
+  </button>
+  {isActive && (
+    <a
+      href="/chattanooga#events"
+      class="text-gray-400 hover:text-gray-600 transition-colors text-2xl leading-none pb-1"
+      aria-label="Clear date filter"
+    >×</a>
+  )}
+  <input
+    type="date"
+    id="cal-date-input"
+    class="absolute opacity-0 pointer-events-none w-px h-px"
+    tabindex="-1"
+    aria-hidden="true"
+  />
+</div>
+
+<script>
+  const btn = document.getElementById('cal-btn') as HTMLButtonElement | null;
+  const input = document.getElementById('cal-date-input') as HTMLInputElement | null;
+
+  if (btn && input) {
+    const params = new URLSearchParams(window.location.search);
+    const current = params.get('from');
+    if (current) input.value = current;
+
+    btn.addEventListener('click', () => {
+      try {
+        input.showPicker();
+      } catch {
+        input.click();
+      }
+    });
+
+    input.addEventListener('change', () => {
+      if (input.value) {
+        window.location.href = `/chattanooga/events/date?from=${input.value}`;
+      }
+    });
+  }
+</script>

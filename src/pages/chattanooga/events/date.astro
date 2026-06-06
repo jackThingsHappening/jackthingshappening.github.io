@@ -1,0 +1,85 @@
+---
+import BaseHead from '../../../components/Head/BaseHead.astro';
+import Nav from '../../../components/Nav.astro';
+import EventsNav from '../../../components/EventsNav.astro';
+import Card from '../../../components/Card.astro';
+import Footer from '../../../components/Footer/Footer.astro';
+import EmailSignup from '../../../components/EmailSignup.astro';
+import ExploreHeader from '../../../components/ExploreHeader.astro';
+import { expandEvents } from '../../../utils/expandEvents';
+
+const title = 'Events in Chattanooga';
+const seoDescription = 'Upcoming events in Chattanooga, TN.';
+
+const allPosts = (await Astro.glob('./*.mdx')).filter(
+  (post) => post.frontmatter.published !== false
+);
+
+const today = new Date();
+today.setDate(today.getDate() - 1);
+today.setHours(0, 0, 0, 0);
+
+const allEvents = expandEvents(allPosts)
+  .filter((e) => new Date(e.pubDate) >= today)
+  .sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+---
+
+<html lang="en" class="dot-grid-bg">
+<head>
+  <BaseHead title={title} description={seoDescription} />
+</head>
+<body class="text-black font-body leading-normal personality-casual">
+  <Nav />
+  <main>
+    <article class="w-full px-4 md:px-8 lg:px-16 mt-8 pb-4">
+      <ExploreHeader>
+        <span class="text-customGreen1 shimmer-text">Events</span> in Chattanooga
+      </ExploreHeader>
+      <EventsNav active="date" />
+      <p id="date-label" class="text-gray-600 text-xl mt-4 hidden"></p>
+      <section id="events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 py-8" data-test="articles-section">
+        {allEvents.map((e) => (
+          <div class="col-span-1" data-date={e.pubDate}>
+            <Card post={e} />
+          </div>
+        ))}
+      </section>
+      <p id="no-events-msg" class="hidden text-xl text-gray-500 py-8">No events found starting from that date.</p>
+      <div class="mt-12 pt-8 border-t border-gray-200">
+        <p class="text-gray-600 text-xl mb-3">Get more local guides and events in your inbox.</p>
+        <EmailSignup />
+      </div>
+    </article>
+  </main>
+  <Footer />
+</body>
+</html>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const from = params.get('from');
+
+  if (from) {
+    const label = document.getElementById('date-label');
+    if (label) {
+      const d = new Date(from + 'T00:00:00');
+      label.textContent = `Showing events from ${d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} onwards`;
+      label.classList.remove('hidden');
+    }
+
+    let visible = 0;
+    const cards = document.querySelectorAll<HTMLElement>('#events-grid [data-date]');
+    cards.forEach((card) => {
+      const cardDate = card.dataset.date ?? '';
+      if (cardDate < from) {
+        card.style.display = 'none';
+      } else {
+        visible++;
+      }
+    });
+
+    if (visible === 0) {
+      document.getElementById('no-events-msg')?.classList.remove('hidden');
+    }
+  }
+</script>

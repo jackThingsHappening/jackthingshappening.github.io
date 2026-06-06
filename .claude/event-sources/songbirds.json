@@ -1,0 +1,15 @@
+{
+  "name": "Songbirds",
+  "type": "calendar",
+  "url": "https://venue.songbirds.org/concert-schedule/",
+  "outputDir": "src/pages/chattanooga/events",
+  "slugPrefix": "songbirds",
+  "defaultFrontmatter": {
+    "venue": "Songbirds",
+    "address": "",
+    "iconPath": "/images/icons-new/events.png",
+    "eventLink": "https://venue.songbirds.org/concert-schedule/",
+    "tags": [{"type": "event", "tag": "songbirds"}],
+    "layout": "../../../layouts/BlogPostLayout.astro"
+  }
+}
