@@ -1,23 +1,38 @@
 {
   "name": "The Woodshop Listening Room",
-  "type": "recurring",
+  "type": "mixed",
   "url": "https://thewoodshoplisteningroom.com/shows",
-  "events": [
-    {
-      "outputPath": "src/pages/chattanooga/events/woodshop-friday-bluegrass.mdx",
-      "matchHint": "Forever Friday Bluegrass or any Friday bluegrass show"
-    },
-    {
-      "outputPath": "src/pages/chattanooga/events/woodshop-tuesday-bluesday.mdx",
-      "matchHint": "Jhett Black Tuesday Bluesday or any Tuesday blues show"
-    },
-    {
-      "outputPath": "src/pages/chattanooga/events/woodshop-soul-night.mdx",
-      "matchHint": "Soul Night with Joel Forlines or any Thursday soul show"
-    },
-    {
-      "outputPath": "src/pages/chattanooga/events/woodshop-tuesday-trivia.mdx",
-      "matchHint": "Woodshop Trivia or Tuesday trivia night"
+  "recurring": {
+    "events": [
+      {
+        "outputPath": "src/pages/chattanooga/events/woodshop/friday-bluegrass.mdx",
+        "matchHint": "Forever Friday Bluegrass or any Friday bluegrass show"
+      },
+      {
+        "outputPath": "src/pages/chattanooga/events/woodshop/tuesday-bluesday.mdx",
+        "matchHint": "Jhett Black Tuesday Bluesday or any Tuesday blues show"
+      },
+      {
+        "outputPath": "src/pages/chattanooga/events/woodshop/soul-night.mdx",
+        "matchHint": "Soul Night or any Thursday soul show"
+      },
+      {
+        "outputPath": "src/pages/chattanooga/events/woodshop/tuesday-trivia.mdx",
+        "matchHint": "Woodshop Trivia or Tuesday trivia night"
+      }
+    ]
+  },
+  "calendar": {
+    "outputDir": "src/pages/chattanooga/events/woodshop",
+    "slugPrefix": "woodshop",
+    "defaultFrontmatter": {
+      "venue": "The Woodshop Listening Room",
+      "address": "5500 Saint Elmo Avenue, Chattanooga, TN 37409",
+      "iconPath": "/images/icons-new/music.png",
+      "eventLink": "https://thewoodshoplisteningroom.com/shows",
+      "entranceCost": "See website",
+      "tags": [{"type": "event", "tag": "woodshop"}, {"type": "event", "tag": "music"}],
+      "layout": "../../../../layouts/BlogPostLayout.astro"
     }
-  ]
+  }
 }
