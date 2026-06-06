@@ -11,6 +11,15 @@ MDX is strict about HTML tag matching. Every edit that touches HTML in an MDX fi
 
 Failure to do this causes MDX parse errors that break the entire page and require manual fixing.
 
+## Research — Blocked Domains
+
+These sites are competitors. Never fetch or cite them in research:
+
+- `noogatoday.com` / `6amcity.com` (redirects there)
+- `visitchattanooga.com`
+
+When using WebSearch, always pass these as `blocked_domains`. If a search result only has sources from these domains, search again with different terms or note that no independent source was found.
+
 ## Token Efficiency
 
 When processing multiple MDX files in a batch, do not use Read+Edit per file — that doubles tool calls and burns tokens fast. Use a single Bash script with python3 to read and write all files in one pass. Reserve Read+Edit for single-file runs where precision matters.
