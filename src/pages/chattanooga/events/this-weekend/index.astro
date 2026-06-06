@@ -21,14 +21,16 @@ const today = new Date();
 today.setHours(0, 0, 0, 0);
 
 const currentDay = today.getDay();
-const upcomingFriday = new Date(today.getFullYear(), today.getMonth(), today.getDate() + (currentDay <= 5 ? (5 - currentDay) : 0));
-const upcomingSunday = new Date(upcomingFriday.getFullYear(), upcomingFriday.getMonth(), upcomingFriday.getDate() + 2);
-upcomingSunday.setHours(23, 59, 59, 999);
+// If already in the weekend (Fri/Sat/Sun), anchor to the Friday that started it
+const daysToFriday = currentDay === 6 ? -1 : currentDay === 0 ? -2 : 5 - currentDay;
+const thisFriday = new Date(today.getFullYear(), today.getMonth(), today.getDate() + daysToFriday);
+const thisSunday = new Date(thisFriday.getFullYear(), thisFriday.getMonth(), thisFriday.getDate() + 2);
+thisSunday.setHours(23, 59, 59, 999);
 
 allPostsIncludingMultipleDates = allPostsIncludingMultipleDates
   .filter(({ pubDate }) => {
-    const d = new Date(pubDate);
-    if (d < today || d > upcomingSunday) return false;
+    const d = new Date(typeof pubDate === 'string' && pubDate.length === 10 ? pubDate + 'T00:00:00' : pubDate);
+    if (d < today || d > thisSunday) return false;
     const day = d.getDay();
     return day === 0 || day === 5 || day === 6;
   })

@@ -36,9 +36,13 @@ const allEvents = (await Astro.glob('../**/*.mdx')).filter(
     post.frontmatter.tags?.some((t) => t.tag === tag)
 );
 
-const allPostsIncludingMultipleDates = expandEvents(allEvents);
+const today = new Date();
+today.setDate(today.getDate() - 1);
+today.setHours(0, 0, 0, 0);
 
-allPostsIncludingMultipleDates.sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+const allPostsIncludingMultipleDates = expandEvents(allEvents)
+  .filter((e) => new Date(e.pubDate) >= today)
+  .sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
 
 const displayTag = tag.charAt(0).toUpperCase() + tag.slice(1);
 const title = `${displayTag} Events in Chattanooga`;
