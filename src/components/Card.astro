@@ -34,7 +34,7 @@ const positionClasses = {
 };
 
 const pubDate = post.pubDate || post.lastUpdated
-const pubDateLocal = typeof pubDate === 'string' && pubDate.length === 10 ? pubDate + 'T00:00:00' : pubDate;
+const pubDateLocal = typeof pubDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(pubDate) ? pubDate + 'T00:00:00' : pubDate;
 const date = new Date(pubDateLocal);
 const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const dayOfWeek = daysOfWeek[date.getDay()];
