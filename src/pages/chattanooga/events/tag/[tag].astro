@@ -37,7 +37,6 @@ const allEvents = (await Astro.glob('../**/*.mdx')).filter(
 );
 
 const today = new Date();
-today.setDate(today.getDate() - 1);
 today.setHours(0, 0, 0, 0);
 
 const allPostsIncludingMultipleDates = expandEvents(allEvents)
