@@ -163,7 +163,10 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
               let href = `?date=${d}`;
               if (detail?.eventTitle && pathname) {
                 const slug = detail.eventTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-                const basePath = '/' + pathname.split('/').filter(Boolean).slice(0, 3).join('/');
+                const parts = pathname.split('/').filter(Boolean);
+                const dateIdx = parts.findIndex((p: string) => /^\d{4}-\d{2}-\d{2}$/.test(p));
+                const baseParts = dateIdx !== -1 ? parts.slice(0, dateIdx) : parts;
+                const basePath = '/' + baseParts.join('/');
                 href = `${basePath}/${d}/${slug}`;
               }
               return (
