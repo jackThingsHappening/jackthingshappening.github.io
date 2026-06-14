@@ -50,13 +50,13 @@ var lastDayOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
 
     // Filter dates within the current month
 allPostsIncludingMultipleDates = allPostsIncludingMultipleDates.filter(({pubDate}) => {
-    pubDate= new Date(pubDate);
+    pubDate= new Date(pubDate + 'T00:00:00');
     return pubDate >= firstDayOfMonth && pubDate <= lastDayOfMonth && pubDate >= today;
 });
 
 allPostsIncludingMultipleDates = allPostsIncludingMultipleDates.sort((a, b) => {
-    const dateA = new Date(a.pubDate);
-    const dateB = new Date(b.pubDate);
+    const dateA = new Date(a.pubDate + 'T00:00:00');
+    const dateB = new Date(b.pubDate + 'T00:00:00');
 
     return dateA - dateB;
 });

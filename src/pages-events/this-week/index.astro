@@ -50,13 +50,13 @@ var lastDayOfWeek = new Date(today.getFullYear(), today.getMonth(), today.getDat
 
     // Filter dates within the current week
 allPostsIncludingMultipleDates = allPostsIncludingMultipleDates.filter(({pubDate}) => {
-    pubDate = new Date(pubDate);
+    pubDate = new Date(pubDate + 'T00:00:00');
     return pubDate >= firstDayOfWeek && pubDate <= lastDayOfWeek;
 });
 
 allPostsIncludingMultipleDates = allPostsIncludingMultipleDates.sort((a, b) => {
-    const dateA = new Date(a.pubDate);
-    const dateB = new Date(b.pubDate);
+    const dateA = new Date(a.pubDate + 'T00:00:00');
+    const dateB = new Date(b.pubDate + 'T00:00:00');
 
     return dateA - dateB;
 });

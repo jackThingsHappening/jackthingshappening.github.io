@@ -60,8 +60,8 @@ export async function getStaticPaths({ paginate }) {
   today.setHours(0, 0, 0, 0);
 
   const futureEvents = expanded
-    .filter((e) => new Date(e.pubDate) >= today)
-    .sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+    .filter((e) => new Date(e.pubDate + 'T00:00:00') >= today)
+    .sort((a, b) => new Date(a.pubDate + 'T00:00:00') - new Date(b.pubDate + 'T00:00:00'));
 
   return paginate(futureEvents, { pageSize: 15 });
 }

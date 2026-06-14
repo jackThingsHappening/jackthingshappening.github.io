@@ -78,6 +78,8 @@ Write a Facebook post suited to the chosen post type. General rules for all type
 - **URL** — include only when there's a relevant page to link to (guides, homepage, event page)
 - No emojis
 - No hashtags
+- No em dashes anywhere in the post copy
+- No hyphens for structure (no bullet-style dashes)
 - No "check out our guide" or other self-referential filler
 - Write like a local, not a marketer
 - Under 150 words total
@@ -88,12 +90,12 @@ For audience question posts, the hook IS the question. Keep the body short and l
 
 ## Step 3 — Propose a schedule
 
-Default: next Saturday or Sunday between 9:00am and 11:00am CT.
+Default: next Saturday or Sunday, anywhere from 9:00am to 2:00pm CT. Vary the exact time — don't default to 10:00am every time. Pick naturally varied times like 9:15am, 10:45am, 11:30am, 12:15pm, 1:00pm, 1:45pm, etc. Posts should not look like they were scheduled by a bot.
 
 Use judgment for type-specific timing:
 - Audience questions: Tuesday–Thursday midday (higher comment engagement)
 - Event previews: as far ahead as useful, typically 1–2 weeks before the event
-- Feature/platform updates: any weekday morning is fine
+- Feature/platform updates: any weekday morning is fine, vary the time similarly
 
 State the proposed date and time clearly.
 
@@ -122,6 +124,8 @@ Use the credentials from env vars:
 - `FB_PAGE_ACCESS_TOKEN` — long-lived page access token
 
 Convert the approved date/time (CT = UTC-6 in summer / DST active June–November, UTC-5 in winter) to a Unix timestamp.
+
+Facebook's scheduling window is 10 minutes to 30 days from now. In practice, stay within 28 days to avoid edge-case rejections — anything beyond that risks an "invalid scheduled publish time" error.
 
 Run:
 

@@ -38,7 +38,7 @@ allPosts.forEach((p) => {
 });
 
 // allPostsIncludingMultipleDates = allPostsIncludingMultipleDates.filter(({pubDate}) => {
-//     const dateObj = new Date(pubDate);
+//     const dateObj = new Date(pubDate + 'T00:00:00');
 //     const currentDate = new Date();
 
 //     // Get the current day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
@@ -51,7 +51,7 @@ allPosts.forEach((p) => {
 
 //     // Check if the publication date is before or on the upcoming Sunday
 //     if (dateObj <= upcomingSunday) {
-//         const dayOfWeek = dateObj.getUTCDay();
+//         const dayOfWeek = dateObj.getDay();
         
 //         // Check if the date falls on Friday, Saturday, or Sunday
 //         if (dayOfWeek == 0 || dayOfWeek == 6 || dayOfWeek == 5) {
@@ -62,7 +62,7 @@ allPosts.forEach((p) => {
 // });
 
 allPostsIncludingMultipleDates = allPostsIncludingMultipleDates.filter(({ pubDate }) => {
-    const dateObj = new Date(pubDate);
+    const dateObj = new Date(pubDate + 'T00:00:00');
     const currentDate = new Date();
     currentDate.setHours(0, 0, 0, 0); // Reset to start of today
 
@@ -86,8 +86,8 @@ allPostsIncludingMultipleDates = allPostsIncludingMultipleDates.filter(({ pubDat
 });
 
 allPostsIncludingMultipleDates = allPostsIncludingMultipleDates.sort((a, b) => {
-    const dateA = new Date(a.pubDate);
-    const dateB = new Date(b.pubDate);
+    const dateA = new Date(a.pubDate + 'T00:00:00');
+    const dateB = new Date(b.pubDate + 'T00:00:00');
 
     return dateA - dateB;
 });

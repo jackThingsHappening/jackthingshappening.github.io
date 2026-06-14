@@ -19,8 +19,8 @@ const today = new Date();
 today.setHours(0, 0, 0, 0);
 
 const allEvents = expandEvents(allPosts)
-  .filter((e) => new Date(e.pubDate) >= today)
-  .sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+  .filter((e) => new Date(e.pubDate + 'T00:00:00') >= today)
+  .sort((a, b) => new Date(a.pubDate + 'T00:00:00') - new Date(b.pubDate + 'T00:00:00'));
 ---
 
 <html lang="en" class="dot-grid-bg">

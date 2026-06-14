@@ -40,8 +40,8 @@ const today = new Date();
 today.setHours(0, 0, 0, 0);
 
 const allPostsIncludingMultipleDates = expandEvents(allEvents)
-  .filter((e) => new Date(e.pubDate) >= today)
-  .sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+  .filter((e) => new Date(e.pubDate + 'T00:00:00') >= today)
+  .sort((a, b) => new Date(a.pubDate + 'T00:00:00') - new Date(b.pubDate + 'T00:00:00'));
 
 const displayTag = tag.charAt(0).toUpperCase() + tag.slice(1);
 const title = `${displayTag} Events in Chattanooga`;

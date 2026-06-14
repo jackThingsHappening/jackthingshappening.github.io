@@ -25,10 +25,10 @@ lastDayOfMonth.setHours(23, 59, 59, 999);
 
 allPostsIncludingMultipleDates = allPostsIncludingMultipleDates
   .filter(({ pubDate }) => {
-    const d = new Date(pubDate);
+    const d = new Date(pubDate + 'T00:00:00');
     return d >= today && d >= firstDayOfMonth && d <= lastDayOfMonth;
   })
-  .sort((a, b) => new Date(a.pubDate) - new Date(b.pubDate));
+  .sort((a, b) => new Date(a.pubDate + 'T00:00:00') - new Date(b.pubDate + 'T00:00:00'));
 ---
 
 <html lang="en" class="dot-grid-bg">
