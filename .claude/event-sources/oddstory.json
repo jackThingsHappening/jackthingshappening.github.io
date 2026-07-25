@@ -22,9 +22,20 @@
       "address": "1503 Campbell St, Chattanooga, TN 37409",
       "iconPath": "/images/icons/music.svg",
       "eventLink": "https://www.oddstorybrewing.co/central-events",
-      "tags": [{"type": "event", "tag": "food-drink"}, {"type": "event", "tag": "brewery"}],
+      "tags": [
+        {
+          "type": "event",
+          "tag": "food-drink"
+        },
+        {
+          "type": "event",
+          "tag": "brewery"
+        }
+      ],
       "entranceCost": "Free",
       "layout": "../../../layouts/BlogPostLayout.astro"
     }
-  }
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-01-01"
 }

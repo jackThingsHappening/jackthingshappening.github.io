@@ -1,0 +1,83 @@
+name: Event Refresh
+
+on:
+  schedule:
+    - cron: '0 10 * * *'  # 6am ET daily
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Refresh due vendors
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python3 << 'PYEOF'
+          import json, os, subprocess
+          from datetime import date, datetime
+
+          today = date.today()
+          sources_dir = ".claude/event-sources"
+
+          for filename in sorted(os.listdir(sources_dir)):
+              if not filename.endswith(".json"):
+                  continue
+              slug = filename[:-5]
+              path = os.path.join(sources_dir, filename)
+              with open(path) as f:
+                  config = json.load(f)
+
+              if config.get("active") is False:
+                  print(f"[skip] {slug} — inactive")
+                  continue
+
+              last_checked = datetime.strptime(config["last_checked"], "%Y-%m-%d").date()
+              freq = config["frequency_days"]
+              days_since = (today - last_checked).days
+
+              if days_since < freq:
+                  print(f"[skip] {slug} — {days_since}/{freq} days since last check")
+                  continue
+
+              print(f"[run]  {slug} — {days_since} days since last check")
+              result = subprocess.run(
+                  ["claude", "-p", f"/new-events {slug}", "--dangerously-skip-permissions"],
+                  capture_output=True, text=True
+              )
+              print(result.stdout)
+              if result.stderr:
+                  print("STDERR:", result.stderr)
+
+              if result.returncode == 0:
+                  config["last_checked"] = str(today)
+                  with open(path, "w") as f:
+                      json.dump(config, f, indent=2)
+                  print(f"[done] {slug} — last_checked updated to {today}")
+              else:
+                  print(f"[fail] {slug} — exit code {result.returncode}")
+          PYEOF
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .claude/event-sources/ src/pages/chattanooga/events/
+          git diff --staged --quiet && echo "No changes to commit" || (
+            git commit -m "chore: automated event refresh $(date +%Y-%m-%d)"
+            git push origin main
+          )

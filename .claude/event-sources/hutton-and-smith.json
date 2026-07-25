@@ -11,5 +11,7 @@
       "outputPath": "src/pages/chattanooga/events/hutton-smith-bike-night.mdx",
       "matchHint": "Bike Night or Tuesday bike night"
     }
-  ]
+  ],
+  "frequency_days": 14,
+  "last_checked": "2026-01-01"
 }

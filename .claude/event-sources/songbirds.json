@@ -9,7 +9,14 @@
     "address": "",
     "iconPath": "/images/icons-new/events.png",
     "eventLink": "https://venue.songbirds.org/concert-schedule/",
-    "tags": [{"type": "event", "tag": "songbirds"}],
+    "tags": [
+      {
+        "type": "event",
+        "tag": "songbirds"
+      }
+    ],
     "layout": "../../../layouts/BlogPostLayout.astro"
-  }
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-01-01"
 }

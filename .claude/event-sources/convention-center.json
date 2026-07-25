@@ -9,7 +9,14 @@
     "address": "",
     "iconPath": "/images/icons-new/events.png",
     "eventLink": "https://www.chattanoogaconventioncenter.org/chattanooga-events",
-    "tags": [{"type": "event", "tag": "convention-center"}],
+    "tags": [
+      {
+        "type": "event",
+        "tag": "convention-center"
+      }
+    ],
     "layout": "../../../layouts/BlogPostLayout.astro"
-  }
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-01-01"
 }

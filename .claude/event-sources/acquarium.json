@@ -16,5 +16,7 @@
   "outputDir": "src/pages/chattanooga/events",
   "slugPrefix": "acquarium",
   "type": "calendar",
-  "url": "https://www.tnaqua.org/events"
+  "url": "https://www.tnaqua.org/events",
+  "frequency_days": 14,
+  "last_checked": "2026-01-01"
 }

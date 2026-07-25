@@ -31,8 +31,19 @@
       "iconPath": "/images/icons-new/music.png",
       "eventLink": "https://thewoodshoplisteningroom.com/shows",
       "entranceCost": "See website",
-      "tags": [{"type": "event", "tag": "woodshop"}, {"type": "event", "tag": "music"}],
+      "tags": [
+        {
+          "type": "event",
+          "tag": "woodshop"
+        },
+        {
+          "type": "event",
+          "tag": "music"
+        }
+      ],
       "layout": "../../../../layouts/BlogPostLayout.astro"
     }
-  }
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-01-01"
 }

@@ -9,7 +9,18 @@
     "address": "1501 Long St, Chattanooga, TN 37408",
     "iconPath": "/images/icons/music.svg",
     "eventLink": "https://www.barrelhouseballroom.com/shows",
-    "tags": [{"type": "event", "tag": "music"}, {"type": "event", "tag": "live-events"}],
+    "tags": [
+      {
+        "type": "event",
+        "tag": "music"
+      },
+      {
+        "type": "event",
+        "tag": "live-events"
+      }
+    ],
     "layout": "../../../layouts/BlogPostLayout.astro"
-  }
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-01-01"
 }
