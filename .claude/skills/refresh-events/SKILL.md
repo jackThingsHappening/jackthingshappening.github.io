@@ -21,7 +21,7 @@ The slug is the filename without `.json` (e.g. `songbirds.json` → `songbirds`)
 
 ## Step 3 — Refresh each due vendor
 
-For each due vendor, invoke the `/new-events` skill using the slug as the argument.
+For each due vendor, invoke the `/new-events` skill using the slug as the argument. Run ALL due vendors regardless of their type (recurring, calendar, or mixed) — calendar vendors post new one-off shows regularly and need checking on the same cadence as recurring vendors.
 
 After each successful run, update only the `last_checked` field in that vendor's `.json` file to today's date. Do not change any other fields.
 
