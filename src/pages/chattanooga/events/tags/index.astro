@@ -1,0 +1,101 @@
+---
+import BaseHead from '../../../../components/Head/BaseHead.astro';
+import Nav from '../../../../components/Nav.astro';
+import EventsNav from '../../../../components/EventsNav.astro';
+import Footer from '../../../../components/Footer/Footer.astro';
+import EmailSignup from '../../../../components/EmailSignup.astro';
+import ExploreHeader from '../../../../components/ExploreHeader.astro';
+import { expandEvents } from '../../../../utils/expandEvents';
+
+const title = 'Browse Events by Tag — Chattanooga';
+const seoDescription = 'Browse all Chattanooga events by genre or place.';
+
+const allEvents = [
+  ...(await Astro.glob('../../../../pages-events/**/*.mdx')),
+  ...(await Astro.glob('../**/*.mdx')),
+].filter((post) => post.frontmatter.published !== false);
+
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+const upcoming = expandEvents(allEvents).filter(
+  (e) => new Date(e.pubDate + 'T00:00:00') >= today
+);
+
+function countByTag(tag: string) {
+  return upcoming.filter((e) =>
+    e.tags?.some((t: any) => t.tag === tag)
+  ).length;
+}
+
+type TagEntry = { tag: string; count: number };
+
+const genreTags: TagEntry[] = [];
+const placeTags: TagEntry[] = [];
+const seen = new Set<string>();
+
+for (const post of allEvents) {
+  const tags = post.frontmatter.tags ?? [];
+  for (const t of tags) {
+    if (!t.type || seen.has(t.tag)) continue;
+    seen.add(t.tag);
+    const entry = { tag: t.tag, count: countByTag(t.tag) };
+    if (t.type === 'genre') genreTags.push(entry);
+    else if (t.type === 'place') placeTags.push(entry);
+  }
+}
+
+genreTags.sort((a, b) => b.count - a.count);
+placeTags.sort((a, b) => b.count - a.count);
+---
+
+<html lang="en" class="dot-grid-bg">
+<head>
+  <BaseHead title={title} description={seoDescription} />
+</head>
+<body class="text-black font-body leading-normal personality-casual">
+  <Nav />
+  <main>
+    <article class="w-full px-4 md:px-8 lg:px-16 mt-8 pb-4">
+      <ExploreHeader>Browse events by tag</ExploreHeader>
+      <EventsNav active="tags" />
+
+      <section class="mt-10">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Genre</h2>
+        <div class="flex flex-wrap gap-3">
+          {genreTags.map(({ tag, count }) => (
+            <a
+              href={`/chattanooga/events/tag/${tag}`}
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-logoDarkGreen bg-white text-logoDarkGreen hover:bg-logoDarkGreen hover:text-white transition-colors text-lg"
+            >
+              #{tag}
+              {count > 0 && <span class="text-sm font-bold">({count})</span>}
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="mt-10">
+        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Place</h2>
+        <div class="flex flex-wrap gap-3">
+          {placeTags.map(({ tag, count }) => (
+            <a
+              href={`/chattanooga/events/tag/${tag}`}
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-logoDarkGreen bg-white text-logoDarkGreen hover:bg-customGreen1 hover:text-white transition-colors text-lg"
+            >
+              #{tag}
+              {count > 0 && <span class="text-sm font-bold">({count})</span>}
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <div class="mt-16 pt-8 border-t border-gray-200">
+        <p class="text-gray-600 text-xl mb-3">Get more local guides and events in your inbox.</p>
+        <EmailSignup />
+      </div>
+    </article>
+  </main>
+  <Footer />
+</body>
+</html>

@@ -9,15 +9,16 @@ import ExploreHeader from '../../../../components/ExploreHeader.astro';
 import { expandEvents } from '../../../../utils/expandEvents';
 
 export async function getStaticPaths() {
-  const allEvents = (await Astro.glob('../**/*.mdx')).filter(
-    (post) => post.frontmatter.published !== false
-  );
+  const allEvents = [
+    ...(await Astro.glob('../../../../pages-events/**/*.mdx')),
+    ...(await Astro.glob('../**/*.mdx')),
+  ].filter((post) => post.frontmatter.published !== false);
 
   const tagSet = new Set(
     allEvents.flatMap((post) =>
       post.frontmatter.tags
         ? post.frontmatter.tags
-            .filter((t) => t.type === 'event')
+            .filter((t) => t.type === 'genre' || t.type === 'place')
             .map((t) => t.tag)
         : []
     )
@@ -30,7 +31,10 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 
-const allEvents = (await Astro.glob('../**/*.mdx')).filter(
+const allEvents = [
+  ...(await Astro.glob('../../../../pages-events/**/*.mdx')),
+  ...(await Astro.glob('../**/*.mdx')),
+].filter(
   (post) =>
     post.frontmatter.published !== false &&
     post.frontmatter.tags?.some((t) => t.tag === tag)

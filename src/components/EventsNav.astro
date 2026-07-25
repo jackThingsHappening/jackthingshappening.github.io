@@ -1,7 +1,7 @@
 ---
 import CalendarPicker from './CalendarPicker.astro';
 
-export type ActiveTab = 'all' | 'this-weekend' | 'this-week' | 'this-month' | 'date';
+export type ActiveTab = 'all' | 'this-weekend' | 'this-week' | 'this-month' | 'date' | 'tags';
 
 interface Props {
   active: ActiveTab;
@@ -20,5 +20,6 @@ const linkClass = (tab: ActiveTab) =>
   <a href="/chattanooga#events" class={linkClass('all')}>All Events</a>
   <a href="/chattanooga/events/this-weekend" class={linkClass('this-weekend')}>This Weekend</a>
   <a href="/chattanooga/events/this-week" class={linkClass('this-week')}>This Week</a>
-  <a href="/chattanooga/events/this-month" class={linkClass('this-month')}>This Month</a>
+  <!-- <a href="/chattanooga/events/this-month" class={linkClass('this-month')}>This Month</a> -->
+  <a href="/chattanooga/events/tags" class={linkClass('tags')}>Browse Tags</a>
 </nav>
