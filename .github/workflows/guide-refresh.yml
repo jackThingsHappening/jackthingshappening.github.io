@@ -1,8 +1,8 @@
-name: Event Refresh
+name: Guide Refresh
 
 on:
   schedule:
-    - cron: '0 10 * * *'  # 6am ET daily
+    - cron: '0 23 * * *'  # 7pm ET daily
   workflow_dispatch:
 
 jobs:
@@ -23,10 +23,10 @@ jobs:
       - name: Install Claude Code
         run: npm install -g @anthropic-ai/claude-code
 
-      - name: Run event refresh
+      - name: Run guide refresh
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          claude -p "/refresh-events" --dangerously-skip-permissions
+          claude -p "/refresh-guides" --dangerously-skip-permissions
