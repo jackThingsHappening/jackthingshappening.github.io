@@ -1,0 +1,98 @@
+[
+  {
+    "slug": "live-music",
+    "path": "src/pages/chattanooga/guides/live-music.mdx",
+    "title": "A Sheet for Chattanooga Live Music",
+    "topic": "live music venues, bars, festivals, and events in Chattanooga, TN",
+    "frequency_days": 30,
+    "last_checked": "2026-01-01"
+  },
+  {
+    "slug": "confections",
+    "path": "src/pages/chattanooga/guides/confections.mdx",
+    "title": "Sweet Treats in Chattanooga",
+    "topic": "dessert shops, bakeries, ice cream, candy, and sweet treats in Chattanooga, TN",
+    "frequency_days": 30,
+    "last_checked": "2026-01-01"
+  },
+  {
+    "slug": "weekend-hosting-chattanooga-choo-choo-edition",
+    "path": "src/pages/chattanooga/guides/weekend-hosting-chattanooga-choo-choo-edition.mdx",
+    "title": "Weekend Hosting in Chattanooga: Choo Choo Edition",
+    "topic": "weekend itineraries, hotels, things to do, and hosting visitors in Chattanooga, TN",
+    "frequency_days": 30,
+    "last_checked": "2026-01-01"
+  },
+  {
+    "slug": "performance-arts",
+    "path": "src/pages/chattanooga/guides/performance-arts.mdx",
+    "title": "A Playbill for Chattanooga Performing Arts",
+    "topic": "theaters, performing arts venues, dance, opera, comedy, and live performances in Chattanooga, TN",
+    "frequency_days": 30,
+    "last_checked": "2026-01-01"
+  },
+  {
+    "slug": "tours",
+    "path": "src/pages/chattanooga/guides/tours.mdx",
+    "title": "Guided Adventure and Exploration in Chattanooga",
+    "topic": "guided tours, walking tours, boat tours, adventure tours, and sightseeing in Chattanooga, TN",
+    "frequency_days": 30,
+    "last_checked": "2026-01-01"
+  },
+  {
+    "slug": "cloudland-canyon",
+    "path": "src/pages/chattanooga/guides/cloudland-canyon.mdx",
+    "title": "A Comprehensive Guide to Cloudland Canyon State Park",
+    "topic": "Cloudland Canyon State Park hiking trails, camping, waterfalls, and activities near Chattanooga, TN",
+    "frequency_days": 60,
+    "last_checked": "2026-01-01"
+  },
+  {
+    "slug": "live-sports",
+    "path": "src/pages/chattanooga/guides/live-sports.mdx",
+    "title": "A Playbook for Chattanooga Live Sports",
+    "topic": "live sports teams, stadiums, sporting events, and athletic venues in Chattanooga, TN",
+    "frequency_days": 30,
+    "last_checked": "2026-01-01"
+  },
+  {
+    "slug": "outdoors",
+    "path": "src/pages/chattanooga/guides/outdoors.mdx",
+    "title": "An Interactive Guide to Chattanooga Outdoors",
+    "topic": "outdoor activities, hiking, climbing, kayaking, parks, trails, and nature in Chattanooga, TN",
+    "frequency_days": 60,
+    "last_checked": "2026-01-01"
+  },
+  {
+    "slug": "breweries-and-wineries",
+    "path": "src/pages/chattanooga/guides/breweries-and-wineries.mdx",
+    "title": "An Interactive Guide to Breweries & Wineries Near Chattanooga",
+    "topic": "breweries, craft beer taprooms, wineries, and cideries in and around Chattanooga, TN",
+    "frequency_days": 30,
+    "last_checked": "2026-01-01"
+  },
+  {
+    "slug": "coffeeshops",
+    "path": "src/pages/chattanooga/guides/coffeeshops.mdx",
+    "title": "An Interactive Guide to Chattanooga Coffee",
+    "topic": "coffee shops, cafes, espresso bars, and specialty coffee in Chattanooga, TN",
+    "frequency_days": 30,
+    "last_checked": "2026-01-01"
+  },
+  {
+    "slug": "exhibits",
+    "path": "src/pages/chattanooga/guides/exhibits.mdx",
+    "title": "An Interactive Guide to Chattanooga Exhibits",
+    "topic": "museums, aquariums, galleries, exhibits, and educational attractions in Chattanooga, TN",
+    "frequency_days": 60,
+    "last_checked": "2026-01-01"
+  },
+  {
+    "slug": "restaurants-with-a-view",
+    "path": "src/pages/chattanooga/guides/restaurants-with-a-view.mdx",
+    "title": "An Interactive Guide to Chattanooga Restaurants with a View",
+    "topic": "restaurants with scenic views, rooftop dining, waterfront restaurants, and scenic eating spots in Chattanooga, TN",
+    "frequency_days": 30,
+    "last_checked": "2026-01-01"
+  }
+]
