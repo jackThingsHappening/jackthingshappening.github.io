@@ -95,14 +95,14 @@ const subTitle = eventDateDetails && eventDateDetails.eventTitle ? eventDateDeta
   <!-- Overview Section -->
   {(post.seoDescription || post.topDetails?.text) && (
     <a href={post.url} class="block">
-      <p class="px-4 mt-3 mb-1 text-lg text-gray-600 line-clamp-2">{post.seoDescription || post.topDetails?.text}<span class="text-2xl">...</span></p>
+      <p class="px-4 mt-6 mb-1 text-lg text-gray-600 line-clamp-2">{post.seoDescription || post.topDetails?.text}<span class="text-2xl">...</span></p>
     </a>
   )}
 
   <!-- Full Description Accordion -->
   {(post.seoDescription || post.topDetails?.text) && (
-    <details class="group px-4 mb-1">
-      <summary class="cursor-pointer list-none flex items-center gap-1 text-base text-logoDarkGreen select-none w-fit">
+    <details class="group px-4 mt-3">
+      <summary class="cursor-pointer list-none flex items-center gap-1 text-lg text-customGreen1 select-none w-fit py-1 hover:underline hover:opacity-80">
         <svg class="w-4 h-4 transition-transform duration-150 group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
@@ -110,7 +110,7 @@ const subTitle = eventDateDetails && eventDateDetails.eventTitle ? eventDateDeta
         <span class="hidden group-open:inline">Less</span>
       </summary>
       <a href={post.url} class="block">
-        <p class="mt-2 mb-2 text-xl text-logoDarkGreen">{post.seoDescription || post.topDetails?.text}</p>
+        <p class="mt-2 mb-2 text-xl text-gray-600">{post.seoDescription || post.topDetails?.text}</p>
       </a>
     </details>
   )}
@@ -118,14 +118,14 @@ const subTitle = eventDateDetails && eventDateDetails.eventTitle ? eventDateDeta
   <!-- More Details Accordion (events only) -->
   {(post.venue || post.entranceCost || post.address || post.eventLink) && (
     <details class="group px-4 pb-3">
-      <summary class="cursor-pointer list-none flex items-center gap-1 text-base text-customGreen1 select-none w-fit">
+      <summary class="cursor-pointer list-none flex items-center gap-1 text-lg text-customGreen1 select-none w-fit py-1 hover:underline hover:opacity-80">
         <svg class="w-4 h-4 transition-transform duration-150 group-open:rotate-180 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
         <span class="group-open:hidden">More details</span>
         <span class="hidden group-open:inline">Less</span>
       </summary>
-      <div class="mt-2 space-y-1 text-base text-customGreen1 pl-1">
+      <div class="mt-2 space-y-1 text-base text-gray-600 pl-1">
         {post.venue && <p>{post.venue}</p>}
         {post.address && <p>{post.address}</p>}
         {post.entranceCost && <p>Cost: {post.entranceCost}</p>}
