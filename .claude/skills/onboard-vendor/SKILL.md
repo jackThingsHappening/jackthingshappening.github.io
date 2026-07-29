@@ -88,18 +88,24 @@ Run the skill: `/new-events {slug}`
 
 This fetches the venue's events page and creates MDX files with `published: true`.
 
-## Step 6 — Update vendor-sources.json
+## Step 6 — Humanize event copy
+
+Run the skill: `/humanize src/pages/chattanooga/events/{slug}/ event output:source`
+
+This rewrites the body text of all newly created event files to match the site's voice before they go live.
+
+## Step 7 — Update vendor-sources.json
 
 Read `.claude/vendor-sources.json`. Find the vendor entry by slug. Change `status` from `"pending"` to `"active"`. Write the file back.
 
-## Step 7 — Commit
+## Step 8 — Commit
 
 ```bash
 git add .claude/event-sources/{slug}.json .claude/vendor-sources.json src/pages/chattanooga/events/{slug}/
 git commit -m "feat: onboard {vendor name} — initial events"
 ```
 
-## Step 8 — Report
+## Step 9 — Report
 
 Print:
 - Vendor name and type
