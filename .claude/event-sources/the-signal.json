@@ -1,0 +1,26 @@
+{
+  "name": "The Signal",
+  "type": "calendar",
+  "url": "https://www.thesignaltn.com/tickets/",
+  "outputDir": "src/pages/chattanooga/events",
+  "slugPrefix": "the-signal",
+  "defaultFrontmatter": {
+    "venue": "The Signal",
+    "address": "21 Choo Choo Ave, Chattanooga, TN 37402",
+    "iconPath": "/images/icons/music.svg",
+    "eventLink": "https://www.thesignaltn.com/tickets/",
+    "tags": [
+      {
+        "type": "event",
+        "tag": "music"
+      },
+      {
+        "type": "event",
+        "tag": "live-events"
+      }
+    ],
+    "layout": "../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-07-29"
+}
