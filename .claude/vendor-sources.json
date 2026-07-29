@@ -1,0 +1,11 @@
+[
+  { "name": "Tennessee Aquarium", "slug": "acquarium", "url": "https://www.tnaqua.org/events", "status": "active" },
+  { "name": "Barrelhouse Ballroom", "slug": "barrelhouse-ballroom", "url": "https://www.barrelhouseballroom.com/shows", "status": "active" },
+  { "name": "Chattanooga Market", "slug": "chattanooga-market", "url": "https://chattanoogamarket.com/calendar/", "status": "active" },
+  { "name": "Chattanooga Convention Center", "slug": "convention-center", "url": "https://www.chattanoogaconventioncenter.org/chattanooga-events", "status": "active" },
+  { "name": "Hutton & Smith Brewing Co.", "slug": "hutton-and-smith", "url": "https://huttonandsmithbrewing.com/about-us/services/", "status": "active" },
+  { "name": "Oddstory Brewing Co.", "slug": "oddstory", "url": "https://www.oddstorybrewing.co/central-events", "status": "active" },
+  { "name": "Songbirds", "slug": "songbirds", "url": "https://venue.songbirds.org/concert-schedule/", "status": "active" },
+  { "name": "The Tap House", "slug": "tap-house", "url": "https://taphousechatt.com/chattanooga-chattanooga-the-tap-house-events", "status": "active" },
+  { "name": "The Woodshop Listening Room", "slug": "woodshop", "url": "https://thewoodshoplisteningroom.com/shows", "status": "active" }
+]
