@@ -38,7 +38,8 @@ Use WebFetch on the vendor's `url`. Read the content to understand:
     "iconPath": "/images/icons-new/{icon}.png",
     "eventLink": "https://events-page-url",
     "tags": [
-      { "type": "event", "tag": "{relevant-tag}" }
+      { "type": "place", "tag": "{slug}" },
+      { "type": "event", "tag": "{descriptive-tag}" }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
@@ -77,7 +78,7 @@ Use WebFetch on the vendor's `url`. Read the content to understand:
 - calendar.png → convention centers, multi-purpose venues
 - market.png → markets
 
-**Tags** — use one or two relevant tags from: music, live-events, food-drink, museum, theater, sports, comedy, outdoors, farm, market
+**Tags** — always two: first a `place` tag using the vendor's slug, then one `event` tag describing the type of content (music, live-events, food-drink, museum, theater, sports, comedy, outdoors, farm, market)
 
 Write the config to `.claude/event-sources/{slug}.json`.
 
