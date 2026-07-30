@@ -1,0 +1,36 @@
+{
+  "name": "Chattanooga Brewing Co.",
+  "type": "recurring",
+  "url": "https://www.chattabrew.com/calendar",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/chattanooga-brewing/trivia-with-barry.mdx",
+      "matchHint": "Weekly Trivia Night with Barry, every Wednesday 7:00-9:00 PM, with beer specials, discounted wings, and prizes"
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/chattanooga-brewing/magic-the-gathering-meetup.mdx",
+      "matchHint": "Unofficial Magic the Gathering meet up, every Tuesday 5:00-9:00 PM, half-price appetizers and $4 pint specials"
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/chattanooga-brewing/joggers-and-lagers.mdx",
+      "matchHint": "Joggers & Lagers free 5K run, every Tuesday 6:00-7:00 PM, with extended happy hour discounts for participants"
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/chattanooga-brewing/open-mic-night.mdx",
+      "matchHint": "Open Mic Night with Jack Endelouz, every Thursday, sign up 6:30 PM and show starts 7:00 PM"
+    }
+  ],
+  "defaultFrontmatter": {
+    "venue": "Chattanooga Brewing Co.",
+    "address": "730 Chestnut St., Chattanooga, TN 37402",
+    "iconPath": "/images/icons-new/beer.png",
+    "eventLink": "https://www.chattabrew.com/calendar",
+    "tags": [
+      { "type": "place", "tag": "chattanooga-brewing" },
+      { "type": "event", "tag": "food-drink" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-01-01"
+}
