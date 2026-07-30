@@ -2,7 +2,7 @@ name: Event Refresh
 
 on:
   schedule:
-    - cron: '0 10 * * *'  # 6am ET daily
+    - cron: '0 10 * * 1'  # 6am ET Mondays
   workflow_dispatch:
 
 jobs:
