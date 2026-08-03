@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/museum.png",
     "eventLink": "https://www.cdmfun.org/events",
     "tags": [
-      { "type": "place", "tag": "creative-discovery-museum" },
-      { "type": "event", "tag": "museum" }
+      {
+        "type": "place",
+        "tag": "creative-discovery-museum"
+      },
+      {
+        "type": "event",
+        "tag": "museum"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 7,
-  "last_checked": "2026-01-01"
+  "last_checked": "2026-08-03"
 }

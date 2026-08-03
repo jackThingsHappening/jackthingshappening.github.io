@@ -26,11 +26,17 @@
     "iconPath": "/images/icons-new/beer.png",
     "eventLink": "https://www.chattabrew.com/calendar",
     "tags": [
-      { "type": "place", "tag": "chattanooga-brewing" },
-      { "type": "event", "tag": "food-drink" }
+      {
+        "type": "place",
+        "tag": "chattanooga-brewing"
+      },
+      {
+        "type": "event",
+        "tag": "food-drink"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 14,
-  "last_checked": "2026-01-01"
+  "last_checked": "2026-08-03"
 }
