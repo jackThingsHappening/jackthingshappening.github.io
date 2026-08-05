@@ -33,6 +33,8 @@ Add **up to 3 new items** per run. Quality over quantity.
 
 ## Step 3 — Add new content items
 
+**MDX tilde rule:** Never write `~` bare inside MDX HTML blocks. The MDX parser treats `~` as a strikethrough delimiter — two tildes in the same block become a strikethrough span that can swallow `</div>` tags and break the build. Use `&#126;` instead (e.g., `&#126;$49` not `~$49`). This applies to price approximations, ranges, and any other use of tilde.
+
 For each item being added, insert it as a new numbered content block in the appropriate section of the guide. Follow the exact HTML structure used by existing items:
 
 ```html
