@@ -1,0 +1,131 @@
+name: Health Check and Rebuild
+
+on:
+  schedule:
+    - cron: '0 13 * * *'  # 9am ET (EDT / UTC-4)
+    - cron: '0 0 * * *'   # 8pm ET (EDT / UTC-4)
+  workflow_dispatch:
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check sitemap URLs for 404s
+        id: check
+        run: |
+          SITEMAP=$(curl -s --max-time 15 https://thingshappening.com/sitemap.xml)
+          if [ -z "$SITEMAP" ]; then
+            echo "Could not fetch sitemap — site may be down."
+            echo "found_404=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          URLS=$(echo "$SITEMAP" | grep -oP '(?<=<loc>)[^<]+')
+          FOUND_404=false
+          BAD_URLS=""
+
+          for url in $URLS; do
+            STATUS=$(curl -o /dev/null -s -w "%{http_code}" --max-time 10 "$url")
+            if [ "$STATUS" = "404" ]; then
+              echo "404: $url"
+              BAD_URLS="$BAD_URLS\n$url"
+              FOUND_404=true
+            fi
+          done
+
+          echo "found_404=$FOUND_404" >> $GITHUB_OUTPUT
+          if [ "$FOUND_404" = "true" ]; then
+            printf "bad_urls=%s" "$BAD_URLS" >> $GITHUB_OUTPUT
+          else
+            echo "No 404s found."
+          fi
+
+      - name: Check if last build-and-push succeeded
+        id: build-status
+        if: steps.check.outputs.found_404 == 'true'
+        run: |
+          CONCLUSION=$(curl -s \
+            -H "Authorization: token ${{ secrets.PERSONAL_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            "https://api.github.com/repos/jackThingsHappening/jackthingshappening.github.io/actions/workflows/build-and-push.yml/runs?per_page=1" \
+            | jq -r '.workflow_runs[0].conclusion')
+          echo "Last build conclusion: $CONCLUSION"
+          echo "conclusion=$CONCLUSION" >> $GITHUB_OUTPUT
+
+      # --- Case 1: build was fine but site has 404s — just rebuild ---
+      - name: Re-trigger build and push
+        if: steps.check.outputs.found_404 == 'true' && steps.build-status.outputs.conclusion == 'success'
+        run: |
+          echo "404s found after a clean build — re-triggering."
+          printf "Affected URLs:\n${{ steps.check.outputs.bad_urls }}"
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.PERSONAL_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/jackThingsHappening/jackthingshappening.github.io/actions/workflows/build-and-push.yml/dispatches \
+            -d '{"ref":"main"}'
+
+      # --- Case 2: build failed — reproduce the error and ask Claude ---
+      - name: Checkout repo
+        if: steps.check.outputs.found_404 == 'true' && steps.build-status.outputs.conclusion == 'failure'
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
+
+      - name: Reproduce build error
+        id: reproduce
+        if: steps.check.outputs.found_404 == 'true' && steps.build-status.outputs.conclusion == 'failure'
+        run: |
+          npm ci
+          npm run build 2>&1 | tail -n 150 > build_error.txt || true
+          echo "--- build error output ---"
+          cat build_error.txt
+        continue-on-error: true
+
+      - name: Ask Claude to debug and fix
+        if: steps.check.outputs.found_404 == 'true' && steps.build-status.outputs.conclusion == 'failure'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          BUILD_LOG=$(cat build_error.txt)
+          BAD=$(printf "${{ steps.check.outputs.bad_urls }}")
+
+          PAYLOAD=$(jq -n \
+            --arg log "$BUILD_LOG" \
+            --arg urls "$BAD" \
+            '{
+              "model": "claude-sonnet-4-6",
+              "max_tokens": 8096,
+              "messages": [{
+                "role": "user",
+                "content": ("You are debugging a failed Astro/MDX build for thingshappening.com.\n\nWriting rules for any prose you produce:\n- Short sentences. 20 words or fewer.\n- Active voice only.\n- One idea per sentence.\n- Simple, common words. No jargon.\n- No filler phrases.\n\nThe site has 404s at these URLs:\n" + $urls + "\n\nBuild error:\n" + $log + "\n\nCommon causes in this repo:\n1. Unbalanced HTML tags in MDX files (opening tag removed but closing tag left behind, or vice versa)\n2. MDX frontmatter syntax errors\n3. Missing or broken imports\n\nRespond with ONLY a valid JSON object, no markdown, no explanation outside the JSON:\n{\n  \"diagnosis\": \"one sentence explanation\",\n  \"file\": \"path/to/file\",\n  \"content\": \"complete corrected file content\"\n}\n\nIf you cannot determine a single-file fix, respond with:\n{\"diagnosis\": \"explanation\", \"file\": null, \"content\": null}")
+              }]
+            }')
+
+          RESPONSE=$(echo "$PAYLOAD" | curl -s https://api.anthropic.com/v1/messages \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2023-06-01" \
+            -H "content-type: application/json" \
+            -d @-)
+
+          CLAUDE_TEXT=$(echo "$RESPONSE" | jq -r '.content[0].text')
+          echo "Claude response: $CLAUDE_TEXT"
+
+          FILE=$(echo "$CLAUDE_TEXT" | jq -r '.file')
+          CONTENT=$(echo "$CLAUDE_TEXT" | jq -r '.content')
+          DIAGNOSIS=$(echo "$CLAUDE_TEXT" | jq -r '.diagnosis')
+
+          echo "Diagnosis: $DIAGNOSIS"
+
+          if [ "$FILE" != "null" ] && [ -n "$FILE" ]; then
+            echo "Applying fix to: $FILE"
+            echo "$CONTENT" > "$FILE"
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add "$FILE"
+            git commit -m "fix: Claude auto-fix — $DIAGNOSIS"
+            git push origin main
+          else
+            echo "Claude could not determine a fix. Manual review needed."
+            exit 1
+          fi
