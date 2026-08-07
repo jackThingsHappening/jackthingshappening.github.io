@@ -1,0 +1,26 @@
+{
+  "name": "Hunter Museum of American Art",
+  "type": "calendar",
+  "url": "https://www.huntermuseum.org/events",
+  "outputDir": "src/pages/chattanooga/events/hunter-museum",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Hunter Museum of American Art",
+    "address": "10 Bluff View Ave, Chattanooga, TN 37403",
+    "iconPath": "/images/icons-new/museum.png",
+    "eventLink": "https://www.huntermuseum.org/events",
+    "tags": [
+      {
+        "type": "place",
+        "tag": "hunter-museum"
+      },
+      {
+        "type": "event",
+        "tag": "museum"
+      }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-08-07"
+}
