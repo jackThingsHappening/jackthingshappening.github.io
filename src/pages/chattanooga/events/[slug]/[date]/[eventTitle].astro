@@ -13,6 +13,8 @@ export async function getStaticPaths() {
     const slug = post.url.split('/').filter(Boolean).pop();
 
     for (const detail of dates) {
+      if (!detail.eventTitle) continue;
+
       const eventTitleSlug = detail.eventTitle
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '-')
