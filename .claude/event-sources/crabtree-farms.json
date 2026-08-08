@@ -1,0 +1,20 @@
+{
+  "name": "Crabtree Farms",
+  "type": "calendar",
+  "url": "https://crabtreefarms.org/ourevents/list/",
+  "outputDir": "src/pages/chattanooga/events/crabtree-farms",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Crabtree Farms",
+    "address": "1000 E 30th St, Chattanooga, TN 37407",
+    "iconPath": "/images/icons-new/barn.png",
+    "eventLink": "https://crabtreefarms.org/ourevents/list/",
+    "tags": [
+      { "type": "place", "tag": "crabtree-farms" },
+      { "type": "genre", "tag": "farm" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-07-26"
+}

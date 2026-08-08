@@ -1,0 +1,20 @@
+{
+  "name": "Sequatchie Cove Farm",
+  "type": "calendar",
+  "url": "https://www.sequatchiecovefarm.com/events-events-events",
+  "outputDir": "src/pages/chattanooga/events/sequatchie-cove-farm",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Sequatchie Cove Farm",
+    "address": "Sequatchie, TN (approx. 40 min from Chattanooga)",
+    "iconPath": "/images/icons-new/barn.png",
+    "eventLink": "https://www.sequatchiecovefarm.com/events",
+    "tags": [
+      { "type": "place", "tag": "sequatchie-cove-farm" },
+      { "type": "genre", "tag": "farm" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-07-26"
+}
