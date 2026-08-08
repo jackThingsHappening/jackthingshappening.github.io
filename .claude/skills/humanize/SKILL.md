@@ -78,7 +78,15 @@ Apply all of the following when rewriting:
 
 5. **Don't open with a label.** Never start with "[Name] is a [type of thing]." Lead with the texture of the night, not a definition. "A night of darkwave at Barrelhouse" beats "CRIMEWAVE is a recurring darkwave night."
 
-6. **Short sentences. Active voice.** Avoid stacking clauses. If a sentence needs a second comma, split it.
+6. **Simplified Technical English (STE).** Apply all STE rules when rewriting prose:
+   - 20 words or fewer per sentence
+   - Active voice only
+   - One idea per sentence
+   - One word, one meaning — do not use the same word to mean two different things
+   - No noun stacks (e.g. "event registration confirmation page" → "the page that confirms your registration")
+   - Simple, common words — if a simpler word exists, use it
+   - No filler phrases ("in order to", "it is important to note that", "please be aware")
+   - If a sentence needs a second comma, split it into two sentences
 
 7. **Use fun words when they fit naturally.** Don't force it — but when the context genuinely calls for it, reach for words like: hodgepodge, smorgasbord, medley, mishmash, gumbo, rummage, ragbag, discombobulate, dilly dally, shenanigans, flabbergasted, tomfoolery, bamboozled, bodacious, buckaroo, skedaddle, canoodle, doohickey, diabolical, fiddlesticks, groovy, gambit, gnarly, hooligan, imbecile, lollygagging, malarkey, maverick, nefarious, requiem. One well placed word is better than none; one forced word kills the sentence.
 

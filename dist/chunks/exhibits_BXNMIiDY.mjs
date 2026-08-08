@@ -1,0 +1,571 @@
+import { _ as __astro_tag_component__, f as createVNode, F as Fragment } from './astro/server_CzqnycT_.mjs';
+import { $ as $$BlogPostLayout } from './BlogPostLayout_Bqj5Bb28.mjs';
+import { $ as $$PageItemsFromFrontmatter } from './PageItemsFromFrontmatter_yF6ShBMT.mjs';
+import 'html-escaper';
+import 'clsx';
+
+const MDXLayout = function ({children}) {
+  const {layout, ...content} = frontmatter;
+  content.file = file;
+  content.url = url;
+  return createVNode($$BlogPostLayout, {
+    file,
+    url,
+    content,
+    frontmatter: content,
+    headings: getHeadings(),
+    'server:root': true,
+    children
+  });
+};
+const frontmatter = {
+  "title": "An Interactive Guide to 19 Chattanooga Exhibits",
+  "published": true,
+  "lastUpdated": "05/20/2026",
+  "originalDate": "05/09/2026",
+  "readTime": "8 minutes",
+  "tags": [{
+    "type": "guide",
+    "tag": "museums"
+  }, {
+    "type": "guide",
+    "tag": "interactive"
+  }],
+  "layout": "../../../layouts/BlogPostLayout.astro",
+  "seoDescription": "Chattanooga museums and exhibits: Tennessee Aquarium, Hunter Museum, Creative Discovery, Sculpture Fields, Ruby Falls, Chickamauga, and more — interactive filters by type and neighborhood.",
+  "geoCoverage": "Chattanooga, TN and day trips (Lookout Mountain, Fort Oglethorpe GA, South Pittsburg TN, Dayton TN, Cherry Log GA, Chatsworth GA, Calhoun GA)",
+  "iconPath": "../../../images/icons-new/art.png",
+  "images": [{
+    "src": "/images/chattanooga_guides/exhibits/tow_truck_museum.png",
+    "position": "center"
+  }],
+  "pageItems": [{
+    "title": "Tennessee Aquarium",
+    "description": "Two buildings on the Tennessee River waterfront, connected by a pedestrian bridge. River Journey covers freshwater ecosystems from Appalachian cove forest down to the Gulf: river otters, alligators, turtles, paddlefish, and gulf sturgeon. Ocean Journey covers saltwater: a butterfly garden, penguins, sharks, stingrays, and reef fish. Touch pools in both buildings. IMAX theater on site. Weekday mornings are dramatically less crowded than weekend afternoons.",
+    "order": 1,
+    "tags": ["indoor", "science", "kids", "downtown"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Tennessee+Aquarium+1+Broad+St+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://tnaqua.org/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Hunter Museum of American Art",
+    "description": "Three connected buildings on an 80 foot bluff above the Tennessee River: a 1904 Classical Revival mansion, a 1975 Brutalist addition, and a 2005 contemporary glass wing. Nearly 3,000 works spanning American art from the colonial period to today, with rotating exhibitions alongside the permanent collection. Sculpture garden outside. Active programming and lecture series throughout the year.",
+    "order": 2,
+    "tags": ["indoor", "art", "downtown"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Hunter+Museum+of+American+Art+10+Bluff+View+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.huntermuseum.org/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Creative Discovery Museum",
+    "description": "Four floors of hands on exhibits at the corner of Chestnut and 4th. Permanent lineup includes a multi pod treehouse, STEM Zone with robotics, ArtSpace, Tennessee RiverPlay water exhibit, and Little FarmHouse for toddlers. Built for kids through middle school age, not just the smallest ones. Weekday mornings are dramatically less crowded than weekend afternoons.",
+    "order": 3,
+    "tags": ["indoor", "science", "art", "interactive", "kids", "downtown"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Creative+Discovery+Museum+321+Chestnut+St+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.cdmfun.org/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "National Medal of Honor Heritage Center",
+    "description": "At 2 W Aquarium Way, steps from the Aquarium. Traces the Medal of Honor from its Civil War origins through Afghanistan and Iraq across personal stories, artifacts, and interactive displays from every major American conflict. Smaller than the Aquarium next door, compact and rarely crowded. Free admission for active military and veterans.",
+    "order": 4,
+    "tags": ["indoor", "history", "downtown"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=National+Medal+of+Honor+Heritage+Center+2+W+Aquarium+Way+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.mohhc.org/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Bessie Smith Cultural Center",
+    "description": "Named for Chattanooga native and blues icon Bessie Smith. At 200 E Martin Luther King Blvd, newly renovated exhibits use video and interactive technology to walk through African American history in the city: from antebellum and slavery through the famed 9th Street jazz era, civil rights, and the present. Rotating art exhibits alongside the permanent collection. Closed weekends. Shares a building with Bessie Smith Hall, a live music venue.",
+    "order": 5,
+    "tags": ["indoor", "history", "art", "downtown"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Bessie+Smith+Cultural+Center+200+E+Martin+Luther+King+Blvd+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.bessiesmithcc.org/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Sculpture Fields at Montague Park",
+    "description": "33 acre park in North Chattanooga with large scale contemporary sculptures spread across open fields. Free, no tickets, no schedule. Work rotates as artists loan and install pieces across the grounds. The Tennessee Valley Railroad runs a lunch excursion that stops here. Easy to combine with Coolidge Park or a morning outdoors day.",
+    "order": 6,
+    "tags": ["outdoor", "art", "free", "north-chattanooga"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Sculpture+Fields+Montague+Park+1800+Montague+Rd+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.sculpturefields.org/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "International Towing & Recovery Museum",
+    "description": "Only museum in the country dedicated to the towing industry, at 3315 Broad St. 24 historic wreckers on the floor spanning 1913 to 2002, including an original Ernest Holmes Sr. Model C from 1913, the first commercially produced wrecker, built right here in Chattanooga. Hall of Fame wall. Compact but dense. Worth an hour if you have any interest in industrial history or working vehicles.",
+    "order": 7,
+    "tags": ["indoor", "history", "southside"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=International+Towing+Recovery+Museum+3315+Broad+St+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://towingmuseum.com/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Tennessee Valley Railroad Museum",
+    "description": "Steam and diesel locomotives in working order, spread across the yard at 4119 Cromwell Rd. Standard excursion runs a 6 mile roundtrip through the yard and into an 1858 tunnel. Also runs dinner trains, Civil War excursions to Chickamauga, and a lunch train that stops at Sculpture Fields. Polar Express runs December. The car barn and restoration yard are worth seeing up close.",
+    "order": 8,
+    "tags": ["indoor", "outdoor", "history", "kids", "east-chattanooga"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Tennessee+Valley+Railroad+Museum+4119+Cromwell+Rd+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.tvrail.com/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Chickamauga Battlefield Visitor Center",
+    "description": "About 15 minutes from downtown in Fort Oglethorpe, GA. The oldest and largest Civil War park in the country: 5,000 acres and over 600 monuments. Visitor center has a museum with artifacts, a detailed relief map, and a 26 minute orientation film. The battlefield runs as a self guided driving or walking tour. The Fuller Gun Collection inside is one of the largest Civil War small arms collections in the country. Budget at least 2 hours, more if you walk any of the trails.",
+    "order": 9,
+    "tags": ["indoor", "outdoor", "history", "near-georgia"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Chickamauga+Battlefield+Visitor+Center+3370+LaFayette+Rd+Fort+Oglethorpe+GA",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.nps.gov/chch/index.htm",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Classic Arcade Pinball Museum",
+    "description": "One price, unlimited play on everything in the building. Pinball machines from the 1940s to today plus classic arcade games, around 40 machines on the floor at any time. Adults run about $20, kids $16. Downtown at 22 W 6th St. Works as an afternoon drop-in or an evening stop after dinner.",
+    "order": 10,
+    "tags": ["indoor", "interactive", "kids", "downtown"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Classic+Arcade+Pinball+Museum+22+W+6th+St+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.chattanoogapinballmuseum.com/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Ruby Falls",
+    "description": "Underground waterfall 1,120 feet below Lookout Mountain, reached by elevator. Guided tours walk about a half mile through cave formations to a 145 foot waterfall, discovered in 1928. No self guided option. Tours take about 45 to 60 minutes and run continuously. Weekends and summer dates book out in advance. The entrance building has a lookout tower with mountain views included in the ticket.",
+    "order": 11,
+    "tags": ["indoor", "science", "lookout-mountain"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Ruby+Falls+1720+S+Scenic+Hwy+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.rubyfalls.com/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Lodge Museum of Cast Iron",
+    "description": "About 35 minutes west of Chattanooga in South Pittsburg, TN, at 220 E 3rd St. Lodge has made cast iron cookware here since 1896 and the museum covers the full production process, the role of cast iron in Southern food culture (developed with the Southern Foodways Alliance), and a debunking exhibit that tackles cast iron myths including the soap debate. Centerpiece is an 18 foot cast iron skillet. $5 admission, free for kids under 5. Big Bad Breakfast operates inside the building. The Lodge flagship store is attached.",
+    "order": 12,
+    "tags": ["indoor", "history", "kids", "south-pittsburg"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Lodge+Museum+of+Cast+Iron+220+E+3rd+St+South+Pittsburg+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.lodgecastiron.com/pages/museum",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Expedition: Bigfoot!",
+    "description": "In Cherry Log, GA off GA-515 between Ellijay and Blue Ridge, about an hour from Chattanooga. The nation's largest collection of Bigfoot footprint casts, plus life-size creature exhibits, audio recordings of alleged encounters, and interactive displays covering sighting reports from across North America. Self guided, takes about 45 to 60 minutes. $8 admission. Takes itself seriously enough to be informative, loosely enough to be fun.",
+    "order": 13,
+    "tags": ["indoor", "interactive", "north-georgia"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Expedition+Bigfoot+Cherry+Log+GA",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://expeditionbigfoot.com/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Scopes Trial Museum",
+    "description": "About 40 minutes north of Chattanooga in Dayton, TN, inside the Rhea County Courthouse where the 1925 Scopes Trial took place. John Scopes was prosecuted here for teaching evolution in what became one of the most covered trials in American history. The courtroom is intact. Museum holds the original broadcast microphone, trial records, photographs, and an audiovisual history of the case. Free admission.",
+    "order": 14,
+    "tags": ["indoor", "history", "dayton"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Rhea+County+Courthouse+1475+Market+St+Dayton+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.rheacountyheritage.com/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Chief Vann House State Historic Site",
+    "description": "About 45 minutes from Chattanooga in Chatsworth, GA. Built in 1804 by Cherokee Chief James Vann, described at the time as the finest private residence in the Cherokee Nation. Federal style mansion on what was a thousand acre plantation. Guided tours cover Cherokee history, the plantation economy, and the forced removal that followed. One of the few surviving antebellum structures built and owned by a Cherokee citizen.",
+    "order": 15,
+    "tags": ["indoor", "history", "chatsworth"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Chief+Vann+House+82+GA-225+Chatsworth+GA",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://gastateparks.org/ChiefVannHouse",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "New Echota State Historic Site",
+    "description": "About 45 minutes south of Chattanooga near Calhoun, GA. Former capital of the Cherokee Nation, where the 1835 treaty authorizing the Trail of Tears was signed. Reconstructed buildings include the council house, Supreme Court building, and the print shop where the Cherokee Phoenix was printed in the Cherokee syllabary. A small museum covers Cherokee governance and the removal. Gets far less foot traffic than its history warrants.",
+    "order": 16,
+    "tags": ["indoor", "outdoor", "history", "calhoun"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=New+Echota+State+Historic+Site+1211+Chatsworth+Hwy+NE+Calhoun+GA",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://gastateparks.org/NewEchota",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Songbirds Guitar & Pop Culture Museum",
+    "description": "Self-guided tour through 550 rare and vintage guitars, amps, and pedals at 206 W Main St. Pieces span decades of American music history with interactive audio and video stations throughout. Opened in 2018 inside the Chattanooga Choo Choo, expanded to a larger standalone space in 2024. Also operates as a live music venue.",
+    "order": 17,
+    "tags": ["indoor", "interactive", "art", "downtown"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Songbirds+Guitar+Museum+206+W+Main+St+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://songbirdsfoundation.org/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Coker Museum",
+    "description": "130+ vintage vehicles at 1309 Chestnut St: cars, trucks, buses, motorcycles, and aircraft spanning significant eras of American automotive history, assembled from Corky Coker's personal collection. Working restoration garage on site gives a live look at preservation in progress. Self-guided, with QR codes on the vehicles linking to video of Coker walking through the stories behind each piece. Open Tuesday through Saturday.",
+    "order": 18,
+    "tags": ["indoor", "history", "interactive", "downtown"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Coker+Museum+1309+Chestnut+St+Chattanooga+TN",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Clarence T. Jones Observatory",
+    "description": "Digital planetarium on the UTC campus at 10 N Tuxedo Ave. Public Star Parties run most Sunday evenings during the school year: gates open at 6:30pm, planetarium shows every half hour from 7 to 9pm, telescope viewing after. Free admission. This is schedule dependent. Nothing is open outside of Star Party nights, so check the UTC calendar before making it the plan.",
+    "order": 19,
+    "tags": ["indoor", "science", "free", "downtown"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Clarence+T+Jones+Observatory+10+N+Tuxedo+Ave+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.utc.edu/arts-and-sciences/departments-and-programs/physics-and-astronomy/jones-observatory",
+      "target": "_blank"
+    }]
+  }],
+  "itemTemplate": {
+    "title": "",
+    "order": 21,
+    "description": "",
+    "links": [{
+      "text": "More Information",
+      "link": ""
+    }],
+    "tags": []
+  }
+};
+function getHeadings() {
+  return [];
+}
+function _createMdxContent(props) {
+  return createVNode(Fragment, {
+    children: [createVNode("script", {
+      type: "application/ld+json",
+      "set:html": JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Chattanooga Museums & Exhibits Guide",
+        "description": "Interactive guide to museums and exhibits in Chattanooga: art, history, science, outdoor sculpture, and kid-friendly attractions.",
+        "numberOfItems": 19,
+        "url": "https://thingshappening.com/chattanooga/guides/exhibits"
+      })
+    }), "\n", createVNode("div", {
+      class: "max-w-6xl mx-auto px-3",
+      children: [createVNode("div", {
+        class: "pb-5 pt-2",
+        children: ["In this project we cover ", createVNode("strong", {
+          children: "19"
+        }), " exhibits or exhibit adjacent venues across art, history, science and more. We tried to stay local but there were a couple places a little further out we felt needed to be included and would be worth the extra drive."]
+      }), createVNode("div", {
+        class: "pb-5",
+        children: "Several entries are a short drive out: Chickamauga Battlefield is 15 minutes into Georgia, Ruby Falls is on Lookout Mountain, and the guide reaches as far as Dayton (Scopes Trial), Chatsworth (Chief Vann House), and Calhoun (New Echota), all within 45 minutes. Chief Vann House and New Echota go well as a combined day trip."
+      }), createVNode("div", {
+        class: "pb-5",
+        children: "Eight of the 19 spots are in or immediately adjacent to downtown. The Aquarium, Medal of Honor Heritage Center, and Pinball Museum sit within a couple of blocks of each other near the riverfront. Hunter Museum and Bessie Smith Cultural Center are each a short walk from there. Creative Discovery Museum is a few blocks further. Walkable as a full day or weekend if you pace it well and plan in advance."
+      }), createVNode("div", {
+        class: "pb-5",
+        children: ["If there’s a museum or exhibit worth adding or updating, ", createVNode("a", {
+          href: "mailto:jack@thingshappening.com",
+          children: "send an email"
+        }), ". Hours and admission prices change. Confirm before you go."]
+      })]
+    }), "\n", createVNode("div", {
+      class: "mb-8 mt-5 w-full max-w-3xl",
+      children: [createVNode("div", {
+        class: "relative w-full",
+        style: "padding-bottom: 75%;",
+        children: createVNode("iframe", {
+          src: "https://www.google.com/maps/d/u/0/embed?mid=17QD5WOQKVRKSQ_9ucXtY-RLnxb9iL6c&ehbc=2E312F",
+          class: "absolute top-0 left-0 w-full h-full border-0 rounded-lg",
+          loading: "async",
+          title: "Chattanooga Outdoor Adventures Map"
+        })
+      }), createVNode("p", {
+        class: "text-lg mt-2 italic",
+        children: "Map View Of The Coffee Shop Locations Featured Below"
+      })]
+    }), "\n", createVNode("section", {
+      id: "guide-filters",
+      class: "text-xl pt-6 pb-2",
+      children: [createVNode("div", {
+        class: "max-w-6xl mx-auto px-3",
+        children: createVNode("div", {
+          class: "flex flex-col md:flex-row md:items-center mb-3 pb-3 gap-2 md:gap-6",
+          children: [createVNode("h2", {
+            class: "text-[2.5rem] mb-0",
+            style: "font-family: 'Libre Baskerville', serif;",
+            children: ["Type", createVNode("span", {
+              class: "color-pink ml-1",
+              children: createVNode("b", {
+                children: ":"
+              })
+            })]
+          }), createVNode("div", {
+            class: "flex flex-wrap gap-3",
+            children: [createVNode("a", {
+              href: "/chattanooga/guides/exhibits?tags=art",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "art",
+              children: "Art"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/exhibits?tags=history",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "history",
+              children: "History"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/exhibits?tags=science",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "science",
+              children: "Science & Nature"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/exhibits?tags=interactive",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "interactive",
+              children: "Interactive"
+            })]
+          })]
+        })
+      }), createVNode("div", {
+        class: "max-w-6xl mx-auto px-3",
+        children: createVNode("div", {
+          class: "flex flex-col md:flex-row md:items-center mb-3 pb-3 gap-2 md:gap-6",
+          children: [createVNode("h2", {
+            class: "text-[2.5rem] mb-0",
+            style: "font-family: 'Libre Baskerville', serif;",
+            children: ["Format", createVNode("span", {
+              class: "color-pink ml-1",
+              children: createVNode("b", {
+                children: ":"
+              })
+            })]
+          }), createVNode("div", {
+            class: "flex flex-wrap gap-3",
+            children: [createVNode("a", {
+              href: "/chattanooga/guides/exhibits?tags=indoor",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "indoor",
+              children: "Indoor"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/exhibits?tags=outdoor",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "outdoor",
+              children: "Outdoor"
+            }), createVNode("div", {
+              class: "relative",
+              children: [createVNode("span", {
+                class: "hidden md:block absolute -top-7 left-1/2 -translate-x-1/2 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200",
+                style: "font-size: 11px;",
+                children: "Try Me ↓"
+              }), createVNode("span", {
+                class: "md:hidden absolute top-1/2 -translate-y-1/2 -right-16 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200 z-10",
+                style: "font-size: 11px;",
+                children: "← Try Me"
+              }), createVNode("a", {
+                href: "/chattanooga/guides/exhibits?tags=free",
+                class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+                style: "background-color: #1a4d2e;",
+                "data-tag": "free",
+                children: "Free admission"
+              })]
+            }), createVNode("a", {
+              href: "/chattanooga/guides/exhibits?tags=kids",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "kids",
+              children: "Good for kids"
+            })]
+          })]
+        })
+      })]
+    }), "\n", createVNode("div", {
+      id: "place-descriptions-container",
+      class: "max-w-6xl mx-auto px-3",
+      children: [createVNode("div", {
+        class: "place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg",
+        "data-place": "art",
+        children: [createVNode("h2", {
+          class: "text-3xl mb-2",
+          style: "font-family: 'Libre Baskerville', serif;",
+          children: ["Art in Chattanooga", createVNode("span", {
+            class: "color-pink ml-1",
+            children: createVNode("b", {
+              children: "."
+            })
+          })]
+        }), createVNode("p", {
+          class: "text-xl",
+          children: "The Hunter Museum anchors the art scene on the downtown bluff. Sculpture Fields adds 33 acres of rotating large scale contemporary sculpture to the city’s art options, free and open any time. The Bessie Smith Cultural Center adds rotating visual exhibitions alongside its permanent history collection. Creative Discovery Museum has a dedicated ArtSpace for younger visitors."
+        }), createVNode("div", {
+          class: "flex flex-wrap gap-4 mt-4",
+          children: createVNode("a", {
+            href: "/chattanooga/guides/coffeeshops?tags=downtown",
+            class: "page-item-link text-logoDarkGreen underline",
+            children: "Downtown coffee nearby"
+          })
+        })]
+      }), createVNode("div", {
+        class: "place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg",
+        "data-place": "history",
+        children: [createVNode("h2", {
+          class: "text-3xl mb-2",
+          style: "font-family: 'Libre Baskerville', serif;",
+          children: ["History in Chattanooga", createVNode("span", {
+            class: "color-pink ml-1",
+            children: createVNode("b", {
+              children: "."
+            })
+          })]
+        }), createVNode("p", {
+          class: "text-xl",
+          children: "Chattanooga sits at the convergence of several major American history threads: a Cherokee capital displaced by the Trail of Tears, a critical Civil War gateway city, a center of African American culture along 9th Street, and an industrial hub that rebuilt itself around manufacturing. The history options here go deep across all of those. The Tennessee Valley Railroad and Chickamauga Battlefield are the two biggest time commitments."
+        }), createVNode("div", {
+          class: "flex flex-wrap gap-4 mt-4",
+          children: createVNode("a", {
+            href: "/chattanooga/guides/tours",
+            class: "page-item-link text-logoDarkGreen underline",
+            children: "Guided tours"
+          })
+        })]
+      })]
+    }), "\n", createVNode("section", {
+      class: "text-xl",
+      children: createVNode("div", {
+        children: createVNode($$PageItemsFromFrontmatter, {
+          pageItems: frontmatter.pageItems,
+          showClearFilters: true
+        })
+      })
+    }), "\n", createVNode("div", {
+      class: "pb-12 max-w-6xl mx-auto px-3",
+      children: createVNode("div", {
+        class: "pb-3",
+        children: ["If this guide helped, or if there’s a museum or exhibit we missed, ", createVNode("a", {
+          href: "mailto:jack@thingshappening.com",
+          children: "send a note"
+        }), ". We’ll keep adding and refining as new spots open. Pair this with the ", createVNode("a", {
+          href: "/chattanooga/guides/outdoors",
+          children: "outdoor adventures guide"
+        }), " and ", createVNode("a", {
+          href: "/chattanooga/guides/restaurants-with-a-view",
+          children: "restaurants with a view"
+        }), " for a full visit."]
+      })
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  return createVNode(MDXLayout, {
+    ...props,
+    children: createVNode(_createMdxContent, {
+      ...props
+    })
+  });
+}
+
+const url = "/chattanooga/guides/exhibits";
+const file = "/Users/jack.burum/portfolio-of-small-bets/things_happening/src/pages/chattanooga/guides/exhibits.mdx";
+const Content = (props = {}) => MDXContent({
+  ...props,
+  components: { Fragment: Fragment, ...props.components, },
+});
+Content[Symbol.for('mdx-component')] = true;
+Content[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter.layout);
+Content.moduleId = "/Users/jack.burum/portfolio-of-small-bets/things_happening/src/pages/chattanooga/guides/exhibits.mdx";
+__astro_tag_component__(Content, 'astro:jsx');
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  Content,
+  default: Content,
+  file,
+  frontmatter,
+  getHeadings,
+  url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+export { _page as _ };

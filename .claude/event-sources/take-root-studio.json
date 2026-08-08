@@ -1,0 +1,13 @@
+{
+  "name": "Take Root Studio",
+  "type": "recurring",
+  "url": "https://takeroot.studio/rooted-night-market",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/city/cleveland/take-root-studio/rooted-night-market.mdx",
+      "matchHint": "Rooted Night Market on First Saturdays 6pm–9pm"
+    }
+  ],
+  "frequency_days": 30,
+  "last_checked": "2026-08-08"
+}

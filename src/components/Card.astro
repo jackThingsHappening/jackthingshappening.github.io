@@ -44,7 +44,7 @@ if (post.eventDatesDetails) {
   const slugFromUrl = post.url?.split('/').pop();
 
   const slugify = (title) =>
-    title
+    (title ?? '')
       .toLowerCase()
       .replace(/[^a-z0-9]+/g, '-')
       .replace(/^-|-$/g, '');
@@ -62,10 +62,8 @@ const subTitle = eventDateDetails && eventDateDetails.eventTitle ? eventDateDeta
   <!-- Title & Date Section -->
   <a href={post.url} class="block">
     <div class="pt-6 pb-3 px-4">
-      <h2 class="font-semi text-2xl leading-tight">
-        {post.title}{post.pubDate && (
-          `: ${subTitle}`
-        )}
+      <h2 class="text-[1.8rem] leading-tight" style="">
+        {post.title}{eventDateDetails?.eventTitle ? `: ${eventDateDetails.eventTitle}` : ''}
       </h2>
       {(post.pubDate || post.lastUpdated) && (
         <p class="text-lg text-gray-600 mt-2 flex items-center gap-2">

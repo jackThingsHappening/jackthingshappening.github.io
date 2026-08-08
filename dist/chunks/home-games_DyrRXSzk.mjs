@@ -1,0 +1,438 @@
+import { f as createVNode, F as Fragment, _ as __astro_tag_component__ } from './astro/server_CzqnycT_.mjs';
+import 'html-escaper';
+import 'clsx';
+
+const frontmatter = {
+  "title": "Chattanooga Lookouts",
+  "venue": "Erlanger Park",
+  "address": "2658 Pipe Way, Chattanooga, TN 37408",
+  "iconPath": "/images/icons-new/megaphone.png",
+  "eventLink": "https://www.lookouts.com/tickets",
+  "tags": [{
+    "type": "place",
+    "tag": "lookouts"
+  }, {
+    "type": "genre",
+    "tag": "sports"
+  }],
+  "entranceCost": "Varies",
+  "eventDates": ["2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-05-30", "2026-05-31", "2026-06-09", "2026-06-10", "2026-06-11", "2026-06-12", "2026-06-13", "2026-06-14", "2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26", "2026-06-27", "2026-06-28", "2026-07-17", "2026-07-18", "2026-07-19", "2026-07-21", "2026-07-22", "2026-07-23", "2026-07-24", "2026-07-25", "2026-07-26", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-09", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-22", "2026-08-23", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-28", "2026-08-29", "2026-08-30", "2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-12", "2026-09-13"],
+  "eventDatesDetails": [{
+    "date": "2026-05-26",
+    "eventTitle": "vs. Knoxville Smokies",
+    "time": "6:30 PM",
+    "topDetails": {
+      "text": "Opening game of the series."
+    }
+  }, {
+    "date": "2026-05-27",
+    "eventTitle": "vs. Knoxville Smokies",
+    "time": "6:30 PM",
+    "topDetails": {
+      "text": "Dogs at the Diamond — bring your dog for a pre-game parade on the field."
+    }
+  }, {
+    "date": "2026-05-28",
+    "eventTitle": "vs. Knoxville Smokies",
+    "time": "6:30 PM",
+    "topDetails": {
+      "text": "Thirsty Thursday — discounted drinks all night at the Right Field Bar."
+    }
+  }, {
+    "date": "2026-05-29",
+    "eventTitle": "vs. Knoxville Smokies",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Titans Night with T-Rac in the building — first 1,000 fans get a Titans headband. Fireworks after the game."
+    }
+  }, {
+    "date": "2026-05-30",
+    "eventTitle": "vs. Knoxville Smokies",
+    "time": "6:30 PM",
+    "topDetails": {
+      "text": "Looie Bobblehead giveaway for the first 1,000 fans, Mascot Birthday Bash, and pre-game live music."
+    }
+  }, {
+    "date": "2026-05-31",
+    "eventTitle": "vs. Knoxville Smokies",
+    "time": "1:00 PM",
+    "topDetails": {
+      "text": "Military Appreciation Day — free passes for active and retired military families. Kids run the bases after the game."
+    }
+  }, {
+    "date": "2026-06-09",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Series opener against Rocket City."
+    }
+  }, {
+    "date": "2026-06-10",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "90s Night — first 1,000 fans get a 90s Script Replica Jersey."
+    }
+  }, {
+    "date": "2026-06-11",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Thirsty Thursday drink specials plus World Softball Night at the park."
+    }
+  }, {
+    "date": "2026-06-12",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Conservation Night in partnership with the Tennessee Aquarium. Fireworks after the game."
+    }
+  }, {
+    "date": "2026-06-13",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "6:30 PM",
+    "topDetails": {
+      "text": "In My Lookouts Era Night plus the Saturday Live Music Series — arrive early for pre-game music near the bar."
+    }
+  }, {
+    "date": "2026-06-14",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "1:00 PM",
+    "topDetails": {
+      "text": "Family Sunday Funday — kids run the bases and everyone gets on the field for a post-game catch."
+    }
+  }, {
+    "date": "2026-06-23",
+    "eventTitle": "vs. Pensacola Blue Wahoos",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "World Soccer Night / COPA — soccer-themed night at the ballpark."
+    }
+  }, {
+    "date": "2026-06-24",
+    "eventTitle": "vs. Pensacola Blue Wahoos",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Mid-week game against Pensacola."
+    }
+  }, {
+    "date": "2026-06-25",
+    "eventTitle": "vs. Pensacola Blue Wahoos",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Thirsty Thursday — discounted drinks all night at the Right Field Bar."
+    }
+  }, {
+    "date": "2026-06-26",
+    "eventTitle": "vs. Pensacola Blue Wahoos",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Dino Weekend opens with Unum Night. Fireworks after the game."
+    }
+  }, {
+    "date": "2026-06-27",
+    "eventTitle": "vs. Pensacola Blue Wahoos",
+    "time": "6:30 PM",
+    "topDetails": {
+      "text": "Dino Weekend continues Saturday with the Saturday Live Music Series."
+    }
+  }, {
+    "date": "2026-06-28",
+    "eventTitle": "vs. Pensacola Blue Wahoos",
+    "time": "1:00 PM",
+    "topDetails": {
+      "text": "Dino Weekend finale. Kids run the bases and post-game catch on the field."
+    }
+  }, {
+    "date": "2026-07-17",
+    "eventTitle": "vs. Columbus Clingstones",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Wreckers Weekend Extravagancy opener. Fireworks after the game."
+    }
+  }, {
+    "date": "2026-07-18",
+    "eventTitle": "vs. Columbus Clingstones",
+    "time": "6:30 PM",
+    "topDetails": {
+      "text": "Wreckers Weekend Extravagancy continues with the Saturday Live Music Series."
+    }
+  }, {
+    "date": "2026-07-19",
+    "eventTitle": "vs. Columbus Clingstones",
+    "time": "1:00 PM",
+    "topDetails": {
+      "text": "Wreckers Weekend finale. Kids run the bases and post-game catch on the field."
+    }
+  }, {
+    "date": "2026-07-21",
+    "eventTitle": "vs. Biloxi Shuckers",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Series opener against Biloxi."
+    }
+  }, {
+    "date": "2026-07-22",
+    "eventTitle": "vs. Biloxi Shuckers",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Mid-week game against the Shuckers."
+    }
+  }, {
+    "date": "2026-07-23",
+    "eventTitle": "vs. Biloxi Shuckers",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Singles Night at the Right Field Bar. Thirsty Thursday drink specials."
+    }
+  }, {
+    "date": "2026-07-24",
+    "eventTitle": "vs. Biloxi Shuckers",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Christmas in July. Fireworks after the game."
+    }
+  }, {
+    "date": "2026-07-25",
+    "eventTitle": "vs. Biloxi Shuckers",
+    "time": "6:30 PM",
+    "topDetails": {
+      "text": "Harry Potter Night with the Saturday Live Music Series."
+    }
+  }, {
+    "date": "2026-07-26",
+    "eventTitle": "vs. Biloxi Shuckers",
+    "time": "1:00 PM",
+    "topDetails": {
+      "text": "Family Sunday Funday. Kids run the bases and post-game catch on the field."
+    }
+  }, {
+    "date": "2026-08-04",
+    "eventTitle": "vs. Knoxville Smokies",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Series opener against Knoxville."
+    }
+  }, {
+    "date": "2026-08-05",
+    "eventTitle": "vs. Knoxville Smokies",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Women in Sports Night."
+    }
+  }, {
+    "date": "2026-08-06",
+    "eventTitle": "vs. Knoxville Smokies",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Thirsty Thursday — drink specials at the Right Field Bar."
+    }
+  }, {
+    "date": "2026-08-07",
+    "eventTitle": "vs. Knoxville Smokies",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Fireworks Friday."
+    }
+  }, {
+    "date": "2026-08-08",
+    "eventTitle": "vs. Knoxville Smokies",
+    "time": "6:30 PM",
+    "topDetails": {
+      "text": "Used Car Night — the big local giveaway. Saturday Live Music Series pregame."
+    }
+  }, {
+    "date": "2026-08-09",
+    "eventTitle": "vs. Knoxville Smokies",
+    "time": "1:00 PM",
+    "topDetails": {
+      "text": "Family Sunday Funday. Kids run the bases and post-game catch on the field."
+    }
+  }, {
+    "date": "2026-08-18",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "History of Baseball in Chattanooga Night."
+    }
+  }, {
+    "date": "2026-08-19",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Dogs at the Diamond — bring your dog for the pre-game parade on the field."
+    }
+  }, {
+    "date": "2026-08-20",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Thirsty Thursday — drink specials at the Right Field Bar."
+    }
+  }, {
+    "date": "2026-08-21",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "UTC / College Football Night. Fireworks after the game."
+    }
+  }, {
+    "date": "2026-08-22",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "6:30 PM",
+    "topDetails": {
+      "text": "Saturday Live Music Series pregame."
+    }
+  }, {
+    "date": "2026-08-23",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "1:00 PM",
+    "topDetails": {
+      "text": "Family Sunday Funday. Kids run the bases and post-game catch on the field."
+    }
+  }, {
+    "date": "2026-08-25",
+    "eventTitle": "vs. Birmingham Barons",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Series opener against Birmingham."
+    }
+  }, {
+    "date": "2026-08-26",
+    "eventTitle": "vs. Birmingham Barons",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Mid-week game against the Barons."
+    }
+  }, {
+    "date": "2026-08-27",
+    "eventTitle": "vs. Birmingham Barons",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "AUGtoberfest with a Beer Stein giveaway for the first 1,000 fans. Thirsty Thursday drink specials."
+    }
+  }, {
+    "date": "2026-08-28",
+    "eventTitle": "vs. Birmingham Barons",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Fireworks Friday."
+    }
+  }, {
+    "date": "2026-08-29",
+    "eventTitle": "vs. Birmingham Barons",
+    "time": "6:30 PM",
+    "topDetails": {
+      "text": "Throwback Night with ZOOperstars! Saturday Live Music Series pregame."
+    }
+  }, {
+    "date": "2026-08-30",
+    "eventTitle": "vs. Birmingham Barons",
+    "time": "1:00 PM",
+    "topDetails": {
+      "text": "Family Sunday Funday. Kids run the bases and post-game catch on the field."
+    }
+  }, {
+    "date": "2026-09-08",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Final Regular Season Series opener. 2 Hot Dogs for 50 cents Night."
+    }
+  }, {
+    "date": "2026-09-09",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Final Regular Season Series. Mid-week game."
+    }
+  }, {
+    "date": "2026-09-10",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Thirsty Thursday — drink specials at the Right Field Bar."
+    }
+  }, {
+    "date": "2026-09-11",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Stadium Replica giveaway. Fireworks after the game."
+    }
+  }, {
+    "date": "2026-09-12",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "6:30 PM",
+    "topDetails": {
+      "text": "Fan Appreciation Night with Bluegrass music. Last Saturday home game of the season."
+    }
+  }, {
+    "date": "2026-09-13",
+    "eventTitle": "vs. Rocket City Trash Pandas",
+    "time": "1:00 PM",
+    "topDetails": {
+      "text": "Final home game of the regular season. Kids run the bases and post-game catch on the field."
+    }
+  }]
+};
+function getHeadings() {
+  return [];
+}
+function _createMdxContent(props) {
+  const _components = {
+    meta: "meta",
+    p: "p",
+    strong: "strong",
+    ...props.components
+  };
+  return createVNode(Fragment, {
+    children: [createVNode(_components.meta, {
+      charset: "utf-8"
+    }), createVNode(_components.p, {
+      children: "Double-A ball at AT&T Field, right on the Tennessee River. Lookout Mountain sits directly behind the outfield wall. Get there before first pitch and the concourse view earns it."
+    }), "\n", createVNode(_components.p, {
+      children: ["Recurring promos to know: ", createVNode(_components.strong, {
+        children: "Thirsty Thursday"
+      }), " runs drink specials at the Right Field Bar every Thursday home game. ", createVNode(_components.strong, {
+        children: "Fireworks Friday"
+      }), " follows every Friday night game. ", createVNode(_components.strong, {
+        children: "Saturday Live Music"
+      }), " puts a pregame band near the stadium bar. ", createVNode(_components.strong, {
+        children: "Family Sunday Funday"
+      }), " opens the field after the game. Kids run the bases and everyone plays catch."]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = props.components || ({});
+  return MDXLayout ? createVNode(MDXLayout, {
+    ...props,
+    children: createVNode(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+const url = "/chattanooga/events/chattanooga-lookouts/home-games";
+const file = "/Users/jack.burum/portfolio-of-small-bets/things_happening/src/pages/chattanooga/events/chattanooga-lookouts/home-games.mdx";
+const Content = (props = {}) => MDXContent({
+  ...props,
+  components: { Fragment: Fragment, ...props.components, },
+});
+Content[Symbol.for('mdx-component')] = true;
+Content[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter.layout);
+Content.moduleId = "/Users/jack.burum/portfolio-of-small-bets/things_happening/src/pages/chattanooga/events/chattanooga-lookouts/home-games.mdx";
+__astro_tag_component__(Content, 'astro:jsx');
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  Content,
+  default: Content,
+  file,
+  frontmatter,
+  getHeadings,
+  url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+export { _page as _ };

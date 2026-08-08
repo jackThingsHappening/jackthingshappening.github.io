@@ -1,0 +1,186 @@
+import { f as createVNode, F as Fragment, _ as __astro_tag_component__ } from './astro/server_CzqnycT_.mjs';
+import 'html-escaper';
+import 'clsx';
+
+const frontmatter = {
+  "title": "Soldiers & Sailors Memorial Auditorium",
+  "venue": "Soldiers & Sailors Memorial Auditorium",
+  "address": "399 McCallie Ave, Chattanooga, TN 37402",
+  "iconPath": "/images/icons-new/theater.png",
+  "eventLink": "https://www.ticketmaster.com/soldiers-and-sailors-memorial-auditorium-tickets-chattanooga/venue/222564",
+  "tags": [{
+    "type": "place",
+    "tag": "soldiers-sailors-auditorium"
+  }],
+  "entranceCost": "Varies",
+  "eventDates": ["2026-05-29", "2026-06-12", "2026-06-13", "2026-06-14", "2026-06-19", "2026-06-25", "2026-07-18", "2026-08-23", "2026-09-11", "2026-09-12", "2026-09-25", "2026-09-29", "2026-10-06", "2026-10-09", "2026-10-22", "2026-11-14", "2026-11-22"],
+  "eventDatesDetails": [{
+    "date": "2026-05-29",
+    "eventTitle": "Chicago",
+    "time": "8:00 PM",
+    "topDetails": {
+      "text": "The legendary rock band Chicago performs live."
+    }
+  }, {
+    "date": "2026-06-12",
+    "eventTitle": "Mrs. Doubtfire (Touring)",
+    "time": "8:00 PM",
+    "topDetails": {
+      "text": "Broadway touring production of Mrs. Doubtfire. Opening night."
+    }
+  }, {
+    "date": "2026-06-13",
+    "eventTitle": "Mrs. Doubtfire (Touring)",
+    "time": "2:00 PM / 8:00 PM",
+    "topDetails": {
+      "text": "Two shows. Matinee at 2:00 PM and evening at 8:00 PM."
+    }
+  }, {
+    "date": "2026-06-14",
+    "eventTitle": "Mrs. Doubtfire (Touring)",
+    "time": "1:30 PM / 7:00 PM",
+    "topDetails": {
+      "text": "Two shows. Matinee at 1:30 PM and evening at 7:00 PM. Final performances of the run."
+    }
+  }, {
+    "date": "2026-06-19",
+    "eventTitle": "The Black Jacket Symphony: Bon Jovi's Slippery When Wet",
+    "time": "7:30 PM",
+    "topDetails": {
+      "text": "The Black Jacket Symphony performs Bon Jovi's Slippery When Wet in full, note for note."
+    }
+  }, {
+    "date": "2026-06-25",
+    "eventTitle": "The Best of Preps featuring Ladd McConkey",
+    "time": "6:00 PM",
+    "topDetails": {
+      "text": "CTFP's Best of Preps event featuring Chattanooga-area football star and LA Chargers receiver Ladd McConkey."
+    }
+  }, {
+    "date": "2026-07-18",
+    "eventTitle": "Killers of Kill Tony",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Stand-up showcase featuring comedians from Tony Hinchcliffe's Kill Tony podcast."
+    }
+  }, {
+    "date": "2026-08-23",
+    "eventTitle": "The Temptations & The Four Tops",
+    "time": "7:30 PM",
+    "topDetails": {
+      "text": "Two Motown legends on one stage."
+    }
+  }, {
+    "date": "2026-09-11",
+    "eventTitle": "Flatland Cavalry: Work of Heart Tour",
+    "time": "7:30 PM",
+    "topDetails": {
+      "text": "Texas country outfit Flatland Cavalry on their Work of Heart Tour."
+    }
+  }, {
+    "date": "2026-09-12",
+    "eventTitle": "Rodney Carrington",
+    "time": "7:00 PM",
+    "topDetails": {
+      "text": "Country comedian Rodney Carrington live."
+    }
+  }, {
+    "date": "2026-09-25",
+    "eventTitle": "Gary Owen: No Hard Feelings Tour",
+    "time": "8:00 PM",
+    "topDetails": {
+      "text": "Stand-up comedian Gary Owen on his No Hard Feelings Tour."
+    }
+  }, {
+    "date": "2026-09-29",
+    "eventTitle": "Caamp",
+    "time": "7:30 PM",
+    "topDetails": {
+      "text": "Ohio folk duo Caamp in concert."
+    }
+  }, {
+    "date": "2026-10-06",
+    "eventTitle": "\"Weird Al\" Yankovic: Bigger & Weirder 2026 Tour",
+    "time": "7:30 PM",
+    "topDetails": {
+      "text": "Weird Al brings his full production show to Chattanooga on the Bigger & Weirder 2026 Tour."
+    }
+  }, {
+    "date": "2026-10-09",
+    "eventTitle": "The Doobie Brothers: Walk This Road Tour",
+    "time": "8:00 PM",
+    "topDetails": {
+      "text": "Rock legends the Doobie Brothers on their Walk This Road Tour."
+    }
+  }, {
+    "date": "2026-10-22",
+    "eventTitle": "37th Annual IBMA Bluegrass Music Awards",
+    "time": "7:30 PM",
+    "topDetails": {
+      "text": "The International Bluegrass Music Association holds its annual awards ceremony in Chattanooga."
+    }
+  }, {
+    "date": "2026-11-14",
+    "eventTitle": "Ashley McBryde: Into The Wild",
+    "time": "8:00 PM",
+    "topDetails": {
+      "text": "Arkansas country singer-songwriter Ashley McBryde on her Into The Wild tour."
+    }
+  }, {
+    "date": "2026-11-22",
+    "eventTitle": "NUTCRACKER! Magical Christmas Ballet",
+    "time": "3:00 PM",
+    "topDetails": {
+      "text": "The touring Nutcracker production featuring the magical Christmas ballet."
+    }
+  }]
+};
+function getHeadings() {
+  return [];
+}
+function _createMdxContent(props) {
+  const _components = {
+    meta: "meta",
+    p: "p",
+    ...props.components
+  };
+  return createVNode(Fragment, {
+    children: [createVNode(_components.meta, {
+      charset: "utf-8"
+    }), createVNode(_components.p, {
+      children: "A 1924 memorial auditorium on McCallie Avenue that seats around 2,000. Named for veterans of World War I, it books a wide range of touring acts — Broadway runs, classic rock, country, and comedy. Bigger and more traditional than the Walker Theatre a few blocks away on Broad Street."
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = props.components || ({});
+  return MDXLayout ? createVNode(MDXLayout, {
+    ...props,
+    children: createVNode(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+const url = "/chattanooga/events/soldiers-and-sailors-auditorium";
+const file = "/Users/jack.burum/portfolio-of-small-bets/things_happening/src/pages/chattanooga/events/soldiers-and-sailors-auditorium/index.mdx";
+const Content = (props = {}) => MDXContent({
+  ...props,
+  components: { Fragment: Fragment, ...props.components, },
+});
+Content[Symbol.for('mdx-component')] = true;
+Content[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter.layout);
+Content.moduleId = "/Users/jack.burum/portfolio-of-small-bets/things_happening/src/pages/chattanooga/events/soldiers-and-sailors-auditorium/index.mdx";
+__astro_tag_component__(Content, 'astro:jsx');
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  Content,
+  default: Content,
+  file,
+  frontmatter,
+  getHeadings,
+  url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+export { _page as _ };

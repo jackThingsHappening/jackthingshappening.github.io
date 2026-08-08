@@ -1,0 +1,25 @@
+{
+  "name": "The Diving Mouse",
+  "type": "recurring",
+  "url": "https://thedivingmouse.com/",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/city/cleveland/the-diving-mouse/singo.mdx",
+      "matchHint": "Singo every Tuesday 4:30pm"
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/city/cleveland/the-diving-mouse/karaoke.mdx",
+      "matchHint": "Karaoke every Wednesday 4:30pm"
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/city/cleveland/the-diving-mouse/open-mic.mdx",
+      "matchHint": "Open Mic every Thursday 4:30pm"
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/city/cleveland/the-diving-mouse/live-music.mdx",
+      "matchHint": "Live Music every Friday and Saturday 4:30pm"
+    }
+  ],
+  "frequency_days": 14,
+  "last_checked": "2026-08-08"
+}

@@ -93,9 +93,7 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
         {displaySeriesLabel}
       </h2>
     ) : null}
-    <h1 class="break-words mb-0" style="font-family: 'Libre Baskerville', serif; font-size: clamp(2.75rem, 5vw, 4.5rem);">{title} {pubDate && (
-     `: ${subTitle}`
-   )}</h1>
+    <h1 class="break-words mb-0" style="font-family: 'Libre Baskerville', serif; font-size: clamp(2.75rem, 5vw, 4.5rem);">{title}{eventDateDetails?.eventTitle ? `: ${eventDateDetails.eventTitle}` : ''}</h1>
  </header>
   {hasMetadata && <div class="max-w-5xl content max-w-5xl mx-auto px-3 text-lg">
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-1">

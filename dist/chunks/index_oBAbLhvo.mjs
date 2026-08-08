@@ -1,0 +1,179 @@
+import { f as createVNode, F as Fragment, _ as __astro_tag_component__ } from './astro/server_CzqnycT_.mjs';
+import 'html-escaper';
+import 'clsx';
+
+const frontmatter = {
+  "title": "TVFCU Riverfront Nights",
+  "venue": "Ross's Landing",
+  "address": "100 Riverfront Pkwy, Chattanooga, TN 37402",
+  "iconPath": "/images/icons-new/music.png",
+  "eventLink": "https://www.riverfrontnights.com/schedule",
+  "tags": [{
+    "type": "place",
+    "tag": "riverfront-nights"
+  }, {
+    "type": "genre",
+    "tag": "music"
+  }],
+  "entranceCost": "Free",
+  "eventDates": ["2026-05-23", "2026-05-30", "2026-06-06", "2026-06-13", "2026-06-20", "2026-06-27", "2026-07-04", "2026-07-11", "2026-07-18", "2026-07-25", "2026-08-01", "2026-08-08", "2026-08-22", "2026-08-29", "2026-09-05"],
+  "eventDatesDetails": [{
+    "date": "2026-05-23",
+    "eventTitle": "Purple Madness: A Tribute to Prince",
+    "time": "7:00 PM / 8:30 PM",
+    "topDetails": {
+      "text": "Opening night of the 19th season. Opener: Le Gato."
+    }
+  }, {
+    "date": "2026-05-30",
+    "eventTitle": "Broken Hearts: A Tribute to Tom Petty & The Heartbreakers",
+    "time": "7:00 PM / 8:30 PM",
+    "topDetails": {
+      "text": "Opener: Chelsea Drugstore (Rolling Stones tribute)."
+    }
+  }, {
+    "date": "2026-06-06",
+    "eventTitle": "Rock the 90s: The Official 90s Rock Tribute",
+    "time": "7:00 PM / 8:30 PM",
+    "topDetails": {
+      "text": "Extended Evening. TVFCU 90th anniversary night. Opener: Cara Madaris Band."
+    }
+  }, {
+    "date": "2026-06-13",
+    "eventTitle": "Greggie and the Jets: A Tribute to Elton John",
+    "time": "7:00 PM / 8:30 PM",
+    "topDetails": {
+      "text": "Opener: Drew Sterchi and the Blues Tribe."
+    }
+  }, {
+    "date": "2026-06-20",
+    "eventTitle": "The Monsters of Yacht",
+    "time": "7:00 PM / 8:30 PM",
+    "topDetails": {
+      "text": "Yacht rock tribute. Opener: Chattanooga Horn Authority."
+    }
+  }, {
+    "date": "2026-06-27",
+    "eventTitle": "Jump: America's Van Halen Experience",
+    "time": "7:00 PM / 8:30 PM",
+    "topDetails": {
+      "text": "Extended Evening."
+    }
+  }, {
+    "date": "2026-07-04",
+    "eventTitle": "Johnny Folsom 4: A Tribute to Johnny Cash",
+    "time": "7:00 PM / 8:30 PM",
+    "topDetails": {
+      "text": "Extended Evening. Opener: Courtney Cowart and Bad Matador."
+    }
+  }, {
+    "date": "2026-07-11",
+    "eventTitle": "Boys in the Band: The Alabama Tribute",
+    "time": "7:00 PM / 8:30 PM",
+    "topDetails": {
+      "text": "Opener: Bella and the Boys Band."
+    }
+  }, {
+    "date": "2026-07-18",
+    "eventTitle": "Back 2 Mac: A Tribute to Fleetwood Mac",
+    "time": "7:00 PM / 8:30 PM",
+    "topDetails": {
+      "text": "Extended Evening. Opener: Rick Rushing and the Blues Strangers."
+    }
+  }, {
+    "date": "2026-07-25",
+    "eventTitle": "Slippery When Wet: The Ultimate Bon Jovi Tribute",
+    "time": "7:00 PM / 8:30 PM",
+    "topDetails": {
+      "text": "Opener: Dock Party."
+    }
+  }, {
+    "date": "2026-08-01",
+    "eventTitle": "TBD",
+    "time": "7:00 PM / 8:30 PM",
+    "topDetails": {
+      "text": "Extended Evening. Lineup not yet announced."
+    }
+  }, {
+    "date": "2026-08-08",
+    "eventTitle": "Skynfolks: A Tribute to Lynyrd Skynyrd",
+    "time": "7:00 PM / 8:30 PM",
+    "topDetails": {
+      "text": "Opener: Bettin' on the Mule."
+    }
+  }, {
+    "date": "2026-08-22",
+    "eventTitle": "Tennessee's Dead and Trade Secrets",
+    "time": "7:00 PM / 8:30 PM",
+    "topDetails": {
+      "text": "Grateful Dead tribute meets local roots music."
+    }
+  }, {
+    "date": "2026-08-29",
+    "eventTitle": "Departure: The Journey Tribute Band",
+    "time": "7:00 PM / 8:30 PM",
+    "topDetails": {
+      "text": "Extended Evening. Opener: Hot Fuss: A Killers Tribute."
+    }
+  }, {
+    "date": "2026-09-05",
+    "eventTitle": "Let's Groove Tonight: Earth, Wind & Fire Tribute",
+    "time": "7:00 PM / 8:30 PM",
+    "topDetails": {
+      "text": "Extended Evening. Season finale."
+    }
+  }]
+};
+function getHeadings() {
+  return [];
+}
+function _createMdxContent(props) {
+  const _components = {
+    meta: "meta",
+    p: "p",
+    ...props.components
+  };
+  return createVNode(Fragment, {
+    children: [createVNode(_components.meta, {
+      charset: "utf-8"
+    }), createVNode(_components.p, {
+      children: "Free outdoor concerts every Saturday night at Ross’s Landing, May through Labor Day weekend. Now in its 19th season, TVFCU Riverfront Nights brings in tribute acts covering classic rock, country, R&B, and beyond — all free, all ages, right on the Tennessee River."
+    }), "\n", createVNode(_components.p, {
+      children: "Vendors and food trucks open at 6:00 PM. Opening act at 7:00, headliner at 8:30. Everything wraps by 10:00 PM. Extended Evening dates open up the Chattanooga Green for more vendors and more space."
+    }), "\n", createVNode(_components.p, {
+      children: "No outside food, drinks, or coolers. Lawn chairs and blankets are welcome. No concert on August 15 — Ross’s Landing is taken over by River Games that week."
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  const {wrapper: MDXLayout} = props.components || ({});
+  return MDXLayout ? createVNode(MDXLayout, {
+    ...props,
+    children: createVNode(_createMdxContent, {
+      ...props
+    })
+  }) : _createMdxContent(props);
+}
+
+const url = "/chattanooga/events/riverfront-nights";
+const file = "/Users/jack.burum/portfolio-of-small-bets/things_happening/src/pages/chattanooga/events/riverfront-nights/index.mdx";
+const Content = (props = {}) => MDXContent({
+  ...props,
+  components: { Fragment: Fragment, ...props.components, },
+});
+Content[Symbol.for('mdx-component')] = true;
+Content[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter.layout);
+Content.moduleId = "/Users/jack.burum/portfolio-of-small-bets/things_happening/src/pages/chattanooga/events/riverfront-nights/index.mdx";
+__astro_tag_component__(Content, 'astro:jsx');
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  Content,
+  default: Content,
+  file,
+  frontmatter,
+  getHeadings,
+  url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+export { _page as _ };

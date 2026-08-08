@@ -1,0 +1,1480 @@
+import { _ as __astro_tag_component__, f as createVNode, F as Fragment } from './astro/server_CzqnycT_.mjs';
+import { $ as $$BlogPostLayout } from './BlogPostLayout_Bqj5Bb28.mjs';
+import './OptimizedImage_DlERzftH.mjs';
+import { $ as $$PageItemsFromFrontmatter } from './PageItemsFromFrontmatter_yF6ShBMT.mjs';
+import 'html-escaper';
+import 'clsx';
+
+/*<a href="/chattanooga/guides/outdoor-adventures?tags=climbing" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="climbing">Climbing</a>*/
+/*Place descriptions - pre-rendered in DOM for crawlers, shown/hidden via JS*/
+const MDXLayout = function ({children}) {
+  const {layout, ...content} = frontmatter;
+  content.file = file;
+  content.url = url;
+  return createVNode($$BlogPostLayout, {
+    file,
+    url,
+    content,
+    frontmatter: content,
+    headings: getHeadings(),
+    'server:root': true,
+    children
+  });
+};
+const frontmatter = {
+  "title": "An Interactive Guide to Chattanooga Outdoors: 71 Adventures",
+  "seoDescription": "The fastest way to find your next outdoor adventures in Chattanooga.",
+  "published": true,
+  "lastUpdated": "03/14/2026",
+  "originalDate": "01/15/2026",
+  "readTime": "15 minutes",
+  "tags": [{
+    "type": "guide",
+    "tag": "outdoors"
+  }, {
+    "type": "guide",
+    "tag": "interactive"
+  }],
+  "layout": "../../../layouts/BlogPostLayout.astro",
+  "geoCoverage": "Chattanooga, TN and surrounding area (Lookout Mountain, Signal Mountain, Raccoon Mountain, Cloudland Canyon GA, Chickamauga Battlefield GA, Prentice Cooper, and select day trips to Parksville Lake and North Georgia)",
+  "ogImage": "/images/outdoors-social.png",
+  "iconPath": "../../../images/icons-new/pine-tree.png",
+  "images": [{
+    "src": "/images/chattanooga_guides/outdoors/cloudland/vista.webp",
+    "position": "center"
+  }],
+  "pageItems": [{
+    "title": "Hike the West Rim Loop",
+    "description": "A 5 mile loop trail that stays on top of the canyon as you follow the canyon rim. The terrain is dirt, rock and has some tree roots. Elevation changes on the trail are mild, about 700ft of elevation gain in total. The park is open 7am–10pm and requires a $5 daily parking fee.",
+    "order": 1,
+    "tags": ["hiking", "cloudland", "3-to-5-miles"],
+    "links": [{
+      "text": "Full Trail Details",
+      "link": "/chattanooga/guides/cloudland-canyon#advanced-hikes"
+    }]
+  }, {
+    "title": "Hike the Cherokee and Hemlock Falls Trail",
+    "description": "A shorter 1.2 mile out-and-back hike where you descend into the canyon and explore two of the parks waterfalls. Not advisable to bring dogs as the metal grate of the descending stairway can be painful and challenging for them. In all about 450ft of elevation gain. The park is open 7am–10pm and requires a $5 daily parking fee.",
+    "order": 2,
+    "tags": ["hiking", "waterfalls", "cloudland", "1-to-2-miles"],
+    "links": [{
+      "text": "Full Trail Details",
+      "link": "/chattanooga/guides/cloudland-canyon#advanced-hikes"
+    }]
+  }, {
+    "title": "Hike the Sitton's Gulch Trail",
+    "description": "A well shaded 5 mile out-and-back hike that descends into the gorge with ~1000ft of elevation gain. Known for beautiful creek and waterfall views. The park is open 7am–10pm and requires a $5 daily parking fee.",
+    "order": 3,
+    "tags": ["hiking", "waterfalls", "cloudland", "3-to-5-miles"],
+    "links": [{
+      "text": "Full Trail Details",
+      "link": "/chattanooga/guides/cloudland-canyon#advanced-hikes"
+    }]
+  }, {
+    "title": "Hike the Overlook Trail",
+    "description": "A short and easy out and back trail with expansive views of the canyon, around 1 mile total distance out and back. Ideal for families or a quick visit.",
+    "order": 4,
+    "tags": ["hiking", "cloudland", "1-to-2-miles", "kid-friendly"],
+    "links": [{
+      "text": "Full Trail Details",
+      "link": "/chattanooga/guides/cloudland-canyon#easier-hikes"
+    }]
+  }, {
+    "title": "Bike or hike the River to Clouds Route",
+    "description": "An exciting but technical 34 mile interconnected trail system that starts at Cloudland Canyon State Park and Lookout Mountain into Chattanooga. Visit their website for more technical details.",
+    "order": 5,
+    "tags": ["biking", "hiking", "cloudland", "lookout-mtn", "20-plus-miles"],
+    "links": [{
+      "text": "More Information",
+      "link": "https://www.rivertocloudsroute.org/"
+    }]
+  }, {
+    "title": "Hang Glide at Lookout Mountain Flight Park",
+    "description": "Get your pen out to cross a long standing item from your bucket list. Tandem hang gliding around Lookout Mountain. After being towed up by a small plane (an experience unto itself), you'll then typically glide anywhere from 1500-3000ft above the valley depending on the day's thermal conditions.",
+    "order": 6,
+    "tags": ["hang-gliding", "lookout-mtn", "other"],
+    "links": [{
+      "text": "Their Website",
+      "link": "https://flylookout.com/"
+    }]
+  }, {
+    "title": "Explore Ruby Falls Underground Waterfall",
+    "description": "A famed Chattanooga adventure. Take a guided walking tour of the 145 foot underground waterfall and learn all about stalactites, stalagmites and the explorers who made it all possible.",
+    "order": 7,
+    "tags": ["cave", "lookout-mtn", "kid-friendly"],
+    "links": [{
+      "text": "Their Website",
+      "link": "https://www.rubyfalls.com/"
+    }]
+  }, {
+    "title": "Explore Reflection Riding Arboretum & Nature Center",
+    "description": "300 acres and 10 miles of trails to explore in this Lookout Mountain preserve. Guided tours get you close to endangered red wolves and birds of prey. The welcome center is open 9am-4pm Tuesday-Saturday. Donations are accepted and help keep the preserve operational.",
+    "order": 8,
+    "tags": ["kid-friendly", "preserve", "wildlife", "lookout-mtn", "hiking"],
+    "links": [{
+      "text": "Their Website",
+      "link": "https://reflectionriding.org/"
+    }]
+  }, {
+    "title": "Visit a Wildlife Sanctuary at Reflection Riding",
+    "description": "Advanced planning required. You can either attend a scheduled event, or request a private guided tour to get the chance to see wildlife like a Red Wolf, Bobcat, birds of prey and others.",
+    "order": 9,
+    "links": [{
+      "text": "Events",
+      "link": "https://reflectionriding.org/events"
+    }, {
+      "text": "Request Private Tour",
+      "link": "https://reflectionriding.org/behind-the-scenes"
+    }],
+    "tags": ["animals", "lookout-mtn"]
+  }, {
+    "title": "Bike or hike the Guild Hardy Trail",
+    "description": "Starting near the base of Lookout Mountain on Ochs Highway you can take this multi use trail as far as you want up (it'll take you to the top) and around the mountain. In total it's an 11 mile loop with ~1700 ft of elevation gain.",
+    "order": 10,
+    "tags": ["biking", "hiking", "lookout-mtn", "10-to-20-miles"],
+    "links": [{
+      "text": "Trail Details",
+      "link": "https://www.alltrails.com/trail/us/tennessee/guild-hardy-loop-trail"
+    }]
+  }, {
+    "title": "Hike the Glen Falls Trail",
+    "description": "An easier out and back one mile hike that will take you to a scenic waterfall. If you want to cool off you can take a swim at the base of it. Kid and dog friendly but like all of Chattanooga it's rocky terrain so proper footwear is recommended.",
+    "order": 11,
+    "tags": ["hiking", "lookout-mtn", "swim", "1-to-2-miles"],
+    "links": [{
+      "text": "Trail Details",
+      "link": "https://www.alltrails.com/trail/us/tennessee/glen-falls-trail"
+    }]
+  }, {
+    "title": "Lula Lake Classic Loop",
+    "order": 12,
+    "tags": ["lookout-mtn", "hike", "waterfall"],
+    "links": [{
+      "text": "Availability Details",
+      "link": "https://www.lulalake.org/visit.html"
+    }, {
+      "text": "Trail Details",
+      "link": "https://www.alltrails.com/trail/us/georgia/lula-lake-classic-loop"
+    }],
+    "description": "The Lula Lake area is privately owned by the Lula Lake Land Trust. It is not frequently open to visitors so check the availability link for preparing your visit. Once planned, this 4.5 mile loop will take you to a scenic waterfall and lake, be prepared for crowds near the falls."
+  }, {
+    "title": "Walk the Virginia Ave Greenway",
+    "description": "Tucked into the St Elmo neighborhood, this 1.4 mile (one way) greenway offers scenic views of both Lookout Mountain and the charming houses of the historic district. It is a popular paved greenway with one-way vehicle traffic, be mindful with children and dogs. Access the greenway by parking near The Woodshop at the intersection of 55th Street and Virginia Ave. After your walk, The Woodshop is a great spot for live music.",
+    "order": 13,
+    "tags": ["greenway", "lookout-mtn"],
+    "links": [{
+      "text": "Live Music at The Woodshop",
+      "link": "/chattanooga/guides/live-music#local-bars"
+    }]
+  }, {
+    "title": "Explore Point Park",
+    "description": "Take a walk around this historic Civil War preserved site known for the famous Battle of Lookout Mountain. Appealing to those with a passion scenic overlooks and historic monuments. Entry fee of $10, children 15 or under don't pay a fee.",
+    "order": 14,
+    "links": [{
+      "text": "More Information",
+      "link": "https://www.nps.gov/chch/learn/lookout-mountain.htm"
+    }, {
+      "text": "Location",
+      "link": "https://maps.app.goo.gl/KDhX2YdCYhhiagUt8"
+    }],
+    "tags": ["lookout-mtn", "park", "history"]
+  }, {
+    "title": "See Rock City",
+    "description": "A Chattanooga mountaintop attraction famed for being able to see 7 states from a single lookout and kid friendly adventures like Fairyland Caverns and Mother Goose Village. Entry fee required.",
+    "order": 15,
+    "links": [{
+      "text": "More Information",
+      "link": "https://www.seerockcity.com/"
+    }],
+    "tags": ["kid-friendly", "lookout-mtn"]
+  }, {
+    "title": "Wild Cave Tour of Raccoon Mountain",
+    "description": "Get down and dirty on a guided crawl through the ageless caverns of Raccoon Mountain. Tours are either 2 or 3.5 hours depending on your selected option. Minimum requirements - age: 8, height: 56 inches, max weight: 275lbs.",
+    "order": 16,
+    "tags": ["cave", "raccoon-mtn"],
+    "links": [{
+      "text": "Tour Details",
+      "link": "https://raccoonmountaincaverns.com/wild-cave-expedition-tours/"
+    }]
+  }, {
+    "title": "Walking Tour of Raccoon Mountain Caves",
+    "description": "Significantly less messy than the Wild Cave Tour, this 45-55 minute guided walking tour takes you through a quarter mile of the system as your take in the novel sights, history and lighted pathways. Children must be at least 4 years of age.",
+    "order": 17,
+    "tags": ["cave", "kid-friendly", "raccoon-mtn"],
+    "links": [{
+      "text": "Tour Details",
+      "link": "https://raccoonmountaincaverns.com/crystal-palace-walking-tour/"
+    }]
+  }, {
+    "title": "Bike or hike a 14 mile Raccoon Mountain Reservoir Loop",
+    "order": 18,
+    "tags": ["raccoon-mtn", "10-to-20-miles", "biking", "hiking"],
+    "links": [{
+      "text": "Trail Details",
+      "link": "https://www.alltrails.com/trail/us/tennessee/raccoon-mountain-reservoir-loop"
+    }],
+    "description": "A 14 mile technical trail loop. It's considered moderately difficult but the distance and 1450ft of elevation gain put it close to a hard route. Handfuls of opportunities for scenic views on this lap around the mountain. The trails were built for MTB but are multi-use so look out for one another."
+  }, {
+    "title": "Bike a 4 mile Raccoon Mountain Reservoir Loop",
+    "order": 19,
+    "tags": ["raccoon-mtn", "3-to-5-miles", "biking"],
+    "links": [{
+      "text": "Trail Details",
+      "link": "https://www.komoot.com/smarttour/e1422399498/raccoon-mountain-reservoir-road-loop-chattanooga-tennessee"
+    }],
+    "description": "When looking for an easier MTB ride with views, this half hour ride should be on the shortlist. Raccoon Mountain overall can get pretty rocky but this 4.5mi, 275ft elevation gain route is a bit friendlier than some of the others."
+  }, {
+    "title": "Bike Route for an 11 mile Raccoon Mountain Loop",
+    "order": 20,
+    "tags": ["raccoon-mtn", "10-to-20-miles", "biking"],
+    "links": [{
+      "text": "Trail Details",
+      "link": "https://www.komoot.com/smarttour/e1422393856/high-voltage-live-wire-trail-loop-raccoon-mountain-reservoir-trail-system"
+    }],
+    "description": "This combination of the popular High Voltage and Live Wire make an 11 mile 1400ft loop through the mountain. Good fitness and a comfort with rocky terrain recommended, it's quite choppy and bouldery in some sections of this loop."
+  }, {
+    "title": "Hike Poe Path Run to Hidden Lake",
+    "order": 21,
+    "tags": ["hiking", "enterprise-nature"],
+    "links": [{
+      "text": "Trail Details",
+      "link": ""
+    }],
+    "description": "Hike 3 miles through Enterprise Nature Park. This is one of the easier and more widely recommended hikes in the 2800 acre park. It's shaded, well maintained and has a scenic water view. Expect to see others on the trail."
+  }, {
+    "title": "Hike Poe Path Run + Deer Hollow",
+    "order": 22,
+    "tags": ["hiking", "enterprise-nature", "3-to-5-miles"],
+    "links": [{
+      "text": "Trail Details",
+      "link": ""
+    }],
+    "description": "Instead of the 3 mile hike above, try adding in another trail for more forest scenery, less foot traffic. This hike is 5 miles long and considered closer to intermediate in difficulty. You're likely to spot wildlife adding more mileage and a less traversed trail."
+  }, {
+    "title": "Hike Hawks Ridge Loop",
+    "order": 23,
+    "tags": ["hiking", "enterprise-nature", "3-to-5-miles"],
+    "links": [{
+      "text": "More Information",
+      "link": ""
+    }],
+    "description": "A different 3 mile hike in Enterprise Nature Park. This one tends to be less crowded for those looking for more solitude in their nature visit. It's difficulty sits between easy/intermediate depending on who you ask."
+  }, {
+    "title": "Hike Enterprise Nature Park South Loop",
+    "order": 24,
+    "tags": ["hiking", "enterprise-nature", "10-to-20-miles"],
+    "links": [{
+      "text": "Trail Details",
+      "link": "https://www.alltrails.com/trail/us/tennessee/enterprise-south-nature-park-loop"
+    }],
+    "description": "Explore the entire park using this route. It's 17 miles in length taking you out, around and through different areas of the park. Roughly 1,500 feet of elevation gain on mostly multi-use trails. Dogs on leash are welcome."
+  }, {
+    "title": "Bike Black Forest MTB trail",
+    "order": 25,
+    "tags": ["biking", "mtb", "enterprise-nature", "3-to-5-miles"],
+    "links": [{
+      "text": "More Information",
+      "link": ""
+    }],
+    "description": "A flowy beginner friendly MTB trail. It's roughly 3.5 miles in total distance. Not overly technical, nor too intense of climbing but a fun ride through the woods. Follow the park signs for whether to ride clockwise or counter clockwise, the direction changes depending on the day of the week. Tuesday, Thursday, Sunday are clockwise, the remaining days counterclockwise."
+  }, {
+    "title": "Bike TNT MTB trail",
+    "order": 26,
+    "tags": ["biking", "mtb", "enterprise-nature", "3-to-5-miles"],
+    "links": [{
+      "text": "More Information",
+      "link": ""
+    }],
+    "description": "Another beginner MTB trail, considered a bit more difficult than the Black Forest trail. It's 4.4 miles in total distance with a few more climbs than Black Forest. Combine the two for an 8 mile ride on the day. Follow the park signs for whether to ride clockwise or counter clockwise, the direction changes depending on the day of the week. Tuesday, Thursday, Sunday are clockwise, the remaining days counterclockwise."
+  }, {
+    "title": "Bike or hike Blue Trail",
+    "order": 27,
+    "tags": ["stringers-ridge", "3-to-5-miles", "hiking", "biking", "loop"],
+    "links": [{
+      "text": "Trail Details",
+      "link": "https://www.alltrails.com/trail/us/tennessee/stringers-ridge-via-blue-trail"
+    }],
+    "description": "This 3.5 mile loop is considered moderately difficult due to some of the climbs. Located in the heart of Chattanooga, Stringers Ridge is a wonderfully accessible park for a easy escape into nature."
+  }, {
+    "title": "Bike or hike Cherokee and Strut Trail",
+    "order": 28,
+    "tags": ["stringers-ridge", "3-to-5-miles", "hiking", "biking", "loop"],
+    "links": [{
+      "text": "Trail Details",
+      "link": "https://www.alltrails.com/trail/us/tennessee/stringers-ridge-via-cherokee-and-strut-trails"
+    }],
+    "description": "Another great outdoors option at Sringers Ridge. This trail is an easier 2.5 mile loop with 272 feet of elevation gain. If you're hiking, expect to see mountain bikers."
+  }, {
+    "title": "Hike Rainbow Lake and Bee Branch Trail",
+    "order": 29,
+    "tags": ["signal-mtn", "hiking", "1-to-2-miles"],
+    "links": [{
+      "text": "Trail Details",
+      "link": "https://www.alltrails.com/trail/us/tennessee/rainbow-lake-and-bee-branch-trail-loop"
+    }],
+    "description": "An easier 2 mile scenic hike that loops through Signal Mountain. Known for features such as a suspension bridge, lake views, creeks and dams."
+  }, {
+    "title": "Hike Rainbow Lake to Edwards Point",
+    "order": 30,
+    "tags": ["signal-mtn", "hiking", "3-to-5-miles"],
+    "links": [{
+      "text": "Trail Details",
+      "link": "https://www.alltrails.com/trail/us/tennessee/rainbow-lake-to-edwards-point"
+    }],
+    "description": "This hike a moderately difficult 4.8 mile loop. Shares many of the same features as the Rainbow Lake and Bee Branch Trail route but continue on to be rewarded with the spectacular view of the gorge from Edward's Ward."
+  }, {
+    "title": "Hike Pot Point Loop",
+    "order": 31,
+    "tags": ["prentice-cooper", "hiking", "10-to-20-miles"],
+    "links": [{
+      "text": "Trail Details",
+      "link": "https://www.alltrails.com/trail/us/tennessee/pot-point-loop"
+    }],
+    "description": "One of the longer, harder day hikes in Chattanooga. This 11.5 mile loop provides scenic views of the Tennessee River, state forest creeks and stunning rock walls as you travel difficult terrain and gain 1500 feet of elevation. Plan accordingly."
+  }, {
+    "title": "Hike Mullens Cove Loop",
+    "order": 32,
+    "tags": ["prentice-cooper", "hiking", "10-to-20-miles"],
+    "links": [{
+      "text": "More Information",
+      "link": "https://cumberlandtrail.org/trail-segments/tennessee-river-gorge-segment/mullens-cove-loop/"
+    }],
+    "description": "It's labelled a moderate hike but with 1500 ft of elevation gain and 9+ miles in distance make sure you feel comfortable before embarking. This loop in Prentice Cooper State Forest offers views of the gorge and some water features as you traverse piece of the Cumberland Trail."
+  }, {
+    "title": "Bike Chickamauga Military Park Road Loop",
+    "order": 33,
+    "tags": ["chickamauga-battlefield", "10-to-20-miles", "biking"],
+    "links": [{
+      "text": "Trail Details",
+      "link": "https://www.alltrails.com/trail/us/georgia/chickamauga-battlefield-road-loop"
+    }],
+    "description": "A road ride through history. Ride through the well preserved history and nature of the Chickamauga Battlefield park. This is an easy ride with lots of opportunity to stop and take in some of the historic sites. Expect other bikers on the route as well."
+  }, {
+    "title": "Hike a 9 mile Chickamauga Military Park Loop",
+    "order": 34,
+    "tags": ["chickamauga-battlefield", "5-to-10-miles", "hiking"],
+    "links": [{
+      "text": "Trail Details",
+      "link": "https://www.komoot.com/discover/Chickamauga_Battlefield_Visitor_Center/@34.9402100,-85.2595600/tours?sport=hike&map=true&toursThroughHighlight=5731987&focusedTour=e1131113567&max_distance=4820&pageNumber=1"
+    }],
+    "description": "An easy 9 mile walk through nature and history. A great place to escape for an extended day trip into nature with your dog or your family. Historic monuments, creek water features and rolling woodland hills makes for a great day hike."
+  }, {
+    "title": "Hike a 4 mile Chickamauga Military Park Loop",
+    "order": 35,
+    "tags": ["chickamauga-battlefield", "3-to-5-miles", "hiking"],
+    "links": [{
+      "text": "Trail Details",
+      "link": "https://www.komoot.com/discover/Chickamauga_Battlefield_Visitor_Center/@34.9402100,-85.2595600/tours?sport=hike&map=true&toursThroughHighlight=5731987&focusedTour=24435962&max_distance=4820&pageNumber=1"
+    }],
+    "description": "A shorter loop hike through a different section the Chickamauga Battlefield and Military Park with the same great history and nature features as some of our other entries."
+  }, {
+    "title": "Hike or Bike the Inner Loop 1 and 2",
+    "description": "Two trails combined into one route, they are both are considered easy trails. Inner Loop 1 is 1.2 miles in length and Loop 2 is 2.2, making this a 3.4 mile ride together. Being on the inner part of the park these trails take you through mostly forest covered rolling hills.",
+    "order": 36,
+    "links": [{
+      "text": "Parking",
+      "link": "https://maps.app.goo.gl/cPCyrhpaJ7cVvGSr9"
+    }, {
+      "text": "Trail Map",
+      "link": "https://tnstateparks.com/assets/pdf/additional-content/Booker_T-Washington_Trail_Map_2017.pdf"
+    }],
+    "tags": ["booker-t-washington", "hiking", "biking", "3-to-5-miles"]
+  }, {
+    "title": "Hike or Bike the Outer Loop",
+    "description": "The most popular route in Booker T Washington State Park. This one is 3.9 miles and considered an easy route as well. A good portion of this trail provides views of the expansive Chickamauga Lake, as well as sections of wooded forest.",
+    "order": 37,
+    "links": [{
+      "text": "Parking",
+      "link": "https://maps.app.goo.gl/cPCyrhpaJ7cVvGSr9"
+    }, {
+      "text": "Trail Map",
+      "link": "https://tnstateparks.com/assets/pdf/additional-content/Booker_T-Washington_Trail_Map_2017.pdf"
+    }],
+    "tags": ["booker-t-washington", "hiking", "biking", "3-to-5-miles"]
+  }, {
+    "title": "Paddle the Chickamauga Lake",
+    "description": "Chickamauga Lake is a massive 35,000 acre reservoir accessible from the boat ramp at Booker T Washington. Take your Kayaking, SUP, or Canoe for a paddle, but be aware motor boats are permitted as well.",
+    "order": 38,
+    "links": [{
+      "text": "Boat Ramp Location",
+      "link": "https://maps.app.goo.gl/851cWRCxoUZVnZTLA"
+    }],
+    "tags": ["paddling", "booker-t-washington"]
+  }, {
+    "title": "Explore Audubon Acres Nature Preserve",
+    "description": "In the heart of Chattanooga sits 130 preserved acres and 5 miles of easy walking trails. This land protects flora, fauna and also documented Cherokee history. Bring your boots, it can get muddy along the Chickamauga Creek which flows through the preserve. There is a $6 for adults and $3 for children entry fee.",
+    "order": 39,
+    "tags": ["preserve", "wildlife", "kid-friendly", "hiking"],
+    "links": [{
+      "text": "Their Website",
+      "link": "https://www.chattanoogaaudubon.org/audubon-acres.html"
+    }]
+  }, {
+    "title": "Explore Standifer Gap Marsh",
+    "description": "One of the best marsh habitats in the Chattanooga area. This wildlife refuge is a wonderful place to spot birds, reptiles, butterflies and small mammals. It's a great place for an hour or two's walk for naturalists in your family.",
+    "order": 40,
+    "tags": ["wildlife", "preserve", "kid-friendly", "hiking"]
+  }, {
+    "title": "Greenway Farms Park",
+    "order": 41,
+    "tags": ["park"],
+    "links": [{
+      "text": "More Information",
+      "link": "https://www.northchick.org/adventure/greenway-farms/"
+    }, {
+      "text": "Shakespeare in the Park",
+      "link": "/chattanooga/guides/performance-arts#theatre"
+    }],
+    "description": "This is a 180 acre recreational park situated along the North Chickamauga Creek. It's popular for a variety of recreation like hiking forested trails, fishing the creek and their dog park. In the spring and fall Scenic City Shakespeare performs outdoor shows here."
+  }, {
+    "title": "Sculpture Fields",
+    "order": 42,
+    "tags": ["park"],
+    "links": [{
+      "text": "More Information",
+      "link": "https://www.sculpturefields.org/"
+    }],
+    "description": "Walk amongst 50 large sculptures through 1.5 miles of winding trails around the 33 acre park in Montauge Park. Take in the artwork, walk your dog and after have a lunch at nearby Chattanooga restaurants."
+  }, {
+    "title": "Camp Jordan Loop",
+    "order": 43,
+    "tags": ["greenway", "park"],
+    "links": [{
+      "text": "Nearby Sports Bars",
+      "link": "/chattanooga/guides/live-sports#sports-bars"
+    }],
+    "description": "An easy two mile paved loop where you can walk, run or bike. It's outer rim is surrounded by woodlands and inside are sports fields and a disc golf park. This loop connects to the South Chickamauga Greenway via the only bridge in the park seen along the loop, if you want a longer run. The Camp Jordan area also has several sports bars nearby."
+  }, {
+    "title": "Visit Rosie Mae's Alpaca Farm",
+    "description": "Visit a family owned Alpaca Farm in Wildwood, Georgia. They have 9 alpacas on the farm and they also run a coffee shop and boutique onsite. A great option for children and animal lovers.",
+    "order": 44,
+    "tags": ["wildlife", "farm", "kid-friendly"],
+    "links": [{
+      "text": "Their Website",
+      "link": "https://www.rosiemaesalpacafarm.com/about"
+    }, {
+      "text": "Private Tour",
+      "link": "/chattanooga/guides/tours#rosie-maes-alpaca-farm"
+    }]
+  }, {
+    "title": "Visit Highland Cattle at Blessing Creek",
+    "description": "Blessing Creek Farms opens their doors for visitors to interact with their Highland Cattle and other farm animals. Located in Lafayette, Georgia. Tours are available by appointment only.",
+    "order": 45,
+    "tags": ["wildlife", "farm", "kid-friendly"],
+    "links": [{
+      "text": "Their Website",
+      "link": "https://www.blessingcreekfarms.com/"
+    }]
+  }, {
+    "title": "Family Farm Visit at Hidden Hills Farm",
+    "description": "Bring your family out to meet goats, sheep, donkeys, ponies and chickens and watch the daily farm activities. More details: $50 for a group of up to 6 people. $5 per additional person, 15 people max. Pony rides available for $10.",
+    "order": 46,
+    "tags": ["farm", "kid-friendly"],
+    "links": [{
+      "text": "More Information",
+      "link": "https://www.hiddenhillsfarm.com/outdoor-classroom"
+    }]
+  }, {
+    "title": "Pick Tulips and Sunflowers at Lorenzen Farm",
+    "order": 47,
+    "tags": ["farm", "flower-picking"],
+    "links": [{
+      "text": "More Information",
+      "link": "https://www.lorenzenflowerfarm.com/"
+    }],
+    "description": "A feast for the eyes and nose farm experience in Dayton, TN. Walk through fields of tulips, sunflowers and wildflowers and gather your favorites for a DIY bouquet, while taking memorable photos along the way."
+  }, {
+    "title": "Visit Flat Top Mountain Farm for Seasonal Pickings",
+    "description": "Lavender, flowers, pumpkins and Christmas trees, there's a reason to visit every season. Check their website for dates of operation and availability.",
+    "order": 48,
+    "links": [{
+      "text": "More Information",
+      "link": "https://www.flattopmountainfarm.com/farm-experience"
+    }],
+    "tags": ["farm", "kid-friendly"]
+  }, {
+    "title": "South Chickamauga Creek Greenway",
+    "order": 49,
+    "tags": ["greenway", "kid-friendly"],
+    "links": [{
+      "text": "More Information",
+      "link": "https://chattanooga.gov/things-to-do/greenways-trails/south-chickamauga-creek-greenway"
+    }, {
+      "text": "On the Map",
+      "link": "https://www.google.com/maps/place/S+Chickamauga+Creek+Greenway,+Chattanooga,+TN/@35.0732801,-85.230052,17z/data=!3m1!4b1!4m6!3m5!1s0x886061a8d5213eb5:0x89e5bb6540f34a82!8m2!3d35.0732801!4d-85.2274771!16s%2Fg%2F1v_snz4q?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+    }],
+    "description": "This is a 13 mile part paved, part gravel multi-use trail along the South Chickamauga Creek. There are a variety of access points like Camp Jordan, Brainerd Levee and Sterchi Farm to list a few."
+  }, {
+    "title": "Tennessee Riverwalk",
+    "order": 50,
+    "tags": ["greenway", "kid-friendly"],
+    "links": [{
+      "text": "More Information",
+      "link": "https://chattanooga.gov/things-to-do/greenways-trails/tennessee-riverwalk"
+    }, {
+      "text": "Live Music at Ross's Landing",
+      "link": "/chattanooga/guides/live-music#recurring-events"
+    }],
+    "description": "A 16 mile paved walkway along the Tennessee Riverfront. This is a multi-use trail that ties into multiple sections of downtown Chattanooga. Access points at Wheland Foundry, Ross's Landing and Chestnut Street, among others. Pro tip: Ross's Landing hosts free outdoor concerts on summer Saturday evenings."
+  }, {
+    "title": "Explore the Sterchi Farms Trailhead",
+    "description": "This is a popular section of the larger Chickamauga Greenway. It's known as one of the calmer and scenic sections of the greenway and for its creek accessibility for paddling and fishing.",
+    "order": 51,
+    "links": [{
+      "text": "Location",
+      "link": "https://maps.app.goo.gl/Vm51QhaJ5khkxprw5"
+    }],
+    "tags": ["greenway"]
+  }, {
+    "title": "Paddle to view a Bat Cave",
+    "description": "Take a guided or self directed kayak trip to see ~100,000 bats exit their cave for a nightly insect hunt along the Tennessee River. If you choose the tour its about a 3 mile paddle altogether.",
+    "order": 52,
+    "tags": ["paddling", "cave", "wildlife", "kid-friendly"],
+    "links": [{
+      "text": "Guided Tour Info",
+      "link": "/chattanooga/guides/tours#bat-cave-kayak-tour"
+    }]
+  }, {
+    "title": "Paddle to view the Sand Hill Crane Migration",
+    "description": "During their winter migration thousands of once endangered Sandhill Cranes take an extended stay at the Hiwassee Island. You can plan a trip out there yourself or take a beginner friendly guided kayak trip. The cranes are typically there from November - February.",
+    "order": 53,
+    "tags": ["wildlife", "paddling", "kid-friendly"],
+    "links": [{
+      "text": "Guided Tour Info",
+      "link": "/chattanooga/guides/tours#bat-cave-kayak-tour"
+    }]
+  }, {
+    "title": "Paddle the Tennessee River Blueway",
+    "description": "This is a 45 mile mostly flatwater + mild currents paddling route. Paddle the whole route starting near the Chickamauga Dam and follow the river north to Nickajack Dam. This route can be shortened using any number of access points. You can also make it a multi day experience by camping at one of the primitive sites along the way like on Maclellan Island or at Prentice Cooper State Forest.",
+    "order": 54,
+    "tags": ["paddling"],
+    "links": [{
+      "text": "More Information",
+      "link": "https://tennesseerivervalleygeotourism.org/entries/tennessee-river-blueway/43b04f84-17a0-4535-a1bc-5ef978a07a65"
+    }, {
+      "text": "Blueway Map",
+      "link": "https://static1.squarespace.com/static/543e7367e4b0f38ea790072b/t/54415c13e4b0d342bff9401b/1413569555061/TennesseeBluewayMap.pdf"
+    }]
+  }, {
+    "title": "Paddle the Chickamauga Creek",
+    "description": "A slow paddle southeast of downtown Chattanooga. This route meanders through woods, fields and towns. The route extends roughly 30 miles.",
+    "order": 55,
+    "tags": ["paddling"],
+    "links": [{
+      "text": "More Information",
+      "link": "https://www.chattanoogaaudubon.org/paddle-south-chickamauga-creek.html"
+    }]
+  }, {
+    "title": "Paddle the Hiwassee River",
+    "description": "A beginner/intermediate paddling route depending on current conditions. This is a 55 mile route with class 1 or 2 whitewater in some sections. It runs from Appalachia Dam in North Carolina to Blythe's Ferry on the Tennessee River. Guide options are available.",
+    "order": 56,
+    "tags": ["paddling"],
+    "links": [{
+      "text": "More Information",
+      "link": "https://outdoorchattanooga.com/hiwassee-river/"
+    }]
+  }, {
+    "title": "Flat water paddle Parksville Lake",
+    "order": 57,
+    "tags": ["parksville-lake", "paddling", "flat-water"],
+    "links": [{
+      "text": "Boat Launch",
+      "link": "https://maps.app.goo.gl/2PRyyJCu7CZ3kEoh6"
+    }],
+    "description": "A scenic flat water paddle 45 minutes from Chattanooga on a 1,930 acres reservoir. Explore the islands, beaches and enjoy some mountain views."
+  }, {
+    "title": "Flat water paddle Chester Frost Park",
+    "order": 58,
+    "tags": ["chester-frost-park", "paddling", "flat-water"],
+    "links": [{
+      "text": "Boat Launch",
+      "link": "https://share.google/vtPIGOFZfH0hTf54b"
+    }],
+    "description": "Chester Frost Park is about 25 minutes north of downtown Chattanooga. Here you can paddle Chickamauga Lake, a massive 36,000 acre reservoir. It can get crowded near the launch on weekends but eases as you make your way further into the lake reservoir."
+  }, {
+    "title": "Solo paddle West Chickamauga Creek",
+    "description": "This is calm Class 1 (mostly flatwater) paddle upstream and back, you can turn around whenever you want. Recreational kayaks/canoes work great here. The route is wooded, shaded and usually minimal traffic.",
+    "order": 59,
+    "tags": ["paddling", "flatwater"],
+    "links": [{
+      "text": "Launch Point",
+      "link": "https://www.google.com/maps/dir/Chattanooga,+Tennessee/Cloud+Springs+Canoe+Launch,+Ringgold,+GA+30736/@35.0009111,-85.3381228,12z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x886060408a83e785:0x2471261f898728aa!2m2!1d-85.3093995!2d35.0457984!1m5!1m1!1s0x8860679cebfe79af:0x2810cccf10658b74!2m2!1d-85.2046828!2d34.9566551?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D"
+    }]
+  }, {
+    "title": "Paddle West Chickamauga Creek to Camp Jordan",
+    "description": "Launch at Cloud Springs Canoe Launch and paddle downstream with the current to Camp Jordan. This is a calm, Class I float of roughly 2.5–3 miles, with reliable parking at both the put-in and take-out.",
+    "order": 60,
+    "links": [{
+      "text": "Launch Point",
+      "link": "https://www.google.com/maps/dir/34.9902128,-85.3310605/Cloud+Springs+Canoe+Launch,+Ringgold,+GA+30736/@34.9872789,-85.3475583,12z/data=!3m1!4b1!4m13!1m2!2m1!1scanoe+launch!4m9!1m1!4e1!1m5!1m1!1s0x8860679cebfe79af:0x2810cccf10658b74!2m2!1d-85.2046828!2d34.9566551!3e0?entry=ttu&g_ep=EgoyMDI2MDEwNy4wIKXMDSoASAFQAw%3D%3D"
+    }, {
+      "text": "Exit Point",
+      "link": "https://maps.app.goo.gl/b6KGegW46LrJJCYi7"
+    }],
+    "tags": ["paddling", "flatwater", "1-to-3-miles"]
+  }, {
+    "title": "Greenway Farms to Tennessee River Paddle Route",
+    "description": "Paddle from Greenway Farms about a mile and a half southwest to the Tennessee River. Then take the river another mile to the River Park Boat Ramp. This is a Class 1 flatwater paddle route.",
+    "order": 61,
+    "links": [{
+      "text": "Launch Point",
+      "link": "https://maps.app.goo.gl/kep5iq3mZ6KF5g9f6"
+    }],
+    "tags": ["flatwater", "greenway-farms", "paddling"]
+  }, {
+    "title": "Solo paddle Greenway Farms",
+    "description": "Paddle North starting from the Greenway Farms boat launch. Take the creek as long as you'd like upstream before an easy downstream turnaround.",
+    "order": 62,
+    "links": [{
+      "text": "Launch Point",
+      "link": "https://maps.app.goo.gl/kep5iq3mZ6KF5g9f6"
+    }],
+    "tags": ["paddling", "greenway-farms", "flatwater"]
+  }, {
+    "title": "Solo paddle Lookout Creek",
+    "description": "Paddle upstream (heading south) a few miles and back downstream. This launch is located at Reflection Riding, call ahead to reserve a canoe rental or check that the creek levels are safe 423-821-1160.",
+    "order": 63,
+    "links": [{
+      "text": "Entry Point",
+      "link": "https://maps.app.goo.gl/drpy8u6v2ETHBEx69"
+    }],
+    "tags": ["paddling", "flatwater"]
+  }, {
+    "title": "Whitewater Kayak North Chickamauga Creek. Class III-IV",
+    "description": "Located near Montlake, TN is this 1.7 mile whitewater kayaking route for more advanced paddlers along North Chickamauga Creek. Access details in the link below.",
+    "order": 64,
+    "links": [{
+      "text": "More Information",
+      "link": "https://www.americanwhitewater.org/content/River/view/river-detail/3878/main"
+    }],
+    "tags": ["paddling", "class-III-IV", "whitewater"]
+  }, {
+    "title": "Whitewater Kayak North Chickamauga Creek. Class IV-V",
+    "description": "A much longer whitewater paddle totaling 10.5 miles if taken the whole way. Another route for more advanced paddlers following North Chickamauga Creek. Access details in the link below.",
+    "order": 65,
+    "links": [{
+      "text": "More Information",
+      "link": "https://www.americanwhitewater.org/content/River/view/river-detail/1769/main"
+    }],
+    "tags": ["paddling", "class-IV-V", "whitewater"]
+  }, {
+    "title": "Hike Big Soddy Creek Gulf",
+    "order": 66,
+    "tags": ["soddy-daisy", "hiking", "3-to-5-miles"],
+    "links": [{
+      "text": "Trail Details",
+      "link": "https://www.alltrails.com/trail/us/tennessee/big-soddy-creek-gulf"
+    }],
+    "description": "This is a well maintained picturesque out and back trail that follows the Soddy Creek as you gradually climb through shaded woodland. It's a flexible route, take it as far as you want out and back, with ample opportunities to sit and take a break along the way."
+  }, {
+    "title": "Horseback ride at Scenic City Equestrian Center",
+    "description": "Take a trail ride on Scenic City Equestrian's property. Check their website for current pricing, requirements, and availability.",
+    "order": 67,
+    "tags": ["horseback-riding"],
+    "links": [{
+      "text": "More Information",
+      "link": "https://www.sceniccityequestrian.com/"
+    }]
+  }, {
+    "title": "Horseback ride at Hidden Hills Farm",
+    "description": "Ride for 60 minutes on 200 acres of farmland, no experience required, must book in advance. More details: $55 per rider, minimum 10 years old, maximum rider weight is 230 lbs, close toed shoes and long pants required.",
+    "order": 68,
+    "tags": ["horseback-riding", "farm"],
+    "links": [{
+      "text": "More Information",
+      "link": "https://www.hiddenhillsfarm.com/news"
+    }]
+  }, {
+    "title": "Stargaze with Barnard Astronomical Society",
+    "description": "Passing 100 years of operation in 2023, the BAS is a nonprofit organization dedicated to advancing education and love for astronomy in Chattanooga. Check the linked website for upcoming events, like their free 'star parties'.",
+    "order": 69,
+    "tags": ["astronomy", "kid-friendly", "other"],
+    "links": [{
+      "text": "Upcoming Events",
+      "link": "https://www.barnardastronomy.org/upcoming-events"
+    }]
+  }, {
+    "title": "Star Walk at Harrison Bay State Park",
+    "description": "On a clear night take self guided walk along a dedicated star walk path at Harrison Bay State Park. Educational signage along the path about stars, constellations and other astronomy information. It's a flat walk, around a half a mile in length.",
+    "order": 70,
+    "links": [{
+      "text": "Location",
+      "link": "https://maps.app.goo.gl/xHVfsXYrUQ2jYXNL6"
+    }],
+    "tags": ["astronomy", "hike", "harrison-bay", "kid-friendly"]
+  }, {
+    "title": "Cave Visit at Fricks Cave Preserve",
+    "description": "Advanced planning required. This cave is a preserved site for endangered gray bats, only open in the winter with very limited availability please call ahead (423) 771-9671.",
+    "order": 71,
+    "links": [{
+      "text": "Location",
+      "link": "https://maps.app.goo.gl/C7FVp78GaEXC38ue8"
+    }, {
+      "text": "More Information",
+      "link": "https://www.walkerrocks.com/attractions/frick's-cave"
+    }],
+    "tags": ["cave"]
+  }],
+  "itemTemplate": {
+    "title": "",
+    "order": 1,
+    "description": "",
+    "links": [{
+      "text": "More Information",
+      "link": ""
+    }],
+    "tags": []
+  },
+  "placeDescriptions": {
+    "chickamauga-battlefield": {
+      "title": "Chickamauga Battlefield Military Park",
+      "description": "A largely flat, easy walking battlefield spread across roughly 9000+ acres of rolling hills, open fields and forest just south of Chattanooga near Fort Oglethorpe, Georgia. It's preserved under the National Park Service as a major Civil War site, known for quiet roads, abundant wildlife and extensive history monuments.",
+      "links": [{
+        "text": "Tour Options",
+        "link": "/chattanooga/guides/tours#chickamauga-battlefield-tours"
+      }],
+      "photos": [{
+        "src": "/images/chattanooga_guides/history/path.webp",
+        "alt": "A Chickamauga Battlefield landscape photo of a bridge, creek and a worn in walking trail."
+      }, {
+        "src": "/images/chattanooga_guides/outdoors/chickamauga-battlefield/tree-tunnel.jpg",
+        "alt": "A scenic tree tunnel offers shade over a wide dirt trail at Chickamauga Battlefield park."
+      }]
+    },
+    "lookout-mtn": {
+      "title": "Lookout Mountain",
+      "description": "One of the most famous landmarks in the Chattanooga area, roughly 2,300 feet above the valley and well known historically for its stunning views and strategic use during the Civil War. It spans both Tennessee and Georgia state lines. In addition to trails like Glen Falls and Guild Hardy, the mountain is frequently visited for attractions like Point Park, Cravens House, Rock City and Ruby Falls. After your adventure, the St Elmo neighborhood at the mountain's base has sweet treats at Hot Chocolatier and Clumpies ice cream.",
+      "links": [{
+        "text": "Sweet Treats in St Elmo",
+        "link": "/chattanooga/guides/confections#ice-cream"
+      }],
+      "photos": [{
+        "src": "/images/chattanooga_guides/outdoors/lookout-mtn/mountain-top.jpg",
+        "alt": "Wide and long view of the entire city of Chattanooga from atop Lookout Mountain."
+      }, {
+        "src": "/images/chattanooga_guides/outdoors/lookout-mtn/ga-tn.jpg",
+        "alt": "A GA/TN sign on the Guild Hardy train indicating the crossover from Tennessee into Georgia."
+      }]
+    },
+    "prentice-cooper": {
+      "title": "Prentice Cooper State Forest",
+      "description": "A large Wildlife Management Area northwest of downtown Chattanooga, covering roughly 24,500 acres of rugged Cumberland Plateau terrain. Known for hunting access, long gravel roads that connect to trailheads and overlooks and designated OHV routes. Scenic overlooks along the plateau edge offer big views of the Tennessee River Gorge.",
+      "photos": [{
+        "src": "/images/chattanooga_guides/outdoors/prentice-cooper/game-reserve-road.jpg",
+        "alt": "View from Game Reserve Road into the Prentice Cooper Forest."
+      }, {
+        "src": "/images/chattanooga_guides/outdoors/prentice-cooper/davis-pond-trail.jpg",
+        "alt": "Turn off to the trail for Davis Pond in Prentice Cooper for backcountry camping."
+      }]
+    },
+    "stringers-ridge": {
+      "title": "Stringers Ridge",
+      "description": "92 acre nature park located in the heart of Chattanooga's city limits. An easy escape from downtown. It's a quick outdoor playground for locals for hiking, mountain biking and trail running. Shorter loops and moderate elevation changes make it a common stop for before or after work laps rather than long backcountry outings. The Northshore location puts you near Clumpies flagship ice cream shop for a post-hike treat.",
+      "links": [{
+        "text": "Nearby Sweet Treats",
+        "link": "/chattanooga/guides/confections#ice-cream"
+      }],
+      "photos": [{
+        "src": "/images/chattanooga_guides/outdoors/stringers-ridge/trail-map.jpg",
+        "alt": "The Stringers Ridge Trail map and connection details to White Oak Mountain."
+      }, {
+        "src": "/images/chattanooga_guides/outdoors/stringers-ridge/trail-view.jpg",
+        "alt": "A viewpoint from a biker on the trail at Stringers Ridge in Chattanooga."
+      }]
+    },
+    "cloudland": {
+      "title": "Cloudland Canyon State Park",
+      "description": "Considered one of Georgia's top state parks, located on the western edge of Lookout Mountain near the Tennessee line. The park has sweeping canyon views, sandstone cliffs and steep descents into the gorge. Dozens of miles of trails from easy rim walks to hard waterfall hikes and backcountry routes. Note that they do have a $5 entrance fee.",
+      "links": [{
+        "text": "Full Cloudland Canyon Guide",
+        "link": "/chattanooga/guides/cloudland-canyon"
+      }],
+      "photos": [{
+        "src": "/images/chattanooga_guides/outdoors/cloudland/vista.webp",
+        "alt": "Panoramic view of Cloudland Canyon from the West Rim trail"
+      }, {
+        "src": "/images/chattanooga_guides/outdoors/cloudland/overlook-west-rim.webp",
+        "alt": "Hiker at the West Rim overlook gazing into Cloudland Canyon"
+      }]
+    },
+    "raccoon-mtn": {
+      "title": "Raccoon Mountain",
+      "description": "Sits just west of downtown Chattanooga on Tennessee Valley Authority land, covering roughly 3,800 acres of rugged terrain. It’s known for technical trail features and exposed boulders, making it one of the Southeast’s notable mountain biking locations. A scenic loop road circles the mountain and doubles as a popular drive, road ride, or gravel bike loop, with trailhead access into the rocky terrain.",
+      "photos": [{
+        "src": "/images/chattanooga_guides/outdoors/raccoon-mtn/gorge-overlook.jpg",
+        "alt": "An expansive view into the gorge of the Tennessee River from a Raccoon Mountain trail."
+      }, {
+        "src": "/images/chattanooga_guides/outdoors/raccoon-mtn/pond.jpg",
+        "alt": "A view of a pond next to a Raccoon Mountain MTB and hiking trail."
+      }]
+    },
+    "enterprise-nature": {
+      "title": "Enterprise Nature Park",
+      "description": "A 2,800+ acre park in northeast Chattanooga. This park is known for flowy, beginner-friendly mountain bike trails and a network of easier hiking trails. The trails in this park are known for rolling terrain, wildlife (deer, turkeys, snakes are common) and are available for casual rides, hiking and trail running."
+    },
+    "booker-t-washington": {
+      "title": "Booker T. Washington State Park",
+      "description": "A lakeside state park northeast of downtown Chattanooga along Chickamauga Lake. In total the park encompasses roughly 350 acres. The park features a small network of wooded, multi-use trails, some with water views. The trail terrain is beginner friendly and popular for hiking, trail running and mountain biking.",
+      "links": [],
+      "photos": [{
+        "src": "/images/chattanooga_guides/outdoors/booker-t-washington/shoreline.jpg",
+        "alt": "Wooded shoreline along Chickamauga Lake at Booker T. Washington State Park"
+      }, {
+        "src": "/images/chattanooga_guides/outdoors/booker-t-washington/water-view.jpg",
+        "alt": "View of Chickamauga Lake from the Outer Loop trail"
+      }]
+    }
+  }
+};
+function getHeadings() {
+  return [];
+}
+function _createMdxContent(props) {
+  const _components = {
+    br: "br",
+    p: "p",
+    ...props.components
+  };
+  return createVNode(Fragment, {
+    children: [createVNode("script", {
+      type: "application/ld+json",
+      "set:html": JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "TouristAttraction",
+        "name": "Chattanooga Outdoor Adventures Interactive Guide",
+        "description": "An interactive guide to outdoor adventures and activities in Chattanooga including hiking, kayaking, rock climbing, biking and nature exploration.",
+        "url": "https://thingshappening.com/chattanooga/guides/outdoors",
+        "touristType": ["Adventure seekers", "Outdoor enthusiasts", "Families", "Naturalists"],
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "35.0456",
+          "longitude": "-85.3097"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chattanooga",
+          "addressRegion": "TN",
+          "addressCountry": "US"
+        },
+        "isAccessibleForFree": true,
+        "publicAccess": true
+      })
+    }), "\n", createVNode("div", {
+      class: "max-w-6xl mx-auto px-3",
+      children: createVNode("div", {
+        class: "pb-10",
+        children: createVNode("a", {
+          href: "/pdfs/chattanooga/outdoor-adventures.pdf",
+          target: "_blank",
+          class: "inline-flex items-center px-4 py-2 bg-logoDarkGreen text-logoLightGreen rounded-lg hover:opacity-90 transition-colors",
+          children: [createVNode("svg", {
+            class: "w-5 h-5 mr-2",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: createVNode("path", {
+              "stroke-linecap": "round",
+              "stroke-linejoin": "round",
+              "stroke-width": "2",
+              d: "M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            })
+          }), createVNode(_components.p, {
+            children: "Download Guide"
+          })]
+        })
+      })
+    }), "\n", createVNode("div", {
+      class: "max-w-6xl mx-auto px-3",
+      children: [createVNode("div", {
+        class: "pb-5 pt-2",
+        children: "Chattanooga is the United State’s first designated National Park City, by the foundation of the same name. A recognition for it’s commitment to conservation, access to nature and outdoor recreation."
+      }), createVNode("div", {
+        class: "pb-5",
+        children: "The aim of this guide is to help you find an activity or adventure that inspires you to get outside and explore the nearby parks more easily."
+      }), createVNode("div", {
+        class: "pb-5",
+        children: "A reminder to all to please practice Leave No Trace ethics. Avoid riding muddy trails, pack out waste properly, and be mindful of wildlife."
+      }), createVNode("div", {
+        class: "pt-2 mb-5",
+        children: createVNode("div", {
+          class: "pb-5",
+          children: [createVNode("i", {
+            children: "This is an ongoing project"
+          }), ". In the future we plan to add activities for ", createVNode("b", {
+            children: "climbs"
+          }), " specifically. There are more parks and routes to add as well. If you’d like an activity added please ", createVNode("a", {
+            href: "mailto:jack@thingshappening.com",
+            children: "send an email"
+          }), " for consideration. This is a outdoors recreation guide, as such are no sportsman’s activities."]
+        })
+      })]
+    }), "\n", createVNode("div", {
+      class: "mb-8 mt-5 w-full max-w-3xl",
+      children: [createVNode("div", {
+        class: "relative w-full",
+        style: "padding-bottom: 75%;",
+        children: createVNode("iframe", {
+          src: "https://www.google.com/maps/d/u/0/embed?mid=1B4D0YSBJ20P4szJdDUG6SUI_amjzXc4&ehbc=2E312F&noprof=1",
+          class: "absolute top-0 left-0 w-full h-full border-0 rounded-lg",
+          loading: "async",
+          title: "Chattanooga Outdoor Adventures Map"
+        })
+      }), createVNode("p", {
+        class: "text-lg mt-2 italic",
+        children: "Map View of the Chattanooga Locations Below"
+      })]
+    }), "\n", createVNode("section", {
+      id: "guide-filters",
+      class: "text-xl pt-6 pb-2",
+      children: [createVNode("div", {
+        class: "max-w-6xl mx-auto px-3",
+        children: createVNode("div", {
+          class: "flex flex-col md:flex-row md:items-center mb-3 pb-3 gap-2 md:gap-6",
+          children: [createVNode("h2", {
+            class: "text-[2.5rem] mb-0",
+            style: "font-family: 'Libre Baskerville', serif;",
+            children: ["Activities", createVNode("span", {
+              class: "color-pink ml-1",
+              children: createVNode("b", {
+                children: ":"
+              })
+            })]
+          }), createVNode("div", {
+            class: "flex flex-wrap gap-10",
+            children: [createVNode("div", {
+              class: "relative",
+              children: [createVNode("span", {
+                class: "hidden md:block absolute -top-7 left-1/2 -translate-x-1/2 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200",
+                style: "font-size: 11px;",
+                children: "Try Me ↓"
+              }), createVNode("span", {
+                class: "md:hidden absolute top-1/2 -translate-y-1/2 -right-16 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200 z-10",
+                style: "font-size: 11px;",
+                children: "← Try Me"
+              }), createVNode("a", {
+                href: "/chattanooga/guides/outdoor-adventures?tags=biking",
+                class: "clickable-filter-tag px-7 py-3 text-white rounded-full text-[20px] cursor-pointer transition-colors font-normal no-underline",
+                style: "background-color: #1a4d2e;",
+                "data-tag": "biking",
+                children: "Biking"
+              })]
+            }), createVNode("div", {
+              class: "relative",
+              children: [createVNode("span", {
+                class: "hidden md:block absolute -top-7 left-1/2 -translate-x-1/2 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200",
+                style: "font-size: 11px;",
+                children: "Try Me ↓"
+              }), createVNode("span", {
+                class: "md:hidden absolute top-1/2 -translate-y-1/2 -right-16 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200 z-10",
+                style: "font-size: 11px;",
+                children: "← Try Me"
+              }), createVNode("a", {
+                href: "/chattanooga/guides/outdoor-adventures?tags=hiking",
+                class: "clickable-filter-tag px-7 py-3 text-white rounded-full text-[20px] cursor-pointer transition-colors font-normal no-underline",
+                style: "background-color: #1a4d2e;",
+                "data-tag": "hiking",
+                children: "Hiking"
+              })]
+            }), createVNode("div", {
+              class: "relative",
+              children: createVNode("a", {
+                href: "/chattanooga/guides/outdoor-adventures?tags=paddling",
+                class: "clickable-filter-tag px-7 py-3 text-white rounded-full text-[20px] cursor-pointer transition-colors font-normal no-underline",
+                style: "background-color: #1a4d2e;",
+                "data-tag": "paddling",
+                children: "Paddling"
+              })
+            })]
+          })]
+        })
+      }), createVNode("div", {
+        class: "max-w-6xl mx-auto px-3",
+        id: "distance-filters-section",
+        style: "display: none;",
+        children: createVNode("div", {
+          class: "flex flex-col md:flex-row md:items-center mb-3 pb-3 gap-2 md:gap-6",
+          children: [createVNode("h2", {
+            class: "text-[2.5rem] mb-0",
+            style: "font-family: 'Libre Baskerville', serif;",
+            children: ["Distance", createVNode("span", {
+              class: "color-pink ml-1",
+              children: createVNode("b", {
+                children: ":"
+              })
+            })]
+          }), createVNode("div", {
+            class: "flex flex-wrap gap-2",
+            children: [createVNode("a", {
+              href: "/chattanooga/guides/outdoor-adventures?tags=1-to-2-miles",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "1-to-2-miles",
+              children: "1-2 Miles"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/outdoor-adventures?tags=3-to-5-miles",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "3-to-5-miles",
+              children: "3-5 Miles"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/outdoor-adventures?tags=10-to-20-miles",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "10-to-20-miles",
+              children: "10-20 Miles"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/outdoor-adventures?tags=20-plus-miles",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "20-plus-miles",
+              children: "20+ Miles"
+            })]
+          })]
+        })
+      }), createVNode("div", {
+        class: "max-w-6xl mx-auto px-3",
+        children: createVNode("div", {
+          class: "flex flex-col md:flex-row md:items-start gap-2 md:gap-6",
+          children: [createVNode("h2", {
+            class: "text-[2.5rem] mb-0",
+            style: "font-family: 'Libre Baskerville', serif;",
+            children: ["Locations", createVNode("span", {
+              class: "color-pink ml-1",
+              children: createVNode("b", {
+                children: ":"
+              })
+            })]
+          }), createVNode("div", {
+            class: "flex flex-wrap gap-2 [&>p]:contents pt-2 md:pt-0",
+            children: [createVNode("div", {
+              class: "relative",
+              children: [createVNode("span", {
+                class: "hidden md:block absolute -top-7 left-1/2 -translate-x-1/2 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200",
+                style: "font-size: 11px;",
+                children: "Try Me ↓"
+              }), createVNode("span", {
+                class: "md:hidden absolute top-1/2 -translate-y-1/2 -right-12 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200 z-10",
+                style: "font-size: 11px;",
+                children: "← Try Me"
+              }), createVNode("a", {
+                href: "/chattanooga/guides/outdoor-adventures?tags=booker-t-washington",
+                class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+                style: "background-color: #1a4d2e;",
+                "data-tag": "booker-t-washington",
+                children: "Booker T Washington"
+              })]
+            }), createVNode(_components.p, {
+              children: [createVNode("a", {
+                href: "/chattanooga/guides/outdoor-adventures?tags=chickamauga-battlefield",
+                class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+                style: "background-color: #1a4d2e;",
+                "data-tag": "chickamauga-battlefield",
+                children: "Chickamauga Battlefield"
+              }), "\n", createVNode("a", {
+                href: "/chattanooga/guides/outdoor-adventures?tags=cloudland",
+                class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+                style: "background-color: #1a4d2e;",
+                "data-tag": "cloudland",
+                children: "Cloudland Canyon"
+              }), "\n", createVNode("a", {
+                href: "/chattanooga/guides/outdoor-adventures?tags=enterprise-nature",
+                class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+                style: "background-color: #1a4d2e;",
+                "data-tag": "enterprise-nature",
+                children: "Enterprise Nature Park"
+              }), "\n", createVNode("a", {
+                href: "/chattanooga/guides/outdoor-adventures?tags=park",
+                class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+                style: "background-color: #1a4d2e;",
+                "data-tag": "park",
+                children: "Local Park"
+              }), "\n", createVNode("a", {
+                href: "/chattanooga/guides/outdoor-adventures?tags=lookout-mtn",
+                class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+                style: "background-color: #1a4d2e;",
+                "data-tag": "lookout-mtn",
+                children: "Lookout Mountain"
+              }), "\n", createVNode("a", {
+                href: "/chattanooga/guides/outdoor-adventures?tags=preserve",
+                class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+                style: "background-color: #1a4d2e;",
+                "data-tag": "preserve",
+                children: "Nature Preserves"
+              }), createVNode(_components.br, {}), "\n", createVNode("a", {
+                href: "/chattanooga/guides/outdoor-adventures?tags=prentice-cooper",
+                class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+                style: "background-color: #1a4d2e;",
+                "data-tag": "prentice-cooper",
+                children: "Prentice Cooper"
+              }), "\n", createVNode("a", {
+                href: "/chattanooga/guides/outdoor-adventures?tags=raccoon-mtn",
+                class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+                style: "background-color: #1a4d2e;",
+                "data-tag": "raccoon-mtn",
+                children: "Raccoon Mountain"
+              }), "\n", createVNode("a", {
+                href: "/chattanooga/guides/outdoor-adventures?tags=stringers-ridge",
+                class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+                style: "background-color: #1a4d2e;",
+                "data-tag": "stringers-ridge",
+                children: "Stringers Ridge"
+              })]
+            })]
+          })]
+        })
+      }), createVNode("div", {
+        class: "max-w-6xl mx-auto px-3",
+        children: createVNode("div", {
+          class: "flex flex-col md:flex-row md:items-center mb-3 pb-3 gap-2 md:gap-6",
+          children: [createVNode("h2", {
+            class: "text-[2.5rem] mb-0",
+            style: "font-family: 'Libre Baskerville', serif;",
+            children: ["More", createVNode("span", {
+              class: "color-pink ml-1",
+              children: createVNode("b", {
+                children: ":"
+              })
+            })]
+          }), createVNode("div", {
+            class: "flex flex-wrap gap-3",
+            children: [createVNode("a", {
+              href: "/chattanooga/guides/outdoor-adventures?tags=kid-friendly",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "kid-friendly",
+              children: "Kid Friendly"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/outdoor-adventures?tags=waterfalls",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "waterfalls",
+              children: "Waterfall"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/outdoor-adventures?tags=farm",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "farm",
+              children: "Farm"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/outdoor-adventures?tags=cave",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "cave",
+              children: "Cave"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/outdoor-adventures?tags=other",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "other",
+              children: "Other"
+            })]
+          })]
+        })
+      })]
+    }), "\n", "\n", createVNode("div", {
+      id: "place-descriptions-container",
+      class: "max-w-6xl mx-auto px-3",
+      children: [createVNode("div", {
+        class: "place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg",
+        "data-place": "chickamauga-battlefield",
+        children: [createVNode("h2", {
+          class: "text-3xl mb-2",
+          style: "font-family: 'Libre Baskerville', serif;",
+          children: ["Chickamauga Battlefield Military Park", createVNode("span", {
+            class: "color-pink ml-1",
+            children: createVNode("b", {
+              children: "."
+            })
+          })]
+        }), createVNode("p", {
+          class: "text-xl",
+          children: "A largely flat, easy walking battlefield spread across roughly 9000+ acres of rolling hills, open fields and forest just south of Chattanooga near Fort Oglethorpe, Georgia. It’s preserved under the National Park Service as a major Civil War site, known for quiet roads, abundant wildlife and extensive history monuments."
+        }), createVNode("div", {
+          class: "flex flex-wrap gap-4 mt-4",
+          children: createVNode("a", {
+            href: "/chattanooga/guides/tours#chickamauga-battlefield-tours",
+            class: "page-item-link text-logoDarkGreen underline",
+            children: "Tour Options"
+          })
+        }), createVNode("div", {
+          class: "flex flex-wrap justify-center gap-4 mt-6",
+          children: [createVNode("img", {
+            src: "/images/chattanooga_guides/history/path.webp",
+            alt: "A Chickamauga Battlefield landscape photo of a bridge, creek and a worn in walking trail.",
+            class: "rounded-xl w-full max-w-md h-auto object-cover",
+            loading: "lazy"
+          }), createVNode("img", {
+            src: "/images/chattanooga_guides/outdoors/chickamauga-battlefield/tree-tunnel.jpg",
+            alt: "A scenic tree tunnel offers shade over a wide dirt trail at Chickamauga Battlefield park.",
+            class: "rounded-xl w-full max-w-md h-auto object-cover",
+            loading: "lazy"
+          })]
+        })]
+      }), createVNode("div", {
+        class: "place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg",
+        "data-place": "lookout-mtn",
+        children: [createVNode("h2", {
+          class: "text-3xl mb-2",
+          style: "font-family: 'Libre Baskerville', serif;",
+          children: ["Lookout Mountain", createVNode("span", {
+            class: "color-pink ml-1",
+            children: createVNode("b", {
+              children: "."
+            })
+          })]
+        }), createVNode("p", {
+          class: "text-xl",
+          children: "One of the most famous landmarks in the Chattanooga area, roughly 2,300 feet above the valley and well known historically for its stunning views and strategic use during the Civil War. It spans both Tennessee and Georgia state lines. In addition to trails like Glen Falls and Guild Hardy, the mountain is frequently visited for attractions like Point Park, Cravens House, Rock City and Ruby Falls. After your adventure, the St Elmo neighborhood at the mountain’s base has sweet treats at Hot Chocolatier and Clumpies ice cream."
+        }), createVNode("div", {
+          class: "flex flex-wrap gap-4 mt-4",
+          children: createVNode("a", {
+            href: "/chattanooga/guides/confections#ice-cream",
+            class: "page-item-link text-logoDarkGreen underline",
+            children: "Sweet Treats in St Elmo"
+          })
+        }), createVNode("div", {
+          class: "flex flex-wrap justify-center gap-4 mt-6",
+          children: [createVNode("img", {
+            src: "/images/chattanooga_guides/outdoors/lookout-mtn/mountain-top.jpg",
+            alt: "Wide and long view of the entire city of Chattanooga from atop Lookout Mountain.",
+            class: "rounded-xl w-full max-w-md h-auto object-cover",
+            loading: "lazy"
+          }), createVNode("img", {
+            src: "/images/chattanooga_guides/outdoors/lookout-mtn/ga-tn.jpg",
+            alt: "A GA/TN sign on the Guild Hardy train indicating the crossover from Tennessee into Georgia.",
+            class: "rounded-xl w-full max-w-md h-auto object-cover",
+            loading: "lazy"
+          })]
+        })]
+      }), createVNode("div", {
+        class: "place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg",
+        "data-place": "prentice-cooper",
+        children: [createVNode("h2", {
+          class: "text-3xl mb-2",
+          style: "font-family: 'Libre Baskerville', serif;",
+          children: ["Prentice Cooper State Forest", createVNode("span", {
+            class: "color-pink ml-1",
+            children: createVNode("b", {
+              children: "."
+            })
+          })]
+        }), createVNode("p", {
+          class: "text-xl",
+          children: "A large Wildlife Management Area northwest of downtown Chattanooga, covering roughly 24,500 acres of rugged Cumberland Plateau terrain. Known for hunting access, long gravel roads that connect to trailheads and overlooks and designated OHV routes. Scenic overlooks along the plateau edge offer big views of the Tennessee River Gorge."
+        }), createVNode("div", {
+          class: "flex flex-wrap justify-center gap-4 mt-6",
+          children: [createVNode("img", {
+            src: "/images/chattanooga_guides/outdoors/prentice-cooper/game-reserve-road.jpg",
+            alt: "View from Game Reserve Road into the Prentice Cooper Forest.",
+            class: "rounded-xl w-full max-w-md h-auto object-cover",
+            loading: "lazy"
+          }), createVNode("img", {
+            src: "/images/chattanooga_guides/outdoors/prentice-cooper/davis-pond-trail.jpg",
+            alt: "Turn off to the trail for Davis Pond in Prentice Cooper for backcountry camping.",
+            class: "rounded-xl w-full max-w-md h-auto object-cover",
+            loading: "lazy"
+          })]
+        })]
+      }), createVNode("div", {
+        class: "place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg",
+        "data-place": "stringers-ridge",
+        children: [createVNode("h2", {
+          class: "text-3xl mb-2",
+          style: "font-family: 'Libre Baskerville', serif;",
+          children: ["Stringers Ridge", createVNode("span", {
+            class: "color-pink ml-1",
+            children: createVNode("b", {
+              children: "."
+            })
+          })]
+        }), createVNode("p", {
+          class: "text-xl",
+          children: "92 acre nature park located in the heart of Chattanooga’s city limits. An easy escape from downtown. It’s a quick outdoor playground for locals for hiking, mountain biking and trail running. Shorter loops and moderate elevation changes make it a common stop for before or after work laps rather than long backcountry outings. The Northshore location puts you near Clumpies flagship ice cream shop for a post-hike treat."
+        }), createVNode("div", {
+          class: "flex flex-wrap gap-4 mt-4",
+          children: createVNode("a", {
+            href: "/chattanooga/guides/confections#ice-cream",
+            class: "page-item-link text-logoDarkGreen underline",
+            children: "Nearby Sweet Treats"
+          })
+        }), createVNode("div", {
+          class: "flex flex-wrap justify-center gap-4 mt-6",
+          children: [createVNode("img", {
+            src: "/images/chattanooga_guides/outdoors/stringers-ridge/trail-map.jpg",
+            alt: "The Stringers Ridge Trail map and connection details to White Oak Mountain.",
+            class: "rounded-xl w-full max-w-md h-auto object-cover",
+            loading: "lazy"
+          }), createVNode("img", {
+            src: "/images/chattanooga_guides/outdoors/stringers-ridge/trail-view.jpg",
+            alt: "A viewpoint from a biker on the trail at Stringers Ridge in Chattanooga.",
+            class: "rounded-xl w-full max-w-md h-auto object-cover",
+            loading: "lazy"
+          })]
+        })]
+      }), createVNode("div", {
+        class: "place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg",
+        "data-place": "cloudland",
+        children: [createVNode("h2", {
+          class: "text-3xl mb-2",
+          style: "font-family: 'Libre Baskerville', serif;",
+          children: ["Cloudland Canyon State Park", createVNode("span", {
+            class: "color-pink ml-1",
+            children: createVNode("b", {
+              children: "."
+            })
+          })]
+        }), createVNode("p", {
+          class: "text-xl",
+          children: "Considered one of Georgia’s top state parks, located on the western edge of Lookout Mountain near the Tennessee line. The park has sweeping canyon views, sandstone cliffs and steep descents into the gorge. Dozens of miles of trails from easy rim walks to hard waterfall hikes and backcountry routes. Note that they do have a $5 entrance fee."
+        }), createVNode("div", {
+          class: "flex flex-wrap gap-4 mt-4",
+          children: createVNode("a", {
+            href: "/chattanooga/guides/cloudland-canyon",
+            class: "page-item-link text-logoDarkGreen underline",
+            children: "Full Cloudland Canyon Guide"
+          })
+        }), createVNode("div", {
+          class: "flex flex-wrap justify-center gap-4 mt-6",
+          children: [createVNode("img", {
+            src: "/images/chattanooga_guides/outdoors/cloudland/vista.webp",
+            alt: "Panoramic view of Cloudland Canyon from the West Rim trail",
+            class: "rounded-xl w-full max-w-md h-auto object-cover",
+            loading: "lazy"
+          }), createVNode("img", {
+            src: "/images/chattanooga_guides/outdoors/cloudland/overlook-west-rim.webp",
+            alt: "Hiker at the West Rim overlook gazing into Cloudland Canyon",
+            class: "rounded-xl w-full max-w-md h-auto object-cover",
+            loading: "lazy"
+          })]
+        })]
+      }), createVNode("div", {
+        class: "place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg",
+        "data-place": "raccoon-mtn",
+        children: [createVNode("h2", {
+          class: "text-3xl mb-2",
+          style: "font-family: 'Libre Baskerville', serif;",
+          children: ["Raccoon Mountain", createVNode("span", {
+            class: "color-pink ml-1",
+            children: createVNode("b", {
+              children: "."
+            })
+          })]
+        }), createVNode("p", {
+          class: "text-xl",
+          children: "Sits just west of downtown Chattanooga on Tennessee Valley Authority land, covering roughly 3,800 acres of rugged terrain. It’s known for technical trail features and exposed boulders, making it one of the Southeast’s notable mountain biking locations. A scenic loop road circles the mountain and doubles as a popular drive, road ride, or gravel bike loop, with trailhead access into the rocky terrain."
+        }), createVNode("div", {
+          class: "flex flex-wrap justify-center gap-4 mt-6",
+          children: [createVNode("img", {
+            src: "/images/chattanooga_guides/outdoors/raccoon-mtn/gorge-overlook.jpg",
+            alt: "An expansive view into the gorge of the Tennessee River from a Raccoon Mountain trail.",
+            class: "rounded-xl w-full max-w-md h-auto object-cover",
+            loading: "lazy"
+          }), createVNode("img", {
+            src: "/images/chattanooga_guides/outdoors/raccoon-mtn/pond.jpg",
+            alt: "A view of a pond next to a Raccoon Mountain MTB and hiking trail.",
+            class: "rounded-xl w-full max-w-md h-auto object-cover",
+            loading: "lazy"
+          })]
+        })]
+      }), createVNode("div", {
+        class: "place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg",
+        "data-place": "enterprise-nature",
+        children: [createVNode("h2", {
+          class: "text-3xl mb-2",
+          style: "font-family: 'Libre Baskerville', serif;",
+          children: ["Enterprise Nature Park", createVNode("span", {
+            class: "color-pink ml-1",
+            children: createVNode("b", {
+              children: "."
+            })
+          })]
+        }), createVNode("p", {
+          class: "text-xl",
+          children: "A 2,800+ acre park in northeast Chattanooga. This park is known for flowy, beginner-friendly mountain bike trails and a network of easier hiking trails. The trails in this park are known for rolling terrain, wildlife (deer, turkeys, snakes are common) and are available for casual rides, hiking and trail running."
+        })]
+      }), createVNode("div", {
+        class: "place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg",
+        "data-place": "booker-t-washington",
+        children: [createVNode("h2", {
+          class: "text-3xl mb-2",
+          style: "font-family: 'Libre Baskerville', serif;",
+          children: ["Booker T. Washington State Park", createVNode("span", {
+            class: "color-pink ml-1",
+            children: createVNode("b", {
+              children: "."
+            })
+          })]
+        }), createVNode("p", {
+          class: "text-xl",
+          children: "A lakeside state park northeast of downtown Chattanooga along Chickamauga Lake. In total the park encompasses roughly 350 acres. The park features a small network of wooded, multi-use trails, some with water views. The trail terrain is beginner friendly and popular for hiking, trail running and mountain biking."
+        }), createVNode("div", {
+          class: "flex flex-wrap justify-center gap-4 mt-6",
+          children: [createVNode("img", {
+            src: "/images/chattanooga_guides/outdoors/booker-t-washington/shoreline.jpg",
+            alt: "Wooded shoreline along Chickamauga Lake at Booker T. Washington State Park",
+            class: "rounded-xl w-full max-w-md h-auto object-cover",
+            loading: "lazy"
+          }), createVNode("img", {
+            src: "/images/chattanooga_guides/outdoors/booker-t-washington/water-view.jpg",
+            alt: "View of Chickamauga Lake from the Outer Loop trail",
+            class: "rounded-xl w-full max-w-md h-auto object-cover",
+            loading: "lazy"
+          })]
+        })]
+      })]
+    }), "\n", createVNode("section", {
+      class: "text-xl",
+      children: createVNode("div", {
+        children: createVNode($$PageItemsFromFrontmatter, {
+          pageItems: frontmatter.pageItems,
+          showClearFilters: true
+        })
+      })
+    }), "\n", createVNode("div", {
+      class: "pb-12",
+      children: [createVNode("div", {
+        class: "pb-3",
+        children: ["Have we done enough to satisfy your craving for the outdoors? If no, ", createVNode("a", {
+          href: "mailto:jack@thingshappening.com",
+          children: "send us an email"
+        }), ", all feedback helps (constructive preferred). If yes, ", createVNode("a", {
+          href: "mailto:jack@thingshappening.com",
+          children: "send us an email"
+        }), ", a bit of praise never hurt anyone."]
+      }), createVNode("div", {
+        children: "This guide will continue to be added to and refined over time, so please check back in after you’ve gathered yourself following your latest Chattanooga adventure."
+      })]
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  return createVNode(MDXLayout, {
+    ...props,
+    children: createVNode(_createMdxContent, {
+      ...props
+    })
+  });
+}
+
+const url = "/chattanooga/guides/outdoors";
+const file = "/Users/jack.burum/portfolio-of-small-bets/things_happening/src/pages/chattanooga/guides/outdoors.mdx";
+const Content = (props = {}) => MDXContent({
+  ...props,
+  components: { Fragment: Fragment, ...props.components, },
+});
+Content[Symbol.for('mdx-component')] = true;
+Content[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter.layout);
+Content.moduleId = "/Users/jack.burum/portfolio-of-small-bets/things_happening/src/pages/chattanooga/guides/outdoors.mdx";
+__astro_tag_component__(Content, 'astro:jsx');
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  Content,
+  default: Content,
+  file,
+  frontmatter,
+  getHeadings,
+  url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+export { _page as _ };

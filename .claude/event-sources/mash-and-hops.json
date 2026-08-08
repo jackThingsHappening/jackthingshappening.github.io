@@ -1,0 +1,35 @@
+{
+  "name": "Mash and Hops Craft Beers",
+  "type": "mixed",
+  "url": "https://www.mashandhops.com/when-is-the-next-party",
+  "recurring": {
+    "events": [
+      {
+        "outputPath": "src/pages/chattanooga/events/city/cleveland/mash-and-hops/singles-night.mdx",
+        "matchHint": "Singles Night every Tuesday 5pm–9pm"
+      },
+      {
+        "outputPath": "src/pages/chattanooga/events/city/cleveland/mash-and-hops/beer-share.mdx",
+        "matchHint": "Beer Share on the third Sunday of every month"
+      }
+    ]
+  },
+  "calendar": {
+    "outputDir": "src/pages/chattanooga/events/city/cleveland/mash-and-hops",
+    "slugPrefix": "",
+    "defaultFrontmatter": {
+      "venue": "Mash and Hops Craft Beers",
+      "address": "168 First Street NE, Cleveland, TN 37311",
+      "iconPath": "/images/icons-new/beer.png",
+      "eventLink": "https://www.mashandhops.com/when-is-the-next-party",
+      "tags": [
+        { "type": "place", "tag": "mash-and-hops" },
+        { "type": "genre", "tag": "food-drink" },
+        { "type": "city", "tag": "cleveland-tn" }
+      ],
+      "layout": "../../../../../../layouts/BlogPostLayout.astro"
+    }
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-08-08"
+}

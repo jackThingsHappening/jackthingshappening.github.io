@@ -1,0 +1,584 @@
+import { _ as __astro_tag_component__, f as createVNode, F as Fragment } from './astro/server_CzqnycT_.mjs';
+import { $ as $$BlogPostLayout } from './BlogPostLayout_Bqj5Bb28.mjs';
+import { $ as $$PageItemsFromFrontmatter } from './PageItemsFromFrontmatter_yF6ShBMT.mjs';
+import 'html-escaper';
+import 'clsx';
+
+const MDXLayout = function ({children}) {
+  const {layout, ...content} = frontmatter;
+  content.file = file;
+  content.url = url;
+  return createVNode($$BlogPostLayout, {
+    file,
+    url,
+    content,
+    frontmatter: content,
+    headings: getHeadings(),
+    'server:root': true,
+    children
+  });
+};
+const frontmatter = {
+  "title": "An Interactive Guide to Chattanooga Restaurants with a View: 13 Spots",
+  "published": true,
+  "lastUpdated": "05/19/2026",
+  "originalDate": "05/08/2026",
+  "readTime": "8 minutes",
+  "tags": [{
+    "type": "guide",
+    "tag": "restaurants"
+  }, {
+    "type": "guide",
+    "tag": "interactive"
+  }],
+  "layout": "../../../layouts/BlogPostLayout.astro",
+  "seoDescription": "Chattanooga restaurants and bars with views: Tennessee River waterfront, rooftop city views, Lookout Mountain valley overlooks, and bluff-top dining worth the detour.",
+  "geoCoverage": "Chattanooga, TN and surrounding area (North Shore, Suck Creek, Lookout Mountain, Jasper TN, Guild TN, Rising Fawn GA)",
+  "iconPath": "../../../images/icons-new/dish-plate.png",
+  "images": [{
+    "src": "/images/chattanooga_guides/social/restaurants/topof-the-rock-view.jpg",
+    "position": "top"
+  }],
+  "pageItems": [{
+    "title": "The Boathouse Rotisserie & Raw Bar",
+    "description": "Riverside Dr, right on the Tennessee River. Tables inside and on the deck both face the water. Seafood focused menu built around the raw bar and rotisserie. Book ahead for weekend dinners.",
+    "order": 1,
+    "tags": ["water", "north-shore", "dinner", "lunch"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=The+Boathouse+Rotisserie+Raw+Bar+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.boathousechattanooga.com/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Whitebird at The Edwin Hotel",
+    "description": "Ground floor of The Edwin Hotel facing the Walnut Street Bridge and the Tennessee River. Modern Appalachian cuisine from the Tennessee River Valley, named for Chief John Ross, whose Cherokee name translates to \"Mysterious Little Whitebird.\" Dinner Tuesday through Sunday, brunch Saturday and Sunday. Upstairs is Whiskey Thief, a rooftop bar with over 100 Tennessee whiskeys and open-air river views.",
+    "order": 2,
+    "tags": ["water", "rooftop", "downtown", "brunch", "dinner", "drinks"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=The+Edwin+Hotel+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.whitebirdchattanooga.com/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "The Dwell Hotel",
+    "description": "The Dwell has Matilda Midnight, an open-air cocktail bar on the property at E 10th St. Cocktails are the draw, city skyline as the backdrop. Seating is weather dependent, so check availability before it becomes the plan.",
+    "order": 3,
+    "tags": ["rooftop", "downtown", "drinks"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=The+Dwell+Hotel+120+E+10th+St+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://thedwellhotel.com/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Stone Cup Cafe",
+    "description": "North Shore spot with an upstairs lounge and a river facing patio on Frazier Ave. More coffee stop than restaurant, but the patio has a solid Tennessee River view. Also in the coffeeshops guide. Good warm weather stop before or after the Riverwalk.",
+    "order": 4,
+    "tags": ["water", "north-shore", "drinks"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Stone+Cup+Cafe+Frazier+Ave+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Coffee Shops Guide",
+      "link": "/chattanooga/guides/coffeeshops",
+      "target": "_self"
+    }]
+  }, {
+    "title": "Canopy Coffee and Wine Bar",
+    "description": "Patio on Lookout Mountain that shifts from coffee to wine and beer as the day winds down. Views out over the valley. Good stop after the Incline Railway, Reflection Riding, or a Cumberland Trail segment. Also in the coffeeshops guide.",
+    "order": 5,
+    "tags": ["mountain", "lookout-mountain", "drinks"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Canopy+Coffee+Wine+Bar+Lookout+Mountain+TN",
+      "target": "_blank"
+    }, {
+      "text": "Coffee Shops Guide",
+      "link": "/chattanooga/guides/coffeeshops",
+      "target": "_self"
+    }]
+  }, {
+    "title": "River Drifters",
+    "description": "Suck Creek Road patio with dog friendly seating and creek views out to the Tennessee River. Menu runs smashburgers, sandwiches, fresh seafood (blackened catfish, crab cakes, fried shrimp), and a bison burger. Friday all-you-can-eat catfish is a recurring special. Craft beer focus, active local tap list. They rent kayaks and SUPs on site. Gets packed on weekends.",
+    "order": 6,
+    "tags": ["water", "suck-creek", "lunch", "dinner", "drinks"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=River+Drifters+1925+Suck+Creek+Rd+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://riverdrifterschatt.com/",
+      "target": "_blank"
+    }, {
+      "text": "Facebook",
+      "link": "https://www.facebook.com/riverdrifterschattanooga/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Scottie's On The River",
+    "description": "Riverfront Pkwy with direct Tennessee River views and sightlines to the John Ross Bridge. Menu goes heavy on seafood: oysters on the half shell, blue crab cakes, fried lobster tail, stuffed shrimp, pan-seared trout. Steaks and chops for the non-seafood table. Sunday brunch 11am to 3pm. Cocktail program, live music on select nights. Walk-in only.",
+    "order": 7,
+    "tags": ["water", "downtown", "brunch", "lunch", "dinner"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Scottie's+On+The+River+491+Riverfront+Pkwy+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://scottiesontheriver.net/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Top of the Rock Restaurant & Brewery",
+    "description": "About 30 minutes from downtown in Jasper Highlands, on top of Jasper Mountain with views of the Tennessee River valley. 3,000 sq ft of deck space and floor-to-ceiling windows inside. Named one of the 50 most beautiful restaurants in the US by People and OpenTable in 2024. On-site brewery: kolsch, IPA, wheat, red ale, rotating seasonals. Southern menu: prime rib egg rolls, Chili Peach Shrimp, pizzas, steaks. Weekend brunch, live music Thursdays, heated outdoor igloos in season. Reservations via OpenTable.",
+    "order": 8,
+    "tags": ["mountain", "water", "jasper", "brunch", "lunch", "dinner", "drinks"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Top+of+the+Rock+Restaurant+Brewery+1584+Jasper+Highlands+Blvd+Jasper+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://topoftherockbrewery.com/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Riverdance Restaurant at River Gorge Ranch",
+    "description": "About 25 minutes from downtown in Guild, TN, above the Tennessee River Gorge with views of the river and Lake Nickajack. Opened February 2026. The 13,000 sq ft building has floor-to-ceiling windows facing the gorge and an on-site brewery. Modern Southern cuisine, craft cocktails, house-brewed beer. Call ahead to confirm hours.",
+    "order": 9,
+    "tags": ["mountain", "water", "guild", "brunch", "lunch", "dinner", "drinks"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Riverdance+Restaurant+River+Gorge+Ranch+Guild+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.riverdancetn.com/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Canyon Grill",
+    "description": "Georgia side of Lookout Mountain's ridgeline in Rising Fawn, about 20 minutes from downtown. Views span four states from the top. Dinner only, Tuesday through Saturday. Southern American gastropub menu: catfish, rack of lamb, duck, pork tenderloin, chicken piccata. BYOB, beer and wine only. Reservations recommended, walk-ins accommodated.",
+    "order": 10,
+    "tags": ["mountain", "rising-fawn", "dinner"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Canyon+Grill+28+Scenic+Hwy+Rising+Fawn+GA",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.canyongrill.com/",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Auld Alliance at McLemore Resort",
+    "description": "About 30 minutes from downtown at McLemore Resort (Curio Collection by Hilton) in Rising Fawn, GA. The restaurant sits at the cliff edge of Lookout Mountain, looking out over McLemore Cove, a bowl-shaped valley that drops sharply off the ridge. Scottish and French fine dining built on highland fare from both traditions. Non-hotel guests welcome. The property also has Croft for casual all-day dining and Skyside, a poolside outdoor bar with views. Reservations required and they book out fast.",
+    "order": 11,
+    "tags": ["mountain", "rising-fawn", "dinner"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=McLemore+Resort+243+Cloudland+Dr+Rising+Fawn+GA",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://www.staycloudland.com/food-and-drink",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Tony's Pasta Shop & Trattoria",
+    "description": "In the former carriage house of the T.C. Thompson mansion on Bluff View, 212 High St. The upper patio deck faces the Tennessee River directly. Homemade pasta and fresh bread made daily. Named Best Italian Restaurant by the Chattanooga Times Free Press two years running. Reservations recommended.",
+    "order": 12,
+    "tags": ["water", "downtown", "dinner", "lunch"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Tony%27s+Pasta+Shop+Trattoria+212+High+St+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://bluffviewartdistrictchattanooga.com/tonys-pasta-shop",
+      "target": "_blank"
+    }]
+  }, {
+    "title": "Lakeshore Grille",
+    "description": "Above Lakeshore Marina on Chickamauga Lake at 5600 Lake Resort Terrace. Covered patio faces the water. Menu runs fresh seafood, hand cut steaks, and burgers. Dinner Tuesday through Saturday, brunch Sunday 11am to 3pm. Closed Monday.",
+    "order": 13,
+    "tags": ["water", "dinner", "brunch"],
+    "links": [{
+      "text": "Google Maps",
+      "link": "https://www.google.com/maps/search/?api=1&query=Lakeshore+Grille+5600+Lake+Resort+Terrace+Chattanooga+TN",
+      "target": "_blank"
+    }, {
+      "text": "Website",
+      "link": "https://lakeshoregrille.com/",
+      "target": "_blank"
+    }]
+  }],
+  "itemTemplate": {
+    "title": "",
+    "order": 14,
+    "description": "",
+    "links": [{
+      "text": "More Information",
+      "link": ""
+    }],
+    "tags": []
+  }
+};
+function getHeadings() {
+  return [];
+}
+function _createMdxContent(props) {
+  return createVNode(Fragment, {
+    children: [createVNode("script", {
+      type: "application/ld+json",
+      "set:html": JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Chattanooga Restaurants with a View Guide",
+        "description": "Interactive listings of Chattanooga restaurants and bars with views: river waterfront, rooftops, Lookout Mountain, and bluff-top dining.",
+        "numberOfItems": 13,
+        "url": "https://thingshappening.com/chattanooga/guides/restaurants-with-a-view"
+      })
+    }), "\n", createVNode("div", {
+      class: "max-w-6xl mx-auto px-3",
+      children: [createVNode("div", {
+        class: "pb-5 pt-2",
+        children: ["Outside the window, above the roofline, over the edge of a bluff. This guide covers ", createVNode("strong", {
+          children: "13"
+        }), " restaurants, cafe’s and/or bars where the setting is part of the point: river waterfront, rooftop bars with city views, Lookout Mountain overlooks, and more."]
+      }), createVNode("div", {
+        class: "pb-5",
+        children: ["A few entries cross reference the ", createVNode("a", {
+          href: "/chattanooga/guides/coffeeshops",
+          children: "coffeeshops guide"
+        }), ". Filters were added for the view type, what they’re most known for and neighborhood."]
+      }), createVNode("div", {
+        class: "pb-5",
+        children: [createVNode("i", {
+          children: "Ongoing project."
+        }), " If there’s a spot with a view worth adding, ", createVNode("a", {
+          href: "mailto:jack@thingshappening.com",
+          children: "send an email"
+        }), ". Hours, menus, and seasonal programming change. Confirm before you make a special trip."]
+      })]
+    }), "\n", createVNode("div", {
+      class: "mb-8 mt-5 w-full max-w-3xl",
+      children: [createVNode("div", {
+        class: "relative w-full",
+        style: "padding-bottom: 75%;",
+        children: createVNode("iframe", {
+          src: "https://www.google.com/maps/d/u/0/embed?mid=1lLqDl01C1fW5nt8jKmrKyFWhObLsBnk&ehbc=2E312F",
+          class: "absolute top-0 left-0 w-full h-full border-0 rounded-lg",
+          loading: "async",
+          title: "Chattanooga Outdoor Adventures Map"
+        })
+      }), createVNode("p", {
+        class: "text-lg mt-2 italic",
+        children: "Map View Of The Restaurant Locations Below"
+      })]
+    }), "\n", createVNode("section", {
+      id: "guide-filters",
+      class: "text-xl pt-6 pb-2",
+      children: [createVNode("div", {
+        class: "max-w-6xl mx-auto px-3",
+        children: createVNode("div", {
+          class: "flex flex-col md:flex-row md:items-center mb-3 pb-3 gap-2 md:gap-6",
+          children: [createVNode("h2", {
+            class: "text-[2.5rem] mb-0",
+            style: "font-family: 'Libre Baskerville', serif;",
+            children: ["View", createVNode("span", {
+              class: "color-pink ml-1",
+              children: createVNode("b", {
+                children: ":"
+              })
+            })]
+          }), createVNode("div", {
+            class: "flex flex-wrap gap-3",
+            children: [createVNode("div", {
+              class: "relative",
+              children: [createVNode("span", {
+                class: "hidden md:block absolute -top-7 left-1/2 -translate-x-1/2 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200",
+                style: "font-size: 11px;",
+                children: "Try Me ↓"
+              }), createVNode("span", {
+                class: "md:hidden absolute top-1/2 -translate-y-1/2 -right-16 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200 z-10",
+                style: "font-size: 11px;",
+                children: "← Try Me"
+              }), createVNode("a", {
+                href: "/chattanooga/guides/restaurants-with-a-view?tags=water",
+                class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+                style: "background-color: #1a4d2e;",
+                "data-tag": "water",
+                children: "Water"
+              })]
+            }), createVNode("a", {
+              href: "/chattanooga/guides/restaurants-with-a-view?tags=rooftop",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "rooftop",
+              children: "Rooftop"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/restaurants-with-a-view?tags=mountain",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "mountain",
+              children: "Mountain"
+            })]
+          })]
+        })
+      }), createVNode("div", {
+        class: "max-w-6xl mx-auto px-3",
+        children: createVNode("div", {
+          class: "flex flex-col md:flex-row md:items-center mb-3 pb-3 gap-2 md:gap-6",
+          children: [createVNode("h2", {
+            class: "text-[2.5rem] mb-0",
+            style: "font-family: 'Libre Baskerville', serif;",
+            children: ["When", createVNode("span", {
+              class: "color-pink ml-1",
+              children: createVNode("b", {
+                children: ":"
+              })
+            })]
+          }), createVNode("div", {
+            class: "flex flex-wrap gap-3",
+            children: [createVNode("a", {
+              href: "/chattanooga/guides/restaurants-with-a-view?tags=brunch",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "brunch",
+              children: "Brunch"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/restaurants-with-a-view?tags=lunch",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "lunch",
+              children: "Lunch"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/restaurants-with-a-view?tags=dinner",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "dinner",
+              children: "Dinner"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/restaurants-with-a-view?tags=drinks",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "drinks",
+              children: "Drinks"
+            })]
+          })]
+        })
+      }), createVNode("div", {
+        class: "max-w-6xl mx-auto px-3",
+        children: createVNode("div", {
+          class: "flex flex-col md:flex-row md:items-start gap-2 md:gap-6",
+          children: [createVNode("h2", {
+            class: "text-[2.5rem] mb-0",
+            style: "font-family: 'Libre Baskerville', serif;",
+            children: ["Neighborhood", createVNode("span", {
+              class: "color-pink ml-1",
+              children: createVNode("b", {
+                children: ":"
+              })
+            })]
+          }), createVNode("div", {
+            class: "flex flex-wrap gap-2 pt-2 md:pt-0",
+            children: [createVNode("a", {
+              href: "/chattanooga/guides/restaurants-with-a-view?tags=downtown",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "downtown",
+              children: "Downtown"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/restaurants-with-a-view?tags=north-shore",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "north-shore",
+              children: "North Shore"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/restaurants-with-a-view?tags=southside",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "southside",
+              children: "Southside"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/restaurants-with-a-view?tags=lookout-mountain",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "lookout-mountain",
+              children: "Lookout Mountain"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/restaurants-with-a-view?tags=suck-creek",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "suck-creek",
+              children: "Suck Creek"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/restaurants-with-a-view?tags=jasper",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "jasper",
+              children: "Jasper (~30 min)"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/restaurants-with-a-view?tags=guild",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "guild",
+              children: "Guild (~20 min)"
+            }), createVNode("a", {
+              href: "/chattanooga/guides/restaurants-with-a-view?tags=rising-fawn",
+              class: "clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline",
+              style: "background-color: #1a4d2e;",
+              "data-tag": "rising-fawn",
+              children: "Rising Fawn (~20 min)"
+            })]
+          })]
+        })
+      })]
+    }), "\n", createVNode("div", {
+      id: "place-descriptions-container",
+      class: "max-w-6xl mx-auto px-3",
+      children: [createVNode("div", {
+        class: "place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg",
+        "data-place": "water",
+        children: [createVNode("h2", {
+          class: "text-3xl mb-2",
+          style: "font-family: 'Libre Baskerville', serif;",
+          children: ["Water views", createVNode("span", {
+            class: "color-pink ml-1",
+            children: createVNode("b", {
+              children: "."
+            })
+          })]
+        }), createVNode("p", {
+          class: "text-xl",
+          children: "Manufacturers Road (North Shore) and Riverfront Pkwy (downtown) put you closest to the Tennessee River at table level. Suck Creek Road to the west is a quieter creek-to-river setting, farther from downtown. The Riverwalk connects most of the riverfront spots on foot."
+        }), createVNode("div", {
+          class: "flex flex-wrap gap-4 mt-4",
+          children: [createVNode("a", {
+            href: "/chattanooga/guides/outdoors?tags=greenway",
+            class: "page-item-link text-logoDarkGreen underline",
+            children: "Tennessee Riverwalk"
+          }), createVNode("a", {
+            href: "/chattanooga/guides/coffeeshops?tags=downtown",
+            class: "page-item-link text-logoDarkGreen underline",
+            children: "Downtown coffee nearby"
+          })]
+        })]
+      }), createVNode("div", {
+        class: "place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg",
+        "data-place": "rooftop",
+        children: [createVNode("h2", {
+          class: "text-3xl mb-2",
+          style: "font-family: 'Libre Baskerville', serif;",
+          children: ["Downtown rooftops", createVNode("span", {
+            class: "color-pink ml-1",
+            children: createVNode("b", {
+              children: "."
+            })
+          })]
+        }), createVNode("p", {
+          class: "text-xl",
+          children: "Several downtown hotels have rooftop bars and terraces overlooking the city, mountains, and river corridor. The Edwin and Dwell are the two main options. Both are weather dependent. Confirm before making either one the centerpiece of a plan."
+        })]
+      }), createVNode("div", {
+        class: "place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg",
+        "data-place": "mountain",
+        children: [createVNode("h2", {
+          class: "text-3xl mb-2",
+          style: "font-family: 'Libre Baskerville', serif;",
+          children: ["Lookout Mountain", createVNode("span", {
+            class: "color-pink ml-1",
+            children: createVNode("b", {
+              children: "."
+            })
+          })]
+        }), createVNode("p", {
+          class: "text-xl",
+          children: "Lookout Mountain sits roughly 2,300 feet above the valley. A handful of spots near the top or along the scenic highway have that elevation working for them. Canopy Coffee is the most accessible, open into the evening with wine and coffee alongside the view."
+        }), createVNode("div", {
+          class: "flex flex-wrap gap-4 mt-4",
+          children: [createVNode("a", {
+            href: "/chattanooga/guides/outdoors?tags=lookout-mtn",
+            class: "page-item-link text-logoDarkGreen underline",
+            children: "Lookout Mountain outdoor activities"
+          }), createVNode("a", {
+            href: "/chattanooga/guides/coffeeshops?tags=lookout-mountain",
+            class: "page-item-link text-logoDarkGreen underline",
+            children: "Lookout Mountain coffee"
+          })]
+        })]
+      })]
+    }), "\n", createVNode("section", {
+      class: "text-xl",
+      children: createVNode("div", {
+        children: createVNode($$PageItemsFromFrontmatter, {
+          pageItems: frontmatter.pageItems,
+          showClearFilters: true
+        })
+      })
+    }), "\n", createVNode("div", {
+      class: "pb-12 max-w-6xl mx-auto px-3",
+      children: createVNode("div", {
+        class: "pb-3",
+        children: ["If this guide helped, or if there’s a spot with a view we missed, ", createVNode("a", {
+          href: "mailto:jack@thingshappening.com",
+          children: "send a note"
+        }), ". We’ll keep adding and refining as the dining scene evolves. Pair this with the ", createVNode("a", {
+          href: "/chattanooga/guides/coffeeshops",
+          children: "coffeeshops guide"
+        }), ", ", createVNode("a", {
+          href: "/chattanooga/guides/outdoors",
+          children: "outdoor adventures"
+        }), ", and ", createVNode("a", {
+          href: "/chattanooga/guides/exhibits",
+          children: "museums and exhibits"
+        }), " for a full day out."]
+      })
+    })]
+  });
+}
+function MDXContent(props = {}) {
+  return createVNode(MDXLayout, {
+    ...props,
+    children: createVNode(_createMdxContent, {
+      ...props
+    })
+  });
+}
+
+const url = "/chattanooga/guides/restaurants-with-a-view";
+const file = "/Users/jack.burum/portfolio-of-small-bets/things_happening/src/pages/chattanooga/guides/restaurants-with-a-view.mdx";
+const Content = (props = {}) => MDXContent({
+  ...props,
+  components: { Fragment: Fragment, ...props.components, },
+});
+Content[Symbol.for('mdx-component')] = true;
+Content[Symbol.for('astro.needsHeadRendering')] = !Boolean(frontmatter.layout);
+Content.moduleId = "/Users/jack.burum/portfolio-of-small-bets/things_happening/src/pages/chattanooga/guides/restaurants-with-a-view.mdx";
+__astro_tag_component__(Content, 'astro:jsx');
+
+const _page = /*#__PURE__*/Object.freeze(/*#__PURE__*/Object.defineProperty({
+  __proto__: null,
+  Content,
+  default: Content,
+  file,
+  frontmatter,
+  getHeadings,
+  url
+}, Symbol.toStringTag, { value: 'Module' }));
+
+export { _page as _ };
