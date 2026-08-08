@@ -10,7 +10,12 @@ Music venues, food and drink (breweries, bars, restaurants with events), museums
 
 ## Step 1 — Load known vendors
 
-Read `.claude/vendor-sources.json`. Extract all slugs and names — both `active` and `pending` entries count as already known.
+Read two files and combine into one known set:
+
+1. `.claude/known-vendors.md` — static list of all active and legacy vendors. Extract every slug and name from the table.
+2. `.claude/vendor-sources.json` — extract all slugs and names. All statuses (`active`, `pending`, `blocked`) count as known.
+
+A candidate matches if its generated slug OR its name fuzzy-matches any entry in this combined set. Skip it.
 
 ## Step 2 — Search for new venues
 
