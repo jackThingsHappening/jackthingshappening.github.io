@@ -10,8 +10,14 @@
     "iconPath": "/images/icons-new/beer.png",
     "eventLink": "https://www.wanderlinger.com/events-1",
     "tags": [
-      { "type": "place", "tag": "wanderlinger" },
-      { "type": "event", "tag": "music" }
+      {
+        "type": "place",
+        "tag": "wanderlinger"
+      },
+      {
+        "type": "genre",
+        "tag": "music"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },

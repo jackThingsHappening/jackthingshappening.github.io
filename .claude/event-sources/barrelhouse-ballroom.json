@@ -11,12 +11,12 @@
     "eventLink": "https://www.barrelhouseballroom.com/shows",
     "tags": [
       {
-        "type": "event",
-        "tag": "music"
+        "type": "place",
+        "tag": "barrelhouse-ballroom"
       },
       {
-        "type": "event",
-        "tag": "live-events"
+        "type": "genre",
+        "tag": "music"
       }
     ],
     "layout": "../../../layouts/BlogPostLayout.astro"

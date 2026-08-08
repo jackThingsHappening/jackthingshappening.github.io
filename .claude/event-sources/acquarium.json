@@ -6,8 +6,12 @@
     "layout": "../../../layouts/BlogPostLayout.astro",
     "tags": [
       {
-        "tag": "acquarium",
-        "type": "event"
+        "type": "place",
+        "tag": "acquarium"
+      },
+      {
+        "type": "genre",
+        "tag": "museum"
       }
     ],
     "venue": "Tennessee Aquarium"

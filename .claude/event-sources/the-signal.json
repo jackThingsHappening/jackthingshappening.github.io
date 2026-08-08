@@ -11,12 +11,12 @@
     "eventLink": "https://www.thesignaltn.com/tickets/",
     "tags": [
       {
-        "type": "event",
-        "tag": "music"
+        "type": "place",
+        "tag": "the-signal"
       },
       {
-        "type": "event",
-        "tag": "live-events"
+        "type": "genre",
+        "tag": "music"
       }
     ],
     "layout": "../../../layouts/BlogPostLayout.astro"

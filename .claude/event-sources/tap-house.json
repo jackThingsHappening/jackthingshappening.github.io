@@ -11,7 +11,11 @@
     "eventLink": "https://taphousechatt.com/chattanooga-chattanooga-the-tap-house-events",
     "tags": [
       {
-        "type": "event",
+        "type": "place",
+        "tag": "tap-house"
+      },
+      {
+        "type": "genre",
         "tag": "food-drink"
       }
     ],

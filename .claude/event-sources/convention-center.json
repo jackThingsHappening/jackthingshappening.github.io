@@ -11,8 +11,12 @@
     "eventLink": "https://www.chattanoogaconventioncenter.org/chattanooga-events",
     "tags": [
       {
-        "type": "event",
+        "type": "place",
         "tag": "convention-center"
+      },
+      {
+        "type": "genre",
+        "tag": "live-events"
       }
     ],
     "layout": "../../../layouts/BlogPostLayout.astro"

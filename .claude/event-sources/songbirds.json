@@ -11,7 +11,7 @@
     "eventLink": "https://venue.songbirds.org/concert-schedule/",
     "tags": [
       {
-        "type": "event",
+        "type": "place",
         "tag": "songbirds"
       }
     ],
