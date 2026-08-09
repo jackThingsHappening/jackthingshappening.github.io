@@ -1,0 +1,35 @@
+{
+  "name": "Nothin' Like Ringgold",
+  "type": "mixed",
+  "url": "https://www.nothinlikeringgold.com/events/",
+  "recurring": {
+    "events": [
+      {
+        "outputPath": "src/pages/chattanooga/events/city/ringgold-ga/nothin-like-ringgold/front-porch-fridays.mdx",
+        "matchHint": "Front Porch Fridays every Friday 7pm–9pm at Benton Coal through October"
+      },
+      {
+        "outputPath": "src/pages/chattanooga/events/city/ringgold-ga/nothin-like-ringgold/cruzin-the-depot.mdx",
+        "matchHint": "Cruzin the Depot first Saturday monthly 4pm–9pm on Nashville Street"
+      }
+    ]
+  },
+  "calendar": {
+    "outputDir": "src/pages/chattanooga/events/city/ringgold-ga/nothin-like-ringgold",
+    "slugPrefix": "",
+    "defaultFrontmatter": {
+      "venue": "Downtown Ringgold",
+      "address": "Ringgold, GA 30736",
+      "iconPath": "/images/icons-new/community.png",
+      "eventLink": "https://www.nothinlikeringgold.com/events/",
+      "tags": [
+        { "type": "place", "tag": "nothin-like-ringgold" },
+        { "type": "genre", "tag": "community" },
+        { "type": "city", "tag": "ringgold-ga" }
+      ],
+      "layout": "../../../../../../layouts/BlogPostLayout.astro"
+    }
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-08-08"
+}

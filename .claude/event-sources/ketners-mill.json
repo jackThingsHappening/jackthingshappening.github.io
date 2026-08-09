@@ -1,0 +1,13 @@
+{
+  "name": "Ketner's Mill",
+  "type": "recurring",
+  "url": "https://www.ketnersmill.org/about-the-fair/",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/city/whitwell-tn/ketners-mill/country-arts-fair.mdx",
+      "matchHint": "Ketner's Mill Country Arts Fair held annually in October on the third weekend"
+    }
+  ],
+  "frequency_days": 180,
+  "last_checked": "2026-08-08"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Walker Rocks",
+  "type": "calendar",
+  "url": "https://www.walkerrocks.com/community-events",
+  "outputDir": "src/pages/chattanooga/events/city/chickamauga-ga/walker-rocks",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Various venues, Chickamauga, GA",
+    "iconPath": "/images/icons-new/community.png",
+    "eventLink": "https://www.walkerrocks.com/community-events",
+    "tags": [
+      { "type": "place", "tag": "walker-rocks" },
+      { "type": "genre", "tag": "community" },
+      { "type": "city", "tag": "chickamauga-ga" }
+    ],
+    "layout": "../../../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-08-08"
+}

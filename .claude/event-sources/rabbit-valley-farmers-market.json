@@ -1,0 +1,31 @@
+{
+  "name": "Rabbit Valley Farmers Market",
+  "type": "mixed",
+  "url": "https://www.rabbitvalleyfarmersmarket.com/events",
+  "recurring": {
+    "events": [
+      {
+        "outputPath": "src/pages/chattanooga/events/city/ringgold-ga/rabbit-valley-farmers-market/saturday-market.mdx",
+        "matchHint": "Rabbit Valley Farmers Market every Saturday 9am–1pm May through October"
+      }
+    ]
+  },
+  "calendar": {
+    "outputDir": "src/pages/chattanooga/events/city/ringgold-ga/rabbit-valley-farmers-market",
+    "slugPrefix": "",
+    "defaultFrontmatter": {
+      "venue": "Rabbit Valley Farmers Market",
+      "address": "7484 Nashville Street, Ringgold, GA 30736",
+      "iconPath": "/images/icons-new/market.png",
+      "eventLink": "https://www.rabbitvalleyfarmersmarket.com/events",
+      "tags": [
+        { "type": "place", "tag": "rabbit-valley-farmers-market" },
+        { "type": "genre", "tag": "community" },
+        { "type": "city", "tag": "ringgold-ga" }
+      ],
+      "layout": "../../../../../../layouts/BlogPostLayout.astro"
+    }
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-08-08"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Lula Lake Land Trust",
+  "type": "recurring",
+  "url": "https://www.lulalake.org/visit.html",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/city/lookout-mountain-ga/lula-lake/open-gate-days.mdx",
+      "matchHint": "Open Gate Days on first and last weekends of each month, 9am–5pm, gate closes at 1pm"
+    }
+  ],
+  "frequency_days": 30,
+  "last_checked": "2026-08-08"
+}

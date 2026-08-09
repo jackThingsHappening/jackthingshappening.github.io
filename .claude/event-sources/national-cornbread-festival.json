@@ -1,0 +1,13 @@
+{
+  "name": "National Cornbread Festival",
+  "type": "recurring",
+  "url": "https://www.nationalcornbread.com/",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/city/south-pittsburg/national-cornbread-festival/cornbread-festival.mdx",
+      "matchHint": "National Cornbread Festival last full weekend of April"
+    }
+  ],
+  "frequency_days": 180,
+  "last_checked": "2026-08-08"
+}

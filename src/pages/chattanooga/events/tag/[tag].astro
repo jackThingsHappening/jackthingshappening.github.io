@@ -18,7 +18,7 @@ export async function getStaticPaths() {
     allEvents.flatMap((post) =>
       post.frontmatter.tags
         ? post.frontmatter.tags
-            .filter((t) => t.type === 'genre' || t.type === 'place')
+            .filter((t) => t.type === 'genre' || t.type === 'place' || t.type === 'city')
             .map((t) => t.tag)
         : []
     )
@@ -47,9 +47,24 @@ const allPostsIncludingMultipleDates = expandEvents(allEvents)
   .filter((e) => new Date(e.pubDate + 'T00:00:00') >= today)
   .sort((a, b) => new Date(a.pubDate + 'T00:00:00') - new Date(b.pubDate + 'T00:00:00'));
 
-const displayTag = tag.charAt(0).toUpperCase() + tag.slice(1);
-const title = `${displayTag} Events in Chattanooga`;
-const seoDescription = `${displayTag} events happening in Chattanooga, TN.`;
+const cityNames: Record<string, string> = {
+  'cleveland-tn': 'Cleveland, TN',
+  'dalton-ga': 'Dalton, GA',
+  'ringgold-ga': 'Ringgold, GA',
+  'athens-tn': 'Athens, TN',
+  'ooltewah-tn': 'Ooltewah, TN',
+  'south-pittsburg-tn': 'South Pittsburg, TN',
+  'lookout-mountain-ga': 'Lookout Mountain, GA',
+  'chickamauga-ga': 'Chickamauga, GA',
+  'guild-tn': 'Guild, TN',
+  'whitwell-tn': 'Whitwell, TN',
+  'jasper-tn': 'Jasper, TN',
+};
+const displayTag = cityNames[tag] ?? (tag.charAt(0).toUpperCase() + tag.slice(1));
+const title = cityNames[tag] ? `Events in ${displayTag}` : `${displayTag} Events Near Chattanooga`;
+const seoDescription = cityNames[tag]
+  ? `Upcoming events in ${displayTag} near Chattanooga, TN.`
+  : `${displayTag} events happening near Chattanooga, TN.`;
 ---
 
 <html lang="en" class="dot-grid-bg">
