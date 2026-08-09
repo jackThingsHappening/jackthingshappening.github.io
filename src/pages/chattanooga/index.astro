@@ -9,6 +9,7 @@ import Footer from '../../components/Footer/Footer.astro';
 import Paginator from '../../components/Paginator.astro';
 import { expandEvents } from '../../utils/expandEvents';
 import EmailSignup from '../../components/EmailSignup.astro';
+import NearbyCitiesNav from '../../components/NearbyCitiesNav.astro';
 
 interface MarkdownFrontmatter {
   date: number;
@@ -98,19 +99,6 @@ const SECTION_PREVIEW_SIZE = 3;
 
 const eventsPage = sortedEvents.slice(0, 3);
 
-const cityNames: Record<string, string> = {
-  'cleveland-tn': 'Cleveland, TN',
-  'dalton-ga': 'Dalton, GA',
-  'ringgold-ga': 'Ringgold, GA',
-  'athens-tn': 'Athens, TN',
-  'ooltewah-tn': 'Ooltewah, TN',
-  'south-pittsburg-tn': 'South Pittsburg, TN',
-  'lookout-mountain-ga': 'Lookout Mountain, GA',
-  'chickamauga-ga': 'Chickamauga, GA',
-  'guild-tn': 'Guild, TN',
-  'whitwell-tn': 'Whitwell, TN',
-  'jasper-tn': 'Jasper, TN',
-};
 
 const nearbyEvents = expanded.filter((e) => {
   const isUpcoming = new Date(e.pubDate + 'T00:00:00') >= today;
@@ -176,13 +164,7 @@ const page = {
         <h2 class="font-jakarta font-semibold md:font-medium text-5xl md:text-6xl leading-[1.2] pt-8">
           Nearby cities and towns<span class="text-customGreen1">.</span>
         </h2>
-        <nav class="flex flex-wrap gap-x-6 gap-y-3 mt-8" aria-label="Nearby cities">
-          {nearbyCities.map(([cityTag]) => (
-            <a href={`/chattanooga/events/tag/${cityTag}`} class="text-customGreen1 font-semibold text-2xl underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">
-              {cityNames[cityTag] ?? cityTag}
-            </a>
-          ))}
-        </nav>
+        <NearbyCitiesNav activeCities={nearbyCities.map(([cityTag]) => cityTag)} />
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 mt-10">
           {nearbyEvents.slice(0, 3).map(p => (
             <div class="col-span-1"><Card post={p} /></div>

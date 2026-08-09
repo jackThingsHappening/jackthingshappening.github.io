@@ -1,7 +1,7 @@
 ---
 import BaseHead from '../../../../components/Head/BaseHead.astro';
 import Nav from '../../../../components/Nav.astro';
-import EventsNav from '../../../../components/EventsNav.astro';
+import NearbyCitiesNav from '../../../../components/NearbyCitiesNav.astro';
 import Card from '../../../../components/Card.astro';
 import Footer from '../../../../components/Footer/Footer.astro';
 import EmailSignup from '../../../../components/EmailSignup.astro';
@@ -10,20 +10,6 @@ import { expandEvents } from '../../../../utils/expandEvents';
 
 const title = 'Nearby Cities — Events Near Chattanooga';
 const seoDescription = 'Events happening in cities near Chattanooga, TN — Cleveland, Dalton, Ringgold, and more.';
-
-const cityNames: Record<string, string> = {
-  'cleveland-tn': 'Cleveland, TN',
-  'dalton-ga': 'Dalton, GA',
-  'ringgold-ga': 'Ringgold, GA',
-  'athens-tn': 'Athens, TN',
-  'ooltewah-tn': 'Ooltewah, TN',
-  'south-pittsburg-tn': 'South Pittsburg, TN',
-  'lookout-mountain-ga': 'Lookout Mountain, GA',
-  'chickamauga-ga': 'Chickamauga, GA',
-  'guild-tn': 'Guild, TN',
-  'whitwell-tn': 'Whitwell, TN',
-  'jasper-tn': 'Jasper, TN',
-};
 
 const allPosts = (await Astro.glob('../**/*.mdx')).filter(
   (post) => post.frontmatter.published !== false
@@ -38,16 +24,13 @@ const nearbyPosts = expandEvents(allPosts).filter((e) => {
   return isUpcoming && hasCity;
 });
 
-const byCity = new Map<string, typeof nearbyPosts>();
+const sortedEvents = nearbyPosts.sort(
+  (a, b) => new Date(a.pubDate + 'T00:00:00').getTime() - new Date(b.pubDate + 'T00:00:00').getTime()
+);
 
-for (const post of nearbyPosts) {
-  const cityTag = post.tags?.find((t: any) => t.type === 'city')?.tag;
-  if (!cityTag) continue;
-  if (!byCity.has(cityTag)) byCity.set(cityTag, []);
-  byCity.get(cityTag)!.push(post);
-}
-
-const cities = [...byCity.entries()].sort((a, b) => a[0].localeCompare(b[0]));
+const activeCities = [...new Set(
+  nearbyPosts.flatMap((e) => e.tags?.filter((t: any) => t.type === 'city').map((t: any) => t.tag) ?? [])
+)];
 ---
 
 <html lang="en" class="dot-grid-bg">
@@ -59,24 +42,17 @@ const cities = [...byCity.entries()].sort((a, b) => a[0].localeCompare(b[0]));
   <main>
     <article class="w-full px-4 md:px-8 lg:px-16 mt-8 pb-4">
       <ExploreHeader>Events in nearby cities</ExploreHeader>
-      <EventsNav active="nearby" />
+      <NearbyCitiesNav activeCities={activeCities} />
 
-      {cities.length === 0 && (
+      {sortedEvents.length === 0 && (
         <p class="text-xl text-gray-500 mt-12">No upcoming nearby events — check back soon.</p>
       )}
 
-      {cities.map(([cityTag, posts]) => (
-        <section class="mt-12">
-          <h2 class="text-3xl font-semibold text-gray-800 mb-6">
-            {cityNames[cityTag] ?? cityTag}
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
-            {posts.sort((a, b) => new Date(a.pubDate + 'T00:00:00') - new Date(b.pubDate + 'T00:00:00')).map(p => (
-              <div class="col-span-1"><Card post={p} /></div>
-            ))}
-          </div>
-        </section>
-      ))}
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 mt-10">
+        {sortedEvents.map(p => (
+          <div class="col-span-1"><Card post={p} /></div>
+        ))}
+      </div>
 
       <div class="mt-16 pt-8 border-t border-gray-200">
         <p class="text-gray-600 text-xl mb-3">Get more local guides and events in your inbox.</p>

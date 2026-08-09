@@ -1,0 +1,35 @@
+---
+interface Props {
+  activeCities: string[];
+}
+
+const { activeCities } = Astro.props;
+
+const cityNames: Record<string, string> = {
+  'cleveland-tn': 'Cleveland, TN',
+  'dalton-ga': 'Dalton, GA',
+  'ringgold-ga': 'Ringgold, GA',
+  'athens-tn': 'Athens, TN',
+  'ooltewah-tn': 'Ooltewah, TN',
+  'south-pittsburg-tn': 'South Pittsburg, TN',
+  'lookout-mountain-ga': 'Lookout Mountain, GA',
+  'chickamauga-ga': 'Chickamauga, GA',
+  'guild-tn': 'Guild, TN',
+  'whitwell-tn': 'Whitwell, TN',
+  'jasper-tn': 'Jasper, TN',
+  'collegedale-tn': 'Collegedale, TN',
+};
+
+const sorted = [...activeCities].sort((a, b) => a.localeCompare(b));
+---
+
+<nav class="flex flex-wrap gap-x-6 gap-y-3 mt-8" aria-label="Nearby cities">
+  {sorted.map((cityTag) => (
+    <a
+      href={`/chattanooga/events/tag/${cityTag}`}
+      class="text-customGreen1 font-semibold text-2xl underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity"
+    >
+      {cityNames[cityTag] ?? cityTag}
+    </a>
+  ))}
+</nav>

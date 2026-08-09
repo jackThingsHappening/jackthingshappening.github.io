@@ -1,0 +1,39 @@
+{
+  "name": "Southern Adventist University",
+  "type": "mixed",
+  "url": "https://www.southern.edu/academics/music/events.html",
+  "recurring": {
+    "events": [
+      {
+        "outputPath": "src/pages/chattanooga/events/city/collegedale-tn/southern-adventist-university/evensong.mdx",
+        "matchHint": "Evensong weekly music series at Collegedale Church, free and open to the public"
+      },
+      {
+        "outputPath": "src/pages/chattanooga/events/city/collegedale-tn/southern-adventist-university/symphony-orchestra.mdx",
+        "matchHint": "Symphony Orchestra concert, free and open to the public"
+      },
+      {
+        "outputPath": "src/pages/chattanooga/events/city/collegedale-tn/southern-adventist-university/christmas-concert.mdx",
+        "matchHint": "School of Music Christmas Concert in December, free and open to the public"
+      }
+    ]
+  },
+  "calendar": {
+    "outputDir": "src/pages/chattanooga/events/city/collegedale-tn/southern-adventist-university",
+    "slugPrefix": "",
+    "defaultFrontmatter": {
+      "venue": "Southern Adventist University",
+      "address": "4980 University Dr, Collegedale, TN 37363",
+      "iconPath": "/images/icons-new/music.png",
+      "eventLink": "https://www.southern.edu/academics/music/events.html",
+      "tags": [
+        { "type": "place", "tag": "southern-adventist-university" },
+        { "type": "genre", "tag": "music" },
+        { "type": "city", "tag": "collegedale-tn" }
+      ],
+      "layout": "../../../../../../layouts/BlogPostLayout.astro"
+    }
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-08-08"
+}
