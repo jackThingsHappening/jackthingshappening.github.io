@@ -1,0 +1,20 @@
+{
+  "name": "Barking Legs Theater",
+  "type": "calendar",
+  "url": "https://www.barkinglegs.org/ourevents",
+  "outputDir": "src/pages/chattanooga/events/barking-legs",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Barking Legs Theater",
+    "address": "1307 Dodds Avenue, Chattanooga, TN 37404",
+    "iconPath": "/images/icons-new/theater.png",
+    "eventLink": "https://www.barkinglegs.org/ourevents",
+    "tags": [
+      { "type": "place", "tag": "barking-legs" },
+      { "type": "genre", "tag": "live-events" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-01-01"
+}
