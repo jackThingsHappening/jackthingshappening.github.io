@@ -1,0 +1,20 @@
+{
+  "name": "The Comedy Catch",
+  "type": "calendar",
+  "url": "https://www.thecomedycatch.com/calendar",
+  "outputDir": "src/pages/chattanooga/events/comedy-catch",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "The Comedy Catch",
+    "address": "29 Station St, Chattanooga, TN 37408",
+    "iconPath": "/images/icons-new/theater.png",
+    "eventLink": "https://www.thecomedycatch.com/calendar",
+    "tags": [
+      { "type": "place", "tag": "comedy-catch" },
+      { "type": "genre", "tag": "comedy" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-01-01"
+}
