@@ -28,6 +28,7 @@
 | riverfront-nights | TVFCU Riverfront Nights |
 | songbirds | Songbirds |
 | songbirds-museum | Songbirds Museum |
+| tailgate-brewery | TailGate Brewery Chattanooga |
 | tap-house | The Tap House |
 | the-signal | The Signal |
 | townsend-atelier | Townsend Atelier |

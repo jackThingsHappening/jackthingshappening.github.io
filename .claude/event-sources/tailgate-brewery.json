@@ -1,0 +1,34 @@
+{
+  "name": "TailGate Brewery Chattanooga",
+  "type": "recurring",
+  "url": "https://www.tailgatebeer.com/chattanooga",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/tailgate-brewery/trivia-night.mdx",
+      "matchHint": "Weekly Trivia Night, every Thursday at 7:00 PM in the Chattanooga taproom"
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/tailgate-brewery/movie-night.mdx",
+      "matchHint": "Weekly Movie Night, every Friday at 7:00 PM in the Chattanooga taproom"
+    }
+  ],
+  "defaultFrontmatter": {
+    "venue": "TailGate Brewery Chattanooga",
+    "address": "1464 Market St, Chattanooga, TN 37408",
+    "iconPath": "/images/icons-new/beer.png",
+    "eventLink": "https://www.tailgatebeer.com/chattanooga",
+    "tags": [
+      {
+        "type": "place",
+        "tag": "tailgate-brewery"
+      },
+      {
+        "type": "genre",
+        "tag": "food-drink"
+      }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-08-15"
+}
