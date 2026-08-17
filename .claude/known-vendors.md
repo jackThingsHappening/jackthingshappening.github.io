@@ -18,6 +18,7 @@
 | crabtree-farms | Crabtree Farms |
 | creative-discovery-museum | Creative Discovery Museum |
 | first-horizon | First Horizon Pavilion |
+| five-wits-brewing | Five Wits Brewing Company |
 | high-point-climbing | High Point Climbing |
 | hunter-museum | Hunter Museum of American Art |
 | hutton-and-smith | Hutton & Smith Brewing Co. |
