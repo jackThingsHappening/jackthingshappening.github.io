@@ -6,7 +6,7 @@
     "events": [
       {
         "outputPath": "src/pages/chattanooga/events/city/cleveland/mash-and-hops/singles-night.mdx",
-        "matchHint": "Singles Night every Tuesday 5pm–9pm"
+        "matchHint": "Singles Night every Tuesday 5pm\u20139pm"
       },
       {
         "outputPath": "src/pages/chattanooga/events/city/cleveland/mash-and-hops/beer-share.mdx",
@@ -23,13 +23,22 @@
       "iconPath": "/images/icons-new/beer.png",
       "eventLink": "https://www.mashandhops.com/when-is-the-next-party",
       "tags": [
-        { "type": "place", "tag": "mash-and-hops" },
-        { "type": "genre", "tag": "food-drink" },
-        { "type": "city", "tag": "cleveland-tn" }
+        {
+          "type": "place",
+          "tag": "mash-and-hops"
+        },
+        {
+          "type": "genre",
+          "tag": "food-drink"
+        },
+        {
+          "type": "city",
+          "tag": "cleveland-tn"
+        }
       ],
       "layout": "../../../../../../layouts/BlogPostLayout.astro"
     }
   },
   "frequency_days": 7,
-  "last_checked": "2026-08-08"
+  "last_checked": "2026-08-17"
 }

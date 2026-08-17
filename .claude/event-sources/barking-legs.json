@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/theater.png",
     "eventLink": "https://www.barkinglegs.org/ourevents",
     "tags": [
-      { "type": "place", "tag": "barking-legs" },
-      { "type": "genre", "tag": "live-events" }
+      {
+        "type": "place",
+        "tag": "barking-legs"
+      },
+      {
+        "type": "genre",
+        "tag": "live-events"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 7,
-  "last_checked": "2026-01-01"
+  "last_checked": "2026-08-17"
 }

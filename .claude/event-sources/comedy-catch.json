@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/theater.png",
     "eventLink": "https://www.thecomedycatch.com/calendar",
     "tags": [
-      { "type": "place", "tag": "comedy-catch" },
-      { "type": "genre", "tag": "comedy" }
+      {
+        "type": "place",
+        "tag": "comedy-catch"
+      },
+      {
+        "type": "genre",
+        "tag": "comedy"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 7,
-  "last_checked": "2026-01-01"
+  "last_checked": "2026-08-17"
 }
