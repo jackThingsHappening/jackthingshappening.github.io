@@ -1,0 +1,20 @@
+{
+  "name": "Reflection Riding",
+  "type": "calendar",
+  "url": "https://reflectionriding.org/events",
+  "outputDir": "src/pages/chattanooga/events/reflection-riding",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Reflection Riding",
+    "address": "400 Garden Road, Chattanooga, TN 37419",
+    "iconPath": "/images/icons-new/pine-tree.png",
+    "eventLink": "https://reflectionriding.org/events",
+    "tags": [
+      { "type": "place", "tag": "reflection-riding" },
+      { "type": "genre", "tag": "outdoors" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-01-01"
+}

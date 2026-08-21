@@ -26,6 +26,7 @@
 | main-street-farmers-market | Main Street Farmers Market |
 | nooga-nightlife | Nooga Nightlife |
 | oddstory | Oddstory Brewing Co. |
+| reflection-riding | Reflection Riding |
 | riverfront-nights | TVFCU Riverfront Nights |
 | songbirds | Songbirds |
 | songbirds-museum | Songbirds Museum |
