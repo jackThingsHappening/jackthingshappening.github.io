@@ -1,0 +1,13 @@
+{
+  "name": "The Walker Theatre",
+  "type": "recurring",
+  "url": "https://www.ticketmaster.com/the-walker-theatre-tickets-chattanooga/venue/222568",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/walker-theatre/index.mdx",
+      "matchHint": "All upcoming shows, concerts, film series, and events at The Walker Theatre"
+    }
+  ],
+  "frequency_days": 14,
+  "last_checked": "2026-08-22"
+}

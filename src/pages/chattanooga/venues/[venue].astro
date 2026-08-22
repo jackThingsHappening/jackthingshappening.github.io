@@ -1,0 +1,130 @@
+---
+import BaseHead from '../../../components/Head/BaseHead.astro';
+import Nav from '../../../components/Nav.astro';
+import Card from '../../../components/Card.astro';
+import Footer from '../../../components/Footer/Footer.astro';
+import EmailSignup from '../../../components/EmailSignup.astro';
+import ExploreHeader from '../../../components/ExploreHeader.astro';
+import { expandEvents } from '../../../utils/expandEvents';
+import { venues } from '../../../data/venues';
+
+export async function getStaticPaths() {
+  return venues.map((v) => ({ params: { venue: v.slug } }));
+}
+
+const { venue: slug } = Astro.params;
+const venueData = venues.find((v) => v.slug === slug)!;
+
+const allEvents = [
+  ...(await Astro.glob('../../../pages-events/**/*.mdx')),
+  ...(await Astro.glob('../../chattanooga/events/**/*.mdx')),
+  ...(await Astro.glob('../events/**/*.mdx')),
+].filter(
+  (post) =>
+    post.frontmatter.published !== false &&
+    post.frontmatter.tags?.some((t: any) => t.tag === slug)
+);
+
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+const upcomingEvents = expandEvents(allEvents)
+  .filter((e) => new Date(e.pubDate + 'T00:00:00') >= today)
+  .sort(
+    (a, b) =>
+      new Date(a.pubDate + 'T00:00:00').getTime() -
+      new Date(b.pubDate + 'T00:00:00').getTime()
+  );
+
+const pageTitle = `${venueData.name} — Upcoming Events`;
+const seoDescription = `Upcoming events at ${venueData.name} in Chattanooga, TN. Find dates, details, and tickets.`;
+
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venueData.address)}`;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': venueData.schemaType,
+  name: venueData.name,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: venueData.address,
+    addressCountry: 'US',
+  },
+  url: venueData.website,
+};
+---
+
+<html lang="en" class="dot-grid-bg">
+  <head>
+    <BaseHead title={pageTitle} description={seoDescription} />
+    <link rel="canonical" href={`https://thingshappening.com${Astro.url.pathname}`} />
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  </head>
+  <body class="text-black font-body leading-normal personality-casual">
+    <Nav />
+    <main>
+      <article class="w-full px-4 md:px-8 lg:px-16 mt-8 pb-4">
+        <ExploreHeader>
+          <span class="text-customGreen1 shimmer-text">{venueData.name}</span>
+        </ExploreHeader>
+
+        <div class="max-w-3xl mt-6 mb-8">
+          <span class="inline-block text-sm font-semibold uppercase tracking-wide text-warmGreen mb-3">
+            {venueData.category}
+          </span>
+          <p class="text-lg text-gray-700 leading-relaxed">{venueData.description}</p>
+          {venueData.tip && (
+            <p class="mt-4 text-base text-gray-600 italic border-l-4 border-customGreen1 pl-4">
+              {venueData.tip}
+            </p>
+          )}
+          <div class="mt-6 flex flex-wrap gap-4 text-sm text-gray-600">
+            <span>
+              <span class="font-semibold">Address:</span>{' '}
+              <a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="underline hover:text-customGreen1">
+                {venueData.address}
+              </a>
+            </span>
+            <span>
+              <a
+                href={venueData.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="underline hover:text-customGreen1"
+              >
+                Visit website
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4">
+          Upcoming Events at {venueData.name}
+        </h2>
+
+        {upcomingEvents.length > 0 ? (
+          <section
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 py-4"
+            data-test="articles-section"
+          >
+            {upcomingEvents.map((p) => (
+              <div class="col-span-1">
+                <Card post={p} />
+              </div>
+            ))}
+          </section>
+        ) : (
+          <p class="text-gray-500 text-lg py-4">No upcoming events listed. Check back soon.</p>
+        )}
+
+        <div class="mt-12 pt-8 border-t border-gray-200">
+          <p class="text-logoDarkGreen-600 text-2xl mb-3">
+            Get local event updates delivered to your inbox.
+          </p>
+          <EmailSignup />
+        </div>
+      </article>
+    </main>
+    <Footer />
+  </body>
+</html>

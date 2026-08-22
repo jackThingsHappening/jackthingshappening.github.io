@@ -1,9 +1,9 @@
 {
   "defaultFrontmatter": {
-    "address": "",
+    "address": "1 Broad St, Chattanooga, TN 37402",
     "eventLink": "https://www.tnaqua.org/events",
     "iconPath": "/images/icons-new/events.png",
-    "layout": "../../../layouts/BlogPostLayout.astro",
+    "layout": "../../../../layouts/BlogPostLayout.astro",
     "tags": [
       {
         "type": "place",
@@ -17,10 +17,10 @@
     "venue": "Tennessee Aquarium"
   },
   "name": "Tennessee Aquarium",
-  "outputDir": "src/pages/chattanooga/events",
-  "slugPrefix": "acquarium",
+  "outputDir": "src/pages/chattanooga/events/acquarium",
+  "slugPrefix": "",
   "type": "calendar",
   "url": "https://www.tnaqua.org/events",
   "frequency_days": 14,
-  "last_checked": "2026-08-10"
+  "last_checked": "2026-08-22"
 }

@@ -1,6 +1,7 @@
 ---
 import EmailSignup from './EmailSignup.astro'
 import dayjs from 'dayjs'
+import { venueBySlug } from '../data/venues'
 
 export interface Props {
   // Core post metadata
@@ -103,6 +104,9 @@ const GUIDE_MAP: Record<string, { slug: string; label: string }> = {
 const relatedGuide = tags
   ? tags.map(t => GUIDE_MAP[t.tag]).find(Boolean) ?? null
   : null;
+
+const venueSlug = tags?.find((t: any) => t.type === 'place')?.tag ?? null;
+const venuePage = venueSlug && venueBySlug[venueSlug] ? `/chattanooga/venues/${venueSlug}` : null;
 ---
 <div class={`header-styles pt-14 pb-14 lg:flex-wrap md:flex-wrap sm:flex-nowrap text-xl ${!hasMetadata && !displaySeriesLabel ? 'mb-0' : 'mb-10'}`}>
   <header class="max-w-5xl content max-w-5xl mx-auto px-3 text-3xl tracking-wide">
@@ -117,7 +121,7 @@ const relatedGuide = tags
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-1">
       {pubDate ? <div><span class="font-semibold">When:</span> {pubDate} {`(${dayOfWeek})`}</div> : ""}
       {time ? <div><span class="font-semibold">Time:</span> {time}</div> : ""}
-      {venue ? <div><span class="font-semibold">Venue:</span> {venue}</div> : ""}
+      {venue ? <div><span class="font-semibold">Venue:</span> {venuePage ? <a href={venuePage} class="underline hover:text-customGreen1">{venue}</a> : venue}</div> : ""}
       {venueDetails ? <div><span class="font-semibold">Venue Details:</span> {venueDetails}</div> : ""}
       {address ? <div><span class="font-semibold">Address:</span> {address}</div> : ""}
       {entranceCost ? <div><span class="font-semibold">Entrance Fee:</span> {entranceCost}</div> : ""}

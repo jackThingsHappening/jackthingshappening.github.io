@@ -1,0 +1,108 @@
+---
+import BaseHead from '../../../components/Head/BaseHead.astro';
+import Nav from '../../../components/Nav.astro';
+import Footer from '../../../components/Footer/Footer.astro';
+import ExploreHeader from '../../../components/ExploreHeader.astro';
+import { expandEvents } from '../../../utils/expandEvents';
+import { venues } from '../../../data/venues';
+
+const allEvents = [
+  ...(await Astro.glob('../../../pages-events/**/*.mdx')),
+  ...(await Astro.glob('../../chattanooga/events/**/*.mdx')),
+  ...(await Astro.glob('../events/**/*.mdx')),
+].filter((post) => post.frontmatter.published !== false);
+
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+const expanded = expandEvents(allEvents).filter(
+  (e) => new Date(e.pubDate + 'T00:00:00') >= today
+);
+
+const eventCountBySlug: Record<string, number> = {};
+for (const e of expanded) {
+  for (const t of e.tags ?? []) {
+    if (t.type === 'place') {
+      eventCountBySlug[t.tag] = (eventCountBySlug[t.tag] ?? 0) + 1;
+    }
+  }
+}
+
+const venuesWithCounts = venues
+  .map((v) => ({ ...v, count: eventCountBySlug[v.slug] ?? 0 }))
+  .sort((a, b) => b.count - a.count);
+
+const chattanoogaVenues = venuesWithCounts.filter((v) =>
+  v.address.includes('Chattanooga') || v.address.includes('TN 374')
+);
+const regionalVenues = venuesWithCounts.filter(
+  (v) => !chattanoogaVenues.includes(v)
+);
+---
+
+<html lang="en" class="dot-grid-bg">
+  <head>
+    <BaseHead
+      title="Event Venues in Chattanooga, TN"
+      description="Browse event venues in Chattanooga and the surrounding region. Find upcoming events at music venues, breweries, museums, farms, and more."
+    />
+    <link rel="canonical" href="https://thingshappening.com/chattanooga/venues" />
+  </head>
+  <body class="text-black font-body leading-normal personality-casual">
+    <Nav />
+    <main>
+      <article class="w-full px-4 md:px-8 lg:px-16 mt-8 pb-12">
+        <ExploreHeader subheading="Find events by location across Chattanooga and nearby towns.">
+          Event <span class="text-customGreen1 shimmer-text">Venues</span>
+        </ExploreHeader>
+
+        <h2 class="text-xl font-semibold mt-10 mb-4">Chattanooga</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {chattanoogaVenues.map((v) => (
+            <a
+              href={`/chattanooga/venues/${v.slug}`}
+              class="block border border-gray-200 rounded-lg p-4 hover:border-customGreen1 transition-colors no-underline"
+            >
+              <div class="flex items-start justify-between gap-2">
+                <span class="font-semibold text-base">{v.name}</span>
+                {v.count > 0 && (
+                  <span class="shrink-0 text-xs bg-green-100 text-green-800 rounded-full px-2 py-0.5">
+                    {v.count} upcoming
+                  </span>
+                )}
+              </div>
+              <span class="text-xs text-gray-500 mt-1 block">{v.category}</span>
+              <span class="text-sm text-gray-600 mt-1 block">{v.address}</span>
+            </a>
+          ))}
+        </div>
+
+        {regionalVenues.length > 0 && (
+          <>
+            <h2 class="text-xl font-semibold mt-12 mb-4">Nearby Towns</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {regionalVenues.map((v) => (
+                <a
+                  href={`/chattanooga/venues/${v.slug}`}
+                  class="block border border-gray-200 rounded-lg p-4 hover:border-customGreen1 transition-colors no-underline"
+                >
+                  <div class="flex items-start justify-between gap-2">
+                    <span class="font-semibold text-base">{v.name}</span>
+                    {v.count > 0 && (
+                      <span class="shrink-0 text-xs bg-green-100 text-green-800 rounded-full px-2 py-0.5">
+                        {v.count} upcoming
+                      </span>
+                    )}
+                  </div>
+                  <span class="text-xs text-gray-500 mt-1 block">{v.category}</span>
+                  <span class="text-sm text-gray-600 mt-1 block">{v.address}</span>
+                </a>
+              ))}
+            </div>
+          </>
+        )}
+      </article>
+    </main>
+    <Footer />
+  </body>
+</html>

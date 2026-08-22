@@ -1,0 +1,13 @@
+{
+  "name": "TVFCU Riverfront Nights",
+  "type": "recurring",
+  "url": "https://www.riverfrontnights.com/schedule",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/riverfront-nights/index.mdx",
+      "matchHint": "All upcoming Saturday concert dates at Riverfront Nights"
+    }
+  ],
+  "frequency_days": 14,
+  "last_checked": "2026-01-01"
+}

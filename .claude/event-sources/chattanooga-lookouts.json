@@ -1,0 +1,13 @@
+{
+  "name": "Chattanooga Lookouts",
+  "type": "recurring",
+  "url": "https://www.milb.com/chattanooga/schedule",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/chattanooga-lookouts/home-games.mdx",
+      "matchHint": "All home games at Chattanooga Lookouts / Erlanger Park"
+    }
+  ],
+  "frequency_days": 14,
+  "last_checked": "2026-01-01"
+}
