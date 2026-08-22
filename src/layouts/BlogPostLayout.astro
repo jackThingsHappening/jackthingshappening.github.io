@@ -8,8 +8,6 @@ const {content} = Astro.props;
 let {address, author, eventLink, readTime, originalDate, matchedDetails, eventDatesDetails, eventDates, entranceCost, lastUpdated, ticketsLink, tags, title, time, description, pubDate, venue, venueDetails, hero, youtube,
   // Additional optional metadata
   seoDescription, featured, geoCoverage, neighborhoods, seasonality, accessibilityNotes, parking, kidFriendly, petFriendly, bestFor, sources, pageItems, hideSignup, ogImage} = content;
-console.log(content)
-console.log("above")
 
 title = title ? title : "";
 ---
@@ -25,6 +23,35 @@ title = title ? title : "";
         document.head.appendChild(meta);
       }
     </script>
+    {eventLink && pubDate && venue && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": title,
+        "description": seoDescription || description || "",
+        "startDate": pubDate,
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": venue,
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": address || "",
+            "addressCountry": "US"
+          }
+        },
+        "url": `https://thingshappening.com${Astro.url.pathname}`,
+        "offers": {
+          "@type": "Offer",
+          "url": eventLink,
+          ...(entranceCost && entranceCost.toLowerCase() === "free"
+            ? { "price": "0", "priceCurrency": "USD" }
+            : {}
+          )
+        }
+      })} />
+    )}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&family=Raleway:wght@300;400;600&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet" />

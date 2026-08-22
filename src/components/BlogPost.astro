@@ -74,7 +74,7 @@ if (matchedDetails) {
   eventDateDetails = eventDatesDetails.find((dateObj => dateObj.date == pubDate));
 }
 
-console.log(matchedDetails);
+
 const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const dayOfWeek = daysOfWeek[date.getDay()];
 const subTitle = eventDateDetails && eventDateDetails.eventTitle ? eventDateDetails.eventTitle : dayjs(pubDate).format('MM-DD-YYYY');
@@ -85,6 +85,24 @@ address = eventDateDetails && eventDateDetails.address ?  eventDateDetails.addre
 ticketsLink = eventDateDetails && eventDateDetails.ticketsLink ?  eventDateDetails.ticketsLink : ticketsLink
 eventLink = eventDateDetails && eventDateDetails.eventLink ?  eventDateDetails.eventLink : eventLink
 const hasMetadata = !!(pubDate || time || venue || address || entranceCost || author || readTime || lastUpdated || originalDate || geoCoverage || (neighborhoods && neighborhoods.length) || seasonality || parking || accessibilityNotes || kidFriendly !== undefined || petFriendly !== undefined || (bestFor && bestFor.length) || eventLink || ticketsLink || (tags && tags.length > 0) || (sources && sources.length) || displayDates.length > 0);
+
+const GUIDE_MAP: Record<string, { slug: string; label: string }> = {
+  'music':       { slug: 'live-music',               label: 'Live Music in Chattanooga' },
+  'live-events': { slug: 'live-music',               label: 'Live Music in Chattanooga' },
+  'comedy':      { slug: 'performance-arts',         label: 'Performing Arts in Chattanooga' },
+  'theatre':     { slug: 'performance-arts',         label: 'Performing Arts in Chattanooga' },
+  'sports':      { slug: 'live-sports',              label: 'Live Sports in Chattanooga' },
+  'outdoors':    { slug: 'outdoors',                 label: 'Outdoor Adventures in Chattanooga' },
+  'farm':        { slug: 'outdoors',                 label: 'Outdoor Adventures in Chattanooga' },
+  'museum':      { slug: 'exhibits',                 label: 'Exhibits & Museums in Chattanooga' },
+  'brewery':     { slug: 'breweries-and-wineries',   label: 'Breweries & Wineries in Chattanooga' },
+  'food-drink':  { slug: 'breweries-and-wineries',   label: 'Breweries & Wineries in Chattanooga' },
+  'food':        { slug: 'restaurants-with-a-view',  label: 'Restaurants in Chattanooga' },
+};
+
+const relatedGuide = tags
+  ? tags.map(t => GUIDE_MAP[t.tag]).find(Boolean) ?? null
+  : null;
 ---
 <div class={`header-styles pt-14 pb-14 lg:flex-wrap md:flex-wrap sm:flex-nowrap text-xl ${!hasMetadata && !displaySeriesLabel ? 'mb-0' : 'mb-10'}`}>
   <header class="max-w-5xl content max-w-5xl mx-auto px-3 text-3xl tracking-wide">
@@ -251,6 +269,15 @@ const hasMetadata = !!(pubDate || time || venue || address || entranceCost || au
       </div>
     )}
   </div>
+
+  {relatedGuide && pathname?.includes('/events/') && (
+    <div class="mt-10 pt-6 border-t border-gray-200">
+      <p class="text-gray-400 text-base uppercase tracking-widest mb-2">Explore more</p>
+      <a href={`/chattanooga/guides/${relatedGuide.slug}`} class="text-customGreen1 font-semibold text-xl underline decoration-logoDarkGreen underline-offset-8 hover:opacity-70 transition-opacity">
+        {relatedGuide.label} →
+      </a>
+    </div>
+  )}
 
   {!hideSignup && pathname?.includes('/events/') && (
     <div class="mt-12 pt-8 border-t border-gray-200">

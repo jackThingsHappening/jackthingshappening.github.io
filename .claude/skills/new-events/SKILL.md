@@ -92,7 +92,7 @@ published: true
 pubDate: "{YYYY-MM-DD}"
 time: "{time or omit if unknown}"
 entranceCost: "{cost or 'Free' if none listed}"
-seoDescription: "{1-2 sentence description of the event}"
+seoDescription: '{1-2 sentence description of the event}'
 venue: {from defaultFrontmatter}
 address: {from defaultFrontmatter}
 iconPath: {from defaultFrontmatter}
