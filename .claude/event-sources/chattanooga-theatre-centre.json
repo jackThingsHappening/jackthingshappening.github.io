@@ -1,0 +1,26 @@
+{
+  "name": "Chattanooga Theatre Centre",
+  "type": "calendar",
+  "url": "https://www.theatrecentre.com/103rd-season",
+  "outputDir": "src/pages/chattanooga/events/chattanooga-theatre-centre",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Chattanooga Theatre Centre",
+    "address": "400 River Street, Chattanooga, TN 37405",
+    "iconPath": "/images/icons-new/theater.png",
+    "eventLink": "https://www.theatrecentre.com/103rd-season",
+    "tags": [
+      {
+        "type": "place",
+        "tag": "chattanooga-theatre-centre"
+      },
+      {
+        "type": "genre",
+        "tag": "theater"
+      }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-08-23"
+}

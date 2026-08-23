@@ -11,6 +11,7 @@
 | camp-jordan | Camp Jordan |
 | chatt-trivia | Chatt Trivia |
 | chattanooga-brewing | Chattanooga Brewing Co. |
+| chattanooga-theatre-centre | Chattanooga Theatre Centre |
 | chattanooga-market | Chattanooga Market |
 | chosen-by-fitness | Chosen by Fitness |
 | convention-center | Chattanooga Convention Center |
