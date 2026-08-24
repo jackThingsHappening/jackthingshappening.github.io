@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/barn.png",
     "eventLink": "https://www.sequatchiecovefarm.com/events",
     "tags": [
-      { "type": "place", "tag": "sequatchie-cove-farm" },
-      { "type": "genre", "tag": "farm" }
+      {
+        "type": "place",
+        "tag": "sequatchie-cove-farm"
+      },
+      {
+        "type": "genre",
+        "tag": "farm"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 14,
-  "last_checked": "2026-08-10"
+  "last_checked": "2026-08-24"
 }

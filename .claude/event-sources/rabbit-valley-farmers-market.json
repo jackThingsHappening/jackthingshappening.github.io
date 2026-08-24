@@ -6,7 +6,7 @@
     "events": [
       {
         "outputPath": "src/pages/chattanooga/events/city/ringgold-ga/rabbit-valley-farmers-market/saturday-market.mdx",
-        "matchHint": "Rabbit Valley Farmers Market every Saturday 9am–1pm May through October"
+        "matchHint": "Rabbit Valley Farmers Market every Saturday 9am\u20131pm May through October"
       }
     ]
   },
@@ -19,13 +19,22 @@
       "iconPath": "/images/icons-new/market.png",
       "eventLink": "https://www.rabbitvalleyfarmersmarket.com/events",
       "tags": [
-        { "type": "place", "tag": "rabbit-valley-farmers-market" },
-        { "type": "genre", "tag": "community" },
-        { "type": "city", "tag": "ringgold-ga" }
+        {
+          "type": "place",
+          "tag": "rabbit-valley-farmers-market"
+        },
+        {
+          "type": "genre",
+          "tag": "community"
+        },
+        {
+          "type": "city",
+          "tag": "ringgold-ga"
+        }
       ],
       "layout": "../../../../../../layouts/BlogPostLayout.astro"
     }
   },
   "frequency_days": 14,
-  "last_checked": "2026-08-08"
+  "last_checked": "2026-08-24"
 }

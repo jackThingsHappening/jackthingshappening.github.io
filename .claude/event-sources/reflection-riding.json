@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/pine-tree.png",
     "eventLink": "https://reflectionriding.org/events",
     "tags": [
-      { "type": "place", "tag": "reflection-riding" },
-      { "type": "genre", "tag": "outdoors" }
+      {
+        "type": "place",
+        "tag": "reflection-riding"
+      },
+      {
+        "type": "genre",
+        "tag": "outdoors"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 7,
-  "last_checked": "2026-01-01"
+  "last_checked": "2026-08-24"
 }

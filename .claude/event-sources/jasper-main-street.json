@@ -10,12 +10,21 @@
     "iconPath": "/images/icons-new/community.png",
     "eventLink": "https://jaspermainstreet.com/downtown-community-event/",
     "tags": [
-      { "type": "place", "tag": "jasper-main-street" },
-      { "type": "genre", "tag": "community" },
-      { "type": "city", "tag": "jasper-tn" }
+      {
+        "type": "place",
+        "tag": "jasper-main-street"
+      },
+      {
+        "type": "genre",
+        "tag": "community"
+      },
+      {
+        "type": "city",
+        "tag": "jasper-tn"
+      }
     ],
     "layout": "../../../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 14,
-  "last_checked": "2026-08-08"
+  "last_checked": "2026-08-24"
 }

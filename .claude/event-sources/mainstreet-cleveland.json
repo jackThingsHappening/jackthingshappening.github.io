@@ -10,12 +10,21 @@
     "iconPath": "/images/icons-new/market.png",
     "eventLink": "https://msctn.org/?page_id=1938",
     "tags": [
-      { "type": "place", "tag": "mainstreet-cleveland" },
-      { "type": "genre", "tag": "community" },
-      { "type": "city", "tag": "cleveland-tn" }
+      {
+        "type": "place",
+        "tag": "mainstreet-cleveland"
+      },
+      {
+        "type": "genre",
+        "tag": "community"
+      },
+      {
+        "type": "city",
+        "tag": "cleveland-tn"
+      }
     ],
     "layout": "../../../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 14,
-  "last_checked": "2026-08-08"
+  "last_checked": "2026-08-24"
 }

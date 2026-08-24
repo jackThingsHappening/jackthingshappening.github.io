@@ -5,9 +5,9 @@
   "events": [
     {
       "outputPath": "src/pages/chattanooga/events/city/cleveland/farmers-on-first/sunday-market.mdx",
-      "matchHint": "Sunday market every Sunday 11am–2pm at First Street Square"
+      "matchHint": "Sunday market every Sunday 11am\u20132pm at First Street Square"
     }
   ],
   "frequency_days": 14,
-  "last_checked": "2026-08-08"
+  "last_checked": "2026-08-24"
 }

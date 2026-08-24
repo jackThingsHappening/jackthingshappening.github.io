@@ -27,13 +27,22 @@
       "iconPath": "/images/icons-new/music.png",
       "eventLink": "https://www.southern.edu/academics/music/events.html",
       "tags": [
-        { "type": "place", "tag": "southern-adventist-university" },
-        { "type": "genre", "tag": "music" },
-        { "type": "city", "tag": "collegedale-tn" }
+        {
+          "type": "place",
+          "tag": "southern-adventist-university"
+        },
+        {
+          "type": "genre",
+          "tag": "music"
+        },
+        {
+          "type": "city",
+          "tag": "collegedale-tn"
+        }
       ],
       "layout": "../../../../../../layouts/BlogPostLayout.astro"
     }
   },
   "frequency_days": 14,
-  "last_checked": "2026-08-08"
+  "last_checked": "2026-08-24"
 }
