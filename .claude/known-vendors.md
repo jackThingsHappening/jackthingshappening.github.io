@@ -6,6 +6,7 @@
 |---|---|
 | acquarium | Tennessee Aquarium |
 | barrelhouse-ballroom | Barrelhouse Ballroom |
+| bessie-smith-cultural-center | Bessie Smith Cultural Center |
 | bird-fork-farm | Bird Fork Farm |
 | cambridge-square | Cambridge Square |
 | camp-jordan | Camp Jordan |

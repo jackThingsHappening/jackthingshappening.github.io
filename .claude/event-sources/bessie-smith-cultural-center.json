@@ -1,0 +1,20 @@
+{
+  "name": "Bessie Smith Cultural Center",
+  "type": "calendar",
+  "url": "https://www.bessiesmithcc.org/upcoming-events",
+  "outputDir": "src/pages/chattanooga/events/bessie-smith-cultural-center",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Bessie Smith Cultural Center",
+    "address": "200 E Martin Luther King Blvd, Chattanooga, TN 37403",
+    "iconPath": "/images/icons-new/museum.png",
+    "eventLink": "https://www.bessiesmithcc.org/upcoming-events",
+    "tags": [
+      { "type": "place", "tag": "bessie-smith-cultural-center" },
+      { "type": "genre", "tag": "museum" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-01-01"
+}
