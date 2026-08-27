@@ -19,7 +19,7 @@ export function expandEvents(files: any[]): any[] {
           entranceCost: detail.entranceCost ?? fm.entranceCost,
           time: detail.time ?? fm.time,
           topDetails: detail.topDetails,
-          url: `${baseUrl}/${detail.date}/${slug}`,
+          url: slug ? `${baseUrl}/${detail.date}/${slug}` : baseUrl,
           type: 'event',
         });
       }

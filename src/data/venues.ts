@@ -415,13 +415,13 @@ export const venues: Venue[] = [
   },
   {
     slug: 'walker-rocks',
-    name: 'Fricks Cave Preserve',
-    address: '1510 Fricks Gap Rd, Chickamauga, GA 30707',
+    name: 'Walker Rocks',
+    address: 'Chickamauga, GA 30707',
     website: 'https://www.walkerrocks.com',
     description:
-      'Fricks Cave Preserve is a nature preserve in Chickamauga, Georgia managed by Walker County. It hosts outdoor events including guided hikes, nature walks, and seasonal programs on the preserve grounds.',
-    category: 'Nature Preserve',
-    schemaType: 'Park',
+      'Walker Rocks is a Walker County, GA community events organization. It hosts events at local venues including Gordon Lee Mansion and Fricks Cave Preserve.',
+    category: 'Community Events',
+    schemaType: 'Organization',
   },
   {
     slug: 'jasper-main-street',
