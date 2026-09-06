@@ -11,7 +11,7 @@ import { expandEvents } from '../../../utils/expandEvents';
 const title = 'Events in Chattanooga';
 const seoDescription = 'Upcoming events in Chattanooga, TN.';
 
-const allPosts = (await Astro.glob('./**/*.mdx')).filter(
+const allPosts = (Object.values(import.meta.glob('./**/*.mdx', { eager: true }))).filter(
   (post) => post.frontmatter.published !== false
 );
 

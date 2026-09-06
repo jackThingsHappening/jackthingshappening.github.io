@@ -11,8 +11,8 @@ const title = 'Browse Events by Tag — Chattanooga';
 const seoDescription = 'Browse all Chattanooga events by genre or place.';
 
 const allEvents = [
-  ...(await Astro.glob('../../../../pages-events/**/*.mdx')),
-  ...(await Astro.glob('../**/*.mdx')),
+  ...(Object.values(import.meta.glob('../../../../pages-events/**/*.mdx', { eager: true }))),
+  ...(Object.values(import.meta.glob('../**/*.mdx', { eager: true }))),
 ].filter((post) => post.frontmatter.published !== false);
 
 const today = new Date();

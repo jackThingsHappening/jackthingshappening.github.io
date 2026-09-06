@@ -9,7 +9,7 @@ import Footer from '../../../components/Footer/Footer.astro';
 const title = 'Chattanooga Guides';
 const seoDescription = 'In-depth guides to exploring Chattanooga – from outdoor adventures to hidden gems.';
 
-const allGuides = (await Astro.glob('./*.mdx')).filter(
+const allGuides = (Object.values(import.meta.glob('./*.mdx', { eager: true }))).filter(
   (post) => post.frontmatter.published !== false
 );
 const sortedGuides = allGuides

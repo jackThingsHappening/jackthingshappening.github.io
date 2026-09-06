@@ -16,9 +16,9 @@ const { venue: slug } = Astro.params;
 const venueData = venues.find((v) => v.slug === slug)!;
 
 const allEvents = [
-  ...(await Astro.glob('../../../pages-events/**/*.mdx')),
-  ...(await Astro.glob('../../chattanooga/events/**/*.mdx')),
-  ...(await Astro.glob('../events/**/*.mdx')),
+  ...(Object.values(import.meta.glob('../../../pages-events/**/*.mdx', { eager: true }))),
+  ...(Object.values(import.meta.glob('../../chattanooga/events/**/*.mdx', { eager: true }))),
+  ...(Object.values(import.meta.glob('../events/**/*.mdx', { eager: true }))),
 ].filter(
   (post) =>
     post.frontmatter.published !== false &&

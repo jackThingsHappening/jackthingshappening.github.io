@@ -11,7 +11,7 @@ import { expandEvents } from '../../../../utils/expandEvents';
 const title = 'Nearby Cities — Events Near Chattanooga';
 const seoDescription = 'Events happening in cities near Chattanooga, TN — Cleveland, Dalton, Ringgold, and more.';
 
-const allPosts = (await Astro.glob('../**/*.mdx')).filter(
+const allPosts = (Object.values(import.meta.glob('../**/*.mdx', { eager: true }))).filter(
   (post) => post.frontmatter.published !== false
 );
 

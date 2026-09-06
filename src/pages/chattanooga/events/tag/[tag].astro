@@ -10,8 +10,8 @@ import { expandEvents } from '../../../../utils/expandEvents';
 
 export async function getStaticPaths() {
   const allEvents = [
-    ...(await Astro.glob('../../../../pages-events/**/*.mdx')),
-    ...(await Astro.glob('../**/*.mdx')),
+    ...(Object.values(import.meta.glob('../../../../pages-events/**/*.mdx', { eager: true }))),
+    ...(Object.values(import.meta.glob('../**/*.mdx', { eager: true }))),
   ].filter((post) => post.frontmatter.published !== false);
 
   const tagSet = new Set(
@@ -32,8 +32,8 @@ export async function getStaticPaths() {
 const { tag } = Astro.params;
 
 const allEvents = [
-  ...(await Astro.glob('../../../../pages-events/**/*.mdx')),
-  ...(await Astro.glob('../**/*.mdx')),
+  ...(Object.values(import.meta.glob('../../../../pages-events/**/*.mdx', { eager: true }))),
+  ...(Object.values(import.meta.glob('../**/*.mdx', { eager: true }))),
 ].filter(
   (post) =>
     post.frontmatter.published !== false &&

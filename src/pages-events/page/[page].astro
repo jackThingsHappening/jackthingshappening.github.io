@@ -8,7 +8,7 @@ import Footer from '../../../../components/Footer/Footer.astro';
 import Paginator from '../../../../components/Paginator.astro';
 
 export async function getStaticPaths({ paginate }) {
-  const allEvents = (await Astro.glob('./../../../chattanooga/**/**/*.mdx')).filter(
+  const allEvents = (Object.values(import.meta.glob('./../../../chattanooga/**/**/*.mdx', { eager: true }))).filter(
     (post) => post.frontmatter.published !== false
   );
 
