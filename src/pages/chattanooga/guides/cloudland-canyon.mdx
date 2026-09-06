@@ -41,28 +41,29 @@ import OptimizedImage from '../../../components/OptimizedImage.astro';
       </a>
     </h4>
 
-    <div class="mb-12 mt-12 flex flex-col justify-center items-center">
-      <OptimizedImage  src="/images/chattanooga_guides/outdoors/cloudland/vista.webp" alt="Overlook view of Cloudland Canyon State Park" />
-      <div class="text-center mt-4 text-[20px] max-w-2xl text-gray-600">
-        <em>Cloudland Canyon Overlook Vista</em>
+    <div class="mb-12 mt-12 flex flex-col md:flex-row gap-6 items-start">
+      <div class="w-full md:w-3/5">
+        <OptimizedImage src="/images/chattanooga_guides/outdoors/cloudland/vista.webp" alt="Overlook view of Cloudland Canyon State Park" />
+      </div>
+      <div class="w-full md:w-2/5 flex flex-col gap-3 pt-2">
+        <div><span class="font-semibold">Distance from Chattanooga:</span> ~35 miles south</div>
+        <div><span class="font-semibold">Entry fee:</span> $5 daily parking</div>
+        <div><span class="font-semibold">Trails:</span> 60+ miles, easy to advanced</div>
+        <div><span class="font-semibold">Best for:</span> Hiking, MTB, camping, waterfalls</div>
       </div>
     </div>
 
     <section class="text-xl pb-12">
-      <div>
-        <h2 class="text-4xl mb-4" style="font-family: 'Libre Baskerville', serif;">By Topic<span class="color-pink ml-1"><b>.</b></span></h2>
-        <div class="pb-4">
-          <div class="text-xl">
-            <div class="pb-4"><a class="text-3xl gradient-text" href="#easier-hikes">Easier Hikes</a></div>
-            <div class="pb-4"><a class="text-3xl gradient-text" href="#mtb-easy">Easier MTB Rides</a></div>
-            <div class="pb-4"><a class="text-3xl gradient-text" href="#advanced-hikes">Intermediate/Advanced Hikes</a></div>
-            <div class="pb-4"><a class="text-3xl gradient-text" href="#mtb-advanced">Intermediate/Advanced MTB</a></div>
-            <div class="pb-4"><a class="text-3xl gradient-text" href="#disc-golf">Disc Golf</a></div>
-            <div class="pb-4"><a class="text-3xl gradient-text" href="#camping">Camping</a></div>
-            <div class="pb-4"><a class="text-3xl gradient-text" href="#fishing">Fishing</a></div>
-            <div class="pb-4"><a class="text-3xl gradient-text" href="#eating">Eating Nearby</a></div>
-          </div>
-        </div>
+      <h2 class="text-4xl mb-4" style="font-family: 'Libre Baskerville', serif;">By Topic<span class="color-pink ml-1"><b>.</b></span></h2>
+      <div class="space-y-2">
+        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">1.</span><a href="#easier-hikes" class="gradient-text font-semibold">Easier Hikes</a><span class="text-gray-500 text-base">— Overlook, Meadowlands, Backcountry Loop</span></div>
+        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">2.</span><a href="#mtb-easy" class="gradient-text font-semibold">Easier MTB</a><span class="text-gray-500 text-base">— Bankhead loop, CCC out and back</span></div>
+        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">3.</span><a href="#advanced-hikes" class="gradient-text font-semibold">Advanced Hikes</a><span class="text-gray-500 text-base">— West Rim Loop, Waterfalls Trail, Sitton's Gulch</span></div>
+        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">4.</span><a href="#mtb-advanced" class="gradient-text font-semibold">Advanced MTB</a><span class="text-gray-500 text-base">— Tailings Run, Kettle Bottom</span></div>
+        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">5.</span><a href="#disc-golf" class="gradient-text font-semibold">Disc Golf</a><span class="text-gray-500 text-base">— 18-hole course, no extra fee</span></div>
+        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">6.</span><a href="#camping" class="gradient-text font-semibold">Camping</a><span class="text-gray-500 text-base">— yurts, cabins, RV sites, primitive</span></div>
+        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">7.</span><a href="#fishing" class="gradient-text font-semibold">Fishing</a><span class="text-gray-500 text-base">— stocked pond, no license needed</span></div>
+        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">8.</span><a href="#eating" class="gradient-text font-semibold">Eating Nearby</a><span class="text-gray-500 text-base">— Hope House Cafe, Canyon Grill, Thatcher's BBQ</span></div>
       </div>
     </section>
 
@@ -128,11 +129,8 @@ import OptimizedImage from '../../../components/OptimizedImage.astro';
       </div>
     </section>
 
-    <div class="mb-12 mt-12 flex flex-col justify-center items-center">
+    <div class="mt-12 mb-6 md:float-right md:w-2/5 md:ml-6">
       <OptimizedImage src="/images/chattanooga_guides/outdoors/cloudland/trail-shot.webp" alt="West Rim and Overlook trails fork in Cloudland Canyon" />
-      <div class="text-center mt-4 text-[20px] max-w-2xl text-gray-600">
-        <em>On the trail in CCSP</em>
-      </div>
     </div>
 
     <section class="pb-3 text-xl" id="mtb-easy">
@@ -183,9 +181,6 @@ import OptimizedImage from '../../../components/OptimizedImage.astro';
 
     <div class="mb-12 mt-12 flex flex-col justify-center items-center">
       <OptimizedImage src="/images/chattanooga_guides/outdoors/cloudland/mtb-map.webp" alt="5 Points Cloudland Trail Map for Mountain Biking" />
-      <div class="text-center mt-4 text-[20px] max-w-2xl text-gray-600">
-        <em>5 Points MTB Trail Map</em>
-      </div>
     </div>
 
     <section class="pb-10 text-xl" id="advanced-hikes">
@@ -242,11 +237,8 @@ import OptimizedImage from '../../../components/OptimizedImage.astro';
       </div>  
     </section>
 
-    <div class="mb-12 mt-12 flex flex-col justify-center items-center">
-        <OptimizedImage src="/images/chattanooga_guides/outdoors/cloudland/overlook-west-rim.webp" alt="Close up of trail signs in the Cloudland Canyon State Park" />
-        <div class="text-center mt-4 text-[20px] max-w-2xl text-gray-600">
-          <em>Cloudland Canyon Trail Signs</em>
-        </div>
+    <div class="mt-12 mb-6 md:float-right md:w-2/5 md:ml-6">
+      <OptimizedImage src="/images/chattanooga_guides/outdoors/cloudland/overlook-west-rim.webp" alt="Close up of trail signs in the Cloudland Canyon State Park" />
     </div>
 
     <section class="pb-12 text-xl" id="mtb-advanced">
@@ -403,14 +395,9 @@ import OptimizedImage from '../../../components/OptimizedImage.astro';
       </div>
       <br></br>
     </section>
-    <div class="mb-12 mt-12 flex flex-col justify-center items-center">
+    <div class="mt-12 mb-6 md:float-right md:w-2/5 md:ml-6">
       <OptimizedImage src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Creekside_Disc_Golf_-_1023296199.jpg" alt="disc golf and hole target" />
-      <div class="text-center mt-4 text-[20px] max-w-2xl text-gray-600">
-        <em>
-          <a href="https://upload.wikimedia.org/wikipedia/commons/1/1b/Creekside_Disc_Golf_-_1023296199.jpg" target="_blank">Disc and Target</a> 
-          by formatc1. CC license 2.0.
-        </em>
-      </div>
+      <p class="text-xs text-gray-400 mt-1">Photo by formatc1. CC 2.0</p>
     </div> 
     <section class="pb-3 text-xl" id="camping">
       <div>
@@ -424,14 +411,9 @@ import OptimizedImage from '../../../components/OptimizedImage.astro';
         Cloudland Canyon State Park offers pretty much every type of camping experience you have in mind. Want to camp out in a yurt? The have that. Want to bring your uncle Dave's RV? They have spots for that. Want to rent a cabin with friends? They can make that happen. You get the point. They also have primitive campsites for the folks who prefer the BYO tent lifestyle. There are additional fees depending on what you're doing, make sure to check their website for rental and campsite availability and registration. In the popular season's (we're looking and you spring and fall) you may need to book a few weeks in advance.
       </div>
     </section>
-    <div class="mb-12 mt-12 flex flex-col justify-center items-center">
+    <div class="mt-12 mb-6 md:float-right md:w-2/5 md:ml-6">
       <OptimizedImage src="https://upload.wikimedia.org/wikipedia/commons/6/67/Series_of_Glamping_Yurts_near_Llansantffraed-in-Elwel%2C_Powys.jpg" alt="Yurt campground atop green hills" />
-      <div class="text-center mt-4 text-[20px] max-w-2xl text-gray-600">
-        <em>
-          <a href="https://upload.wikimedia.org/wikipedia/commons/6/67/Series_of_Glamping_Yurts_near_Llansantffraed-in-Elwel%2C_Powys.jpg" target="_blank">Yurt Campgound</a> 
-          by Bill Nicholls. CC license 2.0.
-        </em>
-      </div>
+      <p class="text-xs text-gray-400 mt-1">Photo by Bill Nicholls. CC 2.0</p>
     </div>
 
     <section class="pb-3 text-xl" id="fishing">
@@ -465,14 +447,9 @@ import OptimizedImage from '../../../components/OptimizedImage.astro';
         3. <a target="_blank" href="https://www.google.com/maps/place/Thatcher's+Bbq+And+Grille/@34.8719566,-85.5113424,16z/data=!3m1!4b1!4m6!3m5!1s0x88604ead5f4137e1:0xef1ed00dbded4cae!8m2!3d34.8719522!4d-85.5087621!16s%2Fg%2F1tj33w22?entry=ttu&g_ep=EgoyMDI0MDkwMy4wIKXMDSoASAFQAw%3D%3D">Thatcher's Bbq And Grille.</a> A great lunch or dinner bbq option after your outdoor adventures, the menu features your bbq restaurant favorites like brisket and for dessert banana pudding. The menu has some gluten free options.
       </div>
     </section>
-    <div class="mb-12 mt-12 flex flex-col justify-center items-center">
+    <div class="mt-12 mb-6 md:float-right md:w-2/5 md:ml-6">
       <OptimizedImage src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Cloudland_Canyon_State_Park_%288648810088%29.jpg" alt="Cloudland Canyon waterfall" />
-      <div class="text-center mt-4 text-[20px] max-w-2xl text-gray-600">
-        <em>
-          <a href="https://commons.wikimedia.org/wiki/File:Cloudland_Canyon_State_Park_(8648810088).jpg" target="_blank">Cloudland Canyon State Park</a> 
-          by Jeff Gunn. CC license 2.0.
-        </em>
-      </div>
+      <p class="text-xs text-gray-400 mt-1">Photo by Jeff Gunn. CC 2.0</p>
     </div>
     <section class="pb-3 text-xl">
       <div>
