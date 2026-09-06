@@ -46,14 +46,74 @@ import OptimizedImage from '../../../components/OptimizedImage.astro';
     </div>
   </section>
 
+  {/* INTRO PHOTO OPTION A — full-width overlay */}
+  <div class="mt-8 mb-8 relative overflow-hidden rounded-lg w-fit">
+    <OptimizedImage src="/images/chattanooga_guides/performance-arts/tivoli-theatre.jpg" alt="Tivoli Theatre on Broad Street" />
+    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-6 py-5">
+      <p class="text-white text-base font-medium m-0">Tivoli Theatre, Broad Street</p>
+    </div>
+  </div>
+
+  {/* INTRO PHOTO OPTION B — two-column with facts */}
+  <div class="flex flex-col md:flex-row gap-6 items-start mt-8 mb-8">
+    <div class="md:w-1/2">
+      <OptimizedImage src="/images/chattanooga_guides/performance-arts/tivoli-theatre.jpg" alt="Tivoli Theatre on Broad Street" />
+    </div>
+    <div class="md:w-1/2 text-xl space-y-3">
+      <p><span class="font-bold">Major venues:</span> Tivoli Theatre, Memorial Auditorium, Walker Theatre</p>
+      <p><span class="font-bold">Tivoli reopens:</span> October 20, 2026</p>
+      <p><span class="font-bold">Also notable:</span> Barking Legs, Chattanooga Theatre Centre</p>
+      <p><span class="font-bold">Best for:</span> Broadway, symphony, comedy, indie performance</p>
+    </div>
+  </div>
+
+  {/* INTRO PHOTO OPTION C — float right */}
+  <div class="md:float-right md:w-2/5 md:ml-6 mb-4">
+    <OptimizedImage src="/images/chattanooga_guides/performance-arts/tivoli-theatre.jpg" alt="Tivoli Theatre on Broad Street" />
+  </div>
+
   <section class="text-xl pb-12">
     <div>
       <h2 class="text-4xl mb-4" style="font-family: 'Libre Baskerville', serif;">By Topic<span class="color-pink ml-1"><b>.</b></span></h2>
+
+      {/* BY TOPIC OPTION A — card grid */}
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pb-4">
+        <a class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors" href="#theatre">
+          <div class="text-xl font-semibold gradient-text">Theatre</div>
+        </a>
+        <a class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors" href="#comedy">
+          <div class="text-xl font-semibold gradient-text">Comedy</div>
+        </a>
+        <a class="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors" href="/chattanooga/guides/live-music" target="_blank">
+          <div class="text-xl font-semibold gradient-text">Live Music</div>
+        </a>
+      </div>
+
+      {/* BY TOPIC OPTION B — plain stacked links */}
       <div class="pb-4">
         <div class="text-xl">
-          <div class="pb-4"><a class="text-3xl  gradient-text" href="#theatre">Theatre</a></div>
-          <div class="pb-4 "><a class="text-3xl gradient-text" href="#comedy">Comedy</a></div>
-          <div class="pb-4 "><a class="text-3xl gradient-text" target="_blank" href="/chattanooga/guides/live-music">Live Music (full guide)</a></div>
+          <div class="pb-4"><a class="text-3xl gradient-text" href="#theatre">Theatre</a></div>
+          <div class="pb-4"><a class="text-3xl gradient-text" href="#comedy">Comedy</a></div>
+          <div class="pb-4"><a class="text-3xl gradient-text" target="_blank" href="/chattanooga/guides/live-music">Live Music (full guide)</a></div>
+        </div>
+      </div>
+
+      {/* BY TOPIC OPTION C — numbered with descriptors */}
+      <div class="space-y-2 pb-4">
+        <div class="flex gap-3 items-baseline">
+          <span class="color-pink font-bold text-2xl">1.</span>
+          <a class="text-2xl gradient-text" href="#theatre">Theatre</a>
+          <span class="text-gray-400 text-lg">— Tivoli, Shakespeare, CTC, Symphony</span>
+        </div>
+        <div class="flex gap-3 items-baseline">
+          <span class="color-pink font-bold text-2xl">2.</span>
+          <a class="text-2xl gradient-text" href="#comedy">Comedy</a>
+          <span class="text-gray-400 text-lg">— Comedy Catch, Improv Chattanooga</span>
+        </div>
+        <div class="flex gap-3 items-baseline">
+          <span class="color-pink font-bold text-2xl">3.</span>
+          <a class="text-2xl gradient-text" href="/chattanooga/guides/live-music" target="_blank">Live Music</a>
+          <span class="text-gray-400 text-lg">— full guide</span>
         </div>
       </div>
     </div>
@@ -131,11 +191,8 @@ import OptimizedImage from '../../../components/OptimizedImage.astro';
         <b>Time saving note:</b> Locating their outdoor stage has given some past attendees difficulty, so Scenic City Shakespeare provided a great <a href="https://sceniccityshakespeare.org/directions" target="_blank">aerial visual to help</a>.
       </div>
     </div>
-    <div class="mb-12 mt-12 flex flex-col justify-center items-center">
-      <OptimizedImage src="/images/chattanooga_guides/performance-arts/tivoli-theatre.jpg" alt="Tivoli Theatre exterior showing the historic Beaux-Arts style facade on Broad Street" width={700} height={600} className="rounded-lg" />
-      <div class="text-center mt-4 text-[20px] max-w-2xl text-gray-600">
-        <em>The historic Tivoli Theatre on Broad Street.</em>
-      </div>
+    <div class="md:float-right md:w-2/5 md:ml-6 mb-4">
+      <OptimizedImage src="/images/chattanooga_guides/performance-arts/tivoli-theatre.jpg" alt="Tivoli Theatre exterior on Broad Street" />
     </div>
     <div>
       <h2 class="text-3xl mb-4" style="font-family: 'Libre Baskerville', serif;">Barking Legs Theater<span class="color-pink ml-1"><b>.</b></span></h2>
@@ -165,11 +222,8 @@ import OptimizedImage from '../../../components/OptimizedImage.astro';
         </ul>
       </div>
     </div>
-    <div class="mb-16 mt-16 flex flex-col justify-center items-center">
-      <OptimizedImage src="/images/chattanooga_guides/performance-arts/soldiers-and-sailors.jpg" alt="Soldiers and Sailors Memorial Auditorium exterior showing the historic building facade" width={700} height={600} className="rounded-lg" />
-      <div class="text-center mt-4 text-[20px] max-w-2xl text-gray-600">
-        <em>Soldiers & Sailors Memorial Auditorium, dedicated to Hamilton County's armed forces and hosting up to 3,866 attendees for concerts and events.</em>
-      </div>
+    <div class="md:float-right md:w-2/5 md:ml-6 mb-4">
+      <OptimizedImage src="/images/chattanooga_guides/performance-arts/soldiers-and-sailors.jpg" alt="Soldiers and Sailors Memorial Auditorium exterior" />
     </div>
     <div>
       <h2 class="text-3xl mb-4" style="font-family: 'Libre Baskerville', serif;">Chattanooga Theatre Centre<span class="color-pink ml-1"><b>.</b></span></h2>
@@ -204,11 +258,8 @@ import OptimizedImage from '../../../components/OptimizedImage.astro';
         <b>Helpful note:</b> There's free parking onsite, but it can fill up quickly on weekends. Arriving 15–20 minutes early can be a good idea.
       </div>
     </div>
-    <div class="mb-12 mt-12 flex flex-col justify-center items-center">
-      <OptimizedImage src="/images/chattanooga_guides/performance-arts/chattanooga-theatre-center.jpg" alt="Chattanooga Theatre Centre exterior showing the historic building facade and entrance" width={700} height={600} className="rounded-lg" />
-      <div class="text-center mt-4 text-[20px] max-w-2xl text-gray-600">
-        <em>The historic Chattanooga Theatre Centre, one of the oldest community theatres in the US, located in North Shore next to Coolidge Park.</em>
-      </div>
+    <div class="md:float-right md:w-2/5 md:ml-6 mb-4">
+      <OptimizedImage src="/images/chattanooga_guides/performance-arts/chattanooga-theatre-center.jpg" alt="Chattanooga Theatre Centre exterior" />
     </div>
     <div>
       <h2 class="text-3xl mb-4" style="font-family: 'Libre Baskerville', serif;">Chattanooga Symphony & Opera<span class="color-pink ml-1"><b>.</b></span></h2>
@@ -267,6 +318,7 @@ import OptimizedImage from '../../../components/OptimizedImage.astro';
         <h3 class="text-3xl mb-4" style="font-family: 'Libre Baskerville', serif;">The Comedy Catch<span class="color-pink ml-1"><b>.</b></span></h3>
         <div class="pb-4">
           The Comedy Catch runs shows every night. Start times vary on night and show type. Check their <a href="https://www.thecomedycatch.com/" target="_blank" rel="noopener noreferrer">website</a> for the latest details. They're located on Station Street in the Southside entertainment district.
+        </div>
         <div class="pb-4">
           They have the big names you've seen come to town regularly. In recent years they've hosted the likes of:
           <ul class="text-xl">
@@ -308,7 +360,6 @@ import OptimizedImage from '../../../components/OptimizedImage.astro';
           </div>
         </div>
       </div>
-    </div>
     </div>
   </section>
 
@@ -376,12 +427,36 @@ import OptimizedImage from '../../../components/OptimizedImage.astro';
   </table>
 </section>
 
-  <section class="text-xl pt-10">
-    <h2 class="text-4xl mb-4" style="font-family: 'Libre Baskerville', serif;">Other Guides<span class="color-pink ml-1"><b>.</b></span></h2>
-    <ul class="text-3xl">
-      <li><a href="/chattanooga/guides/live-music" target="_blank">Live Music</a></li>
-      <li><a href="/chattanooga/guides/live-sports" target="_blank">Live Sports</a></li>
-      <li><a href="/chattanooga/guides/confections" target="_blank">Sweet Treats</a></li>
-    </ul>
+  <section class="pt-10 pb-10">
+    <h2 class="text-4xl mb-6" style="font-family: 'Libre Baskerville', serif;">Other Guides<span class="color-pink ml-1"><b>.</b></span></h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <a href="/chattanooga/guides/live-music" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="h-40 overflow-hidden">
+          <OptimizedImage src="/images/chattanooga_guides/live-music/woodshop.png" alt="Live Music" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-4">
+          <div class="text-xl font-semibold gradient-text">Live Music</div>
+          <div class="text-sm text-gray-500 mt-1">Venues, festivals, local artists</div>
+        </div>
+      </a>
+      <a href="/chattanooga/guides/live-sports" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="h-40 overflow-hidden">
+          <OptimizedImage src="/images/chattanooga_guides/sports/lookouts_game.png" alt="Live Sports" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-4">
+          <div class="text-xl font-semibold gradient-text">Live Sports</div>
+          <div class="text-sm text-gray-500 mt-1">Lookouts, Mocs, FC, Red Wolves</div>
+        </div>
+      </a>
+      <a href="/chattanooga/guides/confections" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="h-40 overflow-hidden">
+          <OptimizedImage src="/images/chattanooga_guides/shops/hot-chocolatier1.jpg" alt="Sweet Treats" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-4">
+          <div class="text-xl font-semibold gradient-text">Sweet Treats</div>
+          <div class="text-sm text-gray-500 mt-1">Chocolate, ice cream, candy shops</div>
+        </div>
+      </a>
+    </div>
   </section>
 </div>
