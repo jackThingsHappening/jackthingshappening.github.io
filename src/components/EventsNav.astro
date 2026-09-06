@@ -15,7 +15,7 @@ const linkClass = (tab: ActiveTab) =>
     : 'text-gray-600 hover:text-customGreen1 pb-1 border-b-2 border-transparent hover:border-logoDarkGreen transition-colors';
 ---
 
-<nav class="font-grotesk flex flex-wrap gap-x-3 gap-y-2 pt-16 text-xl md:gap-x-5 md:text-[1.7rem]" aria-label="Event filters">
+<nav class="flex flex-wrap gap-x-3 gap-y-2 pt-10 text-xl md:gap-x-5 md:text-[1.7rem]" aria-label="Event filters">
   <CalendarPicker active={active} />
   <a href="/chattanooga#events" class={linkClass('all')}>All Events</a>
   <a href="/chattanooga/events/this-weekend" class={linkClass('this-weekend')}>This Weekend</a>

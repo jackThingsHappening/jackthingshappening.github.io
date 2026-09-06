@@ -94,6 +94,13 @@ Run the skill: `/humanize src/pages/chattanooga/events/{slug}/ event output:sour
 
 This rewrites the body text of all newly created event files to match the site's voice before they go live.
 
+## Step 6b — Verify content quality
+
+After humanizing, check each new event file for thin body copy. Any file with fewer than 40 words of body text is underweight. For each underweight file:
+1. Use WebSearch to research the act or event
+2. Rewrite the body to at least 40 words (3–4 sentences) covering the act's style and any key logistics
+3. Write the updated file back
+
 ## Step 7 — Update vendor-sources.json
 
 Read `.claude/vendor-sources.json`. Find the vendor entry by slug. Change `status` from `"pending"` to `"active"`. Write the file back.

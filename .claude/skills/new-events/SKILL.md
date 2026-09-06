@@ -101,8 +101,16 @@ tags: {from defaultFrontmatter}
 layout: {from defaultFrontmatter}
 ---
 
-{2-3 sentence description of the event, written in the same casual local tone as other event files in this project}
+{body copy — see B3a below}
 ```
+
+### B3a. Body copy requirement
+
+Body copy must be at least 40 words (3–4 sentences). It must cover:
+- Who the act is and what their sound or style is like
+- Any key logistics worth calling out (sold out, age restriction, early doors, etc.)
+
+If the source page does not provide enough detail, use WebSearch to research the artist or event before writing. Do not publish thin copy — always meet the 40-word floor.
 
 ### B4. Prune past events
 After creating new files, scan all files in `outputDir` whose names start with `slugPrefix`. For any whose `pubDate` is in the past, set `published: false` in the frontmatter — do not delete them.

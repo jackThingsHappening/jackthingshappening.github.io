@@ -118,7 +118,7 @@ module.exports = {
       },
       fontFamily: {
         display: ["Londrina Solid", "sans-serif"],
-        body: ["Poppins", "sans-serif"],
+        body: ["'Space Grotesk'", "sans-serif"],
         jakarta: ["'Plus Jakarta Sans'", "sans-serif"],
         grotesk: ["'Space Grotesk'", "sans-serif"],
       },
