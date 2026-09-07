@@ -112,6 +112,17 @@ git add .claude/event-sources/{slug}.json .claude/vendor-sources.json src/pages/
 git commit -m "feat: onboard {vendor name} — initial events"
 ```
 
+## Writing Rules
+
+Any prose written into MDX files must follow these rules:
+
+- No em-dashes (`—` or `--`)
+- No parenthetical asides — use a separate sentence instead
+- No hedging phrases ("it's worth noting", "essentially", "arguably", "in many ways")
+- No filler openers ("Join us", "Don't miss", "Get ready for")
+- Short sentences — 20 words or fewer
+- Active voice only
+
 ## Step 9 — Report
 
 Print:

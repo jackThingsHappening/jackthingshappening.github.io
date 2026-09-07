@@ -43,6 +43,17 @@ git push origin main
 
 Replace the date and summary with the actual date and actual results from this run.
 
+## Writing Rules
+
+Any prose written into MDX files must follow these rules:
+
+- No em-dashes (`—` or `--`)
+- No parenthetical asides — use a separate sentence instead
+- No hedging phrases ("it's worth noting", "essentially", "arguably", "in many ways")
+- No filler openers ("Join us", "Don't miss", "Get ready for")
+- Short sentences — 20 words or fewer
+- Active voice only
+
 ## Report
 
 Print a summary:
