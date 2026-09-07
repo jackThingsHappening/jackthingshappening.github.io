@@ -107,6 +107,42 @@ const relatedGuide = tags
 
 const venueSlug = tags?.find((t: any) => t.type === 'place')?.tag ?? null;
 const venuePage = venueSlug && venueBySlug[venueSlug] ? `/chattanooga/venues/${venueSlug}` : null;
+
+const isEventPage = pathname?.includes('/events/');
+const allEvents = isEventPage ? await Astro.glob('../pages/chattanooga/events/**/*.mdx') : [];
+
+const currentPlaceTag = tags?.find((t: any) => t.type === 'place')?.tag ?? null;
+const currentGenreTags = tags?.filter((t: any) => t.type === 'genre').map((t: any) => t.tag) ?? [];
+
+const today = new Date().toISOString().slice(0, 10);
+
+function getEventDate(fm: any): string {
+  if (fm.pubDate) return fm.pubDate;
+  if (fm.eventDates?.length) return fm.eventDates[fm.eventDates.length - 1];
+  return '';
+}
+
+const venueEvents = currentPlaceTag
+  ? allEvents
+      .filter(e => {
+        const eTags: any[] = e.frontmatter.tags ?? [];
+        return e.url !== pathname && eTags.some(t => t.type === 'place' && t.tag === currentPlaceTag);
+      })
+      .sort((a, b) => getEventDate(b.frontmatter) > getEventDate(a.frontmatter) ? 1 : -1)
+      .slice(0, 3)
+  : [];
+
+const similarEvents = currentGenreTags.length > 0
+  ? allEvents
+      .filter(e => {
+        const eTags: any[] = e.frontmatter.tags ?? [];
+        if (e.url === pathname) return false;
+        if (currentPlaceTag && eTags.some(t => t.type === 'place' && t.tag === currentPlaceTag)) return false;
+        return currentGenreTags.some(g => eTags.some(t => t.type === 'genre' && t.tag === g));
+      })
+      .sort((a, b) => getEventDate(b.frontmatter) > getEventDate(a.frontmatter) ? 1 : -1)
+      .slice(0, 3)
+  : [];
 ---
 <div class={`header-styles pt-14 pb-14 lg:flex-wrap md:flex-wrap sm:flex-nowrap text-xl ${!hasMetadata && !displaySeriesLabel ? 'mb-0' : 'mb-10'}`}>
   <header class="max-w-5xl content max-w-5xl mx-auto px-3 text-3xl tracking-wide">
@@ -273,6 +309,34 @@ const venuePage = venueSlug && venueBySlug[venueSlug] ? `/chattanooga/venues/${v
       </div>
     )}
   </div>
+
+  {venueEvents.length > 0 && (
+    <div class="mt-10 pt-6 border-t border-gray-200">
+      <p class="text-gray-400 text-base uppercase tracking-widest mb-4">More from {venue ?? venueSlug}</p>
+      <div class="flex flex-col gap-3">
+        {venueEvents.map((e: any) => (
+          <a href={e.url} class="flex flex-col hover:opacity-70 transition-opacity no-underline">
+            <span class="text-customGreen1 font-semibold">{e.frontmatter.title}</span>
+            {e.frontmatter.pubDate && <span class="text-gray-400 text-sm">{e.frontmatter.pubDate}</span>}
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+
+  {similarEvents.length > 0 && (
+    <div class="mt-10 pt-6 border-t border-gray-200">
+      <p class="text-gray-400 text-base uppercase tracking-widest mb-4">Similar events</p>
+      <div class="flex flex-col gap-3">
+        {similarEvents.map((e: any) => (
+          <a href={e.url} class="flex flex-col hover:opacity-70 transition-opacity no-underline">
+            <span class="text-customGreen1 font-semibold">{e.frontmatter.title}</span>
+            <span class="text-gray-400 text-sm">{[e.frontmatter.venue, e.frontmatter.pubDate].filter(Boolean).join(' · ')}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
 
   {relatedGuide && pathname?.includes('/events/') && (
     <div class="mt-10 pt-6 border-t border-gray-200">
