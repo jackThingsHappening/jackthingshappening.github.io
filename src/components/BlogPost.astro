@@ -312,7 +312,7 @@ const similarEvents = currentGenreTags.length > 0
 
   {venueEvents.length > 0 && (
     <div class="mt-10 pt-6 border-t border-gray-200">
-      <p class="text-gray-400 text-base uppercase tracking-widest mb-4">More from {venue ?? venueSlug}</p>
+      <p class="text-logoDarkGreen text-base uppercase tracking-widest mb-4">More from {venue ?? venueSlug}</p>
       <div class="flex flex-col gap-3">
         {venueEvents.map((e: any) => (
           <a href={e.url} class="flex flex-col hover:opacity-70 transition-opacity no-underline">
@@ -326,7 +326,7 @@ const similarEvents = currentGenreTags.length > 0
 
   {similarEvents.length > 0 && (
     <div class="mt-10 pt-6 border-t border-gray-200">
-      <p class="text-gray-400 text-base uppercase tracking-widest mb-4">Similar events</p>
+      <p class="text-logoDarkGreen text-base uppercase tracking-widest mb-4">Similar events</p>
       <div class="flex flex-col gap-3">
         {similarEvents.map((e: any) => (
           <a href={e.url} class="flex flex-col hover:opacity-70 transition-opacity no-underline">
@@ -340,7 +340,7 @@ const similarEvents = currentGenreTags.length > 0
 
   {relatedGuide && pathname?.includes('/events/') && (
     <div class="mt-10 pt-6 border-t border-gray-200">
-      <p class="text-gray-400 text-base uppercase tracking-widest mb-2">Explore more</p>
+      <p class="text-logoDarkGreen text-base uppercase tracking-widest mb-2">Explore more</p>
       <a href={`/chattanooga/guides/${relatedGuide.slug}`} class="text-customGreen1 font-semibold text-xl underline decoration-logoDarkGreen underline-offset-8 hover:opacity-70 transition-opacity">
         {relatedGuide.label} →
       </a>
