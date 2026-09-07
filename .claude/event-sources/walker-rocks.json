@@ -9,12 +9,21 @@
     "iconPath": "/images/icons-new/community.png",
     "eventLink": "https://www.walkerrocks.com/community-events",
     "tags": [
-      { "type": "place", "tag": "walker-rocks" },
-      { "type": "genre", "tag": "community" },
-      { "type": "city", "tag": "chickamauga-ga" }
+      {
+        "type": "place",
+        "tag": "walker-rocks"
+      },
+      {
+        "type": "genre",
+        "tag": "community"
+      },
+      {
+        "type": "city",
+        "tag": "chickamauga-ga"
+      }
     ],
     "layout": "../../../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 14,
-  "last_checked": "2026-08-08"
+  "last_checked": "2026-09-07"
 }

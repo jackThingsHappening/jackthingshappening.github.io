@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/barn.png",
     "eventLink": "https://crabtreefarms.org/ourevents/list/",
     "tags": [
-      { "type": "place", "tag": "crabtree-farms" },
-      { "type": "genre", "tag": "farm" }
+      {
+        "type": "place",
+        "tag": "crabtree-farms"
+      },
+      {
+        "type": "genre",
+        "tag": "farm"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 14,
-  "last_checked": "2026-07-26"
+  "last_checked": "2026-09-07"
 }
