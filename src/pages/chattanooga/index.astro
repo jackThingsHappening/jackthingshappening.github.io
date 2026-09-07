@@ -51,7 +51,7 @@ const today = new Date();
 today.setHours(0, 0, 0, 0);
 
 const sortedEvents = expanded
-  .filter((e) => new Date(e.pubDate + 'T00:00:00') >= today)
+  .filter((e) => new Date(e.pubDate + 'T00:00:00') >= today && !e.tags?.some((t: any) => t.type === 'city'))
   .sort((a, b) => new Date(a.pubDate + 'T00:00:00') - new Date(b.pubDate + 'T00:00:00'));
 
 // Merge guides and editorials, sort by lastUpdated
