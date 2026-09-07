@@ -6,7 +6,7 @@
   readTime: "8 minutes"
   tags: [{type: "guide", tag: "museums"}, {type: "guide", tag: "interactive"}]
   layout: "../../../layouts/BlogPostLayout.astro"
-  seoDescription: "Chattanooga museums and exhibits: Tennessee Aquarium, Hunter Museum, Creative Discovery, Sculpture Fields, Ruby Falls, Chickamauga, and more — interactive filters by type and neighborhood."
+  seoDescription: "Chattanooga museums and exhibits: Tennessee Aquarium, Hunter Museum, Creative Discovery, Sculpture Fields, Ruby Falls, Chickamauga, and more, with interactive filters by type and neighborhood."
   geoCoverage: "Chattanooga, TN and day trips (Lookout Mountain, Fort Oglethorpe GA, South Pittsburg TN, Dayton TN, Cherry Log GA, Chatsworth GA, Calhoun GA)"
   iconPath: "../../../images/icons-new/art.png"
   images: [
@@ -36,6 +36,7 @@
   itemTemplate: {title: "", order: 21, description: "", links: [{text: "More Information", link: ""}], tags: []}
 ---
 
+import OptimizedImage from '../../../components/OptimizedImage.astro';
 import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatter.astro';
 
 <script type="application/ld+json" set:html={JSON.stringify({
@@ -116,3 +117,46 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
 <div class="pb-12 max-w-6xl mx-auto px-3">
   <div class="pb-3">If this guide helped, or if there's a museum or exhibit we missed, <a href="mailto:jack@thingshappening.com">send a note</a>. We'll keep adding and refining as new spots open. Pair this with the <a href="/chattanooga/guides/outdoors">outdoor adventures guide</a> and <a href="/chattanooga/guides/restaurants-with-a-view">restaurants with a view</a> for a full visit.</div>
 </div>
+
+
+<section class="pt-10 pb-10">
+  <h2 class="text-4xl mb-6" style="font-family: 'Libre Baskerville', serif;">Other Guides<span class="color-pink ml-1"><b>.</b></span></h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <a href="/chattanooga/guides/tours" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="h-40 overflow-hidden">
+          <OptimizedImage src="/images/chattanooga_guides/trolley.png" alt="Guided Tours" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-4">
+          <div class="text-xl font-semibold gradient-text">Guided Tours</div>
+          <div class="text-sm text-gray-500 mt-1">City history, ghost, kayak, cave</div>
+        </div>
+      </a>
+      <a href="/chattanooga/guides/performance-arts" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="h-40 overflow-hidden">
+          <OptimizedImage src="/images/chattanooga_guides/performance-arts/tivoli-theatre.jpg" alt="Performance Arts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-4">
+          <div class="text-xl font-semibold gradient-text">Performance Arts</div>
+          <div class="text-sm text-gray-500 mt-1">Theater, symphony, comedy</div>
+        </div>
+      </a>
+      <a href="/chattanooga/guides/outdoors" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="h-40 overflow-hidden">
+          <OptimizedImage src="/images/chattanooga_guides/outdoors/lookout-mtn/mountain-top.jpg" alt="Outdoor Adventures" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-4">
+          <div class="text-xl font-semibold gradient-text">Outdoor Adventures</div>
+          <div class="text-sm text-gray-500 mt-1">Hiking, kayaking, climbing</div>
+        </div>
+      </a>
+      <a href="/chattanooga/guides/live-music" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="h-40 overflow-hidden">
+          <OptimizedImage src="/images/chattanooga_guides/live-music/woodshop.png" alt="Live Music" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-4">
+          <div class="text-xl font-semibold gradient-text">Live Music</div>
+          <div class="text-sm text-gray-500 mt-1">Venues, festivals, local artists</div>
+        </div>
+      </a>
+  </div>
+</section>

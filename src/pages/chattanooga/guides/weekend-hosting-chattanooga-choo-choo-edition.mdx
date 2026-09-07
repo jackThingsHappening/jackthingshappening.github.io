@@ -242,12 +242,45 @@ import OptimizedImage from '../../../components/OptimizedImage.astro';
   </p>
   </section>
 
-  <section class="text-xl pt-6 pb-12">
-    <h2 class="text-4xl mb-3 leading-tight" style="font-family: 'Libre Baskerville', serif;">Related<span class="color-pink ml-1"><b>.</b></span></h2>
-    <div class="text-2xl space-y-1 py-4">
-      <p><a href="/chattanooga/guides" class="text-logoDarkGreen underline hover:opacity-90" rel="noopener noreferrer">All Chattanooga Guides</a></p>
-      <p><a href="/chattanooga/guides/tours" class="text-logoDarkGreen underline hover:opacity-90" rel="noopener noreferrer">Guided City Tours</a></p>
-      <p><a href="/chattanooga/guides/outdoors" class="text-logoDarkGreen underline hover:opacity-90" rel="noopener noreferrer">Interactive Outdoors Guide</a></p>
+  <section class="pt-10 pb-10">
+    <h2 class="text-4xl mb-6" style="font-family: 'Libre Baskerville', serif;">Other Guides<span class="color-pink ml-1"><b>.</b></span></h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <a href="/chattanooga/guides/tours" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="h-40 overflow-hidden">
+          <OptimizedImage src="/images/chattanooga_guides/trolley.png" alt="Guided Tours" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-4">
+          <div class="text-xl font-semibold gradient-text">Guided Tours</div>
+          <div class="text-sm text-gray-500 mt-1">City history, ghost, kayak, cave</div>
+        </div>
+      </a>
+      <a href="/chattanooga/guides/live-music" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="h-40 overflow-hidden">
+          <OptimizedImage src="/images/chattanooga_guides/live-music/woodshop.png" alt="Live Music" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-4">
+          <div class="text-xl font-semibold gradient-text">Live Music</div>
+          <div class="text-sm text-gray-500 mt-1">Venues, festivals, local artists</div>
+        </div>
+      </a>
+      <a href="/chattanooga/guides/outdoors" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="h-40 overflow-hidden">
+          <OptimizedImage src="/images/chattanooga_guides/outdoors/lookout-mtn/mountain-top.jpg" alt="Outdoor Adventures" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-4">
+          <div class="text-xl font-semibold gradient-text">Outdoor Adventures</div>
+          <div class="text-sm text-gray-500 mt-1">Hiking, kayaking, climbing</div>
+        </div>
+      </a>
+      <a href="/chattanooga/guides/confections" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="h-40 overflow-hidden">
+          <OptimizedImage src="/images/chattanooga_guides/shops/hot-chocolatier1.jpg" alt="Sweet Treats" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-4">
+          <div class="text-xl font-semibold gradient-text">Sweet Treats</div>
+          <div class="text-sm text-gray-500 mt-1">Chocolate, ice cream, candy shops</div>
+        </div>
+      </a>
     </div>
   </section>
 </div>

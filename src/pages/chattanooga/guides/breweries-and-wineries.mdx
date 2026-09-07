@@ -37,6 +37,7 @@
   itemTemplate: {title: "", order: 21, description: "", links: [{text: "More Information", link: ""}], tags: []}
 ---
 
+import OptimizedImage from '../../../components/OptimizedImage.astro';
 import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatter.astro';
 
 <script type="application/ld+json" set:html={JSON.stringify({
@@ -49,7 +50,7 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
 })} />
 
 <div class="max-w-6xl mx-auto px-3">
-  <div class="pb-5 pt-2">This guide covers <strong>20</strong> breweries, wineries, cideries, and distilleries in Chattanooga proper and within about an hour's drive — including the North Georgia mountain wine corridor around Blue Ridge and Ellijay.</div>
+  <div class="pb-5 pt-2">This guide covers <strong>20</strong> breweries, wineries, cideries, and distilleries in Chattanooga proper and within about an hour's drive, including the North Georgia mountain wine corridor around Blue Ridge and Ellijay.</div>
   <div class="pb-5">Chattanooga's brewing scene has grown considerably over the last decade and now holds its own for a mid-size city. The North Georgia day-trip angle is a different kind of outing: the Cartecay River valley has a genuine wine trail worth building an afternoon around.</div>
   <div class="pb-5">Missing a spot? <a href="mailto:jack@thingshappening.com">Send an email</a> with the name and a note on why it belongs.</div>
 </div>
@@ -132,7 +133,7 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
   </div>
   <div class="place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg" data-place="blue-ridge-ga">
     <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Blue Ridge &amp; Ellijay, GA<span class="color-pink ml-1"><b>.</b></span></h2>
-    <p class="text-xl">About 55 minutes south of Chattanooga, the Cartecay River valley runs through some of Georgia's best wine country. Mercier Orchards anchors the cider side of the trip; Cartecay and Engelheim vineyards cover the wine trail. Blue Ridge's downtown strip has its own brewery and enough restaurants to make a full day of it. Go early on weekends — the town fills up fast in fall foliage season.</p>
+    <p class="text-xl">About 55 minutes south of Chattanooga, the Cartecay River valley runs through some of Georgia's best wine country. Mercier Orchards anchors the cider side of the trip; Cartecay and Engelheim vineyards cover the wine trail. Blue Ridge's downtown strip has its own brewery and enough restaurants to make a full day of it. Go early on weekends. The town fills up fast in fall foliage season.</p>
   </div>
   <div class="place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg" data-place="cleveland-tn">
     <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Cleveland &amp; Charleston, TN<span class="color-pink ml-1"><b>.</b></span></h2>
@@ -140,7 +141,7 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
   </div>
   <div class="place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg" data-place="st-elmo">
     <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">St. Elmo<span class="color-pink ml-1"><b>.</b></span></h2>
-    <p class="text-xl">Historic neighborhood at the base of Lookout Mountain. The Tap House fits naturally into a St. Elmo afternoon — Incline Railway, a walk down Tennessee Ave, then a pint before heading back up the ridge.</p>
+    <p class="text-xl">Historic neighborhood at the base of Lookout Mountain. The Tap House fits naturally into a St. Elmo afternoon: Incline Railway, a walk down Tennessee Ave, then a pint before heading back up the ridge.</p>
     <div class="flex flex-wrap gap-4 mt-4">
       <a href="/chattanooga/guides/outdoors?tags=lookout-mtn" class="page-item-link text-logoDarkGreen underline">Lookout Mountain outdoors</a>
       <a href="/chattanooga/guides/coffeeshops?tags=st-elmo" class="page-item-link text-logoDarkGreen underline">St. Elmo coffee</a>
@@ -148,18 +149,18 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
   </div>
   <div class="place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg" data-place="jasper-tn">
     <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Jasper Highlands, TN<span class="color-pink ml-1"><b>.</b></span></h2>
-    <p class="text-xl">About 35 minutes northwest of Chattanooga on the Cumberland Plateau above the Tennessee River Gorge. Top of the Rock is a brewpub with plateau views that make it a destination in its own right — not a quick errand, more of an afternoon commitment that earns it.</p>
+    <p class="text-xl">About 35 minutes northwest of Chattanooga on the Cumberland Plateau above the Tennessee River Gorge. Top of the Rock is a brewpub with plateau views that make it a destination in its own right. Plan an afternoon.</p>
   </div>
   <div class="place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg" data-place="guild-tn">
     <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Guild, TN<span class="color-pink ml-1"><b>.</b></span></h2>
-    <p class="text-xl">A short drive west of downtown on US-41, just past Raccoon Mountain. Lookout Winery sits on a bluff with Tennessee River views — the kind of stop that earns its own afternoon rather than being tacked onto something else.</p>
+    <p class="text-xl">A short drive west of downtown on US-41, just past Raccoon Mountain. Lookout Winery sits on a bluff with Tennessee River views. It earns its own afternoon.</p>
     <div class="flex flex-wrap gap-4 mt-4">
       <a href="/chattanooga/guides/outdoors?tags=raccoon-mtn" class="page-item-link text-logoDarkGreen underline">Raccoon Mountain outdoors</a>
     </div>
   </div>
   <div class="place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg" data-place="ringgold-ga">
     <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Ringgold, GA<span class="color-pink ml-1"><b>.</b></span></h2>
-    <p class="text-xl">Six miles south of Chattanooga at I-75 Exit 350. The Georgia Winery is the closest winery to the city in this guide — barely a day trip, more of an errand with wine at the end of it.</p>
+    <p class="text-xl">Six miles south of Chattanooga at I-75 Exit 350. The Georgia Winery is the closest winery to the city in this guide. It is barely a day trip.</p>
   </div>
   <div class="place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg" data-place="dalton-ga">
     <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Dalton, GA<span class="color-pink ml-1"><b>.</b></span></h2>
@@ -174,5 +175,48 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
 </section>
 
 <div class="pb-12 max-w-6xl mx-auto px-3">
-  <div class="pb-3">This guide will grow as Chattanooga's brewing scene does. If a spot is missing or something's changed, <a href="mailto:jack@thingshappening.com">send a note</a> — a name and a quick reason it belongs is all we need.</div>
+  <div class="pb-3">This guide will grow as Chattanooga's brewing scene does. If a spot is missing or something's changed, <a href="mailto:jack@thingshappening.com">send a note</a>. A name and a quick reason it belongs is all we need.</div>
 </div>
+
+
+<section class="pt-10 pb-10">
+  <h2 class="text-4xl mb-6" style="font-family: 'Libre Baskerville', serif;">Other Guides<span class="color-pink ml-1"><b>.</b></span></h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <a href="/chattanooga/guides/tours" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="h-40 overflow-hidden">
+          <OptimizedImage src="/images/chattanooga_guides/trolley.png" alt="Guided Tours" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-4">
+          <div class="text-xl font-semibold gradient-text">Guided Tours</div>
+          <div class="text-sm text-gray-500 mt-1">City history, ghost, kayak, cave</div>
+        </div>
+      </a>
+      <a href="/chattanooga/guides/outdoors" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="h-40 overflow-hidden">
+          <OptimizedImage src="/images/chattanooga_guides/outdoors/lookout-mtn/mountain-top.jpg" alt="Outdoor Adventures" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-4">
+          <div class="text-xl font-semibold gradient-text">Outdoor Adventures</div>
+          <div class="text-sm text-gray-500 mt-1">Hiking, kayaking, climbing</div>
+        </div>
+      </a>
+      <a href="/chattanooga/guides/confections" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="h-40 overflow-hidden">
+          <OptimizedImage src="/images/chattanooga_guides/shops/hot-chocolatier1.jpg" alt="Sweet Treats" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-4">
+          <div class="text-xl font-semibold gradient-text">Sweet Treats</div>
+          <div class="text-sm text-gray-500 mt-1">Chocolate, ice cream, candy shops</div>
+        </div>
+      </a>
+      <a href="/chattanooga/guides/live-music" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+        <div class="h-40 overflow-hidden">
+          <OptimizedImage src="/images/chattanooga_guides/live-music/woodshop.png" alt="Live Music" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+        </div>
+        <div class="p-4">
+          <div class="text-xl font-semibold gradient-text">Live Music</div>
+          <div class="text-sm text-gray-500 mt-1">Venues, festivals, local artists</div>
+        </div>
+      </a>
+  </div>
+</section>
