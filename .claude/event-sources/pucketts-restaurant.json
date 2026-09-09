@@ -1,0 +1,26 @@
+{
+  "name": "Puckett's Restaurant",
+  "type": "calendar",
+  "url": "https://www.puckettsrestaurant.com/chattanooga/music",
+  "outputDir": "src/pages/chattanooga/events/pucketts-restaurant",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Puckett's Restaurant",
+    "address": "2 West Aquarium Way, Chattanooga, TN 37402",
+    "iconPath": "/images/icons-new/music.png",
+    "eventLink": "https://www.puckettsrestaurant.com/chattanooga/music",
+    "tags": [
+      {
+        "type": "place",
+        "tag": "pucketts-restaurant"
+      },
+      {
+        "type": "genre",
+        "tag": "music"
+      }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-01-01"
+}
