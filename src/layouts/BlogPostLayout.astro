@@ -10,11 +10,56 @@ let {address, author, eventLink, readTime, originalDate, matchedDetails, eventDa
   seoDescription, featured, geoCoverage, neighborhoods, seasonality, accessibilityNotes, parking, kidFriendly, petFriendly, bestFor, sources, pageItems, hideSignup, ogImage} = content;
 
 title = title ? title : "";
+
+function parseTimeComponent(timeStr: string): string | null {
+  const match = timeStr.trim().match(/^(\d+)(?::(\d+))?\s*(am|pm)$/i);
+  if (!match) return null;
+  let hours = parseInt(match[1]);
+  const minutes = match[2] ? parseInt(match[2]) : 0;
+  const ampm = match[3].toLowerCase();
+  if (ampm === 'pm' && hours !== 12) hours += 12;
+  if (ampm === 'am' && hours === 12) hours = 0;
+  return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:00`;
+}
+
+function buildStartDate(date: string, timeField: string | undefined): string {
+  if (!timeField || timeField.toLowerCase() === 'varies') return date;
+  const parts = timeField.split(/\s*(?:to|-)\s*/i);
+  const t = parseTimeComponent(parts[0]);
+  return t ? `${date}T${t}` : date;
+}
+
+function buildEndDate(date: string, timeField: string | undefined): string {
+  if (!timeField || timeField.toLowerCase() === 'varies') return date;
+  const parts = timeField.split(/\s*(?:to|-)\s*/i);
+  if (parts.length < 2) return date;
+  const t = parseTimeComponent(parts[parts.length - 1]);
+  return t ? `${date}T${t}` : date;
+}
+
+function parsePostalAddress(addr: string | undefined) {
+  if (!addr) return { streetAddress: '', addressLocality: 'Chattanooga', addressRegion: 'TN', postalCode: '', addressCountry: 'US' };
+  const parts = addr.split(',').map((s: string) => s.trim());
+  if (parts.length >= 3) {
+    const stateZip = parts[2].trim().split(/\s+/);
+    return {
+      streetAddress: parts[0],
+      addressLocality: parts[1],
+      addressRegion: stateZip[0] || 'TN',
+      postalCode: stateZip[1] || '',
+      addressCountry: 'US',
+    };
+  }
+  return { streetAddress: addr, addressLocality: 'Chattanooga', addressRegion: 'TN', postalCode: '', addressCountry: 'US' };
+}
+
+const eventImage = ogImage
+  ? `https://thingshappening.com${ogImage}`
+  : 'https://thingshappening.com/images/social.png';
 ---
 <html lang={ content.lang || 'en' }>
   <head>
     <BaseHead title={title} description={seoDescription || description} ogImage={ogImage ? `https://thingshappening.com${ogImage}` : undefined} />
-    <link rel="canonical" href={`https://thingshappening.com${Astro.url.pathname}`} />
     <script is:inline>
       if (window.location.search.includes('tags=') || window.location.search.includes('date=')) {
         var meta = document.createElement('meta');
@@ -23,33 +68,41 @@ title = title ? title : "";
         document.head.appendChild(meta);
       }
     </script>
-    {eventLink && pubDate && venue && (
+    {pubDate && venue && (
       <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Event",
         "name": title,
         "description": seoDescription || description || "",
-        "startDate": pubDate,
+        "startDate": buildStartDate(pubDate, time),
+        "endDate": buildEndDate(pubDate, time),
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "image": eventImage,
+        "organizer": {
+          "@type": "Organization",
+          "name": "Things Happening",
+          "url": "https://thingshappening.com"
+        },
         "location": {
           "@type": "Place",
           "name": venue,
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": address || "",
-            "addressCountry": "US"
+            ...parsePostalAddress(address)
           }
         },
         "url": `https://thingshappening.com${Astro.url.pathname}`,
-        "offers": {
-          "@type": "Offer",
-          "url": eventLink,
-          ...(entranceCost && entranceCost.toLowerCase() === "free"
-            ? { "price": "0", "priceCurrency": "USD" }
-            : {}
-          )
-        }
+        ...(eventLink ? {
+          "offers": {
+            "@type": "Offer",
+            "url": eventLink,
+            ...(entranceCost && entranceCost.toLowerCase() === "free"
+              ? { "price": "0", "priceCurrency": "USD" }
+              : {}
+            )
+          }
+        } : {})
       })} />
     )}
     <link rel="preconnect" href="https://fonts.googleapis.com" />

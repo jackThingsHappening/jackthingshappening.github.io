@@ -1,0 +1,21 @@
+# Things Happening
+> A local events and guides publisher for Chattanooga, TN.
+
+Things Happening covers events, guides, and editorials for Chattanooga and the surrounding area. Content is updated daily.
+
+## Key pages
+
+- Events: https://thingshappening.com/chattanooga/
+- Guides: https://thingshappening.com/chattanooga/guides/
+- Editorials: https://thingshappening.com/chattanooga/editorials/
+- About: https://thingshappening.com/about/
+
+## Coverage
+
+- Upcoming local events (live music, markets, sports, arts, outdoor)
+- Longform and interactive guides to Chattanooga venues, trails, coffee shops, breweries, restaurants, performing arts, exhibits, and tours
+- Original editorial content about local Chattanooga history and places
+
+## Usage
+
+Content may be referenced and quoted for informational purposes. Contact: jack@thingshappening.com
