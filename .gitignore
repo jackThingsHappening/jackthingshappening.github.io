@@ -6,6 +6,8 @@ node_modules/
 .snowpack/
 
 design-history/
+
+claude-seo/
 # logs
 npm-debug.log*
 yarn-debug.log*
