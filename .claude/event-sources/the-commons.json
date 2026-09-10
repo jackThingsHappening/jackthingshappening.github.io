@@ -1,0 +1,20 @@
+{
+  "name": "The Commons Collegedale",
+  "type": "calendar",
+  "url": "https://thecommonstn.com/calendar/",
+  "outputDir": "src/pages/chattanooga/events/the-commons",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "The Commons Collegedale",
+    "address": "4950 Swinyar Dr, Collegedale, TN 37363",
+    "iconPath": "/images/icons-new/calendar.png",
+    "eventLink": "https://thecommonstn.com/calendar/",
+    "tags": [
+      { "type": "place", "tag": "the-commons" },
+      { "type": "genre", "tag": "community" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-09-10"
+}

@@ -34,6 +34,7 @@
 | songbirds-museum | Songbirds Museum |
 | tailgate-brewery | TailGate Brewery Chattanooga |
 | tap-house | The Tap House |
+| the-commons | The Commons Collegedale |
 | the-signal | The Signal |
 | townsend-atelier | Townsend Atelier |
 | tivoli-theatre | Tivoli Theatre |
