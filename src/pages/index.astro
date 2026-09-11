@@ -10,6 +10,33 @@ const seoDescription = 'Find things to do in Chattanooga, TN — events, live mu
 <html lang="en" class="dot-grid-bg">
 <head>
   <BaseHead title={title} description={seoDescription} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://thingshappening.com/#website",
+        "url": "https://thingshappening.com",
+        "name": "Things Happening",
+        "description": "Local events and guides for Chattanooga, TN."
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://thingshappening.com/#organization",
+        "name": "Things Happening",
+        "url": "https://thingshappening.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://thingshappening.com/images/logo.png"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "jack@thingshappening.com",
+          "contactType": "customer support"
+        }
+      }
+    ]
+  })} />
 </head>
 
 <body class="text-black font-body leading-normal personality-casual">
@@ -30,6 +57,25 @@ const seoDescription = 'Find things to do in Chattanooga, TN — events, live mu
         <span>→</span> Knoxville, TN <span class="text-lg font-normal ml-2">coming soon</span>
       </div> -->
     </div>
+
+    <section class="mt-16 max-w-3xl text-xl text-gray-800 leading-relaxed">
+      <p>Chattanooga has a full calendar. There is live music nearly every night. There are trails into the mountains and kayaking on the Tennessee River. There are farmers markets, art shows, craft breweries, and coffee shops. Finding all of it used to mean checking five different places.</p>
+
+      <p class="mt-4">Things Happening puts it in one place.</p>
+
+      <p class="mt-4">We build tools to make discovery simple.</p>
+
+      <ul class="mt-4 space-y-2 list-disc list-inside">
+        <li><a href="/chattanooga/guides/" class="underline hover:text-customGreen1">Interactive guides</a> with filters for every activity type</li>
+        <li>An <a href="/chattanooga/" class="underline hover:text-customGreen1">events calendar</a> with tags and text search</li>
+        <li>A <a href="/chattanooga/events/nearby/" class="underline hover:text-customGreen1">nearby towns calendar</a> for when you want to venture out</li>
+        <li><a href="/chattanooga/guides/" class="underline hover:text-customGreen1">Longform guides</a> for those who want more detail</li>
+        <li><a href="/chattanooga/guides/" class="underline hover:text-customGreen1">Downloadable PDFs</a> for offline use</li>
+        <li>A <a href="/chattanooga/events/tags/" class="underline hover:text-customGreen1">tags page</a> to browse by activity</li>
+      </ul>
+
+      <p class="mt-6">We cover all of Chattanooga Downtown, the North Shore, the Southside, Lookout Mountain and nearby cities. Whether you live here or you are visiting, there is something worth doing. We are here to help you find it.</p>
+    </section>
 
   </main>
 

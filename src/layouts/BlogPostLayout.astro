@@ -56,6 +56,18 @@ function parsePostalAddress(addr: string | undefined) {
 const eventImage = ogImage
   ? `https://thingshappening.com${ogImage}`
   : 'https://thingshappening.com/images/social.png';
+
+const baseUrl = 'https://thingshappening.com';
+const pathParts = Astro.url.pathname.replace(/\/$/, '').split('/').filter(Boolean);
+const sectionLabels: Record<string, string> = { guides: 'Guides', events: 'Events', editorials: 'Editorials' };
+const breadcrumbItems = pathParts.length >= 2
+  ? [
+      { position: 1, name: 'Home', item: baseUrl },
+      { position: 2, name: 'Chattanooga', item: `${baseUrl}/${pathParts[0]}` },
+      { position: 3, name: sectionLabels[pathParts[1]] || pathParts[1], item: `${baseUrl}/${pathParts[0]}/${pathParts[1]}` },
+      { position: 4, name: title, item: `${baseUrl}${Astro.url.pathname}` },
+    ]
+  : [];
 ---
 <html lang={ content.lang || 'en' }>
   <head>
@@ -103,6 +115,18 @@ const eventImage = ogImage
             )
           }
         } : {})
+      })} />
+    )}
+    {breadcrumbItems.length > 0 && (
+      <script type="application/ld+json" set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": breadcrumbItems.map(({ position, name, item }) => ({
+          "@type": "ListItem",
+          position,
+          name,
+          item,
+        })),
       })} />
     )}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
