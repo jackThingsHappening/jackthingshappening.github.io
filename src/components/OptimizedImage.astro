@@ -1,7 +1,33 @@
 ---
 import { Image } from "astro:assets";
 
-const { src, alt, loading = "lazy", width = 500, height = 300, className = "" } = Astro.props;
+type Props = {
+  src: string;
+  alt: string;
+  loading?: "lazy" | "eager";
+  width?: number;
+  height?: number;
+  className?: string;
+  class?: string;
+  [key: string]: any;
+};
+
+const { src, alt, loading = "lazy", width, height, className, class: classAttr, ...rest } = Astro.props;
+
+const allImages = import.meta.glob<{ default: ImageMetadata }>(
+  [
+    '/src/assets/images/**/*.{jpg,jpeg,png,webp}',
+    '/src/assets/editorials/**/*.{jpg,jpeg,png,webp}',
+  ],
+  { eager: true }
+);
+
+const key = `/src/assets${src}`;
+const imgModule = allImages[key];
+const resolvedClass = classAttr ?? className ?? "";
 ---
 
-<Image src={src} alt={alt} width={width} height={height} loading={loading} format="webp" class={className} />
+{imgModule
+  ? <Image src={imgModule.default} alt={alt} class={resolvedClass} loading={loading} width={width} height={height} format="webp" {...rest} />
+  : <img src={src} alt={alt} class={resolvedClass} loading={loading} width={width} height={height} />
+}

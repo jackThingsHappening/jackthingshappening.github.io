@@ -1,4 +1,6 @@
 ---
+import OptimizedImg from './OptimizedImg.astro';
+
 export interface Props {
   items: Array<{
     title: string;
@@ -58,7 +60,7 @@ const currentPath = Astro.url.pathname;
             <div class="flex flex-wrap gap-4">
               {item.photoOptions.photos.map((photo) => {
                 const p = normalizePhoto(photo, item.title);
-                return <img src={p.src} alt={p.alt} class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />;
+                return <OptimizedImg src={p.src} alt={p.alt} class="rounded-xl w-full max-w-md h-auto object-cover" />;
               })}
             </div>
           </div>
@@ -87,7 +89,7 @@ const currentPath = Astro.url.pathname;
             <div class="flex flex-wrap gap-4">
               {item.photoOptions.photos.map((photo) => {
                 const p = normalizePhoto(photo, item.title);
-                return <img src={p.src} alt={p.alt} class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />;
+                return <OptimizedImg src={p.src} alt={p.alt} class="rounded-xl w-full max-w-md h-auto object-cover" />;
               })}
             </div>
           </div>
@@ -118,7 +120,7 @@ const currentPath = Astro.url.pathname;
             <div class="flex flex-wrap gap-4">
               {item.photoOptions.photos.map((photo) => {
                 const p = normalizePhoto(photo, item.title);
-                return <img src={p.src} alt={p.alt} class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />;
+                return <OptimizedImg src={p.src} alt={p.alt} class="rounded-xl w-full max-w-md h-auto object-cover" />;
               })}
             </div>
           </div>

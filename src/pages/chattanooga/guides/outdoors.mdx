@@ -175,6 +175,7 @@
   }
 ---
 import OptimizedImage from '../../../components/OptimizedImage.astro';
+import OptimizedImg from '../../../components/OptimizedImg.astro';
 import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatter.astro';
 
 <script type="application/ld+json" set:html={JSON.stringify({
@@ -300,8 +301,8 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
       <a href="/chattanooga/guides/tours#chickamauga-battlefield-tours" class="page-item-link text-logoDarkGreen underline">Tour Options</a>
     </div>
     <div class="flex flex-wrap justify-center gap-4 mt-6">
-      <img src="/images/chattanooga_guides/history/path.webp" alt="A Chickamauga Battlefield landscape photo of a bridge, creek and a worn in walking trail." class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />
-      <img src="/images/chattanooga_guides/outdoors/chickamauga-battlefield/tree-tunnel.jpg" alt="A scenic tree tunnel offers shade over a wide dirt trail at Chickamauga Battlefield park." class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />
+      <OptimizedImg src="/images/chattanooga_guides/history/path.webp" alt="A Chickamauga Battlefield landscape photo of a bridge, creek and a worn in walking trail." class="rounded-xl w-full max-w-md h-auto object-cover" />
+      <OptimizedImg src="/images/chattanooga_guides/outdoors/chickamauga-battlefield/tree-tunnel.jpg" alt="A scenic tree tunnel offers shade over a wide dirt trail at Chickamauga Battlefield park." class="rounded-xl w-full max-w-md h-auto object-cover" />
     </div>
   </div>
 
@@ -312,8 +313,8 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
       <a href="/chattanooga/guides/confections#ice-cream" class="page-item-link text-logoDarkGreen underline">Sweet Treats in St Elmo</a>
     </div>
     <div class="flex flex-wrap justify-center gap-4 mt-6">
-      <img src="/images/chattanooga_guides/outdoors/lookout-mtn/mountain-top.jpg" alt="Wide and long view of the entire city of Chattanooga from atop Lookout Mountain." class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />
-      <img src="/images/chattanooga_guides/outdoors/lookout-mtn/ga-tn.jpg" alt="A GA/TN sign on the Guild Hardy train indicating the crossover from Tennessee into Georgia." class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />
+      <OptimizedImg src="/images/chattanooga_guides/outdoors/lookout-mtn/mountain-top.jpg" alt="Wide and long view of the entire city of Chattanooga from atop Lookout Mountain." class="rounded-xl w-full max-w-md h-auto object-cover" />
+      <OptimizedImg src="/images/chattanooga_guides/outdoors/lookout-mtn/ga-tn.jpg" alt="A GA/TN sign on the Guild Hardy train indicating the crossover from Tennessee into Georgia." class="rounded-xl w-full max-w-md h-auto object-cover" />
     </div>
   </div>
 
@@ -321,8 +322,8 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
     <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Prentice Cooper State Forest<span class="color-pink ml-1"><b>.</b></span></h2>
     <p class="text-xl">A large Wildlife Management Area northwest of downtown Chattanooga, covering roughly 24,500 acres of rugged Cumberland Plateau terrain. Known for hunting access, long gravel roads that connect to trailheads and overlooks and designated OHV routes. Scenic overlooks along the plateau edge offer big views of the Tennessee River Gorge.</p>
     <div class="flex flex-wrap justify-center gap-4 mt-6">
-      <img src="/images/chattanooga_guides/outdoors/prentice-cooper/game-reserve-road.jpg" alt="View from Game Reserve Road into the Prentice Cooper Forest." class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />
-      <img src="/images/chattanooga_guides/outdoors/prentice-cooper/davis-pond-trail.jpg" alt="Turn off to the trail for Davis Pond in Prentice Cooper for backcountry camping." class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />
+      <OptimizedImg src="/images/chattanooga_guides/outdoors/prentice-cooper/game-reserve-road.jpg" alt="View from Game Reserve Road into the Prentice Cooper Forest." class="rounded-xl w-full max-w-md h-auto object-cover" />
+      <OptimizedImg src="/images/chattanooga_guides/outdoors/prentice-cooper/davis-pond-trail.jpg" alt="Turn off to the trail for Davis Pond in Prentice Cooper for backcountry camping." class="rounded-xl w-full max-w-md h-auto object-cover" />
     </div>
   </div>
 
@@ -333,8 +334,8 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
       <a href="/chattanooga/guides/confections#ice-cream" class="page-item-link text-logoDarkGreen underline">Nearby Sweet Treats</a>
     </div>
     <div class="flex flex-wrap justify-center gap-4 mt-6">
-      <img src="/images/chattanooga_guides/outdoors/stringers-ridge/trail-map.jpg" alt="The Stringers Ridge Trail map and connection details to White Oak Mountain." class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />
-      <img src="/images/chattanooga_guides/outdoors/stringers-ridge/trail-view.jpg" alt="A viewpoint from a biker on the trail at Stringers Ridge in Chattanooga." class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />
+      <OptimizedImg src="/images/chattanooga_guides/outdoors/stringers-ridge/trail-map.jpg" alt="The Stringers Ridge Trail map and connection details to White Oak Mountain." class="rounded-xl w-full max-w-md h-auto object-cover" />
+      <OptimizedImg src="/images/chattanooga_guides/outdoors/stringers-ridge/trail-view.jpg" alt="A viewpoint from a biker on the trail at Stringers Ridge in Chattanooga." class="rounded-xl w-full max-w-md h-auto object-cover" />
     </div>
   </div>
 
@@ -345,8 +346,8 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
       <a href="/chattanooga/guides/cloudland-canyon" class="page-item-link text-logoDarkGreen underline">Full Cloudland Canyon Guide</a>
     </div>
     <div class="flex flex-wrap justify-center gap-4 mt-6">
-      <img src="/images/chattanooga_guides/outdoors/cloudland/vista.webp" alt="Panoramic view of Cloudland Canyon from the West Rim trail" class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />
-      <img src="/images/chattanooga_guides/outdoors/cloudland/overlook-west-rim.webp" alt="Hiker at the West Rim overlook gazing into Cloudland Canyon" class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />
+      <OptimizedImg src="/images/chattanooga_guides/outdoors/cloudland/vista.webp" alt="Panoramic view of Cloudland Canyon from the West Rim trail" class="rounded-xl w-full max-w-md h-auto object-cover" />
+      <OptimizedImg src="/images/chattanooga_guides/outdoors/cloudland/overlook-west-rim.webp" alt="Hiker at the West Rim overlook gazing into Cloudland Canyon" class="rounded-xl w-full max-w-md h-auto object-cover" />
     </div>
   </div>
 
@@ -354,8 +355,8 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
     <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Raccoon Mountain<span class="color-pink ml-1"><b>.</b></span></h2>
     <p class="text-xl">Sits just west of downtown Chattanooga on Tennessee Valley Authority land, covering roughly 3,800 acres of rugged terrain. It's known for technical trail features and exposed boulders, making it one of the Southeast's notable mountain biking locations. A scenic loop road circles the mountain and doubles as a popular drive, road ride, or gravel bike loop, with trailhead access into the rocky terrain.</p>
     <div class="flex flex-wrap justify-center gap-4 mt-6">
-      <img src="/images/chattanooga_guides/outdoors/raccoon-mtn/gorge-overlook.jpg" alt="An expansive view into the gorge of the Tennessee River from a Raccoon Mountain trail." class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />
-      <img src="/images/chattanooga_guides/outdoors/raccoon-mtn/pond.jpg" alt="A view of a pond next to a Raccoon Mountain MTB and hiking trail." class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />
+      <OptimizedImg src="/images/chattanooga_guides/outdoors/raccoon-mtn/gorge-overlook.jpg" alt="An expansive view into the gorge of the Tennessee River from a Raccoon Mountain trail." class="rounded-xl w-full max-w-md h-auto object-cover" />
+      <OptimizedImg src="/images/chattanooga_guides/outdoors/raccoon-mtn/pond.jpg" alt="A view of a pond next to a Raccoon Mountain MTB and hiking trail." class="rounded-xl w-full max-w-md h-auto object-cover" />
     </div>
   </div>
 
@@ -368,8 +369,8 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
     <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Booker T. Washington State Park<span class="color-pink ml-1"><b>.</b></span></h2>
     <p class="text-xl">A lakeside state park northeast of downtown Chattanooga along Chickamauga Lake. In total the park encompasses roughly 350 acres. The park features a small network of wooded, multi-use trails, some with water views. The trail terrain is beginner friendly and popular for hiking, trail running and mountain biking.</p>
     <div class="flex flex-wrap justify-center gap-4 mt-6">
-      <img src="/images/chattanooga_guides/outdoors/booker-t-washington/shoreline.jpg" alt="Wooded shoreline along Chickamauga Lake at Booker T. Washington State Park" class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />
-      <img src="/images/chattanooga_guides/outdoors/booker-t-washington/water-view.jpg" alt="View of Chickamauga Lake from the Outer Loop trail" class="rounded-xl w-full max-w-md h-auto object-cover" loading="lazy" />
+      <OptimizedImg src="/images/chattanooga_guides/outdoors/booker-t-washington/shoreline.jpg" alt="Wooded shoreline along Chickamauga Lake at Booker T. Washington State Park" class="rounded-xl w-full max-w-md h-auto object-cover" />
+      <OptimizedImg src="/images/chattanooga_guides/outdoors/booker-t-washington/water-view.jpg" alt="View of Chickamauga Lake from the Outer Loop trail" class="rounded-xl w-full max-w-md h-auto object-cover" />
     </div>
   </div>
 </div>
