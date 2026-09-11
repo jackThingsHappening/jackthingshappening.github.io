@@ -281,7 +281,7 @@ const similarEvents = currentGenreTags.length > 0
 <article class={`max-w-5xl mx-auto px-3 text-xl tracking-wide ${!hasMetadata && !displaySeriesLabel ? 'pt-10' : ''}`}>
 
   <!-- Image -->
-  {hero && <img class="rounded-xl mx-auto" style="min-width: 80%;" loading="lazy" src={hero} alt={title} />}
+  {hero && <img class="rounded-xl mx-auto" style="min-width: 80%;" loading="eager" fetchpriority="high" src={hero} alt={title} />}
 
   <!-- YouTube Video -->
   {youtube && <div class="embed-responsive aspect-ratio-16/9 mt-6 lg:mt-12">
