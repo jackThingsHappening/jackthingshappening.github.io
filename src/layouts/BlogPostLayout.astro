@@ -80,14 +80,16 @@ const breadcrumbItems = pathParts.length >= 2
         document.head.appendChild(meta);
       }
     </script>
-    {pubDate && venue && (
+    {venue && (
       <script type="application/ld+json" set:html={JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Event",
         "name": title,
         "description": seoDescription || description || "",
-        "startDate": buildStartDate(pubDate, time),
-        "endDate": buildEndDate(pubDate, time),
+        ...(pubDate ? {
+          "startDate": buildStartDate(pubDate, time),
+          "endDate": buildEndDate(pubDate, time),
+        } : {}),
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
         "image": eventImage,
