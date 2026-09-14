@@ -1,0 +1,20 @@
+{
+  "name": "Hi-Fi Clyde's",
+  "type": "calendar",
+  "url": "https://www.hificlydeschattanooga.com/live-music",
+  "outputDir": "src/pages/chattanooga/events/hifi-clydes",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Hi-Fi Clyde's",
+    "address": "122 W Main Street, Chattanooga, TN 37408",
+    "iconPath": "/images/icons-new/music.png",
+    "eventLink": "https://www.hificlydeschattanooga.com/live-music",
+    "tags": [
+      { "type": "place", "tag": "hifi-clydes" },
+      { "type": "genre", "tag": "music" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-09-14"
+}
