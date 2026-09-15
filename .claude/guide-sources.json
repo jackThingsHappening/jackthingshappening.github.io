@@ -69,7 +69,7 @@
     "title": "An Interactive Guide to Breweries & Wineries Near Chattanooga",
     "topic": "breweries, craft beer taprooms, wineries, and cideries in and around Chattanooga, TN",
     "frequency_days": 30,
-    "last_checked": "2026-01-01"
+    "last_checked": "2026-09-15"
   },
   {
     "slug": "coffeeshops",
@@ -92,6 +92,14 @@
     "path": "src/pages/chattanooga/guides/restaurants-with-a-view.mdx",
     "title": "An Interactive Guide to Chattanooga Restaurants with a View",
     "topic": "restaurants with scenic views, rooftop dining, waterfront restaurants, and scenic eating spots in Chattanooga, TN",
+    "frequency_days": 30,
+    "last_checked": "2026-01-01"
+  },
+  {
+    "slug": "things-to-do",
+    "path": "src/pages/chattanooga/guides/things-to-do.mdx",
+    "title": "Things to Do in Chattanooga",
+    "topic": "overview of things to do, activities, attractions, and interactive guides in Chattanooga, TN",
     "frequency_days": 30,
     "last_checked": "2026-01-01"
   }
