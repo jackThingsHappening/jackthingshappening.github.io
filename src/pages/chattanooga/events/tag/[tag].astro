@@ -66,12 +66,17 @@ const title = cityNames[tag] ? `Events in ${displayTag}` : `${displayTag} Events
 const seoDescription = cityNames[tag]
   ? `Upcoming events in ${displayTag} near Chattanooga, TN.`
   : `${displayTag} events happening near Chattanooga, TN.`;
+
+const tagType = allEvents
+  .flatMap(e => e.frontmatter.tags ?? [])
+  .find(t => t.tag === tag)?.type ?? 'genre';
+const noindex = tagType === 'genre';
 ---
 
 <html lang="en" class="dot-grid-bg">
 <head>
   <BaseHead title={title} description={seoDescription} />
-  <meta name="robots" content="noindex, follow" />
+  {noindex && <meta name="robots" content="noindex, follow" />}
 </head>
 <body class="text-black font-body leading-normal personality-casual">
   <Nav />
