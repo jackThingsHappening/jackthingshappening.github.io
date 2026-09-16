@@ -8,6 +8,7 @@ allowed-tools:
   - Bash(git diff --name-only *)
   - Bash(git status *)
   - Bash(find *)
+  - Bash(python3 *)
 ---
 
 # /humanize — Rewrite content to match site voice

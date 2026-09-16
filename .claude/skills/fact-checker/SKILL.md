@@ -60,7 +60,7 @@ Use python3 or Bash to parse frontmatter fields without loading the Read tool fo
 
 ### Step 2 — Check pubDate
 
-If `pubDate` is present and earlier than today (2026-05-06), flag it as **stale** — no web fetch needed.
+If `pubDate` is present and earlier than today (get today's date with `date +%Y-%m-%d`), flag it as **stale** — no web fetch needed.
 
 ### Step 3 — Fetch eventLink
 

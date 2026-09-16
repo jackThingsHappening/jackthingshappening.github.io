@@ -44,7 +44,7 @@ Use WebFetch on the vendor's `url`. Read the content to understand:
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 7,
-  "last_checked": "2026-01-01"
+  "last_checked": "{today}"
 }
 ```
 
@@ -62,7 +62,7 @@ Use WebFetch on the vendor's `url`. Read the content to understand:
     }
   ],
   "frequency_days": 14,
-  "last_checked": "2026-01-01"
+  "last_checked": "{today}"
 }
 ```
 

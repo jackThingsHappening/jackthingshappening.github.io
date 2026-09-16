@@ -17,7 +17,7 @@ For any guide file NOT already in `guide-sources.json` (matched by path), add a 
 - `title`: read from the file's `title` frontmatter field
 - `topic`: infer from the title and slug — be specific, include "in Chattanooga, TN"
 - `frequency_days`: 30
-- `last_checked`: "2026-01-01" (so it gets picked up soon)
+- `last_checked`: "{today}" (use actual current date — new guides enter normal rotation)
 
 Write the updated array back to `.claude/guide-sources.json`.
 

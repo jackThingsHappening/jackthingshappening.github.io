@@ -74,7 +74,7 @@ Use the credentials from env vars:
 - `FB_PAGE_ID` — the page to post to
 - `FB_PAGE_ACCESS_TOKEN` — long-lived page access token
 
-Convert the approved date/time (CT = UTC-6 in summer / DST active June–November, UTC-5 in winter) to a Unix timestamp.
+Convert the approved date/time (CT = UTC-5 during DST / March–November, UTC-6 in winter) to a Unix timestamp.
 
 Facebook's scheduling window is 10 minutes to 30 days from now. Stay within 28 days to avoid edge-case rejections.
 
