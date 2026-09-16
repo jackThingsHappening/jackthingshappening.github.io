@@ -137,12 +137,12 @@ const subTitle = eventDateDetails && eventDateDetails.eventTitle ? eventDateDeta
   <!-- Tags Section -->
   <div class="flex items-center px-4 pb-5 pt-1 text-base">
     {post.tags && (
-      <div>
+      <div class="flex flex-wrap gap-y-2">
         {Array.isArray(post.tags) ? (
           post.tags.map((t) => {
             const highlight = t == highlighted ? 'font-semibold' : ''
             const tagHref = t.type === 'guide' ? `/chattanooga/guides/tag/${t.tag}` : `/chattanooga/events/tag/${t.tag}`;
-            return <a href={tagHref} class={`${highlight} bg-black text-white rounded transition-all duration-75 h-fit inline px-3 py-2 mr-2`}><span style="color: #3CB371; letter-spacing: 1px">#</span>{t.tag}</a>
+            return <a href={tagHref} class={`${highlight} bg-black text-white rounded transition-all duration-75 h-fit inline px-3 py-2 mr-2 whitespace-nowrap`}><span style="color: #3CB371; letter-spacing: 1px">#</span>{t.tag}</a>
           })
         ) : (
           <span>Tags are not an array.</span>

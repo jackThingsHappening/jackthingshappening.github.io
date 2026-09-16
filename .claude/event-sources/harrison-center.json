@@ -1,0 +1,20 @@
+{
+  "name": "Harrison Center",
+  "type": "calendar",
+  "url": "https://parks.hamiltontn.gov/calendar.aspx?CID=29",
+  "outputDir": "src/pages/chattanooga/events/harrison-center",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Harrison Center",
+    "address": "4005 Cromwell Rd, Chattanooga, TN 37421",
+    "iconPath": "/images/icons-new/calendar.png",
+    "eventLink": "https://parks.hamiltontn.gov/calendar.aspx?CID=29",
+    "tags": [
+      { "type": "place", "tag": "harrison-center" },
+      { "type": "genre", "tag": "live-events" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-01-01"
+}
