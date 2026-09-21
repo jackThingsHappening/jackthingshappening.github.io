@@ -36,8 +36,22 @@ const upcomingEvents = expandEvents(allEvents)
       new Date(b.pubDate + 'T00:00:00').getTime()
   );
 
-const pageTitle = `${venueData.name} Events — Chattanooga, TN | Things Happening`;
-const seoDescription = `Upcoming events at ${venueData.name} in Chattanooga, TN. Find dates, details, and tickets.`;
+function extractCityState(addr: string): string {
+  const parts = addr.split(',').map((s: string) => s.trim());
+  if (parts.length >= 3) {
+    const stateZip = parts[2].split(/\s+/);
+    return `${parts[1]}, ${stateZip[0]}`;
+  }
+  if (parts.length === 2) {
+    const stateZip = parts[1].split(/\s+/);
+    return `${parts[0]}, ${stateZip[0]}`;
+  }
+  return 'Chattanooga, TN';
+}
+
+const cityState = extractCityState(venueData.address);
+const pageTitle = `${venueData.name} Events — ${cityState} | Things Happening`;
+const seoDescription = `Upcoming events at ${venueData.name} in ${cityState}. Find dates, details, and tickets.`;
 
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venueData.address)}`;
 
