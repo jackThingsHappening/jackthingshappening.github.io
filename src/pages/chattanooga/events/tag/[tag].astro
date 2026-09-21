@@ -77,6 +77,32 @@ const noindex = tagType === 'genre';
 <head>
   <BaseHead title={title} description={seoDescription} />
   {noindex && <meta name="robots" content="noindex, follow" />}
+  {!noindex && (
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thingshappening.com" },
+            { "@type": "ListItem", "position": 2, "name": "Chattanooga", "item": "https://thingshappening.com/chattanooga" },
+            { "@type": "ListItem", "position": 3, "name": "Events", "item": "https://thingshappening.com/chattanooga/events/page/1" },
+            { "@type": "ListItem", "position": 4, "name": title, "item": `https://thingshappening.com/chattanooga/events/tag/${tag}` }
+          ]
+        },
+        ...(allPostsIncludingMultipleDates.length > 0 ? [{
+          "@type": "ItemList",
+          "name": title,
+          "description": seoDescription,
+          "itemListElement": allPostsIncludingMultipleDates.slice(0, 10).map((e, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "url": `https://thingshappening.com${e.url}`
+          }))
+        }] : [])
+      ]
+    })} />
+  )}
 </head>
 <body class="text-black font-body leading-normal personality-casual">
   <Nav />

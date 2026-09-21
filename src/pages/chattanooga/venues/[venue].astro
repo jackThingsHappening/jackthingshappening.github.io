@@ -41,15 +41,27 @@ const seoDescription = `Upcoming events at ${venueData.name} in Chattanooga, TN.
 
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venueData.address)}`;
 
+function parseVenueAddress(addr: string) {
+  const parts = addr.split(',').map((s: string) => s.trim());
+  if (parts.length >= 3) {
+    const stateZip = parts[2].trim().split(/\s+/);
+    return {
+      '@type': 'PostalAddress',
+      streetAddress: parts[0],
+      addressLocality: parts[1],
+      addressRegion: stateZip[0] || 'TN',
+      postalCode: stateZip[1] || '',
+      addressCountry: 'US',
+    };
+  }
+  return { '@type': 'PostalAddress', streetAddress: addr, addressLocality: 'Chattanooga', addressRegion: 'TN', addressCountry: 'US' };
+}
+
 const schema = {
   '@context': 'https://schema.org',
   '@type': venueData.schemaType,
   name: venueData.name,
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: venueData.address,
-    addressCountry: 'US',
-  },
+  address: parseVenueAddress(venueData.address),
   url: venueData.website,
 };
 ---
