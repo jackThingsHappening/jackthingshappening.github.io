@@ -7,7 +7,7 @@ import Footer from '../components/Footer/Footer.astro';
 const {content} = Astro.props;
 let {address, author, eventLink, readTime, originalDate, matchedDetails, eventDatesDetails, eventDates, entranceCost, lastUpdated, ticketsLink, tags, title, time, description, pubDate, venue, venueDetails, hero, youtube,
   // Additional optional metadata
-  seoDescription, featured, geoCoverage, neighborhoods, seasonality, accessibilityNotes, parking, kidFriendly, petFriendly, bestFor, sources, pageItems, hideSignup, ogImage} = content;
+  seoDescription, seoTitle, featured, geoCoverage, neighborhoods, seasonality, accessibilityNotes, parking, kidFriendly, petFriendly, bestFor, sources, pageItems, hideSignup, ogImage} = content;
 
 title = title ? title : "";
 
@@ -90,7 +90,7 @@ const breadcrumbItems = pathParts.length >= 2
 ---
 <html lang={ content.lang || 'en' }>
   <head>
-    <BaseHead title={title} description={seoDescription || description} ogImage={ogImage ? `https://thingshappening.com${ogImage}` : undefined} />
+    <BaseHead title={seoTitle || title} description={seoDescription || description} ogImage={ogImage ? `https://thingshappening.com${ogImage}` : undefined} />
     <script is:inline>
       if (window.location.search.includes('tags=') || window.location.search.includes('date=')) {
         var meta = document.createElement('meta');
@@ -181,7 +181,8 @@ const breadcrumbItems = pathParts.length >= 2
             "url": "https://thingshappening.com",
             "email": "jack@thingshappening.com",
             "description": "Local events and guides publisher for Chattanooga, TN.",
-            "areaServed": { "@type": "City", "name": "Chattanooga" }
+            "areaServed": { "@type": "City", "name": "Chattanooga", "sameAs": "https://www.wikidata.org/wiki/Q79578" },
+            "sameAs": ["https://www.facebook.com/people/ThingsHappening-Chattanooga/61559147467507/"]
           },
           {
             "@type": "Person",
