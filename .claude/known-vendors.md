@@ -20,6 +20,7 @@
 | crabtree-farms | Crabtree Farms |
 | creative-discovery-museum | Creative Discovery Museum |
 | first-horizon | First Horizon Pavilion |
+| gate-11-distillery | Gate 11 Distillery |
 | five-wits-brewing | Five Wits Brewing Company |
 | hifi-clydes | Hi-Fi Clyde's |
 | high-point-climbing | High Point Climbing |

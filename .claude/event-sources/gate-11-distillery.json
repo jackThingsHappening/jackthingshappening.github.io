@@ -1,0 +1,40 @@
+{
+  "name": "Gate 11 Distillery",
+  "type": "recurring",
+  "url": "https://www.gate11distillery.com/events",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/gate-11-distillery/monday-blues-jam.mdx",
+      "matchHint": "Weekly Monday Blues Jam, 7:30-10pm, hosted by Robin Baker with local musicians and open sit-in slots."
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/gate-11-distillery/jest-in-time-comedy-improv.mdx",
+      "matchHint": "Weekly Tuesday comedy improv competition 'Jest in Time', signups 7:30pm, show 8pm, hosted by Shellyta Chatman."
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/gate-11-distillery/cocktail-class.mdx",
+      "matchHint": "Weekly Thursday cocktail class, 6-8pm, make two seasonal cocktails with Gate 11 spirits. $30, 21+."
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/gate-11-distillery/drag-bingo.mdx",
+      "matchHint": "Weekly Saturday 'Distillery Divas and Drag Bingo', 8-10pm, hosted by Anastasia L'amour. 18+."
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/gate-11-distillery/eight-at-the-gate-comedy.mdx",
+      "matchHint": "Monthly (last Sunday) 'E.IGHT at the GATE' comedy showcase, 7:30-10pm, eight performers, free, hosted by Alex Hutchinson."
+    }
+  ],
+  "defaultFrontmatter": {
+    "venue": "Gate 11 Distillery",
+    "address": "1400 Market Street, Chattanooga, TN 37408",
+    "iconPath": "/images/icons-new/beer.png",
+    "eventLink": "https://www.gate11distillery.com/events",
+    "tags": [
+      { "type": "place", "tag": "gate-11-distillery" },
+      { "type": "genre", "tag": "food-drink" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-09-21"
+}
