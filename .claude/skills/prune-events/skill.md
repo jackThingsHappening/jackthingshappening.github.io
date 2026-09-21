@@ -30,7 +30,13 @@ Skip `index.mdx` files — those are venue pages, not individual events.
 
 For each published event file, check if the event title (from the file's `title` frontmatter) still appears on the live calendar.
 
-If the title is NOT found on the live calendar, set `published: false` in that file's frontmatter.
+If the title is NOT found on the live calendar, check the file's `pubDate` frontmatter field:
+
+- If `pubDate` is today or in the future — skip it. Do not unpublish. Future events may not appear on the live calendar yet.
+- If `pubDate` is within the last 30 days — skip it. Do not unpublish. This preserves recently-past events so indexed pages do not 404.
+- If `pubDate` is more than 30 days in the past (or there is no `pubDate`) — set `published: false`.
+
+Only unpublish when all three conditions are met: absent from live calendar, has a pubDate, and that pubDate is more than 30 days ago.
 
 Use judgment when matching — minor wording differences are fine, but a completely absent name is stale.
 
