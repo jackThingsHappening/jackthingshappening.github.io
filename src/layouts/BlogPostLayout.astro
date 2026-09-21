@@ -32,9 +32,18 @@ function buildStartDate(date: string, timeField: string | undefined): string {
 function buildEndDate(date: string, timeField: string | undefined): string {
   if (!timeField || timeField.toLowerCase() === 'varies') return date;
   const parts = timeField.split(/\s*(?:to|-)\s*/i);
-  if (parts.length < 2) return date;
-  const t = parseTimeComponent(parts[parts.length - 1]);
-  return t ? `${date}T${t}` : date;
+  if (parts.length >= 2) {
+    const t = parseTimeComponent(parts[parts.length - 1]);
+    if (t) return `${date}T${t}`;
+  }
+  // No end time given — default to start time + 2 hours
+  const startT = parseTimeComponent(parts[0]);
+  if (startT) {
+    const [hStr, mStr] = startT.split(':');
+    const endHour = (parseInt(hStr) + 2) % 24;
+    return `${date}T${String(endHour).padStart(2, '0')}:${mStr}:00`;
+  }
+  return date;
 }
 
 function parsePostalAddress(addr: string | undefined) {
