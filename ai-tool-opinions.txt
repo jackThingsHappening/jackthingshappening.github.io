@@ -1,0 +1,55 @@
+AI Tool Evaluations for Things Happening
+=========================================
+
+Jev (TypeSafe AI)
+-----------------
+Not a fit. Jev is a structured decision model — it classifies, routes, and
+scores data in typed schemas at high speed. It gives up text generation to
+gain reliability. The content pipeline needs the opposite: prose generation
+for event descriptions, guide copy, and editorials. Jev would only be
+relevant for fast classification of scraped event data into categories, but
+that is not a bottleneck here.
+
+Codex (OpenAI)
+--------------
+No clear benefit over what is already running. Codex is a software
+development agent. Content generation is a side capability, not its
+strength. The event scraping and guide writing workflows are already tuned
+to this codebase on Claude Code. Codex would start from scratch on a
+different platform. The only narrow angle is computer-use automation for
+vendors whose sites are hard to scrape with raw fetches — but Claude has
+similar capabilities.
+
+Grok (xAI)
+----------
+Not a fit. Grok's strengths are coding agents, image and video generation,
+and X platform integration. None of those map to what the automation does
+here. The 2M token context window is interesting for large codebase tasks,
+but the event and guide pipeline is well within Claude's limits. The tight
+X/Tesla ecosystem integration is not relevant.
+
+Gemini (Google)
+---------------
+Most legitimate competitor to Claude for this use case. Strong prose
+generation, large context window, agentic tool use, and deep Google
+integration (Search Console, GA4) that could complement the SEO work.
+But it is a lateral move. The automation is built around Claude Code's
+skill system with prompts tuned to this codebase and voice. Rebuilding
+that on Gemini's agent platform would take real effort for no clear
+content quality gain. Worth revisiting if tighter GSC/GA4 integration
+becomes a priority in the guide refresh workflow.
+
+OpenRouter
+----------
+A unified API gateway for LLMs. Instead of integrating each provider
+separately, you send all requests to one endpoint and pick the model by
+name. It handles auth, routing, and billing across providers. Main uses:
+swapping models without changing code, fallbacks when a provider is down,
+cost optimization by routing cheap tasks to cheaper models, and access to
+smaller open-source models. For Things Happening, the only relevant angle
+is experimenting with cheaper models for high-volume, low-stakes tasks
+like bulk event description formatting while keeping Claude for
+quality-sensitive work. Not directly applicable since the automation runs
+via Claude Code Remote rather than a custom API integration.
+
+
