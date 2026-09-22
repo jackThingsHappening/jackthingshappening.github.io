@@ -2,6 +2,7 @@
 import EmailSignup from './EmailSignup.astro'
 import dayjs from 'dayjs'
 import { venueBySlug } from '../data/venues'
+import SaveToCalendar from './SaveToCalendar.astro'
 
 export interface Props {
   // Core post metadata
@@ -144,91 +145,6 @@ const similarEvents = currentGenreTags.length > 0
       .slice(0, 3)
   : [];
 
-function buildCalendarDates(dateStr: string, timeStr?: string): { start: string; end: string; allDay: boolean } {
-  const compact = dateStr.replace(/-/g, '');
-  const pad = (n: number) => String(n).padStart(2, '0');
-
-  const parseT = (t: string): [number, number] | null => {
-    const u = t.trim().toUpperCase().replace(/\s/g, '');
-    const pm = u.endsWith('PM');
-    const am = u.endsWith('AM');
-    const d = u.replace(/[APM]/g, '');
-    const [hS, mS = '00'] = d.split(':');
-    const h = parseInt(hS), m = parseInt(mS);
-    if (isNaN(h)) return null;
-    let hour = h;
-    if (pm && h !== 12) hour = h + 12;
-    if (am && h === 12) hour = 0;
-    return [hour, m];
-  };
-
-  const nextDay = () => {
-    const d = new Date(dateStr + 'T12:00:00');
-    d.setDate(d.getDate() + 1);
-    return d.toISOString().slice(0, 10).replace(/-/g, '');
-  };
-
-  if (!timeStr) return { start: compact, end: nextDay(), allDay: true };
-
-  const parts = timeStr.split(/\s*[-–—]\s*/);
-  if (parts.length === 2) {
-    let s = parts[0].trim(), e = parts[1].trim();
-    if (!/[AaPpMm]/.test(s) && /[AaPpMm]/.test(e)) {
-      s += ' ' + (e.toUpperCase().includes('PM') ? 'PM' : 'AM');
-    }
-    const sp = parseT(s), ep = parseT(e);
-    if (sp && ep) return {
-      start: `${compact}T${pad(sp[0])}${pad(sp[1])}00`,
-      end: `${compact}T${pad(ep[0])}${pad(ep[1])}00`,
-      allDay: false,
-    };
-  }
-
-  const p = parseT(timeStr);
-  if (p) return {
-    start: `${compact}T${pad(p[0])}${pad(p[1])}00`,
-    end: `${compact}T${pad((p[0] + 2) % 24)}${pad(p[1])}00`,
-    allDay: false,
-  };
-
-  return { start: compact, end: nextDay(), allDay: true };
-}
-
-const calDates = pubDate ? buildCalendarDates(pubDate, time ?? undefined) : null;
-const calLoc = encodeURIComponent(address ?? venue ?? '');
-const calDetails = encodeURIComponent(eventLink ?? '');
-const calTitle = encodeURIComponent(title);
-
-const googleCalUrl = calDates
-  ? `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${calTitle}&dates=${calDates.start}/${calDates.end}${calLoc ? `&location=${calLoc}` : ''}${calDetails ? `&details=${calDetails}` : ''}`
-  : null;
-
-const fmtOutlook = (s: string) => s.length === 8
-  ? `${s.slice(0,4)}-${s.slice(4,6)}-${s.slice(6,8)}`
-  : `${s.slice(0,4)}-${s.slice(4,6)}-${s.slice(6,8)}T${s.slice(9,11)}:${s.slice(11,13)}:00`;
-
-const outlookCalUrl = calDates
-  ? `https://outlook.live.com/calendar/0/deeplink/compose?subject=${calTitle}&startdt=${fmtOutlook(calDates.start)}&enddt=${fmtOutlook(calDates.end)}${calLoc ? `&location=${calLoc}` : ''}${calDetails ? `&body=${calDetails}` : ''}`
-  : null;
-
-const icsHref = calDates ? (() => {
-  const esc = (s: string) => s.replace(/[,;\\]/g, c => '\\' + c);
-  const lines = [
-    'BEGIN:VCALENDAR',
-    'VERSION:2.0',
-    'PRODID:-//ThingsHappening//EN',
-    'BEGIN:VEVENT',
-    `SUMMARY:${esc(title)}`,
-    calDates.allDay ? `DTSTART;VALUE=DATE:${calDates.start}` : `DTSTART:${calDates.start}`,
-    calDates.allDay ? `DTEND;VALUE=DATE:${calDates.end}` : `DTEND:${calDates.end}`,
-    (address ?? venue) ? `LOCATION:${esc(address ?? venue ?? '')}` : null,
-    eventLink ? `URL:${eventLink}` : null,
-    eventLink ? `DESCRIPTION:${eventLink}` : null,
-    'END:VEVENT',
-    'END:VCALENDAR',
-  ].filter(Boolean).join('\r\n');
-  return `data:text/calendar;charset=utf8,${encodeURIComponent(lines)}`;
-})() : null;
 ---
 <div class={`header-styles pt-14 pb-14 lg:flex-wrap md:flex-wrap sm:flex-nowrap text-xl ${!hasMetadata && !displaySeriesLabel ? 'mb-0' : 'mb-10'}`}>
   <header class="max-w-5xl content max-w-5xl mx-auto px-3 text-3xl tracking-wide">
@@ -273,27 +189,22 @@ const icsHref = calDates ? (() => {
       }}
     </div>
     {(pathname?.includes('/events/') || pathname?.includes('/guides/')) && (
-      <div class="mt-3 flex flex-wrap gap-2">
-        {pubDate && googleCalUrl && (
-          <>
-            <a href={googleCalUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm text-white hover:text-customGreen1 transition-colors border border-gray-300 hover:border-customGreen1 rounded-full px-4 py-2 no-underline">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Google
-            </a>
-            <a href={icsHref} download="event.ics" class="inline-flex items-center gap-1.5 text-sm text-white hover:text-customGreen1 transition-colors border border-gray-300 hover:border-customGreen1 rounded-full px-4 py-2 no-underline">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Apple
-            </a>
-            <a href={outlookCalUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-sm text-white hover:text-customGreen1 transition-colors border border-gray-300 hover:border-customGreen1 rounded-full px-4 py-2 no-underline">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Outlook
-            </a>
-          </>
+      <div class="mt-3 flex flex-wrap gap-2 items-center">
+        {pubDate && (
+          <SaveToCalendar
+            title={title}
+            pubDate={pubDate}
+            time={time}
+            venue={venue}
+            address={address}
+            description={seoDescription}
+            faded={false}
+          />
         )}
-        <div id="add-to-cal-wrap" class="contents"></div>
+        <div id="add-to-cal-wrap"></div>
         <button id="copy-link-btn" class="inline-flex items-center gap-1.5 text-sm text-white hover:text-customGreen1 transition-colors cursor-pointer border border-gray-300 hover:border-customGreen1 rounded-full px-5 py-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-          <span id="copy-link-label">Link</span>
+          <span id="copy-link-label"></span>
         </button>
       </div>
     )}
@@ -377,7 +288,7 @@ const icsHref = calDates ? (() => {
     copyBtn.addEventListener('click', () => {
       navigator.clipboard.writeText(window.location.href).then(() => {
         copyLabel.textContent = 'Copied!';
-        setTimeout(() => { copyLabel.textContent = 'Link'; }, 2000);
+        setTimeout(() => { copyLabel.textContent = ''; }, 2000);
       });
     });
   }
@@ -435,10 +346,6 @@ const icsHref = calDates ? (() => {
       const cd = buildCD(pickedDate, timeStr);
       const enc = encodeURIComponent;
       const gUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${enc(evTitle)}&dates=${cd.start}/${cd.end}${evAddress ? `&location=${enc(evAddress)}` : ''}${evLink ? `&details=${enc(evLink)}` : ''}`;
-      const fmtO = (s: string) => s.length === 8
-        ? `${s.slice(0,4)}-${s.slice(4,6)}-${s.slice(6,8)}`
-        : `${s.slice(0,4)}-${s.slice(4,6)}-${s.slice(6,8)}T${s.slice(9,11)}:${s.slice(11,13)}:00`;
-      const oUrl = `https://outlook.live.com/calendar/0/deeplink/compose?subject=${enc(evTitle)}&startdt=${fmtO(cd.start)}&enddt=${fmtO(cd.end)}${evAddress ? `&location=${enc(evAddress)}` : ''}${evLink ? `&body=${enc(evLink)}` : ''}`;
       const esc = (s: string) => s.replace(/[,;\\]/g, c => '\\' + c);
       const icsLines = [
         'BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//ThingsHappening//EN', 'BEGIN:VEVENT',
@@ -452,9 +359,7 @@ const icsHref = calDates ? (() => {
       ].filter(Boolean).join('\r\n');
       const iHref = `data:text/calendar;charset=utf8,${encodeURIComponent(icsLines)}`;
 
-      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`;
-      const cls = 'inline-flex items-center gap-1.5 text-sm text-white hover:text-customGreen1 transition-colors border border-gray-300 hover:border-customGreen1 rounded-full px-4 py-2 no-underline';
-      calWrap.innerHTML = `<a href="${gUrl}" target="_blank" rel="noopener noreferrer" class="${cls}">${svg} Google</a><a href="${iHref}" download="event.ics" class="${cls}">${svg} Apple</a><a href="${oUrl}" target="_blank" rel="noopener noreferrer" class="${cls}">${svg} Outlook</a>`;
+      calWrap.innerHTML = `<details class="save-to-calendar"><summary class="list-none cursor-pointer opacity-30 hover:opacity-70 transition-opacity duration-75"><img src="/images/icons-new/calendar.png" class="w-8 h-8" alt="Save to calendar" /></summary><div class="mt-2 flex flex-col gap-1 text-sm"><a href="${gUrl}" target="_blank" rel="noopener noreferrer" class="text-customGreen1 hover:underline whitespace-nowrap">Google</a><a href="${iHref}" download="event.ics" class="text-customGreen1 hover:underline whitespace-nowrap">Apple</a></div></details>`;
     }
   }
 </script>

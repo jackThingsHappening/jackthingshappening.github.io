@@ -1,0 +1,102 @@
+---
+export interface Props {
+  title: string;
+  pubDate: string;
+  time?: string;
+  venue?: string;
+  address?: string;
+  description?: string;
+  faded?: boolean;
+}
+
+const { title, pubDate, time, venue, address, description, faded = true } = Astro.props;
+
+function buildCalendarDates(dateStr: string, timeStr?: string) {
+  const compact = dateStr.replace(/-/g, '');
+  const pad = (n: number) => String(n).padStart(2, '0');
+
+  const parseT = (t: string): [number, number] | null => {
+    const u = t.trim().toUpperCase().replace(/\s/g, '');
+    const pm = u.endsWith('PM');
+    const am = u.endsWith('AM');
+    const d = u.replace(/[APM]/g, '');
+    const [hS, mS = '00'] = d.split(':');
+    const h = parseInt(hS), m = parseInt(mS);
+    if (isNaN(h)) return null;
+    let hour = h;
+    if (pm && h !== 12) hour = h + 12;
+    if (am && h === 12) hour = 0;
+    return [hour, m];
+  };
+
+  const nextDay = () => {
+    const d = new Date(dateStr + 'T12:00:00');
+    d.setDate(d.getDate() + 1);
+    return d.toISOString().slice(0, 10).replace(/-/g, '');
+  };
+
+  if (!timeStr) return { start: compact, end: nextDay(), allDay: true };
+
+  const parts = timeStr.split(/\s*[-–—]\s*/);
+  if (parts.length === 2) {
+    let s = parts[0].trim(), e = parts[1].trim();
+    if (!/[AaPpMm]/.test(s) && /[AaPpMm]/.test(e)) {
+      s += ' ' + (e.toUpperCase().includes('PM') ? 'PM' : 'AM');
+    }
+    const sp = parseT(s), ep = parseT(e);
+    if (sp && ep) return {
+      start: `${compact}T${pad(sp[0])}${pad(sp[1])}00`,
+      end: `${compact}T${pad(ep[0])}${pad(ep[1])}00`,
+      allDay: false,
+    };
+  }
+
+  const p = parseT(timeStr);
+  if (p) return {
+    start: `${compact}T${pad(p[0])}${pad(p[1])}00`,
+    end: `${compact}T${pad((p[0] + 2) % 24)}${pad(p[1])}00`,
+    allDay: false,
+  };
+
+  return { start: compact, end: nextDay(), allDay: true };
+}
+
+const calDates = buildCalendarDates(pubDate, time);
+const loc = [venue, address].filter(Boolean).join(', ');
+
+const gcParams = new URLSearchParams({
+  action: 'TEMPLATE',
+  text: title,
+  dates: `${calDates.start}/${calDates.end}`,
+  ...(loc ? { location: loc } : {}),
+  ...(description ? { details: description } : {}),
+});
+const googleCalUrl = `https://calendar.google.com/calendar/render?${gcParams.toString()}`;
+
+const esc = (s: string) => s.replace(/[,;\\]/g, (c: string) => '\\' + c);
+const icsLines = [
+  'BEGIN:VCALENDAR',
+  'VERSION:2.0',
+  'PRODID:-//ThingsHappening//EN',
+  'BEGIN:VEVENT',
+  `SUMMARY:${esc(title)}`,
+  calDates.allDay ? `DTSTART;VALUE=DATE:${calDates.start}` : `DTSTART:${calDates.start}`,
+  calDates.allDay ? `DTEND;VALUE=DATE:${calDates.end}` : `DTEND:${calDates.end}`,
+  loc ? `LOCATION:${esc(loc)}` : null,
+  'END:VEVENT',
+  'END:VCALENDAR',
+].filter(Boolean).join('\r\n');
+
+const icsHref = `data:text/calendar;charset=utf-8,${encodeURIComponent(icsLines)}`;
+const icsFilename = `${title.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 50)}.ics`;
+---
+
+<details class="save-to-calendar">
+  <summary class={`list-none cursor-pointer transition-opacity duration-75 ${faded ? 'opacity-30 hover:opacity-70' : 'opacity-100 hover:opacity-80'}`}>
+    <img src="/images/icons-new/calendar.png" class="w-8 h-8" style={faded ? '' : 'filter: brightness(0) invert(1)'} alt="Save to calendar" />
+  </summary>
+  <div class="mt-2 flex flex-col gap-1 text-sm">
+    <a href={googleCalUrl} target="_blank" rel="noopener noreferrer" class="text-customGreen1 hover:underline whitespace-nowrap">Google</a>
+    <a href={icsHref} download={icsFilename} class="text-customGreen1 hover:underline whitespace-nowrap">Apple</a>
+  </div>
+</details>
