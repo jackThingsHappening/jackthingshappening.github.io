@@ -1,5 +1,5 @@
 ---
-  title: "An Interactive Guide to Chattanooga Restaurants with a View: 13 Spots"
+  title: "Restaurants with a View in Chattanooga, TN — 13 Locations"
   published: true
   lastUpdated: "05/19/2026"
   originalDate: "05/08/2026"
@@ -39,8 +39,17 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
   "@type": "ItemList",
   "name": "Chattanooga Restaurants with a View Guide",
   "description": "Interactive listings of Chattanooga restaurants and bars with views: river waterfront, rooftops, Lookout Mountain, and bluff-top dining.",
-  "numberOfItems": 13,
-  "url": "https://thingshappening.com/chattanooga/guides/restaurants-with-a-view"
+  "numberOfItems": (frontmatter.pageItems || []).length,
+  "url": "https://thingshappening.com/chattanooga/guides/restaurants-with-a-view",
+  "itemListElement": (frontmatter.pageItems || []).map(item => ({
+    "@type": "ListItem",
+    "position": item.order,
+    "item": {
+      "@type": "Restaurant",
+      "name": item.title,
+      "url": (item.links || []).find(l => l.text === "Website")?.link || (item.links || [])[0]?.link || ""
+    }
+  }))
 })} />
 
 <div class="max-w-6xl mx-auto px-3">

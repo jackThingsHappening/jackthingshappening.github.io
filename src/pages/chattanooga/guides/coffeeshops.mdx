@@ -1,5 +1,5 @@
 ---
-  title: "An Interactive Guide to Chattanooga Coffee: 31 Shops"
+  title: "Local Coffee Shops in Chattanooga, TN — 31 Locations"
   published: true
   lastUpdated: "09/22/2026"
   originalDate: "03/30/2026"
@@ -58,8 +58,17 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
   "@type": "ItemList",
   "name": "Chattanooga Coffee Shop Guide",
   "description": "Interactive listings of coffee shops, roasters, and cafes in metro Chattanooga.",
-  "numberOfItems": 31,
-  "url": "https://thingshappening.com/chattanooga/guides/coffeeshops"
+  "numberOfItems": (frontmatter.pageItems || []).length,
+  "url": "https://thingshappening.com/chattanooga/guides/coffeeshops",
+  "itemListElement": (frontmatter.pageItems || []).map(item => ({
+    "@type": "ListItem",
+    "position": item.order,
+    "item": {
+      "@type": "CafeOrCoffeeShop",
+      "name": item.title,
+      "url": (item.links || []).find(l => l.text === "Website")?.link || (item.links || [])[0]?.link || ""
+    }
+  }))
 })} />
 
 <div class="max-w-6xl mx-auto px-3">

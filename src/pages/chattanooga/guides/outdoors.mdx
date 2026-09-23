@@ -1,5 +1,5 @@
 ---
-  title: "An Interactive Guide to Chattanooga Outdoors: 74 Adventures"
+  title: "Outdoor Activities in Chattanooga, TN — 74 Adventures"
   seoDescription: "The fastest way to find your next outdoor adventures in Chattanooga."
   published: true
   lastUpdated: "09/06/2026"
@@ -181,24 +181,20 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
 
 <script type="application/ld+json" set:html={JSON.stringify({
   "@context": "https://schema.org",
-  "@type": "TouristAttraction",
+  "@type": "ItemList",
   "name": "Chattanooga Outdoor Adventures Interactive Guide",
   "description": "An interactive guide to outdoor adventures and activities in Chattanooga including hiking, kayaking, rock climbing, biking and nature exploration.",
+  "numberOfItems": (frontmatter.pageItems || []).length,
   "url": "https://thingshappening.com/chattanooga/guides/outdoors",
-  "touristType": ["Adventure seekers", "Outdoor enthusiasts", "Families", "Naturalists"],
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "35.0456",
-    "longitude": "-85.3097"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Chattanooga",
-    "addressRegion": "TN",
-    "addressCountry": "US"
-  },
-  "isAccessibleForFree": true,
-  "publicAccess": true
+  "itemListElement": (frontmatter.pageItems || []).map(item => ({
+    "@type": "ListItem",
+    "position": item.order,
+    "item": {
+      "@type": "TouristAttraction",
+      "name": item.title,
+      "url": (item.links || []).find(l => l.text === "Website")?.link || (item.links || [])[0]?.link || ""
+    }
+  }))
 })} />
 
 <div class="max-w-6xl mx-auto px-3">

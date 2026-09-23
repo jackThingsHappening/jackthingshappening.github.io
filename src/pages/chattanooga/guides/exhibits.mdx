@@ -1,5 +1,5 @@
 ---
-  title: "An Interactive Guide to 19 Chattanooga Exhibits"
+  title: "Museums & Exhibits in Chattanooga, TN — 19 Locations"
   published: true
   lastUpdated: "05/20/2026"
   originalDate: "05/09/2026"
@@ -45,8 +45,17 @@ import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatt
   "@type": "ItemList",
   "name": "Chattanooga Museums & Exhibits Guide",
   "description": "Interactive guide to museums and exhibits in Chattanooga: art, history, science, outdoor sculpture, and kid-friendly attractions.",
-  "numberOfItems": 19,
-  "url": "https://thingshappening.com/chattanooga/guides/exhibits"
+  "numberOfItems": (frontmatter.pageItems || []).length,
+  "url": "https://thingshappening.com/chattanooga/guides/exhibits",
+  "itemListElement": (frontmatter.pageItems || []).map(item => ({
+    "@type": "ListItem",
+    "position": item.order,
+    "item": {
+      "@type": "Museum",
+      "name": item.title,
+      "url": (item.links || []).find(l => l.text === "Website")?.link || (item.links || [])[0]?.link || ""
+    }
+  }))
 })} />
 
 <div class="max-w-6xl mx-auto px-3">
