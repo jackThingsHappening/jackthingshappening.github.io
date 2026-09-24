@@ -1,0 +1,20 @@
+{
+  "name": "Nightfall",
+  "type": "calendar",
+  "url": "https://www.nightfallchattanooga.com/2026-featured-bands",
+  "outputDir": "src/pages/chattanooga/events/nightfall",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Nightfall at Miller Plaza",
+    "address": "850 Market St, Chattanooga, TN 37402",
+    "iconPath": "/images/icons-new/music.png",
+    "eventLink": "https://www.nightfallchattanooga.com/",
+    "tags": [
+      { "type": "place", "tag": "nightfall" },
+      { "type": "genre", "tag": "music" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-09-24"
+}
