@@ -1,0 +1,28 @@
+{
+  "name": "Chattanooga Cars and Coffee",
+  "type": "recurring",
+  "url": "https://chattanoogacarsandcoffee.com/2026-dates",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/chattanooga-cars-and-coffee/cars-and-coffee-october-2026.mdx",
+      "matchHint": "October 18, 2026 monthly Cars and Coffee, 3rd Sunday, 8am-12pm at Chattanooga State Campus. Check site for themed focus."
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/chattanooga-cars-and-coffee/cars-and-coffee-november-2026.mdx",
+      "matchHint": "November 15, 2026 monthly Cars and Coffee, 3rd Sunday, 8am-12pm at Chattanooga State Campus. Final event of the 2026 season."
+    }
+  ],
+  "defaultFrontmatter": {
+    "venue": "Chattanooga Cars and Coffee",
+    "address": "4501 Amnicola Hwy, Chattanooga, TN 37406",
+    "iconPath": "/images/icons-new/car.png",
+    "eventLink": "https://chattanoogacarsandcoffee.com/2026-dates",
+    "tags": [
+      { "type": "place", "tag": "chattanooga-cars-and-coffee" },
+      { "type": "genre", "tag": "community" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 30,
+  "last_checked": "2026-09-25"
+}

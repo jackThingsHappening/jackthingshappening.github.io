@@ -18,3 +18,7 @@
 | 2026-07-12 10am CT | content-spotlight | Waterfalls Trail at Cloudland Canyon | cloudland-canyon guide |
 | 2026-06-28 11:15am CT | content-spotlight | Julie Darling Donuts | confections guide |
 | 2026-07-08 12:15pm CT | audience-question | Is there anything happening this summer we should be listing? | thingshappening.com |
+| 2026-09-28 9:45am CT | guide-promotion | Museums & Exhibits guide; Bigfoot callout | exhibits guide |
+| 2026-10-06 10:45am CT | feature-callout | This Weekend view | events page |
+| 2026-09-25 (live) | events | This weekend: Market, Nooga Vintage Bazaar, Lula Lake | events page |
+| 2026-09-26 (live) | guide-promotion | 7 coffee roasters; Roasts here filter | coffeeshops guide |

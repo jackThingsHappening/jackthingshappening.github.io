@@ -1,0 +1,34 @@
+name: FB Weekly Posts
+
+on:
+  schedule:
+    - cron: '0 0 * * 1'  # midnight UTC Monday = 7pm ET Sunday
+  workflow_dispatch:
+
+jobs:
+  schedule-posts:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Schedule weekly posts
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          claude -p "/fb-post-weekly" --dangerously-skip-permissions
