@@ -1,0 +1,24 @@
+{
+  "name": "Tremont Tavern",
+  "type": "recurring",
+  "url": "http://www.tremonttavern.com/open-mike-night-tuesday",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/tremont-tavern/open-mike-night.mdx",
+      "matchHint": "Weekly Tuesday Open Mike Night, 8pm until close, hosted by Mike McDade. Sign-ups start around 7pm."
+    }
+  ],
+  "defaultFrontmatter": {
+    "venue": "Tremont Tavern",
+    "address": "1203 Hixson Pike, Chattanooga, TN 37405",
+    "iconPath": "/images/icons-new/music.png",
+    "eventLink": "http://www.tremonttavern.com/open-mike-night-tuesday",
+    "tags": [
+      { "type": "place", "tag": "tremont-tavern" },
+      { "type": "genre", "tag": "music" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-09-26"
+}
