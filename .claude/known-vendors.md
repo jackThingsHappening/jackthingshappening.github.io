@@ -37,6 +37,7 @@
 | tailgate-brewery | TailGate Brewery Chattanooga |
 | tap-house | The Tap House |
 | the-commons | The Commons Collegedale |
+| tremont-tavern | Tremont Tavern |
 | the-signal | The Signal |
 | townsend-atelier | Townsend Atelier |
 | tivoli-theatre | Tivoli Theatre |
