@@ -22,3 +22,4 @@
 | 2026-10-06 10:45am CT | feature-callout | This Weekend view | events page |
 | 2026-09-25 (live) | events | This weekend: Market, Nooga Vintage Bazaar, Lula Lake | events page |
 | 2026-09-26 (live) | guide-promotion | 7 coffee roasters; Roasts here filter | coffeeshops guide |
+| 2026-09-27 (live) | events | Bilbo's Birthday Bash Day 2 tonight | woodshop events tag page |
