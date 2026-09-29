@@ -1,0 +1,24 @@
+{
+  "name": "John A. Patten Community Center",
+  "type": "recurring",
+  "url": "https://chattanooga.gov/things-to-do/calendar?field_calendar_types_target_id=453",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/john-a-patten-community-center/daily-programs.mdx",
+      "matchHint": "Daily Programs at John A. Patten Community Center, Monday-Friday 11:30am-8pm, Saturday 12-4pm, fitness classes, open gym, and community activities"
+    }
+  ],
+  "defaultFrontmatter": {
+    "venue": "John A. Patten Community Center",
+    "address": "3202 Kellys Ferry Rd, Chattanooga, TN 37419",
+    "iconPath": "/images/icons-new/calendar.png",
+    "eventLink": "https://chattanooga.gov/services/community-centers/john-patten-community-center",
+    "tags": [
+      { "type": "place", "tag": "john-a-patten-community-center" },
+      { "type": "genre", "tag": "community" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-09-29"
+}

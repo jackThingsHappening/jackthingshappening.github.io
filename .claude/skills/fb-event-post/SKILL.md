@@ -31,13 +31,15 @@ Read the full MDX file for the chosen event to get the body paragraph.
 
 Use the body paragraph as your anchor. The body text is already in the right voice — start from it, not from scratch.
 
+**HARD RULE: No em dashes anywhere in the post copy. Not " — ", not "–". Use a comma, period, or rewrite the sentence instead. Violating this is a draft failure.**
+
 Rules:
 - **Hook line** — one sentence that earns the scroll-stop. Pull the most interesting detail from the body text.
 - **Body** — 1–2 sentences. Use the body paragraph's language and details; trim or reorder as needed for Facebook pacing.
 - **URL** — include the event page: `https://thingshappening.com/chattanooga/events/[slug]`
 - No emojis
 - No hashtags
-- No em dashes anywhere in the post copy
+- No em dashes (see hard rule above)
 - No hyphens for structure (no bullet-style dashes)
 - No "check it out" or other filler
 - Write like a local, not a marketer

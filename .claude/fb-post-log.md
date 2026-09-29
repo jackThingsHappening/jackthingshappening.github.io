@@ -23,3 +23,4 @@
 | 2026-09-25 (live) | events | This weekend: Market, Nooga Vintage Bazaar, Lula Lake | events page |
 | 2026-09-26 (live) | guide-promotion | 7 coffee roasters; Roasts here filter | coffeeshops guide |
 | 2026-09-27 (live) | events | Bilbo's Birthday Bash Day 2 tonight | woodshop events tag page |
+| 2026-10-04 10:35am CT | event-post | All Them Witches | the-signal-all-them-witches |
