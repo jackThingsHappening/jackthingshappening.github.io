@@ -1,0 +1,20 @@
+{
+  "name": "Chattanooga Symphony & Opera",
+  "type": "calendar",
+  "url": "https://chattanoogasymphony.org/events/",
+  "outputDir": "src/pages/chattanooga/events/chattanooga-symphony",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Chattanooga Symphony & Opera",
+    "address": "620 Lindsay St, Ste 210, Chattanooga, TN 37403",
+    "iconPath": "/images/icons-new/music.png",
+    "eventLink": "https://chattanoogasymphony.org/events/",
+    "tags": [
+      { "type": "place", "tag": "chattanooga-symphony" },
+      { "type": "genre", "tag": "music" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-09-29"
+}

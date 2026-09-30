@@ -60,9 +60,16 @@ placeTags.sort((a, b) => b.count - a.count);
       <ExploreHeader>Browse events by tag</ExploreHeader>
       <EventsNav active="tags" />
 
-      <section class="mt-10">
+      <div class="mt-8 flex flex-wrap items-center gap-2">
+<button data-sort="count-desc" class="sort-btn px-3 py-1 rounded-full border border-logoDarkGreen text-sm bg-logoDarkGreen text-white transition-colors">Count ↓</button>
+        <button data-sort="count-asc"  class="sort-btn px-3 py-1 rounded-full border border-logoDarkGreen text-sm bg-white text-logoDarkGreen transition-colors">Count ↑</button>
+        <button data-sort="abc-asc"    class="sort-btn px-3 py-1 rounded-full border border-logoDarkGreen text-sm bg-white text-logoDarkGreen transition-colors">A–Z</button>
+        <button data-sort="abc-desc"   class="sort-btn px-3 py-1 rounded-full border border-logoDarkGreen text-sm bg-white text-logoDarkGreen transition-colors">Z–A</button>
+      </div>
+
+      <section class="mt-8">
         <h2 class="text-2xl font-semibold text-gray-700 mb-4">Genre</h2>
-        <div class="flex flex-wrap gap-3">
+        <div id="genre-tags" class="flex flex-wrap gap-3">
           {genreTags.map(({ tag, count }) => (
             <a
               href={`/chattanooga/events/tag/${tag}`}
@@ -77,7 +84,7 @@ placeTags.sort((a, b) => b.count - a.count);
 
       <section class="mt-10">
         <h2 class="text-2xl font-semibold text-gray-700 mb-4">Place</h2>
-        <div class="flex flex-wrap gap-3">
+        <div id="place-tags" class="flex flex-wrap gap-3">
           {placeTags.map(({ tag, count }) => (
             <a
               href={`/chattanooga/events/tag/${tag}`}
@@ -99,3 +106,37 @@ placeTags.sort((a, b) => b.count - a.count);
   <Footer />
 </body>
 </html>
+
+<script define:vars={{ genreTagsData: genreTags, placeTagsData: placeTags }}>
+  function sortTags(tags, key) {
+    const s = [...tags];
+    if (key === 'count-desc') s.sort((a, b) => b.count - a.count);
+    else if (key === 'count-asc') s.sort((a, b) => a.count - b.count);
+    else if (key === 'abc-asc') s.sort((a, b) => a.tag.localeCompare(b.tag));
+    else if (key === 'abc-desc') s.sort((a, b) => b.tag.localeCompare(a.tag));
+    return s;
+  }
+
+  function tagLink(tag, count, hoverClass) {
+    return `<a href="/chattanooga/events/tag/${tag}" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-logoDarkGreen bg-white text-logoDarkGreen ${hoverClass} hover:text-white transition-colors text-lg">#${tag}${count > 0 ? `<span class="text-sm font-bold">(${count})</span>` : ''}</a>`;
+  }
+
+  function render(key) {
+    document.getElementById('genre-tags').innerHTML =
+      sortTags(genreTagsData, key).map(({ tag, count }) => tagLink(tag, count, 'hover:bg-logoDarkGreen')).join('');
+    document.getElementById('place-tags').innerHTML =
+      sortTags(placeTagsData, key).map(({ tag, count }) => tagLink(tag, count, 'hover:bg-customGreen1')).join('');
+
+    document.querySelectorAll('.sort-btn').forEach(btn => {
+      const active = btn.dataset.sort === key;
+      btn.classList.toggle('bg-logoDarkGreen', active);
+      btn.classList.toggle('text-white', active);
+      btn.classList.toggle('bg-white', !active);
+      btn.classList.toggle('text-logoDarkGreen', !active);
+    });
+  }
+
+  document.querySelectorAll('.sort-btn').forEach(btn => {
+    btn.addEventListener('click', () => render(btn.dataset.sort));
+  });
+</script>
