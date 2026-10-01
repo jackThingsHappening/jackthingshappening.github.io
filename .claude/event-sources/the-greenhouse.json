@@ -1,0 +1,36 @@
+{
+  "name": "The Greenhouse Barrel + Taproom",
+  "type": "recurring",
+  "url": "https://www.oddstorybrewing.co/the-greenhouse-events",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/the-greenhouse/pub-trivia.mdx",
+      "matchHint": "Weekly Tuesday Pub Trivia at 7:30pm. Team trivia in the taproom."
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/the-greenhouse/sip-n-snip-collage-night.mdx",
+      "matchHint": "Weekly Wednesday 'Sip 'N Snip' Collage Night at 4pm. Make collage art while you drink."
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/the-greenhouse/board-game-night.mdx",
+      "matchHint": "Weekly Thursday Board Game Night at 6pm. Play tabletop games in the taproom."
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/the-greenhouse/drink-and-draw.mdx",
+      "matchHint": "Monthly 'Drink & Draw' with Jessica Schulman, first Sunday around 2pm. Guided drawing session."
+    }
+  ],
+  "defaultFrontmatter": {
+    "venue": "The Greenhouse Barrel + Taproom",
+    "address": "336 E M.L. King Blvd, Chattanooga, TN 37402",
+    "iconPath": "/images/icons-new/beer.png",
+    "eventLink": "https://www.oddstorybrewing.co/the-greenhouse-events",
+    "tags": [
+      { "type": "place", "tag": "the-greenhouse" },
+      { "type": "genre", "tag": "food-drink" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-10-01"
+}

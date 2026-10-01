@@ -435,55 +435,55 @@
     "slug": "chattanooga-symphony",
     "url": "https://chattanoogasymphony.org/events/",
     "category": "music",
-    "status": "pending",
-    "notes": "Professional symphony and opera running a rolling season of orchestral concerts, pops shows, and family programs at the Tivoli and Memorial Auditorium."
+    "status": "blocked",
+    "notes": "Professional symphony and opera with a rolling season of orchestral, pops, and family concerts at the Tivoli and Memorial Auditorium. Events page (/events/) 301-redirects to a JS-rendered CueBox Next.js app (chattanoogasymphony.app.getcuebox.com/o/31KKD414/shows); the concert list loads client-side from an opaque api.getcuebox.com endpoint and server HTML shows only 'Loading...'. Main WordPress site returns persistent 429/Cloudflare blocks and delegates all events to CueBox. Concert venues (Tivoli, Memorial Auditorium) are also blocked. Cannot auto-scrape via the HTML pipeline. Checked 2026-10-01."
   },
   {
     "name": "Track 29",
     "slug": "track-29",
     "url": "https://www.track29.co/",
     "category": "music",
-    "status": "pending",
-    "notes": "Concert venue at the Chattanooga Choo Choo complex hosting national touring rock, country, hip-hop, indie acts, and stand-up comedy on a rolling calendar."
+    "status": "blocked",
+    "notes": "Concert venue at 1400 Market St (Chattanooga Choo Choo) hosting touring rock, country, hip-hop, indie, and comedy. Own site unreachable at onboarding: www.track29.co is NXDOMAIN and apex track29.co (38.88.17.187) refuses connections on 443. Ticketing aggregators (Songkick, AXS) listed 0 upcoming shows. Cannot auto-scrape. Re-check if the site comes back online. Checked 2026-10-01."
   },
   {
     "name": "JJ's Bohemia",
     "slug": "jjs-bohemia",
     "url": "https://www.jjsbohemia.com/news",
     "category": "music",
-    "status": "pending",
-    "notes": "Longstanding MLK Blvd club with recurring weekly programming including Free Kittens open mic comedy on Wednesdays plus a packed schedule of touring and local bands."
+    "status": "blocked",
+    "notes": "Longstanding MLK Blvd music club. Configured domain jjsbohemia.com has been repurposed into a gambling/slot-machine SEO spam site (homepage title 'Bohemia Joker Slot by Casimi') and no longer serves venue content. No scrapable own-site events page. If re-adding, find the venue's current calendar (likely Facebook/Instagram only). Checked 2026-10-01."
   },
   {
     "name": "Chattanooga Whiskey Experimental Distillery",
     "slug": "chattanooga-whiskey",
     "url": "https://chattanoogawhiskey.com/events/",
     "category": "food-drink",
-    "status": "pending",
-    "notes": "Southside distillery at 1439 Market St with a public events calendar of tastings, live local music, and food pairings in its tasting room and event hall."
+    "status": "blocked",
+    "notes": "Southside distillery at 1439 Market St. Site is scrapable (WordPress, robots allows) but the events custom-post-type is abandoned: newest entry is 2025-06-17 and all 33 'events' are historical (cocktail menus, batch releases, holiday hours from 2019-2025). The /events/ URL redirects to /happenings/, a retrospective blog archive with no upcoming dated events. Tastings/tours/classes are not published as a scrapable upcoming-events calendar. Re-check if they resume dated event posts. Checked 2026-10-01."
   },
   {
     "name": "Chattanooga Arboretum & Nature Center",
     "slug": "chattanooga-arboretum",
     "url": "https://chattanoogaanc.org/",
     "category": "outdoors",
-    "status": "pending",
-    "notes": "Nature center with recurring weekend and weekday programs \u2014 guided hikes, live-animal showcases, and family nature activities on a rolling calendar."
+    "status": "blocked",
+    "notes": "Defunct/duplicate. The Arboretum & Nature Center merged into Reflection Riding (already an active vendor, slug 'reflection-riding'). Its standalone site chattanoogaanc.org is a legacy CMS with content frozen around 2013 (e.g. 'Invasive Plant Removal Day: May 2013') and no current dated programs. Use the reflection-riding vendor for this venue's events. Checked 2026-10-01."
   },
   {
     "name": "The Camp House",
     "slug": "camp-house",
     "url": "https://www.thecamphouse.com/",
     "category": "music",
-    "status": "pending",
-    "notes": "Downtown coffeehouse and multi-use venue at 149 E MLK Blvd with weekly open mic and live music. Yelp flagged it closed in 2026 but JamBase lists a 2026 schedule \u2014 verify it is operating at onboarding."
+    "status": "blocked",
+    "notes": "Coffeehouse/music venue. Relocated in April 2026 from 149 E MLK Blvd to 806 E 12th St (Onion Bottom Station), so the old address is stale. Venue is operating, but thecamphouse.com is now a bare Squarespace splash page with no scrapable events calendar (/calendar, /events, /shows, etc. all 404; homepage has no listings). Events post via Facebook/JamBase only. Re-check for a real own-site calendar at the new location. Checked 2026-10-01."
   },
   {
     "name": "The Greenhouse Barrel + Taproom",
     "slug": "the-greenhouse",
     "url": "https://www.oddstorybrewing.co/the-greenhouse-events",
     "category": "food-drink",
-    "status": "pending",
+    "status": "active",
     "notes": "Oddstory-operated taproom at 336 E MLK Blvd (distinct from the Central location) with recurring weekly board game nights, live trivia, and craft socials on a dedicated events page."
   },
   {
@@ -770,12 +770,87 @@
     "status": "pending",
     "notes": "City-run community center at 3202 Kellys Ferry Rd, Chattanooga with daily programs (11:30am-8pm weekdays, 12-4pm Sat). Programming includes fitness classes, youth activities, summer camp, and open gym. Calendar shows recurring Daily Programs entries."
   },
-  { "name": "1885 Grill", "slug": "1885-grill", "url": "https://1885grill.com/music-events-ooltewah", "category": "music", "city": "ooltewah-tn", "status": "pending", "notes": "Restaurant patio at 9469 Bradmore Lane, Ooltewah hosting live music Sunday brunch (11am-2pm) and select evenings (5-8pm), weather permitting. Dedicated music events page is scrapable." },
-  { "name": "Chattanooga Zoo", "slug": "chattanooga-zoo", "url": "https://www.chattzoo.org/events", "category": "outdoors", "status": "pending", "notes": "Warner Park zoo with recurring seasonal public events including Boo in the Zoo (October weekends), Frights & Pints (21+ Halloween), Adventure Days (quarterly), and Conservation Awareness Days. Events page is scrapable." },
-  { "name": "Association for Visual Arts", "slug": "association-for-visual-arts", "url": "https://www.avarts.org/upcoming-workshop-page", "category": "museum", "status": "pending", "notes": "North Shore gallery at 30 Frazier Ave with public paid workshops, monthly art critiques, and rotating exhibitions (6+ per year). Workshop page is scrapable with dates and costs." },
-  { "name": "St. Paul's Episcopal Church", "slug": "st-pauls-episcopal", "url": "https://www.stpaulschatt.org/events", "category": "music", "status": "pending", "notes": "Downtown Chattanooga church with a year-round Music at St. Paul's Artist Series — monthly classical concerts (organ, piano, guitar, vocal ensemble) open to the public. Events page is Squarespace-hosted and scrapable with dates." },
-  { "name": "Chattanooga Music Club", "slug": "chattanooga-music-club", "url": "http://www.chattanoogamusicclub.org/", "category": "music", "status": "pending", "notes": "Community classical music organization hosting free public concerts at First Cumberland Presbyterian Church and other Chattanooga venues throughout the year. Season calendar at /calendar-of-events-[year] — verify current URL at onboarding." },
-  { "name": "North River Civic Center", "slug": "north-river-civic-center", "url": "https://chattanooga.gov/services/community-centers/north-river-civic-center", "category": "community", "status": "pending", "notes": "City community center at 1009 Executive Dr, Hixson with free monthly concert series 'In the Heart of Hixson' (local musicians, Nov-Mar) and daily programs including bingo, art displays, and dance. Events on embedded Google Calendar — verify scrapable source at onboarding." },
-  { "name": "Head of the Hooch", "slug": "head-of-the-hooch", "url": "https://headofthehooch.org/", "category": "festival", "status": "pending", "notes": "One of the largest rowing regattas in the US, co-hosted by the Atlanta Rowing Club and Lookout Rowing Club at Ross's Landing on the Tennessee River. Draws 6,500+ athletes over a 3.1-mile downstream course. Free for spectators. Annual, first weekend of November. Next: November 7-8, 2026." },
-  { "name": "St. Elmo Stroll & Luminaria Festival", "slug": "st-elmo-stroll", "url": "https://www.stelmostroll.com/", "category": "festival", "status": "pending", "notes": "Annual neighborhood holiday festival in historic St. Elmo. Residents light paper luminaria along the Virginia Avenue Greenway, leading to a block party with live music, food, and local vendors. Free, family-friendly. Held the third Saturday of December. Next: December 19, 2026." }
+  {
+    "name": "1885 Grill",
+    "slug": "1885-grill",
+    "url": "https://1885grill.com/music-events-ooltewah",
+    "category": "music",
+    "city": "ooltewah-tn",
+    "status": "pending",
+    "notes": "Restaurant patio at 9469 Bradmore Lane, Ooltewah hosting live music Sunday brunch (11am-2pm) and select evenings (5-8pm), weather permitting. Dedicated music events page is scrapable."
+  },
+  {
+    "name": "Chattanooga Zoo",
+    "slug": "chattanooga-zoo",
+    "url": "https://www.chattzoo.org/events",
+    "category": "outdoors",
+    "status": "pending",
+    "notes": "Warner Park zoo with recurring seasonal public events including Boo in the Zoo (October weekends), Frights & Pints (21+ Halloween), Adventure Days (quarterly), and Conservation Awareness Days. Events page is scrapable."
+  },
+  {
+    "name": "Association for Visual Arts",
+    "slug": "association-for-visual-arts",
+    "url": "https://www.avarts.org/upcoming-workshop-page",
+    "category": "museum",
+    "status": "pending",
+    "notes": "North Shore gallery at 30 Frazier Ave with public paid workshops, monthly art critiques, and rotating exhibitions (6+ per year). Workshop page is scrapable with dates and costs."
+  },
+  {
+    "name": "St. Paul's Episcopal Church",
+    "slug": "st-pauls-episcopal",
+    "url": "https://www.stpaulschatt.org/events",
+    "category": "music",
+    "status": "pending",
+    "notes": "Downtown Chattanooga church with a year-round Music at St. Paul's Artist Series \u2014 monthly classical concerts (organ, piano, guitar, vocal ensemble) open to the public. Events page is Squarespace-hosted and scrapable with dates."
+  },
+  {
+    "name": "Chattanooga Music Club",
+    "slug": "chattanooga-music-club",
+    "url": "http://www.chattanoogamusicclub.org/",
+    "category": "music",
+    "status": "pending",
+    "notes": "Community classical music organization hosting free public concerts at First Cumberland Presbyterian Church and other Chattanooga venues throughout the year. Season calendar at /calendar-of-events-[year] \u2014 verify current URL at onboarding."
+  },
+  {
+    "name": "North River Civic Center",
+    "slug": "north-river-civic-center",
+    "url": "https://chattanooga.gov/services/community-centers/north-river-civic-center",
+    "category": "community",
+    "status": "pending",
+    "notes": "City community center at 1009 Executive Dr, Hixson with free monthly concert series 'In the Heart of Hixson' (local musicians, Nov-Mar) and daily programs including bingo, art displays, and dance. Events on embedded Google Calendar \u2014 verify scrapable source at onboarding."
+  },
+  {
+    "name": "Head of the Hooch",
+    "slug": "head-of-the-hooch",
+    "url": "https://headofthehooch.org/",
+    "category": "festival",
+    "status": "pending",
+    "notes": "One of the largest rowing regattas in the US, co-hosted by the Atlanta Rowing Club and Lookout Rowing Club at Ross's Landing on the Tennessee River. Draws 6,500+ athletes over a 3.1-mile downstream course. Free for spectators. Annual, first weekend of November. Next: November 7-8, 2026."
+  },
+  {
+    "name": "St. Elmo Stroll & Luminaria Festival",
+    "slug": "st-elmo-stroll",
+    "url": "https://www.stelmostroll.com/",
+    "category": "festival",
+    "status": "pending",
+    "notes": "Annual neighborhood holiday festival in historic St. Elmo. Residents light paper luminaria along the Virginia Avenue Greenway, leading to a block party with live music, food, and local vendors. Free, family-friendly. Held the third Saturday of December. Next: December 19, 2026."
+  },
+  {
+    "name": "Redpoint Inn Restaurant",
+    "slug": "redpoint-inn",
+    "url": "https://redpointinn.com/events/",
+    "category": "music",
+    "city": "jasper-tn",
+    "status": "pending",
+    "notes": "Restaurant and climbing gear shop at 30 Courthouse Sq, Jasper with recurring weekly live music (Fri, 2nd floor, no cover), light piano with Lisa (Sun noon), and Karaoke & Open Mic Night (Sat 6:30-9pm). Events page is behind a Cloudflare managed challenge (403 to bots) at check \u2014 verify a scrapable source at onboarding; events also post via Facebook."
+  },
+  {
+    "name": "Top of the Rock Restaurant & Brewery",
+    "slug": "top-of-the-rock-brewery",
+    "url": "https://topoftherockbrewery.com/",
+    "category": "food-drink",
+    "city": "jasper-tn",
+    "status": "pending",
+    "notes": "Restaurant and craft brewery in Jasper with mountain views and live music on the lower deck (Thursdays through summer). No dedicated events calendar at discovery \u2014 events post via Instagram (@TopoftheRockTN); verify a scrapable source at onboarding."
+  }
 ]
