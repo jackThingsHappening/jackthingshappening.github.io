@@ -1,0 +1,20 @@
+{
+  "name": "Lookout Comedy Festival",
+  "type": "calendar",
+  "url": "https://www.lookoutcomedyfestival.com/tickets",
+  "outputDir": "src/pages/chattanooga/events/lookout-comedy-festival",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Lookout Comedy Festival",
+    "address": "Chattanooga, TN",
+    "iconPath": "/images/icons-new/theater.png",
+    "eventLink": "https://www.lookoutcomedyfestival.com/tickets",
+    "tags": [
+      { "type": "place", "tag": "lookout-comedy-festival" },
+      { "type": "genre", "tag": "comedy" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 90,
+  "last_checked": "2026-10-01"
+}

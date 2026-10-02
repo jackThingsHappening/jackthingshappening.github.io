@@ -491,8 +491,16 @@
     "slug": "improv-chattanooga",
     "url": "https://improvchattanooga.com/shows",
     "category": "comedy",
-    "status": "pending",
+    "status": "active",
     "notes": "Nonprofit improv comedy theater with recurring Friday and Saturday night shows at 8pm and 10pm (PG-13) plus a free monthly comedy show at the Downtown Library."
+  },
+  {
+    "name": "Lookout Comedy Festival",
+    "slug": "lookout-comedy-festival",
+    "url": "https://www.lookoutcomedyfestival.com/tickets",
+    "category": "comedy",
+    "status": "active",
+    "notes": "Annual 4-night stand-up comedy festival across downtown Chattanooga venues. 30+ comics. Next: Oct 14-17, 2026."
   },
   {
     "name": "Outdoor Chattanooga",
