@@ -1,0 +1,20 @@
+{
+  "name": "Improv Chattanooga",
+  "type": "calendar",
+  "url": "https://improvchattanooga.com/shows",
+  "outputDir": "src/pages/chattanooga/events/improv-chattanooga",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Improv Chattanooga",
+    "address": "Chattanooga, TN",
+    "iconPath": "/images/icons-new/theater.png",
+    "eventLink": "https://improvchattanooga.com/shows",
+    "tags": [
+      { "type": "place", "tag": "improv-chattanooga" },
+      { "type": "genre", "tag": "comedy" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-10-01"
+}

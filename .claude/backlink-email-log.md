@@ -33,7 +33,7 @@ Any of the three works for me. If you're open to it, I'll send payment via PayPa
 
 Thanks,
 Jack Byrum
-jack.t.burum@gmail.com
+jack@thingshappening.com
 
 ---
 
@@ -66,7 +66,7 @@ Any one of the three works. I'll pay via PayPal or Venmo once the link is live.
 
 Thanks,
 Jack Byrum
-jack.t.burum@gmail.com
+jack@thingshappening.com
 
 ---
 
@@ -98,7 +98,7 @@ Any of the three works. I'll pay via PayPal or Venmo once the link is live.
 
 Thanks,
 Jack Byrum
-jack.t.burum@gmail.com
+jack@thingshappening.com
 
 ---
 
@@ -131,6 +131,39 @@ Any one of the three works. I'll pay via PayPal or Venmo once the link is live.
 
 Thanks,
 Jack Byrum
-jack.t.burum@gmail.com
+jack@thingshappening.com
+
+---
+
+## colemanconcierge.com — 2026-10-01
+
+**Contact:** colemans@colemanconcierge.com
+
+**Placement pages:**
+1. https://www.colemanconcierge.com/destinations/tennessee/ — Chattanooga section, near "Enjoy a moment on Chattanooga's Riverwalk" — "things happening in Chattanooga"
+2. https://www.colemanconcierge.com/destinations/georgia/ — Lookout Mountain section, near "Lula Lake trails are located just outside of Chattanooga" — "Chattanooga events guide"
+3. https://www.colemanconcierge.com/waterfalls-in-gatlinburg/ — near "Abrams Falls reminds me of Lula Lakes in Chattanooga" — "things to do in Chattanooga"
+
+**Drafted message:**
+
+Subject: Paid link placement - $150
+
+Hi Ed and Jenn,
+
+I run ThingsHappening.com, a Chattanooga events and guides site. I'd like to pay $150 for a single link on one of your existing posts.
+
+Your site already mentions Chattanooga in three natural spots. No rewriting needed.
+
+1. Tennessee destination page — near the Chattanooga section. The line "Enjoy a moment on Chattanooga's Riverwalk" could link "things happening in Chattanooga" to ThingsHappening.com.
+
+2. Georgia destination page — near the Lookout Mountain section. The line "Lula Lake trails are located just outside of Chattanooga" is a natural spot to add a link to our Chattanooga guide.
+
+3. Waterfalls in Gatlinburg — you write "Abrams Falls reminds me of Lula Lakes in Chattanooga." Linking "Lula Lakes in Chattanooga" or adding "things to do in Chattanooga" right there gives readers a natural next stop.
+
+Any of the three works. I'll pay via PayPal or Venmo once the link is live.
+
+Thanks,
+Jack Byrum
+jack@thingshappening.com
 
 ---

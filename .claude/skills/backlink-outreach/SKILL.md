@@ -6,9 +6,23 @@ argument-hint: <target website URL>
 
 You are researching a website for a paid backlink opportunity on behalf of ThingsHappening.com — a Chattanooga, TN events and guides site.
 
-## Step 1 — Load the sources log
+## Step 0 — Pick a target
 
-Read `.claude/backlink-sources.md`. Check if the target domain is already listed. If it is, stop and report the existing status to the user.
+If the user provided a domain as an argument, use that domain.
+
+If no domain was provided:
+1. Read `.claude/backlink-sources.md`.
+2. Find the first row where `Email Drafted` is `No`.
+3. Use that domain as the target.
+4. Tell the user which domain you selected before proceeding.
+
+If no pending domains remain, report that to the user and stop.
+
+## Step 1 — Check the sources log
+
+Read `.claude/backlink-sources.md` (if not already loaded). Check the row for the target domain:
+- If `Email Drafted` is `Yes`, stop and report that outreach is already done for this domain.
+- If `Email Drafted` is `No` (Pending), proceed.
 
 ## Step 2 — Find contact info
 
@@ -53,7 +67,7 @@ Write a short, direct pitch. Follow these rules:
 - Name the specific pages and placements so they don't have to do any work
 - Offer $150 for one link on one of the three pages
 - Offer payment via PayPal or Venmo once the link is live
-- Sign as Jack Byrum, jack.t.burum@gmail.com
+- Sign as Jack Byrum, jack@thingshappening.com
 
 If the site only has a contact form (no email), note that at the top of the draft so the user knows to paste it into the form.
 
@@ -61,7 +75,12 @@ If the site only has a contact form (no email), note that at the top of the draf
 
 **Update `.claude/backlink-sources.md`**
 
-Append a row to the table:
+If the domain already has a row (e.g. a Pending row added earlier), update that row in place:
+- Set `Contact Method` to what you found
+- Set `Email Drafted` to `Yes`
+- Set `Contact URL` to the contact page URL
+
+If the domain has no row yet, append a new one:
 
 ```
 | 2026-MM-DD | domain.com | Contact Form / email@example.com / None | Yes | https://domain.com/contact/ |
