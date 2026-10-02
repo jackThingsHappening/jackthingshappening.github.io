@@ -71,6 +71,28 @@ Search by activity category, not by the word "festival." Rotate through these â€
 
   Look for similar orgs in Chattanooga neighborhoods: St. Elmo, North Shore, Southside, Frazier Ave, Highland Park, East Ridge, Red Bank, Signal Mountain.
 
+**Comedy & performing arts**
+- "Chattanooga comedy festival showcase 2026"
+- "Chattanooga improv theater festival 2026"
+- "Chattanooga stand up comedy multi-day event 2026"
+
+**Climbing & outdoor adventure**
+- "Chattanooga climbing competition bouldering event 2026"
+- "Chattanooga disc golf tournament 2026"
+- "Chattanooga outdoor adventure race obstacle course 2026"
+
+**Horror & Halloween**
+- "Chattanooga Halloween event haunted 2026"
+- "Chattanooga zombie walk horror festival October 2026"
+
+**Pride & LGBTQ+**
+- "Chattanooga Pride festival 2026"
+- "Chattanooga LGBTQ event 2026"
+
+**Pop culture & conventions**
+- "Chattanooga comic con convention anime 2026"
+- "Chattanooga gaming esports event tournament 2026"
+
 **Regional (nearby cities)**
 - "Cleveland TN festival event 2026"
 - "Ringgold Chickamauga Georgia event 2026"
