@@ -206,6 +206,17 @@ const similarEvents = currentGenreTags.length > 0
             faded={false}
           />
         )}
+        {pathname?.includes('/events/') && (
+          <button
+            id="page-favorite-btn"
+            data-event-url={pathname}
+            class="inline-flex items-center justify-center w-9 h-9 cursor-pointer"
+            aria-label="Save event"
+            type="button"
+          >
+            <img src="/images/icons-new/favorite.svg" class="w-7 h-7" alt="" aria-hidden="true" />
+          </button>
+        )}
         <div id="add-to-cal-wrap"></div>
         <button id="copy-link-btn" class="inline-flex items-center gap-1.5 text-sm text-white hover:text-customGreen1 transition-colors cursor-pointer border border-gray-300 hover:border-customGreen1 rounded-full px-5 py-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
@@ -364,10 +375,63 @@ const similarEvents = currentGenreTags.length > 0
       ].filter(Boolean).join('\r\n');
       const iHref = `data:text/calendar;charset=utf8,${encodeURIComponent(icsLines)}`;
 
-      calWrap.innerHTML = `<details class="save-to-calendar"><summary class="list-none cursor-pointer opacity-30 hover:opacity-70 transition-opacity duration-75"><img src="/images/icons-new/calendar.png" class="w-8 h-8" alt="Save to calendar" /></summary><div class="mt-2 flex flex-col gap-1 text-sm"><a href="${gUrl}" target="_blank" rel="noopener noreferrer" class="text-customGreen1 hover:underline whitespace-nowrap">Google</a><a href="${iHref}" download="event.ics" class="text-customGreen1 hover:underline whitespace-nowrap">Apple</a></div></details>`;
+      calWrap.innerHTML = `<details class="save-to-calendar"><summary class="list-none cursor-pointer transition-opacity duration-75"><img src="/images/icons-new/calendar.svg" class="w-8 h-8" style="filter: brightness(0) invert(1)" alt="Save to calendar" /></summary><div class="mt-2 flex flex-col gap-1 text-sm"><a href="${gUrl}" target="_blank" rel="noopener noreferrer" class="text-customGreen1 hover:underline whitespace-nowrap">Google</a><a href="${iHref}" download="event.ics" class="text-customGreen1 hover:underline whitespace-nowrap">Apple</a></div></details>`;
+    }
+  }
+
+  // Favorite button
+  const favBtn = document.getElementById('page-favorite-btn') as HTMLButtonElement | null;
+  if (favBtn) {
+    const url = favBtn.dataset.eventUrl;
+    const img = favBtn.querySelector('img') as HTMLImageElement | null;
+    const STORAGE_KEY = 'savedEvents';
+
+    const getSaved = (): string[] => {
+      try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch { return []; }
+    };
+    const setSaved = (urls: string[]): void => {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(urls));
+    };
+    const update = (saved: boolean): void => {
+      favBtn.classList.toggle('saved', saved);
+    };
+
+    if (url) {
+      update(getSaved().includes(url));
+      favBtn.addEventListener('click', () => {
+        const current = getSaved();
+        const isSaved = current.includes(url);
+        if (isSaved) {
+          setSaved(current.filter((u) => u !== url));
+          update(false);
+        } else {
+          setSaved([...current, url]);
+          update(true);
+          favBtn.classList.add('star-pop');
+          favBtn.addEventListener('animationend', () => favBtn.classList.remove('star-pop'), { once: true });
+        }
+      });
     }
   }
 </script>
+
+<style>
+  #page-favorite-btn img {
+    filter: brightness(0) invert(1);
+    transition: filter 0.15s ease, transform 0.2s ease;
+  }
+  #page-favorite-btn.saved img {
+    filter: invert(55%) sepia(50%) saturate(450%) hue-rotate(100deg) brightness(95%);
+  }
+  #page-favorite-btn.star-pop img {
+    animation: page-star-pop 0.25s ease;
+  }
+  @keyframes page-star-pop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.35); }
+    100% { transform: scale(1); }
+  }
+</style>
 {!hideSignup && !pathname?.includes('/events/') && (
   <div class="max-w-5xl mx-auto px-3 mt-8 mb-4">
     <p class="text-logoDarkGreen-600 text-2xl mb-3">Get our local guides and events updates.</p>
