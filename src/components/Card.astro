@@ -60,7 +60,7 @@ const subTitle = eventDateDetails && eventDateDetails.eventTitle ? eventDateDeta
 const calendarTitle = post.title + (eventDateDetails?.eventTitle ? `: ${eventDateDetails.eventTitle}` : '');
 ---
 
-<div class="bg-white border-[1.5px] border-black hover:border-customGreen1 transition-all duration-75 ease-in-out h-full block shadow-lg hover:shadow-2xl rounded-xl overflow-hidden" data-test="article-card">
+<div class="bg-white border-[1.5px] border-black hover:border-customGreen1 transition-all duration-75 ease-in-out h-full block shadow-lg hover:shadow-2xl rounded-xl overflow-hidden" data-test="article-card" data-event-url={post.url}>
   <!-- Title & Date Section -->
   <div class="flex items-start justify-between pt-6 pb-3 px-4">
     <a href={post.url} class="block flex-1 min-w-0">
@@ -78,7 +78,7 @@ const calendarTitle = post.title + (eventDateDetails?.eventTitle ? `: ${eventDat
       )}
     </a>
     {post.pubDate && (
-      <div class="ml-3 mt-1 flex-shrink-0">
+      <div class="ml-3 mt-1 flex-shrink-0 flex flex-col items-center gap-1 md:flex-row md:gap-2">
         <SaveToCalendar
           title={calendarTitle}
           pubDate={post.pubDate}
@@ -87,6 +87,15 @@ const calendarTitle = post.title + (eventDateDetails?.eventTitle ? `: ${eventDat
           address={post.address}
           description={post.seoDescription}
         />
+        <button
+          class="favorite-btn flex items-center justify-center w-8 h-8"
+          aria-label="Save event"
+          type="button"
+        >
+          <svg class="star-icon w-6 h-6" viewBox="0 0 453 434" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M442.634 197.902C451.905 188.865 455.178 175.602 451.178 163.289C447.177 150.976 436.733 142.171 423.921 140.31L311.891 124.031C309.692 123.712 307.791 122.331 306.807 120.337L256.706 18.822C250.977 7.212 239.375 0 226.428 0C213.481 0 201.879 7.212 196.15 18.822L146.049 120.338C145.064 122.331 143.164 123.712 140.964 124.032L28.9355 140.31C16.1235 142.171 5.6805 150.976 1.6785 163.289C-2.3235 175.602 0.950502 188.865 10.2225 197.902L91.2875 276.921C92.8785 278.473 93.6055 280.708 93.2295 282.899L74.0925 394.475C71.9045 407.236 77.0505 419.889 87.5245 427.499C97.9985 435.111 111.626 436.094 123.084 430.071L223.286 377.392C225.254 376.357 227.603 376.357 229.572 377.392L329.773 430.071C334.757 432.691 340.151 433.986 345.518 433.985C352.488 433.985 359.414 431.801 365.331 427.498C375.805 419.887 380.952 407.233 378.763 394.474L359.626 282.898C359.251 280.707 359.977 278.472 361.568 276.92L442.634 197.902ZM333.005 287.466L352.142 399.044C352.782 402.778 350.477 404.907 349.456 405.648C348.434 406.388 345.696 407.925 342.344 406.161L242.142 353.482C237.223 350.897 231.827 349.603 226.43 349.603C221.033 349.603 215.636 350.897 210.718 353.481L110.517 406.159C107.163 407.922 104.426 406.387 103.405 405.646C102.384 404.905 100.077 402.776 100.718 399.042L119.855 287.466C121.734 276.511 118.105 265.339 110.144 257.58L29.0795 178.561C26.3665 175.915 26.9805 172.838 27.3715 171.638C27.7605 170.437 29.0735 167.586 32.8225 167.042L144.85 150.763C155.849 149.165 165.354 142.261 170.274 132.292L220.375 30.776C222.052 27.379 225.168 27.012 226.431 27.012C227.692 27.012 230.808 27.378 232.486 30.776V30.777L282.587 132.293C287.506 142.262 297.01 149.166 308.009 150.764L420.038 167.043C423.787 167.587 425.098 170.438 425.488 171.639C425.878 172.84 426.494 175.918 423.78 178.562L342.715 257.581C334.755 265.339 331.126 276.511 333.005 287.466Z" fill="currentColor"/>
+          </svg>
+        </button>
       </div>
     )}
   </div>
@@ -173,4 +182,79 @@ const calendarTitle = post.title + (eventDateDetails?.eventTitle ? `: ${eventDat
     aspect-ratio: 1;
     object-fit: contain;
   }
+  .card-saved {
+    border-color: #3CB371 !important;
+  }
+  .favorite-btn .star-icon {
+    color: #d1d5db;
+    transition: color 0.15s ease;
+  }
+  .card-saved .favorite-btn .star-icon {
+    color: #3CB371;
+  }
+  .favorite-btn:hover .star-icon {
+    color: #9ca3af;
+  }
+  .card-saved .favorite-btn:hover .star-icon {
+    color: #2e9e5e;
+  }
 </style>
+
+<script>
+  const STORAGE_KEY = 'savedEvents';
+
+  function getSaved(): string[] {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+    } catch {
+      return [];
+    }
+  }
+
+  function setSaved(urls: string[]): void {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(urls));
+  }
+
+  function updateCard(card: HTMLElement, isSaved: boolean): void {
+    if (isSaved) {
+      card.classList.add('card-saved');
+    } else {
+      card.classList.remove('card-saved');
+    }
+  }
+
+  function initCards(): void {
+    const saved = getSaved();
+    const cards = document.querySelectorAll<HTMLElement>('[data-event-url]');
+
+    cards.forEach((card) => {
+      const url = card.dataset.eventUrl;
+      if (!url) return;
+
+      updateCard(card, saved.includes(url));
+
+      const btn = card.querySelector<HTMLButtonElement>('.favorite-btn');
+      if (!btn) return;
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const current = getSaved();
+        const isNowSaved = current.includes(url);
+        if (isNowSaved) {
+          setSaved(current.filter((u) => u !== url));
+          updateCard(card, false);
+        } else {
+          setSaved([...current, url]);
+          updateCard(card, true);
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCards);
+  } else {
+    initCards();
+  }
+</script>
