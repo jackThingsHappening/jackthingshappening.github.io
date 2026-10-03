@@ -25,3 +25,4 @@
 | 2026-09-27 (live) | events | Bilbo's Birthday Bash Day 2 tonight | woodshop events tag page |
 | 2026-10-04 10:35am CT | event-post | All Them Witches | the-signal-all-them-witches |
 | 2026-10-02 10:30am CT | feature-callout | Save to Google/Apple Calendar | event cards |
+| 2026-10-07 11:15am CT | new-vendor | Plant Bar | plant-bar events tag page |

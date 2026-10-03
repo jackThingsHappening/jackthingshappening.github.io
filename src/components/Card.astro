@@ -58,9 +58,14 @@ if (post.eventDatesDetails) {
 }
 const subTitle = eventDateDetails && eventDateDetails.eventTitle ? eventDateDetails.eventTitle : dayjs(pubDateLocal).format('MM-DD-YYYY');
 const calendarTitle = post.title + (eventDateDetails?.eventTitle ? `: ${eventDateDetails.eventTitle}` : '');
+
+// Use a date-specific key so recurring event cards don't all share the same saved state
+const eventUrl = post.pubDate && post.url && !post.url.includes(post.pubDate)
+  ? `${post.url}|${post.pubDate}`
+  : post.url;
 ---
 
-<div class="bg-white border-[1.5px] border-black hover:border-customGreen1 transition-all duration-75 ease-in-out h-full block shadow-lg hover:shadow-2xl rounded-xl overflow-hidden" data-test="article-card" data-event-url={post.url}>
+<div class="bg-white border-[1.5px] border-black hover:border-customGreen1 transition-all duration-75 ease-in-out h-full block shadow-lg hover:shadow-2xl rounded-xl overflow-hidden" data-test="article-card" data-event-url={eventUrl}>
   <!-- Title & Date Section -->
   <div class="flex items-start justify-between pt-6 pb-3 px-4">
     <a href={post.url} class="block flex-1 min-w-0">
