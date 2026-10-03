@@ -32,7 +32,7 @@ I've already found three spots where it fits naturally — no rewriting needed o
 Any of the three works for me. If you're open to it, I'll send payment via PayPal or Venmo once the link is live.
 
 Thanks,
-Jack Byrum
+Jack Byram
 jack@thingshappening.com
 
 ---
@@ -65,7 +65,7 @@ I found three spots where it fits without any rewriting:
 Any one of the three works. I'll pay via PayPal or Venmo once the link is live.
 
 Thanks,
-Jack Byrum
+Jack Byram
 jack@thingshappening.com
 
 ---
@@ -97,7 +97,7 @@ Two other options if you prefer:
 Any of the three works. I'll pay via PayPal or Venmo once the link is live.
 
 Thanks,
-Jack Byrum
+Jack Byram
 jack@thingshappening.com
 
 ---
@@ -130,7 +130,7 @@ I found three spots where it fits without any rewriting:
 Any one of the three works. I'll pay via PayPal or Venmo once the link is live.
 
 Thanks,
-Jack Byrum
+Jack Byram
 jack@thingshappening.com
 
 ---
@@ -171,7 +171,7 @@ You already cover Chattanooga in three places. No rewriting needed.
 Any of the three works. I'll pay via PayPal or Venmo once the link is live.
 
 Thanks,
-Jack Byrum
+Jack Byram
 jack@thingshappening.com
 
 ---
@@ -204,7 +204,7 @@ You already cover Chattanooga well. I spotted three spots where a link fits with
 Any of the three works. I'll pay via PayPal or Venmo once the link is live.
 
 Thanks,
-Jack Byrum
+Jack Byram
 jack@thingshappening.com
 
 ---
@@ -237,7 +237,7 @@ You already cover Chattanooga well. Here are three spots where a link fits witho
 Any of the three works. I'll pay via PayPal or Venmo once the link is live.
 
 Thanks,
-Jack Byrum
+Jack Byram
 jack@thingshappening.com
 
 ---
@@ -270,7 +270,7 @@ If you prefer, I'd also pay $150 to add Chattanooga as a new entry to your best 
 I'll pay via PayPal or Venmo once the link is live.
 
 Thanks,
-Jack Byrum
+Jack Byram
 jack@thingshappening.com
 
 ---
@@ -303,7 +303,7 @@ You cover Chattanooga on several pages. Here are three spots where a link fits w
 Any of the three works. I'll pay via PayPal or Venmo once the link is live.
 
 Thanks,
-Jack Byrum
+Jack Byram
 jack@thingshappening.com
 
 ---
@@ -336,7 +336,7 @@ Your site already mentions Chattanooga in three natural spots. No rewriting need
 Any of the three works. I'll pay via PayPal or Venmo once the link is live.
 
 Thanks,
-Jack Byrum
+Jack Byram
 jack@thingshappening.com
 
 ---

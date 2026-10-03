@@ -51,6 +51,9 @@ const homeUrl = cityMatch && knownCities.includes(cityMatch[1]) ? `/${cityMatch[
       <!-- <div id="nav-logo" class="leading-loose font-semi text-xl"><span id="nav-logo-things">Things</span> <span id="nav-logo-happening" class="text-customGreen1">Happening</span></div> -->
     </a>
     <div class="flex">
+      <a href="/chattanooga/my-favorites" class="mr-4 mt-1 items-center justify-center" aria-label="My saved events">
+        <img id="nav-star" src="/images/icons-new/favorite.svg" class="w-6 h-6" alt="" aria-hidden="true" style="opacity: 0.3;" />
+      </a>
       <a href="/search" class="mr-4 mt-1 items-center justify-center">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -86,6 +89,18 @@ const homeUrl = cityMatch && knownCities.includes(cityMatch[1]) ? `/${cityMatch[
       if (!el) return;
       el.addEventListener("mouseenter", function () { el.classList.add("logo-hovered"); });
       el.addEventListener("mouseleave", function () { el.classList.remove("logo-hovered"); });
+    })();
+
+    (function () {
+      var star = document.getElementById("nav-star");
+      if (!star) return;
+      try {
+        var events = JSON.parse(localStorage.getItem("savedEvents") || "[]");
+        var guides = JSON.parse(localStorage.getItem("savedGuideItems") || "[]");
+        if (events.length + guides.length > 0) {
+          star.style.opacity = "1";
+        }
+      } catch (e) {}
     })();
   </script>
 </nav>

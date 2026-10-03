@@ -65,7 +65,7 @@ const eventUrl = post.pubDate && post.url && !post.url.includes(post.pubDate)
   : post.url;
 ---
 
-<div class="bg-white border-[1.5px] border-black hover:border-customGreen1 transition-all duration-75 ease-in-out h-full block shadow-lg hover:shadow-2xl rounded-xl overflow-hidden" data-test="article-card" data-event-url={eventUrl}>
+<div class="bg-white border-[1.5px] border-black hover:border-customGreen1 transition-all duration-75 ease-in-out h-full block shadow-lg hover:shadow-2xl rounded-xl overflow-hidden" data-test="article-card" data-event-url={eventUrl} data-event-title={calendarTitle} data-event-pub-date={post.pubDate ?? ''} data-event-link={post.url ?? ''}>
   <!-- Title & Date Section -->
   <div class="flex items-start justify-between pt-6 pb-3 px-4">
     <a href={post.url} class="block flex-1 min-w-0">
@@ -84,6 +84,13 @@ const eventUrl = post.pubDate && post.url && !post.url.includes(post.pubDate)
     </a>
     {post.pubDate && (
       <div class="ml-3 mt-1 flex-shrink-0 flex flex-col items-center gap-1 md:flex-row md:gap-2">
+        <button
+          class="favorite-btn flex items-center justify-center w-8 h-8"
+          aria-label="Save event"
+          type="button"
+        >
+          <img src="/images/icons-new/favorite.svg" class="w-7 h-7" alt="" aria-hidden="true" />
+        </button>
         <SaveToCalendar
           title={calendarTitle}
           pubDate={post.pubDate}
@@ -92,13 +99,6 @@ const eventUrl = post.pubDate && post.url && !post.url.includes(post.pubDate)
           address={post.address}
           description={post.seoDescription}
         />
-        <button
-          class="favorite-btn flex items-center justify-center w-8 h-8"
-          aria-label="Save event"
-          type="button"
-        >
-          <img src="/images/icons-new/favorite.svg" class="w-7 h-7" alt="" aria-hidden="true" />
-        </button>
       </div>
     )}
   </div>
@@ -211,16 +211,19 @@ const eventUrl = post.pubDate && post.url && !post.url.includes(post.pubDate)
 <script>
   const STORAGE_KEY = 'savedEvents';
 
-  function getSaved(): string[] {
+  interface SavedEvent { key: string; title: string; pubDate: string; url: string; }
+
+  function getSaved(): SavedEvent[] {
     try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      const raw = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+      return Array.isArray(raw) ? raw.filter((x) => typeof x === 'object' && x.key) : [];
     } catch {
       return [];
     }
   }
 
-  function setSaved(urls: string[]): void {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(urls));
+  function setSaved(items: SavedEvent[]): void {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
   }
 
   function updateCard(card: HTMLElement, isSaved: boolean): void {
@@ -231,15 +234,50 @@ const eventUrl = post.pubDate && post.url && !post.url.includes(post.pubDate)
     }
   }
 
+  function updateNavStar(): void {
+    const star = document.getElementById('nav-star') as HTMLImageElement | null;
+    if (!star) return;
+    star.style.opacity = getSaved().length > 0 ? '1' : '0.3';
+  }
+
+  function showSavePrompt(label: string): void {
+    if (document.getElementById('first-save-toast')) return;
+    const toast = document.createElement('div');
+    toast.id = 'first-save-toast';
+    toast.innerHTML = `<a href="/chattanooga/my-favorites" style="color:inherit;text-decoration:none;">${label} →</a>`;
+    Object.assign(toast.style, {
+      position: 'fixed',
+      bottom: '1.5rem',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      background: '#fff',
+      border: '2px solid black',
+      borderRadius: '0.75rem',
+      padding: '0.75rem 1.25rem',
+      fontSize: '1rem',
+      fontWeight: '600',
+      boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+      zIndex: '1000',
+      whiteSpace: 'nowrap',
+      cursor: 'pointer',
+      transition: 'opacity 0.4s ease',
+    });
+    document.body.appendChild(toast);
+    setTimeout(() => {
+      toast.style.opacity = '0';
+      setTimeout(() => toast.remove(), 400);
+    }, 4000);
+  }
+
   function initCards(): void {
     const saved = getSaved();
     const cards = document.querySelectorAll<HTMLElement>('[data-event-url]');
 
     cards.forEach((card) => {
-      const url = card.dataset.eventUrl;
-      if (!url) return;
+      const key = card.dataset.eventUrl;
+      if (!key) return;
 
-      updateCard(card, saved.includes(url));
+      updateCard(card, saved.some((s) => s.key === key));
 
       const btn = card.querySelector<HTMLButtonElement>('.favorite-btn');
       if (!btn) return;
@@ -248,13 +286,21 @@ const eventUrl = post.pubDate && post.url && !post.url.includes(post.pubDate)
         e.preventDefault();
         e.stopPropagation();
         const current = getSaved();
-        const isNowSaved = current.includes(url);
+        const isNowSaved = current.some((s) => s.key === key);
         if (isNowSaved) {
-          setSaved(current.filter((u) => u !== url));
+          setSaved(current.filter((s) => s.key !== key));
           updateCard(card, false);
+          updateNavStar();
         } else {
-          setSaved([...current, url]);
+          setSaved([...current, {
+            key,
+            title: card.dataset.eventTitle || '',
+            pubDate: card.dataset.eventPubDate || '',
+            url: card.dataset.eventLink || key,
+          }]);
           updateCard(card, true);
+          updateNavStar();
+          showSavePrompt('View your saved events');
           btn.classList.add('star-pop');
           btn.addEventListener('animationend', () => btn.classList.remove('star-pop'), { once: true });
         }

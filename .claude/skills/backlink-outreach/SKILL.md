@@ -67,7 +67,7 @@ Write a short, direct pitch. Follow these rules:
 - Name the specific pages and placements so they don't have to do any work
 - Offer $150 for one link on one of the three pages
 - Offer payment via PayPal or Venmo once the link is live
-- Sign as Jack Byrum, jack@thingshappening.com
+- Sign as Jack Byram, jack@thingshappening.com
 
 If the site only has a contact form (no email), note that at the top of the draft so the user knows to paste it into the form.
 

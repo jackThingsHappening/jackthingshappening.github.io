@@ -1,0 +1,139 @@
+---
+import BaseHead from '../../components/Head/BaseHead.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer/Footer.astro';
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title="My Favorites | Things Happening Chattanooga" description="Your saved events and guide items." />
+  </head>
+  <body>
+    <Nav />
+    <main>
+      <div class="header-styles pt-14 pb-10">
+        <div class="max-w-5xl mx-auto px-3">
+          <h1 style="font-family: 'Libre Baskerville', serif; font-size: clamp(2.75rem, 5vw, 4.5rem);">My Favorites</h1>
+          <p class="text-xl mt-2 opacity-80">Your saved events and guide items.</p>
+        </div>
+      </div>
+
+      <div class="max-w-5xl mx-auto px-3 py-10">
+        <div id="empty-state" class="hidden text-gray-500 text-xl py-10 text-center">
+          Nothing saved yet. Browse events and guides and click the star to save items.
+        </div>
+
+        <section id="events-section" class="hidden mb-12">
+          <h2 class="text-3xl mb-6" style="font-family: 'Libre Baskerville', serif;">Saved Events</h2>
+          <ul id="events-list" class="space-y-3"></ul>
+        </section>
+
+        <section id="guides-section" class="hidden">
+          <h2 class="text-3xl mb-6" style="font-family: 'Libre Baskerville', serif;">Saved Guide Items</h2>
+          <ul id="guides-list" class="space-y-3"></ul>
+        </section>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<script>
+  interface SavedEvent { key: string; title: string; pubDate: string; url: string; }
+  interface SavedGuideItem { key: string; title: string; guidePath: string; number: number; }
+
+  function getSavedEvents(): SavedEvent[] {
+    try {
+      const raw = JSON.parse(localStorage.getItem('savedEvents') || '[]');
+      return Array.isArray(raw) ? raw.filter((x) => typeof x === 'object' && x.key) : [];
+    } catch { return []; }
+  }
+
+  function getSavedGuideItems(): SavedGuideItem[] {
+    try {
+      const raw = JSON.parse(localStorage.getItem('savedGuideItems') || '[]');
+      return Array.isArray(raw) ? raw.filter((x) => typeof x === 'object' && x.key) : [];
+    } catch { return []; }
+  }
+
+  function formatDate(dateStr: string): string {
+    if (!dateStr) return '';
+    const d = new Date(dateStr + 'T00:00:00');
+    return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
+  }
+
+  function guideNameFromPath(path: string): string {
+    const slug = path.split('/').pop() || path;
+    return slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+  }
+
+  function removeEvent(key: string, li: HTMLElement): void {
+    const current = getSavedEvents();
+    localStorage.setItem('savedEvents', JSON.stringify(current.filter((s) => s.key !== key)));
+    li.remove();
+    checkEmpty();
+  }
+
+  function removeGuideItem(key: string, li: HTMLElement): void {
+    const current = getSavedGuideItems();
+    localStorage.setItem('savedGuideItems', JSON.stringify(current.filter((s) => s.key !== key)));
+    li.remove();
+    checkEmpty();
+  }
+
+  function checkEmpty(): void {
+    const eventsList = document.getElementById('events-list')!;
+    const guidesList = document.getElementById('guides-list')!;
+    const eventsSection = document.getElementById('events-section')!;
+    const guidesSection = document.getElementById('guides-section')!;
+    const emptyState = document.getElementById('empty-state')!;
+
+    const hasEvents = eventsList.children.length > 0;
+    const hasGuides = guidesList.children.length > 0;
+
+    eventsSection.classList.toggle('hidden', !hasEvents);
+    guidesSection.classList.toggle('hidden', !hasGuides);
+    emptyState.classList.toggle('hidden', hasEvents || hasGuides);
+  }
+
+  function buildEventItem(event: SavedEvent): HTMLLIElement {
+    const navUrl = event.url.includes('|') ? event.url.split('|')[0] : event.url;
+    const li = document.createElement('li');
+    li.className = 'flex items-start justify-between gap-4 border border-gray-200 rounded-xl px-5 py-4 hover:border-[#3CB371] transition-colors';
+    li.innerHTML = `
+      <a href="${navUrl}" class="flex-1 min-w-0 group">
+        <p class="text-xl font-medium group-hover:text-[#3CB371] transition-colors">${event.title}</p>
+        ${event.pubDate ? `<p class="text-base text-gray-500 mt-0.5">${formatDate(event.pubDate)}</p>` : ''}
+      </a>
+      <button class="remove-btn flex-shrink-0 text-gray-300 hover:text-red-400 transition-colors text-2xl leading-none mt-0.5" aria-label="Remove">×</button>
+    `;
+    li.querySelector('.remove-btn')!.addEventListener('click', () => removeEvent(event.key, li));
+    return li;
+  }
+
+  function buildGuideItem(item: SavedGuideItem): HTMLLIElement {
+    const guideUrl = item.guidePath + '#item-' + item.number;
+    const guideName = guideNameFromPath(item.guidePath);
+    const li = document.createElement('li');
+    li.className = 'flex items-start justify-between gap-4 border border-gray-200 rounded-xl px-5 py-4 hover:border-[#3CB371] transition-colors';
+    li.innerHTML = `
+      <a href="${guideUrl}" class="flex-1 min-w-0 group">
+        <p class="text-xl font-medium group-hover:text-[#3CB371] transition-colors">${item.title}</p>
+        <p class="text-base text-gray-500 mt-0.5">${guideName}</p>
+      </a>
+      <button class="remove-btn flex-shrink-0 text-gray-300 hover:text-red-400 transition-colors text-2xl leading-none mt-0.5" aria-label="Remove">×</button>
+    `;
+    li.querySelector('.remove-btn')!.addEventListener('click', () => removeGuideItem(item.key, li));
+    return li;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const eventsList = document.getElementById('events-list')!;
+    const guidesList = document.getElementById('guides-list')!;
+
+    getSavedEvents().forEach((event) => eventsList.appendChild(buildEventItem(event)));
+    getSavedGuideItems().forEach((item) => guidesList.appendChild(buildGuideItem(item)));
+
+    checkEmpty();
+  });
+</script>

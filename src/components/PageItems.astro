@@ -53,7 +53,7 @@ const currentPath = Astro.url.pathname;
   
   
   {filteredItems.map((item) => (
-    <section class="page-item text-xl pb-7" data-tags={item.tags.join(',')}>
+    <section class="page-item text-xl pb-7" id={`item-${item.number}`} data-tags={item.tags.join(',')} data-guide-key={`${currentPath}|${item.number}`}>
       <div>
         {item.photoOptions && item.photoOptions.photos && item.photoOptions.photos.length > 0 && item.photoOptions.appearance === 'before' && (
           <div class="pb-5">
@@ -69,6 +69,9 @@ const currentPath = Astro.url.pathname;
           <span class="font-normal mr-2"><span class="text-logoDarkGreen">{item.number}</span><span class="text-logoLightGreen ml-0.5" style="font-size: 2.1rem;">.</span></span>
           {item.title}
           <span class="color-pink ml-1"><b>.</b></span>
+          <button class="guide-fav-btn inline-block align-middle ml-2" type="button" aria-label="Save item" data-item-title={item.title} data-guide-path={currentPath} data-item-number={item.number}>
+            <img src="/images/icons-new/favorite.svg" class="w-5 h-5" alt="" aria-hidden="true" />
+          </button>
         </h3>
         <div class="pb-5">
           {item.description}
@@ -344,30 +347,128 @@ const currentPath = Astro.url.pathname;
     if (clearBtn) {
       clearBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        
+
         // Clear all tags
         updateUrlWithTags([]);
-        
+
         // Show all items
         filterItems([]);
-        
+
         // Reset all tag highlights
         updateTagHighlights([]);
-        
+
         // Hide distance filters section
         updateDistanceFiltersVisibility([]);
-        
+
         // Hide place description
         updatePlaceDescription([]);
-        
+
         // Hide clear button
         clearBtn.classList.add('hidden');
       });
     }
+
+    const updateNavStar = () => {
+      const star = document.getElementById('nav-star');
+      if (!star) return;
+      try {
+        const events = JSON.parse(localStorage.getItem('savedEvents') || '[]');
+        const guides = JSON.parse(localStorage.getItem('savedGuideItems') || '[]');
+        star.style.opacity = (events.length + guides.length) > 0 ? '1' : '0.3';
+      } catch {}
+    };
+
+    const showSavePrompt = (label) => {
+      if (document.getElementById('first-save-toast')) return;
+      const toast = document.createElement('div');
+      toast.id = 'first-save-toast';
+      toast.innerHTML = `<a href="/chattanooga/my-favorites" style="color:inherit;text-decoration:none;">${label} →</a>`;
+      Object.assign(toast.style, {
+        position: 'fixed',
+        bottom: '1.5rem',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        background: '#fff',
+        border: '2px solid black',
+        borderRadius: '0.75rem',
+        padding: '0.75rem 1.25rem',
+        fontSize: '1rem',
+        fontWeight: '600',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+        zIndex: '1000',
+        whiteSpace: 'nowrap',
+        cursor: 'pointer',
+        transition: 'opacity 0.4s ease',
+      });
+      document.body.appendChild(toast);
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 400);
+      }, 4000);
+    };
+
+    // Guide item favorites
+    const GUIDE_KEY = 'savedGuideItems';
+    const getGuide = () => {
+      try {
+        const raw = JSON.parse(localStorage.getItem(GUIDE_KEY) || '[]');
+        return Array.isArray(raw) ? raw.filter(x => typeof x === 'object' && x.key) : [];
+      } catch { return []; }
+    };
+    const setGuide = (items) => localStorage.setItem(GUIDE_KEY, JSON.stringify(items));
+
+    document.querySelectorAll('.guide-fav-btn').forEach(btn => {
+      const section = btn.closest('[data-guide-key]');
+      const key = section?.dataset.guideKey;
+      if (!key) return;
+
+      if (getGuide().some(x => x.key === key)) btn.classList.add('saved');
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const current = getGuide();
+        const isSaved = current.some(x => x.key === key);
+        if (isSaved) {
+          setGuide(current.filter(x => x.key !== key));
+          btn.classList.remove('saved');
+          updateNavStar();
+        } else {
+          setGuide([...current, {
+            key,
+            title: btn.dataset.itemTitle || '',
+            guidePath: btn.dataset.guidePath || '',
+            number: parseInt(btn.dataset.itemNumber || '0', 10),
+          }]);
+          btn.classList.add('saved');
+          btn.classList.add('star-pop');
+          btn.addEventListener('animationend', () => btn.classList.remove('star-pop'), { once: true });
+          updateNavStar();
+          showSavePrompt('View your guide favorites');
+        }
+      });
+    });
   });
 </script>
 
 <style>
+  .guide-fav-btn img {
+    opacity: 0.2;
+    transition: opacity 0.15s ease, transform 0.2s ease;
+  }
+  .guide-fav-btn:hover img {
+    opacity: 0.5;
+  }
+  .guide-fav-btn.saved img {
+    opacity: 1;
+  }
+  .guide-fav-btn.star-pop img {
+    animation: guide-star-pop 0.25s ease;
+  }
+  @keyframes guide-star-pop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.35); }
+    100% { transform: scale(1); }
+  }
   .page-item-tag,
   .clickable-filter-tag {
     color: white !important;

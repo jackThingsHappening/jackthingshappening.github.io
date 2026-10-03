@@ -210,6 +210,8 @@ const similarEvents = currentGenreTags.length > 0
           <button
             id="page-favorite-btn"
             data-event-url={pathname}
+            data-event-title={title + (eventDateDetails?.eventTitle ? `: ${eventDateDetails.eventTitle}` : '')}
+            data-event-pub-date={pubDate ?? ''}
             class="inline-flex items-center justify-center w-9 h-9 cursor-pointer"
             aria-label="Save event"
             type="button"
@@ -382,30 +384,38 @@ const similarEvents = currentGenreTags.length > 0
   // Favorite button
   const favBtn = document.getElementById('page-favorite-btn') as HTMLButtonElement | null;
   if (favBtn) {
-    const url = favBtn.dataset.eventUrl;
-    const img = favBtn.querySelector('img') as HTMLImageElement | null;
+    const key = favBtn.dataset.eventUrl;
     const STORAGE_KEY = 'savedEvents';
 
-    const getSaved = (): string[] => {
-      try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); } catch { return []; }
+    interface SavedEvent { key: string; title: string; pubDate: string; url: string; }
+    const getSaved = (): SavedEvent[] => {
+      try {
+        const raw = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+        return Array.isArray(raw) ? raw.filter((x) => typeof x === 'object' && x.key) : [];
+      } catch { return []; }
     };
-    const setSaved = (urls: string[]): void => {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(urls));
+    const setSaved = (items: SavedEvent[]): void => {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(items));
     };
     const update = (saved: boolean): void => {
       favBtn.classList.toggle('saved', saved);
     };
 
-    if (url) {
-      update(getSaved().includes(url));
+    if (key) {
+      update(getSaved().some((s) => s.key === key));
       favBtn.addEventListener('click', () => {
         const current = getSaved();
-        const isSaved = current.includes(url);
+        const isSaved = current.some((s) => s.key === key);
         if (isSaved) {
-          setSaved(current.filter((u) => u !== url));
+          setSaved(current.filter((s) => s.key !== key));
           update(false);
         } else {
-          setSaved([...current, url]);
+          setSaved([...current, {
+            key,
+            title: favBtn.dataset.eventTitle || '',
+            pubDate: favBtn.dataset.eventPubDate || '',
+            url: key,
+          }]);
           update(true);
           favBtn.classList.add('star-pop');
           favBtn.addEventListener('animationend', () => favBtn.classList.remove('star-pop'), { once: true });
