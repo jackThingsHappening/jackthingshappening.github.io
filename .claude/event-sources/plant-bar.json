@@ -1,0 +1,20 @@
+{
+  "name": "Plant Bar",
+  "type": "calendar",
+  "url": "https://visitplantbar.com/events",
+  "outputDir": "src/pages/chattanooga/events/plant-bar",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Plant Bar",
+    "address": "202 Manufacturers Rd Suite B, Chattanooga, TN 37405",
+    "iconPath": "/images/icons-new/beer.png",
+    "eventLink": "https://visitplantbar.com/events",
+    "tags": [
+      { "type": "place", "tag": "plant-bar" },
+      { "type": "genre", "tag": "live-events" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-10-03"
+}

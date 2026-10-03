@@ -860,5 +860,21 @@
     "city": "jasper-tn",
     "status": "pending",
     "notes": "Restaurant and craft brewery in Jasper with mountain views and live music on the lower deck (Thursdays through summer). No dedicated events calendar at discovery \u2014 events post via Instagram (@TopoftheRockTN); verify a scrapable source at onboarding."
+  },
+  {
+    "name": "The Electric Crocodile",
+    "slug": "electric-crocodile",
+    "url": "https://allevents.in/org/the-electric-crocodile/23345715",
+    "category": "community",
+    "status": "blocked",
+    "notes": "Vintage clothing and collectibles shop at 607 Cherokee Blvd with 70+ vendors. Hosts seasonal markets 3x/year: Spring Flea (April), Summer Market (July), and CroctoberFest (October) with live music on the porch stage. Own site (electriccrocodile.com) unreachable; events post via Facebook and allevents.in only — no scrapable own-site calendar. Re-check if they launch a dedicated events page. Checked 2026-10-01."
+  },
+  {
+    "name": "Plant Bar",
+    "slug": "plant-bar",
+    "url": "https://visitplantbar.com/events",
+    "category": "food-drink",
+    "status": "pending",
+    "notes": "Zero-proof bar and lounge at 202 Manufacturers Rd Suite B near Coolidge Park. Mix of recurring series (Game Night, Adult Coloring, Trivia) and one-off events (workshops, costume contests, yoga). All events 21+. robots.txt allows all bots."
   }
 ]
