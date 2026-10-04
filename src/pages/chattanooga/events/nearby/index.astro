@@ -8,7 +8,7 @@ import EmailSignup from '../../../../components/EmailSignup.astro';
 import ExploreHeader from '../../../../components/ExploreHeader.astro';
 import { expandEvents } from '../../../../utils/expandEvents';
 
-const title = 'Nearby Cities — Events Near Chattanooga';
+const title = 'Nearby Cities - Events Near Chattanooga';
 const seoDescription = 'Events happening in cities near Chattanooga, TN — Cleveland, Dalton, Ringgold, and more.';
 
 const allPosts = (Object.values(import.meta.glob('../**/*.mdx', { eager: true }))).filter(
@@ -42,6 +42,7 @@ const activeCities = [...new Set(
   <main>
     <article class="w-full px-4 md:px-8 lg:px-16 mt-8 pb-4">
       <ExploreHeader>Events in nearby cities</ExploreHeader>
+      <p class="text-gray-600 text-xl3 mt-4 mb-2">Chattanooga sits close to a stretch of towns worth knowing. This page covers upcoming events in <a href="/chattanooga/events/tag/cleveland-tn" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">Cleveland</a>, <a href="/chattanooga/events/tag/dalton-ga" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">Dalton</a>, <a href="/chattanooga/events/tag/ringgold-ga" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">Ringgold</a>, and more. Each city has its own character. Smaller venues, local festivals, and events you won't find listed downtown. Use the city links below to filter by location, or scroll to browse everything at once.</p>
       <NearbyCitiesNav activeCities={activeCities} />
 
       {sortedEvents.length === 0 && (

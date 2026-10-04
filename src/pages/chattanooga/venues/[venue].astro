@@ -50,7 +50,7 @@ function extractCityState(addr: string): string {
 }
 
 const cityState = extractCityState(venueData.address);
-const pageTitle = `${venueData.name} Events — ${cityState} | Things Happening`;
+const pageTitle = `${venueData.name} Events - ${cityState} | Things Happening`;
 const seoDescription = `Upcoming events at ${venueData.name} in ${cityState}. Find dates, details, and tickets.`;
 
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(venueData.address)}`;

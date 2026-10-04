@@ -40,7 +40,6 @@ allPostsIncludingMultipleDates = allPostsIncludingMultipleDates
 <html lang="en" class="dot-grid-bg">
 <head>
   <BaseHead title={title} description={seoDescription} />
-  <meta name="robots" content="noindex, follow" />
 </head>
 <body class="text-black font-body leading-normal personality-casual">
   <Nav />
@@ -49,6 +48,7 @@ allPostsIncludingMultipleDates = allPostsIncludingMultipleDates
       <ExploreHeader>
         <span class="text-customGreen1 shimmer-text">#this-weekend</span> events in Chattanooga
       </ExploreHeader>
+      <p class="text-gray-600 text-xl3 mt-4 mb-2">Chattanooga fills up on weekends. This page lists every event happening Friday through Sunday in the city. Live music, outdoor adventures, food events, arts performances, sports, and more. Events are updated daily as new ones are added. Save any event to your <a href="/chattanooga/my-favorites" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">favorites</a> or send it straight to your <a href="/chattanooga/my-favorites" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">calendar</a>.</p>
       <EventsNav active="this-weekend" />
       <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 py-8" data-test="articles-section">
         {allPostsIncludingMultipleDates.map(p => (
