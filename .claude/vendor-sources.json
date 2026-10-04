@@ -876,5 +876,46 @@
     "category": "food-drink",
     "status": "pending",
     "notes": "Zero-proof bar and lounge at 202 Manufacturers Rd Suite B near Coolidge Park. Mix of recurring series (Game Night, Adult Coloring, Trivia) and one-off events (workshops, costume contests, yoga). All events 21+. robots.txt allows all bots."
+  },
+  {
+    "name": "Chattanooga FC",
+    "slug": "chattanooga-fc",
+    "url": "https://www.mlsnextpro.com/chattanoogafc/schedule/matches",
+    "category": "sports",
+    "status": "pending",
+    "notes": "Professional soccer club (MLS Next Pro) playing at Finley Stadium, downtown Chattanooga. Season runs March through October. Ticket and schedule info at mlsnextpro.com. Verify scrapability at onboarding."
+  },
+  {
+    "name": "Chattanooga Red Wolves SC",
+    "slug": "chattanooga-red-wolves",
+    "url": "https://www.chattanoogaredwolves-sc.com/schedule/",
+    "category": "sports",
+    "status": "pending",
+    "notes": "Pro soccer club (USL League One) playing at CHI Memorial Stadium in East Brainerd. Season runs March through October. Also fields a USL W League women's team. Verify scrapability at onboarding."
+  },
+  {
+    "name": "UTC Mocs Athletics",
+    "slug": "utc-mocs",
+    "url": "https://gomocs.com/calendar.aspx",
+    "category": "sports",
+    "status": "pending",
+    "notes": "UT Chattanooga athletics covering FCS football (Finley Stadium, Aug-Nov) and men's and women's Division 1 basketball (McKenzie Arena, Nov-Feb). General athletics calendar at gomocs.com/calendar.aspx. Verify scrapability at onboarding."
+  },
+  {
+    "name": "Chattanooga Strike",
+    "slug": "chattanooga-strike",
+    "url": "https://strikebasketball.com/schedule-tickets/",
+    "category": "sports",
+    "status": "pending",
+    "notes": "Men's ABA professional basketball team playing at Midtown Arena. 20-game schedule runs late October through February. ABA is a relaunched league with rule variations (3D light, point multipliers). Verify scrapability at onboarding."
+  },
+  {
+    "name": "Covenant College Athletics",
+    "slug": "covenant-college-athletics",
+    "url": "https://athletics.covenant.edu/calendar.aspx",
+    "category": "sports",
+    "city": "lookout-mountain-ga",
+    "status": "pending",
+    "notes": "Division III athletics on top of Lookout Mountain, GA. Regular-season men's and women's basketball (Nov-Feb) at Barnes PE Center is free to attend. General athletics calendar at athletics.covenant.edu. Verify scrapability at onboarding."
   }
 ]

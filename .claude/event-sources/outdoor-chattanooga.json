@@ -1,0 +1,26 @@
+{
+  "name": "Outdoor Chattanooga",
+  "type": "calendar",
+  "url": "https://outdoorchattanooga.com/calendar/",
+  "outputDir": "src/pages/chattanooga/events/outdoor-chattanooga",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Outdoor Chattanooga",
+    "address": "200 River St, Chattanooga, TN 37405",
+    "iconPath": "/images/icons-new/pine-tree.png",
+    "eventLink": "https://outdoorchattanooga.com/calendar/",
+    "tags": [
+      {
+        "type": "place",
+        "tag": "outdoor-chattanooga"
+      },
+      {
+        "type": "genre",
+        "tag": "outdoors"
+      }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-10-03"
+}
