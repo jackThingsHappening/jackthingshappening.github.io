@@ -28,6 +28,8 @@ Skip `index.mdx` files — those are venue pages, not individual events.
 
 ## Step 5 — Compare and unpublish stale events
 
+**Never delete MDX files.** Only ever set `published: false`. Deleting files removes indexed pages and breaks the sitemap.
+
 For each published event file, check if the event title (from the file's `title` frontmatter) still appears on the live calendar.
 
 If the title is NOT found on the live calendar, check the file's `pubDate` frontmatter field:
