@@ -168,12 +168,45 @@ const page = {
       <article id="events" class="w-full px-4 md:px-8 lg:px-16 mt-8 pb-4">
         <header class="pt-8">
           <h1 class="font-jakarta font-bold text-[3.3rem] leading-[1.2]">
-            Chattanooga Events
-          </h1>
-          <h2 class="font-jakarta font-bold text-[3.3rem] leading-[1.2]">
             What's happening in <span class="shimmer-text">Chattanooga</span><span class="text-customGreen1">.</span>
-          </h2>
-          <p class="text-gray-600 text-xl3 mt-6 mb-12">Also check out our <a href="/chattanooga/guides/tag/interactive" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-8 [text-decoration-skip-ink:none] hover:opacity-70 transition-opacity">interactive</a> and <a href="/chattanooga/guides/tag/longform" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-8 [text-decoration-skip-ink:none] hover:opacity-70 transition-opacity">longform</a> guides<span class="text-customGreen1 text-3xl">.</span></p>
+          </h1>
+          <p class="text-gray-600 text-xl3 mt-6 mb-2">Your guide to what's going on in Chattanooga. Events, live music, outdoor adventures, and local guides, all updated daily.</p>
+          <div class="mb-8">
+            <div class="text-gray-600 text-xl3 space-y-2 relative">
+              <div>• <a href="/chattanooga/events/page/1" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity"><strong>Events:</strong></a> upcoming things to do in Chattanooga, updated daily</div>
+              <div>• <a href="/chattanooga/my-favorites" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity"><strong>Save to favorites:</strong></a> star events and guide spots to revisit later</div>
+              <div id="features-fade" class="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
+            </div>
+            <div id="features-extra" class="text-gray-600 text-xl3 space-y-2 overflow-hidden" style="max-height: 0; transition: max-height 0.35s ease;">
+              <div class="pt-2">• <a href="/chattanooga/my-favorites" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity"><strong>Add to calendar:</strong></a> send any event straight to your external calendar</div>
+              <div>• <a href="/chattanooga/guides/tag/interactive" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity"><strong>Interactive guides:</strong></a> explore local spots with filterable, sortable lists</div>
+              <div>• <a href="/chattanooga/guides/tag/longform" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity"><strong>Longform guides:</strong></a> in-depth reads on neighborhoods, trails, and local life</div>
+              <div>• <a href="/chattanooga/my-favorites" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity"><strong>Guide favorites:</strong></a> individual spots inside each guide you can save to revisit</div>
+              <div>• <a href="/chattanooga/events/tags" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity"><strong>Tags:</strong></a> browse by genre (music, outdoors, food, sports) or by place and vendor</div>
+              <div>• <a href="/chattanooga/events/nearby" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity"><strong>Nearby cities:</strong></a> events in towns around Chattanooga</div>
+            </div>
+            <button id="features-btn" data-expanded="false" class="text-customGreen1 font-semibold text-base mt-2 hover:opacity-70 transition-opacity">Show all</button>
+          </div>
+          <script>
+            const btn = document.getElementById('features-btn');
+            const extra = document.getElementById('features-extra');
+            const fade = document.getElementById('features-fade');
+            btn?.addEventListener('click', () => {
+              const expanded = btn.dataset.expanded === 'true';
+              if (expanded) {
+                extra.style.maxHeight = '0px';
+                fade.style.display = '';
+                btn.textContent = 'Show all';
+                btn.dataset.expanded = 'false';
+              } else {
+                extra.style.maxHeight = extra.scrollHeight + 'px';
+                fade.style.display = 'none';
+                btn.textContent = 'Show less';
+                btn.dataset.expanded = 'true';
+              }
+            });
+          </script>
+          <p class="text-gray-600 text-xl3 mb-12">Also check out our <a href="/chattanooga/guides/tag/interactive" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-8 [text-decoration-skip-ink:none] hover:opacity-70 transition-opacity">interactive</a> and <a href="/chattanooga/guides/tag/longform" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-8 [text-decoration-skip-ink:none] hover:opacity-70 transition-opacity">longform</a> guides detailing the city of Chattanooga and their PDF's<span class="text-customGreen1 text-3xl">.</span></p>
           <EmailSignup />
         </header>
         <EventsNav active="all" />

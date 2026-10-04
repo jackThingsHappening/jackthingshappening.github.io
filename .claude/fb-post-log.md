@@ -26,3 +26,5 @@
 | 2026-10-04 10:35am CT | event-post | All Them Witches | the-signal-all-them-witches |
 | 2026-10-02 10:30am CT | feature-callout | Save to Google/Apple Calendar | event cards |
 | 2026-10-07 11:15am CT | new-vendor | Plant Bar | plant-bar events tag page |
+| 2026-10-04 (live) | guide-promotion | Booker T. Washington State Park hiking/paddling | outdoors guide (booker-t-washington filter) |
+| 2026-10-10 12:15pm CT | guide-promotion | MOCS basketball / Lookouts season transition | live-sports guide |
