@@ -927,13 +927,21 @@
     "notes": "Heritage railroad and museum at 4119 Cromwell Rd running regular vintage train excursions plus recurring seasonal events: North Pole Limited (Nov-Dec), Chattanooga Christmas Dinner Train (Nov-Jan), and themed rides through the year. Verify a scrapable events/schedule page at onboarding."
   },
   {
+    "name": "The Edwin Hotel",
+    "slug": "the-edwin-hotel",
+    "url": "https://www.theedwinhotel.com/events",
+    "category": "food-drink",
+    "status": "pending",
+    "notes": "Boutique hotel at 102 Walnut St with recurring weekly events: Industry Night at Whiskey Thief rooftop bar (Tue, live music), Wine Down at Whitebird restaurant (Thu, live music), and monthly Film & Fork dinner series (first Thursday)."
+  },
+  {
     "name": "Arts in the Burg",
     "slug": "arts-in-the-burg",
-    "url": "https://artsintheburg.com/",
-    "category": "community",
+    "url": "https://artsintheburg.com/things-to-do-events/",
+    "category": "museum",
     "city": "south-pittsburg-tn",
     "status": "pending",
-    "notes": "Downtown South Pittsburg cultural venue hosting live entertainment, indie films, and themed events on the second Saturday of each month. Verify a scrapable events page at onboarding."
+    "notes": "Community arts gallery and event space at 207 S Cedar Ave, South Pittsburg with Second Saturday entertainment events, working artist studios, and rotating gallery shows. Events calendar at /things-to-do-events/ — verify if JS-rendered or scrapable at onboarding."
   },
   {
     "name": "City of South Pittsburg",
@@ -943,5 +951,13 @@
     "city": "south-pittsburg-tn",
     "status": "pending",
     "notes": "Official City of South Pittsburg, TN events calendar (The Events Calendar / tribe_events). Lists city-run community events and seasonal happenings. Verify scrapability and event density at onboarding."
+  },
+  {
+    "name": "Fiamma Pizza Company",
+    "slug": "fiamma-pizza",
+    "url": "https://fiammapizzaco.com/events/",
+    "category": "food-drink",
+    "status": "pending",
+    "notes": "Neapolitan pizzeria at 405 N Market St with a recurring weekly Trivia Tuesday (7-9pm, prizes for top three teams) and a dedicated events page."
   }
 ]
