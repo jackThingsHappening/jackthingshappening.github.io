@@ -5,10 +5,10 @@ Things Happening covers events, guides, and editorials for Chattanooga and the s
 
 ## Key pages
 
-- Events: https://thingshappening.com/chattanooga/
-- Guides: https://thingshappening.com/chattanooga/guides/
-- Editorials: https://thingshappening.com/chattanooga/editorials/
-- About: https://thingshappening.com/about/
+- [Events](https://thingshappening.com/chattanooga/): Upcoming local events in Chattanooga
+- [Guides](https://thingshappening.com/chattanooga/guides/): Interactive guides to Chattanooga venues, trails, and more
+- [Editorials](https://thingshappening.com/chattanooga/editorials/): Original editorial content about local Chattanooga history and places
+- [About](https://thingshappening.com/about/): About Things Happening
 
 ## Coverage
 
