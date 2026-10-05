@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/calendar.png",
     "eventLink": "https://thecommonstn.com/calendar/",
     "tags": [
-      { "type": "place", "tag": "the-commons" },
-      { "type": "genre", "tag": "community" }
+      {
+        "type": "place",
+        "tag": "the-commons"
+      },
+      {
+        "type": "genre",
+        "tag": "community"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 7,
-  "last_checked": "2026-09-28"
+  "last_checked": "2026-10-05"
 }

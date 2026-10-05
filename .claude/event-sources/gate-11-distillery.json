@@ -30,11 +30,17 @@
     "iconPath": "/images/icons-new/beer.png",
     "eventLink": "https://www.gate11distillery.com/events",
     "tags": [
-      { "type": "place", "tag": "gate-11-distillery" },
-      { "type": "genre", "tag": "food-drink" }
+      {
+        "type": "place",
+        "tag": "gate-11-distillery"
+      },
+      {
+        "type": "genre",
+        "tag": "food-drink"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 14,
-  "last_checked": "2026-09-21"
+  "last_checked": "2026-10-05"
 }

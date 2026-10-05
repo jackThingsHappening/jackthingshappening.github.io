@@ -14,11 +14,17 @@
     "iconPath": "/images/icons-new/music.png",
     "eventLink": "http://www.tremonttavern.com/open-mike-night-tuesday",
     "tags": [
-      { "type": "place", "tag": "tremont-tavern" },
-      { "type": "genre", "tag": "music" }
+      {
+        "type": "place",
+        "tag": "tremont-tavern"
+      },
+      {
+        "type": "genre",
+        "tag": "music"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 7,
-  "last_checked": "2026-09-28"
+  "last_checked": "2026-10-05"
 }

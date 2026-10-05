@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/music.png",
     "eventLink": "https://www.hificlydeschattanooga.com/live-music",
     "tags": [
-      { "type": "place", "tag": "hifi-clydes" },
-      { "type": "genre", "tag": "music" }
+      {
+        "type": "place",
+        "tag": "hifi-clydes"
+      },
+      {
+        "type": "genre",
+        "tag": "music"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 7,
-  "last_checked": "2026-09-28"
+  "last_checked": "2026-10-05"
 }
