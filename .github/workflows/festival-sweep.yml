@@ -2,7 +2,7 @@ name: Festival Sweep
 
 on:
   schedule:
-    - cron: '0 14 */15 * *'  # 10am ET every 15 days
+    # - cron: '0 14 */15 * *'  # 10am ET every 15 days
   workflow_dispatch:
 
 jobs:

@@ -28,3 +28,6 @@
 | 2026-10-07 11:15am CT | new-vendor | Plant Bar | plant-bar events tag page |
 | 2026-10-04 (live) | guide-promotion | Booker T. Washington State Park hiking/paddling | outdoors guide (booker-t-washington filter) |
 | 2026-10-10 12:15pm CT | guide-promotion | MOCS basketball / Lookouts season transition | live-sports guide |
+| 2026-10-13 9:15am CT | feature-callout | Nearby cities; Ringgold GA | ringgold-ga city events page |
+| 2026-10-15 11:30am CT | feature-callout | Cloudland Canyon / Walker County nearby events | chickamauga-ga city events page |
+| 2026-10-18 10:45am CT | content-spotlight | Tivoli Theatre | performance-arts guide |

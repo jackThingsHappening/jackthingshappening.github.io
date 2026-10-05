@@ -46,6 +46,15 @@ const regionalVenues = venuesWithCounts.filter(
       title="Event Venues in Chattanooga, TN"
       description="Browse event venues in Chattanooga and the surrounding region. Find upcoming events at music venues, breweries, museums, farms, and more."
     />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thingshappening.com" },
+        { "@type": "ListItem", "position": 2, "name": "Chattanooga", "item": "https://thingshappening.com/chattanooga" },
+        { "@type": "ListItem", "position": 3, "name": "Venues", "item": "https://thingshappening.com/chattanooga/venues" }
+      ]
+    })} />
 </head>
   <body class="text-black font-body leading-normal personality-casual">
     <Nav />
