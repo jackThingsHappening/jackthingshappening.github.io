@@ -507,7 +507,7 @@
     "slug": "outdoor-chattanooga",
     "url": "https://outdoorchattanooga.com/calendar/",
     "category": "outdoors",
-    "status": "pending",
+    "status": "active",
     "notes": "City outdoor recreation center in Coolidge Park running a rolling calendar of guided hikes, paddling, cycling, climbing, and family programs; registration opens two weeks ahead."
   },
   {
@@ -917,5 +917,31 @@
     "city": "lookout-mountain-ga",
     "status": "pending",
     "notes": "Division III athletics on top of Lookout Mountain, GA. Regular-season men's and women's basketball (Nov-Feb) at Barnes PE Center is free to attend. General athletics calendar at athletics.covenant.edu. Verify scrapability at onboarding."
+  },
+  {
+    "name": "Tennessee Valley Railroad Museum",
+    "slug": "tennessee-valley-railroad-museum",
+    "url": "https://www.tvrail.com/",
+    "category": "museum",
+    "status": "pending",
+    "notes": "Heritage railroad and museum at 4119 Cromwell Rd running regular vintage train excursions plus recurring seasonal events: North Pole Limited (Nov-Dec), Chattanooga Christmas Dinner Train (Nov-Jan), and themed rides through the year. Verify a scrapable events/schedule page at onboarding."
+  },
+  {
+    "name": "Arts in the Burg",
+    "slug": "arts-in-the-burg",
+    "url": "https://artsintheburg.com/",
+    "category": "community",
+    "city": "south-pittsburg-tn",
+    "status": "pending",
+    "notes": "Downtown South Pittsburg cultural venue hosting live entertainment, indie films, and themed events on the second Saturday of each month. Verify a scrapable events page at onboarding."
+  },
+  {
+    "name": "City of South Pittsburg",
+    "slug": "city-of-south-pittsburg",
+    "url": "https://southpittsburgtn.org/?post_type=tribe_events",
+    "category": "community",
+    "city": "south-pittsburg-tn",
+    "status": "pending",
+    "notes": "Official City of South Pittsburg, TN events calendar (The Events Calendar / tribe_events). Lists city-run community events and seasonal happenings. Verify scrapability and event density at onboarding."
   }
 ]

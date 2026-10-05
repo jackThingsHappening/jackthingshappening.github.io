@@ -30,6 +30,7 @@
 | main-street-farmers-market | Main Street Farmers Market |
 | nooga-nightlife | Nooga Nightlife |
 | oddstory | Oddstory Brewing Co. |
+| outdoor-chattanooga | Outdoor Chattanooga |
 | reflection-riding | Reflection Riding |
 | riverfront-nights | TVFCU Riverfront Nights |
 | songbirds | Songbirds |
