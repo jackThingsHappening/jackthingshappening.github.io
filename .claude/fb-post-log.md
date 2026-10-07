@@ -31,3 +31,4 @@
 | 2026-10-13 9:15am CT | feature-callout | Nearby cities; Ringgold GA | ringgold-ga city events page |
 | 2026-10-15 11:30am CT | feature-callout | Cloudland Canyon / Walker County nearby events | chickamauga-ga city events page |
 | 2026-10-18 10:45am CT | content-spotlight | Tivoli Theatre | performance-arts guide |
+| 2026-10-24 10:30am CT | guide-promotion | Chickamauga Battlefield hiking/biking | outdoors guide (chickamauga-battlefield filter) |

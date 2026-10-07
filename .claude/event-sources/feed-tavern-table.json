@@ -1,0 +1,38 @@
+{
+  "name": "Feed Tavern & Table Co.",
+  "type": "recurring",
+  "url": "https://www.feedtableandtavern.com/specials/",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/feed-tavern-table/live-trivia-tuesday.mdx",
+      "matchHint": "Weekly Tuesday Live Trivia with Izzy, 7:30pm in the Tavern. $4 featured pints and half-price house wine."
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/feed-tavern-table/wednesday-bingo.mdx",
+      "matchHint": "Weekly Wednesday Bingo hosted by Izzy, 7pm. Whiskey Wednesday drink specials."
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/feed-tavern-table/thursday-patio-live-music.mdx",
+      "matchHint": "Weekly Thursday live local music on the patio, 6:30pm. Artist list posted on Facebook. $8 cocktail specials."
+    }
+  ],
+  "defaultFrontmatter": {
+    "venue": "Feed Tavern & Table Co.",
+    "address": "201 W Main St, Chattanooga, TN 37408",
+    "iconPath": "/images/icons-new/beer.png",
+    "eventLink": "https://www.feedtableandtavern.com/specials/",
+    "tags": [
+      {
+        "type": "place",
+        "tag": "feed-tavern-table"
+      },
+      {
+        "type": "genre",
+        "tag": "food-drink"
+      }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-10-06"
+}
