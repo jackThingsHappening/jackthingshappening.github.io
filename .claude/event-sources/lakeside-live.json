@@ -1,0 +1,20 @@
+{
+  "name": "Lakeside Live! Concert Series",
+  "type": "calendar",
+  "url": "https://parks.hamiltontn.gov/423/Lakeside-Live-Concert-Series",
+  "outputDir": "src/pages/chattanooga/events/lakeside-live",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Chester Frost Park",
+    "address": "2277 Gold Pointe Circle N., Hixson, TN 37343",
+    "iconPath": "/images/icons-new/pine-tree.png",
+    "eventLink": "https://parks.hamiltontn.gov/423/Lakeside-Live-Concert-Series",
+    "tags": [
+      { "type": "place", "tag": "lakeside-live" },
+      { "type": "genre", "tag": "outdoors" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-10-08"
+}

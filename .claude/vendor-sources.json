@@ -539,8 +539,8 @@
     "slug": "lakeside-live",
     "url": "https://parks.hamiltontn.gov/423/Lakeside-Live-Concert-Series",
     "category": "outdoors",
-    "status": "pending",
-    "notes": "Free summer concert series at Chester Frost Park in Hixson run by Hamilton County Parks & Recreation. Waterfront shows with food trucks and family activities; funded through 2027."
+    "status": "active",
+    "notes": "Free summer concert series at Chester Frost Park in Hixson run by Hamilton County Parks & Recreation. Waterfront shows with food trucks and family activities; funded through 2027. Onboarded 2026-10-08 as calendar type; all 2026 shows (June 13, July 24, Aug 15) already passed at onboarding — no initial events. Refresh pipeline will pull 2027 dates when announced."
   },
   {
     "name": "Ooltewah Farmers Market",
