@@ -1,0 +1,20 @@
+{
+  "name": "Tivoli Theatre",
+  "type": "calendar",
+  "url": "https://www.tivolitheatretickets.com/",
+  "outputDir": "src/pages/chattanooga/events/tivoli-theatre",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Tivoli Theatre",
+    "address": "709 Broad St, Chattanooga, TN 37402",
+    "iconPath": "/images/icons-new/theater.png",
+    "eventLink": "https://tivolichattanooga.com",
+    "tags": [
+      { "type": "place", "tag": "tivoli-theatre" },
+      { "type": "genre", "tag": "live-events" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-10-08"
+}

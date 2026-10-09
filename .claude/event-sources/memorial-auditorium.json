@@ -1,0 +1,20 @@
+{
+  "name": "Soldiers & Sailors Memorial Auditorium",
+  "type": "calendar",
+  "url": "https://www.livenation.com/venue/KovZpZAIEdlA/soldiers-and-sailors-memorial-auditorium-events",
+  "outputDir": "src/pages/chattanooga/events/memorial-auditorium",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Soldiers & Sailors Memorial Auditorium",
+    "address": "399 McCallie Ave, Chattanooga, TN 37402",
+    "iconPath": "/images/icons-new/music.png",
+    "eventLink": "https://tivolichattanooga.com/memorial_auditorium",
+    "tags": [
+      { "type": "place", "tag": "memorial-auditorium" },
+      { "type": "genre", "tag": "live-events" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-10-08"
+}
