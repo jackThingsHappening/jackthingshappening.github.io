@@ -1,0 +1,27 @@
+{
+  "name": "UTC Mocs Athletics",
+  "type": "calendar",
+  "url": "https://gomocs.com/calendar.aspx",
+  "outputDir": "src/pages/chattanooga/events",
+  "slugPrefix": "utc-mocs",
+  "notes": "Site is JS-rendered. Events must be created manually from gomocs.com schedules. Football at Finley Stadium (1826 Reggie White Blvd). Basketball at McKenzie Arena (720 E. Fourth St).",
+  "defaultFrontmatter": {
+    "venue": "McKenzie Arena",
+    "address": "720 E. Fourth St, Chattanooga, TN 37403",
+    "iconPath": "/images/icons-new/sport.png",
+    "eventLink": "https://gomocs.com/sports/mens-basketball/schedule",
+    "tags": [
+      {
+        "type": "place",
+        "tag": "utc-mocs"
+      },
+      {
+        "type": "genre",
+        "tag": "sports"
+      }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-10-08"
+}
