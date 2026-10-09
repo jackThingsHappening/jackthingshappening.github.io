@@ -1,5 +1,21 @@
 [
   {
+    "name": "Tivoli Theatre",
+    "slug": "tivoli-theatre",
+    "url": "https://tivolichattanooga.com/tivoli",
+    "category": "theater",
+    "status": "active",
+    "notes": "Historic 1921 performing arts theater at 709 Broad St, Chattanooga managed by the Tivoli Theatre Foundation. Hosts touring Broadway shows, concerts, comedy, and dance. Events listed at tivolichattanooga.com \u2014 one-off calendar shows with individual titles and dates."
+  },
+  {
+    "name": "Soldiers & Sailors Memorial Auditorium",
+    "slug": "memorial-auditorium",
+    "url": "https://tivolichattanooga.com/memorial_auditorium",
+    "category": "theater",
+    "status": "active",
+    "notes": "Historic 1924 auditorium at 399 McCallie Ave, Chattanooga, also managed by the Tivoli Theatre Foundation. Hosts concerts, family shows, and large-scale touring productions. Events listed at tivolichattanooga.com \u2014 one-off calendar shows with individual titles and dates."
+  },
+  {
     "name": "Tennessee Aquarium",
     "slug": "acquarium",
     "url": "https://www.tnaqua.org/events",
@@ -84,14 +100,6 @@
     "category": "museum",
     "status": "active",
     "notes": "Children's museum running regular family programs, camps, and after-hours special events."
-  },
-  {
-    "name": "Tivoli Theatre",
-    "slug": "tivoli-theatre",
-    "url": "https://tivolichattanooga.com/",
-    "category": "theater",
-    "status": "blocked",
-    "notes": "Historic downtown theater (Tivoli Foundation) hosting a rolling calendar of Broadway shows, concerts, and comedy."
   },
   {
     "name": "WanderLinger Brewing Company",
@@ -867,7 +875,7 @@
     "url": "https://allevents.in/org/the-electric-crocodile/23345715",
     "category": "community",
     "status": "blocked",
-    "notes": "Vintage clothing and collectibles shop at 607 Cherokee Blvd with 70+ vendors. Hosts seasonal markets 3x/year: Spring Flea (April), Summer Market (July), and CroctoberFest (October) with live music on the porch stage. Own site (electriccrocodile.com) unreachable; events post via Facebook and allevents.in only — no scrapable own-site calendar. Re-check if they launch a dedicated events page. Checked 2026-10-01."
+    "notes": "Vintage clothing and collectibles shop at 607 Cherokee Blvd with 70+ vendors. Hosts seasonal markets 3x/year: Spring Flea (April), Summer Market (July), and CroctoberFest (October) with live music on the porch stage. Own site (electriccrocodile.com) unreachable; events post via Facebook and allevents.in only \u2014 no scrapable own-site calendar. Re-check if they launch a dedicated events page. Checked 2026-10-01."
   },
   {
     "name": "Plant Bar",
@@ -941,7 +949,7 @@
     "category": "museum",
     "city": "south-pittsburg-tn",
     "status": "pending",
-    "notes": "Community arts gallery and event space at 207 S Cedar Ave, South Pittsburg with Second Saturday entertainment events, working artist studios, and rotating gallery shows. Events calendar at /things-to-do-events/ — verify if JS-rendered or scrapable at onboarding."
+    "notes": "Community arts gallery and event space at 207 S Cedar Ave, South Pittsburg with Second Saturday entertainment events, working artist studios, and rotating gallery shows. Events calendar at /things-to-do-events/ \u2014 verify if JS-rendered or scrapable at onboarding."
   },
   {
     "name": "City of South Pittsburg",
