@@ -143,7 +143,7 @@ Not every date in `eventDates` needs a corresponding `eventDatesDetails` entry. 
 ---
 
 ## Rules
-- Only include dates that are today or in the future — never write past dates
+- When pruning past dates from an existing file, only remove dates that are more than 30 days before today — keep recent past dates (within 30 days) so they stay visible on the site
 - Date format must be YYYY-MM-DD (e.g. `"2026-05-10"`)
 - Do not modify title, venue, address, tags, iconPath, time, entranceCost, eventLink, or body content of existing files
 - Only modify eventDatesDetails as described above — never rewrite existing entries
