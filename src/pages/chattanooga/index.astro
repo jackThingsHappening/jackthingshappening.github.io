@@ -163,6 +163,16 @@ const page = {
           "position": i + 1,
           "url": `https://thingshappening.com${e.url}`
         }))
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What neighborhoods does this cover?", "acceptedAnswer": { "@type": "Answer", "text": "This site covers events and spots across Chattanooga — Downtown, North Shore, Southside, St. Elmo, East Brainerd, Red Bank, and surrounding areas." } },
+          { "@type": "Question", "name": "How do I find outdoor things to do in Chattanooga?", "acceptedAnswer": { "@type": "Answer", "text": "Browse the outdoors tag at thingshappening.com/chattanooga/events/tag/outdoors for upcoming events, or read the outdoors guides for trails, parks, and water access points." } },
+          { "@type": "Question", "name": "Where can I find live music this weekend in Chattanooga?", "acceptedAnswer": { "@type": "Answer", "text": "Check the this weekend filter at thingshappening.com/chattanooga/events/this-weekend and use the music tag to narrow it down." } },
+          { "@type": "Question", "name": "Are guides free to download?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PDF versions of guides are free. No email required." } },
+          { "@type": "Question", "name": "How often does the event calendar update?", "acceptedAnswer": { "@type": "Answer", "text": "The calendar rebuilds every day. Events get added as they are announced." } }
+        ]
       }
     ]
   })} />
@@ -279,6 +289,34 @@ const page = {
         </div>
       )}
     </article>
+
+    <section class="w-full px-4 md:px-8 lg:px-16 mt-16 pb-12">
+      <div class="max-w-3xl">
+        <h2 class="font-jakarta font-bold text-3xl mb-6">Common questions<span class="text-customGreen1">.</span></h2>
+        <div class="space-y-6 text-xl text-gray-800">
+          <div>
+            <h3 class="text-2xl font-semibold mb-1">What neighborhoods does this cover?</h3>
+            <p>This site covers events and spots across Chattanooga — Downtown, North Shore, Southside, St. Elmo, East Brainerd, Red Bank, and surrounding areas.</p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-1">How do I find outdoor things to do?</h3>
+            <p>Browse the <a href="/chattanooga/events/tag/outdoors" class="underline hover:text-customGreen1">outdoors tag</a> for upcoming events, or read the <a href="/chattanooga/guides/tag/outdoors" class="underline hover:text-customGreen1">outdoors guides</a> for trails, parks, and water access points.</p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-1">Where can I find live music this weekend?</h3>
+            <p>Check the <a href="/chattanooga/events/this-weekend" class="underline hover:text-customGreen1">this weekend</a> filter and use the <a href="/chattanooga/events/tag/music" class="underline hover:text-customGreen1">music tag</a> to narrow it down.</p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-1">Are guides free to download?</h3>
+            <p>Yes. PDF versions of guides are free. No email required.</p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-1">How often does the event calendar update?</h3>
+            <p>The calendar rebuilds every day. Check back often — events get added as they are announced.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <Paginator page={page} />
   </main>

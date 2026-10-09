@@ -54,9 +54,70 @@ filteredEvents.forEach((p) => {
   }
 });
 
-const description = 'An easier way to find things to do in greater Chattanooga';
-const title = 'thingshappening';
-const seoDescription = 'An easier way to find things happening';
+const TAG_META: Record<string, { titleSuffix: string; seoDescription: string; intro: string }> = {
+  outdoors: {
+    titleSuffix: 'Outdoor Events in Chattanooga, TN',
+    seoDescription: 'Hikes, paddling, parks, and outdoor events in Chattanooga, TN. Updated daily.',
+    intro: 'Chattanooga sits inside the Tennessee River Gorge and borders a national forest. Outdoor events here range from guided trail runs to river cleanups to night paddles. This page lists upcoming outdoor events. It updates daily.',
+  },
+  music: {
+    titleSuffix: 'Live Music in Chattanooga, TN',
+    seoDescription: 'Concerts, shows, and live music nights in Chattanooga, TN. Updated daily.',
+    intro: 'Chattanooga has live music most nights of the week. Venues range from seated listening rooms to outdoor stages. This page lists upcoming shows across the city. It updates daily.',
+  },
+  comedy: {
+    titleSuffix: 'Comedy Shows in Chattanooga, TN',
+    seoDescription: 'Stand-up, improv, and comedy nights in Chattanooga, TN. Updated daily.',
+    intro: 'Comedy Catch has hosted national touring acts for decades. Improv Chattanooga runs weekly shows downtown. This page lists upcoming comedy events. It updates daily.',
+  },
+  'food-drink': {
+    titleSuffix: 'Food and Drink Events in Chattanooga, TN',
+    seoDescription: 'Tastings, dinners, pop-ups, and drink events in Chattanooga, TN. Updated daily.',
+    intro: 'Chattanooga has a growing food scene centered on the Southside and the North Shore. This page lists food and drink events including tastings, pop-ups, and dinners. It updates daily.',
+  },
+  theater: {
+    titleSuffix: 'Theater and Stage Shows in Chattanooga, TN',
+    seoDescription: 'Local theater productions and stage performances in Chattanooga, TN. Updated daily.',
+    intro: 'Chattanooga Theatre Centre and the Tivoli host productions year-round. This page lists upcoming theater and stage performances. It updates daily.',
+  },
+  theatre: {
+    titleSuffix: 'Theatre and Stage Shows in Chattanooga, TN',
+    seoDescription: 'Local theatre productions and stage performances in Chattanooga, TN. Updated daily.',
+    intro: 'Chattanooga Theatre Centre and the Tivoli host productions year-round. This page lists upcoming theatre and stage performances. It updates daily.',
+  },
+  community: {
+    titleSuffix: 'Community Events in Chattanooga, TN',
+    seoDescription: 'Community gatherings, meetups, and neighborhood events in Chattanooga, TN. Updated daily.',
+    intro: 'Chattanooga has an active community event calendar — markets, cleanups, workshops, and neighborhood meetups. This page lists upcoming community events. It updates daily.',
+  },
+  brewery: {
+    titleSuffix: 'Brewery Events in Chattanooga, TN',
+    seoDescription: 'Tap takeovers, beer releases, and brewery events in Chattanooga, TN. Updated daily.',
+    intro: 'Chattanooga has a cluster of local breweries on the Southside and Northshore. This page lists upcoming events at area breweries. It updates daily.',
+  },
+  trivia: {
+    titleSuffix: 'Trivia Nights in Chattanooga, TN',
+    seoDescription: 'Weekly trivia nights at bars and venues across Chattanooga, TN. Updated daily.',
+    intro: 'Several bars and restaurants run weekly trivia nights across Chattanooga. Teams are usually 2-6 people. This page lists upcoming trivia nights. It updates daily.',
+  },
+  sports: {
+    titleSuffix: 'Sports Events in Chattanooga, TN',
+    seoDescription: 'Games, matches, and sporting events in Chattanooga, TN. Updated daily.',
+    intro: 'The Chattanooga Lookouts play at AT&T Field downtown. UTC Mocs games run through the fall and winter. This page lists upcoming sports events. It updates daily.',
+  },
+  'live-events': {
+    titleSuffix: 'Live Events in Chattanooga, TN',
+    seoDescription: 'Upcoming live events and performances in Chattanooga, TN. Updated daily.',
+    intro: 'This page lists upcoming live events across Chattanooga. It updates daily.',
+  },
+};
+const meta = TAG_META[tag] ?? {
+  titleSuffix: `#${tag} Events in Chattanooga, TN`,
+  seoDescription: `Upcoming ${tag} events in Chattanooga, TN. Updated daily.`,
+  intro: `This page lists upcoming ${tag} events in Chattanooga. It updates daily.`,
+};
+const title = `${meta.titleSuffix} | Things Happening`;
+const seoDescription = meta.seoDescription;
 ---
 
 <html>
@@ -74,7 +135,8 @@ const seoDescription = 'An easier way to find things happening';
 
     <main class="py-12 lg:pt-20">
       <article class="max-w-6xl mx-auto px-3">
-        <HomeHeader title={`#${tag}`} description={description} />
+        <HomeHeader title={`#${tag}`} description={meta.seoDescription} />
+        <p class="text-xl text-gray-700 max-w-2xl mb-6">{meta.intro}</p>
         <div class="ml-embedded" data-form="ZoK6PR"></div>
 
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8" data-test="articles-section">

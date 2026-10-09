@@ -71,7 +71,23 @@ const { page } = Astro.props;
 
 <html lang="en">
 <head>
-  <BaseHead title={`Events - Page ${page.currentPage}`} description="Upcoming events in Chattanooga" />
+  <BaseHead
+    title={`Upcoming Events in Chattanooga, TN${page.currentPage > 1 ? ` — Page ${page.currentPage}` : ''} | Things Happening`}
+    description={`Browse upcoming events in Chattanooga, TN. Live music, outdoor adventures, food, comedy, and more. Page ${page.currentPage} of ${page.lastPage}.`}
+  />
+  {page.currentPage === 1 && (
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How often does this page update?", "acceptedAnswer": { "@type": "Answer", "text": "The event calendar rebuilds daily. New events are added as vendors publish them." } },
+        { "@type": "Question", "name": "How do I find events by type?", "acceptedAnswer": { "@type": "Answer", "text": "Use the tags page at thingshappening.com/chattanooga/events/tags to browse by genre — music, outdoors, comedy, food, and more." } },
+        { "@type": "Question", "name": "Can I save events to check later?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Click the star on any event card. Saved events appear on the My Favorites page." } },
+        { "@type": "Question", "name": "Are there events in nearby towns?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The nearby cities page covers events in Cleveland, Ringgold, Ooltewah, and other towns close to Chattanooga." } },
+        { "@type": "Question", "name": "Is Things Happening free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. No login, no subscription, no paywall." } }
+      ]
+    })} />
+  )}
 </head>
 
 <body class="text-black font-body leading-normal personality-casual">
@@ -79,11 +95,44 @@ const { page } = Astro.props;
   <main class="max-w-6xl mx-auto px-3 py-12">
     <HomeHeader title="Events" description="Here’s what’s coming up around Chattanooga" />
     <SubNav />
+    {page.currentPage === 1 && (
+      <div class="max-w-3xl mt-6 mb-2 text-xl text-gray-700 space-y-3">
+        <p>Chattanooga has events most days of the week. Live music runs nearly every night. Outdoor events follow the river and the ridgeline. Comedy, theater, food pop-ups, and community gatherings fill the rest of the calendar.</p>
+        <p>This page lists all upcoming events sorted by date. Use the nav above to filter by time window, or visit the <a href="/chattanooga/events/tags" class="underline hover:text-customGreen1">tags page</a> to browse by activity.</p>
+      </div>
+    )}
     <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
       {page.data.map((event) => (
         <Card post={event} />
       ))}
     </section>
+    {page.currentPage === 1 && (
+      <section class="mt-16 max-w-3xl">
+        <h2 class="text-3xl font-bold mb-6" style="font-family: ‘Libre Baskerville’, serif;">FAQ<span class="text-customGreen1">.</span></h2>
+        <div class="space-y-6 text-xl text-gray-800">
+          <div>
+            <h3 class="text-2xl font-semibold mb-1">How often does this page update?</h3>
+            <p>The event calendar rebuilds daily. New events are added as vendors publish them.</p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-1">How do I find events by type?</h3>
+            <p>Use the <a href="/chattanooga/events/tags" class="underline hover:text-customGreen1">tags page</a> to browse by genre — music, outdoors, comedy, food, and more.</p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-1">Can I save events to check later?</h3>
+            <p>Yes. Click the star on any event card. Your saved events appear on the <a href="/chattanooga/my-favorites" class="underline hover:text-customGreen1">My Favorites</a> page.</p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-1">Are there events in nearby towns?</h3>
+            <p>Yes. The <a href="/chattanooga/events/nearby" class="underline hover:text-customGreen1">nearby cities</a> page covers events in Cleveland, Ringgold, Ooltewah, and other towns close to Chattanooga.</p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-1">Is Things Happening free?</h3>
+            <p>Yes. No login, no subscription, no paywall.</p>
+          </div>
+        </div>
+      </section>
+    )}
     <Paginator page={page} />
   </main>
   <Footer />
