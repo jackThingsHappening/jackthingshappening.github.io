@@ -66,7 +66,9 @@ Write copy that fits the photo and the content angle.
 
 ## Step 4 — Propose a schedule
 
-Default: next Saturday or Sunday, 9:00am to 2:00pm CT. Vary the exact time. Use naturally varied times like 9:15am, 10:45am, 11:30am, 12:15pm, 1:00pm, 1:45pm.
+Schedule within 10 days of today. Fill gaps in the log — don't leave a day empty when content is ready. Up to 2 posts per day is fine when the content warrants it (different topics, different vibes).
+
+Use naturally varied times between 9:00am and 2:00pm CT: 9:15am, 10:45am, 11:30am, 12:15pm, 1:00pm, 1:45pm, etc.
 
 Type-specific timing:
 - Engagement posts: Tuesday-Thursday midday
