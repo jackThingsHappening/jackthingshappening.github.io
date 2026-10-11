@@ -1,0 +1,20 @@
+{
+  "name": "Ooltewah Farmers Market",
+  "type": "calendar",
+  "url": "https://www.ooltewahnursery.com/event-list",
+  "outputDir": "src/pages/chattanooga/events/ooltewah-farmers-market",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Ooltewah Farmers Market",
+    "address": "5829 Main St, Ooltewah, TN 37363",
+    "iconPath": "/images/icons-new/market.png",
+    "eventLink": "https://www.ooltewahnursery.com/farmers-market",
+    "tags": [
+      { "type": "place", "tag": "ooltewah-farmers-market" },
+      { "type": "genre", "tag": "market" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-10-11"
+}
