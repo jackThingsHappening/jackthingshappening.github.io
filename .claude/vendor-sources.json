@@ -5,7 +5,7 @@
     "url": "https://tivolichattanooga.com/tivoli",
     "category": "theater",
     "status": "active",
-    "notes": "Historic 1921 performing arts theater at 709 Broad St, Chattanooga managed by the Tivoli Theatre Foundation. Hosts touring Broadway shows, concerts, comedy, and dance. Events listed at tivolichattanooga.com — one-off calendar shows with individual titles and dates."
+    "notes": "Historic 1921 performing arts theater at 709 Broad St, Chattanooga managed by the Tivoli Theatre Foundation. Hosts touring Broadway shows, concerts, comedy, and dance. Events listed at tivolichattanooga.com \u2014 one-off calendar shows with individual titles and dates."
   },
   {
     "name": "Soldiers & Sailors Memorial Auditorium",
@@ -13,7 +13,7 @@
     "url": "https://tivolichattanooga.com/memorial_auditorium",
     "category": "theater",
     "status": "active",
-    "notes": "Historic 1924 auditorium at 399 McCallie Ave, Chattanooga, also managed by the Tivoli Theatre Foundation. Hosts concerts, family shows, and large-scale touring productions. Events listed at tivolichattanooga.com — one-off calendar shows with individual titles and dates."
+    "notes": "Historic 1924 auditorium at 399 McCallie Ave, Chattanooga, also managed by the Tivoli Theatre Foundation. Hosts concerts, family shows, and large-scale touring productions. Events listed at tivolichattanooga.com \u2014 one-off calendar shows with individual titles and dates."
   },
   {
     "name": "Tennessee Aquarium",
@@ -155,7 +155,7 @@
     "url": "https://tivolichattanooga.com/memorial_auditorium",
     "category": "theater",
     "status": "blocked",
-    "notes": "Historic 1924 downtown auditorium (Tivoli Foundation) hosting a rolling calendar of touring concerts, comedy headliners, and family shows. robots.txt on tivolichattanooga.com explicitly disallows ClaudeBot (Disallow: /) — cannot auto-scrape. Same block as the Tivoli Theatre entry."
+    "notes": "Historic 1924 downtown auditorium (Tivoli Foundation) hosting a rolling calendar of touring concerts, comedy headliners, and family shows. robots.txt on tivolichattanooga.com explicitly disallows ClaudeBot (Disallow: /) \u2014 cannot auto-scrape. Same block as the Tivoli Theatre entry."
   },
   {
     "name": "Flat Top Mountain Farm",
@@ -163,7 +163,7 @@
     "url": "https://www.flattopmountainfarm.com/",
     "category": "farm",
     "status": "blocked",
-    "notes": "Soddy-Daisy family farm with seasonal agritourism events. Site is JS-rendered — events page returns empty content, cannot auto-scrape."
+    "notes": "Soddy-Daisy family farm with seasonal agritourism events. Site is JS-rendered \u2014 events page returns empty content, cannot auto-scrape."
   },
   {
     "name": "Crabtree Farms",
@@ -187,7 +187,7 @@
     "url": "https://happyvalleyfarmtn.com/events",
     "category": "farm",
     "status": "blocked",
-    "notes": "Farm with seasonal events. Site was connection-refused at time of check — cannot auto-scrape."
+    "notes": "Farm with seasonal events. Site was connection-refused at time of check \u2014 cannot auto-scrape."
   },
   {
     "name": "Quail Run Farm",
@@ -195,7 +195,7 @@
     "url": "https://quailrunfarm.net/events",
     "category": "farm",
     "status": "blocked",
-    "notes": "Farm with occasional live music events. SSL certificate expired at time of check — cannot auto-scrape."
+    "notes": "Farm with occasional live music events. SSL certificate expired at time of check \u2014 cannot auto-scrape."
   },
   {
     "name": "Reflection Riding",
@@ -219,7 +219,7 @@
     "url": "https://www.bessiesmithcc.org/upcoming-events",
     "category": "museum",
     "status": "active",
-    "notes": "African American museum and cultural center at 200 E MLK Blvd with recurring lectures, community nights, and annual festivals like the Big 9 Music Fest. Onboarded 2026-08-25 as calendar type; events page was empty at onboarding ('No events at the moment') — refresh pipeline will pull events when posted."
+    "notes": "African American museum and cultural center at 200 E MLK Blvd with recurring lectures, community nights, and annual festivals like the Big 9 Music Fest. Onboarded 2026-08-25 as calendar type; events page was empty at onboarding ('No events at the moment') \u2014 refresh pipeline will pull events when posted."
   },
   {
     "name": "Chattanooga Lookouts",
@@ -262,7 +262,7 @@
     "category": "community",
     "city": "cleveland-tn",
     "status": "active",
-    "notes": "Wellness studio hosting the Rooted Night Market on First Saturdays 6–9pm. Each month has a different theme. Free, family-friendly."
+    "notes": "Wellness studio hosting the Rooted Night Market on First Saturdays 6\u20139pm. Each month has a different theme. Free, family-friendly."
   },
   {
     "name": "Farmers on First",
@@ -271,7 +271,7 @@
     "category": "community",
     "city": "cleveland-tn",
     "status": "active",
-    "notes": "Year-round Sunday farmers market at First Street Square in downtown Cleveland. 20+ vendors, 11am–2pm weekly."
+    "notes": "Year-round Sunday farmers market at First Street Square in downtown Cleveland. 20+ vendors, 11am\u20132pm weekly."
   },
   {
     "name": "The Diving Mouse",
@@ -280,7 +280,7 @@
     "category": "music",
     "city": "cleveland-tn",
     "status": "active",
-    "notes": "Cleveland nightlife venue with weekly Singo (Tue), Karaoke (Wed), Open Mic (Thu), and Live Music (Fri–Sat). Smoke-free bar with covered patio."
+    "notes": "Cleveland nightlife venue with weekly Singo (Tue), Karaoke (Wed), Open Mic (Thu), and Live Music (Fri\u2013Sat). Smoke-free bar with covered patio."
   },
   {
     "name": "Princess Theatre",
@@ -289,7 +289,7 @@
     "category": "theater",
     "city": "south-pittsburg-tn",
     "status": "blocked",
-    "notes": "Historic theater at 215 S Cedar Ave, South Pittsburg. Events announced via social media only — no scrapable calendar."
+    "notes": "Historic theater at 215 S Cedar Ave, South Pittsburg. Events announced via social media only \u2014 no scrapable calendar."
   },
   {
     "name": "National Cornbread Festival",
@@ -298,7 +298,7 @@
     "category": "community",
     "city": "south-pittsburg-tn",
     "status": "active",
-    "notes": "Annual two-day festival last weekend of April in downtown South Pittsburg. 30 miles west of Chattanooga. Next: April 26–27, 2027."
+    "notes": "Annual two-day festival last weekend of April in downtown South Pittsburg. 30 miles west of Chattanooga. Next: April 26\u201327, 2027."
   },
   {
     "name": "Lula Lake Land Trust",
@@ -352,7 +352,7 @@
     "category": "community",
     "city": "ringgold-ga",
     "status": "active",
-    "notes": "Weekly Saturday market in downtown Ringgold, May–Oct, 9am–1pm. Special events include Chili Cook Off (Sep 26), Family Fall Festival (Oct 31), Holiday Market (Nov 14)."
+    "notes": "Weekly Saturday market in downtown Ringgold, May\u2013Oct, 9am\u20131pm. Special events include Chili Cook Off (Sep 26), Family Fall Festival (Oct 31), Holiday Market (Nov 14)."
   },
   {
     "name": "Nothin' Like Ringgold",
@@ -379,7 +379,7 @@
     "category": "community",
     "city": "collegedale-tn",
     "status": "active",
-    "notes": "Community event venue at 4950 Swinyar Dr, Collegedale. Hosts Pumpkinfest (Oct), Christkindlmarkt (Nov), and Candy Cane Christmas Market (Nov). Onboarded 2026-09-10 as calendar type; events page was empty at onboarding ('no upcoming events') — refresh pipeline will pull events when posted."
+    "notes": "Community event venue at 4950 Swinyar Dr, Collegedale. Hosts Pumpkinfest (Oct), Christkindlmarkt (Nov), and Candy Cane Christmas Market (Nov). Onboarded 2026-09-10 as calendar type; events page was empty at onboarding ('no upcoming events') \u2014 refresh pipeline will pull events when posted."
   },
   {
     "name": "Cambridge Square",
@@ -388,7 +388,7 @@
     "category": "music",
     "city": "ooltewah-tn",
     "status": "blocked",
-    "notes": "Outdoor shopping/dining district in Ooltewah with free Saturday live music from late April through October. robots.txt disallows ClaudeBot. 2026 artist schedule embedded in images — update dates manually each season."
+    "notes": "Outdoor shopping/dining district in Ooltewah with free Saturday live music from late April through October. robots.txt disallows ClaudeBot. 2026 artist schedule embedded in images \u2014 update dates manually each season."
   },
   {
     "name": "Puckett's Restaurant",
@@ -412,7 +412,7 @@
     "url": "https://cherry-street-tavern.eniplaces.com/",
     "category": "music",
     "status": "blocked",
-    "notes": "Downtown tavern at 719 Cherry St with recurring weekly Open Mic Mondays and weekend live music. robots.txt on cherry-street-tavern.eniplaces.com explicitly disallows ClaudeBot — cannot auto-scrape."
+    "notes": "Downtown tavern at 719 Cherry St with recurring weekly Open Mic Mondays and weekend live music. robots.txt on cherry-street-tavern.eniplaces.com explicitly disallows ClaudeBot \u2014 cannot auto-scrape."
   },
   {
     "name": "Gate 11 Distillery",
@@ -524,7 +524,7 @@
     "url": "https://www.chattanoogafestivals.com/",
     "category": "food-drink",
     "status": "blocked",
-    "notes": "Local organizer of recurring annual food-and-drink festivals including Chattanooga Burger Week, Cocktail Festival, Margarita Festival, and Bacon & Barrel. robots.txt explicitly disallows ClaudeBot — cannot auto-scrape."
+    "notes": "Local organizer of recurring annual food-and-drink festivals including Chattanooga Burger Week, Cocktail Festival, Margarita Festival, and Bacon & Barrel. robots.txt explicitly disallows ClaudeBot \u2014 cannot auto-scrape."
   },
   {
     "name": "Feed Tavern & Table Co.",
@@ -540,7 +540,7 @@
     "url": "https://parks.hamiltontn.gov/423/Lakeside-Live-Concert-Series",
     "category": "outdoors",
     "status": "active",
-    "notes": "Free summer concert series at Chester Frost Park in Hixson run by Hamilton County Parks & Recreation. Waterfront shows with food trucks and family activities; funded through 2027. Onboarded 2026-10-08 as calendar type; all 2026 shows (June 13, July 24, Aug 15) already passed at onboarding — no initial events. Refresh pipeline will pull 2027 dates when announced."
+    "notes": "Free summer concert series at Chester Frost Park in Hixson run by Hamilton County Parks & Recreation. Waterfront shows with food trucks and family activities; funded through 2027. Onboarded 2026-10-08 as calendar type; all 2026 shows (June 13, July 24, Aug 15) already passed at onboarding \u2014 no initial events. Refresh pipeline will pull 2027 dates when announced."
   },
   {
     "name": "Ooltewah Farmers Market",
@@ -556,16 +556,16 @@
     "slug": "naked-river-brewing",
     "url": "https://www.nakedriverbrewing.com/",
     "category": "food-drink",
-    "status": "pending",
-    "notes": "Brewery and BBQ at 1791 Reggie White Blvd, Chattanooga with weekly Tuesday live trivia (7-9pm), Thursday SINGO music bingo (7pm), live music, and occasional silent discos. Own site returned 404 to fetch at discovery — may be JS-rendered or bot-blocked; verify a scrapable source at onboarding (Eventbrite/Challenge Entertainment list its recurring events)."
+    "status": "blocked",
+    "notes": "Closed permanently July 20, 2025. Site returns 404. Yelp listing confirms closed as of June 2026. Remove from pipeline."
   },
   {
     "name": "Pax Breu Ruim",
     "slug": "pax-breu-ruim",
     "url": "https://www.facebook.com/PBRChattanooga/",
     "category": "food-drink",
-    "status": "pending",
-    "notes": "Beer bar/brewpub at 516 E Main St, Chattanooga with recurring Sunday trivia (cash prizes) and Sunday live music. Events posted via Facebook; verify a scrapable own-site or Challenge Entertainment source at onboarding."
+    "status": "blocked",
+    "notes": "Own site (paxbreuruim.com) connection-refused. No Challenge Entertainment listing. Eventbrite organizer page shows 0 upcoming events. Events post via Facebook only \u2014 no scrapable calendar. Re-check if they launch a dedicated events page. Checked 2026-10-11."
   },
   {
     "name": "City of Jasper",
@@ -573,8 +573,8 @@
     "url": "https://www.jasper-tn.com/events_announcements.html",
     "category": "community",
     "city": "jasper-tn",
-    "status": "pending",
-    "notes": "Official City of Jasper, TN events and announcements page (distinct from Jasper Main Street). Lists city-run community events and seasonal happenings. Verify scrapability and event density at onboarding."
+    "status": "blocked",
+    "notes": "Events page at /events_announcements.html has no listings \u2014 only directs visitors to Facebook (Town of Jasper, TN). No scrapable calendar. Re-check if city adds a dated events calendar. Checked 2026-10-11."
   },
   {
     "name": "City of Chickamauga",
@@ -582,8 +582,8 @@
     "url": "http://cityofchickamauga.org/events-calendar.asp",
     "category": "community",
     "city": "chickamauga-ga",
-    "status": "pending",
-    "notes": "Official City of Chickamauga, GA events calendar (distinct from Walker Rocks). Hosts First Friday Block Party with live music downtown, Pumpkinfest (October), and annual community events. Verify scrapability at onboarding."
+    "status": "blocked",
+    "notes": "SSL certificate expired at time of check \u2014 cannot auto-scrape. Re-check if cert is renewed. Checked 2026-10-11."
   },
   {
     "name": "Boxcar Pinion Bluegrass Festival",
@@ -591,8 +591,8 @@
     "url": "http://boxcarforeverbluegrass.com/",
     "category": "music",
     "city": "chickamauga-ga",
-    "status": "pending",
-    "notes": "Annual three-day bluegrass festival at historic Mountain Cove Farms in McLemore Cove, Chickamauga. Camping, food concessions, and arts & crafts vendors. Next: April 30–May 2, 2026."
+    "status": "blocked",
+    "notes": "SSL certificate expired at time of check \u2014 cannot auto-scrape. 2026 festival dates (April 30-May 2) already passed. Re-check for 2027 dates if cert is renewed. Checked 2026-10-11."
   },
   {
     "name": "Chattanooga Oktoberfest",
@@ -609,7 +609,7 @@
     "category": "outdoors",
     "city": "lookout-mountain-ga",
     "status": "pending",
-    "notes": "Mountaintop attraction on Lookout Mountain, GA with recurring seasonal programming — Enchanted Garden of Lights (winter), Shamrock City (March), Rocktoberfest (fall), and Rock City Raptors shows. Verify scrapable events page at onboarding."
+    "notes": "Mountaintop attraction on Lookout Mountain, GA with recurring seasonal programming \u2014 Enchanted Garden of Lights (winter), Shamrock City (March), Rocktoberfest (fall), and Rock City Raptors shows. Verify scrapable events page at onboarding."
   },
   {
     "name": "Ruby Falls",
@@ -626,7 +626,7 @@
     "url": "https://www.hairofthedogpub.com/",
     "category": "food-drink",
     "status": "pending",
-    "notes": "Downtown Chattanooga English-style pub at 334 Market St with weekly Wednesday trivia and occasional live music. Verify a scrapable events source at onboarding — events may post via Facebook."
+    "notes": "Downtown Chattanooga English-style pub at 334 Market St with weekly Wednesday trivia and occasional live music. Verify a scrapable events source at onboarding \u2014 events may post via Facebook."
   },
   {
     "name": "Shop the Market At",
@@ -683,7 +683,7 @@
     "url": "https://www.ujointchattanooga.com/",
     "category": "food-drink",
     "status": "pending",
-    "notes": "Neighborhood restaurant and bar at 532 Lookout St with recurring weekly Wednesday trivia (hosted by Chatt Trivia), Thursday Mario Kart on the big screen, and occasional live music. Verify a scrapable events source at onboarding — events may post via Facebook."
+    "notes": "Neighborhood restaurant and bar at 532 Lookout St with recurring weekly Wednesday trivia (hosted by Chatt Trivia), Thursday Mario Kart on the big screen, and occasional live music. Verify a scrapable events source at onboarding \u2014 events may post via Facebook."
   },
   {
     "name": "Clever Alehouse",
@@ -691,7 +691,7 @@
     "url": "https://cleveralehouse.com/",
     "category": "food-drink",
     "status": "pending",
-    "notes": "Family-friendly neighborhood restaurant and bar at 2122 Dayton Blvd with hand-dipped ice cream and arcade. Recurring live trivia (7pm), pint nights, and community group meetups. Verify a scrapable events source at onboarding — events may post via Facebook/Instagram."
+    "notes": "Family-friendly neighborhood restaurant and bar at 2122 Dayton Blvd with hand-dipped ice cream and arcade. Recurring live trivia (7pm), pint nights, and community group meetups. Verify a scrapable events source at onboarding \u2014 events may post via Facebook/Instagram."
   },
   {
     "name": "Venue 28",
@@ -700,7 +700,7 @@
     "category": "music",
     "city": "whitwell-tn",
     "status": "pending",
-    "notes": "Live music venue at 9516 Hwy 28, Whitwell with regional country/rap-country touring acts (e.g. Jesse Howard, Nu Breed). Tickets/events via Eventbrite and Facebook — verify a scrapable Eventbrite organizer page or own site at onboarding."
+    "notes": "Live music venue at 9516 Hwy 28, Whitwell with regional country/rap-country touring acts (e.g. Jesse Howard, Nu Breed). Tickets/events via Eventbrite and Facebook \u2014 verify a scrapable Eventbrite organizer page or own site at onboarding."
   },
   {
     "name": "Riverdance TN",
@@ -709,7 +709,7 @@
     "category": "food-drink",
     "city": "guild-tn",
     "status": "pending",
-    "notes": "Riverfront restaurant in Guild, TN with modern Southern cuisine, craft cocktails, and occasional live music. Events posted via Facebook — verify a scrapable own-site or events source at onboarding."
+    "notes": "Riverfront restaurant in Guild, TN with modern Southern cuisine, craft cocktails, and occasional live music. Events posted via Facebook \u2014 verify a scrapable own-site or events source at onboarding."
   },
   {
     "name": "Spare Time Chattanooga",
@@ -717,7 +717,7 @@
     "url": "https://www.sparetimeentertainment.com/chattanooga/eat-drink/live-entertainment/",
     "category": "food-drink",
     "status": "pending",
-    "notes": "Entertainment center and eatery with recurring live entertainment — weekly Thursday trivia with Trivia Guys (free to play) plus live music nights on a dedicated page."
+    "notes": "Entertainment center and eatery with recurring live entertainment \u2014 weekly Thursday trivia with Trivia Guys (free to play) plus live music nights on a dedicated page."
   },
   {
     "name": "Chattanooga Beer Fest",
@@ -751,7 +751,7 @@
     "url": "https://www.stevarinositalianeaterytn.com/",
     "category": "food-drink",
     "status": "pending",
-    "notes": "North Shore Italian restaurant and pub at 325 Cherokee Blvd with recurring weekly Monday live trivia (6:30pm) and Wednesday SINGO music bingo (6:30pm), both free to play. Events also post via Facebook/Eventbrite — verify a scrapable source at onboarding."
+    "notes": "North Shore Italian restaurant and pub at 325 Cherokee Blvd with recurring weekly Monday live trivia (6:30pm) and Wednesday SINGO music bingo (6:30pm), both free to play. Events also post via Facebook/Eventbrite \u2014 verify a scrapable source at onboarding."
   },
   {
     "name": "Mexiville",
@@ -759,7 +759,7 @@
     "url": "https://www.mexiville.com/",
     "category": "food-drink",
     "status": "pending",
-    "notes": "Mexican restaurant and bar at 809 Market St (downtown) with recurring weekly themed live trivia (Fri 7pm), karaoke (Sat), and late-night salsa dancing (Sun 11pm). Second location on Cherokee Blvd. Events also post via Challenge Entertainment and Nooga Nightlife — verify a scrapable source at onboarding."
+    "notes": "Mexican restaurant and bar at 809 Market St (downtown) with recurring weekly themed live trivia (Fri 7pm), karaoke (Sat), and late-night salsa dancing (Sun 11pm). Second location on Cherokee Blvd. Events also post via Challenge Entertainment and Nooga Nightlife \u2014 verify a scrapable source at onboarding."
   },
   {
     "name": "Nic & Norman's",
@@ -767,7 +767,7 @@
     "url": "https://www.nicandnormans.com/",
     "category": "food-drink",
     "status": "pending",
-    "notes": "Downtown Chattanooga restaurant and bar with recurring weekly SINGO music bingo and live trivia nights. Events posted via Eventbrite/Challenge Entertainment — verify a scrapable own-site or organizer source at onboarding."
+    "notes": "Downtown Chattanooga restaurant and bar with recurring weekly SINGO music bingo and live trivia nights. Events posted via Eventbrite/Challenge Entertainment \u2014 verify a scrapable own-site or organizer source at onboarding."
   },
   {
     "name": "Collegedale Parks and Recreation",
@@ -776,7 +776,7 @@
     "category": "community",
     "city": "collegedale-tn",
     "status": "pending",
-    "notes": "City of Collegedale Parks & Rec running a year-round RecDesk community calendar of programs, classes, seasonal events, and family activities. Calendar at collegedale.recdesk.com/Community/Calendar — verify scrapability at onboarding."
+    "notes": "City of Collegedale Parks & Rec running a year-round RecDesk community calendar of programs, classes, seasonal events, and family activities. Calendar at collegedale.recdesk.com/Community/Calendar \u2014 verify scrapability at onboarding."
   },
   {
     "name": "John A. Patten Community Center",
@@ -817,7 +817,7 @@
     "url": "https://www.stpaulschatt.org/events",
     "category": "music",
     "status": "pending",
-    "notes": "Downtown Chattanooga church with a year-round Music at St. Paul's Artist Series — monthly classical concerts (organ, piano, guitar, vocal ensemble) open to the public. Events page is Squarespace-hosted and scrapable with dates."
+    "notes": "Downtown Chattanooga church with a year-round Music at St. Paul's Artist Series \u2014 monthly classical concerts (organ, piano, guitar, vocal ensemble) open to the public. Events page is Squarespace-hosted and scrapable with dates."
   },
   {
     "name": "Chattanooga Music Club",
@@ -825,7 +825,7 @@
     "url": "http://www.chattanoogamusicclub.org/",
     "category": "music",
     "status": "pending",
-    "notes": "Community classical music organization hosting free public concerts at First Cumberland Presbyterian Church and other Chattanooga venues throughout the year. Season calendar at /calendar-of-events-[year] — verify current URL at onboarding."
+    "notes": "Community classical music organization hosting free public concerts at First Cumberland Presbyterian Church and other Chattanooga venues throughout the year. Season calendar at /calendar-of-events-[year] \u2014 verify current URL at onboarding."
   },
   {
     "name": "North River Civic Center",
@@ -833,7 +833,7 @@
     "url": "https://chattanooga.gov/services/community-centers/north-river-civic-center",
     "category": "community",
     "status": "pending",
-    "notes": "City community center at 1009 Executive Dr, Hixson with free monthly concert series 'In the Heart of Hixson' (local musicians, Nov-Mar) and daily programs including bingo, art displays, and dance. Events on embedded Google Calendar — verify scrapable source at onboarding."
+    "notes": "City community center at 1009 Executive Dr, Hixson with free monthly concert series 'In the Heart of Hixson' (local musicians, Nov-Mar) and daily programs including bingo, art displays, and dance. Events on embedded Google Calendar \u2014 verify scrapable source at onboarding."
   },
   {
     "name": "Head of the Hooch",
@@ -858,7 +858,7 @@
     "category": "music",
     "city": "jasper-tn",
     "status": "pending",
-    "notes": "Restaurant and climbing gear shop at 30 Courthouse Sq, Jasper with recurring weekly live music (Fri, 2nd floor, no cover), light piano with Lisa (Sun noon), and Karaoke & Open Mic Night (Sat 6:30-9pm). Events page is behind a Cloudflare managed challenge (403 to bots) at check — verify a scrapable source at onboarding; events also post via Facebook."
+    "notes": "Restaurant and climbing gear shop at 30 Courthouse Sq, Jasper with recurring weekly live music (Fri, 2nd floor, no cover), light piano with Lisa (Sun noon), and Karaoke & Open Mic Night (Sat 6:30-9pm). Events page is behind a Cloudflare managed challenge (403 to bots) at check \u2014 verify a scrapable source at onboarding; events also post via Facebook."
   },
   {
     "name": "Top of the Rock Restaurant & Brewery",
@@ -867,7 +867,7 @@
     "category": "food-drink",
     "city": "jasper-tn",
     "status": "pending",
-    "notes": "Restaurant and craft brewery in Jasper with mountain views and live music on the lower deck (Thursdays through summer). No dedicated events calendar at discovery — events post via Instagram (@TopoftheRockTN); verify a scrapable source at onboarding."
+    "notes": "Restaurant and craft brewery in Jasper with mountain views and live music on the lower deck (Thursdays through summer). No dedicated events calendar at discovery \u2014 events post via Instagram (@TopoftheRockTN); verify a scrapable source at onboarding."
   },
   {
     "name": "The Electric Crocodile",
@@ -875,7 +875,7 @@
     "url": "https://allevents.in/org/the-electric-crocodile/23345715",
     "category": "community",
     "status": "blocked",
-    "notes": "Vintage clothing and collectibles shop at 607 Cherokee Blvd with 70+ vendors. Hosts seasonal markets 3x/year: Spring Flea (April), Summer Market (July), and CroctoberFest (October) with live music on the porch stage. Own site (electriccrocodile.com) unreachable; events post via Facebook and allevents.in only — no scrapable own-site calendar. Re-check if they launch a dedicated events page. Checked 2026-10-01."
+    "notes": "Vintage clothing and collectibles shop at 607 Cherokee Blvd with 70+ vendors. Hosts seasonal markets 3x/year: Spring Flea (April), Summer Market (July), and CroctoberFest (October) with live music on the porch stage. Own site (electriccrocodile.com) unreachable; events post via Facebook and allevents.in only \u2014 no scrapable own-site calendar. Re-check if they launch a dedicated events page. Checked 2026-10-01."
   },
   {
     "name": "Plant Bar",
@@ -949,7 +949,7 @@
     "category": "museum",
     "city": "south-pittsburg-tn",
     "status": "pending",
-    "notes": "Community arts gallery and event space at 207 S Cedar Ave, South Pittsburg with Second Saturday entertainment events, working artist studios, and rotating gallery shows. Events calendar at /things-to-do-events/ — verify if JS-rendered or scrapable at onboarding."
+    "notes": "Community arts gallery and event space at 207 S Cedar Ave, South Pittsburg with Second Saturday entertainment events, working artist studios, and rotating gallery shows. Events calendar at /things-to-do-events/ \u2014 verify if JS-rendered or scrapable at onboarding."
   },
   {
     "name": "City of South Pittsburg",
@@ -967,5 +967,38 @@
     "category": "food-drink",
     "status": "pending",
     "notes": "Neapolitan pizzeria at 405 N Market St with a recurring weekly Trivia Tuesday (7-9pm, prizes for top three teams) and a dedicated events page."
+  },
+  {
+    "name": "Chattanooga Pride",
+    "slug": "chattanooga-pride",
+    "url": "https://www.chattanoogapride.com",
+    "category": "festival",
+    "status": "pending",
+    "notes": "Annual Pride parade and festival at Ross's Landing on the downtown riverfront. October. Includes live entertainment, drag performances, vendors, and family activities."
+  },
+  {
+    "name": "Chattanooga Comic Con",
+    "slug": "chattanooga-comic-con",
+    "url": "https://www.chattanoogacomiccon.com",
+    "category": "festival",
+    "status": "pending",
+    "notes": "Annual two-day comics, anime, gaming, and sci-fi convention at the Chattanooga Convention Center. November. Features vendor hall, gaming hall, cosplay, panels, and celebrity guests."
+  },
+  {
+    "name": "Chattanooga Renaissance Faire",
+    "slug": "chattanooga-renaissance-faire",
+    "url": "https://chattrenfaire.com",
+    "category": "festival",
+    "status": "pending",
+    "notes": "Annual two-day Renaissance faire at Coolidge Park and Renaissance Park. November. Features three stages of live entertainment, combat arenas, artisan demos, and costumed performers."
+  },
+  {
+    "name": "Touch the Sky Events",
+    "slug": "touch-the-sky-events",
+    "url": "https://touchtheskyevents.com",
+    "category": "festival",
+    "city": "cleveland-tn",
+    "status": "pending",
+    "notes": "Cleveland, TN event promoter running seasonal craft and vendor markets including Mistletoe Market (Nov-Dec) at Bradley Square Mall. Annual recurring events with free admission."
   }
 ]

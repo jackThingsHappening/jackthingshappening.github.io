@@ -1,5 +1,45 @@
 # Find-Festivals Search Log
 
+## 2026-10-11
+
+**Searches run:**
+- Chattanooga Halloween haunted event October November 2026
+- Chattanooga Christmas holiday festival event December 2026
+- Chattanooga arts craft fair outdoor event November December 2026
+- Chattanooga running race marathon 5k November December 2026
+- Chattanooga food drink wine beer event November December 2026
+- Chattanooga comic con convention anime gaming November December 2026
+- Chattanooga car show motorsport event November December 2026
+- Chattanooga cultural heritage community street fair event November 2026
+- Chattanooga film festival comedy performance arts event November December 2026
+- Cleveland TN Ringgold Chickamauga Georgia festival event November December 2026
+- Chattanooga Christkindlmarkt Coolidge Park 2026 website
+- Chattanooga Renaissance Faire 2026 chattrenfaire.com
+- Chattanooga climbing bouldering disc golf outdoor adventure competition November December 2026
+- "Nooga Food and Wine Festival" OR "Birds and Brews" Chattanooga 2026
+- Mistletoe Market Bradley Square Mall Cleveland TN 2026 website
+- Chattanooga Choo-Choo Christmas holiday market December 2026 site
+- Con Nooga Chattanooga anime convention 2026 website date
+- World of Wheels Chattanooga 2026 December date indoor car show
+- Chattanooga Pride LGBTQ festival event 2026
+
+**Added:**
+- Chattanooga Pride — annual Pride parade and festival at Ross's Landing. Oct 17, 2026 for the current year. chattanoogapride.com.
+- Chattanooga Comic Con — annual two-day comics, anime, and gaming convention at the Convention Center. Nov 7-8, 2026. chattanoogacomiccon.com.
+- Chattanooga Renaissance Faire — annual two-day faire at Coolidge and Renaissance Parks. Nov 14-15, 2026. chattrenfaire.com.
+- Touch the Sky Events — Cleveland, TN event promoter. Runs Mistletoe Market (Nov 27-Dec 13) at Bradley Square Mall. Different org from MainStreet Cleveland (they operate at Bradley Square Mall, not downtown). touchtheskyevents.com.
+
+**Skipped:**
+- Dread Hollow, Boo in the Zoo, Enchanted Pumpkin Patch — covered by ruby-falls, chattanooga-zoo, see-rock-city vendors.
+- Haints & Haunts, North Pole Limited — covered by tennessee-valley-railroad-museum vendor.
+- Christkindlmarkt Coolidge, Christmas at the Choo-Choo, Last Minute Market — covered by shop-the-market-at vendor.
+- Chattanooga Holiday Market — covered by chattanooga-market vendor.
+- Con Nooga 2026 (anime convention) — Feb 20-22, 2026, already past; no dedicated website found beyond listing aggregators.
+- World of Wheels Chattanooga — Jan 9-11, 2026 cycle already past; annual but no confirmed 2027 date found.
+- Nooga Wing & Beer Week / Taste of Chattanooga week — city-wide restaurant weeks with no single festival event page.
+- Running races (Hungry Turkey Run, White Elephant, Run Santa Run, Jingle Bell Jog) — covered by run-rhino-run and chattanooga-track-club vendors.
+- Merry Grinchmas at The Colonnade Ringgold — covered by colonnade-civic-center vendor.
+
 ## 2026-10-01
 
 **Searches run:**
