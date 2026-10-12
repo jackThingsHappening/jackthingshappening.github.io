@@ -1,0 +1,20 @@
+{
+  "name": "Chattanooga Oktoberfest",
+  "type": "calendar",
+  "url": "https://www.chattanoogaoktoberfest.com/",
+  "outputDir": "src/pages/chattanooga/events/chattanooga-oktoberfest",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "First Horizon Pavilion",
+    "address": "1801 Reggie White Blvd, Chattanooga, TN 37408",
+    "iconPath": "/images/icons-new/beer.png",
+    "eventLink": "https://www.chattanoogaoktoberfest.com/",
+    "tags": [
+      { "type": "place", "tag": "chattanooga-oktoberfest" },
+      { "type": "genre", "tag": "food-drink" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 90,
+  "last_checked": "2026-10-11"
+}
