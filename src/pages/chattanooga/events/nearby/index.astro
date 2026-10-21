@@ -9,7 +9,7 @@ import ExploreHeader from '../../../../components/ExploreHeader.astro';
 import { expandEvents } from '../../../../utils/expandEvents';
 
 const title = 'Nearby Cities - Events Near Chattanooga';
-const seoDescription = 'Events happening in cities near Chattanooga, TN — Cleveland, Dalton, Ringgold, and more.';
+const seoDescription = 'Events happening in cities near Chattanooga, TN: Cleveland, Dalton, Ringgold, and more.';
 
 const allPosts = (Object.values(import.meta.glob('../**/*.mdx', { eager: true }))).filter(
   (post) => post.frontmatter.published !== false
@@ -46,7 +46,7 @@ const activeCities = [...new Set(
       <NearbyCitiesNav activeCities={activeCities} />
 
       {sortedEvents.length === 0 && (
-        <p class="text-xl text-gray-500 mt-12">No upcoming nearby events — check back soon.</p>
+        <p class="text-xl text-gray-500 mt-12">No upcoming nearby events, check back soon.</p>
       )}
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 mt-10">

@@ -33,3 +33,4 @@
 | 2026-10-18 10:45am CT | content-spotlight | Tivoli Theatre | performance-arts guide |
 | 2026-10-24 10:30am CT | guide-promotion | Chickamauga Battlefield hiking/biking | outdoors guide (chickamauga-battlefield filter) |
 | 2026-10-09 10:45am CT | content-spotlight | Stringers Ridge | outdoors guide (stringers-ridge filter) |
+| 2026-10-25 11:45am CT | guide-promotion | Snooper's Rock overlook | outdoors guide |

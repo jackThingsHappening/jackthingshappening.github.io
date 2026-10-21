@@ -16,7 +16,7 @@ interface MarkdownFrontmatter {
 }
 
 const title = 'Chattanooga Events This Week and Weekend | Things Happening';
-const seoDescription = 'Find things to do in Chattanooga, TN. Browse upcoming events, live music, outdoor adventures, local guides, and more — updated daily.';
+const seoDescription = 'Find things to do in Chattanooga, TN. Browse upcoming events, live music, outdoor adventures, local guides, and more, updated daily.';
 const city = "Chattanooga";
 
 const allGuides = (Object.values(import.meta.glob('./guides/*.mdx', { eager: true }))).filter(
@@ -167,7 +167,7 @@ const page = {
       {
         "@type": "FAQPage",
         "mainEntity": [
-          { "@type": "Question", "name": "What neighborhoods does this cover?", "acceptedAnswer": { "@type": "Answer", "text": "This site covers events and spots across Chattanooga — Downtown, North Shore, Southside, St. Elmo, East Brainerd, Red Bank, and surrounding areas." } },
+          { "@type": "Question", "name": "What neighborhoods does this cover?", "acceptedAnswer": { "@type": "Answer", "text": "This site covers events and spots across Chattanooga: Downtown, North Shore, Southside, St. Elmo, East Brainerd, Red Bank, and surrounding areas." } },
           { "@type": "Question", "name": "How do I find outdoor things to do in Chattanooga?", "acceptedAnswer": { "@type": "Answer", "text": "Browse the outdoors tag at thingshappening.com/chattanooga/events/tag/outdoors for upcoming events, or read the outdoors guides for trails, parks, and water access points." } },
           { "@type": "Question", "name": "Where can I find live music this weekend in Chattanooga?", "acceptedAnswer": { "@type": "Answer", "text": "Check the this weekend filter at thingshappening.com/chattanooga/events/this-weekend and use the music tag to narrow it down." } },
           { "@type": "Question", "name": "Are guides free to download?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PDF versions of guides are free. No email required." } },
@@ -296,7 +296,7 @@ const page = {
         <div class="space-y-6 text-xl text-gray-800">
           <div>
             <h3 class="text-2xl font-semibold mb-1">What neighborhoods does this cover?</h3>
-            <p>This site covers events and spots across Chattanooga — Downtown, North Shore, Southside, St. Elmo, East Brainerd, Red Bank, and surrounding areas.</p>
+            <p>This site covers events and spots across Chattanooga, Downtown, North Shore, Southside, St. Elmo, East Brainerd, Red Bank, and surrounding areas.</p>
           </div>
           <div>
             <h3 class="text-2xl font-semibold mb-1">How do I find outdoor things to do?</h3>
@@ -312,7 +312,7 @@ const page = {
           </div>
           <div>
             <h3 class="text-2xl font-semibold mb-1">How often does the event calendar update?</h3>
-            <p>The calendar rebuilds every day. Check back often — events get added as they are announced.</p>
+            <p>The calendar rebuilds every day. Check back often, events get added as they are announced.</p>
           </div>
         </div>
       </div>
