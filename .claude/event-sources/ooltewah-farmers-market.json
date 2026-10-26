@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/market.png",
     "eventLink": "https://www.ooltewahnursery.com/farmers-market",
     "tags": [
-      { "type": "place", "tag": "ooltewah-farmers-market" },
-      { "type": "genre", "tag": "market" }
+      {
+        "type": "place",
+        "tag": "ooltewah-farmers-market"
+      },
+      {
+        "type": "genre",
+        "tag": "market"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 7,
-  "last_checked": "2026-10-19"
+  "last_checked": "2026-10-26"
 }

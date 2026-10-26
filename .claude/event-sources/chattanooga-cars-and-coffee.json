@@ -18,11 +18,17 @@
     "iconPath": "/images/icons-new/car.png",
     "eventLink": "https://chattanoogacarsandcoffee.com/2026-dates",
     "tags": [
-      { "type": "place", "tag": "chattanooga-cars-and-coffee" },
-      { "type": "genre", "tag": "community" }
+      {
+        "type": "place",
+        "tag": "chattanooga-cars-and-coffee"
+      },
+      {
+        "type": "genre",
+        "tag": "community"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 30,
-  "last_checked": "2026-09-25"
+  "last_checked": "2026-10-26"
 }

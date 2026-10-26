@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/pine-tree.png",
     "eventLink": "https://parks.hamiltontn.gov/423/Lakeside-Live-Concert-Series",
     "tags": [
-      { "type": "place", "tag": "lakeside-live" },
-      { "type": "genre", "tag": "outdoors" }
+      {
+        "type": "place",
+        "tag": "lakeside-live"
+      },
+      {
+        "type": "genre",
+        "tag": "outdoors"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 14,
-  "last_checked": "2026-10-08"
+  "last_checked": "2026-10-26"
 }
