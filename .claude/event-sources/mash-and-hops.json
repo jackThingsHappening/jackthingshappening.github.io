@@ -6,7 +6,7 @@
     "events": [
       {
         "outputPath": "src/pages/chattanooga/events/city/cleveland/mash-and-hops/singles-night.mdx",
-        "matchHint": "Singles Night every Tuesday 5pm\u20139pm"
+        "matchHint": "Singles Night every Tuesday 5pm–9pm"
       },
       {
         "outputPath": "src/pages/chattanooga/events/city/cleveland/mash-and-hops/beer-share.mdx",
@@ -40,5 +40,5 @@
     }
   },
   "frequency_days": 7,
-  "last_checked": "2026-11-02"
+  "last_checked": "2026-11-09"
 }
