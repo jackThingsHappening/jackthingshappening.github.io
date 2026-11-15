@@ -6,7 +6,7 @@ import Card from '../../../../components/Card.astro';
 import Footer from '../../../../components/Footer/Footer.astro';
 import EmailSignup from '../../../../components/EmailSignup.astro';
 import ExploreHeader from '../../../../components/ExploreHeader.astro';
-import { expandEvents } from '../../../../utils/expandEvents';
+import { expandEvents, sortEvents } from '../../../../utils/expandEvents';
 
 const title = 'This Month in Chattanooga';
 const seoDescription = 'Events happening this month in Chattanooga, TN.';
@@ -27,8 +27,8 @@ allPostsIncludingMultipleDates = allPostsIncludingMultipleDates
   .filter(({ pubDate }) => {
     const d = new Date(pubDate + 'T00:00:00');
     return d >= today && d >= firstDayOfMonth && d <= lastDayOfMonth;
-  })
-  .sort((a, b) => new Date(a.pubDate + 'T00:00:00') - new Date(b.pubDate + 'T00:00:00'));
+  });
+allPostsIncludingMultipleDates = sortEvents(allPostsIncludingMultipleDates);
 ---
 
 <html lang="en" class="dot-grid-bg">

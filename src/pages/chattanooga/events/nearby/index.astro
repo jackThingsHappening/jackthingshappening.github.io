@@ -6,7 +6,7 @@ import Card from '../../../../components/Card.astro';
 import Footer from '../../../../components/Footer/Footer.astro';
 import EmailSignup from '../../../../components/EmailSignup.astro';
 import ExploreHeader from '../../../../components/ExploreHeader.astro';
-import { expandEvents } from '../../../../utils/expandEvents';
+import { expandEvents, sortEvents } from '../../../../utils/expandEvents';
 
 const title = 'Nearby Cities - Events Near Chattanooga';
 const seoDescription = 'Events happening in cities near Chattanooga, TN: Cleveland, Dalton, Ringgold, and more.';
@@ -24,9 +24,7 @@ const nearbyPosts = expandEvents(allPosts).filter((e) => {
   return isUpcoming && hasCity;
 });
 
-const sortedEvents = nearbyPosts.sort(
-  (a, b) => new Date(a.pubDate + 'T00:00:00').getTime() - new Date(b.pubDate + 'T00:00:00').getTime()
-);
+const sortedEvents = sortEvents(nearbyPosts);
 
 const activeCities = [...new Set(
   nearbyPosts.flatMap((e) => e.tags?.filter((t: any) => t.type === 'city').map((t: any) => t.tag) ?? [])

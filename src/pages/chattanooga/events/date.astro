@@ -6,7 +6,7 @@ import Card from '../../../components/Card.astro';
 import Footer from '../../../components/Footer/Footer.astro';
 import EmailSignup from '../../../components/EmailSignup.astro';
 import ExploreHeader from '../../../components/ExploreHeader.astro';
-import { expandEvents } from '../../../utils/expandEvents';
+import { expandEvents, sortEvents } from '../../../utils/expandEvents';
 
 const title = 'Events in Chattanooga';
 const seoDescription = 'Upcoming events in Chattanooga, TN.';
@@ -18,9 +18,9 @@ const allPosts = (Object.values(import.meta.glob('./**/*.mdx', { eager: true }))
 const today = new Date();
 today.setHours(0, 0, 0, 0);
 
-const allEvents = expandEvents(allPosts)
-  .filter((e) => new Date(e.pubDate + 'T00:00:00') >= today)
-  .sort((a, b) => new Date(a.pubDate + 'T00:00:00') - new Date(b.pubDate + 'T00:00:00'));
+const allEvents = sortEvents(
+  expandEvents(allPosts).filter((e) => new Date(e.pubDate + 'T00:00:00') >= today)
+);
 ---
 
 <html lang="en" class="dot-grid-bg">
