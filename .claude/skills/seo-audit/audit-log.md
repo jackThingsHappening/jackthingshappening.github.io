@@ -149,3 +149,31 @@ Scanned 671 MDX files under `src/pages/chattanooga/events/` (669 published, 2 `p
 ### Check 6 — Broken eventLinks
 - Sampled 20 random published files (seed 1015). All returned HTTP 200.
 - None broken: ✓
+
+## 2026-11-15
+
+Scanned 822 published event MDX files (published: true) under `src/pages/chattanooga/events/` (861 total MDX; 2 unpublished, 37 without a published field — e.g. index/landing pages — excluded).
+
+### Check 1 — Missing seoDescription
+- None missing: ✓ (0 of 822 published files)
+
+### Check 2 — Thin seoDescriptions
+- None thin: ✓ (0 under 60 chars; no generic/title-only descriptions found). Folded-scalar descriptions handled by the parser — none flagged.
+
+### Check 3 — Thin body content
+- None thin: ✓ (0 published files under 30 words). The 36 files flagged in the 2026-10-15 run have since been expanded (e.g. `the-signal-zoso.mdx` now ~75 words).
+
+### Check 4 — Internal link coverage
+- All 11 required tags covered in `GUIDE_MAP` (BlogPost.astro): ✓
+- Uncovered tags in use (NOT auto-fixed — human review):
+  - `live-music` — 14 files — e.g. `barking-legs/frankie-gavin-traditional-irish-fiddle-music.mdx`
+  - `live-performance` — 49 files — e.g. `convention-center/steve-gonsalves-live-a-life-with-ghosts.mdx`
+  - NOTE: Both target guides already exist. Recommended mappings for a human to add: `live-music` → `{ slug: 'live-music', label: 'Live Music in Chattanooga' }`; `live-performance` → `{ slug: 'performance-arts', label: 'Performing Arts in Chattanooga' }`. 63 event pages currently get no internal guide link because of these gaps.
+
+### Check 5 — Event schema
+- Status: present, no changes needed. `BlogPostLayout.astro` JSON-LD `Event` block is gated on `venue`; `startDate`/`endDate` gated on `pubDate`; `offers` gated on `eventLink`. All required fields confirmed: `name`, `description`, `startDate`, `eventStatus`, `eventAttendanceMode`, `location`, `url`, `offers`.
+
+### Check 6 — Broken eventLinks
+- Sampled 20 random published files (seed 20261115).
+- 19/20 returned HTTP 200 on first pass. `crabtreefarms.org/ourevents/list/` returned curl code 000 (transient connection failure) but returned HTTP 200 on three retries — not broken.
+- None broken: ✓
