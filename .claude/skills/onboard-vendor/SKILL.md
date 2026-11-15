@@ -96,9 +96,9 @@ This rewrites the body text of all newly created event files to match the site's
 
 ## Step 6b — Verify content quality
 
-After humanizing, check each new event file for thin body copy. Any file with fewer than 40 words of body text is underweight. For each underweight file:
+After humanizing, check each new event file for thin body copy. Any file with fewer than 60 words of body text is underweight. For each underweight file:
 1. Use WebSearch to research the act or event
-2. Rewrite the body to at least 40 words (3–4 sentences) covering the act's style and any key logistics
+2. Rewrite the body to at least 60 words (4–5 sentences) covering the act's style and any key logistics
 3. Write the updated file back
 
 ## Step 7 — Update vendor-sources.json

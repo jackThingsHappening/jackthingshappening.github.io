@@ -12,7 +12,7 @@ const title = 'This Month in Chattanooga';
 const seoDescription = 'Events happening this month in Chattanooga, TN.';
 
 let allPosts = (Object.values(import.meta.glob('../**/*.mdx', { eager: true }))).filter(
-  (post) => post.frontmatter.published !== false
+  (post) => post.frontmatter.published !== false && !post.frontmatter.tags?.some((t: any) => t.type === 'city')
 );
 
 let allPostsIncludingMultipleDates = expandEvents(allPosts);

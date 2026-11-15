@@ -106,11 +106,11 @@ layout: {from defaultFrontmatter}
 
 ### B3a. Body copy requirement
 
-Body copy must be at least 40 words (3–4 sentences). It must cover:
+Body copy must be at least 60 words (4–5 sentences). It must cover:
 - Who the act is and what their sound or style is like
 - Any key logistics worth calling out (sold out, age restriction, early doors, etc.)
 
-If the source page does not provide enough detail, use WebSearch to research the artist or event before writing. Do not publish thin copy — always meet the 40-word floor.
+If the source page does not provide enough detail, use WebSearch to research the artist or event before writing. Do not publish thin copy — always meet the 60-word floor.
 
 ---
 

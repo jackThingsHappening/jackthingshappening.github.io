@@ -9,7 +9,7 @@ import { expandEvents } from '../../../../utils/expandEvents';
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = (Object.values(import.meta.glob('../**/*.mdx', { eager: true }))).filter(
-    (post) => post.frontmatter.published !== false
+    (post) => post.frontmatter.published !== false && !post.frontmatter.tags?.some((t: any) => t.type === 'city')
   );
 
   const expanded = expandEvents(allPosts);

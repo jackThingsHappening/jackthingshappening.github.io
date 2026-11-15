@@ -13,7 +13,7 @@ const seoDescription = 'Browse all Chattanooga events by genre or place.';
 const allEvents = [
   ...(Object.values(import.meta.glob('../../../../pages-events/**/*.mdx', { eager: true }))),
   ...(Object.values(import.meta.glob('../**/*.mdx', { eager: true }))),
-].filter((post) => post.frontmatter.published !== false);
+].filter((post) => post.frontmatter.published !== false && !post.frontmatter.tags?.some((t: any) => t.type === 'city'));
 
 const today = new Date();
 today.setHours(0, 0, 0, 0);
