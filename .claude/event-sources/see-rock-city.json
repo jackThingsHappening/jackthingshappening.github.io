@@ -1,0 +1,20 @@
+{
+  "name": "See Rock City",
+  "type": "calendar",
+  "url": "https://www.seerockcity.com/events/",
+  "outputDir": "src/pages/chattanooga/events/see-rock-city",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Rock City Gardens",
+    "address": "1400 Patten Road, Lookout Mountain, GA 30750",
+    "iconPath": "/images/icons-new/mountains.png",
+    "eventLink": "https://www.seerockcity.com/events/",
+    "tags": [
+      { "type": "place", "tag": "see-rock-city" },
+      { "type": "genre", "tag": "outdoors" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 30,
+  "last_checked": "2026-11-16"
+}
