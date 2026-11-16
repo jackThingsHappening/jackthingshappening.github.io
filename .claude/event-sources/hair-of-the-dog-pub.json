@@ -1,0 +1,13 @@
+{
+  "name": "Hair of the Dog Pub",
+  "type": "recurring",
+  "url": "https://www.hairofthedogpub.com/",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/hair-of-the-dog-pub/wednesday-trivia.mdx",
+      "matchHint": "Wednesday trivia night at 7pm hosted by Not Rocket Science Trivia"
+    }
+  ],
+  "frequency_days": 14,
+  "last_checked": "2026-11-16"
+}
