@@ -1,0 +1,21 @@
+{
+  "name": "Chattanooga Renaissance Faire",
+  "type": "calendar",
+  "url": "https://chattrenfaire.com",
+  "outputDir": "src/pages/chattanooga/events/chattanooga-renaissance-faire",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Coolidge Park & Renaissance Park",
+    "address": "150 River St, Chattanooga, TN 37405",
+    "iconPath": "/images/icons-new/scroll.png",
+    "eventLink": "https://chattrenfaire.com",
+    "spotlight": true,
+    "tags": [
+      { "type": "place", "tag": "chattanooga-renaissance-faire" },
+      { "type": "genre", "tag": "live-events" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 90,
+  "last_checked": "2026-11-16"
+}
