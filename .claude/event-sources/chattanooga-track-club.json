@@ -1,0 +1,20 @@
+{
+  "name": "Chattanooga Track Club",
+  "type": "calendar",
+  "url": "https://chattanoogatrackclub.org/calendar",
+  "outputDir": "src/pages/chattanooga/events/chattanooga-track-club",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Chattanooga Track Club",
+    "address": "Chattanooga, TN",
+    "iconPath": "/images/icons-new/sport.png",
+    "eventLink": "https://chattanoogatrackclub.org/calendar",
+    "tags": [
+      { "type": "place", "tag": "chattanooga-track-club" },
+      { "type": "genre", "tag": "sports" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-11-16"
+}
