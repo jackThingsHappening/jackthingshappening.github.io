@@ -1,0 +1,20 @@
+{
+  "name": "Ruby Falls",
+  "type": "calendar",
+  "url": "https://www.rubyfalls.com/events/",
+  "outputDir": "src/pages/chattanooga/events/ruby-falls",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Ruby Falls",
+    "address": "1720 S. Scenic Highway, Chattanooga, TN 37409",
+    "iconPath": "/images/icons-new/mountains.png",
+    "eventLink": "https://www.rubyfalls.com/events/",
+    "tags": [
+      { "type": "place", "tag": "ruby-falls" },
+      { "type": "genre", "tag": "outdoors" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-11-16"
+}
