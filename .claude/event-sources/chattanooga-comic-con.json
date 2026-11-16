@@ -1,0 +1,21 @@
+{
+  "name": "Chattanooga Comic Con",
+  "type": "calendar",
+  "url": "https://www.chattanoogacomiccon.com",
+  "outputDir": "src/pages/chattanooga/events/chattanooga-comic-con",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Chattanooga Convention Center",
+    "address": "1 Carter St, Chattanooga, TN 37402",
+    "iconPath": "/images/icons-new/calendar.png",
+    "eventLink": "https://www.chattanoogacomiccon.com",
+    "spotlight": true,
+    "tags": [
+      { "type": "place", "tag": "chattanooga-comic-con" },
+      { "type": "genre", "tag": "live-events" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 90,
+  "last_checked": "2026-11-16"
+}
