@@ -840,15 +840,15 @@
     "slug": "head-of-the-hooch",
     "url": "https://headofthehooch.org/",
     "category": "festival",
-    "status": "pending",
-    "notes": "One of the largest rowing regattas in the US, co-hosted by the Atlanta Rowing Club and Lookout Rowing Club at Ross's Landing on the Tennessee River. Draws 6,500+ athletes over a 3.1-mile downstream course. Free for spectators. Annual, first weekend of November. Next: November 7-8, 2026."
+    "status": "blocked",
+    "notes": "One of the largest rowing regattas in the US, co-hosted by the Atlanta Rowing Club and Lookout Rowing Club at Ross's Landing on the Tennessee River. Draws 6,500+ athletes over a 3.1-mile downstream course. Free for spectators. Annual, first weekend of November. Next: November 7-8, 2026. robots.txt blocks ClaudeBot (Disallow: /) \u2014 cannot auto-scrape."
   },
   {
     "name": "St. Elmo Stroll & Luminaria Festival",
     "slug": "st-elmo-stroll",
     "url": "https://www.stelmostroll.com/",
     "category": "festival",
-    "status": "pending",
+    "status": "active",
     "notes": "Annual neighborhood holiday festival in historic St. Elmo. Residents light paper luminaria along the Virginia Avenue Greenway, leading to a block party with live music, food, and local vendors. Free, family-friendly. Held the third Saturday of December. Next: December 19, 2026."
   },
   {

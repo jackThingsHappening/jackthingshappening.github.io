@@ -1,0 +1,21 @@
+{
+  "name": "St. Elmo Stroll",
+  "type": "calendar",
+  "url": "https://www.stelmostroll.com/events/st-elmo-luminaria-festival",
+  "outputDir": "src/pages/chattanooga/events/st-elmo-stroll",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Virginia Ave Greenway, Historic St. Elmo",
+    "address": "W. 55th St, Chattanooga, TN 37409",
+    "iconPath": "/images/icons-new/community.png",
+    "eventLink": "https://www.stelmostroll.com",
+    "spotlight": true,
+    "tags": [
+      { "type": "place", "tag": "st-elmo-stroll" },
+      { "type": "genre", "tag": "live-events" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 90,
+  "last_checked": "2026-11-16"
+}
