@@ -1,0 +1,21 @@
+{
+  "name": "Chattanooga Pride",
+  "type": "calendar",
+  "url": "https://www.chattanoogapride.com",
+  "outputDir": "src/pages/chattanooga/events/chattanooga-pride",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Ross's Landing",
+    "address": "201 Riverfront Pkwy, Chattanooga, TN 37402",
+    "iconPath": "/images/icons-new/community.png",
+    "eventLink": "https://www.chattanoogapride.com",
+    "spotlight": true,
+    "tags": [
+      { "type": "place", "tag": "chattanooga-pride" },
+      { "type": "genre", "tag": "live-events" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 90,
+  "last_checked": "2026-11-16"
+}
