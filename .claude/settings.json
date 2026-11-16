@@ -13,7 +13,12 @@
       "Bash(head *)",
       "Bash(tail *)",
       "Bash(wc *)",
-      "Bash(stat *)"
+      "Bash(stat *)",
+      "WebSearch",
+      "Bash(mkdir -p *)",
+      "Bash(echo * > *)",
+      "Bash(echo * >> *)",
+      "Bash(python3 *)"
     ]
   }
 }

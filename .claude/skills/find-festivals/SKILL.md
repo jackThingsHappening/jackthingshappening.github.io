@@ -126,9 +126,23 @@ For Chattanooga events, omit `city`. For regional events, include it.
   "category": "festival",
   "city": "cleveland-tn",
   "status": "pending",
+  "spotlight": true,
   "notes": "One sentence: what it is, when, where, and how often it recurs (annual, biennial, one-time)."
 }
 ```
+
+All festivals added by this skill get `"spotlight": true` — they are large, notable events that deserve a visual callout on the site. Smaller or uncertain events may omit it.
+
+**Priority flag** — if the event's next known date is within 60 days of today, add two extra fields:
+
+```json
+{
+  "priority": "high",
+  "event_date": "YYYY-MM-DD"
+}
+```
+
+Use `YYYY-MM` if only the month is known. This tells `onboard-vendor` to process this entry before the regular FIFO queue so the page goes live before the event.
 
 Write the full updated array back to `.claude/vendor-sources.json`.
 

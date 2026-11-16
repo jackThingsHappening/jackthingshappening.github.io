@@ -3,6 +3,10 @@
 | Scheduled | Type | Subject | Content Referenced |
 |---|---|---|---|
 | 2026-06-15 10am CT | content-spotlight | Top of the Rock Restaurant & Brewery | restaurants-with-a-view guide |
+| 2026-11-21 10:25am CT | new-vendor | Shop the Market At | shop-the-market-at |
+| 2026-11-22 11:15am CT | new-vendor | Chattanooga Track Club | chattanooga-track-club |
+| 2026-11-21 1:15pm CT | new-vendor | Chattanooga Christmas Village Holiday Market | chattanooga-christmas-village-holiday-market |
+| 2026-11-22 12:35pm CT | new-vendor | Chattanooga Cars and Coffee | chattanooga-cars-and-coffee |
 | 2026-06-16 10am CT | content-spotlight | Wayward Pastry Co. | coffeeshops guide |
 | 2026-06-18 10am CT | how-to | Interactive guide filtering | outdoors guide |
 | 2026-06-20 10am CT | guide-promotion | Breweries & Wineries | breweries-and-wineries guide |
@@ -34,3 +38,6 @@
 | 2026-10-24 10:30am CT | guide-promotion | Chickamauga Battlefield hiking/biking | outdoors guide (chickamauga-battlefield filter) |
 | 2026-10-09 10:45am CT | content-spotlight | Stringers Ridge | outdoors guide (stringers-ridge filter) |
 | 2026-10-25 11:45am CT | guide-promotion | Snooper's Rock overlook | outdoors guide |
+| 2026-11-17 10:25am CT | new-vendor | See Rock City | see-rock-city |
+| 2026-11-21 11:40am CT | new-vendor | Ruby Falls | ruby-falls |
+| 2026-11-22 1:15pm CT | new-vendor | Hair of the Dog Pub | hair-of-the-dog-pub |

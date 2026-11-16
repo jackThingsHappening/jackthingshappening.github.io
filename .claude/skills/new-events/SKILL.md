@@ -100,6 +100,15 @@ eventLink: {from defaultFrontmatter}
 tags: {from defaultFrontmatter}
 layout: {from defaultFrontmatter}
 ---
+```
+
+If `defaultFrontmatter` contains `spotlight: true`, include it as a frontmatter field:
+
+```mdx
+spotlight: true
+```
+
+Omit the field entirely when not present — do not write `spotlight: false`.
 
 {body copy — see B3a below}
 ```

@@ -14,11 +14,16 @@ function parseTimeToMinutes(time: string | undefined): number {
   return hours * 60 + minutes;
 }
 
+// Within a day: spotlight first, then one-off before recurring, then by start time.
 export function sortEvents(events: any[]): any[] {
   return [...events].sort((a, b) => {
     const dateA = new Date(a.pubDate + 'T00:00:00').getTime();
     const dateB = new Date(b.pubDate + 'T00:00:00').getTime();
     if (dateA !== dateB) return dateA - dateB;
+
+    const aSpotlight = a.spotlight ? 0 : 1;
+    const bSpotlight = b.spotlight ? 0 : 1;
+    if (aSpotlight !== bSpotlight) return aSpotlight - bSpotlight;
 
     const aRecurring = a.recurring ? 1 : 0;
     const bRecurring = b.recurring ? 1 : 0;

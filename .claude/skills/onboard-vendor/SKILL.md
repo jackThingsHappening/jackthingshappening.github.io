@@ -5,9 +5,25 @@ description: Take the first pending vendor, build its event-source config, pull 
 
 You are onboarding one new event vendor for the ThingsHappening Chattanooga site.
 
-## Step 1 — Find the vendor to onboard
+## Step 1 — Check run limit and find the vendor to onboard
 
-Read `.claude/vendor-sources.json`. Find the first entry with `status: "pending"`. If none exist, print "No pending vendors." and stop.
+### Run counter
+
+Check `$ARGUMENTS` for a `max N` token (e.g. `max 5`). If found, use N as the limit. Otherwise default to 10.
+
+Read `.claude/onboard-vendor-count.txt` if it exists. Parse it as an integer. If the value is at or above the limit, print "Run limit reached ({limit} vendors). Delete .claude/onboard-vendor-count.txt to reset." and stop.
+
+If the file does not exist, treat the count as 0.
+
+Increment the count by 1 and write it back to `.claude/onboard-vendor-count.txt`.
+
+### Find the vendor
+
+Read `.claude/vendor-sources.json`.
+
+First, look for any entry with `"status": "pending"` and `"priority": "high"`. If more than one exists, pick the one with the earliest `event_date`. If none exist, fall back to the first entry with `"status": "pending"` in array order.
+
+If no pending vendors exist at all, delete `.claude/onboard-vendor-count.txt` and print "No pending vendors." and stop.
 
 ## Step 2 — Check robots.txt
 
@@ -80,6 +96,8 @@ Use WebFetch on the vendor's `url`. Read the content to understand:
 
 **Tags** — always two: first a `place` tag using the vendor's slug, then one `genre` tag describing the type of content (music, live-events, food-drink, museum, theater, sports, comedy, outdoors, farm, market)
 
+**Spotlight** — if the vendor-sources.json entry has `"spotlight": true`, add `"spotlight": true` to `defaultFrontmatter` in the calendar config. Omit the field for recurring configs (spotlight applies per-event, not per-series).
+
 Write the config to `.claude/event-sources/{slug}.json`.
 
 ## Step 5 — Pull initial events
@@ -112,6 +130,44 @@ git add .claude/event-sources/{slug}.json .claude/vendor-sources.json src/pages/
 git commit -m "feat: onboard {vendor name} — initial events"
 ```
 
+## Step 9 — Schedule a Facebook post
+
+After committing, draft and schedule a post without waiting for approval.
+
+### Draft the copy
+
+**If the vendor has `"spotlight": true`** (festival):
+Write a post promoting the specific event. Lead with the most concrete detail from the event MDX body — not the title. Include the direct event page URL: `https://thingshappening.com/chattanooga/events/{slug}/{event-filename}`. Under 80 words. No emojis, no hashtags, no em dashes. Write like a local.
+
+**If the vendor does not have `"spotlight": true`** (regular venue):
+Write a post introducing the new venue. Mention what kind of events they run and link to their events page: `https://thingshappening.com/chattanooga/events/{slug}`. Under 80 words. No emojis, no hashtags, no em dashes. Write like a local.
+
+### Pick a schedule time
+
+**Festival**: 5–7 days before `event_date` if 8+ days away; 1–3 days before if 4–7 days away; next morning if within 3 days. Time: 9–1pm CT, naturally uneven (e.g. 10:25am, 11:40am).
+
+**Regular venue**: next Saturday or Sunday, 9–2pm CT, naturally uneven time.
+
+### Post via the Graph API
+
+Use env vars `FB_PAGE_ID` and `FB_PAGE_ACCESS_TOKEN`. Convert the schedule time (CT = UTC-5 Nov–Mar, UTC-6 otherwise) to a Unix timestamp.
+
+```bash
+curl -X POST "https://graph.facebook.com/v21.0/$FB_PAGE_ID/feed" \
+  -d "message=<post text>" \
+  -d "published=false" \
+  -d "scheduled_publish_time=<unix timestamp>" \
+  -d "access_token=$FB_PAGE_ACCESS_TOKEN"
+```
+
+On success, append a row to `.claude/fb-post-log.md`:
+
+```
+| 2026-MM-DD HH:mmam/pm CT | new-vendor | {vendor name} | {slug} |
+```
+
+If the API returns an error, report it and skip — do not block the rest of the run.
+
 ## Writing Rules
 
 Any prose written into MDX files must follow these rules:
@@ -123,10 +179,11 @@ Any prose written into MDX files must follow these rules:
 - Short sentences — 20 words or fewer
 - Active voice only
 
-## Step 9 — Report
+## Step 10 — Report
 
 Print:
 - Vendor name and type
 - Config written to
 - Number of event files created
+- Current run count (e.g. "3 of 10 this session")
 - Any issues encountered
