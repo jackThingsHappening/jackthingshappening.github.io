@@ -1,0 +1,20 @@
+{
+  "name": "Chattanooga Christmas Village Holiday Market",
+  "type": "calendar",
+  "url": "https://touchtheskyevents.com/events/chattanooga-christmas-village-holiday-market/",
+  "outputDir": "src/pages/chattanooga/events/chattanooga-christmas-village-holiday-market",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Camp Jordan Arena",
+    "address": "323 Camp Jordan Pkwy, East Ridge, TN 37412",
+    "iconPath": "/images/icons-new/market.png",
+    "eventLink": "https://touchtheskyevents.com/events/chattanooga-christmas-village-holiday-market/",
+    "tags": [
+      { "type": "place", "tag": "chattanooga-christmas-village-holiday-market" },
+      { "type": "genre", "tag": "market" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 365,
+  "last_checked": "2026-11-16"
+}
