@@ -1,0 +1,20 @@
+{
+  "name": "Shop the Market At",
+  "type": "calendar",
+  "url": "https://shopthemarketat.com/events/",
+  "outputDir": "src/pages/chattanooga/events/shop-the-market-at",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Shop the Market At",
+    "address": "Chattanooga, TN",
+    "iconPath": "/images/icons-new/market.png",
+    "eventLink": "https://shopthemarketat.com/events/",
+    "tags": [
+      { "type": "place", "tag": "shop-the-market-at" },
+      { "type": "genre", "tag": "market" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-11-16"
+}
