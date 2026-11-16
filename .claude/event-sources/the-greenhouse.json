@@ -26,11 +26,17 @@
     "iconPath": "/images/icons-new/beer.png",
     "eventLink": "https://www.oddstorybrewing.co/the-greenhouse-events",
     "tags": [
-      { "type": "place", "tag": "the-greenhouse" },
-      { "type": "genre", "tag": "food-drink" }
+      {
+        "type": "place",
+        "tag": "the-greenhouse"
+      },
+      {
+        "type": "genre",
+        "tag": "food-drink"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 14,
-  "last_checked": "2026-11-02"
+  "last_checked": "2026-11-16"
 }

@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/music.png",
     "eventLink": "https://chattanoogasymphony.org/events/",
     "tags": [
-      { "type": "place", "tag": "chattanooga-symphony" },
-      { "type": "genre", "tag": "music" }
+      {
+        "type": "place",
+        "tag": "chattanooga-symphony"
+      },
+      {
+        "type": "genre",
+        "tag": "music"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 14,
-  "last_checked": "2026-11-02"
+  "last_checked": "2026-11-16"
 }

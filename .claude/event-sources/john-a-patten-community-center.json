@@ -14,11 +14,17 @@
     "iconPath": "/images/icons-new/calendar.png",
     "eventLink": "https://chattanooga.gov/services/community-centers/john-patten-community-center",
     "tags": [
-      { "type": "place", "tag": "john-a-patten-community-center" },
-      { "type": "genre", "tag": "community" }
+      {
+        "type": "place",
+        "tag": "john-a-patten-community-center"
+      },
+      {
+        "type": "genre",
+        "tag": "community"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 14,
-  "last_checked": "2026-11-02"
+  "last_checked": "2026-11-16"
 }
