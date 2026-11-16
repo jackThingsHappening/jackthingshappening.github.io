@@ -1,0 +1,20 @@
+{
+  "name": "Touch the Sky Events",
+  "type": "calendar",
+  "url": "https://touchtheskyevents.com",
+  "outputDir": "src/pages/chattanooga/events/touch-the-sky-events",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Various Chattanooga-area venues",
+    "address": "Chattanooga, TN",
+    "iconPath": "/images/icons-new/market.png",
+    "eventLink": "https://touchtheskyevents.com",
+    "tags": [
+      { "type": "place", "tag": "touch-the-sky-events" },
+      { "type": "genre", "tag": "market" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-11-16"
+}
