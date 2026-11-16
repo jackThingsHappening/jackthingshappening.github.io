@@ -1,5 +1,35 @@
 # Find-Festivals Search Log
 
+## 2026-11-16
+
+**Searches run:**
+- Chattanooga New Year's Eve celebration event December 31 2026
+- Chattanooga winter climbing bouldering competition January February 2027
+- Chattanooga marathon half marathon race March 2027 registration
+- Chattanooga Martin Luther King Day MLK celebration January 2027 event
+- Chattanooga winter festival January February 2027 event
+- Lookout Wild Film Festival Chattanooga 2027 January dates
+- Chattanooga Convention Center home garden boat show expo January February 2027
+- Cleveland TN Ringgold Dalton Georgia winter event January February 2027
+- Chattanooga Mardi Gras parade bridal wedding show February 2027
+- Chattanooga gun knife show antique collector expo January 2027 Camp Jordan
+
+**Added:**
+- Chattanooga New Year's Eve Celebration — free annual city event at Coolidge Park, Dec 31, 2026, live music + midnight fireworks. chattanooga.gov. Priority high (within 60 days).
+- Lookout Wild Film Festival — 14th annual outdoor/adventure film festival at UTC Fine Arts Center, Jan 14-17, 2027. lwff.org. New category (film). Priority high (within 60 days).
+- Chattanooga Boat Show — annual show at Chattanooga Convention Center, Feb 4-7, 2027. chattanoogaboatshow.com. Within 90 days, no priority.
+
+**Skipped:**
+- Erlanger Chattanooga Marathon Weekend (Mar 5-7, 2027) — ~110 days out, outside window; check back next month.
+- The Pink Bride Wedding & Women's Expo (Feb 28, 2027) — ~104 days out, outside window; check next month.
+- Mardi Gras at WanderLinger (Feb 6, 2027) — covered by wanderlinger vendor (active).
+- Asian Lantern Festival + Holiday Lights Train (Jan, Zoo / TVRM) — covered by chattanooga-zoo and tennessee-valley-railroad-museum vendors.
+- MLK Day Parade / Day of Service (Jan 18, 2027) — city + Unity Group event; no clear dedicated event website; Bessie Smith Cultural Center already a vendor.
+- Dalton Home Show (Jan 8-10) — Dalton GA is outside the defined region.
+- Catoosa County Winter Extravaganza (Jan 10, Ringgold) — small library kids-craft event, no dedicated page.
+- RK Gun & Knife Show — no confirmed January 2027 Chattanooga/Camp Jordan date found.
+- Winter bouldering season (Dec-Feb) — strong crag season but no dated public competition found; worth revisiting via Sandstone Climbers Coalition.
+
 ## 2026-10-11
 
 **Searches run:**
