@@ -1,0 +1,22 @@
+{
+  "name": "Chattanooga New Year's Eve Celebration",
+  "type": "calendar",
+  "url": "https://chattanooga.gov/things-to-do/calendar/chattanoogas-free-new-years-eve-celebration-coolidge-park",
+  "outputDir": "src/pages/chattanooga/events/chattanooga-new-years-eve-celebration",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Coolidge Park",
+    "address": "150 River St, Chattanooga, TN 37405",
+    "iconPath": "/images/icons-new/community.png",
+    "eventLink": "https://chattanooga.gov/things-to-do/calendar/chattanoogas-free-new-years-eve-celebration-coolidge-park",
+    "spotlight": true,
+    "tags": [
+      { "type": "place", "tag": "chattanooga-new-years-eve-celebration" },
+      { "type": "genre", "tag": "live-events" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 90,
+  "last_checked": "2026-11-17",
+  "notes": "chattanooga.gov blocks all bots at the CDN layer (Varnish 403 to every user agent, including robots.txt) — cannot auto-scrape. This annual event is written manually from verified public sources. The specific 2026 edition lineup is announced each December; refresh manually when posted."
+}
