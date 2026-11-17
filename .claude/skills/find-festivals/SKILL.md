@@ -15,6 +15,8 @@ Any significant public event that:
 
 Do NOT require the word "festival" — many qualifying events are competitions, races, shows, tours, or multi-day happenings with no "festival" in the name.
 
+**Exception — major signature annual events:** County fairs, air shows, and other large multi-day annual events with strong local followings may be added even if the next occurrence is unknown or more than 90 days out. The 60-90 day window catches most things, but well-known annual events that just finished will never be within that window when a sweep runs. Add these when you find them — don't wait for them to come back into range. Omit `priority` and `event_date` for these entries.
+
 ## Step 1 — Load known events
 
 Read two sources to build a known set:
@@ -108,7 +110,7 @@ For each candidate found, check:
 
 Neighborhood events are an exception: a public Facebook event page or neighborhood association announcement is sufficient — many strolls and block parties have no dedicated website. Use the Facebook event URL or the org's Facebook page as the `url`.
 
-Discard: private events, ticketing aggregator pages (Eventbrite listings without an organizer site), events more than 90 days out (check back next month), events outside the region.
+Discard: private events, ticketing aggregator pages (Eventbrite listings without an organizer site), events outside the region. Discard events more than 90 days out UNLESS they qualify as major signature annual events (see exception in What qualifies above).
 
 ## Step 4 — Add qualifying events to vendor-sources.json
 
