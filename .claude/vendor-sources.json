@@ -682,8 +682,8 @@
     "slug": "universal-joint",
     "url": "https://www.ujointchattanooga.com/",
     "category": "food-drink",
-    "status": "pending",
-    "notes": "Neighborhood restaurant and bar at 532 Lookout St with recurring weekly Wednesday trivia (hosted by Chatt Trivia), Thursday Mario Kart on the big screen, and occasional live music. Verify a scrapable events source at onboarding — events may post via Facebook."
+    "status": "active",
+    "notes": "Neighborhood restaurant and bar at 532 Lookout St with recurring weekly Wednesday trivia (hosted by Chatt Trivia), Thursday Mario Kart on the big screen, and occasional live music. Verify a scrapable events source at onboarding — events may post via Facebook. Onboarded 2026-11-17 as recurring type with Wednesday trivia and Thursday Mario Kart."
   },
   {
     "name": "Clever Alehouse",
@@ -1079,5 +1079,14 @@
     "status": "pending",
     "spotlight": true,
     "notes": "Annual pop culture convention covering anime, sci-fi, comics, gaming, and cosplay. Feb 12-14, 2027 at The Chattanoogan Hotel in downtown Chattanooga."
+  },
+  {
+    "name": "The Caverns",
+    "slug": "the-caverns",
+    "url": "https://thecaverns.com",
+    "category": "music",
+    "city": "whitwell-tn",
+    "status": "pending",
+    "notes": "Underground natural cave concert venue in Pelham, TN with a rolling national concert calendar. Multiple shows per month spanning bluegrass, rock, electronic, and Americana."
   }
 ]

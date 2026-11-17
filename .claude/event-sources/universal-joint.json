@@ -1,0 +1,17 @@
+{
+  "name": "Universal Joint Chattanooga",
+  "type": "recurring",
+  "url": "https://www.ujointbar.com/chattanooga",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/universal-joint/wednesday-trivia.mdx",
+      "matchHint": "Wednesday Trivia hosted by Chatt Trivia"
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/universal-joint/thursday-mario-kart.mdx",
+      "matchHint": "Thursday Mario Kart on the big screen"
+    }
+  ],
+  "frequency_days": 14,
+  "last_checked": "2026-11-17"
+}
