@@ -41,3 +41,12 @@
 | 2026-11-17 10:25am CT | new-vendor | See Rock City | see-rock-city |
 | 2026-11-21 11:40am CT | new-vendor | Ruby Falls | ruby-falls |
 | 2026-11-22 1:15pm CT | new-vendor | Hair of the Dog Pub | hair-of-the-dog-pub |
+| 2026-12-13 10:25am CT | festival-spotlight | Lookout Wild Film Festival | lookout-wild-film-festival |
+| 2026-12-12 11:40am CT | festival-spotlight | World of Wheels Chattanooga | world-of-wheels-chattanooga |
+| 2026-11-22 12:15pm CT | new-vendor | Universal Joint Chattanooga | universal-joint |
+| 2026-11-28 10:35am CT | new-vendor | Venue 28 | venue-28 |
+| 2026-11-18 10:25am CT | feature-callout | Holiday events tag filter | events/tag/festivals |
+| 2026-11-19 12:15pm CT | engagement | Thanksgiving plans in Chattanooga | none |
+| 2026-11-20 10:45am CT | guide-promotion | Restaurants with a View | restaurants-with-a-view guide |
+| 2026-11-21 9:35am CT | events | Isaiah Rashad; Lupita Infante; Turkey Trot | the-signal, chattanooga-track-club |
+| 2026-11-22 10:50am CT | events | Holidays Under the Peaks; 423 Frequency; MAINx24 | acquarium, barrelhouse-ballroom, festivals |
