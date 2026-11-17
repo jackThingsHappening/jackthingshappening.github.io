@@ -1105,5 +1105,13 @@
     "status": "pending",
     "spotlight": true,
     "notes": "Major annual county fair at Camp Jordan in East Ridge, typically late August. Rides, livestock, competitions, concerts, and food. One of the largest events in the region each year."
+  },
+  {
+    "name": "Creature Comforts Beer Garden",
+    "slug": "creature-comforts",
+    "url": "https://creaturecomforts.co/events/",
+    "category": "food-drink",
+    "status": "active",
+    "notes": "Athens GA brewery with a Chattanooga Beer Garden at Foundry Plaza near Erlanger Park. Open Thu-Sat. Events are seasonal (spring-fall) around Lookouts games and UGA football watch parties. Main events calendar is Athens-primary; Chattanooga events filtered by venue."
   }
 ]

@@ -1,0 +1,21 @@
+{
+  "name": "Creature Comforts Beer Garden",
+  "type": "calendar",
+  "url": "https://creaturecomforts.co/events/",
+  "outputDir": "src/pages/chattanooga/events/creature-comforts",
+  "slugPrefix": "",
+  "venueFilter": "Chattanooga Beer Garden",
+  "defaultFrontmatter": {
+    "venue": "Creature Comforts Beer Garden",
+    "address": "Foundry Plaza, Chattanooga, TN 37408",
+    "iconPath": "/images/icons-new/beer.png",
+    "eventLink": "https://creaturecomforts.co/events/",
+    "tags": [
+      { "type": "place", "tag": "creature-comforts" },
+      { "type": "genre", "tag": "food-drink" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-11-17"
+}
