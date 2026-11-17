@@ -1,5 +1,35 @@
 # Find-Festivals Search Log
 
+## 2026-11-17
+
+**Searches run:**
+- World of Wheels Chattanooga 2027 January car show date
+- Con Nooga 2027 Chattanooga anime convention February date
+- Chattanooga triathlon cycling race January February 2027
+- Chattanooga home garden show expo January February 2027
+- Chattanooga climbing bouldering competition January February 2027 Sandstone High Point
+- Tri-State Home Show Chattanooga 2027 date HBAGC homeshowchattanooga.com
+- Repticon Chattanooga reptile show 2027 date
+- Chattanooga bridal wedding show January February 2027
+- Cleveland TN Ringgold Chickamauga Georgia event festival January February 2027
+- World of Chocolate Expo Colonnade Ringgold 2027 website organizer
+- Tennessee Valley Bridal Fair 2027 website date January Commons Collegedale
+
+**Added:**
+- World of Wheels Chattanooga — 59th annual indoor custom car show at the Convention Center. Jan 8-10, 2027. High priority. worldofwheels.net/chattanooga.
+- Con Nooga — annual pop culture convention (anime, sci-fi, comics, gaming) at The Chattanoogan Hotel. Feb 12-14, 2027. connooga.com.
+
+**Skipped:**
+- Tri-State Home Show (Feb 19-21, 2027) — homeshowchattanooga.com; 94 days out, just outside the 90-day window; check next month.
+- World of Chocolate Expo (Jan 30 / Feb 6, 2027) — organized by Touch the Sky Events; covered by touch-the-sky-events vendor (active).
+- Tennessee Valley Bridal Fair (Jan 16, 2027, The Commons Collegedale) — no dedicated website; promoted on wdef.com TV station page; The Commons already in vendor list.
+- Engagement Expo at Howe Farms (Jan 10) — small venue-hosted wedding event, not a large public festival.
+- Repticon Chattanooga — June 2027, well outside window.
+- Southern Home & Garden Show (Feb 26-28) — southernhomeandgardenshow.com; 101 days out, outside window.
+- Pink Bride Expo (Feb 28) — 103 days out, outside window.
+- Ironman 70.3 Chattanooga (May 2027) — outside window.
+- High Point Southern Grit Bouldering Series — no specific Jan-Feb 2027 comp dates confirmed.
+
 ## 2026-11-16
 
 **Searches run:**

@@ -1059,5 +1059,25 @@
     "city": "guild-tn",
     "status": "pending",
     "notes": "Marina, resort, and distillery at 1265 Hales Bar Rd, Guild with regular weekend live music at The Marina Restaurant (country, rock, blues) and seasonal themed events plus a Halloween haunted house at the historic Hales Bar Dam. No scrapable own-site calendar at discovery \u2014 events post via Facebook/allevents.in; verify a source at onboarding."
+  },
+  {
+    "name": "World of Wheels Chattanooga",
+    "slug": "world-of-wheels-chattanooga",
+    "url": "https://worldofwheels.net/chattanooga/",
+    "category": "festival",
+    "status": "pending",
+    "spotlight": true,
+    "priority": "high",
+    "event_date": "2027-01-08",
+    "notes": "Annual indoor custom car show at the Chattanooga Convention Center. Jan 8-10, 2027 (59th annual). Features hot rods, race cars, classics, custom imports, and motorcycles."
+  },
+  {
+    "name": "Con Nooga",
+    "slug": "con-nooga",
+    "url": "https://connooga.com/",
+    "category": "festival",
+    "status": "pending",
+    "spotlight": true,
+    "notes": "Annual pop culture convention covering anime, sci-fi, comics, gaming, and cosplay. Feb 12-14, 2027 at The Chattanoogan Hotel in downtown Chattanooga."
   }
 ]
