@@ -1,0 +1,21 @@
+{
+  "name": "Lookout Wild Film Festival",
+  "type": "calendar",
+  "url": "https://lwff.org/",
+  "outputDir": "src/pages/chattanooga/events/lookout-wild-film-festival",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "UTC Fine Arts Center",
+    "address": "615 McCallie Ave, Chattanooga, TN 37403",
+    "iconPath": "/images/icons-new/pine-tree.png",
+    "eventLink": "https://lwff.org/",
+    "spotlight": true,
+    "tags": [
+      { "type": "place", "tag": "lookout-wild-film-festival" },
+      { "type": "genre", "tag": "live-events" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 90,
+  "last_checked": "2026-11-17"
+}

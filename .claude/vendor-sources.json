@@ -1020,11 +1020,11 @@
     "slug": "lookout-wild-film-festival",
     "url": "https://lwff.org/",
     "category": "festival",
-    "status": "pending",
+    "status": "active",
     "spotlight": true,
     "priority": "high",
     "event_date": "2027-01-14",
-    "notes": "Annual four-day outdoor and adventure film festival at the UTC Fine Arts Center, Jan 14-17, 2027 (14th edition)."
+    "notes": "Annual four-day outdoor and adventure film festival at the UTC Fine Arts Center, Jan 14-17, 2027 (14th edition). Onboarded 2026-11-17 as calendar type."
   },
   {
     "name": "Chattanooga Boat Show",
