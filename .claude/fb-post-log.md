@@ -51,3 +51,4 @@
 | 2026-11-21 9:35am CT | events | Isaiah Rashad; Lupita Infante; Turkey Trot | the-signal, chattanooga-track-club |
 | 2026-11-22 10:50am CT | events | Holidays Under the Peaks; 423 Frequency; MAINx24 | acquarium, barrelhouse-ballroom, festivals |
 | 2026-11-22 10:25am CT | new-vendor | Creature Comforts Beer Garden | creature-comforts |
+| 2026-11-22 10:40am CT | new-vendor | UTC Mocs Women's Basketball | utc-mocs |
