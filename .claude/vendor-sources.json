@@ -696,11 +696,11 @@
   {
     "name": "Venue 28",
     "slug": "venue-28",
-    "url": "https://www.eventbrite.com/o/venue-28",
+    "url": "https://www.eventbrite.com/o/67479220043",
     "category": "music",
     "city": "whitwell-tn",
-    "status": "pending",
-    "notes": "Live music venue at 9516 Hwy 28, Whitwell with regional country/rap-country touring acts (e.g. Jesse Howard, Nu Breed). Tickets/events via Eventbrite and Facebook — verify a scrapable Eventbrite organizer page or own site at onboarding."
+    "status": "active",
+    "notes": "Live music venue at 9516 Hwy 28, Whitwell with regional country/rap-country touring acts (e.g. Jesse Howard, Nu Breed). Eventbrite organizer: Steve Matherly (https://www.eventbrite.com/o/67479220043). No upcoming events at onboarding — refresh pipeline will pull when new shows are posted."
   },
   {
     "name": "Riverdance TN",
@@ -708,7 +708,7 @@
     "url": "https://www.facebook.com/riverdancetn/",
     "category": "food-drink",
     "city": "guild-tn",
-    "status": "pending",
+    "status": "hold",
     "notes": "Riverfront restaurant in Guild, TN with modern Southern cuisine, craft cocktails, and occasional live music. Events posted via Facebook — verify a scrapable own-site or events source at onboarding."
   },
   {
@@ -716,7 +716,7 @@
     "slug": "spare-time-chattanooga",
     "url": "https://www.sparetimeentertainment.com/chattanooga/eat-drink/live-entertainment/",
     "category": "food-drink",
-    "status": "pending",
+    "status": "hold",
     "notes": "Entertainment center and eatery with recurring live entertainment — weekly Thursday trivia with Trivia Guys (free to play) plus live music nights on a dedicated page."
   },
   {
@@ -724,7 +724,7 @@
     "slug": "chattanooga-beer-fest",
     "url": "https://www.chattanoogabeerfest.com/",
     "category": "food-drink",
-    "status": "pending",
+    "status": "hold",
     "notes": "Annual craft beer festival at First Horizon Pavilion (late May) with dozens of breweries, live music, and food. Next: Saturday, May 23. Own site with event details."
   },
   {
@@ -733,7 +733,7 @@
     "url": "https://catoosacolonnade.com/event-calendar/",
     "category": "theater",
     "city": "ringgold-ga",
-    "status": "pending",
+    "status": "hold",
     "notes": "Catoosa County civic center at 264 Catoosa Circle, Ringgold with a dedicated performing arts theater. Rolling calendar of concerts (gospel, country), community gatherings, and shows. Own event calendar at /event-calendar/."
   },
   {
@@ -742,7 +742,7 @@
     "url": "https://www.georgiawines.com/Events",
     "category": "food-drink",
     "city": "ringgold-ga",
-    "status": "pending",
+    "status": "hold",
     "notes": "Muscadine winery at 6469 Battlefield Pkwy, Ringgold with recurring weekend live music (Sat/Sun) and a dedicated events page including a Live Music section. Free admission, $5 tastings."
   },
   {
@@ -750,7 +750,7 @@
     "slug": "stevarinos",
     "url": "https://www.stevarinositalianeaterytn.com/",
     "category": "food-drink",
-    "status": "pending",
+    "status": "hold",
     "notes": "North Shore Italian restaurant and pub at 325 Cherokee Blvd with recurring weekly Monday live trivia (6:30pm) and Wednesday SINGO music bingo (6:30pm), both free to play. Events also post via Facebook/Eventbrite — verify a scrapable source at onboarding."
   },
   {
@@ -758,7 +758,7 @@
     "slug": "mexiville",
     "url": "https://www.mexiville.com/",
     "category": "food-drink",
-    "status": "pending",
+    "status": "hold",
     "notes": "Mexican restaurant and bar at 809 Market St (downtown) with recurring weekly themed live trivia (Fri 7pm), karaoke (Sat), and late-night salsa dancing (Sun 11pm). Second location on Cherokee Blvd. Events also post via Challenge Entertainment and Nooga Nightlife — verify a scrapable source at onboarding."
   },
   {
@@ -766,7 +766,7 @@
     "slug": "nic-and-normans",
     "url": "https://www.nicandnormans.com/",
     "category": "food-drink",
-    "status": "pending",
+    "status": "hold",
     "notes": "Downtown Chattanooga restaurant and bar with recurring weekly SINGO music bingo and live trivia nights. Events posted via Eventbrite/Challenge Entertainment — verify a scrapable own-site or organizer source at onboarding."
   },
   {
@@ -775,7 +775,7 @@
     "url": "https://collegedale.recdesk.com/Community/Calendar",
     "category": "community",
     "city": "collegedale-tn",
-    "status": "pending",
+    "status": "hold",
     "notes": "City of Collegedale Parks & Rec running a year-round RecDesk community calendar of programs, classes, seasonal events, and family activities. Calendar at collegedale.recdesk.com/Community/Calendar — verify scrapability at onboarding."
   },
   {
@@ -783,7 +783,7 @@
     "slug": "john-a-patten-community-center",
     "url": "https://chattanooga.gov/things-to-do/calendar?field_calendar_types_target_id=453",
     "category": "community",
-    "status": "pending",
+    "status": "hold",
     "notes": "City-run community center at 3202 Kellys Ferry Rd, Chattanooga with daily programs (11:30am-8pm weekdays, 12-4pm Sat). Programming includes fitness classes, youth activities, summer camp, and open gym. Calendar shows recurring Daily Programs entries."
   },
   {
@@ -792,7 +792,7 @@
     "url": "https://1885grill.com/music-events-ooltewah",
     "category": "music",
     "city": "ooltewah-tn",
-    "status": "pending",
+    "status": "hold",
     "notes": "Restaurant patio at 9469 Bradmore Lane, Ooltewah hosting live music Sunday brunch (11am-2pm) and select evenings (5-8pm), weather permitting. Dedicated music events page is scrapable."
   },
   {
@@ -800,7 +800,7 @@
     "slug": "chattanooga-zoo",
     "url": "https://www.chattzoo.org/events",
     "category": "outdoors",
-    "status": "pending",
+    "status": "hold",
     "notes": "Warner Park zoo with recurring seasonal public events including Boo in the Zoo (October weekends), Frights & Pints (21+ Halloween), Adventure Days (quarterly), and Conservation Awareness Days. Events page is scrapable."
   },
   {
@@ -808,7 +808,7 @@
     "slug": "association-for-visual-arts",
     "url": "https://www.avarts.org/upcoming-workshop-page",
     "category": "museum",
-    "status": "pending",
+    "status": "hold",
     "notes": "North Shore gallery at 30 Frazier Ave with public paid workshops, monthly art critiques, and rotating exhibitions (6+ per year). Workshop page is scrapable with dates and costs."
   },
   {
@@ -816,7 +816,7 @@
     "slug": "st-pauls-episcopal",
     "url": "https://www.stpaulschatt.org/events",
     "category": "music",
-    "status": "pending",
+    "status": "hold",
     "notes": "Downtown Chattanooga church with a year-round Music at St. Paul's Artist Series — monthly classical concerts (organ, piano, guitar, vocal ensemble) open to the public. Events page is Squarespace-hosted and scrapable with dates."
   },
   {
@@ -824,7 +824,7 @@
     "slug": "chattanooga-music-club",
     "url": "http://www.chattanoogamusicclub.org/",
     "category": "music",
-    "status": "pending",
+    "status": "hold",
     "notes": "Community classical music organization hosting free public concerts at First Cumberland Presbyterian Church and other Chattanooga venues throughout the year. Season calendar at /calendar-of-events-[year] — verify current URL at onboarding."
   },
   {
@@ -832,7 +832,7 @@
     "slug": "north-river-civic-center",
     "url": "https://chattanooga.gov/services/community-centers/north-river-civic-center",
     "category": "community",
-    "status": "pending",
+    "status": "hold",
     "notes": "City community center at 1009 Executive Dr, Hixson with free monthly concert series 'In the Heart of Hixson' (local musicians, Nov-Mar) and daily programs including bingo, art displays, and dance. Events on embedded Google Calendar — verify scrapable source at onboarding."
   },
   {
@@ -857,7 +857,7 @@
     "url": "https://redpointinn.com/events/",
     "category": "music",
     "city": "jasper-tn",
-    "status": "pending",
+    "status": "hold",
     "notes": "Restaurant and climbing gear shop at 30 Courthouse Sq, Jasper with recurring weekly live music (Fri, 2nd floor, no cover), light piano with Lisa (Sun noon), and Karaoke & Open Mic Night (Sat 6:30-9pm). Events page is behind a Cloudflare managed challenge (403 to bots) at check — verify a scrapable source at onboarding; events also post via Facebook."
   },
   {
@@ -866,7 +866,7 @@
     "url": "https://topoftherockbrewery.com/",
     "category": "food-drink",
     "city": "jasper-tn",
-    "status": "pending",
+    "status": "hold",
     "notes": "Restaurant and craft brewery in Jasper with mountain views and live music on the lower deck (Thursdays through summer). No dedicated events calendar at discovery — events post via Instagram (@TopoftheRockTN); verify a scrapable source at onboarding."
   },
   {
@@ -882,7 +882,7 @@
     "slug": "plant-bar",
     "url": "https://visitplantbar.com/events",
     "category": "food-drink",
-    "status": "pending",
+    "status": "hold",
     "notes": "Zero-proof bar and lounge at 202 Manufacturers Rd Suite B near Coolidge Park. Mix of recurring series (Game Night, Adult Coloring, Trivia) and one-off events (workshops, costume contests, yoga). All events 21+. robots.txt allows all bots."
   },
   {
@@ -890,7 +890,7 @@
     "slug": "chattanooga-fc",
     "url": "https://www.mlsnextpro.com/chattanoogafc/schedule/matches",
     "category": "sports",
-    "status": "pending",
+    "status": "hold",
     "notes": "Professional soccer club (MLS Next Pro) playing at Finley Stadium, downtown Chattanooga. Season runs March through October. Ticket and schedule info at mlsnextpro.com. Verify scrapability at onboarding."
   },
   {
@@ -898,7 +898,7 @@
     "slug": "chattanooga-red-wolves",
     "url": "https://www.chattanoogaredwolves-sc.com/schedule/",
     "category": "sports",
-    "status": "pending",
+    "status": "hold",
     "notes": "Pro soccer club (USL League One) playing at CHI Memorial Stadium in East Brainerd. Season runs March through October. Also fields a USL W League women's team. Verify scrapability at onboarding."
   },
   {
@@ -914,7 +914,7 @@
     "slug": "chattanooga-strike",
     "url": "https://strikebasketball.com/schedule-tickets/",
     "category": "sports",
-    "status": "pending",
+    "status": "hold",
     "notes": "Men's ABA professional basketball team playing at Midtown Arena. 20-game schedule runs late October through February. ABA is a relaunched league with rule variations (3D light, point multipliers). Verify scrapability at onboarding."
   },
   {
@@ -923,7 +923,7 @@
     "url": "https://athletics.covenant.edu/calendar.aspx",
     "category": "sports",
     "city": "lookout-mountain-ga",
-    "status": "pending",
+    "status": "hold",
     "notes": "Division III athletics on top of Lookout Mountain, GA. Regular-season men's and women's basketball (Nov-Feb) at Barnes PE Center is free to attend. General athletics calendar at athletics.covenant.edu. Verify scrapability at onboarding."
   },
   {
@@ -931,7 +931,7 @@
     "slug": "tennessee-valley-railroad-museum",
     "url": "https://www.tvrail.com/",
     "category": "museum",
-    "status": "pending",
+    "status": "hold",
     "notes": "Heritage railroad and museum at 4119 Cromwell Rd running regular vintage train excursions plus recurring seasonal events: North Pole Limited (Nov-Dec), Chattanooga Christmas Dinner Train (Nov-Jan), and themed rides through the year. Verify a scrapable events/schedule page at onboarding."
   },
   {
@@ -939,7 +939,7 @@
     "slug": "the-edwin-hotel",
     "url": "https://www.theedwinhotel.com/events",
     "category": "food-drink",
-    "status": "pending",
+    "status": "hold",
     "notes": "Boutique hotel at 102 Walnut St with recurring weekly events: Industry Night at Whiskey Thief rooftop bar (Tue, live music), Wine Down at Whitebird restaurant (Thu, live music), and monthly Film & Fork dinner series (first Thursday)."
   },
   {
@@ -948,7 +948,7 @@
     "url": "https://artsintheburg.com/things-to-do-events/",
     "category": "museum",
     "city": "south-pittsburg-tn",
-    "status": "pending",
+    "status": "hold",
     "notes": "Community arts gallery and event space at 207 S Cedar Ave, South Pittsburg with Second Saturday entertainment events, working artist studios, and rotating gallery shows. Events calendar at /things-to-do-events/ — verify if JS-rendered or scrapable at onboarding."
   },
   {
@@ -957,7 +957,7 @@
     "url": "https://southpittsburgtn.org/?post_type=tribe_events",
     "category": "community",
     "city": "south-pittsburg-tn",
-    "status": "pending",
+    "status": "hold",
     "notes": "Official City of South Pittsburg, TN events calendar (The Events Calendar / tribe_events). Lists city-run community events and seasonal happenings. Verify scrapability and event density at onboarding."
   },
   {
@@ -965,7 +965,7 @@
     "slug": "fiamma-pizza",
     "url": "https://fiammapizzaco.com/events/",
     "category": "food-drink",
-    "status": "pending",
+    "status": "hold",
     "notes": "Neapolitan pizzeria at 405 N Market St with a recurring weekly Trivia Tuesday (7-9pm, prizes for top three teams) and a dedicated events page."
   },
   {
@@ -1040,7 +1040,7 @@
     "slug": "jmacs",
     "url": "https://goldenslope.com/events",
     "category": "food-drink",
-    "status": "pending",
+    "status": "hold",
     "notes": "Wine bar at 608 Georgia Ave (Golden Slope) with recurring weekly Trivia Tuesdays (6:30pm) and W.O.W. 'World of Wine' Wednesdays (5:30pm, reservations) plus special wine tastings. Events page at goldenslope.com/events; ticketing via Ticketstripe."
   },
   {
@@ -1048,7 +1048,7 @@
     "slug": "parkway-pourhouse",
     "url": "https://www.parkwaypourhouse.com/",
     "category": "music",
-    "status": "pending",
+    "status": "hold",
     "notes": "Riverfront restaurant and bar at 801 Riverfront Pkwy booking local and regional live music (jazz, Americana, rock) several nights a week. No dedicated own-site events calendar at discovery — check Weekly Specials page and social media; verify a scrapable source at onboarding."
   },
   {
@@ -1057,7 +1057,7 @@
     "url": "https://halesbarmarina.com/",
     "category": "music",
     "city": "guild-tn",
-    "status": "pending",
+    "status": "hold",
     "notes": "Marina, resort, and distillery at 1265 Hales Bar Rd, Guild with regular weekend live music at The Marina Restaurant (country, rock, blues) and seasonal themed events plus a Halloween haunted house at the historic Hales Bar Dam. No scrapable own-site calendar at discovery — events post via Facebook/allevents.in; verify a source at onboarding."
   },
   {
@@ -1086,7 +1086,7 @@
     "url": "https://thecaverns.com",
     "category": "music",
     "city": "whitwell-tn",
-    "status": "pending",
+    "status": "hold",
     "notes": "Underground natural cave concert venue in Pelham, TN with a rolling national concert calendar. Multiple shows per month spanning bluegrass, rock, electronic, and Americana."
   },
   {
@@ -1094,7 +1094,7 @@
     "slug": "se-tn-young-farmers",
     "url": "https://southeasttennesseeyoungfarmers.com/events",
     "category": "farm",
-    "status": "pending",
+    "status": "hold",
     "notes": "Regional ag organization running public events including Farm Olympics, Urban Ag Roundtables, and CRAFT farm workshops across the Chattanooga area."
   }
 ]
