@@ -690,8 +690,8 @@
     "slug": "clever-alehouse",
     "url": "https://cleveralehouse.com/",
     "category": "food-drink",
-    "status": "pending",
-    "notes": "Family-friendly neighborhood restaurant and bar at 2122 Dayton Blvd with hand-dipped ice cream and arcade. Recurring live trivia (7pm), pint nights, and community group meetups. Verify a scrapable events source at onboarding — events may post via Facebook/Instagram."
+    "status": "blocked",
+    "notes": "Family-friendly neighborhood restaurant and bar at 2122 Dayton Blvd, Red Bank with hand-dipped ice cream and arcade. Site is Squarespace but has no scrapable events calendar — only an inquiry form for hosting events. Events (live trivia 7pm, pint nights) post via Facebook/Instagram only. Re-check if they add a dedicated events page. Checked 2026-11-17."
   },
   {
     "name": "Venue 28",
@@ -1088,5 +1088,13 @@
     "city": "whitwell-tn",
     "status": "pending",
     "notes": "Underground natural cave concert venue in Pelham, TN with a rolling national concert calendar. Multiple shows per month spanning bluegrass, rock, electronic, and Americana."
+  },
+  {
+    "name": "Southeast Tennessee Young Farmers",
+    "slug": "se-tn-young-farmers",
+    "url": "https://southeasttennesseeyoungfarmers.com/events",
+    "category": "farm",
+    "status": "pending",
+    "notes": "Regional ag organization running public events including Farm Olympics, Urban Ag Roundtables, and CRAFT farm workshops across the Chattanooga area."
   }
 ]
