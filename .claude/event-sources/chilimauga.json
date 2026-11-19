@@ -1,0 +1,22 @@
+{
+  "name": "Chilimauga",
+  "type": "calendar",
+  "url": "https://chilimauga.com/",
+  "outputDir": "src/pages/chattanooga/events/city/chickamauga-ga/chilimauga",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Downtown Chickamauga",
+    "address": "200 Gordon St, Chickamauga, GA 30707",
+    "iconPath": "/images/icons-new/market.png",
+    "eventLink": "https://chilimauga.com/",
+    "spotlight": true,
+    "tags": [
+      { "type": "place", "tag": "chilimauga" },
+      { "type": "genre", "tag": "food-drink" },
+      { "type": "city", "tag": "chickamauga-ga" }
+    ],
+    "layout": "../../../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 90,
+  "last_checked": "2026-11-19"
+}

@@ -591,7 +591,7 @@
     "url": "https://chilimauga.com/",
     "category": "festival",
     "city": "chickamauga-ga",
-    "status": "pending",
+    "status": "active",
     "spotlight": true,
     "event_date": "2027-11",
     "notes": "Annual chili cook-off and street fair in Downtown Chickamauga, GA. 6th annual ran Nov 7, 2026. Next: November 2027. Own dedicated site at chilimauga.com."
@@ -1133,5 +1133,31 @@
     "category": "food-drink",
     "status": "active",
     "notes": "Athens GA brewery with a Chattanooga Beer Garden at Foundry Plaza near Erlanger Park. Open Thu-Sat. Events are seasonal (spring-fall) around Lookouts games and UGA football watch parties. Main events calendar is Athens-primary; Chattanooga events filtered by venue."
+  },
+  {
+    "name": "Tanasi Brewing & Supplies",
+    "slug": "tanasi-brewing",
+    "url": "https://tanasibrewing.com/",
+    "category": "food-drink",
+    "status": "pending",
+    "notes": "Veteran-owned nanobrewery, taproom, and homebrew supply store at 3701 Hixson Pike, Chattanooga with a large outdoor beer garden and enclosed dog park. Hosts community events (e.g. Oktoberfest, homebrew club meetings) and live music. Own site has an Events nav item but no scrapable dated calendar at discovery — events post via Eventbrite/Facebook. Find the Eventbrite organizer or a scrapable source at onboarding."
+  },
+  {
+    "name": "Wine Down Bistro & Lounge",
+    "slug": "wine-down-bistro",
+    "url": "https://www.winedownbistro.com/",
+    "category": "food-drink",
+    "city": "ooltewah-tn",
+    "status": "pending",
+    "notes": "New American restaurant and wine lounge at 9447 Bradmore Lane, Ooltewah with a Monthly Wine Dinner Series (ticketed, /dinnerseries and /winedinnertickets) plus weekend live music. Verify a scrapable events/dinner-series source at onboarding; events also post via Facebook/allevents.in."
+  },
+  {
+    "name": "Davis Wayne's",
+    "slug": "davis-waynes",
+    "url": "https://www.daviswaynes.com/",
+    "category": "music",
+    "city": "ooltewah-tn",
+    "status": "pending",
+    "notes": "Upscale Southern/soul food restaurant and bar in Cambridge Square, Ooltewah with live music Thursday through Saturday evenings (local musicians and bands). No scrapable own-site calendar at discovery — events post via social media; verify a scrapable source at onboarding."
   }
 ]
