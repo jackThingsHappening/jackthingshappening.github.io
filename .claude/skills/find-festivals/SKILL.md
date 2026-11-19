@@ -15,7 +15,7 @@ Any significant public event that:
 
 Do NOT require the word "festival" — many qualifying events are competitions, races, shows, tours, or multi-day happenings with no "festival" in the name.
 
-**Exception — major signature annual events:** County fairs, air shows, and other large multi-day annual events with strong local followings may be added even if the next occurrence is unknown or more than 90 days out. The 60-90 day window catches most things, but well-known annual events that just finished will never be within that window when a sweep runs. Add these when you find them — don't wait for them to come back into range. Omit `priority` and `event_date` for these entries.
+**Exception — major signature annual events:** County fairs, air shows, community street fairs, cook-offs, and other annual events with a multi-year history and strong local followings may be added even if the next occurrence is unknown or more than 90 days out. The 60-90 day window catches most things, but annual events that just finished will never be within that window when a sweep runs. Add these when you find them — don't wait for them to come back into range. Omit `priority` and `event_date` for these entries. A 3rd-annual cook-off with its own website qualifies. When in doubt, add it.
 
 ## Step 1 — Load known events
 
@@ -95,9 +95,16 @@ Search by activity category, not by the word "festival." Rotate through these �
 - "Chattanooga comic con convention anime 2026"
 - "Chattanooga gaming esports event tournament 2026"
 
+**Food & drink competitions**
+- "Chattanooga chili cook-off BBQ competition food festival 2026"
+- "Chattanooga region chili cook-off street fair annual"
+- "Walker County Georgia food festival cook-off event"
+
 **Regional (nearby cities)**
 - "Cleveland TN festival event 2026"
-- "Ringgold Chickamauga Georgia event 2026"
+- "Ringgold GA annual festival event 2026"
+- "Chickamauga GA annual event festival street fair"
+- "Walker County Georgia community festival event 2026"
 
 ## Step 3 — Evaluate candidates
 
