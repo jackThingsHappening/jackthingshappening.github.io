@@ -34,12 +34,14 @@ Also read all other entries in `guide-sources.json` to build an interlink map: `
 
 ## Step 1 — Lengthen the intro
 
-**Goal:** Expand the intro section to 200-300 words across 4-6 `<div>` blocks. The current intro is typically 2-3 very short divs.
+**Goal:** Expand the intro so it covers everything below. Length should follow from content — stop when everything is covered, not when a word count is hit.
 
-**What to write:**
+**Diagnose first:** In one sentence, note what the current intro is missing. Write only what's missing. Do not restate what's already there.
+
+**What to cover:**
 - What this guide covers and how it is organized
-- What makes Chattanooga's scene for this topic worth knowing about
-- How the filters help (name 1-2 specific filters and what they help you find)
+- One specific, verifiable local fact about this topic in Chattanooga — a number, a name, a distinctive local detail that couldn't be written about any city. No generic "Chattanooga has a vibrant X scene" sentences.
+- If this is an interactive guide with `pageItems`: name 1-2 specific filters and what they surface. Skip this bullet for longform guides.
 - The feedback / contact invite (keep this — it is usually the last intro div)
 
 **What NOT to write:**
@@ -57,7 +59,7 @@ Also read all other entries in `guide-sources.json` to build an interlink map: `
 **HTML:**
 The intro block is wrapped in `<div class="max-w-6xl mx-auto px-3">`. Each paragraph is a `<div class="pb-5">` or `<div class="pb-5 pt-2">` (first one). Keep that structure. Never leave an open tag without a matching close. Count opens and closes before writing.
 
-Before writing, read the intro blocks from 2 other guides in `src/pages/chattanooga/guides/` as style anchors. Pick guides that have been recently updated (check `lastUpdated` frontmatter). Use their tone and sentence structure as a reference — not their content.
+Before writing, read the intro blocks from 2 other guides in `src/pages/chattanooga/guides/` as style anchors. Pick guides that have been recently updated (check `lastUpdated` frontmatter). Note specifically: sentence length, whether they open with a number or specific name, and how they describe the guide's organization. Use those patterns — not their content.
 
 Find the existing intro block in the guide. Replace it in place using Edit.
 
@@ -65,7 +67,7 @@ Find the existing intro block in the guide. Replace it in place using Edit.
 
 ## Step 2 — Interlink audit
 
-**Goal:** Add 2-4 internal links to other guides where the content is genuinely relevant. Bias toward adding more links, not fewer.
+**Goal:** Add internal links to other guides where a reader would genuinely want to go deeper on that specific topic. Only add a link if it passes this test: would a reader browsing this section actually click it? If you're unsure, skip it. A forced link is worse than no link.
 
 **Where to look:**
 1. **Intro prose** — are there natural spots to reference a related guide?
@@ -87,6 +89,8 @@ Make each edit in place using Edit. Do not batch all interlink changes into one 
 ---
 
 ## Step 3 — Filter audit
+
+**If this guide has no `pageItems` in frontmatter, skip this step entirely.**
 
 **Goal:** Ensure the filter UI reflects the data, and add 1-2 new filters where there is a clear gap.
 
@@ -132,7 +136,7 @@ Check if any filter buttons in the HTML reference a tag that appears on zero ite
 
 ## Step 4 — Lengthen the closing
 
-**Goal:** Replace the short closing paragraph with a 100-150 word block that gives a local context hook or practical tip.
+**Goal:** Replace the short closing paragraph with a block that answers the question a reader has after finishing the guide: "What do I do now that isn't covered in the main sections?" Length should follow from content — stop when the question is answered.
 
 The closing block is typically:
 ```html
@@ -142,9 +146,14 @@ The closing block is typically:
 ```
 
 **What to write:**
-- A practical note relevant to the topic (e.g. for coffee: what to do if you want beans to take home; for outdoors: what to do if you want a guided experience)
+- Logistics or planning context not covered in the main sections (booking lead time, parking between areas, what to combine the trip with)
 - A note on how the guide is maintained (updated regularly, send feedback)
-- Can include one internal link to a related guide if it fits naturally
+- One internal link to a related guide if it genuinely fits — not to hit a link count
+
+**What NOT to write:**
+- Anything already stated in the intro
+- Anything already covered in a main section of the guide
+- Generic "hope you enjoyed this guide" wrap-up language
 
 **Voice:** Same STE rules as Step 1. No em dashes.
 
@@ -156,13 +165,17 @@ Replace the closing block in place using Edit.
 
 **Goal:** Add a FAQ section with 4-6 Q&A pairs. If a FAQ already exists in the guide, review it and update stale answers or add a missing question.
 
-**Research:**
-Use WebSearch to find common questions people ask about the guide's topic in Chattanooga. Look for:
-- "best [topic] in Chattanooga"
-- "where to [topic] in Chattanooga"
-- "[topic] Chattanooga TN"
+**Research — guide first, then search:**
+1. Read through the full guide. List 6-10 candidate questions where the answer is covered in the guide but not prominently featured — things someone would search before making the trip that the guide uniquely answers.
+2. Use WebSearch to verify that people actually search for these questions. Query: "[question topic] Chattanooga" or "[specific thing] Cloudland Canyon" (use the actual topic, not generic templates). Keep questions that have both guide coverage AND real search demand. Drop ones with no search signal.
 
-Pick 4-6 questions a visitor or new resident would actually ask. Write direct, specific answers based on what is in the guide.
+Pick 4-6 questions that survive both filters. Write direct, specific answers based on what is in the guide.
+
+**Question quality filter — apply before writing any question:**
+- Skip any question whose answer is already stated in the intro or closing
+- Skip generic questions that any state park or venue would answer the same way (hours, price, location)
+- Prefer questions where the answer is non-obvious or buried in the guide — things someone would search specifically before making the trip
+- Good signal: "I didn't know that until I read the guide." Bad signal: "That's in the first paragraph."
 
 **Blocked domains — never fetch or cite:**
 - `noogatoday.com` / `6amcity.com`
@@ -239,7 +252,8 @@ Write a Facebook post promoting this guide. Follow the fb-post style rules:
 - No emojis, no hashtags, no em dashes
 - Write like a local, not a marketer
 - Include the guide URL: `https://thingshappening.com/chattanooga/guides/{slug}`
-- Lead with a specific item, a filter, or a use case from the guide — not a generic "check out our guide" opener
+
+**Before drafting:** identify the single most surprising or specific fact in this guide — something a local would genuinely not know without reading it. Lead the post with that. Do not open with a generic "check out our guide" or "looking for X in Chattanooga" sentence.
 
 Output the draft post to the terminal. Tell the user to run `/fb-post guide {slug}` to schedule it.
 
