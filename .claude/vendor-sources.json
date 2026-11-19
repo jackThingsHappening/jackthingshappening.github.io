@@ -1113,7 +1113,7 @@
     "category": "music",
     "city": "chickamauga-ga",
     "status": "active",
-    "notes": "Independent book and vinyl record store with cafe at 104 Lee Ave, Chickamauga, GA 30707. Hosts one-off calendar shows: live music, album listening parties, and book events. No own-site events calendar — events sourced via allevents.in organizer page. ClaudeBot allowed on allevents.in. Onboarded 2026-11-19 as calendar type; no upcoming events at onboarding — refresh pipeline will pull when posted."
+    "notes": "Independent book and vinyl record store with cafe at 104 Lee Ave, Chickamauga, GA 30707. Hosts one-off calendar shows: live music, album listening parties, and book events. No own-site events calendar — Facebook-only. allevents.in aggregator available but unreliable as sole source. Config exists but active: false — do not refresh until a better source is found."
   },
   {
     "name": "Creature Comforts Beer Garden",

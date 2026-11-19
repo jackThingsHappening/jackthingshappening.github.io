@@ -25,6 +25,7 @@
     ],
     "layout": "../../../../../../layouts/BlogPostLayout.astro"
   },
+  "active": false,
   "frequency_days": 7,
   "last_checked": "2026-11-19"
 }
