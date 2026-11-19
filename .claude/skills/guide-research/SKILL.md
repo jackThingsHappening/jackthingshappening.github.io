@@ -21,17 +21,28 @@ Extract:
 
 Use WebSearch and WebFetch to research: "**$topic**"
 
-Look for:
-- Well-known and lesser-known places, venues, or experiences that belong in this guide
-- Any notable additions, openings, or changes in the past year
+Run two passes:
+
+**Pass A — Standard coverage**
+Find well-known and lesser-known places, venues, or experiences that belong in this guide. Look for:
+- Notable additions, openings, or changes in the past year
 - Facts, history, or context a visitor would want to know
 - Points of interest a thorough local guide would be expected to cover
 
-Find your top 20 findings. For each, note:
+**Pass B — Insider angles (prioritize these)**
+Hunt specifically for things that do NOT appear on standard tourism sites. Look for:
+- What locals recommend that visitors miss
+- Specific-within-venue tips: best item on the menu, best time to visit, what to skip
+- Seasonal or timing knowledge (e.g. "avoid weekends," "best in fall")
+- Honest assessments: what's overhyped, what's underrated
+- Hidden details, access tips, or free/cheap alternatives to paid options
+
+Find your top 20 findings across both passes. For each, note:
 - Name
-- Why it belongs in this guide
+- Why it belongs in this guide — be specific about what angle it adds
 - Key facts (address, hours, price, website if available)
 - Whether it's likely already covered or potentially missing
+- Flag Pass B findings clearly — these are highest priority for the update step
 
 **Blocked domains — never fetch or cite:**
 - `noogatoday.com` / `6amcity.com`

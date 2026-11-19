@@ -28,6 +28,9 @@ Criteria for "worth adding":
 - It fits the guide's existing tone and scope
 - It adds genuine value a reader would appreciate
 - It's not a duplicate of something already there under a different name
+- **It adds an angle not already covered by any standard Chattanooga guide** — prioritize insider tips, specific recommendations, honest assessments, and anything that makes this guide feel written by someone who actually lives here
+
+Prefer Pass B findings (insider angles) from the research file over Pass A findings when both qualify.
 
 Add **up to 3 new items** per run. Quality over quantity.
 
@@ -55,13 +58,13 @@ Update the `lastUpdated` frontmatter field to today's date in MM/DD/YYYY format.
 
 ## Step 4 — Review 7 existing content items
 
-Pick 7 existing content items from the guide (prioritize ones that haven't been recently updated or that reference dates/prices/URLs that may be stale). For each:
+Pick 7 existing content items from the guide. Prioritize items that haven't been recently updated, reference potentially stale dates/prices/URLs, or have descriptions that feel generic. For each:
 - Verify the business still exists (use WebFetch on their website or a search)
 - Check for outdated facts (old hours, closed locations, dead links, stale prices)
-- Tighten the description if it's vague or wordy
+- Upgrade the description quality: push toward concrete specifics (a dish to order, a time to visit, what to skip), honest assessments, and local voice — not just accuracy fixes
 - Update any dead links
 
-Make edits in place. Do not rewrite healthy content — only fix what's actually wrong or improvable.
+Make edits in place. Fix what's wrong. Also improve descriptions that are technically accurate but generic — vague praise ("great food," "beautiful views") should become specific detail.
 
 ## Step 5 — Report
 

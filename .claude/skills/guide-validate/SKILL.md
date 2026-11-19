@@ -47,12 +47,14 @@ Confirm it genuinely fits the guide's topic and city. If something doesn't check
 
 ## Step 4 — Humanize pass
 
-Read the site's voice guidelines: prose should be concrete, local, and direct. No marketing fluff. Short sentences. Specific details over general claims.
+The site's voice is concrete, local, and direct. No marketing fluff. Short sentences. Specific details over general claims. The writing should feel like a recommendation from someone who actually lives in Chattanooga — not a travel brochure.
 
 Apply this to:
 - Any new content items added in this run
 - Any descriptions that were rewritten during fact-checking
-- Leave existing, healthy content untouched
+- Any existing descriptions that read as generic ("great views," "delicious food," "fun for all ages") — these should become specific even if they weren't touched in this run
+
+Leave existing descriptions that are already specific and direct untouched.
 
 Reference other guide files for voice consistency if needed.
 
