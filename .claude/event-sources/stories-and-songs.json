@@ -1,0 +1,30 @@
+{
+  "name": "Stories & Songs",
+  "type": "calendar",
+  "url": "https://allevents.in/org/stories-and-songs/23545738",
+  "outputDir": "src/pages/chattanooga/events/city/chickamauga-ga/stories-and-songs",
+  "slugPrefix": "stories-and-songs",
+  "defaultFrontmatter": {
+    "venue": "Stories & Songs",
+    "address": "104 Lee Ave, Chickamauga, GA 30707",
+    "iconPath": "/images/icons-new/music.png",
+    "eventLink": "https://allevents.in/org/stories-and-songs/23545738",
+    "tags": [
+      {
+        "type": "place",
+        "tag": "stories-and-songs"
+      },
+      {
+        "type": "genre",
+        "tag": "live-events"
+      },
+      {
+        "type": "city",
+        "tag": "chickamauga-ga"
+      }
+    ],
+    "layout": "../../../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-11-19"
+}
