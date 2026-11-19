@@ -1,8 +1,6 @@
 name: SEO Audit
 
 on:
-  schedule:
-    - cron: '0 18 15 * *'  # 2pm ET on the 15th of each month
   workflow_dispatch:
 
 jobs:

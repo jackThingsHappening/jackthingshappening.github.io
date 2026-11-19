@@ -2,7 +2,7 @@ name: Guide Refresh
 
 on:
   schedule:
-    - cron: '0 23 * * 1'  # 7pm ET Mondays
+    - cron: '0 23 1 * *'  # 7pm ET on the 1st of each month
   workflow_dispatch:
 
 jobs:

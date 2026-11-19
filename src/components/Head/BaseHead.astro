@@ -15,7 +15,7 @@ const ogImage = ogImageProp || `${siteUrl}/images/social.png`;
 ---
 
 <GoogleAnalytics />
-<script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443" crossorigin="anonymous"></script>
+{import.meta.env.PROD && <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2976969447542443" crossorigin="anonymous"></script>}
 
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
