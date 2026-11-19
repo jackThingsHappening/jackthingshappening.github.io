@@ -116,8 +116,12 @@ Omit the field entirely when not present — do not write `spotlight: false`.
 ### B3a. Body copy requirement
 
 Body copy must be at least 60 words (4–5 sentences). It must cover:
-- Who the act is and what their sound or style is like
+- Who the act is and what their sound or style is like — be specific, not generic ("driving post-punk with shouted harmonies" beats "energetic rock music")
+- Why this specific show is worth attending: is it a rare tour stop, a local act with a loyal following, a record release, an unusually small venue for this artist?
 - Any key logistics worth calling out (sold out, age restriction, early doors, etc.)
+- One honest, useful detail a first-timer would want to know — parking, door time vs. show time, standing room only, etc.
+
+Write like you're recommending the show to a friend, not writing a press release. Specific beats general. Honest beats promotional.
 
 If the source page does not provide enough detail, use WebSearch to research the artist or event before writing. Do not publish thin copy — always meet the 60-word floor.
 
@@ -147,9 +151,20 @@ Not every date in `eventDates` needs a corresponding `eventDatesDetails` entry. 
 - If the existing file already has `eventDatesDetails`:
   - **Preserve** all existing entries whose dates are still in the updated `eventDates` array
   - **Remove** entries for dates that are no longer in `eventDates` (past dates being pruned)
-  - **Add new entries** for each newly added date — generate contextually appropriate `topDetails` and `bottomDetails` based on the event type and venue, matching the tone and style of existing entries
+  - **Add new entries** for each newly added date — generate `topDetails` and `bottomDetails` that are specific and useful, not generic. `topDetails` should give a concrete reason to attend this date (the act, the theme, what's special). `bottomDetails` should give a real visitor tip for this venue: parking, what time to arrive, what to order, where to stand. Match the tone and style of existing entries.
 
 ---
+
+## Writing Rules
+
+Any prose written into MDX files must follow these rules:
+
+- No em-dashes (`—` or `--`)
+- No parenthetical asides — use a separate sentence instead
+- No hedging phrases ("it's worth noting", "essentially", "arguably", "in many ways")
+- No filler openers ("Join us", "Don't miss", "Get ready for")
+- Short sentences — 20 words or fewer
+- Active voice only
 
 ## Rules
 - When pruning past dates from an existing file, only remove dates that are more than 30 days before today — keep recent past dates (within 30 days) so they stay visible on the site
