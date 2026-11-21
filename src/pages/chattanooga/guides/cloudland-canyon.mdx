@@ -1,645 +1,279 @@
 ---
 title: "Cloudland Canyon State Park: Hikes, Waterfalls & Caves"
+published: true
 originalDate: "12/24/2024"
-lastUpdated: "11/19/2026"
+lastUpdated: "11/21/2026"
 readTime: "8 minutes"
 iconPath: "../../../images/icons-new/pine-tree.png"
-tags: [{type: "guide", tag: "outdoors"}, {type: "guide", tag: "longform"}]
+tags: [{type: "guide", tag: "outdoors"}, {type: "guide", tag: "interactive"}]
 layout: "../../../layouts/BlogPostLayout.astro"
 seoDescription: "The big guide to Cloudland Canyon State Park for hiking, waterfalls, caves, mountain biking, camping, disc golf, and nearby restaurants, plus in-depth details on each."
 seasonality: "Year-round; best weather March-November, waterfalls peak after rainfall"
+geoCoverage: "Rising Fawn, GA and surrounding area (Walker County GA, Dade County GA, within 35 miles of Chattanooga, TN)"
 ogImage: "/images/outdoors-social.png"
 images: [
-    # {src: "/images/chattanooga_guides/outdoors/cloudland/vista.webp", position: "center"}
-    {src: "/images/chattanooga_guides/outdoors/cloudland/trail-shot.webp", position: "lower"},
-    # {src: "/images/chattanooga_guides/outdoors/cloudland/overlook-west-rim.webp", position: "center"}
+    {src: "/images/chattanooga_guides/outdoors/cloudland/trail-shot.webp", position: "lower"}
   ]
-# sources: ["Georgia State Parks", "Cloudland Canyon State Park", "AllTrails", "Friends of Cloudland Canyon"]
 author: "Jack Byrum"
+pageItems: [
+    {title: "Meadowlands Trail", description: "One-mile out-and-back trail near the disc golf parking area. An observation deck offers canyon views along the route. Blackberry bushes line the path in summer. The park fishing pond sits off this trail. No fishing license is required at the pond.", order: 1, tags: ["hiking", "easy", "main-park", "kids"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/Cloudland+Canyon+State+Park+Disc+Golf/@34.8266854,-85.4778982,18z", target: "_blank"}]},
+    {title: "Overlook Trail", description: "One-mile out-and-back trail that starts at the main parking lot. Easy to find and quick to complete. Views of the canyon are good in spring and fall. A good first trail for new visitors or anyone getting back into hiking.", order: 2, tags: ["hiking", "easy", "main-park", "kids"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/W+Rim+Loop+Trail+Head/@34.8348232,-85.4836331,17z", target: "_blank"}]},
+    {title: "Backcountry Loop Trail", description: "Two-mile loop that connects to the park's primitive campsites. Rated 4.6 out of 5 on AllTrails. Less trafficked than the main trails. No direct trailhead pin exists. Park at the disc golf lot and use the trail map. Bring waterproof footwear.", order: 3, tags: ["hiking", "easy", "main-park"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/Cloudland+Canyon+State+Park+Disc+Golf/@34.8266854,-85.4778982,18z", target: "_blank"}, {text: "AllTrails", link: "https://www.alltrails.com/ar/trail/us/georgia/two-mile-backcountry-loop-trail", target: "_blank"}]},
+    {title: "West Rim Loop", description: "4.7-mile loop that follows the canyon rim. This trail has ranked among the top hikes in the country in multiple years. Canyon views appear throughout the route. Rugged terrain. Proper footwear is required. Best at golden hour for sunset views.", order: 4, tags: ["hiking", "challenging", "main-park"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/W+Rim+Loop+Trail+Head/@34.8348232,-85.4836331,17z", target: "_blank"}]},
+    {title: "Waterfalls Trail", description: "1.8-mile trail accessed from the West Rim Loop. The most strenuous trail in the park. Over 600 metal grate stairs lead down to Hemlock Falls and Cherokee Falls. Not recommended for dogs due to the stairs. Water flow is best after heavy rain.", order: 5, tags: ["hiking", "challenging", "main-park", "waterfalls"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/W+Rim+Loop+Trail+Head/@34.8348232,-85.4836331,17z", target: "_blank"}]},
+    {title: "Sitton's Gulch Trail", description: "Six-mile out-and-back trail that descends into the valley and follows creek paths. Spring wildflowers add to the experience. Fewer crowds than other trails in the park. Sitton's Cave is nearby. Guided cave tours run in select months. Book ahead to combine both in one day.", order: 6, tags: ["hiking", "challenging", "main-park"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/Sitton's+Gulch+Trailhead/@34.8598776,-85.4847427,15z", target: "_blank"}]},
+    {title: "Bankhead + CCC + Shale Flats Loop (MTB)", description: "Three-to-four-mile loop using three easy-rated trails in the 5 Points network. Total climb is roughly 125 to 250 feet. Plan for about 20 to 30 minutes of riding. All three trails run in both directions. Park at 5 Points and start on Bankhead.", order: 7, tags: ["mountain-biking", "easy", "5-points"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/5+Points+Mountain+Biking/@34.850985,-85.4274308,17z", target: "_blank"}]},
+    {title: "Cloudland Canyon Connector Out and Back (MTB)", description: "6.8-mile out-and-back on the most popular trail in the 5 Points system. Green-rated the entire way. Park at Ascalon Trailhead and follow the CCC at every fork. The trail ends at Hinkie Road. Turn around and return the same way. Bike rentals are available at the Visitor Center for $35 half day or $55 full day.", order: 8, tags: ["mountain-biking", "easy", "5-points"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/34%C2%B050'14.6%22N+85%C2%B026'20.3%22W/@34.83738,-85.4415429,831m", target: "_blank"}]},
+    {title: "Tailings Run + CCC + North Hogsback (MTB)", description: "Four-to-five-mile loop combining two expert-rated trails with the easy CCC connector. Start at 5 Points on Tailings Run (1.5 miles, expert), then link to CCC. Turn onto North Hogsback (1.1 miles, expert) to return to the 5 Points lot. Expect technical features and significant climbing.", order: 9, tags: ["mountain-biking", "challenging", "5-points"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/5+Points+Mountain+Biking/@34.8509806,-85.4248505,17z", target: "_blank"}]},
+    {title: "Bankhead + Kettle Bottom (MTB)", description: "Five-to-six-mile route from 5 Points. Start on Bankhead (0.4 miles) to CCC, then onto Kettle Bottom (intermediate). Kettle Bottom can be ridden as a full loop or a shorter alternate. Return via CCC and Bankhead. A good step up from the easy network routes.", order: 10, tags: ["mountain-biking", "challenging", "5-points"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/5+Points+Mountain+Biking/@34.8509806,-85.4248505,17z", target: "_blank"}]},
+    {title: "Disc Golf Course", description: "18-hole course about 5 minutes from the park entrance. Concrete tees and a marked layout. Some sections are reported as overgrown. No additional fee beyond the $5 park entry. No restrooms directly on the course. Park at the dedicated disc golf lot.", order: 11, tags: ["main-park", "kids"], links: [{text: "Google Maps", link: "https://maps.app.goo.gl/EVRWySGiXBkXsZB8A", target: "_blank"}]},
+    {title: "Camping", description: "The park offers yurts, cabins, RV sites, and primitive backcountry campsites. Yurts and cabins book out first. Reserve a few weeks ahead for spring and fall weekends. Check the Georgia State Parks site for current availability and pricing.", order: 12, tags: ["main-park", "kids"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=Cloudland+Canyon+State+Park+Rising+Fawn+GA", target: "_blank"}, {text: "Reserve a Site", link: "https://gastateparks.reserveamerica.com/camping/cloudland-canyon-state-park/r/campsiteCalendar.do?page=calendar&search=site&contractCode=GA&parkId=530148", target: "_blank"}]},
+    {title: "Fishing Pond", description: "One-acre pond stocked with channel catfish. No fishing license is required. Catch-and-keep season runs from the day after Labor Day through the end of November. All other times are catch and release. Fishing in the park's creeks is not allowed. Easiest access is via the Meadowlands Trail.", order: 13, tags: ["main-park", "kids"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/Cloudland+Canyon+State+Park+Disc+Golf/@34.8266854,-85.4778982,18z", target: "_blank"}]},
+    {title: "Hope House Cafe", description: "Breakfast and lunch cafe about 10 to 15 minutes from the park. Run by A Hand Up Ministry. Good atmosphere for a post-hike meal. Check hours before visiting.", order: 14, tags: ["dining", "near-park"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/Hope+House+Caf%C3%A9+via+A+Hand+UP+Ministry/@34.8624676,-85.5052369,16z", target: "_blank"}]},
+    {title: "Canyon Grill", description: "Dinner-only restaurant 5 to 10 minutes from the park. Closed Sunday and Monday. Known for seafood, steaks, and fried okra. The most upscale option near the park. Plan your visit day around their hours.", order: 15, tags: ["dining", "near-park"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/Canyon+Grill/@34.8094493,-85.4776323,17z", target: "_blank"}]},
+    {title: "Thatcher's BBQ And Grille", description: "BBQ restaurant serving lunch and dinner. Menu includes brisket and banana pudding. Gluten-free options are available. A casual post-hike stop near the park.", order: 16, tags: ["dining", "near-park"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/Thatcher's+Bbq+And+Grille/@34.8719566,-85.5113424,16z", target: "_blank"}]},
+    {title: "Cave Tours (Sitton's Cave)", description: "A park naturalist leads guided trips into Sitton's Cave. No lights or handrails inside. Expect to crawl through mud and scramble over rocks. Tours run in April, June, July, September, and October. Cost is $45 per person, ages 10 and up. Each tour lasts about 2 to 2.5 hours. Call 706-657-4050 to book. Experienced cavers can apply for a permit to explore Case Cave, which requires ropes and harnesses.", order: 17, tags: ["main-park", "seasonal"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/Sitton's+Gulch+Trailhead/@34.8598776,-85.4847427,15z", target: "_blank"}]},
+    {title: "Horseback Riding", description: "Certain trails in the 5 Points Recreation Area allow horseback riding. No guided horse tours are offered by the park. You must bring your own horse. Park and load at Ascalon Trailhead. Check the trail map for horse-approved routes before your visit.", order: 18, tags: ["5-points"], links: [{text: "Google Maps", link: "https://www.google.com/maps/place/Ascalon+Trailhead/@34.836966,-85.4412667,17z", target: "_blank"}]},
+    {title: "Picnic Areas", description: "Free picnic tables are scattered throughout the park. Covered shelters can be reserved for events or family gatherings. Reserve shelters on the Georgia State Parks site. Shelters require a separate reservation fee.", order: 19, tags: ["main-park", "kids"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=Cloudland+Canyon+State+Park+Rising+Fawn+GA", target: "_blank"}, {text: "Reserve a Shelter", link: "https://gastateparks.reserveamerica.com/campsiteFilterAction.do?sitefilter=Picnic%20Shelter&startIdx=0&contractCode=GA&parkId=530148", target: "_blank"}]}
+  ]
+itemTemplate: {title: "", order: 20, description: "", links: [{text: "More Information", link: ""}], tags: []}
 ---
-import OptimizedImage from '../../../components/OptimizedImage.astro';
 
-<div>
-  <div class="pb-5">
-    <a href="/pdfs/chattanooga/cloudland-canyon.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-logoDarkGreen text-logoLightGreen rounded-lg hover:opacity-90 transition-colors">
-      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-      </svg>
-      Download PDF Guide
+import OptimizedImage from '../../../components/OptimizedImage.astro';
+import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatter.astro';
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Cloudland Canyon State Park: Hikes, Waterfalls & Caves",
+  "description": "The big guide to Cloudland Canyon State Park for hiking, waterfalls, caves, mountain biking, camping, disc golf, and nearby restaurants, plus in-depth details on each.",
+  "numberOfItems": (frontmatter.pageItems || []).length,
+  "url": "https://thingshappening.com/chattanooga/guides/cloudland-canyon",
+  "itemListElement": (frontmatter.pageItems || []).map(item => ({
+    "@type": "ListItem",
+    "position": item.order,
+    "item": {
+      "@type": "Thing",
+      "name": item.title,
+      "url": (item.links || []).find(l => l.text === "Website")?.link || (item.links || [])[0]?.link || ""
+    }
+  }))
+})} />
+
+<div class="max-w-6xl mx-auto px-3">
+  <div class="pb-5 pt-2">This guide covers 19 trails, activities, and dining spots at Cloudland Canyon State Park and nearby. The park sits in Rising Fawn, Georgia, about 35 miles south of Chattanooga. It covers over 3,500 acres on the western edge of Lookout Mountain.</div>
+  <div class="pb-5">Six hiking trails are listed here, from a one-mile overlook walk to a six-mile descent into the gorge. The Waterfalls Trail drops over 600 metal grate stairs to Hemlock Falls and Cherokee Falls. The West Rim Loop has ranked as one of the top hikes in the United States in multiple years.</div>
+  <div class="pb-5">Mountain biking centers on the 5 Points Recreation Area, a few miles east of the main park entrance. Four route options are listed here, from an easy 3-mile loop to an expert 5-mile ride. The park rents bikes at the Visitor Center for $35 half day or $55 full day.</div>
+  <div class="pb-5">The Activity filter separates hiking, mountain biking, and dining. The Difficulty filter narrows to easier or challenging options. The Kids filter surfaces six spots well-suited for families. The park charges a $5 daily parking fee and is open 7am to 10pm year-round.</div>
+  <div class="pb-5">If there is a trail or activity worth adding, <a href="mailto:jack@thingshappening.com">send an email</a>. Details change. Confirm before you go.</div>
+</div>
+
+{/* TODO: Add embedded Google Maps iframe here */}
+
+<section id="guide-filters" class="text-xl pt-6 pb-2">
+  <div class="max-w-6xl mx-auto px-3">
+    <div class="flex flex-col md:flex-row md:items-center mb-3 pb-3 gap-2 md:gap-6">
+      <h2 class="text-[2.5rem] mb-0" style="font-family: 'Libre Baskerville', serif;">Activity<span class="color-pink ml-1"><b>:</b></span></h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/chattanooga/guides/cloudland-canyon?tags=hiking" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="hiking">Hiking</a>
+        <div class="relative">
+          <span class="hidden md:block absolute -top-7 left-1/2 -translate-x-1/2 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200" style="font-size: 11px;">Try Me ↓</span>
+          <span class="md:hidden absolute top-1/2 -translate-y-1/2 -right-16 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200 z-10" style="font-size: 11px;">← Try Me</span>
+          <a href="/chattanooga/guides/cloudland-canyon?tags=mountain-biking" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="mountain-biking">Mountain Biking</a>
+        </div>
+        <a href="/chattanooga/guides/cloudland-canyon?tags=dining" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="dining">Dining Nearby</a>
+        <a href="/chattanooga/guides/cloudland-canyon?tags=kids" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="kids">Good for Kids</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-3">
+    <div class="flex flex-col md:flex-row md:items-center mb-3 pb-3 gap-2 md:gap-6">
+      <h2 class="text-[2.5rem] mb-0" style="font-family: 'Libre Baskerville', serif;">Difficulty<span class="color-pink ml-1"><b>:</b></span></h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/chattanooga/guides/cloudland-canyon?tags=easy" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="easy">Easier</a>
+        <a href="/chattanooga/guides/cloudland-canyon?tags=challenging" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="challenging">Challenging</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-3">
+    <div class="flex flex-col md:flex-row md:items-center mb-3 pb-3 gap-2 md:gap-6">
+      <h2 class="text-[2.5rem] mb-0" style="font-family: 'Libre Baskerville', serif;">Location<span class="color-pink ml-1"><b>:</b></span></h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/chattanooga/guides/cloudland-canyon?tags=main-park" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="main-park">Main Park</a>
+        <a href="/chattanooga/guides/cloudland-canyon?tags=5-points" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="5-points">5 Points Area</a>
+        <a href="/chattanooga/guides/cloudland-canyon?tags=near-park" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="near-park">Near Park</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="place-descriptions-container" class="max-w-6xl mx-auto px-3">
+  <div class="place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg" data-place="hiking">
+    <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Hiking at Cloudland Canyon<span class="color-pink ml-1"><b>.</b></span></h2>
+    <p class="text-xl">Six hiking trails are listed here, from one mile to six miles. Three are easier and accessible to most visitors. The West Rim Loop is the signature trail, nearly five miles along the canyon rim with views throughout. The Waterfalls Trail is the hardest and most rewarding — 600-plus metal stairs lead to Hemlock Falls and Cherokee Falls at the bottom of the gorge. Sitton's Gulch is the most remote, following creek valleys through spring wildflowers with far fewer people on the trail.</p>
+    <div class="flex flex-wrap gap-4 mt-4">
+      <a href="/chattanooga/guides/outdoors" class="page-item-link text-logoDarkGreen underline">Chattanooga outdoors guide</a>
+    </div>
+  </div>
+  <div class="place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg" data-place="mountain-biking">
+    <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Mountain Biking at 5 Points<span class="color-pink ml-1"><b>.</b></span></h2>
+    <p class="text-xl">The 5 Points Recreation Area sits a few miles east of the main park entrance. The network has 20-plus miles of trail ranging from green to expert. The Cloudland Canyon Connector (CCC) is the main spine of the system, linking all the other trails. Two easier routes and two advanced routes are listed here. The park rents bikes at the Visitor Center for $35 half day or $55 full day. Call ahead to confirm availability.</p>
+    <div class="flex flex-wrap gap-4 mt-4">
+      <a href="/chattanooga/guides/outdoors" class="page-item-link text-logoDarkGreen underline">Chattanooga outdoors guide</a>
+    </div>
+  </div>
+  <div class="place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg" data-place="kids">
+    <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Cloudland Canyon with Kids<span class="color-pink ml-1"><b>.</b></span></h2>
+    <p class="text-xl">Six activities here are well-suited for families with children. The Meadowlands and Overlook trails are both one mile and easy to complete. The fishing pond is stocked with catfish and requires no license. The 18-hole disc golf course is included with park entry. The park also keeps an all-terrain Action Trackchair and EnChroma glasses for visitors with mobility or color-vision needs — ask at the park office to reserve either one.</p>
+    <div class="flex flex-wrap gap-4 mt-4">
+      <a href="/chattanooga/guides/exhibits" class="page-item-link text-logoDarkGreen underline">Chattanooga museums and exhibits</a>
+    </div>
+  </div>
+  <div class="place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg" data-place="dining">
+    <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Eating Near the Park<span class="color-pink ml-1"><b>.</b></span></h2>
+    <p class="text-xl">Three restaurants are within 10 to 15 minutes of the park. Hope House Cafe handles breakfast and lunch. Canyon Grill is the dinner option but is closed Sunday and Monday, so plan your visit day around that. Thatcher's BBQ is the most casual and handles lunch or dinner. Several North Georgia breweries and wineries are also within 30 minutes of the park.</p>
+    <div class="flex flex-wrap gap-4 mt-4">
+      <a href="/chattanooga/guides/breweries-and-wineries" class="page-item-link text-logoDarkGreen underline">Breweries and wineries near Chattanooga</a>
+    </div>
+  </div>
+</div>
+
+<section class="text-xl">
+  <div>
+    <PageItemsFromFrontmatter pageItems={frontmatter.pageItems} showClearFilters={true} />
+  </div>
+</section>
+
+<div class="pb-12 max-w-6xl mx-auto px-3">
+  <div class="pb-3">The 5 Points Recreation Area has its own parking and trailhead, a few miles east of the main park entrance. Plan to move your car between the two areas if you want to hike and bike on the same trip.</div>
+  <div class="pb-3">Camping books fast in spring and fall. Yurts and cabins sell out first. Reserve a few weeks ahead for peak season weekends. Check the Georgia State Parks site for availability.</div>
+  <div class="pb-3">Several North Georgia breweries and wineries are within 30 minutes of the park. The <a href="/chattanooga/guides/breweries-and-wineries">breweries and wineries guide</a> covers those stops. For more trails and outdoor activities near Chattanooga, the <a href="/chattanooga/guides/outdoors">Chattanooga outdoors guide</a> covers 70-plus routes across Lookout Mountain, Raccoon Mountain, and the city greenways.</div>
+</div>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you need a fishing license at Cloudland Canyon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No fishing license is required at the park's stocked pond. The pond holds channel catfish. Catch and keep runs from the day after Labor Day through the end of November. All other times are catch and release. Fishing in the park's creeks is not allowed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you rent bikes at Cloudland Canyon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The park's Visitor Center rents mountain bikes for $35 for a half day and $55 for a full day. Call ahead to confirm availability before making the drive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you bring dogs to Cloudland Canyon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dogs are welcome on most trails and must be on a leash no longer than 6 feet. The Waterfalls Trail is not recommended for dogs. The 600-plus metal grate stairs can be painful and difficult for them to navigate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do the cave tours run at Cloudland Canyon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Guided wild cave tours of Sitton's Cave run in April, June, July, September, and October. Each tour lasts about 2 to 2.5 hours and costs $45 per person. The minimum age is 10. Call the park office at 706-657-4050 to book. Experienced cavers can also get a permit for Case Cave, which requires ropes and harnesses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What waterfalls are in Cloudland Canyon?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The park has two main waterfalls: Hemlock Falls and Cherokee Falls. Both are reached via the Waterfalls Trail, which branches off the West Rim Loop. Flow varies with rainfall and is strongest after a heavy storm."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you swim at Cloudland Canyon State Park?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no designated swimming area in the park. The waterfalls and creek pools are not set up for swimming. The park's fishing pond is stocked for fishing only."
+      }
+    }
+  ]
+})} />
+
+<section class="max-w-6xl mx-auto px-3 pt-10 pb-10">
+  <h2 class="text-4xl mb-6" style="font-family: 'Libre Baskerville', serif;">FAQ<span class="color-pink ml-1"><b>.</b></span></h2>
+
+  <div class="mb-6">
+    <h3 class="text-2xl mb-2">Do you need a fishing license at Cloudland Canyon?</h3>
+    <p class="text-xl">No license required. The park pond is stocked with channel catfish. Catch and keep runs from the day after Labor Day through the end of November. All other times are catch and release. Fishing in the park's creeks is not allowed.</p>
+  </div>
+
+  <div class="mb-6">
+    <h3 class="text-2xl mb-2">Can you rent bikes at Cloudland Canyon?</h3>
+    <p class="text-xl">Yes. The Visitor Center rents mountain bikes for $35 half day or $55 full day. Call ahead to confirm availability before making the drive.</p>
+  </div>
+
+  <div class="mb-6">
+    <h3 class="text-2xl mb-2">Can you bring dogs to Cloudland Canyon?</h3>
+    <p class="text-xl">Dogs are welcome on most trails on a leash no longer than 6 feet. The Waterfalls Trail is not recommended for dogs. The 600-plus metal grate stairs can be painful and difficult for them to navigate.</p>
+  </div>
+
+  <div class="mb-6">
+    <h3 class="text-2xl mb-2">When do the cave tours run?</h3>
+    <p class="text-xl">Guided wild cave tours of Sitton's Cave run in April, June, July, September, and October. Each tour lasts about 2 to 2.5 hours and costs $45 per person, ages 10 and up. Call 706-657-4050 to book. Experienced cavers can get a permit for Case Cave, which requires ropes and harnesses.</p>
+  </div>
+
+  <div class="mb-6">
+    <h3 class="text-2xl mb-2">What waterfalls are in Cloudland Canyon?</h3>
+    <p class="text-xl">The park has two main waterfalls: Hemlock Falls and Cherokee Falls. Both are reached via the Waterfalls Trail, which branches off the West Rim Loop. Flow varies with rainfall and is strongest after a heavy storm.</p>
+  </div>
+
+  <div class="mb-6">
+    <h3 class="text-2xl mb-2">Can you swim at Cloudland Canyon?</h3>
+    <p class="text-xl">There is no designated swimming area in the park. The waterfalls and creek pools are not set up for swimming. The fishing pond is stocked for fishing only.</p>
+  </div>
+</section>
+
+<section class="pt-10 pb-10">
+  <h2 class="text-4xl mb-6" style="font-family: 'Libre Baskerville', serif;">Other Guides<span class="color-pink ml-1"><b>.</b></span></h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <a href="/chattanooga/guides/outdoors" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+      <div class="h-40 overflow-hidden">
+        <OptimizedImage src="/images/chattanooga_guides/outdoors/cloudland/trail-shot.webp" alt="Outdoor Adventures" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+      </div>
+      <div class="p-4">
+        <div class="text-xl font-semibold gradient-text">Outdoor Adventures</div>
+        <div class="text-sm text-gray-500 mt-1">Hiking, kayaking, climbing, and more</div>
+      </div>
+    </a>
+    <a href="/chattanooga/guides/tours" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+      <div class="h-40 overflow-hidden">
+        <OptimizedImage src="/images/chattanooga_guides/trolley.png" alt="Guided Tours" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+      </div>
+      <div class="p-4">
+        <div class="text-xl font-semibold gradient-text">Guided Tours</div>
+        <div class="text-sm text-gray-500 mt-1">Walking tours, scenic drives, history</div>
+      </div>
+    </a>
+    <a href="/chattanooga/guides/confections" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+      <div class="h-40 overflow-hidden">
+        <OptimizedImage src="/images/chattanooga_guides/shops/hot-chocolatier1.jpg" alt="Sweet Treats" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+      </div>
+      <div class="p-4">
+        <div class="text-xl font-semibold gradient-text">Sweet Treats</div>
+        <div class="text-sm text-gray-500 mt-1">Chocolate, ice cream, candy shops</div>
+      </div>
     </a>
   </div>
-  <div class="pb-2 text-xl pt-6">
-    <div class="pb-5 pt-2">Cloudland Canyon State Park sits in Rising Fawn, Georgia, about 35 miles south of Chattanooga. The park covers over 3,500 acres on the western edge of Lookout Mountain. The drive takes under an hour from downtown Chattanooga.</div>
-    <div class="pb-5">This guide covers eight sections: easier and advanced hiking trails, easier and advanced mountain bike routes, disc golf, camping, fishing, and restaurants nearby. Use the By Topic links below to jump to any section.</div>
-    <div class="pb-5">The hiking is the main draw. The park has 60-plus miles of trails ranging from a one-mile overlook walk to a six-mile descent into the gorge. The <a href="#advanced-hikes">Waterfalls Trail</a> drops to Hemlock and Cherokee Falls. The <a href="#advanced-hikes">West Rim Loop</a> hugs the canyon rim for nearly five miles. For more hiking options around Chattanooga, see the <a href="/chattanooga/guides/outdoors">Chattanooga outdoors guide</a>.</div>
-    <div class="pb-5">Mountain biking centers on the 5 Points Recreation Area, a few miles east of the main park entrance. The Cloudland Canyon Connector trail links easier and expert routes across the network. Bike rentals are available at the Visitor Center for $35 half day or $55 full day.</div>
-    <div class="pb-5">The park charges a $5 daily parking fee and is open 7am to 10pm year-round. Spring and fall offer the best conditions for hiking. The waterfalls flow strongest after heavy rain.</div>
-    <div class="pb-5">Missing something or have an update? Email <a href="mailto:jack@thingshappening.com">jack@thingshappening.com</a>.</div>
 
-    <h4 class="pb-5">
-      <a href="https://gastateparks.org/sites/default/files/parks/pdf/trailmaps/CloudlandCanyon_TrailMap.pdf" target="_blank">
-        Trail Map pdf
-      </a>
-    </h4>
-
-    <div class="mb-12 mt-12 flex flex-col md:flex-row gap-6 items-start">
-      <div class="w-full md:w-3/5">
-        <OptimizedImage src="/images/chattanooga_guides/outdoors/cloudland/vista.webp" alt="Overlook view of Cloudland Canyon State Park" />
-      </div>
-      <div class="w-full md:w-2/5 flex flex-col gap-3 pt-2">
-        <div><span class="font-semibold">Distance from Chattanooga:</span> ~35 miles south</div>
-        <div><span class="font-semibold">Entry fee:</span> $5 daily parking</div>
-        <div><span class="font-semibold">Trails:</span> 60+ miles, easy to advanced</div>
-        <div><span class="font-semibold">Best for:</span> Hiking, MTB, camping, waterfalls</div>
-      </div>
-    </div>
-
-    <section class="text-xl pb-12">
-      <h2 class="text-4xl mb-4" style="font-family: 'Libre Baskerville', serif;">By Topic<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="space-y-2">
-        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">1.</span><a href="#easier-hikes" class="gradient-text font-semibold">Easier Hikes</a><span class="text-gray-500 text-base">— Overlook, Meadowlands, Backcountry Loop</span></div>
-        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">2.</span><a href="#mtb-easy" class="gradient-text font-semibold">Easier MTB</a><span class="text-gray-500 text-base">— Bankhead loop, CCC out and back</span></div>
-        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">3.</span><a href="#advanced-hikes" class="gradient-text font-semibold">Advanced Hikes</a><span class="text-gray-500 text-base">— West Rim Loop, Waterfalls Trail, Sitton's Gulch</span></div>
-        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">4.</span><a href="#mtb-advanced" class="gradient-text font-semibold">Advanced MTB</a><span class="text-gray-500 text-base">— Tailings Run, Kettle Bottom</span></div>
-        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">5.</span><a href="#disc-golf" class="gradient-text font-semibold">Disc Golf</a><span class="text-gray-500 text-base">— 18-hole course, no extra fee</span></div>
-        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">6.</span><a href="#camping" class="gradient-text font-semibold">Camping</a><span class="text-gray-500 text-base">— yurts, cabins, RV sites, primitive</span></div>
-        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">7.</span><a href="#fishing" class="gradient-text font-semibold">Fishing</a><span class="text-gray-500 text-base">— stocked pond, no license needed</span></div>
-        <div class="flex gap-3 items-baseline"><span class="text-logoDarkGreen font-bold">8.</span><a href="#eating" class="gradient-text font-semibold">Eating Nearby</a><span class="text-gray-500 text-base">— Hope House Cafe, Canyon Grill, Thatcher's BBQ</span></div>
-      </div>
-    </section>
-
-    <section class="pb-3 text-xl" id="easier-hikes">
-      <div class="pb-3">
-        <h2 class="text-5xl" style="font-family: 'Libre Baskerville', serif;">Easier Hikes<span class="color-pink ml-1"><b>.</b></span></h2>
-      </div>
-      <div>
-        <div class="pb-3" id="meadowlands-trail">
-          <div class="text-3xl"><span class="color-pink mr-2"><b>1.</b></span>Meadowlands Trail</div>
-          <div><b>Distance:</b> 1 mile</div>
-          <div>
-            <b>
-              <a href="https://www.google.com/maps/place/Cloudland+Canyon+State+Park+Disc+Golf/@34.8266854,-85.4778982,18z/data=!4m14!1m7!3m6!1s0x8860489de9aa9e81:0xaa78f71a6429baa9!2sAscalon+Trailhead!8m2!3d34.8369616!4d-85.4386864!16s%2Fg%2F11cjhz867p!3m5!1s0x886048fe2437145d:0x70f3de2a12fbbef!8m2!3d34.8264344!4d-85.478418!16s%2Fg%2F11c6tys3_m?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-                Directions
-              </a>
-            </b>
-          </div>      
-        </div>
-        <div>
-          <div class="pb-5">
-            This is a one mile out and back trail. Off this trail you can fish for catfish. You don't even need a license, if the Interpretive Center is open they have fishing poles you can use, free of charge. The pond is stocked with catfish, the catch and keep season runs from Labor Day - December. Closest parking for this trail is at the Park Disc Golf course.
-          </div>
-          <div class="pb-5">
-            On this hike is an observation deck that offers a breathtaking view of the canyon vistas, be sure to stop and stare for a little while, maybe get a picture or maybe just store it in the old memory bank. In the summer there are blackberry bushes, with thousands of berries ripe for picking.
-          </div>
-        </div>
-      </div>
-      <br></br>
-      <div>
-        <div class="pb-3">
-          <div class="text-3xl"><span class="color-pink mr-2"><b>2.</b></span>Overlook Trail</div>
-          <div><b>Distance:</b> 1 mile</div>
-          <div>
-            <b>
-              <a href="https://www.google.com/maps/place/W+Rim+Loop+Trail+Head/@34.8348232,-85.4836331,17z/data=!3m1!4b1!4m6!3m5!1s0x8860493ec28bc6b9:0xbbee8ffee63f8ab7!8m2!3d34.8348188!4d-85.4810528!16s%2Fg%2F11sx554rxc?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-                Directions
-              </a>
-            </b>
-          </div>      
-        </div>
-        <div class="pb-5">
-          The Overlook Trail isn't frequently noted in the hiking apps but it is a good trail to know about if the lengths of the others are intimidating. This trail is easy to access as it sits right in front of the parking lot linked parking lot. It's a short out and back trail with spectacular views of the park, especially in the spring and fall. It's a great way to get a taste for the park or to start venturing back out into nature if it has been a little while since your last hiking adventure.
-        </div>
-      </div>
-      <br></br>
-      <div>
-        <div class="pb-3 mr-2">
-          <div class="text-3xl"><span class="color-pink mr-2"><b>3.</b></span>Backcountry Loop Trail</div>
-          <div><b>Distance:</b> 2 miles</div>
-          <div><b>Rating:</b> 4.6/5 <a href="https://www.alltrails.com/ar/trail/us/georgia/two-mile-backcountry-loop-trail" target="_blank">AllTrails</a></div>
-          <div>
-            <b>
-              <a href="https://www.google.com/maps/place/Cloudland+Canyon+State+Park+Disc+Golf/@34.8266854,-85.4778982,18z/data=!4m14!1m7!3m6!1s0x8860489de9aa9e81:0xaa78f71a6429baa9!2sAscalon+Trailhead!8m2!3d34.8369616!4d-85.4386864!16s%2Fg%2F11cjhz867p!3m5!1s0x886048fe2437145d:0x70f3de2a12fbbef!8m2!3d34.8264344!4d-85.478418!16s%2Fg%2F11c6tys3_m?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-                Directions
-              </a>
-            </b>
-          </div>      
-        </div>
-        <div class="pb-5">
-          There's no direct Google location for this trail. I linked to the closest parking in the directions above. This paired with the <a href="https://gastateparks.org/sites/default/files/parks/pdf/trailmaps/CloudlandCanyon_TrailMap.pdf">trail</a> map should get you there. This is a trail loop to access primitive campsites and is also a nice 2 mile hike to explore a less frequently traveled, but still fairly easy hike. As with all of the other trails in the park remember to bring appropriate footwear, something that can handle moisture and rocky terrain. Like the Meadowlands Trail the closest parking will be at the disc golf course.
-        </div>
-      </div>
-    </section>
-
-    <div class="mt-12 mb-6 md:float-right md:w-2/5 md:ml-6">
-      <OptimizedImage src="/images/chattanooga_guides/outdoors/cloudland/trail-shot.webp" alt="West Rim and Overlook trails fork in Cloudland Canyon" />
-    </div>
-
-    <section class="pb-3 text-xl" id="mtb-easy">
-      <div>
-        <h2 class="text-5xl" style="font-family: 'Libre Baskerville', serif;">Easier MTB Rides<span class="color-pink ml-1"><b>.</b></span></h2>
-      </div>
-      <div class="pb-5">
-        The easier MTB rides below are from the 5 Points Recreation Area. Make sure you have proper gear and check the weather conditions and trail reports before your excursion. 
-      </div>
-      <div class="pb-5">
-        <div class="pb-3">
-          <div class="text-3xl"><span class="color-pink mr-2"><b>1.</b></span>Bankhead + Cloudland Canyon Connector + Shale Flats loop</div>
-          <div><b>Distance:</b> 3-4 miles</div>
-          <div>
-            <b>
-              <a href="https://www.google.com/maps/place/5+Points+Mountain+Biking/@34.850985,-85.4274308,17z/data=!3m1!4b1!4m6!3m5!1s0x886046111bb370ab:0x85946697eb99245d!8m2!3d34.8509806!4d-85.4248505!16s%2Fg%2F11bwl0mf99?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-                Directions
-              </a>
-            </b>
-          </div>      
-        </div>
-        <div>
-          <div class="pb-5">
-            This route makes use of three trails, each short in length. 1. Bankhead (0.4mi), 2. Shale Flats (1.1m) and 3. Cloudland Canyon Connector (CCC) (~1.7mi). All of these trails are bidirectional. It should be a little over a 3-4 mile bike ride in total. Each trail is designated as easy. Shale Flats is a total climb of 53 feet and Bankhead's climb is 73ft, unknown climb on this section of CCC but expect between 100-200 feet. The ride will take about 20-30 minutes in total depending on your speed and skill level.
-          </div>
-          <div class="pb-5">
-            You'll start out taking Bankhead a short ways before turning left onto CCC. Then you take CCC about another half of a mile before Shale Flats. Continue the entire 1.1 miles of Shale Flats before intersecting with CCC and Caprock, take CCC. Ride CCC back up to Bankhead and take Bankhead back to parking.
-          </div>
-        </div>
-      </div>
-      <div>
-      <div class="pb-3">
-        <div class="text-3xl"><span class="color-pink mr-2"><b>2.</b></span>Cloudland Canyon Connector (and back)</div>
-          <div><b>Distance:</b> 6.8 miles</div>
-          <div>
-            <b>
-              <a href="https://www.google.com/maps/place/34%C2%B050'14.6%22N+85%C2%B026'20.3%22W/@34.83738,-85.4415429,831m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d34.83738!4d-85.438968?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-                Directions
-              </a>
-            </b>
-          </div>      
-        </div>
-        <div class="pb-5">
-          Arguably the most popular trail in the 5 points system, take this trail out and back for close to a seven mile ride. You'll start by parking at the Ascalon Trailhead linked above and should be able to access CCC. The nice thing about this ride is it's a green the whole way and your main navigation note is to stay on the trail. CCC connects to many other trails in the 5 points network so you'll see a lot of forks, but just take CCC every time. The trail ends at Hinkie Road (RT 157). Then turn around and head back to Ascalon Trailhead where you parked.
-        </div>
-      </div>
-    </section>
-
-    <div class="mb-12 mt-12 flex flex-col justify-center items-center">
-      <OptimizedImage src="/images/chattanooga_guides/outdoors/cloudland/mtb-map.webp" alt="5 Points Cloudland Trail Map for Mountain Biking" />
-    </div>
-
-    <section class="pb-10 text-xl" id="advanced-hikes">
-      <div>
-        <h2 class="text-5xl w-full break-words" style="font-family: 'Libre Baskerville', serif;">Intermediate/Advanced Hikes<span class="color-pink ml-1"><b>.</b></span></h2>
-      </div>
-      <div class="pb-5">
-        <div class="pb-3">
-          <div class="text-3xl"><span class="color-pink mr-2"><b>1.</b></span>West Rim Loop</div>
-          <div><b>Distance:</b> 4.7 miles</div>
-          <div>
-            <b>
-              <a href="https://www.google.com/maps/place/W+Rim+Loop+Trail+Head/@34.8348232,-85.4836331,17z/data=!3m1!4b1!4m6!3m5!1s0x8860493ec28bc6b9:0xbbee8ffee63f8ab7!8m2!3d34.8348188!4d-85.4810528!16s%2Fg%2F11sx554rxc?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-                Directions
-              </a>
-            </b>
-          </div>      
-        </div>
-        <div class="pb-5">
-          Nearly a 5 mile long loop style trail that keeps you on the outskirts of the canyon. As with any of the trails in this list make sure you wear proper footwear, it's pretty rugged. The trail features some beautiful views of the canyon as you take your lap around the park. This trail has in various years been rated one of the top hikes in the United States.
-        </div>
-      </div>
-      <div class="pb-5">
-        <div class="pb-3">
-          <div class="text-3xl"><span class="color-pink mr-2"><b>2.</b></span>Waterfalls Trail</div>
-          <div><b>Distance:</b> 1.8 miles</div>
-          <div>
-            <b>
-              <a href="https://www.google.com/maps/place/W+Rim+Loop+Trail+Head/@34.8348232,-85.4836331,17z/data=!3m1!4b1!4m6!3m5!1s0x8860493ec28bc6b9:0xbbee8ffee63f8ab7!8m2!3d34.8348188!4d-85.4810528!16s%2Fg%2F11sx554rxc?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-                Directions
-              </a>
-            </b>
-          </div>      
-        </div>
-        <div class="pb-5">
-          This trail is accessed off of the West Rim loop. Although shorter in distance, it's noted as probably the most strenuous trail in the park. It's recommended not to take your dog, as there are over 600 grated metal stairs that can be painful on their paws. The difficulty of this hiking trail is rewarded by the waterfalls, along this path is both the Hemlock and Cherokee falls. The waterflow varies, but will be best after a rainstorm.
-        </div>
-      </div>  
-      <div class="pb-5">
-        <div class="pb-3">
-        <div class="text-3xl"><span class="color-pink mr-2"><b>3.</b></span>Sitton's Gulch Trail</div>
-          <div><b>Distance:</b> 6 miles</div>
-          <div>
-            <b>
-              <a href="https://www.google.com/maps/place/Sitton's+Gulch+Trailhead/@34.8598776,-85.4847427,15z/data=!4m6!3m5!1s0x8860492ec67befcb:0x9a3068fca515b87b!8m2!3d34.8598776!4d-85.4847427!16s%2Fg%2F11bzsf0zbx?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-                Directions
-              </a>
-            </b>
-          </div>      
-        </div>
-        <div class="pb-5">
-          This is a 6 mile out and back trail. It will guide you down into the valley of the canyon as it follows along various creeks. In the springtime the wildflowers add for an extraordinary experience. It's a pretty difficult trail so be adequately prepared mentally and physically. Nearby are Sitton and Case caves. Sitton's Cave is open by guided tour only, so book ahead if you want to make it an even more adventurous day.
-        </div>
-      </div>  
-    </section>
-
-    <div class="mt-12 mb-6 md:float-right md:w-2/5 md:ml-6">
-      <OptimizedImage src="/images/chattanooga_guides/outdoors/cloudland/overlook-west-rim.webp" alt="Close up of trail signs in the Cloudland Canyon State Park" />
-    </div>
-
-    <section class="pb-12 text-xl" id="mtb-advanced">
-      <div>
-        <h2 class="text-5xl w-full break-words" style="font-family: 'Libre Baskerville', serif;">Intermediate/Advanced MTB Rides<span class="color-pink ml-1"><b>.</b></span></h2>
-      </div>
-      <div>
-        <div class="pb-3">
-          <div class="text-3xl"><span class="color-pink mr-2"><b>1.</b></span>Tailings Run + CCC + North Hogsback</div>
-          <div><b>Distance:</b> 4 - 5 miles</div>
-          <div>
-            <b>
-              <a href="https://www.google.com/maps/place/5+Points+Mountain+Biking/@34.8509806,-85.4248505,17z/data=!3m1!4b1!4m6!3m5!1s0x886046111bb370ab:0x85946697eb99245d!8m2!3d34.8509806!4d-85.4248505!16s%2Fg%2F11bwl0mf99?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-                Directions
-              </a>
-            </b>
-          </div>      
-        </div>
-        <div class="pb-5">
-          Park at 5 Points and begin riding north on Tailings Run, this is a 1.5 mile expert trail. Take Tailings to the Clouldland Canyon Connector (CCC) and ride the CCC (an easy trail) a few miles down until you get to the fork where a left turn will lead you onto the North Hogsback route. Note that once you get to 5 points, you're two thirds of the way through your ride on CCC. North Hogsback is another expert rated trail totaling 1.1 miles in distance. Take North Hogsback all the way to the 5 Points parking lot.
-        </div>
-      </div>
-      <br></br>
-      <div>
-        <div class="pb-3">
-          <div class="text-3xl"><span class="color-pink mr-2"><b>2.</b></span>Bankhead + Kettle Bottom</div>
-          <div><b>Distance:</b> 5 - 6 miles</div>
-          <div>
-            <b>
-              <a href="https://www.google.com/maps/place/5+Points+Mountain+Biking/@34.8509806,-85.4248505,17z/data=!3m1!4b1!4m6!3m5!1s0x886046111bb370ab:0x85946697eb99245d!8m2!3d34.8509806!4d-85.4248505!16s%2Fg%2F11bwl0mf99?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
-                Directions
-              </a>
-            </b>
-          </div>      
-        </div>
-        <div class="pb-5">
-          Park at 5 Points and begin by taking Bankhead 0.4 miles to Clouldland Canyon Connector (CCC). Take a right on CCC until you get to the 5 Points intersection. At 5 Points find Kettle Bottom trail. Kettle Bottom is rated as an intermediate trail. You can either take it as a full loop or there is an alternate path that's slightly shorter (about 1/3 of a mile shorter). Both options take you back to 5 Points intersection where you'll take a right on CCC back to Bankhead and follow that back to the parking lot.
-        </div>   
-      </div>  
-    </section>
-
-    <section>
-      <div>
-        <h2 class="text-5xl w-full break-words" style="font-family: 'Libre Baskerville', serif;">Hiking Breakdown<span class="color-pink ml-1"><b>.</b></span></h2>
-      </div>
-      <table class="w-full border-collapse border border-gray-300 shadow-md rounded-lg overflow-hidden">
-        <thead>
-          <tr class="bg-gray-100 text-gray-700 text-left uppercase text-sm">
-            <th class="px-4 py-2 border border-gray-300">Trail Name</th>
-            <th class="px-4 py-2 border border-gray-300">Distance</th>
-            <th class="px-4 py-2 border border-gray-300">Difficulty</th>
-            <th class="px-4 py-2 border border-gray-300 hidden sm:table-cell">What You'll See</th>
-            <th class="px-4 py-2 border border-gray-300 hidden sm:table-cell">Pro Tip</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="bg-white hover:bg-gray-50 transition duration-200">
-            <td class="px-4 py-3 border border-gray-300 font-semibold">Waterfalls Trail</td>
-            <td class="px-4 py-3 border border-gray-300">2 miles round trip</td>
-            <td class="px-4 py-3 border border-gray-300 text-red-600 font-semibold">Hard (steep stairs)</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Hemlock Falls, Cherokee Falls</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Bring <strong>waterproof shoes</strong>. The rocks near the falls can be slippery.</td>
-          </tr>
-          <tr class="bg-gray-50 hover:bg-gray-100 transition duration-200">
-            <td class="px-4 py-3 border border-gray-300 font-semibold">West Rim Loop Trail</td>
-            <td class="px-4 py-3 border border-gray-300">5 miles</td>
-            <td class="px-4 py-3 border border-gray-300 text-yellow-600 font-semibold">Moderate</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Canyon overlooks, rock formations</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Best <strong>sunset views</strong> in the park. Head here in the evening for golden hour.</td>
-          </tr>
-          <tr class="bg-white hover:bg-gray-50 transition duration-200">
-            <td class="px-4 py-3 border border-gray-300 font-semibold">Sitton's Gulch Trail</td>
-            <td class="px-4 py-3 border border-gray-300">6 miles</td>
-            <td class="px-4 py-3 border border-gray-300 text-red-600 font-semibold">Hard</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Wildflowers, river views, remote scenery</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell"><strong>Fewer crowds</strong> than other trails. Perfect for solitude seekers.</td>
-          </tr>
-          <tr class="bg-gray-50 hover:bg-gray-100 transition duration-200">
-            <td class="px-4 py-3 border border-gray-300 font-semibold">Overlook Trail</td>
-            <td class="px-4 py-3 border border-gray-300">1 mile</td>
-            <td class="px-4 py-3 border border-gray-300 text-green-600 font-semibold">Easy</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Panoramic canyon views</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Great for <strong>first-time visitors</strong> or those with limited mobility.</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section>
-      <div>
-        <h2 class="text-5xl w-full break-words" style="font-family: 'Libre Baskerville', serif;">MTB Breakdown<span class="color-pink ml-1"><b>.</b></span></h2>
-      </div>
-      <table class="w-full border-collapse border border-gray-300 shadow-md rounded-lg overflow-hidden">
-        <thead>
-          <tr class="bg-gray-100 text-gray-700 text-left uppercase text-sm">
-            <th class="px-4 py-2 border border-gray-300">Trail Name</th>
-            <th class="px-4 py-2 border border-gray-300">Distance</th>
-            <th class="px-4 py-2 border border-gray-300">Difficulty</th>
-            <th class="px-4 py-2 border border-gray-300 hidden sm:table-cell">Terrain Type</th>
-            <th class="px-4 py-2 border border-gray-300 hidden sm:table-cell">Pro Tip</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="bg-white hover:bg-gray-50 transition duration-200">
-            <td class="px-4 py-3 border border-gray-300 font-semibold">Raccoon Mountain</td>
-            <td class="px-4 py-3 border border-gray-300">16+ miles</td>
-            <td class="px-4 py-3 border border-gray-300 text-red-600 font-semibold">Hard</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Rocky, technical climbs, flowy descents</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Bring extra water. Limited refill spots on the trail.</td>
-          </tr>
-          <tr class="bg-gray-50 hover:bg-gray-100 transition duration-200">
-            <td class="px-4 py-3 border border-gray-300 font-semibold">Stringers Ridge</td>
-            <td class="px-4 py-3 border border-gray-300">5 miles</td>
-            <td class="px-4 py-3 border border-gray-300 text-green-600 font-semibold">Easy</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Smooth singletrack, beginner-friendly</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Great for a quick ride close to downtown.</td>
-          </tr>
-          <tr class="bg-white hover:bg-gray-50 transition duration-200">
-            <td class="px-4 py-3 border border-gray-300 font-semibold">Enterprise South</td>
-            <td class="px-4 py-3 border border-gray-300">10 miles</td>
-            <td class="px-4 py-3 border border-gray-300 text-yellow-600 font-semibold">Moderate</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Smooth & fast, rolling hills</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Ride early to avoid hikers on multi-use trails.</td>
-          </tr>
-          <tr class="bg-gray-50 hover:bg-gray-100 transition duration-200">
-            <td class="px-4 py-3 border border-gray-300 font-semibold">White Oak Mountain</td>
-            <td class="px-4 py-3 border border-gray-300">12 miles</td>
-            <td class="px-4 py-3 border border-gray-300 text-red-600 font-semibold">Hard</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Steep climbs, technical features</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Expect **tight switchbacks** and **rugged terrain**.</td>
-          </tr>
-          <tr class="bg-white hover:bg-gray-50 transition duration-200">
-            <td class="px-4 py-3 border border-gray-300 font-semibold">Five Points</td>
-            <td class="px-4 py-3 border border-gray-300">20+ miles</td>
-            <td class="px-4 py-3 border border-gray-300 text-yellow-600 font-semibold">Moderate</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Well-maintained singletrack, good flow</td>
-            <td class="px-4 py-3 border border-gray-300 hidden sm:table-cell">Perfect for an all-day adventure. Bring snacks!</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section class="pb-3 text-xl" id="disc-golf">
-      <div>
-        <h2 class="text-5xl w-full break-words" style="font-family: 'Libre Baskerville', serif;">Disc Golf<span class="color-pink ml-1"><b>.</b></span></h2>
-      </div>
-      <div>
-        <div><b>Holes:</b> 18</div>
-        <div><b><a href="https://maps.app.goo.gl/EVRWySGiXBkXsZB8A" target="_blank">Directions</a></b></div>
-        <br></br>
-        <div class="pb-5">
-          Are you a disc golfer who's a sucker for scenery? The Cloudland Canyon State Park Disc Golf Course might be the course you're looking for. The course is easy to follow and well marked but some parts have been reported to be a little overgrown. The course has concrete tee's and though there are rest rooms in the state park, there are not restrooms readily available on the course. You have to pay the $5 entry fee to get into the park, but there's no additional fee after that. It's about a 5 minute drive from the park entrance to the course.
-        </div>
-      </div>
-      <br></br>
-    </section>
-    <div class="mt-12 mb-6 md:float-right md:w-2/5 md:ml-6">
-      <OptimizedImage src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Creekside_Disc_Golf_-_1023296199.jpg" alt="disc golf and hole target" />
-      <p class="text-xs text-gray-400 mt-1">Photo by formatc1. CC 2.0</p>
-    </div> 
-    <section class="pb-3 text-xl" id="camping">
-      <div>
-        <h2 class="text-5xl w-full break-words" style="font-family: 'Libre Baskerville', serif;">Camping<span class="color-pink ml-1"><b>.</b></span></h2>
-      </div>
-      <div class="mb-5">
-        <div><a href="https://gastateparks.reserveamerica.com/camping/map_of_cloudland-canyon-state-park/r/campgroundMap.do?page=map&search=site&contractCode=GA&parkId=530148" target="_blank">Park Campsite Map</a></div>
-        <div><a href="https://gastateparks.reserveamerica.com/camping/cloudland-canyon-state-park/r/campsiteCalendar.do?page=calendar&search=site&contractCode=GA&parkId=530148" target="_blank">Park Campsite Availability</a></div>
-      </div>
-      <div class="pb-5">
-        Cloudland Canyon State Park offers pretty much every type of camping experience you have in mind. Want to camp out in a yurt? The have that. Want to bring your uncle Dave's RV? They have spots for that. Want to rent a cabin with friends? They can make that happen. You get the point. They also have primitive campsites for the folks who prefer the BYO tent lifestyle. There are additional fees depending on what you're doing, make sure to check their website for rental and campsite availability and registration. In the popular season's (we're looking and you spring and fall) you may need to book a few weeks in advance.
-      </div>
-    </section>
-    <div class="mt-12 mb-6 md:float-right md:w-2/5 md:ml-6">
-      <OptimizedImage src="https://upload.wikimedia.org/wikipedia/commons/6/67/Series_of_Glamping_Yurts_near_Llansantffraed-in-Elwel%2C_Powys.jpg" alt="Yurt campground atop green hills" />
-      <p class="text-xs text-gray-400 mt-1">Photo by Bill Nicholls. CC 2.0</p>
-    </div>
-
-    <section class="pb-3 text-xl" id="fishing">
-      <div>
-        <h2 class="text-5xl w-full break-words" style="font-family: 'Libre Baskerville', serif;">Fishing<span class="color-pink ml-1"><b>.</b></span></h2>
-      </div>
-      <div class="pb-5">
-        The bad news? There is only one fishing spot in the campground. The good news? It's a pretty nice fishing spot. Cloudland Canyon has a pond that measures about one acre. It's stocked with channel catfish which can be harvested from the day after labor day through the end of November. All other times are catch and release. If you don't have your fishing license, don't fret it's not needed for this location.
-      </div>
-      <div class="pb-5">
-        The easiest way to access the pond is via the <a href="#easier-hikes">Meadowlands Trail</a>, referenced above.
-      </div>
-      <div class="pb-5">
-        Important note: There is no fishing allowed in any of the park creeks.
-      </div>
-    </section>
-    <section class="pb-3 text-xl" id="eating">
-      <div>
-        <h2 class="text-5xl w-full break-words" style="font-family: 'Libre Baskerville', serif;">Eating Nearby<span class="color-pink ml-1"><b>.</b></span></h2>
-      </div>
-      <div class="pb-5">
-        Are you visiting Cloudland Canyon for a day hike and want to get a bite to eat at a restaurant or cafe after? Maybe the fire wouldn't start to cook the frank and beans while you were camping. You have a few options nearby. Here are a few options:
-      </div>
-      <div class="pb-5">
-        1. <a href="https://www.google.com/maps/place/Hope+House+Caf%C3%A9+via+A+Hand+UP+Ministry/@34.8624676,-85.5052369,16z/data=!3m1!4b1!4m6!3m5!1s0x8860495b22a64865:0xae6b460ec25c91b0!8m2!3d34.8624632!4d-85.5026566!16s%2Fg%2F11rct_1ng3?entry=ttu&g_ep=EgoyMDI0MDkwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Hope House Cafe.</a> This cafe is a 10-15 minute drive from the mountain with great breakfast and lunch food options. It has a charming atmosphere that's inviting after a day's hike.
-      </div>
-      <div class="pb-5">
-        2. <a target="_blank" href="https://www.google.com/maps/place/Canyon+Grill/@34.8094493,-85.4776323,17z/data=!3m1!4b1!4m6!3m5!1s0x88604890a875279f:0xf22124328698ea0d!8m2!3d34.8094449!4d-85.475052!16s%2Fg%2F1thxwyt0?entry=ttu&g_ep=EgoyMDI0MDkwMy4wIKXMDSoASAFQAw%3D%3D">Canyon Grill.</a> If it's closer to dinnertime Canyon Grill will be what you're looking for. It has a great menu with highly rated seafood, steaks, and fried okra. The menu may have given it away but if it's not clear this is the most expensive option in this list. It serves dinner only and is closed Sunday and Monday, so plan around that. It's about 5-10 minutes from the park.
-      </div>
-      <div class="pb-5">
-        3. <a target="_blank" href="https://www.google.com/maps/place/Thatcher's+Bbq+And+Grille/@34.8719566,-85.5113424,16z/data=!3m1!4b1!4m6!3m5!1s0x88604ead5f4137e1:0xef1ed00dbded4cae!8m2!3d34.8719522!4d-85.5087621!16s%2Fg%2F1tj33w22?entry=ttu&g_ep=EgoyMDI0MDkwMy4wIKXMDSoASAFQAw%3D%3D">Thatcher's Bbq And Grille.</a> A great lunch or dinner bbq option after your outdoor adventures, the menu features your bbq restaurant favorites like brisket and for dessert banana pudding. The menu has some gluten free options.
-      </div>
-      <div class="pb-5">
-        Several North Georgia breweries and wineries are within a short drive of the park. See the <a href="/chattanooga/guides/breweries-and-wineries">Chattanooga breweries and wineries guide</a> for taprooms and tasting rooms in the area.
-      </div>
-    </section>
-    <div class="mt-12 mb-6 md:float-right md:w-2/5 md:ml-6">
-      <OptimizedImage src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Cloudland_Canyon_State_Park_%288648810088%29.jpg" alt="Cloudland Canyon waterfall" />
-      <p class="text-xs text-gray-400 mt-1">Photo by Jeff Gunn. CC 2.0</p>
-    </div>
-    <section class="pb-3 text-xl">
-      <div>
-        <h2 class="text-5xl w-full break-words" style="font-family: 'Libre Baskerville', serif;">Other Ideas / Notes of Interest<span class="color-pink ml-1"><b>.</b></span></h2>
-      </div>
-      <div>
-        <div>
-          <div class="mb-3">
-            <span class="text-2xl"><b>Road Bike</b></span>
-            <span class="text-customGreen1 text-4xl font-bold">. </span> The various park areas are mostly interconnected through low-medium trafficked roads depending on when you visit. It can be a great place to ride your bike around nature, get some exercise, and potentially see some wildlife if you're lucky.
-          </div>
-          <div class="mb-3">
-            <span class="text-2xl"><b>Horseback Ride</b></span>
-            <span class="text-customGreen1 text-4xl font-bold">. </span> There are some trails in the park that allow for horseback riding. You have to BYO horse, no guided tours are provided by the park. Riding trails are at the 5 Points Recreation Area with parking at <a href="https://www.google.com/maps/place/Ascalon+Trailhead/@34.836966,-85.4412667,17z/data=!3m1!4b1!4m6!3m5!1s0x8860489de9aa9e81:0xaa78f71a6429baa9!8m2!3d34.8369616!4d-85.4386864!16s%2Fg%2F11cjhz867p?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Ascalon Trailhead</a>.
-          </div>
-          <div class="mb-3">
-            <span class="text-2xl"><b>Cave Tours</b></span>
-            <span class="text-customGreen1 text-4xl font-bold">. </span> Want a real adventure? A park naturalist leads guided trips into Sitton's Cave, a wild cave with no lights or handrails. You scramble over rocks and crawl through mud, so wear old clothes and closed-toe shoes. Tours run in April, June, July, September, and October. Each one lasts about 2 to 2.5 hours and costs $45 per person, ages 10 and up. Call the park office at <a href="tel:7066574050">706-657-4050</a> to book ahead. Experienced cavers can also get a permit for Case Cave, which needs ropes and harnesses.
-          </div>
-          <div class="mb-3">
-            <span class="text-2xl"><b>Bike Rentals</b></span>
-            <span class="text-customGreen1 text-4xl font-bold">. </span> No bike? No problem. You can rent a mountain bike at the Visitor Center to ride the 5 Points trails. Rentals cost $35 for a half day and $55 for a full day. Call ahead to check availability before you drive out.
-          </div>
-          <div class="mb-3">
-            <span class="text-2xl"><b>Accessibility</b></span>
-            <span class="text-customGreen1 text-4xl font-bold">. </span> The park keeps an all-terrain Action Trackchair on hand, so visitors with mobility needs can reach rugged ground. The office also lends EnChroma glasses that help color-blind guests see the fall leaves and canyon views. Ask at the park office to reserve either one.
-          </div>
-          <div class="mb-3">
-            <span class="text-2xl"><b>Picnic</b></span>
-            <span class="text-customGreen1 text-4xl font-bold">. </span> Some free access picnic tables are scattered throughout the park, but you can also rent a larger picnic table for an event or family function. Find availability <a href="https://gastateparks.reserveamerica.com/campsiteFilterAction.do?sitefilter=Picnic%20Shelter&startIdx=0&contractCode=GA&parkId=530148&_gl=1*178u764*_ga*OTUyMDE4MTMyLjE3MjUyMDUzNzU.*_ga_NY38CG84RB*MTcyNTczMTk2OC44LjAuMTcyNTczMTk2OC4wLjAuMA.." target="_blank">here</a>.
-          </div>
-          <div class="mb-3">
-            <span class="text-2xl"><b>Waterfalls</b></span>
-            <span class="text-customGreen1 text-4xl font-bold">. </span>
-            Waterfalls. If you read through this guide (thanks if you did, big fan of you) you will have seen multiple mentions of waterfalls in the park. There's Hemlock Falls and Cherokee Falls, both reached by the <a href="#advanced-hikes">Waterfalls Trail</a> off the West Rim loop. The water levels can vary significantly depending on rainfall but when they are flowing it's really a sight to behold.
-          </div>
-          <div class="mb-3">
-            <span class="text-2xl"><b>Events</b></span>
-            <span class="text-customGreen1 text-4xl font-bold">. </span>
-            Throughout the year this state parks hosts a wide variety of outdoor events, usually 5-10 per month. See if there is something you might like at <a href="https://explore.gastateparks.org/events?p=38" target="_blank">GA State Parks website</a>.
-          </div>
-          <div class="mb-3">
-            <span class="text-2xl"><b>Volunteer</b></span>
-            <span class="text-customGreen1 text-4xl font-bold">. </span>
-            Friends of Cloudland Canyon State Park are almost always seeking volunteers for various maintenance, hospitality, and fundraising roles regularly. If you're interested in helping maintain this wonderful park you can find more details <a href="https://friendsofcloudlandcanyon.org/volunteering/" target="_blank">here</a>.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div>
-        <h2 class="text-5xl w-full break-words" style="font-family: 'Libre Baskerville', serif;">Closing Time<span class="color-pink ml-1"><b>.</b></span></h2>
-      </div>
-      <div class="pb-5">The camping sections at Cloudland book up fast in spring and fall. Yurts and cabins sell out first. Reserve a few weeks in advance for peak season weekends. Check availability on the Georgia State Parks reservation site.</div>
-      <div class="pb-5">The 5 Points Recreation Area has its own parking and trailhead, a few miles east of the main park entrance. Plan to move your car between the two areas if you want to hike and bike on the same trip. Several North Georgia breweries and wineries are within 30 minutes of the park. The <a href="/chattanooga/guides/breweries-and-wineries">Chattanooga breweries and wineries guide</a> covers those stops.</div>
-      <div class="pb-5">For more trails and outdoor activities around Chattanooga, the <a href="/chattanooga/guides/outdoors">Chattanooga outdoors guide</a> covers 70-plus routes across Lookout Mountain, Raccoon Mountain, and the city greenways.</div>
-      <div class="pb-5">This guide is updated regularly. Send corrections or additions to <a href="mailto:jack@thingshappening.com">jack@thingshappening.com</a>.</div>
-    </section>
-
-    <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do you need a fishing license at Cloudland Canyon?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No fishing license is required at the park's stocked pond. The pond holds channel catfish. Catch and keep runs from the day after Labor Day through the end of November. All other times are catch and release. Fishing in the park's creeks is not allowed."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you rent bikes at Cloudland Canyon?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. The park's Visitor Center rents mountain bikes for $35 for a half day and $55 for a full day. Call ahead to confirm availability before making the drive."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you bring dogs to Cloudland Canyon?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Dogs are welcome on most trails and must be on a leash no longer than 6 feet. The Waterfalls Trail is not recommended for dogs. The 600-plus metal grate stairs can be painful and difficult for them to navigate."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "When do the cave tours run at Cloudland Canyon?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Guided wild cave tours of Sitton's Cave run in April, June, July, September, and October. Each tour lasts about 2 to 2.5 hours and costs $45 per person. The minimum age is 10. Call the park office at 706-657-4050 to book. Experienced cavers can also get a permit for Case Cave, which requires ropes and harnesses."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What waterfalls are in Cloudland Canyon?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The park has two main waterfalls: Hemlock Falls and Cherokee Falls. Both are reached via the Waterfalls Trail, which branches off the West Rim Loop. Flow varies with rainfall and is strongest after a heavy storm."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you swim at Cloudland Canyon State Park?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "There is no designated swimming area in the park. The waterfalls and creek pools are not set up for swimming. The park's fishing pond is stocked for fishing only."
-          }
-        }
-      ]
-    })} />
-
-    <section class="max-w-6xl mx-auto px-3 pt-10 pb-10">
-      <h2 class="text-4xl mb-6" style="font-family: 'Libre Baskerville', serif;">FAQ<span class="color-pink ml-1"><b>.</b></span></h2>
-
-      <div class="mb-6">
-        <h3 class="text-2xl mb-2">Do you need a fishing license at Cloudland Canyon?</h3>
-        <p class="text-xl">No license required. The park pond is stocked with channel catfish. Catch and keep runs from the day after Labor Day through the end of November. All other times are catch and release. Fishing in the park's creeks is not allowed.</p>
-      </div>
-
-      <div class="mb-6">
-        <h3 class="text-2xl mb-2">Can you rent bikes at Cloudland Canyon?</h3>
-        <p class="text-xl">Yes. The Visitor Center rents mountain bikes for $35 half day or $55 full day. Call ahead to confirm availability before making the drive.</p>
-      </div>
-
-      <div class="mb-6">
-        <h3 class="text-2xl mb-2">Can you bring dogs to Cloudland Canyon?</h3>
-        <p class="text-xl">Dogs are welcome on most trails on a leash no longer than 6 feet. The Waterfalls Trail is not recommended for dogs. The 600-plus metal grate stairs can be painful and difficult for them to navigate.</p>
-      </div>
-
-      <div class="mb-6">
-        <h3 class="text-2xl mb-2">When do the cave tours run?</h3>
-        <p class="text-xl">Guided wild cave tours of Sitton's Cave run in April, June, July, September, and October. Each tour lasts about 2 to 2.5 hours and costs $45 per person, ages 10 and up. Call 706-657-4050 to book. Experienced cavers can get a permit for Case Cave, which requires ropes and harnesses.</p>
-      </div>
-
-      <div class="mb-6">
-        <h3 class="text-2xl mb-2">What waterfalls are in Cloudland Canyon?</h3>
-        <p class="text-xl">The park has two main waterfalls: Hemlock Falls and Cherokee Falls. Both are reached via the Waterfalls Trail, which branches off the West Rim Loop. Flow varies with rainfall and is strongest after a heavy storm.</p>
-      </div>
-
-      <div class="mb-6">
-        <h3 class="text-2xl mb-2">Can you swim at Cloudland Canyon?</h3>
-        <p class="text-xl">There is no designated swimming area in the park. The waterfalls and creek pools are not set up for swimming. The fishing pond is stocked for fishing only.</p>
-      </div>
-    </section>
-
-    <section class="pt-10 pb-10">
-      <h2 class="text-4xl mb-6" style="font-family: 'Libre Baskerville', serif;">Other Guides<span class="color-pink ml-1"><b>.</b></span></h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <a href="/chattanooga/guides/outdoors" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
-          <div class="h-40 overflow-hidden">
-            <OptimizedImage src="/images/chattanooga_guides/outdoors/cloudland/trail-shot.webp" alt="Outdoor Adventures" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-          </div>
-          <div class="p-4">
-            <div class="text-xl font-semibold gradient-text">Outdoor Adventures</div>
-            <div class="text-sm text-gray-500 mt-1">Hiking, kayaking, climbing, and more</div>
-          </div>
-        </a>
-        <a href="/chattanooga/guides/tours" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
-          <div class="h-40 overflow-hidden">
-            <OptimizedImage src="/images/chattanooga_guides/trolley.png" alt="Guided Tours" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-          </div>
-          <div class="p-4">
-            <div class="text-xl font-semibold gradient-text">Guided Tours</div>
-            <div class="text-sm text-gray-500 mt-1">Walking tours, scenic drives, history</div>
-          </div>
-        </a>
-        <a href="/chattanooga/guides/confections" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
-          <div class="h-40 overflow-hidden">
-            <OptimizedImage src="/images/chattanooga_guides/shops/hot-chocolatier1.jpg" alt="Sweet Treats" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-          </div>
-          <div class="p-4">
-            <div class="text-xl font-semibold gradient-text">Sweet Treats</div>
-            <div class="text-sm text-gray-500 mt-1">Chocolate, ice cream, candy shops</div>
-          </div>
-        </a>
-      </div>
-
-    </section>
-  </div>
+</section>
 
 <p class="mt-8 pt-6 border-t border-gray-200 text-lg">
   <a href="/chattanooga/guides/things-to-do" class="underline hover:text-customGreen1">&larr; All things to do in Chattanooga</a>
 </p>
-</div>
