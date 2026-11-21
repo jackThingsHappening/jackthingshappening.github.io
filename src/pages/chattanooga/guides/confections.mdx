@@ -1,440 +1,250 @@
 ---
   title: "Local Desserts & Sweet Treats in Chattanooga, TN"
-  lastUpdated: "10/27/2026"
+  published: true
+  lastUpdated: "11/21/2026"
   originalDate: "03/01/2025"
-  readTime: "5 minutes"
+  readTime: "7 minutes"
   iconPath: "../../../images/icons-new/coffee-cup.png"
-  tags: [{type: "guide", tag: "around-the-city"}, {type: "guide", tag: "longform"}]
+  tags: [{type: "guide", tag: "around-the-city"}, {type: "guide", tag: "interactive"}]
   layout: "../../../layouts/BlogPostLayout.astro"
   seoDescription: "Chattanooga's best sweet treats including ice cream shops, bakeries, chocolate shops, creperies, and coffee houses for desserts and confections."
+  geoCoverage: "Chattanooga, TN and nearby (Ooltewah)"
   images: [
-    {src: "/images/chattanooga_guides/shops/hot_chocolatier.png", position: "upper"},
-    # {src: "/images/chattanooga_guides/shops/hot-chocolatier2.jpg", position: "lower"}
+    {src: "/images/chattanooga_guides/shops/hot_chocolatier.png", position: "upper"}
   ]
-  # sources: ["Clumpies Ice Cream", "The Hot Chocolatier", "Adelle's Crêperie", "Rembrandt's Coffee House"]
   author: "Jack Byrum"
+  pageItems: [
+    {title: "The Hot Chocolatier", description: "A chocolate and confections shop with two Chattanooga locations. The Market Street location is near the Chattanooga Choo Choo. The St. Elmo location sits at the base of Lookout Mountain. Both carry hot chocolate, handmade chocolates, pastries, and gift boxes. The business faced a forced relocation in 2024 and raised over $19,000 from more than 250 community donors. Indoor seating and wifi are available.", order: 1, tags: ["chocolate-shop", "gifts", "downtown", "st-elmo"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=The+Hot+Chocolatier+Chattanooga+TN", target: "_blank"}, {text: "Website", link: "https://thehotchocolatier.com", target: "_blank"}]},
+    {title: "Rocket Fizz", description: "A retro candy and soda shop at 411 Broad Street in downtown Chattanooga. Candy bins line the walls for mix-and-match selections. Shelves hold custom-branded sodas, retro favorites, and imported candy from other countries. Open seven days: 10am-9pm Monday through Thursday, 10am-10pm Friday and Saturday, 11am-9pm Sunday.", order: 2, tags: ["candy-shop", "kids", "downtown"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=Rocket+Fizz+411+Broad+St+Chattanooga+TN", target: "_blank"}, {text: "Website", link: "https://rocketfizz.com/locations/rocket-fizz-chattanooga-tn/", target: "_blank"}]},
+    {title: "Belle Chocolates", description: "A bean-to-bar chocolatier making handmade chocolates from scratch, starting at the cocoa bean. No fixed retail location. Find them at farmers markets in Chattanooga, Cleveland, and surrounding towns. Available for events and catering. Check their Facebook page for current market schedules and special offerings.", order: 3, tags: ["chocolate-shop", "gifts", "farmers-market"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=Belle+Chocolates+Chattanooga+TN", target: "_blank"}, {text: "Facebook", link: "https://www.facebook.com/bellechocolates", target: "_blank"}]},
+    {title: "Rocky Mountain Chocolate Factory", description: "A chocolate and confection shop at 100 Chestnut Street, across from the Tennessee River. The location is steps from the Tennessee Aquarium and next door to Cold Stone Creamery. The shop carries assorted chocolates, caramel apples, truffles, toffee, and clusters. Open daily 11am-10pm.", order: 4, tags: ["chocolate-shop", "kids", "downtown"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=Rocky+Mountain+Chocolate+Factory+100+Chestnut+St+Chattanooga+TN", target: "_blank"}, {text: "Website", link: "https://www.rmcf.com/", target: "_blank"}]},
+    {title: "Adelle's Crêperie", description: "A European-style crêperie at 400 East Main Street on the Southside. Sweet crepe options include The Royale with Nutella, strawberries, and chocolate drizzle, and The Bee's Knees with Nutella, bananas, cinnamon maple, and honey. A classic butter and sugar crepe is also available. Open daily 8:30am-2:30pm, with evening service Thursday through Saturday.", order: 5, tags: ["cafe", "kids", "southside"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=Adelles+Creperie+400+E+Main+St+Chattanooga+TN", target: "_blank"}, {text: "Website", link: "https://www.adellescreperie.com/", target: "_blank"}]},
+    {title: "Rembrandt's Coffee House", description: "A European-style coffee house at 204 High Street in the Bluff View Arts District. Handmade pastries, craft espresso drinks, and outdoor patio seating. The patio is best in spring and fall. The location is walkable to Hunter Museum, Walnut Street Bridge, and Coolidge Park. Locally made chocolates are available at the counter.", order: 6, tags: ["cafe", "downtown"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=Rembrandts+Coffee+House+204+High+St+Chattanooga+TN", target: "_blank"}, {text: "Website", link: "https://bluffviewartdistrictchattanooga.com/rembrandtscoffeehouse", target: "_blank"}]},
+    {title: "Milk & Honey", description: "A gelato counter and brunch café at 135 N Market Street on the North Shore, open since 2013. Gelato and sorbet are made in house with seasonal and year-round flavors. The café also serves espresso and from-scratch breakfast. Recently renovated into a larger space. Open daily from 6am to 6pm.", order: 7, tags: ["ice-cream", "cafe", "north-shore"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=Milk+and+Honey+135+N+Market+St+Chattanooga+TN", target: "_blank"}, {text: "Website", link: "https://www.milkandhoneychattanooga.com/", target: "_blank"}]},
+    {title: "Oui Oui Boulangerie", description: "A French bakery at 338 E Main Street on the Southside, inside The Turnbull building. Run by French baker Johann Tremor and his wife Siliza. The case holds pur beurre croissants, pain au chocolat, almond croissants, and berry tarts. Rye bread bakes on Wednesday and Saturday. They sell out early, so go in the morning.", order: 8, tags: ["bakery", "southside"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=Oui+Oui+Boulangerie+338+E+Main+St+Chattanooga+TN", target: "_blank"}, {text: "Website", link: "https://www.ouiouiboulangerie.com/", target: "_blank"}]},
+    {title: "Clumpies Ice Cream", description: "A Chattanooga ice cream institution founded in 1999, with three locations: North Shore, Market Street near the Choo Choo, and St. Elmo near the Incline Railway. Ice cream is made in small batches using self-pasteurized cream and milk. Seasonal flavors rotate throughout the year. Online delivery is available through their website.", order: 9, tags: ["ice-cream", "kids", "north-shore", "downtown", "st-elmo"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=Clumpies+Ice+Cream+Chattanooga+TN", target: "_blank"}, {text: "Website", link: "https://clumpies.com/", target: "_blank"}]},
+    {title: "The Ice Cream Show", description: "An ice cream shop at 105 Walnut Street at the south end of the Walnut Street Walking Bridge, next to Hunter Museum. Custom flavors blend from over 40 fresh ingredients, with more than 17,000 possible combinations. Dairy-free options include sorbet and oat milk ice cream. Pet-friendly, with a Frosty Paws option for dogs. Open Monday-Thursday noon-9pm, Friday-Saturday noon-11pm, Sunday 2pm-9pm.", order: 10, tags: ["ice-cream", "kids", "downtown"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=The+Ice+Cream+Show+105+Walnut+St+Chattanooga+TN", target: "_blank"}, {text: "Website", link: "https://theicecreamshow.com/", target: "_blank"}]},
+    {title: "Crispy Cones", description: "A chimney cake ice cream shop at 8898 Old Lee Highway in Ooltewah, opened September 2024. The cone is grilled rotisserie-style from pastry dough, rolled in cinnamon sugar, then filled with ice cream and toppings. The concept originated as a Prague street food and reached the area via a Shark Tank investment. Hours run afternoons and evenings. Check the website before visiting.", order: 11, tags: ["ice-cream", "ooltewah"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=Crispy+Cones+8898+Old+Lee+Highway+Ooltewah+TN", target: "_blank"}, {text: "Website", link: "https://crispycones.com/chattanooga-tn", target: "_blank"}]},
+    {title: "Scoop Around Ice Cream Bar", description: "A family-run ice cream bar at 831 E Main Street on the Southside. The menu focuses on loaded named creations rather than plain scoops. The Campfire combines chocolate marshmallow ice cream with graham cracker, a Hershey bar, and chocolate drizzle. Four vegan flavors are available. Open daily from 2pm, until 10pm Friday and Saturday.", order: 12, tags: ["ice-cream", "southside"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=Scoop+Around+Ice+Cream+Bar+831+E+Main+St+Chattanooga+TN", target: "_blank"}, {text: "Website", link: "https://www.scooparoundicecreambar.com/", target: "_blank"}]},
+    {title: "Cupcake Kitchen", description: "A downtown bakery at 500 Broad Street open seven days a week. Over 20 cupcake flavors bake on-site daily, from classics like vanilla and chocolate to seasonal options like King Cake during Mardi Gras. Gluten-free, dairy-free, and vegan options are available. The shop also carries cookies, cannolis, and cheesecake.", order: 13, tags: ["bakery", "kids", "downtown"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=Cupcake+Kitchen+500+Broad+St+Chattanooga+TN", target: "_blank"}]},
+    {title: "Julie Darling Donuts", description: "A small-batch donut shop at 121 Frazier Avenue on the North Shore, open since 2009. Fresh donuts bake each morning and sell out before close. Hours run 7am-1pm Monday through Saturday. Weekend visits may include specialty donuts not on the regular menu. The 1950s retro interior includes a Free Little Library.", order: 14, tags: ["bakery", "north-shore"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=Julie+Darling+Donuts+121+Frazier+Ave+Chattanooga+TN", target: "_blank"}, {text: "Website", link: "https://www.jddonuts.com/", target: "_blank"}]},
+    {title: "Niedlov's Bakery & Café", description: "A from-scratch bread bakery and café at 215 E Main Street on the Southside. Sourdough and European-style loaves follow a slow bake process. The pastry case holds croissants, scones, and morning bakes alongside a full café menu. Open 7am-6pm weekdays, 7am-4pm Saturday, closed Sunday.", order: 15, tags: ["bakery", "cafe", "southside"], links: [{text: "Google Maps", link: "https://www.google.com/maps/search/?api=1&query=Niedlovs+Bakery+215+E+Main+St+Chattanooga+TN", target: "_blank"}, {text: "Website", link: "https://www.niedlovs.com/", target: "_blank"}]}
+  ]
+  itemTemplate: {title: "", order: 16, description: "", links: [{text: "More Information", link: ""}], tags: []}
 ---
 import OptimizedImage from '../../../components/OptimizedImage.astro';
+import PageItemsFromFrontmatter from '../../../components/PageItemsFromFrontmatter.astro';
 
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Local Desserts & Sweet Treats in Chattanooga, TN",
+  "description": "Chattanooga's best sweet treats including ice cream shops, bakeries, chocolate shops, creperies, and coffee houses for desserts and confections.",
+  "numberOfItems": (frontmatter.pageItems || []).length,
+  "url": "https://thingshappening.com/chattanooga/guides/confections",
+  "itemListElement": (frontmatter.pageItems || []).map(item => ({
+    "@type": "ListItem",
+    "position": item.order,
+    "item": {
+      "@type": "LocalBusiness",
+      "name": item.title,
+      "url": (item.links || []).find(l => l.text === "Website")?.link || (item.links || [])[0]?.link || ""
+    }
+  }))
+})} />
 
-<div>
-  <div class="pb-5">
-      <a href="/pdfs/chattanooga/confections.pdf" target="_blank" class="inline-flex items-center px-4 py-2 bg-logoDarkGreen text-logoLightGreen rounded-lg hover:opacity-90 transition-colors">
-        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-      </svg>
-      Download PDF Guide
+<div class="max-w-6xl mx-auto px-3">
+  <div class="pb-5 pt-2">This guide covers 15 spots for desserts and sweet treats across Chattanooga. The listings span ice cream shops, bakeries, chocolate shops, cafés, and crêperies.</div>
+  <div class="pb-5">Clumpies Ice Cream has made small-batch ice cream in Chattanooga since 1999 and now runs three locations across the city. The Hot Chocolatier, open since 2008, raised over $19,000 from more than 250 donors in 2024 to survive a forced relocation.</div>
+  <div class="pb-5">The Southside has the strongest cluster for an afternoon dessert run. Adelle's Crêperie, Oui Oui Boulangerie, Niedlov's Bakery, and Scoop Around are all within a few blocks on East Main Street.</div>
+  <div class="pb-5">The Type filter separates ice cream from bakeries, chocolate shops, and cafés. The Kids filter surfaces the spots with the broadest family appeal, including Rocket Fizz and The Ice Cream Show with its 17,000-combination menu.</div>
+  <div class="pb-5">If there is a sweet shop worth adding, <a href="mailto:jack@thingshappening.com">send an email</a>. Hours and menus change. Confirm before you go.</div>
+</div>
+
+{/* TODO: Add embedded Google Maps iframe here */}
+
+<section id="guide-filters" class="text-xl pt-6 pb-2">
+  <div class="max-w-6xl mx-auto px-3">
+    <div class="flex flex-col md:flex-row md:items-center mb-3 pb-3 gap-2 md:gap-6">
+      <h2 class="text-[2.5rem] mb-0" style="font-family: 'Libre Baskerville', serif;">Type<span class="color-pink ml-1"><b>:</b></span></h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/chattanooga/guides/confections?tags=ice-cream" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="ice-cream">Ice Cream</a>
+        <a href="/chattanooga/guides/confections?tags=bakery" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="bakery">Bakery</a>
+        <a href="/chattanooga/guides/confections?tags=chocolate-shop" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="chocolate-shop">Chocolate</a>
+        <a href="/chattanooga/guides/confections?tags=cafe" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="cafe">Café</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-3">
+    <div class="flex flex-col md:flex-row md:items-center mb-3 pb-3 gap-2 md:gap-6">
+      <h2 class="text-[2.5rem] mb-0" style="font-family: 'Libre Baskerville', serif;">Good For<span class="color-pink ml-1"><b>:</b></span></h2>
+      <div class="flex flex-wrap gap-3">
+        <div class="relative">
+          <span class="hidden md:block absolute -top-7 left-1/2 -translate-x-1/2 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200" style="font-size: 11px;">Try Me ↓</span>
+          <span class="md:hidden absolute top-1/2 -translate-y-1/2 -right-16 bg-logoLightGreen text-white text-xs px-2 py-1 rounded-full shadow-md whitespace-nowrap border border-gray-200 z-10" style="font-size: 11px;">← Try Me</span>
+          <a href="/chattanooga/guides/confections?tags=kids" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="kids">Kids</a>
+        </div>
+        <a href="/chattanooga/guides/confections?tags=gifts" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="gifts">Gifts</a>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-6xl mx-auto px-3">
+    <div class="flex flex-col md:flex-row md:items-center mb-3 pb-3 gap-2 md:gap-6">
+      <h2 class="text-[2.5rem] mb-0" style="font-family: 'Libre Baskerville', serif;">Location<span class="color-pink ml-1"><b>:</b></span></h2>
+      <div class="flex flex-wrap gap-3">
+        <a href="/chattanooga/guides/confections?tags=downtown" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="downtown">Downtown</a>
+        <a href="/chattanooga/guides/confections?tags=southside" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="southside">Southside</a>
+        <a href="/chattanooga/guides/confections?tags=north-shore" class="clickable-filter-tag px-5 py-2 text-white rounded-full text-base cursor-pointer transition-colors font-normal no-underline" style="background-color: #1a4d2e;" data-tag="north-shore">North Shore</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="place-descriptions-container" class="max-w-6xl mx-auto px-3">
+  <div class="place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg" data-place="ice-cream">
+    <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Ice Cream in Chattanooga<span class="color-pink ml-1"><b>.</b></span></h2>
+    <p class="text-xl">Clumpies is the local institution, with three locations and a small-batch approach going back to 1999. The Ice Cream Show at Walnut Street brings a customizable format with 40 fresh ingredients. Milk &amp; Honey on the North Shore covers the gelato side. Crispy Cones in Ooltewah is the newest arrival, with a chimney cake format that sets it apart from every other shop on this list.</p>
+    <div class="flex flex-wrap gap-4 mt-4">
+      <a href="/chattanooga/guides/coffeeshops" class="page-item-link text-logoDarkGreen underline">Chattanooga coffee shops</a>
+    </div>
+  </div>
+  <div class="place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg" data-place="downtown">
+    <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Downtown Chattanooga<span class="color-pink ml-1"><b>.</b></span></h2>
+    <p class="text-xl">The downtown core holds seven spots in this guide. Rocky Mountain Chocolate Factory and The Ice Cream Show are both near Chestnut and Walnut, steps from the Aquarium. Rocket Fizz and Cupcake Kitchen sit on Broad Street. Clumpies has a Market Street location near the Choo Choo. Rembrandt's Coffee House is a short walk up the bluff in the Arts District.</p>
+    <div class="flex flex-wrap gap-4 mt-4">
+      <a href="/chattanooga/guides/exhibits" class="page-item-link text-logoDarkGreen underline">Downtown museums and exhibits</a>
+    </div>
+  </div>
+  <div class="place-description hidden mb-10 mt-10 p-4 border border-black rounded-lg" data-place="southside">
+    <h2 class="text-3xl mb-2" style="font-family: 'Libre Baskerville', serif;">Southside &amp; East Main<span class="color-pink ml-1"><b>.</b></span></h2>
+    <p class="text-xl">East Main Street holds four spots in this guide. Oui Oui Boulangerie and Niedlov's both anchor the morning end of the street. Adelle's Crêperie handles brunch and evening service. Scoop Around opens at 2pm for the afternoon run. These four are close enough to combine in a single Southside afternoon.</p>
+    <div class="flex flex-wrap gap-4 mt-4">
+      <a href="/chattanooga/guides/breweries-and-wineries?tags=southside" class="page-item-link text-logoDarkGreen underline">Southside breweries</a>
+      <a href="/chattanooga/guides/live-music" class="page-item-link text-logoDarkGreen underline">Live music guide</a>
+    </div>
+  </div>
+</div>
+
+<section class="text-xl">
+  <div>
+    <PageItemsFromFrontmatter pageItems={frontmatter.pageItems} showClearFilters={true} />
+  </div>
+</section>
+
+<div class="pb-12 max-w-6xl mx-auto px-3">
+  <div class="pb-3">The Southside cluster on East Main is an easy single-afternoon run. Oui Oui Boulangerie opens early and sells out fast, so start there. Niedlov's and Scoop Around are a short walk east on the same street.</div>
+  <div class="pb-3">On the North Shore, Milk &amp; Honey, Clumpies, and Julie Darling Donuts are all within walking distance of each other. Julie Darling Donuts closes at 1pm, so plan the morning first. For more stops across the city, the <a href="/chattanooga/guides/coffeeshops">Chattanooga coffee guide</a> covers 28 cafés.</div>
+</div>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where can I get the best ice cream in Chattanooga?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clumpies Ice Cream is a local institution with three locations: North Shore, Market Street near the Choo Choo, and St. Elmo. The Ice Cream Show at 105 Walnut Street offers over 17,000 custom combinations from 40 fresh ingredients. Milk & Honey on the North Shore makes house gelato and sorbet. Scoop Around on East Main builds loaded named creations with vegan options available."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What chocolate shops are in Chattanooga?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Hot Chocolatier has two locations (Market Street and St. Elmo) and carries handmade chocolates, hot drinks, and gift boxes. Rocky Mountain Chocolate Factory is at 100 Chestnut Street near the Aquarium. Belle Chocolates sells bean-to-bar handmade chocolate at farmers markets across the area and does not have a fixed storefront."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there vegan or dairy-free dessert options in Chattanooga?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Several spots in this guide carry them. Scoop Around Ice Cream Bar on East Main keeps four vegan flavors. Cupcake Kitchen on Broad Street offers vegan, gluten-free, and dairy-free cupcakes. The Ice Cream Show carries sorbet and oat milk ice cream as dairy-free alternatives."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which Chattanooga dessert shops sell out early?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Julie Darling Donuts at 121 Frazier Avenue on the North Shore bakes a limited batch each morning and closes at 1pm Monday through Saturday. Oui Oui Boulangerie on East Main Street also sells through its baked goods before the end of the day. Both are worth visiting in the morning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What French bakeries are in Chattanooga?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui Oui Boulangerie at 338 E Main Street is Chattanooga's dedicated French bakery, run by French baker Johann Tremor. The case holds pur beurre croissants, pain au chocolat, almond croissants, and berry tarts. Adelle's Crêperie at 400 E Main Street serves both sweet and savory French-style crepes and also brings a European touch to the dessert scene."
+      }
+    }
+  ]
+})} />
+
+<section class="max-w-6xl mx-auto px-3 pt-10 pb-10">
+  <h2 class="text-4xl mb-6" style="font-family: 'Libre Baskerville', serif;">FAQ<span class="color-pink ml-1"><b>.</b></span></h2>
+
+  <div class="mb-6">
+    <h3 class="text-2xl mb-2">Where can I get the best ice cream in Chattanooga?</h3>
+    <p class="text-xl">Clumpies Ice Cream is a local institution with three locations: North Shore, Market Street near the Choo Choo, and St. Elmo. The Ice Cream Show at 105 Walnut Street offers over 17,000 custom combinations from 40 fresh ingredients. Milk &amp; Honey on the North Shore makes house gelato and sorbet. Scoop Around on East Main builds loaded named creations with vegan options available.</p>
+  </div>
+
+  <div class="mb-6">
+    <h3 class="text-2xl mb-2">What chocolate shops are in Chattanooga?</h3>
+    <p class="text-xl">The Hot Chocolatier has two locations (Market Street and St. Elmo) and carries handmade chocolates, hot drinks, and gift boxes. Rocky Mountain Chocolate Factory is at 100 Chestnut Street near the Aquarium. Belle Chocolates sells bean-to-bar handmade chocolate at farmers markets across the area and does not have a fixed storefront.</p>
+  </div>
+
+  <div class="mb-6">
+    <h3 class="text-2xl mb-2">Are there vegan or dairy-free dessert options in Chattanooga?</h3>
+    <p class="text-xl">Several spots in this guide carry them. Scoop Around Ice Cream Bar on East Main keeps four vegan flavors. Cupcake Kitchen on Broad Street offers vegan, gluten-free, and dairy-free cupcakes. The Ice Cream Show carries sorbet and oat milk ice cream as dairy-free alternatives.</p>
+  </div>
+
+  <div class="mb-6">
+    <h3 class="text-2xl mb-2">Which Chattanooga dessert shops sell out early?</h3>
+    <p class="text-xl">Julie Darling Donuts at 121 Frazier Avenue on the North Shore bakes a limited batch each morning and closes at 1pm Monday through Saturday. Oui Oui Boulangerie on East Main Street also sells through its baked goods before the end of the day. Both are worth visiting in the morning.</p>
+  </div>
+
+  <div class="mb-6">
+    <h3 class="text-2xl mb-2">What French bakeries are in Chattanooga?</h3>
+    <p class="text-xl">Oui Oui Boulangerie at 338 E Main Street is Chattanooga's dedicated French bakery, run by French baker Johann Tremor. The case holds pur beurre croissants, pain au chocolat, almond croissants, and berry tarts. Adelle's Crêperie at 400 E Main Street serves both sweet and savory French-style crepes.</p>
+  </div>
+</section>
+
+<section class="pt-10 pb-10">
+  <h2 class="text-4xl mb-6" style="font-family: 'Libre Baskerville', serif;">Other Guides<span class="color-pink ml-1"><b>.</b></span></h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <a href="/chattanooga/guides/tours" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+      <div class="h-40 overflow-hidden">
+        <OptimizedImage src="/images/chattanooga_guides/trolley.png" alt="Guided Tours" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+      </div>
+      <div class="p-4">
+        <div class="text-xl font-semibold gradient-text">Guided Tours</div>
+        <div class="text-sm text-gray-500 mt-1">Walking tours, scenic drives, history</div>
+      </div>
+    </a>
+    <a href="/chattanooga/guides/live-music" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+      <div class="h-40 overflow-hidden">
+        <OptimizedImage src="/images/chattanooga_guides/live-music/woodshop.png" alt="Live Music" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+      </div>
+      <div class="p-4">
+        <div class="text-xl font-semibold gradient-text">Live Music</div>
+        <div class="text-sm text-gray-500 mt-1">Venues, festivals, local artists</div>
+      </div>
+    </a>
+    <a href="/chattanooga/guides/outdoors" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
+      <div class="h-40 overflow-hidden">
+        <OptimizedImage src="/images/chattanooga_guides/outdoors/lookout-mtn/mountain-top.jpg" alt="Outdoor Adventures" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+      </div>
+      <div class="p-4">
+        <div class="text-xl font-semibold gradient-text">Outdoor Adventures</div>
+        <div class="text-sm text-gray-500 mt-1">Hiking, kayaking, climbing</div>
+      </div>
     </a>
   </div>
-  <section class="text-xl pb-10 pt-4">
-    <div>
-      <div class="pb-5">
-        When visiting a new place you take in the sights and sounds, but arguably, more importantly, the smells and tastes. 
-      </div>
-      <div class="pb-5">
-        If you and yours fancy yourselves a sweet treat in the Scenic City we put together a guide for that hopefully matches a style and flavor your looking for. We've got your dairies, your bakeries, your cafe's and your candy shops. Plus some unique establishments we'll keep as a fun mystery for now, read on for more.
-      </div>
-      <div class="pb-5">
-        Whether you prefer your sugar rush by way of a cherry on top of an ice cream sundae, or a chocolate drizzle on your warm croissant, we've got you and yours accounted for in this guide.        
-      </div>
-      <div class="pb-5">
-        Think we missed something? I'll give you the benefit of the doubt. Let <a mailto="jack@thingshappening.com">us know</a> and ill take it into consideration. 
-      </div>
-    </div>
-  </section>
-
-  <section class="text-xl pb-12">
-    <h2 class="text-4xl mb-4" style="font-family: 'Libre Baskerville', serif;">By Topic<span class="color-pink ml-1"><b>.</b></span></h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-      <a href="#confections" class="block p-4 border border-gray-200 rounded-lg hover:border-logoDarkGreen hover:bg-gray-50 transition-colors no-underline text-center"><div class="font-semibold text-logoDarkGreen">Confections</div></a>
-      <a href="#europe" class="block p-4 border border-gray-200 rounded-lg hover:border-logoDarkGreen hover:bg-gray-50 transition-colors no-underline text-center"><div class="font-semibold text-logoDarkGreen">A Touch of Europe</div></a>
-      <a href="#ice-cream" class="block p-4 border border-gray-200 rounded-lg hover:border-logoDarkGreen hover:bg-gray-50 transition-colors no-underline text-center"><div class="font-semibold text-logoDarkGreen">Ice Cream</div></a>
-      <a href="#baked-goods" class="block p-4 border border-gray-200 rounded-lg hover:border-logoDarkGreen hover:bg-gray-50 transition-colors no-underline text-center"><div class="font-semibold text-logoDarkGreen">Baked Goods</div></a>
-    </div>
-  </section>
-
-  <section class="text-xl pb-10" id="confections">
-    <h2 class="text-5xl" style="font-family: 'Libre Baskerville', serif;">
-      Confections<span class="color-pink ml-1"><b>.</b></span>
-    </h2>
-    <div>
-      <h2 class="text-3xl" style="font-family: 'Libre Baskerville', serif;">The Hot Chocolatier<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="pb-5">
-        Does a sip of hot chocolate bring up any feelings of nostalgia for you? If it does you might be interested in on a cold winter's day there's a business in town you may want to know about, The Hot Chocolatier. They serve an array of various confections, hot drinks, pastries and sandwiches. On their shelves you'll also find thoughfully wrapped creations that would make for an excellent gift for most occassions. These gifts can also be purchased <a href="https://thehotchocolatier.com/collections/all" target="_blank">online</a>, if you're crunched for time.
-      </div>
-      <div class="pb-5">
-        With two locations, one in St Elmo and the other on Market Street near the Choo Choo. The Hot Chocolatier is relatively accessible to most residents and vistors to the area. The St Elmo location is perfect for refueling after a <a href="/chattanooga/guides/outdoors?tags=lookout-mtn" target="_blank">Lookout Mountain hike</a>. The staff is as warm as their hot chocolate, if you're looking for a place to go to get out of the house for a bit or even to work they have tablespace and wifi, plus note outdoor seating when the weather is cooperating. 
-      </div>
-      <div class="pb-5">
-        The Hot Chocolatier has been beloved by the Chattanooga community since their inception in 2008. They never experienced this more than in 2024. Facing significant hardship due to increased rent and permitting delays during a relocation the owners launched a GoFundMe Campaign and were able to raise more than $19,000 from more than 250 donors. With the backing of the community, resilience from the owners, and dedication from their team, The Hot Chocolatier continues to be able serve Chattanooga the creative confections they crave.
-      </div>
-    </div>
-    <div>
-      <h2 class="text-3xl" style="font-family: 'Libre Baskerville', serif;">Rocket Fizz<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="pb-5">
-        Take a step through the front door and instantly be drawn in further by the flurry of colors and seemingly endless products with lively packaging. Not to mention the general energy that's hard to account for in description of a retro style candy shop.
-      </div>
-      <div class="pb-5">
-        Find yourself reminiscing over a smoke of a candy cigarettes, don't forget your light. Additional nostalgia awaits for a variety of retro goodies. Fashion yourself a Whatchamacallit, or some Atomic Fireballs? They've got your back.
-      </div>
-      <div class="pb-5">
-        Candy bins line the walls, grab a bag and mix some magic. Custom soda's created by retro themselves somehow come to life will stationed on shelving. How about flavoring from another country? Some shops will have imported goods from time to time, if you want to travel abroad without needing a plane ticket.
-      </div>
-      <div class="pb-5">
-        Located downtown on Broad Street, plan a stop while exploring some other Chattanooga points of interest. Rocket Fizz can be found at 411 Broad Street, open seven days a week: 10am-9pm Monday through Thursday, until 10pm Friday and Saturday, and 11am-9pm on Sunday. Visit their <a href="https://rocketfizz.com/locations/rocket-fizz-chattanooga-tn/" target="_blank" rel="noopener noreferrer">website</a> for more details and contact information.
-      </div>
-    </div>
-    <div>
-      <h2 class="text-3xl" style="font-family: 'Libre Baskerville', serif;">Belle Chocolates<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="pb-5">
-        Belle Chocolates is a boutique chocolatier in Chattanooga.
-      </div>
-      <div class="pb-5">
-        Handmade bean to bar chocolates. For the curious this means the chocolates are made completely from scratch beginning with the bean through to the final chocolate product. With that attention to detail it's no wonder they have a loyal local following.
-      </div>
-      <div class="pb-5">
-        Find Belle Chocolates at farmers markets in Chattanooga, Cleveland and other surrounding towns. They are also available for events and catering. Follow them on <a href="https://www.facebook.com/bellechocolates" target="_blank" rel="noopener noreferrer">Facebook</a> for updates on their market schedule and special offerings.
-      </div>
-    </div>    
-    <div>
-      <h2 class="text-3xl" style="font-family: 'Libre Baskerville', serif;">Rocky Mountain Chocolate Factory<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="pb-5">
-        One of the few retail chains to make this list, but we wanted to include it for location, location, location.
-      </div>
-      <div class="pb-5">
-        This confection manufacturer has one of the best locations in the city, right across the street from the Tennessee River at 100 Chestnut Street.
-      </div>
-      <div class="pb-5">
-        Stop by after a trip to the aquarium, a Lookouts baseball game, or a Southern Belle River cruise, as it's located in the middle of all of them.
-      </div>
-      <div class="pb-5">
-        Continuing on the location, it's next door to a Cold Stone Creamery, so if someone in your group wants a different kind of treat, there is room for accommodation.
-      </div>
-      <div class="pb-5">
-        At a visit to RMCF you might try an assorted box of chocolates, clusters, caramel apples, truffles, toffee, or other confection offering.
-      </div>
-    </div>    
-  </section>
-
-  <div class="mt-8 mb-8 relative overflow-hidden rounded-lg w-fit">
-    <OptimizedImage src="/images/chattanooga_guides/shops/hot-chocolatier1.jpg" alt="The Hotchocolatier, outside photo. St Elmo, Chattanooga" />
-    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent px-6 py-5">
-      <p class="text-white text-base font-medium m-0">The Hot Chocolatier, St Elmo</p>
-    </div>
-  </div>
-
-  <section class="text-xl pb-10" id="europe">
-    <h2 class="text-5xl" style="font-family: 'Libre Baskerville', serif;">
-      A touch of Europe<span class="color-pink ml-1"><b>.</b></span>
-    </h2>
-    <div>
-      <h2 class="text-3xl" style="font-family: 'Libre Baskerville', serif;">Adelle's Crêperie<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="pb-5">
-        Open daily from 8:30AM to 2:30PM, with evening service Thursday through Saturday, this European style crêperie serves a collection of both sweet and savory crepes.
-      </div>
-      <div class="pb-5">
-        In European culture sweet crepes are often eaten for dessert often made with chocolate, fruit, whipped cream, or some combination of ingredients. If you're looking to enjoy a lighter sweet crepe for breakfast try crepes with a jam spread.
-      </div>
-      <div class="pb-5">
-        Adelle's sweet crepe menu consists of dishes like "The Royale" which features nutella, stawberries, and chocholate drizzle and "The Bee's Knees" consisting of nutella, bananas, cinnamon maple sprinkle, and honey drizzle. These we're two cherry picked dishes, there are other sweet crepes and you can also create your own. <a href="https://www.adellescreperie.com/menu" target="_blank">Adelle's full menu</a>
-      </div>
-      <div class="pb-5">
-        If you're dining with your kids or just want something simple, they also offer a classic butter and sugar crepe. A French staple. 
-      </div>
-      <div>
-        <span class="font-bold">Crepe trivia knowledge:</span><span>In France, on February 2nd of each year during La Chandeleur, it's tradition to make a wish while flipping a crêpe in the pan. The challenge is to hold a gold coin in your other hand while flipping the crêpe. If you land it perfectly, the tradition says you'll have prosperity for the rest of the year.</span>
-      </div>
-    </div>
-    <div>
-      <h2 class="text-3xl" style="font-family: 'Libre Baskerville', serif;">Rembrandt's Coffee House<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="pb-5">
-        This coffee house is modeled after a European café with its handmade pastries, cobblestone paths, and hand crafted espresso based coffee drinks.
-      </div>
-      <div class="pb-5">
-        Rembrandt offers both indoor and outdoor seating. Their outdoor patio seating is particularly enjoyable in the spring when the Arts District comes to life with fresh blooming flowers or in the fall when the foliage adds some charm to the area.
-      </div>
-      <div class="pb-5">
-        Following the European this coffee house is walkable to many other shops, restaurants and attractions in its disrict like Hunter Museum, Walnut Street Bridge, Tennessee Riverwalk, and Coolidge Park.
-      </div>
-      <div class="pb-5">
-        Rembrandt's also offers a selection of locally made chocolates — a good pairing for an afternoon coffee. For 28 more coffee spots across the city, see the <a href="/chattanooga/guides/coffeeshops">Chattanooga coffee shops guide</a>.
-      </div>
-      <div class="pb-5">
-        The shops name, Rembrandt, fits well with the artistic theme of the district. Rembrandt was a famous dutch painter in the 1600's.
-      </div>
-      <div class="pb-5">
-        If you're visiting on a weekend, you might see a live music or a local artist set up close by, which can also add to the European-style atmosphere.
-      </div>
-    </div>
-    <div>
-      <h2 class="text-3xl" style="font-family: 'Libre Baskerville', serif;">Milk &amp; Honey<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="pb-5">
-        A Northshore fixture since 2013, Milk &amp; Honey makes its gelato and sorbet in house, with a rotating lineup of seasonal flavors alongside the year-round staples. Italian gelato is what earns it a spot in the Europe section.
-      </div>
-      <div class="pb-5">
-        It's as much a brunch café as a gelato counter, so you can order espresso and a from-scratch breakfast in the morning and come back for a scoop later. They recently renovated and expanded into a larger space at 135 N Market Street, open daily from 6AM to 6PM. See the flavor list on their <a href="https://www.milkandhoneychattanooga.com/" target="_blank" rel="noopener noreferrer">website</a>.
-      </div>
-    </div>
-    <div>
-      <h2 class="text-3xl" style="font-family: 'Libre Baskerville', serif;">Oui Oui Boulangerie<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="pb-5">
-        Oui Oui Boulangerie brings real French baking to the Southside. French baker Johann Tremor and his wife Siliza run the shop. They also fold a vintage and art shop, Casa Cool, into the same space at The Turnbull.
-      </div>
-      <div class="pb-5">
-        The case holds pur beurre croissants, pain au chocolat, almond croissants, and cinnamon rolls. For something sweeter, try a berry tart or the fondant au chocolat. They bake baguettes, sourdough, and brioche too, with rye on Wednesday and Saturday.
-      </div>
-      <div class="pb-5">
-        Find them at 338 E Main Street. They open early and sell out, so go in the morning. See the full menu on their <a href="https://www.ouiouiboulangerie.com/menu" target="_blank" rel="noopener noreferrer">website</a>.
-      </div>
-    </div>
-  </section>
-
-  <section class="text-xl pb-10" id="ice-cream">
-    <h2 class="text-5xl" style="font-family: 'Libre Baskerville', serif;">
-      Ice cream<span class="color-pink ml-1"><b>.</b></span>
-    </h2>
-    <div>
-      <h2 class="text-3xl" style="font-family: 'Libre Baskerville', serif;">Clumpies Ice Cream<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="pb-5">
-        A Chattanooga small business that's considered a regional staple my many. Their handmade ice cream orgin story dates back to 1999 where they were using the finest fresh cream and milk ingredients to self pasteurize their products. The shop was purchased by Rock City Inc in 2013 and has since expanded to 3 total locations plus a food truck.
-      </div>
-      <div class="pb-5">
-        They make their ice cream in small batches, roughly 9 gallons per batch. This helps them pay more attention to detail and try out different experimental batches when testing new flavors.
-      </div>      
-      <div class="pb-5">
-        Clumpies has three Chattanooga locations. The flagship store is on the North Shore surrounded by various shops and restaurants. They also have a store near the Chattanooga Choo Choo on Market Street, and one in St. Elmo at the bottom of the Incline, handy for cooling off after a Lookout Mountain outing. 
-      </div>
-      <div class="pb-5">
-        In any of these locations you can parlay your parlor party with local shopping, dinner, or drinks. You can also do those things in any order you choose, don't let us tell you how to live your life. For the busy, they've also opened an <a href="https://clumpies.com/" target="_blank">online shop</a> in recent years for local deliveries.
-      </div>
-      <div class="pb-5">
-        Clumpies offers seasonal and limited edition flavors Raspberry Stracciatella and Chocolate Lava Cake during Valentine's season, and Chai Latte and Coffee Cake in the fall. 
-      </div>    
-    </div>
-    <div>
-      <h2 class="text-3xl" style="font-family: 'Libre Baskerville', serif;">The Ice Cream Show<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="pb-5">
-        Located near the south end of Chattanooga's Walnut Street Walking Bridge at 105 Walnut Street, next to the Hunter Museum, The Ice Cream Show offers over 17,000 flavor combinations, making sure there's something for everyone in the family.
-      </div>
-      <div class="pb-5">
-        These combinations are created from over 40 different fresh ingredients including fruits, chocolates, and nuts.
-      </div>
-      <div class="pb-5">
-        Continuing on their patron accessibility, the shop offers dairy free alternatives like sobert and vanilla oat milk ice cream.
-      </div>
-      <div class="pb-5">
-        If someone in your group finds doesn't find the idea of ice cream appealing they also have freshly brewed coffee, hot chocolate, and tea.
-      </div>      
-      <div class="pb-5">
-        The Ice Cream Show is pet friendly, so bring Fido and get them their own treat like the Frosty Paws puppy ice cream.
-      </div>
-      <div class="pb-5">
-        This shop is open Monday through Saturday from 9AM to 11PM, and Sunday from noon to 11PM.
-      </div>
-      <div class="pb-5">
-        <span class="font-bold">Some arithmatic: </span><span> To enjoy all 17,000 combinations you'd have to try a new one every day for over 46 years.</span>
-      </div>    
-    </div>
-    <div>
-      <h2 class="text-3xl" style="font-family: 'Libre Baskerville', serif;">Crispy Cones<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="pb-5">
-        This one's a different take on the cone. Crispy Cones grills pastry dough rotisserie-style until it's crisp, rolls it in cinnamon sugar, then fills the whole thing with a spread, gourmet ice cream, and toppings. It's a Prague street-food idea (the chimney cake) that landed here by way of Shark Tank.
-      </div>
-      <div class="pb-5">
-        The Chattanooga-area shop had its grand opening in September 2024 at 8898 Old Lee Highway in Ooltewah, an easy stop if you're out on the east side of town. Hours run afternoons and evenings; check their <a href="https://crispycones.com/chattanooga-tn" target="_blank" rel="noopener noreferrer">site</a> before you go.
-      </div>
-    </div>
-    <div>
-      <h2 class="text-3xl" style="font-family: 'Libre Baskerville', serif;">Scoop Around Ice Cream Bar<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="pb-5">
-        Scoop Around is a family-run ice cream bar on East Main Street. The owners build loaded, named creations instead of plain scoops. The Campfire piles chocolate marshmallow ice cream with graham cracker, a Hershey bar, and chocolate drizzle.
-      </div>
-      <div class="pb-5">
-        They keep four vegan flavors on hand, so most of your group is covered. Find them at 831 E Main Street, open daily from 2PM. Hours run later on weekends, to 10PM Friday and Saturday. See the menu on their <a href="https://www.scooparoundicecreambar.com/" target="_blank" rel="noopener noreferrer">website</a>.
-      </div>
-    </div>
-  </section>
-
-  <section class="text-xl pb-10" id="baked-goods">
-    <h2 class="text-5xl" style="font-family: 'Libre Baskerville', serif;">
-      Baked Goods<span class="color-pink ml-1"><b>.</b></span>
-    </h2>
-    <div>
-      <h2 class="text-3xl" style="font-family: 'Libre Baskerville', serif;">Cupcake Kitchen<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="pb-5">
-        7 days a week Cupcake Kitchen bakes over 20 cupcake flavors on-site.
-      </div>
-      <div class="pb-5">
-        Their menu includes classics like vanilla and chocolate but also features more unique options Almond Raspberry and Tiramisu for patrons seeking a novel experience.
-      </div>
-      <div class="pb-5">
-        The Cupcake Collection offers a 'rotating selection of seasonal flavors', one being their King Cake cupcakes available for purchase during the Mardis Gras seaon.
-      </div>
-      <div class="pb-5">
-        Being considerate of those with dietary restrictions the shop offers gluten-free, dairy-free, and vegan cupcakes for those who need or desire these options.
-      </div>
-      <div class="pb-5">
-        Outside of their titled dessert option Cupcake Kithen also offers cookies, canolis, and cheescakes if you've got a different sweet craving.
-      </div>      
-    </div>    
-    <div>
-      <h2 class="text-3xl" style="font-family: 'Libre Baskerville', serif;">Julie Darling Donuts<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="pb-5">
-        Opened in 2009, this donut shop uses a small-batch approach to baking, making sure donuts are made fresh every morning for their handmade treats.
-      </div>
-      <div class="pb-5">
-        Since their donuts are made fresh each morning it's best to try and get their early. They make limited batches to avoid waste and may run out if you're visiting later in the day. The store is open from 7AM to 1PM Monday through Saturday.
-      </div>
-      <div class="pb-5">
-        Their menu stands out with it's novel, creative flavors like Samoa, Red Velvet, and Cheescake filled donuts. 
-      </div>
-      <div class="pb-5">
-        Sometimes on the weekend they'll serve specialty donuts that aren't on the regular menu, making each weekend visit a chance to try something new.
-      </div>
-      <div class="pb-5">
-        The store has an fun 1950's retro atmosphere and also has a Free Little Library, for those looking to leisure one afternoon. Sometimes they offer free donuts or coffee in exchange for a book, keep an eye out for these occassions on their <a href="https://www.facebook.com/JDDnooga/" target="_blank">facebook page</a>. 
-      </div>    
-    </div>
-    <div>
-      <h2 class="text-3xl" style="font-family: 'Libre Baskerville', serif;">Niedlov's Bakery &amp; Café<span class="color-pink ml-1"><b>.</b></span></h2>
-      <div class="pb-5">
-        Niedlov's is the from-scratch bread bakery of the bunch, working sourdough and European-style loaves the slow way from their Southside bake house. It's less about frosting and more about the smell of fresh bread, though the pastry case pulls its weight too.
-      </div>
-      <div class="pb-5">
-        Alongside the loaves you'll find croissants, scones, and other morning bakes to go with a coffee, plus a full café menu if you're settling in. Find them at 215 E Main Street, open 7AM to 6PM weekdays and 7AM to 4PM Saturday, closed Sunday. More at their <a href="https://www.niedlovs.com/" target="_blank" rel="noopener noreferrer">website</a>.
-      </div>
-    </div>
-  </section>  
-
-  <section class="text-xl pb-10">
-    <h2 class="text-4xl pb-5" style="font-family: 'Libre Baskerville', serif;">Breakdown and Wrap Up<span class="color-pink ml-1"><b>.</b></span></h2>
-    <div>
-      <div class="pb-5">
-        Chattanooga as a number of fun and novel places to adventure out to for that sweet tooth fix. We hope some of the places we spotlighted today have you ready to get out and try something new or visit an old favorite.
-      </div>
-    </div>
-    <table class="w-full border border-gray-300 shadow-md rounded-lg" style="table-layout: fixed; width: 100%; max-width: 100%;">
-      <thead class="bg-gray-100 text-gray-700 uppercase text-sm">
-          <tr>
-              <th class="px-4 py-2 text-left border-b" style="width: 30%; word-wrap: break-word;">Business Name</th>
-              <th class="px-4 py-2 text-left border-b" style="width: 25%; word-wrap: break-word;">Type</th>
-              <th class="px-4 py-2 text-left border-b" style="width: 45%; word-wrap: break-word;">Signature Items</th>
-          </tr>
-      </thead>
-      <tbody class="text-gray-900">
-          <tr class="border-b hover:bg-gray-50">
-              <td class="px-4 py-3" style="word-wrap: break-word;">The Hot Chocolatier</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Chocolate & Confections</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Hot Chocolate, Handmade Chocolates</td>
-          </tr>
-          <tr class="border-b hover:bg-gray-50">
-              <td class="px-4 py-3" style="word-wrap: break-word;">Rocket Fizz</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Candy & Soda Shop</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Retro Candy, Custom Sodas</td>
-          </tr>
-          <tr class="border-b hover:bg-gray-50">
-              <td class="px-4 py-3" style="word-wrap: break-word;">Belle Chocolates</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Chocolatier</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Bean-to-Bar Handmade Chocolates</td>
-          </tr>
-          <tr class="border-b hover:bg-gray-50">
-              <td class="px-4 py-3" style="word-wrap: break-word;">Rocky Mountain Chocolate Factory</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Chocolate Shop</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Assorted Chocolates, Caramel Apples</td>
-          </tr>
-          <tr class="border-b hover:bg-gray-50">
-              <td class="px-4 py-3" style="word-wrap: break-word;">Adelle's Crêperie</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Crêperie</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Sweet & Savory Crêpes</td>
-          </tr>
-          <tr class="border-b hover:bg-gray-50">
-              <td class="px-4 py-3" style="word-wrap: break-word;">Rembrandt's Coffee House</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Café</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Handcrafted Espresso Drinks, Pastries</td>
-          </tr>
-          <tr class="border-b hover:bg-gray-50">
-              <td class="px-4 py-3" style="word-wrap: break-word;">Clumpies Ice Cream</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Ice Cream</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Handmade Small-Batch Ice Cream</td>
-          </tr>
-          <tr class="border-b hover:bg-gray-50">
-              <td class="px-4 py-3" style="word-wrap: break-word;">The Ice Cream Show</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Ice Cream</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">17,000 Ice Cream Flavor Combinations</td>
-          </tr>
-          <tr class="border-b hover:bg-gray-50">
-              <td class="px-4 py-3" style="word-wrap: break-word;">Cupcake Kitchen</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Bakery</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Cupcakes, Seasonal Flavors</td>
-          </tr>
-          <tr class="border-b hover:bg-gray-50">
-              <td class="px-4 py-3" style="word-wrap: break-word;">Julie Darling Donuts</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Donut Shop</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Creative Donuts, Ice Cream Donut Sandwiches</td>
-          </tr>
-          <tr class="border-b hover:bg-gray-50">
-              <td class="px-4 py-3" style="word-wrap: break-word;">Milk &amp; Honey</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Gelato & Café</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">House-Made Gelato & Sorbet</td>
-          </tr>
-          <tr class="border-b hover:bg-gray-50">
-              <td class="px-4 py-3" style="word-wrap: break-word;">Crispy Cones</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Ice Cream</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Grilled Chimney-Cake Cones</td>
-          </tr>
-          <tr class="border-b hover:bg-gray-50">
-              <td class="px-4 py-3" style="word-wrap: break-word;">Scoop Around Ice Cream Bar</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Ice Cream</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Loaded Custom Creations</td>
-          </tr>
-          <tr class="border-b hover:bg-gray-50">
-              <td class="px-4 py-3" style="word-wrap: break-word;">Oui Oui Boulangerie</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">French Bakery</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Croissants, Baguettes, Fruit Tarts</td>
-          </tr>
-          <tr class="hover:bg-gray-50">
-              <td class="px-4 py-3" style="word-wrap: break-word;">Niedlov's Bakery &amp; Café</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Bakery</td>
-              <td class="px-4 py-3" style="word-wrap: break-word;">Sourdough & Artisan Breads, Pastries</td>
-          </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="pt-10 pb-10">
-    <h2 class="text-4xl mb-6" style="font-family: 'Libre Baskerville', serif;">Other Guides<span class="color-pink ml-1"><b>.</b></span></h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <a href="/chattanooga/guides/tours" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
-        <div class="h-40 overflow-hidden">
-          <OptimizedImage src="/images/chattanooga_guides/trolley.png" alt="Guided Tours" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-        </div>
-        <div class="p-4">
-          <div class="text-xl font-semibold gradient-text">Guided Tours</div>
-          <div class="text-sm text-gray-500 mt-1">Walking tours, scenic drives, history</div>
-        </div>
-      </a>
-      <a href="/chattanooga/guides/live-music" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
-        <div class="h-40 overflow-hidden">
-          <OptimizedImage src="/images/chattanooga_guides/live-music/woodshop.png" alt="Live Music" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-        </div>
-        <div class="p-4">
-          <div class="text-xl font-semibold gradient-text">Live Music</div>
-          <div class="text-sm text-gray-500 mt-1">Venues, festivals, local artists</div>
-        </div>
-      </a>
-      <a href="/chattanooga/guides/outdoors" class="group block rounded-lg overflow-hidden border border-gray-200 hover:shadow-md transition-shadow">
-        <div class="h-40 overflow-hidden">
-          <OptimizedImage src="/images/chattanooga_guides/outdoors/lookout-mtn/mountain-top.jpg" alt="Outdoor Adventures" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-        </div>
-        <div class="p-4">
-          <div class="text-xl font-semibold gradient-text">Outdoor Adventures</div>
-          <div class="text-sm text-gray-500 mt-1">Hiking, kayaking, climbing</div>
-        </div>
-      </a>
-    </div>
-  </section>
+</section>
 
 <p class="mt-8 pt-6 border-t border-gray-200 text-lg">
   <a href="/chattanooga/guides/things-to-do" class="underline hover:text-customGreen1">&larr; All things to do in Chattanooga</a>
 </p>
-</div>
