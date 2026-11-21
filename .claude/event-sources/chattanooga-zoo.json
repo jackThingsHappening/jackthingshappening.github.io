@@ -10,6 +10,10 @@
     {
       "outputPath": "src/pages/chattanooga/events/chattanooga-zoo/conservation-awareness-days.mdx",
       "matchHint": "Monthly Conservation Awareness Days celebrating SAFE (Saving Animals From Extinction) programs: keeper chats, animal enrichment, info stations, arts and crafts. Dates: September 19, October 24, November 21. Hours 11am-3pm. Included with standard admission."
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/chattanooga-zoo/asian-lantern-festival.mdx",
+      "matchHint": "Asian Lantern Festival: Wildlife Wonderland \u2014 seasonal nightly event Nov-Jan, Wed-Sun 5:30-9:30pm, hundreds of illuminated lanterns up to 16 feet tall across nearly 50 scenes. Excludes Christmas Day."
     }
   ],
   "defaultFrontmatter": {
