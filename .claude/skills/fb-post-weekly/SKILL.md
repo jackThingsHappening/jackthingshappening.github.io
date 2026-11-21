@@ -72,6 +72,25 @@ Post types:
 **Engagement:**
 - Ask one real question. Keep the rest short.
 
+After drafting all 5 posts, run a judge review on each. Spawn one Agent per post with only this prompt — no other context:
+
+```
+Score this Facebook post on three criteria. Use a 1–5 scale.
+Return scores and one concrete fix per weak score (3 or higher).
+
+Criteria:
+- AI-generated feel: 1 = sounds human, 5 = sounds robotic
+- Hook strength: 1 = stops the scroll, 5 = no reason to read on
+- Usefulness: 1 = actionable and specific, 5 = vague and forgettable
+- Originality: 1 = angle feels fresh or unexpected, 5 = generic or forgettable content type
+
+Copy: <full draft copy>
+
+Respond only with scores and fixes. No preamble.
+```
+
+For each post where any score is 3 or higher, apply only the flagged fixes and use the revised version. If all scores are 2 or lower, proceed with the original.
+
 ## Step 4 — Schedule all 5 posts via Facebook Graph API
 
 Use credentials from env vars:

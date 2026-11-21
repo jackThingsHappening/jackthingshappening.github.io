@@ -1135,6 +1135,7 @@
     "notes": "Athens GA brewery with a Chattanooga Beer Garden at Foundry Plaza near Erlanger Park. Open Thu-Sat. Events are seasonal (spring-fall) around Lookouts games and UGA football watch parties. Main events calendar is Athens-primary; Chattanooga events filtered by venue."
   },
   {
+<<<<<<< Updated upstream
     "name": "Tanasi Brewing & Supplies",
     "slug": "tanasi-brewing",
     "url": "https://tanasibrewing.com/",
@@ -1159,5 +1160,13 @@
     "city": "ooltewah-tn",
     "status": "pending",
     "notes": "Upscale Southern/soul food restaurant and bar in Cambridge Square, Ooltewah with live music Thursday through Saturday evenings (local musicians and bands). No scrapable own-site calendar at discovery — events post via social media; verify a scrapable source at onboarding."
+=======
+    "name": "The Reading Room",
+    "slug": "reading-room-bar",
+    "url": "https://www.readingroombar.com/",
+    "category": "food-drink",
+    "status": "pending",
+    "notes": "Neighborhood bar and used bookstore at 3210B Brainerd Rd, Chattanooga. Hosts one-off and recurring events: author readings, poetry nights, craft nights, trivia, bingo, ambient music nights, and drag nights. Events listed on homepage via #Events scroll."
+>>>>>>> Stashed changes
   }
 ]

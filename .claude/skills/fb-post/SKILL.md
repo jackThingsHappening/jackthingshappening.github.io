@@ -74,7 +74,34 @@ If no arguments, pick a post type below. Rotate through types for variety.
 
 ---
 
-## Step 3 — Propose a schedule
+## Step 3 — Judge review
+
+Spawn an Agent with only this prompt — no other context, no site background:
+
+```
+Score this Facebook post on three criteria. Use a 1–5 scale.
+Return scores and one concrete fix per weak score (3 or higher).
+
+Criteria:
+- AI-generated feel: 1 = sounds human, 5 = sounds robotic
+- Hook strength: 1 = stops the scroll, 5 = no reason to read on
+- Usefulness: 1 = actionable and specific, 5 = vague and forgettable
+- Originality: 1 = angle feels fresh or unexpected, 5 = generic or forgettable content type
+
+Copy: <full draft copy>
+
+Respond only with scores and fixes. No preamble.
+```
+
+If any score is 3 or higher, revise the draft before moving on.
+Apply only the fixes the judge flagged. Do not rewrite the whole post.
+Hold both the original draft and the revised draft — you will show both in Step 5.
+
+If all scores are 2 or lower, skip revision and proceed with the original draft.
+
+---
+
+## Step 4 — Propose a schedule
 
 Default: next Saturday or Sunday, 9:00am to 2:00pm CT. Vary the exact time — don't default to 10:00am every time. Use naturally varied times like 9:15am, 10:45am, 11:30am, 12:15pm, 1:00pm, 1:45pm.
 
@@ -87,23 +114,23 @@ State the proposed date and time clearly.
 
 ---
 
-## Step 4 — Present for approval
+## Step 5 — Present for approval
 
 Show the user:
 1. Post type chosen
-2. Drafted post copy
+2. If a revision was made in Step 3: show the judge's scores, the original draft, and the revised draft. If no revision: show only the final draft.
 3. What it links to (if anything)
 4. Proposed schedule date/time
 
 Wait for the user to approve, edit, or deny.
 
-- If approved: proceed to Step 5
-- If edited: incorporate edits, confirm, then proceed to Step 5
+- If approved: proceed to Step 6
+- If edited: incorporate edits, confirm, then proceed to Step 6
 - If denied: stop
 
 ---
 
-## Step 5 — Schedule via Facebook Graph API
+## Step 6 — Schedule via Facebook Graph API
 
 Use credentials from env vars:
 - `FB_PAGE_ID` — the page to post to

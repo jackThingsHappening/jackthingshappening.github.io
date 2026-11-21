@@ -34,3 +34,8 @@
 | 2026-10-24 10:30am CT | guide-promotion | Chickamauga Battlefield hiking/biking | outdoors guide (chickamauga-battlefield filter) |
 | 2026-10-09 10:45am CT | content-spotlight | Stringers Ridge | outdoors guide (stringers-ridge filter) |
 | 2026-10-25 11:45am CT | guide-promotion | Snooper's Rock overlook | outdoors guide |
+| 2026-11-22 10:45am CT | event-post | Reading Room Thanksgiving Potluck | reading-room-bar tag page |
+| 2026-11-24 11:30am CT | events | Isaiah Rashad / Ambient Night / Tyler Bryant Holiday Benefit | events page |
+| 2026-11-28 10:15am CT | guide-promotion | Chattanooga Ducks / tours guide | tours guide |
+| 2026-11-29 11:15am CT | events | Birding by Kayak / Handel's Messiah / Little Debbie Christmas Tree Cake Run | events page |
+| 2026-12-04 9:15am CT | events | Emo Phillips / White Elephant at Plant Bar / Holly Jolly Trolley Jasper | events page |

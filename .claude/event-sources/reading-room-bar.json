@@ -1,0 +1,20 @@
+{
+  "name": "The Reading Room",
+  "type": "calendar",
+  "url": "https://www.readingroombar.com/",
+  "outputDir": "src/pages/chattanooga/events/reading-room-bar",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "The Reading Room",
+    "address": "3210B Brainerd Rd, Chattanooga, TN 37411",
+    "iconPath": "/images/icons-new/beer.png",
+    "eventLink": "https://www.readingroombar.com/",
+    "tags": [
+      { "type": "place", "tag": "reading-room-bar" },
+      { "type": "genre", "tag": "live-events" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-11-19"
+}

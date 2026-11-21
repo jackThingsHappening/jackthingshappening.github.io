@@ -79,11 +79,39 @@ If the user asks to post now instead of scheduling, note that and proceed to Ste
 
 ---
 
+## Step 4.5 — Judge review
+
+Spawn an Agent with only this prompt — no other context, no site background:
+
+```
+Score this Facebook post on three criteria. Use a 1–5 scale.
+Return scores and one concrete fix per weak score (3 or higher).
+
+Criteria:
+- AI-generated feel: 1 = sounds human, 5 = sounds robotic
+- Hook strength: 1 = stops the scroll, 5 = no reason to read on
+- Usefulness: 1 = actionable and specific, 5 = vague and forgettable
+- Originality: 1 = angle feels fresh or unexpected, 5 = generic or forgettable content type
+
+Photo: <one-line description of what the photo shows>
+Copy: <full draft copy>
+
+Respond only with scores and fixes. No preamble.
+```
+
+If any score is 3 or higher, revise the draft before moving to Step 5.
+Apply only the fixes the judge flagged. Do not rewrite the whole post.
+Hold both the original draft and the revised draft — you will show both in Step 5.
+
+If all scores are 2 or lower, skip revision and proceed with the original draft.
+
+---
+
 ## Step 5 — Present for approval
 
 Show the user:
 1. Photo path and a one-line description of what it shows
-2. Drafted post copy
+2. If a revision was made in Step 4.5: show the judge's scores, the original draft, and the revised draft. If no revision: show only the final draft.
 3. What it links to
 4. Proposed schedule date/time (or "posting now" if immediate)
 

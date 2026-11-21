@@ -45,7 +45,34 @@ Rules:
 - Write like a local, not a marketer
 - Under 120 words total
 
-## Step 4 — Propose a schedule
+## Step 4 — Judge review
+
+Spawn an Agent with only this prompt — no other context, no site background:
+
+```
+Score this Facebook post on three criteria. Use a 1–5 scale.
+Return scores and one concrete fix per weak score (3 or higher).
+
+Criteria:
+- AI-generated feel: 1 = sounds human, 5 = sounds robotic
+- Hook strength: 1 = stops the scroll, 5 = no reason to read on
+- Usefulness: 1 = actionable and specific, 5 = vague and forgettable
+- Originality: 1 = angle feels fresh or unexpected, 5 = generic or forgettable content type
+
+Copy: <full draft copy>
+
+Respond only with scores and fixes. No preamble.
+```
+
+If any score is 3 or higher, revise the draft before moving on.
+Apply only the fixes the judge flagged. Do not rewrite the whole post.
+Hold both the original draft and the revised draft — you will show both in Step 6.
+
+If all scores are 2 or lower, skip revision and proceed with the original draft.
+
+---
+
+## Step 5 — Propose a schedule
 
 Calculate the ideal post date:
 - If the event is 8+ days away: post 5–7 days before the event date
@@ -56,21 +83,21 @@ Time: anywhere from 9:00am to 1:00pm CT. Vary the exact time — pick naturally 
 
 State the proposed date and time clearly.
 
-## Step 5 — Present for approval
+## Step 6 — Present for approval
 
 Show the user:
 1. The event chosen (title, venue, date)
-2. The drafted post copy
+2. If a revision was made in Step 4: show the judge's scores, the original draft, and the revised draft. If no revision: show only the final draft.
 3. The event page URL
 4. The proposed schedule date/time
 
 Wait for the user to **approve**, **edit**, or **deny**.
 
-- If approved: proceed to Step 6
-- If edited: incorporate edits, confirm, then proceed to Step 6
+- If approved: proceed to Step 7
+- If edited: incorporate edits, confirm, then proceed to Step 7
 - If denied: stop
 
-## Step 6 — Schedule via Facebook Graph API
+## Step 7 — Schedule via Facebook Graph API
 
 Use the credentials from env vars:
 - `FB_PAGE_ID` — the page to post to
