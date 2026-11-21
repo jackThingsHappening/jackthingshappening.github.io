@@ -1,0 +1,34 @@
+{
+  "name": "Chattanooga Zoo",
+  "type": "recurring",
+  "url": "https://www.chattzoo.org/events",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/chattanooga-zoo/adventure-days.mdx",
+      "matchHint": "Quarterly Adventure Days with Chattanooga Public Library: library card holders 18 and under get free zoo admission, story time at 11am and noon, hands-on activities all day. Dates: March 22, June 28, September 20, December 20. Hours 9am-5pm."
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/chattanooga-zoo/conservation-awareness-days.mdx",
+      "matchHint": "Monthly Conservation Awareness Days celebrating SAFE (Saving Animals From Extinction) programs: keeper chats, animal enrichment, info stations, arts and crafts. Dates: September 19, October 24, November 21. Hours 11am-3pm. Included with standard admission."
+    }
+  ],
+  "defaultFrontmatter": {
+    "venue": "Chattanooga Zoo",
+    "address": "301 North Holtzclaw Avenue, Chattanooga, TN 37404",
+    "iconPath": "/images/icons-new/pine-tree.png",
+    "eventLink": "https://www.chattzoo.org/events",
+    "tags": [
+      {
+        "type": "place",
+        "tag": "chattanooga-zoo"
+      },
+      {
+        "type": "genre",
+        "tag": "outdoors"
+      }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-11-21"
+}
