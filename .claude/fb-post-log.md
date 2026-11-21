@@ -39,3 +39,5 @@
 | 2026-11-28 10:15am CT | guide-promotion | Chattanooga Ducks / tours guide | tours guide |
 | 2026-11-29 11:15am CT | events | Birding by Kayak / Handel's Messiah / Little Debbie Christmas Tree Cake Run | events page |
 | 2026-12-04 9:15am CT | events | Emo Phillips / White Elephant at Plant Bar / Holly Jolly Trolley Jasper | events page |
+| 2026-12-05 11:30am CT | guide-promotion | The Hot Chocolatier / community survival story | confections guide |
+| 2026-12-10 10:45am CT | events | Sister Hazel / Run Santa Run / Mannheim Steamroller / GrungeFest | events page |
