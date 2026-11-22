@@ -5,9 +5,6 @@ import BaseHead from '../../../../components/Head/BaseHead.astro';
 import ExploreHeader from '../../../../components/ExploreHeader.astro';
 import { expandEvents } from '../../../../utils/expandEvents';
 import Footer from '../../../../components/Footer/Footer.astro';
-import GuidesEditorialsNav from '../../../../components/GuidesEditorialsNav.astro';
-import type { ActiveTab } from '../../../../components/GuidesEditorialsNav.astro';
-
 export async function getStaticPaths() {
   const allPosts = (Object.values(import.meta.glob('../../../**/*.mdx', { eager: true }))).filter(
     (post) => post.frontmatter.published !== false
@@ -33,7 +30,6 @@ export async function getStaticPaths() {
 }
 
 const { tag } = Astro.params;
-const activeTab: ActiveTab = tag === 'interactive' ? 'interactive' : 'all';
 
 // Since we cannot share allPosts between getStaticPaths and the component,
 // we need to fetch them again here for filtering
@@ -67,8 +63,6 @@ const allPostsIncludingMultipleDates = expandEvents(filteredPosts);
         <ExploreHeader>
           Explore <span class="text-customGreen1">Chattanooga</span> Like a Local with Our Guides<span class="text-customGreen1">.</span>
         </ExploreHeader>
-        <GuidesEditorialsNav active={activeTab} />
-
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 py-8" data-test="articles-section">
           {allPostsIncludingMultipleDates.map(p => <div class="col-span-1">
             <Card post={p} highlighted={tag} />

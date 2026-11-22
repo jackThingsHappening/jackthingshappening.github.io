@@ -2,7 +2,6 @@
 import BaseHead from '../../components/Head/BaseHead.astro';
 import Nav from '../../components/Nav.astro';
 import Card from '../../components/Card.astro';
-import GuidesEditorialsNav from '../../components/GuidesEditorialsNav.astro';
 import EventsNav from '../../components/EventsNav.astro';
 import ExploreHeader from '../../components/ExploreHeader.astro';
 import Footer from '../../components/Footer/Footer.astro';
@@ -226,7 +225,6 @@ const page = {
       <ExploreHeader>
         Explore <span class="text-customGreen1">{city}, TN</span> with our Guides<span class="text-customGreen1">.</span>
       </ExploreHeader>
-      <GuidesEditorialsNav active="all" />
       {SECTION_ORDER.filter((key) => bySection[key]?.length).map((key) => {
         const items = bySection[key];
         const label = SECTION_LABELS[key] ?? key;
