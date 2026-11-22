@@ -37,7 +37,13 @@ Parse `$ARGUMENTS` (space-separated tokens):
 **Output mode (optional):**
 - `output:terminal` → print rewritten content to terminal, do not write files
 - `output:source` → write rewrites back to the source files
-- Omitted → default to `output:terminal`
+- Omitted → default to `output:source`
+
+---
+
+## Draft file guard
+
+Skip any file where frontmatter contains `published: false`, unless a file path was passed explicitly as an argument. Do not rewrite drafts during batch or git-diff runs.
 
 ---
 
@@ -65,6 +71,8 @@ Rewrite all prose paragraphs in the body. Do not touch frontmatter, script tags,
 
 ## Voice rules
 
+0. **Preserve all facts exactly.** Do not add, omit, or alter any specific detail — names, dates, years, age restrictions, genres, prices, addresses, phone numbers, or venue names. If a fact is in the original, keep it. If a fact is not in the original, do not invent it. Style changes only.
+
 1. **Concrete over emotional.** Describe what a thing is or does — not how it is supposed to make you feel. Strip: *dazzling, breathtaking, vibrant, stunning, incredible, amazing, charming, magical, unforgettable, perfect*.
 
 2. **Specifics over superlatives.** "One of the best" and "incredible" carry no information. Name the detail that earns the claim. Strip: *one of the city's finest, a true X, gem of*.
@@ -73,9 +81,9 @@ Rewrite all prose paragraphs in the body. Do not touch frontmatter, script tags,
 
 4. **No urgency bait.** The description earns the visit — the warning doesn't. Strip: *don't miss, you won't want to skip, must-see, must-try, be sure to*.
 
-5. **Don't open with a label.** Never start with "[Name] is a [type of thing]." Lead with the texture of the night. "A night of darkwave at Barrelhouse" beats "CRIMEWAVE is a recurring darkwave night."
+5. **Don't open with a label** (guide descriptions and editorial openers only). Never start a guide `description` or editorial with "[Name] is a [type of thing]." Lead with the texture of the place or experience. "A neighborhood bar built around live music" beats "The Woodshop is a neighborhood bar." For event bodies, naming the act and their background first is correct — do not apply this rule there.
 
-6. **No hyphens joining words in prose.** Write them as two words or one: all ages, wood fired, drive thru. Never: *all-ages, wood-fired, drive-thru*.
+6. **No hyphens joining words in prose.** Write them as two words or one: all ages, wood fired, drive thru. Never: *all-ages, wood-fired, drive-thru*. Exception: proper nouns and official event or venue names keep their hyphens exactly as published.
 
 7. **No em dashes.** Never use — to connect clauses. Replace with a comma or split into two sentences. In `pageItems` titles and descriptions, eliminate the separator entirely — rewrite to remove the need for it.
 
