@@ -21,7 +21,7 @@ If no arguments, pick a post type below. Rotate through types for variety.
 
 **Events** — look in `src/pages/chattanooga/events/`. Only use events where `published: true` (not commented out). Pick 2-3 events with different vibes to cover multiple audiences.
 
-**Feature callout** — highlight a site feature that makes the platform useful. Show what it does, not just that it exists. Features: tag browse page, nearby cities, search, save to calendar, filter by dates, longform guides, guide PDFs, filter by region, filter by place, this week view, this weekend view.
+**Feature callout** — highlight a site feature that makes the platform useful. Show what it does, not just that it exists. Features: tag browse page, nearby cities, search, save to calendar, filter by dates, interactive guides, guide PDFs, filter by region, filter by place, this week view, this weekend view.
 
 **Guide** — look in `src/pages/chattanooga/guides/`. Pick the most compelling guide for a concrete, specific post. Read the MDX to find a specific item worth calling out.
 
