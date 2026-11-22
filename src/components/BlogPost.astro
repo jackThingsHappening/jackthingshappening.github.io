@@ -276,7 +276,7 @@ const similarEvents = currentGenreTags.length > 0
             })}
           </ul>
         ) : (
-          <p class="mt-1 text-gray-300">
+          <p class="mt-1 text-black">
             {displayDates.map((d: string, i: number) => (
               <span>{dayjs(d).format('ddd MMM D')}{i < displayDates.length - 1 ? ' · ' : ''}</span>
             ))}
@@ -489,7 +489,7 @@ const similarEvents = currentGenreTags.length > 0
         {venueEvents.map((e: any) => (
           <a href={e.url} class="flex flex-col hover:opacity-70 transition-opacity no-underline">
             <span class="text-customGreen1 font-semibold">{e.frontmatter.title}</span>
-            {e.frontmatter.pubDate && <span class="text-gray-400 text-sm">{e.frontmatter.pubDate}</span>}
+            {e.frontmatter.pubDate && <span class="text-black text-sm">{e.frontmatter.pubDate}</span>}
           </a>
         ))}
       </div>
@@ -503,7 +503,7 @@ const similarEvents = currentGenreTags.length > 0
         {similarEvents.map((e: any) => (
           <a href={e.url} class="flex flex-col hover:opacity-70 transition-opacity no-underline">
             <span class="text-customGreen1 font-semibold">{e.frontmatter.title}</span>
-            <span class="text-gray-400 text-sm">{[e.frontmatter.venue, e.frontmatter.pubDate].filter(Boolean).join(' · ')}</span>
+            <span class="text-black text-sm">{[e.frontmatter.venue, e.frontmatter.pubDate].filter(Boolean).join(' · ')}</span>
           </a>
         ))}
       </div>

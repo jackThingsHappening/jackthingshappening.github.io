@@ -76,12 +76,12 @@ const eventUrl = post.pubDate && post.url && !post.url.includes(post.pubDate)
         {post.title}{eventDateDetails?.eventTitle ? `: ${eventDateDetails.eventTitle}` : ''}
       </h2>
       {(post.pubDate || post.lastUpdated) && (
-        <p class="text-lg text-gray-600 mt-2 flex items-center gap-2">
+        <p class="text-lg text-black mt-2 flex items-center gap-2">
           {`${dayOfWeek}`} {dayjs(pubDateLocal).format('MM-DD-YYYY')}
         </p>
       )}
       {post.time && (
-        <p class="text-lg text-gray-600">{post.time}</p>
+        <p class="text-lg text-black">{post.time}</p>
       )}
     </a>
     {post.pubDate && (
@@ -121,7 +121,7 @@ const eventUrl = post.pubDate && post.url && !post.url.includes(post.pubDate)
   <!-- Overview Section -->
   {(post.seoDescription || post.topDetails?.text) && (
     <a href={post.url} class="block">
-      <p class="px-4 mt-6 mb-1 text-lg text-gray-600 line-clamp-2">{post.seoDescription || post.topDetails?.text}<span class="text-2xl">...</span></p>
+      <p class="px-4 mt-6 mb-1 text-lg text-black line-clamp-2">{post.seoDescription || post.topDetails?.text}<span class="text-2xl">...</span></p>
     </a>
   )}
 
@@ -136,7 +136,7 @@ const eventUrl = post.pubDate && post.url && !post.url.includes(post.pubDate)
         <span class="hidden group-open:inline">Less</span>
       </summary>
       <a href={post.url} class="block">
-        <p class="mt-2 mb-2 text-xl text-gray-600">{post.seoDescription || post.topDetails?.text}</p>
+        <p class="mt-2 mb-2 text-xl text-black">{post.seoDescription || post.topDetails?.text}</p>
       </a>
     </details>
   )}
@@ -151,7 +151,7 @@ const eventUrl = post.pubDate && post.url && !post.url.includes(post.pubDate)
         <span class="group-open:hidden">More details</span>
         <span class="hidden group-open:inline">Less</span>
       </summary>
-      <div class="mt-2 space-y-1 text-base text-gray-600 pl-1">
+      <div class="mt-2 space-y-1 text-base text-black pl-1">
         {post.venue && <p>{post.venue}</p>}
         {post.address && <p>{post.address}</p>}
         {post.entranceCost && <p>Cost: {post.entranceCost}</p>}

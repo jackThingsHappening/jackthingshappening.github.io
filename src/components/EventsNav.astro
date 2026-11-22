@@ -12,7 +12,7 @@ const { active } = Astro.props;
 const linkClass = (tab: ActiveTab) =>
   active === tab
     ? 'text-customGreen1 font-medium border-b-2 border-logoDarkGreen pb-1'
-    : 'text-gray-600 hover:text-customGreen1 pb-1 border-b-2 border-transparent hover:border-logoDarkGreen transition-colors';
+    : 'text-black hover:text-customGreen1 pb-1 border-b-2 border-transparent hover:border-logoDarkGreen transition-colors';
 ---
 
 <nav class="flex flex-wrap gap-x-3 gap-y-2 pt-10 text-xl md:gap-x-5 md:text-[1.7rem]" aria-label="Event filters">
@@ -21,7 +21,7 @@ const linkClass = (tab: ActiveTab) =>
   <a href="/chattanooga/events/this-weekend" class={linkClass('this-weekend')}>This Weekend</a>
   <a href="/chattanooga/events/this-week" class={linkClass('this-week')}>This Week</a>
   <!-- <a href="/chattanooga/events/this-month" class={linkClass('this-month')}>This Month</a> -->
-  <span class="text-gray-300 select-none" aria-hidden="true">|</span>
+  <span class="text-black select-none" aria-hidden="true">|</span>
   <a href="/chattanooga/events/tags" class={linkClass('tags')}>Browse Tags</a>
   <a href="/chattanooga/events/nearby" class={linkClass('nearby')}>Nearby Cities</a>
 </nav>

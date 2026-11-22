@@ -14,7 +14,6 @@ import Footer from '../../components/Footer/Footer.astro';
       <div class="header-styles pt-14 pb-10">
         <div class="max-w-5xl mx-auto px-3">
           <h1 style="font-family: 'Libre Baskerville', serif; font-size: clamp(2.75rem, 5vw, 4.5rem);">My Favorites</h1>
-          <p class="text-xl mt-2 opacity-80">Your saved events and guide items, stored in your browser.</p>
           <div class="text-lg text-white-700 mt-4 max-w-2xl space-y-2">
             <p>Star any event or guide item to save it here. Your favorites stay saved between visits. Nothing is stored on a server, it all lives in your browser's local storage.</p>
             <p>To save an event, click the star icon on any event card. To save a guide item, click the star on any item inside an <a href="/chattanooga/guides/tag/interactive" class="underline hover:text-customGreen1">interactive guide</a>.</p>
@@ -23,7 +22,7 @@ import Footer from '../../components/Footer/Footer.astro';
       </div>
 
       <div class="max-w-5xl mx-auto px-3 py-10">
-        <div id="empty-state" class="hidden text-gray-500 text-xl py-10 text-center">
+        <div id="empty-state" class="hidden text-black text-xl py-10 text-center">
           Nothing saved yet. Browse events and guides and click the star to save items.
         </div>
 
@@ -107,9 +106,9 @@ import Footer from '../../components/Footer/Footer.astro';
     li.innerHTML = `
       <a href="${navUrl}" class="flex-1 min-w-0 group">
         <p class="text-xl font-medium group-hover:text-[#3CB371] transition-colors">${event.title}</p>
-        ${event.pubDate ? `<p class="text-base text-gray-500 mt-0.5">${formatDate(event.pubDate)}</p>` : ''}
+        ${event.pubDate ? `<p class="text-base text-black mt-0.5">${formatDate(event.pubDate)}</p>` : ''}
       </a>
-      <button class="remove-btn flex-shrink-0 text-gray-300 hover:text-red-400 transition-colors text-2xl leading-none mt-0.5" aria-label="Remove">×</button>
+      <button class="remove-btn flex-shrink-0 text-black hover:text-red-400 transition-colors text-2xl leading-none mt-0.5" aria-label="Remove">×</button>
     `;
     li.querySelector('.remove-btn')!.addEventListener('click', () => removeEvent(event.key, li));
     return li;
@@ -123,9 +122,9 @@ import Footer from '../../components/Footer/Footer.astro';
     li.innerHTML = `
       <a href="${guideUrl}" class="flex-1 min-w-0 group">
         <p class="text-xl font-medium group-hover:text-[#3CB371] transition-colors">${item.title}</p>
-        <p class="text-base text-gray-500 mt-0.5">${guideName}</p>
+        <p class="text-base text-black mt-0.5">${guideName}</p>
       </a>
-      <button class="remove-btn flex-shrink-0 text-gray-300 hover:text-red-400 transition-colors text-2xl leading-none mt-0.5" aria-label="Remove">×</button>
+      <button class="remove-btn flex-shrink-0 text-black hover:text-red-400 transition-colors text-2xl leading-none mt-0.5" aria-label="Remove">×</button>
     `;
     li.querySelector('.remove-btn')!.addEventListener('click', () => removeGuideItem(item.key, li));
     return li;

@@ -58,7 +58,7 @@ placeTags.sort((a, b) => b.count - a.count);
   <main>
     <article class="w-full px-4 md:px-8 lg:px-16 mt-8 pb-4">
       <ExploreHeader>Browse events by tag</ExploreHeader>
-      <p class="text-gray-600 text-xl3 mt-4 mb-2">Tags organize every Chattanooga event into two groups: genre and place. Genre tags sort by type: <a href="/chattanooga/events/tag/music" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">music</a>, <a href="/chattanooga/events/tag/food" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">food</a>, <a href="/chattanooga/events/tag/outdoors" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">outdoors</a>, <a href="/chattanooga/events/tag/sports" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">sports</a>, <a href="/chattanooga/events/tag/arts" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">arts</a>, and more. Place tags filter by venue or neighborhood, so you can find everything happening at a specific spot. Each tag shows a live count of upcoming events. Use them to skip straight to what interests you instead of scrolling the full list. Browse both groups below, or sort by count to see what's most active right now.</p>
+      <p class="text-black text-xl3 mt-4 mb-2">Tags organize every Chattanooga event into two groups: genre and place. Genre tags sort by type: <a href="/chattanooga/events/tag/music" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">music</a>, <a href="/chattanooga/events/tag/food" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">food</a>, <a href="/chattanooga/events/tag/outdoors" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">outdoors</a>, <a href="/chattanooga/events/tag/sports" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">sports</a>, <a href="/chattanooga/events/tag/arts" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">arts</a>, and more. Place tags filter by venue or neighborhood, so you can find everything happening at a specific spot. Each tag shows a live count of upcoming events. Use them to skip straight to what interests you instead of scrolling the full list. Browse both groups below, or sort by count to see what's most active right now.</p>
       <EventsNav active="tags" />
 
       <div class="mt-8 flex flex-wrap items-center gap-2">
@@ -69,7 +69,7 @@ placeTags.sort((a, b) => b.count - a.count);
       </div>
 
       <section class="mt-8">
-        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Genre</h2>
+        <h2 class="text-2xl font-semibold text-black mb-4">Genre</h2>
         <div id="genre-tags" class="flex flex-wrap gap-3">
           {genreTags.map(({ tag, count }) => (
             <a
@@ -84,7 +84,7 @@ placeTags.sort((a, b) => b.count - a.count);
       </section>
 
       <section class="mt-10">
-        <h2 class="text-2xl font-semibold text-gray-700 mb-4">Place</h2>
+        <h2 class="text-2xl font-semibold text-black mb-4">Place</h2>
         <div id="place-tags" class="flex flex-wrap gap-3">
           {placeTags.map(({ tag, count }) => (
             <a
@@ -99,7 +99,7 @@ placeTags.sort((a, b) => b.count - a.count);
       </section>
 
       <div class="mt-16 pt-8 border-t border-gray-200">
-        <p class="text-gray-600 text-xl mb-3">Get more local guides and events in your inbox.</p>
+        <p class="text-black text-xl mb-3">Get more local guides and events in your inbox.</p>
         <EmailSignup />
       </div>
     </article>
