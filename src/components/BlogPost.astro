@@ -89,22 +89,20 @@ eventLink = eventDateDetails && eventDateDetails.eventLink ?  eventDateDetails.e
 const hasMetadata = !!(pubDate || time || venue || address || entranceCost || author || readTime || lastUpdated || originalDate || geoCoverage || (neighborhoods && neighborhoods.length) || seasonality || parking || accessibilityNotes || kidFriendly !== undefined || petFriendly !== undefined || (bestFor && bestFor.length) || eventLink || ticketsLink || (tags && tags.length > 0) || (sources && sources.length) || displayDates.length > 0);
 
 const GUIDE_MAP: Record<string, { slug: string; label: string }> = {
-  'music':       { slug: 'live-music',               label: 'Live Music in Chattanooga' },
-  'live-events': { slug: 'live-music',               label: 'Live Music in Chattanooga' },
-  'comedy':      { slug: 'performance-arts',         label: 'Performing Arts in Chattanooga' },
-  'theatre':     { slug: 'performance-arts',         label: 'Performing Arts in Chattanooga' },
-  'theater':     { slug: 'performance-arts',         label: 'Performing Arts in Chattanooga' },
-  'sports':      { slug: 'live-sports',              label: 'Live Sports in Chattanooga' },
-  'outdoors':    { slug: 'outdoors',                 label: 'Outdoor Adventures in Chattanooga' },
-  'farm':        { slug: 'outdoors',                 label: 'Outdoor Adventures in Chattanooga' },
-  'museum':      { slug: 'exhibits',                 label: 'Exhibits & Museums in Chattanooga' },
-  'brewery':     { slug: 'breweries-and-wineries',   label: 'Breweries & Wineries in Chattanooga' },
-  'food-drink':  { slug: 'breweries-and-wineries',   label: 'Breweries & Wineries in Chattanooga' },
-  'food':        { slug: 'restaurants-with-a-view',  label: 'Restaurants in Chattanooga' },
-  'community':   { slug: 'things-to-do',             label: 'Things to Do in Chattanooga' },
-  'festivals':   { slug: 'things-to-do',             label: 'Things to Do in Chattanooga' },
-  'trivia':      { slug: 'things-to-do',             label: 'Things to Do in Chattanooga' },
-  'market':      { slug: 'things-to-do',             label: 'Things to Do in Chattanooga' },
+  'music':            { slug: 'live-music',               label: 'Live Music in Chattanooga' },
+  'live-music':       { slug: 'live-music',               label: 'Live Music in Chattanooga' },
+  'live-events':      { slug: 'live-music',               label: 'Live Music in Chattanooga' },
+  'live-performance': { slug: 'performance-arts',         label: 'Performing Arts in Chattanooga' },
+  'comedy':           { slug: 'performance-arts',         label: 'Performing Arts in Chattanooga' },
+  'theatre':          { slug: 'performance-arts',         label: 'Performing Arts in Chattanooga' },
+  'theater':          { slug: 'performance-arts',         label: 'Performing Arts in Chattanooga' },
+  'sports':           { slug: 'live-sports',              label: 'Live Sports in Chattanooga' },
+  'outdoors':         { slug: 'outdoors',                 label: 'Outdoor Adventures in Chattanooga' },
+  'farm':             { slug: 'outdoors',                 label: 'Outdoor Adventures in Chattanooga' },
+  'museum':           { slug: 'exhibits',                 label: 'Exhibits & Museums in Chattanooga' },
+  'brewery':          { slug: 'breweries-and-wineries',   label: 'Breweries & Wineries in Chattanooga' },
+  'food-drink':       { slug: 'breweries-and-wineries',   label: 'Breweries & Wineries in Chattanooga' },
+  'food':             { slug: 'restaurants-with-a-view',  label: 'Restaurants in Chattanooga' },
 };
 
 const relatedGuide = tags
