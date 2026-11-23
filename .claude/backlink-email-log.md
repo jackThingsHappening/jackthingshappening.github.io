@@ -308,6 +308,33 @@ jack@thingshappening.com
 
 ---
 
+## chattanooga.gov — 2026-11-22
+
+**Contact:** Unknown — no contact found. Target page: https://chattanooga.gov/stay-informed/new-residents. Email addressed to Eric; find the right contact before sending.
+
+**Placement pages:**
+1. https://chattanooga.gov/stay-informed/new-residents — alongside existing local guides — "free Chattanooga events directory"
+
+**Drafted message:**
+
+Subject: ThingsHappening.com: A free Chattanooga events directory
+
+Hi Eric,
+
+I run ThingsHappening.com, a free Chattanooga events site and newsletter.
+
+Your New Residents page already links to several local guides. ThingsHappening would fit alongside them — it's a free, regularly updated directory of Chattanooga events by category: concerts, food festivals, outdoor activities, and family events.
+
+Resident feedback has been positive, and I think it's useful for people still learning the city.
+
+If you're not the right person for this, would you mind passing it along to whoever manages the site?
+
+Thanks,
+Jack Byrum
+ThingsHappening.com
+
+---
+
 ## colemanconcierge.com — 2026-10-01
 
 **Contact:** colemans@colemanconcierge.com

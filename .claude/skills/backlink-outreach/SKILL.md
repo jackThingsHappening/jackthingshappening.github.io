@@ -64,10 +64,14 @@ Pick the top 3 placements. For each, note:
 Write a short, direct pitch. Follow these rules:
 - STE writing style: sentences under 20 words, active voice, no filler phrases
 - No em dashes
+- Lead with fit, not features — open by naming their specific page, then explain how ThingsHappening belongs there
+- Make the value case for their audience, not for ThingsHappening ("useful for people exploring the region," not "great for our traffic")
+- Cut hedges — no "I think it would be useful"; just say what it does
 - Name the specific pages and placements so they don't have to do any work
 - Offer $150 for one link on one of the three pages
 - Offer payment via PayPal or Venmo once the link is live
-- Sign as Jack Byram, jack@thingshappening.com
+- Include a redirect ask at the end ("If you're not the right person, would you mind passing this along?")
+- Sign as Jack Byrum, jack@thingshappening.com
 
 If the site only has a contact form (no email), note that at the top of the draft so the user knows to paste it into the form.
 

@@ -33,3 +33,4 @@ Tracks every site researched for paid backlink opportunities. One row per domain
 | 2026-10-01 | onlybyland.com | Pending | No | https://onlybyland.com/ |
 | 2026-10-01 | verbalgoldblog.com | Pending | No | https://www.verbalgoldblog.com/ |
 | 2026-10-01 | scratchmadesouthern.com | Pending | No | https://scratchmadesouthern.com/ |
+| 2026-11-22 | chattanooga.gov | Unknown — no contact found yet | Yes | https://chattanooga.gov/stay-informed/new-residents |
