@@ -16,7 +16,7 @@ interface MarkdownFrontmatter {
 
 const title = 'Chattanooga Events This Week and Weekend | Things Happening';
 const seoDescription = 'Find things to do in Chattanooga, TN. Browse upcoming events, live music, outdoor adventures, local guides, and more, updated daily.';
-const city = "Chattanooga";
+const city ="Chattanooga";
 
 const allGuides = (Object.values(import.meta.glob('./guides/*.mdx', { eager: true }))).filter(
   (post) => post.frontmatter.published !== false
@@ -131,46 +131,46 @@ const page = {
 <head>
   <BaseHead title={title} description={seoDescription} />
   <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@graph": [
+   "@context":"https://schema.org",
+   "@graph": [
       {
-        "@type": "WebPage",
-        "@id": "https://thingshappening.com/chattanooga/#webpage",
-        "url": "https://thingshappening.com/chattanooga/",
-        "name": title,
-        "description": seoDescription,
-        "isPartOf": { "@id": "https://thingshappening.com/#website" },
-        "about": {
-          "@type": "City",
-          "name": "Chattanooga",
-          "sameAs": "https://www.wikidata.org/wiki/Q79578"
+       "@type":"WebPage",
+       "@id":"https://thingshappening.com/chattanooga/#webpage",
+       "url":"https://thingshappening.com/chattanooga/",
+       "name": title,
+       "description": seoDescription,
+       "isPartOf": {"@id":"https://thingshappening.com/#website" },
+       "about": {
+         "@type":"City",
+         "name":"Chattanooga",
+         "sameAs":"https://www.wikidata.org/wiki/Q79578"
         }
       },
       {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thingshappening.com" },
-          { "@type": "ListItem", "position": 2, "name": "Chattanooga", "item": "https://thingshappening.com/chattanooga" }
+       "@type":"BreadcrumbList",
+       "itemListElement": [
+          {"@type":"ListItem","position": 1,"name":"Home","item":"https://thingshappening.com" },
+          {"@type":"ListItem","position": 2,"name":"Chattanooga","item":"https://thingshappening.com/chattanooga" }
         ]
       },
       {
-        "@type": "ItemList",
-        "name": "Upcoming Events in Chattanooga, TN",
-        "description": "Upcoming events happening in Chattanooga, TN.",
-        "itemListElement": sortedEvents.slice(0, 10).map((e, i) => ({
-          "@type": "ListItem",
-          "position": i + 1,
-          "url": `https://thingshappening.com${e.url}`
+       "@type":"ItemList",
+       "name":"Upcoming Events in Chattanooga, TN",
+       "description":"Upcoming events happening in Chattanooga, TN.",
+       "itemListElement": sortedEvents.slice(0, 10).map((e, i) => ({
+         "@type":"ListItem",
+         "position": i + 1,
+         "url": `https://thingshappening.com${e.url}`
         }))
       },
       {
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type": "Question", "name": "What neighborhoods does this cover?", "acceptedAnswer": { "@type": "Answer", "text": "This site covers events and spots across Chattanooga: Downtown, North Shore, Southside, St. Elmo, East Brainerd, Red Bank, and surrounding areas." } },
-          { "@type": "Question", "name": "How do I find outdoor things to do in Chattanooga?", "acceptedAnswer": { "@type": "Answer", "text": "Browse the outdoors tag at thingshappening.com/chattanooga/events/tag/outdoors for upcoming events, or read the outdoors guides for trails, parks, and water access points." } },
-          { "@type": "Question", "name": "Where can I find live music this weekend in Chattanooga?", "acceptedAnswer": { "@type": "Answer", "text": "Check the this weekend filter at thingshappening.com/chattanooga/events/this-weekend and use the music tag to narrow it down." } },
-          { "@type": "Question", "name": "Are guides free to download?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. PDF versions of guides are free. No email required." } },
-          { "@type": "Question", "name": "How often does the event calendar update?", "acceptedAnswer": { "@type": "Answer", "text": "The calendar rebuilds every day. Events get added as they are announced." } }
+       "@type":"FAQPage",
+       "mainEntity": [
+          {"@type":"Question","name":"What neighborhoods does this cover?","acceptedAnswer": {"@type":"Answer","text":"This site covers events and spots across Chattanooga: Downtown, North Shore, Southside, St. Elmo, East Brainerd, Red Bank, and surrounding areas." } },
+          {"@type":"Question","name":"How do I find outdoor things to do in Chattanooga?","acceptedAnswer": {"@type":"Answer","text":"Browse the outdoors tag at thingshappening.com/chattanooga/events/tag/outdoors for upcoming events, or read the outdoors guides for trails, parks, and water access points." } },
+          {"@type":"Question","name":"Where can I find live music this weekend in Chattanooga?","acceptedAnswer": {"@type":"Answer","text":"Check the this weekend filter at thingshappening.com/chattanooga/events/this-weekend and use the music tag to narrow it down." } },
+          {"@type":"Question","name":"Are guides free to download?","acceptedAnswer": {"@type":"Answer","text":"Yes. PDF versions of guides are free. No email required." } },
+          {"@type":"Question","name":"How often does the event calendar update?","acceptedAnswer": {"@type":"Answer","text":"The calendar rebuilds every day. Events get added as they are announced." } }
         ]
       }
     ]
@@ -184,11 +184,8 @@ const page = {
       <article id="events" class="w-full px-4 md:px-8 lg:px-16 mt-8 pb-4">
         <header class="pt-8">
           <h1 class="font-jakarta font-bold text-[3.3rem] leading-[1.2]">
-            What's happening in <span class="shimmer-text">Chattanooga</span><span class="text-customGreen1">.</span>
+            What's happening in <span class="text-customGreen1">Chattanooga</span><span class="text-customGreen1">.</span>
           </h1>
-          <p class="text-black text-xl3 mt-6 mb-8">Your guide to what's going on in Chattanooga. Events, live music, outdoor adventures, and local guides.</p>
-          <p class="text-black text-xl3 mb-12">Also check out our <a href="/chattanooga/guides/tag/interactive" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-8 [text-decoration-skip-ink:none] hover:opacity-70 transition-opacity">interactive guides</a> for Chattanooga, with filters and PDF downloads<span class="text-customGreen1 text-3xl">.</span></p>
-          <EmailSignup />
         </header>
         <EventsNav active="all" />
         <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 py-8">
@@ -198,6 +195,7 @@ const page = {
             </div>
           ))}
         </section>
+        <EmailSignup />
         <div class="mt-4">
           <a href="/chattanooga/events/page/1" class="text-customGreen1 font-semibold underline decoration-logoDarkGreen hover:opacity-90 transition-colors text-2xl">View More Events</a>
         </div>

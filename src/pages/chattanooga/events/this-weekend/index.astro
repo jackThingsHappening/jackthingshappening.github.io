@@ -41,12 +41,12 @@ allPostsIncludingMultipleDates = sortEvents(allPostsIncludingMultipleDates);
 <head>
   <BaseHead title={title} description={seoDescription} />
   <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thingshappening.com" },
-      { "@type": "ListItem", "position": 2, "name": "Chattanooga", "item": "https://thingshappening.com/chattanooga" },
-      { "@type": "ListItem", "position": 3, "name": "Events This Weekend", "item": "https://thingshappening.com/chattanooga/events/this-weekend" }
+   "@context":"https://schema.org",
+   "@type":"BreadcrumbList",
+   "itemListElement": [
+      {"@type":"ListItem","position": 1,"name":"Home","item":"https://thingshappening.com" },
+      {"@type":"ListItem","position": 2,"name":"Chattanooga","item":"https://thingshappening.com/chattanooga" },
+      {"@type":"ListItem","position": 3,"name":"Events This Weekend","item":"https://thingshappening.com/chattanooga/events/this-weekend" }
     ]
   })} />
 </head>
@@ -55,7 +55,7 @@ allPostsIncludingMultipleDates = sortEvents(allPostsIncludingMultipleDates);
   <main>
     <article class="w-full px-4 md:px-8 lg:px-16 mt-8 pb-4">
       <ExploreHeader>
-        <span class="text-customGreen1 shimmer-text">#this-weekend</span> events in Chattanooga
+        <span class="text-customGreen1">#this-weekend</span> events in Chattanooga
       </ExploreHeader>
       <p class="text-black text-xl3 mt-4 mb-2">Chattanooga fills up on weekends. This page lists every event happening Friday through Sunday in the city. Live music, outdoor adventures, food events, arts performances, sports, and more. Events are updated daily as new ones are added. Save any event to your <a href="/chattanooga/my-favorites" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">favorites</a> or send it straight to your <a href="/chattanooga/my-favorites" class="text-customGreen1 underline decoration-logoDarkGreen underline-offset-4 hover:opacity-70 transition-opacity">calendar</a>.</p>
       <EventsNav active="this-weekend" />

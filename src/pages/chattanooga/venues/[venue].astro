@@ -86,13 +86,13 @@ const schema = {
     <link rel="canonical" href={`https://thingshappening.com${Astro.url.pathname}`} />
     <script type="application/ld+json" set:html={JSON.stringify(schema)} />
     <script type="application/ld+json" set:html={JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thingshappening.com" },
-        { "@type": "ListItem", "position": 2, "name": "Chattanooga", "item": "https://thingshappening.com/chattanooga" },
-        { "@type": "ListItem", "position": 3, "name": "Venues", "item": "https://thingshappening.com/chattanooga/venues" },
-        { "@type": "ListItem", "position": 4, "name": venueData.name, "item": `https://thingshappening.com${Astro.url.pathname}` }
+     "@context":"https://schema.org",
+     "@type":"BreadcrumbList",
+     "itemListElement": [
+        {"@type":"ListItem","position": 1,"name":"Home","item":"https://thingshappening.com" },
+        {"@type":"ListItem","position": 2,"name":"Chattanooga","item":"https://thingshappening.com/chattanooga" },
+        {"@type":"ListItem","position": 3,"name":"Venues","item":"https://thingshappening.com/chattanooga/venues" },
+        {"@type":"ListItem","position": 4,"name": venueData.name,"item": `https://thingshappening.com${Astro.url.pathname}` }
       ]
     })} />
   </head>
@@ -101,7 +101,7 @@ const schema = {
     <main>
       <article class="w-full px-4 md:px-8 lg:px-16 mt-8 pb-4">
         <ExploreHeader>
-          <span class="text-customGreen1 shimmer-text">{venueData.name}</span>
+          <span class="text-customGreen1">{venueData.name}</span>
         </ExploreHeader>
 
         <div class="max-w-3xl mt-6 mb-8">

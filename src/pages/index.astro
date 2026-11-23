@@ -11,37 +11,37 @@ const seoDescription = 'Find things to do in Chattanooga, TN: events, live music
 <head>
   <BaseHead title={title} description={seoDescription} />
   <script type="application/ld+json" set:html={JSON.stringify({
-    "@context": "https://schema.org",
-    "@graph": [
+   "@context":"https://schema.org",
+   "@graph": [
       {
-        "@type": "WebSite",
-        "@id": "https://thingshappening.com/#website",
-        "url": "https://thingshappening.com",
-        "name": "Things Happening",
-        "description": "Local events and guides for Chattanooga, TN."
+       "@type":"WebSite",
+       "@id":"https://thingshappening.com/#website",
+       "url":"https://thingshappening.com",
+       "name":"Things Happening",
+       "description":"Local events and guides for Chattanooga, TN."
       },
       {
-        "@type": "Organization",
-        "@id": "https://thingshappening.com/#organization",
-        "name": "Things Happening",
-        "url": "https://thingshappening.com",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://thingshappening.com/images/logo.png"
+       "@type":"Organization",
+       "@id":"https://thingshappening.com/#organization",
+       "name":"Things Happening",
+       "url":"https://thingshappening.com",
+       "logo": {
+         "@type":"ImageObject",
+         "url":"https://thingshappening.com/images/logo.png"
         },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "jack@thingshappening.com",
-          "contactType": "customer support"
+       "contactPoint": {
+         "@type":"ContactPoint",
+         "email":"jack@thingshappening.com",
+         "contactType":"customer support"
         }
       },
       {
-        "@type": "FAQPage",
-        "mainEntity": [
-          { "@type": "Question", "name": "Do I need an account to use Things Happening?", "acceptedAnswer": { "@type": "Answer", "text": "No. Everything on the site is public. No login, no account, no algorithm. Browse events and guides without signing up." } },
-          { "@type": "Question", "name": "Can I save events I want to attend?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Click the star on any event or guide item to save it. Starred items are stored in your browser — no account needed." } },
-          { "@type": "Question", "name": "How current is the event calendar?", "acceptedAnswer": { "@type": "Answer", "text": "The calendar rebuilds every day. Most events are added within a day or two of being announced." } },
-          { "@type": "Question", "name": "Can I suggest an event or venue?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Email jack@thingshappening.com with the details." } }
+       "@type":"FAQPage",
+       "mainEntity": [
+          {"@type":"Question","name":"Do I need an account to use Things Happening?","acceptedAnswer": {"@type":"Answer","text":"No. Everything on the site is public. No login, no account, no algorithm. Browse events and guides without signing up." } },
+          {"@type":"Question","name":"Can I save events I want to attend?","acceptedAnswer": {"@type":"Answer","text":"Yes. Click the star on any event or guide item to save it. Starred items are stored in your browser — no account needed." } },
+          {"@type":"Question","name":"How current is the event calendar?","acceptedAnswer": {"@type":"Answer","text":"The calendar rebuilds every day. Most events are added within a day or two of being announced." } },
+          {"@type":"Question","name":"Can I suggest an event or venue?","acceptedAnswer": {"@type":"Answer","text":"Yes. Email jack@thingshappening.com with the details." } }
         ]
       }
     ]
@@ -53,13 +53,13 @@ const seoDescription = 'Find things to do in Chattanooga, TN: events, live music
   <main class="w-full px-4 md:px-8 lg:px-16 pt-8 pb-14">
     <header class="pt-8 max-w-3xl">
       <h1 class="font-jakarta font-bold text-5xl md:text-6xl leading-[1.2]">
-        An easier way to find things happening in <span class="text-customGreen1 shimmer-text">your city</span><span class="text-customGreen1">.</span>
+        An easier way to find things happening in <span class="text-customGreen1">your city</span><span class="text-customGreen1">.</span>
       </h1>
       <p class="text-black text-3xl mt-6">Currently covering Chattanooga, TN.</p>
     </header>
 
     <div class="mt-12 flex flex-col gap-4">
-      <a href="/chattanooga" class="inline-flex items-center gap-3 border-2 border-black rounded-lg px-6 py-4 text-2xl font-semibold bg-white hover:bg-black hover:text-white transition-colors w-fit">
+      <a href="/chattanooga" class="inline-flex items-center gap-3 border-2 border-black rounded-lg px-6 py-4 text-2xl font-semibold bg-black text-white hover:bg-gray-800 transition-colors w-fit">
         <span class="text-customGreen1">→</span> Chattanooga, TN
       </a>
       <!-- <div class="inline-flex items-center gap-3 border-2 border-gray-300 rounded-lg px-6 py-4 text-2xl font-semibold text-black w-fit cursor-not-allowed bg-white">
