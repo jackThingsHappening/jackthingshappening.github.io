@@ -1042,8 +1042,9 @@
     "slug": "chattanooga-boat-show",
     "url": "https://chattanoogaboatshow.com/",
     "category": "festival",
-    "status": "pending",
+    "status": "active",
     "spotlight": true,
+    "event_date": "2027-02-04",
     "notes": "Annual boat show at the Chattanooga Convention Center, Feb 4-7, 2027, with hundreds of boats from local dealers and area boating vendors."
   },
   {
@@ -1167,5 +1168,21 @@
     "category": "food-drink",
     "status": "pending",
     "notes": "Neighborhood bar and used bookstore at 3210B Brainerd Rd, Chattanooga. Hosts one-off and recurring events: author readings, poetry nights, craft nights, trivia, bingo, ambient music nights, and drag nights. Events listed on homepage via #Events scroll."
+  },
+  {
+    "name": "The Boneyard",
+    "slug": "boneyard-bar",
+    "url": "https://www.boneyardbar.com/calender",
+    "category": "music",
+    "status": "pending",
+    "notes": "Live music bar at 26 Station Street, Chattanooga with a rolling calendar of shows — local bands, DJ nights, goth night, live band karaoke, and seasonal festivals (Nightshade, Rock the Yard). Own Squarespace calendar at boneyardbar.com/calender appears scrapable. Verify at onboarding."
+  },
+  {
+    "name": "Backstage Bar",
+    "slug": "backstage-bar",
+    "url": "https://backstagechattanooga.com/",
+    "category": "music",
+    "status": "pending",
+    "notes": "Bar at 29 Station Street on the Chattanooga Choo Choo grounds with recurring weekly live music Wednesday through Saturday at 8pm (Danimal & Friends Wed, Joey Winslett Thu, Jesse James Jungkurth Fri, Brant Hall Sat). Verify a scrapable own-site events source at onboarding; may be a recurring-type config."
   }
 ]

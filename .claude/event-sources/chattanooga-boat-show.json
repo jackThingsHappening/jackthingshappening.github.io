@@ -1,0 +1,21 @@
+{
+  "name": "Chattanooga Boat Show",
+  "type": "calendar",
+  "url": "https://chattanoogaboatshow.com/",
+  "outputDir": "src/pages/chattanooga/events/chattanooga-boat-show",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Chattanooga Convention Center",
+    "address": "1150 Carter St, Chattanooga, TN 37402",
+    "iconPath": "/images/icons-new/calendar.png",
+    "eventLink": "https://chattanoogaboatshow.com/",
+    "tags": [
+      { "type": "place", "tag": "chattanooga-boat-show" },
+      { "type": "genre", "tag": "festival" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro",
+    "spotlight": true
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-11-24"
+}
