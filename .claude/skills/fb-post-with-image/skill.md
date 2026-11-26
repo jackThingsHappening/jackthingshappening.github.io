@@ -49,18 +49,20 @@ Write copy that fits the photo and the content angle.
 - No em dashes
 - Prefer ellipses, colons, and semicolons over hyphens — even if technically incorrect
 - Write like a local, not a marketer
-- Include a thingshappening.com URL when there's a relevant page to link to
+- Do NOT include a thingshappening.com URL in the post body — Facebook suppresses link posts. Instead, add the URL as the first comment after posting (see Step 6). Always use `https://` and append `?utm_source=facebook&utm_medium=social` on the comment URL.
 - When linking to nearby city events, use the city-specific URL (e.g. `/chattanooga/events/city/ringgold-ga`) not the generic nearby page — first check `src/pages/chattanooga/events/city/` for available city slugs and confirm published events exist there
 - When mentioning travel distances, be accurate — don't round up conservatively
 
 ### URL patterns
 
-- City events: `thingshappening.com/chattanooga/events/city/{city-slug}`
-- Guide: `thingshappening.com/chattanooga/guides/{guide-slug}`
-- Guide filtered: `thingshappening.com/chattanooga/guides/{guide-slug}?tags={tag}`
-- Outdoors guide filter: `thingshappening.com/chattanooga/guides/outdoor-adventures?tags={tag}`
-- Tag page: `thingshappening.com/chattanooga/events/tag/{tag}`
-- Nearby page: `thingshappening.com/chattanooga/events/nearby`
+Always use `https://` and append `?utm_source=facebook&utm_medium=social` (or `&utm_source=facebook&utm_medium=social` if the URL already has a query string).
+
+- City events: `https://thingshappening.com/chattanooga/events/city/{city-slug}?utm_source=facebook&utm_medium=social`
+- Guide: `https://thingshappening.com/chattanooga/guides/{guide-slug}?utm_source=facebook&utm_medium=social`
+- Guide filtered: `https://thingshappening.com/chattanooga/guides/{guide-slug}?tags={tag}&utm_source=facebook&utm_medium=social`
+- Outdoors guide filter: `https://thingshappening.com/chattanooga/guides/outdoor-adventures?tags={tag}&utm_source=facebook&utm_medium=social`
+- Tag page: `https://thingshappening.com/chattanooga/events/tag/{tag}?utm_source=facebook&utm_medium=social`
+- Nearby page: `https://thingshappening.com/chattanooga/events/nearby?utm_source=facebook&utm_medium=social`
 
 ---
 
@@ -166,9 +168,17 @@ curl -s -X POST "https://graph.facebook.com/v21.0/$FB_PAGE_ID/photos" \
   -F "access_token=$FB_PAGE_ACCESS_TOKEN"
 ```
 
-A successful response returns an `id`. Report it to the user with the confirmed date/time.
+A successful response returns an `id`. Immediately add the relevant URL as the first comment:
 
-If batching multiple posts, run the API calls in parallel.
+```bash
+curl -s -X POST "https://graph.facebook.com/v21.0/<post-id>/comments" \
+  -F "message=<https://thingshappening.com/...?utm_source=facebook&utm_medium=social>" \
+  -F "access_token=$FB_PAGE_ACCESS_TOKEN"
+```
+
+Report the post ID and confirmed date/time to the user.
+
+If batching multiple posts, run the API calls in parallel, then add comments for each.
 
 If the API returns an error, report it clearly and do not retry without user input.
 

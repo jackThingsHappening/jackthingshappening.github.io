@@ -39,7 +39,7 @@ If no arguments, pick a post type below. Rotate through types for variety.
 - No em dashes
 - Prefer ellipses, colons, and semicolons over hyphens — even if technically incorrect
 - Write like a local, not a marketer
-- Include a thingshappening.com URL when there's a relevant page to link to
+- Do NOT include a thingshappening.com URL in the post body — Facebook suppresses link posts. Instead, post the URL as the first comment after posting (see Step 6). Always use `https://` and append `?utm_source=facebook&utm_medium=social` on the comment URL.
 
 ### Starter patterns — riff on these, don't copy them verbatim
 
@@ -150,7 +150,13 @@ curl -X POST "https://graph.facebook.com/v21.0/$FB_PAGE_ID/feed" \
   -d "access_token=$FB_PAGE_ACCESS_TOKEN"
 ```
 
-A successful response returns a post ID. Report it to the user and confirm the scheduled date/time.
+A successful response returns a post ID. If a URL is relevant, immediately post it as the first comment:
+
+```bash
+curl -X POST "https://graph.facebook.com/v21.0/<post-id>/comments" \
+  -d "message=<https://thingshappening.com/...?utm_source=facebook&utm_medium=social>" \
+  -d "access_token=$FB_PAGE_ACCESS_TOKEN"
+```
 
 If the API returns an error, report it clearly and do not retry without user input.
 

@@ -12,13 +12,11 @@
 }
 
 
-.gradient-text {
-  display: inline-block; /* important for clipping */
-  background: linear-gradient(135deg, #1A221B 0%, #01C47A 100%);
-  background-clip: text;
-  -webkit-background-clip: text; /* for Safari/Chrome */
-  color: transparent;
-  -webkit-text-fill-color: transparent; /* for Safari */
+.dark-green-text,
+a.dark-green-text,
+.content a.group {
+  color: #1A221B;
+  text-decoration: none;
 }
 
 #mlb2-14458342.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent, #mlb2-14458342.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {

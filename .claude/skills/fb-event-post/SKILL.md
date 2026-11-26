@@ -36,7 +36,7 @@ Use the body paragraph as your anchor. The body text is already in the right voi
 Rules:
 - **Hook line** — one sentence that earns the scroll-stop. Pull the most interesting detail from the body text.
 - **Body** — 1–2 sentences. Use the body paragraph's language and details; trim or reorder as needed for Facebook pacing.
-- **URL** — include the event page: `https://thingshappening.com/chattanooga/events/[slug]`
+- **URL** — do NOT put the event URL in the post body. Facebook suppresses link posts. Add it as the first comment after posting (see Step 7).
 - No emojis
 - No hashtags
 - No em dashes (see hard rule above)
@@ -117,7 +117,15 @@ curl -X POST "https://graph.facebook.com/v21.0/$FB_PAGE_ID/feed" \
   -d "access_token=$FB_PAGE_ACCESS_TOKEN"
 ```
 
-A successful response returns a post ID. Report it to the user and confirm the scheduled date/time.
+A successful response returns a post ID. Immediately add the event URL as the first comment:
+
+```bash
+curl -X POST "https://graph.facebook.com/v21.0/<post-id>/comments" \
+  -d "message=https://thingshappening.com/chattanooga/events/[slug]?utm_source=facebook&utm_medium=social" \
+  -d "access_token=$FB_PAGE_ACCESS_TOKEN"
+```
+
+Report the post ID and confirmed date/time to the user.
 
 If the API returns an error, report it clearly and do not retry without user input.
 

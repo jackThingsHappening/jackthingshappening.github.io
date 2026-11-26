@@ -39,7 +39,7 @@ Post types:
 - No em dashes
 - Prefer ellipses, colons, and semicolons over hyphens — even if technically incorrect
 - Write like a local, not a marketer
-- Include a thingshappening.com URL when there's a relevant page to link to
+- Do NOT include a thingshappening.com URL in the post body — Facebook suppresses link posts. Instead, post the URL as the first comment after each post is created (see Step 4). Always use `https://` and append `?utm_source=facebook&utm_medium=social` on the comment URL.
 
 ### Starter patterns — riff on these, don't copy them verbatim
 
@@ -117,6 +117,16 @@ curl -s -X POST "https://graph.facebook.com/v21.0/$FB_PAGE_ID/feed" \
 ```
 
 If a post returns an error, skip it, note the error, and continue with the remaining posts.
+
+After each successful post, immediately add the relevant URL as the first comment:
+
+```bash
+curl -s -X POST "https://graph.facebook.com/v21.0/<post-id>/comments" \
+  -d "message=<https://thingshappening.com/...?utm_source=facebook&utm_medium=social>" \
+  -d "access_token=$FB_PAGE_ACCESS_TOKEN"
+```
+
+Skip the comment step for engagement posts that have no relevant URL.
 
 ## Step 5 — Update the log and commit
 

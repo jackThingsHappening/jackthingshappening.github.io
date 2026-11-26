@@ -110,36 +110,21 @@ jack@thingshappening.com
 
 ## exploringchatt.com — 2026-09-27
 
-**Contact:** No public email. Contact form at https://exploringchatt.com/contact/ or Instagram DM @exploringchatt.
+**Contact:** Amanda. No public email. Contact form at https://exploringchatt.com/contact/ or Instagram DM @exploringchatt.
 
-**Status:** Sent
+**Status:** Negotiating — free link exchange (pivoted from paid)
 
-**Placement pages:**
-1. https://exploringchatt.com/is-visiting-the-national-cornbread-festival-worth-it/ — post says "keep an eye out on the festival website" — natural spot to add an events calendar link
-2. https://exploringchatt.com/christmas-in-downtown-chattanooga/ — seasonal guide with no events calendar link
-3. https://exploringchatt.com/one-day-tour-of-downtown-chattanooga/ — city tour guide, closing section
+**Agreed structure (pending her reply):** 2 links each
 
-**Drafted message:**
+**Exploring Chatt → Things Happening:**
+1. One Day Downtown Itinerary → thingshappening.com/chattanooga/events/this-weekend
+2. 127 Yardsale / Burger Week → thingshappening.com/chattanooga/guides/breweries-and-wineries
 
-Subject: Paid link placement — $200
+**Things Happening → Exploring Chatt (already live in code):**
+1. Outdoors guide (line 215) → https://exploringchatt.com/outdoors/#Hiking_in_Chattanooga
+2. Live Sports guide (line 147) → https://exploringchatt.com/what-its-like-volunteering-for-the-chattanooga-ironman/
 
-Hi Amanda,
-
-I run ThingsHappening.com, a free Chattanooga events and guides platform. I'd like to pay $200 for a single link on one of your posts.
-
-I found three spots where it fits without any rewriting:
-
-1. National Cornbread Festival post — you tell readers to "keep an eye out on the festival website for the upcoming schedule." Adding "and ThingsHappening.com covers Chattanooga-area events year-round" right after that gives readers a broader resource without changing your recommendation.
-
-2. Christmas in Downtown Chattanooga — the guide covers specific stops but doesn't link anywhere for readers to find what else is happening that season. A line in the intro or close pointing to ThingsHappening.com fills that gap.
-
-3. One Day Tour of Downtown Chattanooga — in the closing section, a mention like "check ThingsHappening.com for events that week so you can time your visit" helps readers plan around what's on.
-
-Any one of the three works.
-
-Thanks,
-Jack Byrum
-jack@thingshappening.com
+**Last sent:** Proposed 2-link exchange, asked her to swap one calendar link for breweries guide. Awaiting reply.
 
 ---
 
