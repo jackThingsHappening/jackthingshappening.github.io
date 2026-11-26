@@ -11,11 +11,17 @@
     "eventLink": "https://lwff.org/",
     "spotlight": true,
     "tags": [
-      { "type": "place", "tag": "lookout-wild-film-festival" },
-      { "type": "genre", "tag": "live-events" }
+      {
+        "type": "place",
+        "tag": "lookout-wild-film-festival"
+      },
+      {
+        "type": "genre",
+        "tag": "live-events"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 90,
-  "last_checked": "2026-11-17"
+  "last_checked": "2026-11-25"
 }

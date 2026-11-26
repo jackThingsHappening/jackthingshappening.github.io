@@ -11,8 +11,14 @@
     "iconPath": "/images/icons-new/beer.png",
     "eventLink": "https://creaturecomforts.co/events/",
     "tags": [
-      { "type": "place", "tag": "creature-comforts" },
-      { "type": "genre", "tag": "food-drink" }
+      {
+        "type": "place",
+        "tag": "creature-comforts"
+      },
+      {
+        "type": "genre",
+        "tag": "food-drink"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },

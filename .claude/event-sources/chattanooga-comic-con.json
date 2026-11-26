@@ -11,11 +11,17 @@
     "eventLink": "https://www.chattanoogacomiccon.com",
     "spotlight": true,
     "tags": [
-      { "type": "place", "tag": "chattanooga-comic-con" },
-      { "type": "genre", "tag": "live-events" }
+      {
+        "type": "place",
+        "tag": "chattanooga-comic-con"
+      },
+      {
+        "type": "genre",
+        "tag": "live-events"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 90,
-  "last_checked": "2026-11-16"
+  "last_checked": "2026-11-25"
 }

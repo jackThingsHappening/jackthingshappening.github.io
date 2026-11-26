@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/music.png",
     "eventLink": "https://www.eventbrite.com/o/67479220043",
     "tags": [
-      { "type": "place", "tag": "venue-28" },
-      { "type": "genre", "tag": "music" }
+      {
+        "type": "place",
+        "tag": "venue-28"
+      },
+      {
+        "type": "genre",
+        "tag": "music"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 14,
-  "last_checked": "2026-11-17"
+  "last_checked": "2026-11-25"
 }

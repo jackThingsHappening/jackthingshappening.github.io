@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/theater.png",
     "eventLink": "https://www.lookoutcomedyfestival.com/tickets",
     "tags": [
-      { "type": "place", "tag": "lookout-comedy-festival" },
-      { "type": "genre", "tag": "comedy" }
+      {
+        "type": "place",
+        "tag": "lookout-comedy-festival"
+      },
+      {
+        "type": "genre",
+        "tag": "comedy"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 90,
-  "last_checked": "2026-10-01"
+  "last_checked": "2026-11-25"
 }

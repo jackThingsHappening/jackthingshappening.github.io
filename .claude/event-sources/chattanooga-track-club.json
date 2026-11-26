@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/sport.png",
     "eventLink": "https://chattanoogatrackclub.org/calendar",
     "tags": [
-      { "type": "place", "tag": "chattanooga-track-club" },
-      { "type": "genre", "tag": "sports" }
+      {
+        "type": "place",
+        "tag": "chattanooga-track-club"
+      },
+      {
+        "type": "genre",
+        "tag": "sports"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 14,
-  "last_checked": "2026-11-16"
+  "last_checked": "2026-11-25"
 }

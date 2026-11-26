@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/mountains.png",
     "eventLink": "https://www.seerockcity.com/events/",
     "tags": [
-      { "type": "place", "tag": "see-rock-city" },
-      { "type": "genre", "tag": "outdoors" }
+      {
+        "type": "place",
+        "tag": "see-rock-city"
+      },
+      {
+        "type": "genre",
+        "tag": "outdoors"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 30,
-  "last_checked": "2026-11-16"
+  "last_checked": "2026-11-25"
 }

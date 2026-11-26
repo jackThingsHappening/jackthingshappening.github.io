@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/beer.png",
     "eventLink": "https://www.chattanoogaoktoberfest.com/",
     "tags": [
-      { "type": "place", "tag": "chattanooga-oktoberfest" },
-      { "type": "genre", "tag": "food-drink" }
+      {
+        "type": "place",
+        "tag": "chattanooga-oktoberfest"
+      },
+      {
+        "type": "genre",
+        "tag": "food-drink"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 90,
-  "last_checked": "2026-10-11"
+  "last_checked": "2026-11-25"
 }

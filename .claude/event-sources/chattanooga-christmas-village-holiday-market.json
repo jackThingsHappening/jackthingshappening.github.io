@@ -10,11 +10,17 @@
     "iconPath": "/images/icons-new/market.png",
     "eventLink": "https://touchtheskyevents.com/events/chattanooga-christmas-village-holiday-market/",
     "tags": [
-      { "type": "place", "tag": "chattanooga-christmas-village-holiday-market" },
-      { "type": "genre", "tag": "market" }
+      {
+        "type": "place",
+        "tag": "chattanooga-christmas-village-holiday-market"
+      },
+      {
+        "type": "genre",
+        "tag": "market"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 365,
-  "last_checked": "2026-11-16"
+  "last_checked": "2026-11-25"
 }

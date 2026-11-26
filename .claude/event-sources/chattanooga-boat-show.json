@@ -10,12 +10,18 @@
     "iconPath": "/images/icons-new/calendar.png",
     "eventLink": "https://chattanoogaboatshow.com/",
     "tags": [
-      { "type": "place", "tag": "chattanooga-boat-show" },
-      { "type": "genre", "tag": "festival" }
+      {
+        "type": "place",
+        "tag": "chattanooga-boat-show"
+      },
+      {
+        "type": "genre",
+        "tag": "festival"
+      }
     ],
     "layout": "../../../../layouts/BlogPostLayout.astro",
     "spotlight": true
   },
   "frequency_days": 7,
-  "last_checked": "2026-11-24"
+  "last_checked": "2026-11-25"
 }

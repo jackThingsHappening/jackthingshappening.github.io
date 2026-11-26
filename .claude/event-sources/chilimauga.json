@@ -11,12 +11,21 @@
     "eventLink": "https://chilimauga.com/",
     "spotlight": true,
     "tags": [
-      { "type": "place", "tag": "chilimauga" },
-      { "type": "genre", "tag": "food-drink" },
-      { "type": "city", "tag": "chickamauga-ga" }
+      {
+        "type": "place",
+        "tag": "chilimauga"
+      },
+      {
+        "type": "genre",
+        "tag": "food-drink"
+      },
+      {
+        "type": "city",
+        "tag": "chickamauga-ga"
+      }
     ],
     "layout": "../../../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 90,
-  "last_checked": "2026-11-19"
+  "last_checked": "2026-11-25"
 }
