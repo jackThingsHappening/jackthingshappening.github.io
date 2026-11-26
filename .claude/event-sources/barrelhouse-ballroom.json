@@ -19,7 +19,7 @@
         "tag": "music"
       }
     ],
-    "layout": "../../../layouts/BlogPostLayout.astro"
+    "layout": "../../../../layouts/BlogPostLayout.astro"
   },
   "frequency_days": 7,
   "last_checked": "2026-11-25"
