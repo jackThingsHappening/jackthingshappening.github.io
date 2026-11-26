@@ -8,6 +8,8 @@ Drafted outreach messages. One entry per domain, newest at the bottom.
 
 **Contact:** Contact form only — no public email. Paste into https://wandernorthgeorgia.com/contact/
 
+**Status:** Sent
+
 **Placement pages:**
 1. https://wandernorthgeorgia.com/cloudland-canyon-state-park/ — after trails/camping section — "Chattanooga events and things to do"
 2. https://wandernorthgeorgia.com/lula-lake-land-trust/ — Lookout Mountain mention — "Chattanooga events and things to do"
@@ -15,24 +17,24 @@ Drafted outreach messages. One entry per domain, newest at the bottom.
 
 **Drafted message:**
 
-Subject: Paid link placement — $150
+Subject: Paid link placement — $200
 
 Hi,
 
-I run ThingsHappening.com, a Chattanooga events calendar. I'd like to pay $150 for a single link to our site placed on one of your existing posts.
+I run ThingsHappening.com, a free Chattanooga events and guides platform. I'd like to pay $200 for a single link to our site placed on one of your existing posts.
 
 I've already found three spots where it fits naturally — no rewriting needed on your end:
 
-1. Cloudland Canyon guide (/cloudland-canyon-state-park/) — after the section on trails and camping, a line like "Chattanooga is 30 minutes north and worth a night if you're already in the area — check ThingsHappening.com for what's on" fits cleanly.
+1. Cloudland Canyon guide (/cloudland-canyon-state-park/) — after the section on trails and camping. I'd prefer a link to our outdoors guide (thingshappening.com/chattanooga/guides/outdoors/), which covers all Chattanooga outdoor activities. Our Cloudland Canyon guide (thingshappening.com/chattanooga/guides/cloudland-canyon/) is a natural fit too if you'd rather keep it specific.
 
 2. Lula Lake Land Trust (/lula-lake-land-trust/) — the post mentions Lookout Mountain but doesn't note that Chattanooga sits just over the ridge. A brief mention with a link gives readers a natural next stop.
 
 3. Best North Georgia Festivals (/best-north-georgia-festivals-summer/) — the closing paragraph invites expansion. Adding "If you're heading toward Tennessee, ThingsHappening.com covers Chattanooga events year-round" takes one sentence.
 
-Any of the three works for me. If you're open to it, I'll send payment via PayPal or Venmo once the link is live.
+Any of the three works for me.
 
 Thanks,
-Jack Byram
+Jack Byrum
 jack@thingshappening.com
 
 ---
@@ -41,6 +43,8 @@ jack@thingshappening.com
 
 **Contact:** iamjujugurgel@gmail.com
 
+**Status:** Sent
+
 **Placement pages:**
 1. https://www.jujugurgel.com/post/cloudland-canyon-state-park — near Trenton/Lookout Mountain mention — "Chattanooga is 20 minutes north"
 2. https://www.jujugurgel.com/post/23-things-to-do-in-blue-ridge-in-the-winter — closing or day trip section — "events in nearby Chattanooga"
@@ -48,24 +52,24 @@ jack@thingshappening.com
 
 **Drafted message:**
 
-Subject: Paid link placement — $150
+Subject: Paid link placement — $200
 
 Hi Juju,
 
-I run ThingsHappening.com, a Chattanooga events calendar. I'd like to pay $150 for a single link on one of your existing posts.
+I run ThingsHappening.com, a free Chattanooga events and guides platform. I'd like to pay $200 for a single link on one of your existing posts.
 
 I found three spots where it fits without any rewriting:
 
-1. Cloudland Canyon post — you mention the park sits near Trenton on Lookout Mountain. Chattanooga is 20 minutes north. A line like "Chattanooga is a short drive away — ThingsHappening.com covers what's on if you want to make a night of it" fits right there.
+1. Cloudland Canyon post — you mention the park sits near Trenton on Lookout Mountain. Chattanooga is 20 minutes north. I'd prefer a link to our outdoors guide (thingshappening.com/chattanooga/guides/outdoors/) there. Our Cloudland Canyon guide (thingshappening.com/chattanooga/guides/cloudland-canyon/) is a natural fit too if you'd rather keep it specific.
 
 2. 23 Things to Do in Blue Ridge in the Winter — Blue Ridge visitors often extend the trip toward Chattanooga. A closing mention with a link gives readers a next stop.
 
 3. Tips for Visiting Blue Ridge, GA — same angle, in the trip planning section.
 
-Any one of the three works. I'll pay via PayPal or Venmo once the link is live.
+Any one of the three works.
 
 Thanks,
-Jack Byram
+Jack Byrum
 jack@thingshappening.com
 
 ---
@@ -74,6 +78,8 @@ jack@thingshappening.com
 
 **Contact:** sales@brookandholler.com
 
+**Status:** Drafted
+
 **Placement pages:**
 1. https://brookandholler.com/blogs/trail-guides/soaking-in-the-views-from-the-overlook-trail-of-coudland-canyon-state-park-georgia — post already mentions Chattanooga by name at the close
 2. https://brookandholler.com/blogs/trail-guides/the-waterfalls-trail-of-cloudland-canyon-state-park-georgia — same GA/TN border context
@@ -81,23 +87,23 @@ jack@thingshappening.com
 
 **Drafted message:**
 
-Subject: Paid link placement — $150
+Subject: Paid link placement — $200
 
 Hi,
 
-I run ThingsHappening.com, a Chattanooga events calendar. I'd like to pay $150 for a single link on one of your trail guides.
+I run ThingsHappening.com, a free Chattanooga events and guides platform. I'd like to pay $200 for a single link on one of your trail guides.
 
-Your Cloudland Canyon Overlook Trail post already closes with a mention of Chattanooga — "one of the hidden gems on the outskirts of Chattanooga." That line is a natural landing spot. A link to ThingsHappening.com right there gives hikers a resource for planning the rest of the trip once they cross into Tennessee.
+Your Cloudland Canyon Overlook Trail post already closes with a mention of Chattanooga — "one of the hidden gems on the outskirts of Chattanooga." That line is a natural landing spot. I'd prefer a link to our outdoors guide (thingshappening.com/chattanooga/guides/outdoors/) there. Our Cloudland Canyon guide (thingshappening.com/chattanooga/guides/cloudland-canyon/) is a natural fit too if you'd rather keep it specific.
 
 Two other options if you prefer:
 
 1. The Cloudland Canyon Waterfalls Trail post — same park, same Chattanooga-adjacent angle.
 2. The Tallulah Gorges guide — regional Georgia travel where a Chattanooga day trip mention fits cleanly at the close.
 
-Any of the three works. I'll pay via PayPal or Venmo once the link is live.
+Any of the three works.
 
 Thanks,
-Jack Byram
+Jack Byrum
 jack@thingshappening.com
 
 ---
@@ -106,6 +112,8 @@ jack@thingshappening.com
 
 **Contact:** No public email. Contact form at https://exploringchatt.com/contact/ or Instagram DM @exploringchatt.
 
+**Status:** Sent
+
 **Placement pages:**
 1. https://exploringchatt.com/is-visiting-the-national-cornbread-festival-worth-it/ — post says "keep an eye out on the festival website" — natural spot to add an events calendar link
 2. https://exploringchatt.com/christmas-in-downtown-chattanooga/ — seasonal guide with no events calendar link
@@ -113,11 +121,11 @@ jack@thingshappening.com
 
 **Drafted message:**
 
-Subject: Paid link placement — $150
+Subject: Paid link placement — $200
 
 Hi Amanda,
 
-I run ThingsHappening.com, a Chattanooga events calendar. I'd like to pay $150 for a single link on one of your posts.
+I run ThingsHappening.com, a free Chattanooga events and guides platform. I'd like to pay $200 for a single link on one of your posts.
 
 I found three spots where it fits without any rewriting:
 
@@ -127,10 +135,10 @@ I found three spots where it fits without any rewriting:
 
 3. One Day Tour of Downtown Chattanooga — in the closing section, a mention like "check ThingsHappening.com for events that week so you can time your visit" helps readers plan around what's on.
 
-Any one of the three works. I'll pay via PayPal or Venmo once the link is live.
+Any one of the three works.
 
 Thanks,
-Jack Byram
+Jack Byrum
 jack@thingshappening.com
 
 ---
@@ -138,6 +146,8 @@ jack@thingshappening.com
 ## thetravelingwildflower.com — 2026-10-01
 
 **Contact:** janessa.jandt@gmail.com
+
+**Status:** Drafted
 
 **Result:** No fit. Site covers Midwest, Oregon, California, and Florida. No Southeast or Tennessee content found. No natural placement available.
 
@@ -147,6 +157,8 @@ jack@thingshappening.com
 
 **Contact:** info@backyardknoxville.com
 
+**Status:** Sent
+
 **Placement pages:**
 1. https://backyardknoxville.com/weekend-getaways-near-knoxville/ — "Weekend In Chattanooga, TN" section, near "fun downtown filled with a variety of good local restaurants and breweries" — "things happening in Chattanooga"
 2. https://backyardknoxville.com/weekend-getaways/ — "Small City Getaways" section, Chattanooga card in the list — "Chattanooga events"
@@ -154,11 +166,11 @@ jack@thingshappening.com
 
 **Drafted message:**
 
-Subject: Paid link placement - $150
+Subject: Paid link placement - $200
 
 Hi Amy and Amanda,
 
-I run ThingsHappening.com, a Chattanooga events and guides site. I'd like to pay $150 for a single link on one of your existing posts.
+I run ThingsHappening.com, a Chattanooga events and guides site. I'd like to pay $200 for a single link on one of your existing posts.
 
 You already cover Chattanooga in three places. No rewriting needed.
 
@@ -168,10 +180,10 @@ You already cover Chattanooga in three places. No rewriting needed.
 
 3. Beyond Knoxville page — you mention "urban exploration in a city like Chattanooga." Linking that phrase to ThingsHappening.com fits naturally.
 
-Any of the three works. I'll pay via PayPal or Venmo once the link is live.
+Any of the three works.
 
 Thanks,
-Jack Byram
+Jack Byrum
 jack@thingshappening.com
 
 ---
@@ -180,6 +192,8 @@ jack@thingshappening.com
 
 **Contact:** hello@whereistara.com
 
+**Status:** Drafted
+
 **Placement pages:**
 1. https://whereistara.com/weekend-in-chattanooga/ — Chattanooga Market section, near "It's held every Sunday from April to December in the First Horizon Pavilion and is a producer-only market" — "things happening in Chattanooga"
 2. https://whereistara.com/east-tennessee-spooky-season/ — Haunted Chattanooga Market section — "Chattanooga events calendar"
@@ -187,11 +201,11 @@ jack@thingshappening.com
 
 **Drafted message:**
 
-Subject: Paid link placement - $150
+Subject: Paid link placement - $200
 
 Hi Tara,
 
-I run ThingsHappening.com, a Chattanooga events and guides site. I'd like to pay $150 for a single link on one of your existing posts.
+I run ThingsHappening.com, a Chattanooga events and guides site. I'd like to pay $200 for a single link on one of your existing posts.
 
 You already cover Chattanooga well. I spotted three spots where a link fits without any rewriting.
 
@@ -201,10 +215,10 @@ You already cover Chattanooga well. I spotted three spots where a link fits with
 
 3. Deep South Road Trip — in the Tennessee section. A brief mention of Chattanooga as a stop between Nashville and Memphis, linking "things to do in Chattanooga," gives road trippers an extra option.
 
-Any of the three works. I'll pay via PayPal or Venmo once the link is live.
+Any of the three works.
 
 Thanks,
-Jack Byram
+Jack Byrum
 jack@thingshappening.com
 
 ---
@@ -213,6 +227,8 @@ jack@thingshappening.com
 
 **Contact:** britt@quirkytravelguy.com
 
+**Status:** Sent 2026-11-24
+
 **Placement pages:**
 1. https://quirkytravelguy.com/things-to-do-chattanooga-tennessee/ — Chattanooga Market section, near "Find local goods, flowers, chocolates, artwork, soap, food, live music, and more at the massive Chattanooga Market" — "things happening in Chattanooga"
 2. https://quirkytravelguy.com/new-orleans-to-nashville-road-trip-drive/ — Chattanooga section, near "I found no fewer than 56 fun Chattanooga activities" — "Chattanooga events"
@@ -220,11 +236,11 @@ jack@thingshappening.com
 
 **Drafted message:**
 
-Subject: Paid link placement - $150
+Subject: Paid link placement - $200
 
 Hi Britt,
 
-I run ThingsHappening.com, a Chattanooga events and guides site. I'd like to pay $150 for a single link on one of your existing posts.
+I run ThingsHappening.com, a Chattanooga events and guides site. I'd like to pay $200 for a single link on one of your existing posts.
 
 You already cover Chattanooga well. Here are three spots where a link fits without any rewriting.
 
@@ -234,10 +250,10 @@ You already cover Chattanooga well. Here are three spots where a link fits witho
 
 3. Atlanta to New Orleans road trip — in the Chattanooga/Huntsville detour section. After "The city 118 miles north of Atlanta has a variety of outdoor and historic sites to explore," linking "things to do in Chattanooga" points road trippers to our events calendar.
 
-Any of the three works. I'll pay via PayPal or Venmo once the link is live.
+Any of the three works.
 
 Thanks,
-Jack Byram
+Jack Byrum
 jack@thingshappening.com
 
 ---
@@ -246,6 +262,8 @@ jack@thingshappening.com
 
 **Contact:** alanna@periodicadventures.com
 
+**Status:** Drafted
+
 **Placement pages:**
 1. https://periodicadventures.com/best-spring-vacations-in-the-us/ — "Underrated Cities" section, Chattanooga #13, near "Chattanooga is the perfect destination for a long weekend getaway" — "things happening in Chattanooga"
 2. https://periodicadventures.com/best-spring-vacations-in-the-us/ — activities sub-section, near "a trip up Lookout Mountain will give you the best views of Tennessee and Georgia in full bloom" — "Chattanooga spring events"
@@ -253,11 +271,11 @@ jack@thingshappening.com
 
 **Drafted message:**
 
-Subject: Paid link placement - $150
+Subject: Paid link placement - $200
 
 Hi Alanna,
 
-I run ThingsHappening.com, a Chattanooga events and guides site. I'd like to pay $150 for a single link on one of your existing posts.
+I run ThingsHappening.com, a Chattanooga events and guides site. I'd like to pay $200 for a single link on one of your existing posts.
 
 Your best spring vacations article already covers Chattanooga. Here are two spots where a link fits with no rewriting needed.
 
@@ -265,12 +283,11 @@ Your best spring vacations article already covers Chattanooga. Here are two spot
 
 2. In the activities sub-section — after "a trip up Lookout Mountain will give you the best views of Tennessee and Georgia in full bloom," linking "Chattanooga spring events" helps readers see what's on during their trip.
 
-If you prefer, I'd also pay $150 to add Chattanooga as a new entry to your best winter places article, alongside Charleston and Savannah, with a link to ThingsHappening.com.
+If you prefer, I'd also pay $200 to add Chattanooga as a new entry to your best winter places article, alongside Charleston and Savannah, with a link to ThingsHappening.com.
 
-I'll pay via PayPal or Venmo once the link is live.
 
 Thanks,
-Jack Byram
+Jack Byrum
 jack@thingshappening.com
 
 ---
@@ -279,6 +296,8 @@ jack@thingshappening.com
 
 **Contact:** lesli@365AtlantaTraveler.com
 
+**Status:** Drafted
+
 **Placement pages:**
 1. https://365atlantatraveler.com/day-trips-from-atlanta-out-of-state/ — Chattanooga section, near "The city sits on the Tennessee River, with a revitalized riverfront that's perfect for walking" — "things to do in Chattanooga"
 2. https://365atlantatraveler.com/christmas-in-tennessee/ — Reindeer on the Riverfront section, near "Have a magical time on the Chattanooga Riverfront during the city's annual Reindeer on the Riverfront & Lighted Boat Parade" — "Chattanooga Christmas events"
@@ -286,11 +305,11 @@ jack@thingshappening.com
 
 **Drafted message:**
 
-Subject: Paid link placement - $150
+Subject: Paid link placement - $200
 
 Hi Lesli,
 
-I run ThingsHappening.com, a Chattanooga events and guides site. I'd like to pay $150 for a single link on one of your existing posts.
+I run ThingsHappening.com, a Chattanooga events and guides site. I'd like to pay $200 for a single link on one of your existing posts.
 
 You cover Chattanooga on several pages. Here are three spots where a link fits with no rewriting needed.
 
@@ -300,10 +319,10 @@ You cover Chattanooga on several pages. Here are three spots where a link fits w
 
 3. Chattanooga National Park City — near "over 50 activities and events are planned across the city." Linking "Chattanooga events" there gives readers a way to find what's happening during their visit.
 
-Any of the three works. I'll pay via PayPal or Venmo once the link is live.
+Any of the three works.
 
 Thanks,
-Jack Byram
+Jack Byrum
 jack@thingshappening.com
 
 ---
@@ -311,6 +330,8 @@ jack@thingshappening.com
 ## chattanooga.gov — 2026-11-22
 
 **Contact:** Unknown — no contact found. Target page: https://chattanooga.gov/stay-informed/new-residents. Email addressed to Eric; find the right contact before sending.
+
+**Status:** Sent 2026-11-24
 
 **Placement pages:**
 1. https://chattanooga.gov/stay-informed/new-residents — alongside existing local guides — "free Chattanooga events directory"
@@ -339,6 +360,8 @@ ThingsHappening.com
 
 **Contact:** colemans@colemanconcierge.com
 
+**Status:** Sent 2026-11-24
+
 **Placement pages:**
 1. https://www.colemanconcierge.com/destinations/tennessee/ — Chattanooga section, near "Enjoy a moment on Chattanooga's Riverwalk" — "things happening in Chattanooga"
 2. https://www.colemanconcierge.com/destinations/georgia/ — Lookout Mountain section, near "Lula Lake trails are located just outside of Chattanooga" — "Chattanooga events guide"
@@ -346,11 +369,11 @@ ThingsHappening.com
 
 **Drafted message:**
 
-Subject: Paid link placement - $150
+Subject: Paid link placement - $200
 
 Hi Ed and Jenn,
 
-I run ThingsHappening.com, a Chattanooga events and guides site. I'd like to pay $150 for a single link on one of your existing posts.
+I run ThingsHappening.com, a Chattanooga events and guides site. I'd like to pay $200 for a single link on one of your existing posts.
 
 Your site already mentions Chattanooga in three natural spots. No rewriting needed.
 
@@ -360,10 +383,49 @@ Your site already mentions Chattanooga in three natural spots. No rewriting need
 
 3. Waterfalls in Gatlinburg — you write "Abrams Falls reminds me of Lula Lakes in Chattanooga." Linking "Lula Lakes in Chattanooga" or adding "things to do in Chattanooga" right there gives readers a natural next stop.
 
-Any of the three works. I'll pay via PayPal or Venmo once the link is live.
+Any of the three works.
 
 Thanks,
-Jack Byram
+Jack Byrum
+jack@thingshappening.com
+
+---
+
+## southerntrippers.com — 2026-11-24
+
+**Contact:** victoriayore@gmail.com
+
+**Status:** Drafted
+
+**Placement pages:**
+1. https://southerntrippers.com/best-things-to-do-in-lookout-mountain-ga-tn/ — Reflection Riding section, near "located in Chattanooga, Tennessee, and very close to Lookout Mountain" — outdoors guide (preferred) or Cloudland Canyon guide
+2. https://southerntrippers.com/weekend-getaways-in-tennessee/ — Chattanooga section close, after Ruby Falls and Aquarium — outdoors guide
+3. https://southerntrippers.com/things-to-do-in-tennessee/ — Southern Belle Riverboat section, near "things to do in Chattanooga, Tennessee" — outdoors guide
+
+**Drafted message:**
+
+Subject: Paid link placement - $200
+
+Hi Victoria,
+
+Your Lookout Mountain guide mentions Chattanooga throughout. Reflection Riding, the Incline Railway views, and Sunset Rock all point readers toward the city. Those readers need a next step once they cross into Tennessee.
+
+I run ThingsHappening.com, a Chattanooga events and guides site.
+
+I'd prefer a link to our outdoors guide (thingshappening.com/chattanooga/guides/outdoors/) in the Reflection Riding section. It gives readers a planning resource for the Chattanooga side of the trip. Our Cloudland Canyon guide (thingshappening.com/chattanooga/guides/cloudland-canyon/) is a natural fit too. Use it if you'd rather keep the link specific to the North Georgia outdoor theme.
+
+Two other options if you prefer:
+
+1. Weekend getaways in Tennessee (/weekend-getaways-in-tennessee/), in the Chattanooga section after listing Ruby Falls and the Aquarium. A link to our outdoors guide gives readers a next step.
+
+2. Things to do in Tennessee (/things-to-do-in-tennessee/), near "things to do in Chattanooga, Tennessee" in the Southern Belle Riverboat section.
+
+$200 for one link on any of the three pages, paid via PayPal or Venmo once it's live.
+
+If you're not the right person, would you mind passing this along?
+
+Thanks,
+Jack Byrum
 jack@thingshappening.com
 
 ---

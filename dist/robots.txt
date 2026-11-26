@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://thingshappening.com/sitemap-index.xml

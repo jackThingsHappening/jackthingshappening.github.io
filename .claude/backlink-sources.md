@@ -21,10 +21,10 @@ Tracks every site researched for paid backlink opportunities. One row per domain
 | 2026-10-01 | quirkytravelguy.com | Email: britt@quirkytravelguy.com | Yes | https://quirkytravelguy.com/contact/ |
 | 2026-10-01 | periodicadventures.com | Email: alanna@periodicadventures.com | Yes | https://periodicadventures.com/work-with-me/ |
 | 2026-10-01 | 365atlantatraveler.com | Email: lesli@365AtlantaTraveler.com | Yes | https://365atlantatraveler.com/about/ |
-| 2026-10-01 | travelmakesmehappy.com | Pending | No | https://travelmakesmehappy.com/ |
-| 2026-10-01 | ourlittlevoyages.com | Pending | No | https://ourlittlevoyages.com |
-| 2026-10-01 | eccontessa.com | Pending | No | https://eccontessa.com/ |
-| 2026-10-01 | southerntrippers.com | Pending | No | https://southerntrippers.com/ |
+| 2026-10-01 | travelmakesmehappy.com | Email: kj@travelmakesmehappy.com | No fit | https://travelmakesmehappy.com/contact-media-inquiries/ |
+| 2026-10-01 | ourlittlevoyages.com | Email: hello@ourlittlevoyages.com | No fit | https://ourlittlevoyages.com/contact-me/ |
+| 2026-10-01 | eccontessa.com | Contact form (email protected) | No fit | https://eccontessa.com/get-in-touch/ |
+| 2026-10-01 | southerntrippers.com | Email: victoriayore@gmail.com | Yes | https://southerntrippers.com/contact-us/ |
 | 2026-10-01 | acaponeconnection.com | Pending | No | https://www.acaponeconnection.com/ |
 | 2026-10-01 | paigemindsthegap.com | Pending | No | https://paigemindsthegap.com/ |
 | 2026-10-01 | tennesseetrekkn.com | Pending | No | https://tennesseetrekkn.com/ |

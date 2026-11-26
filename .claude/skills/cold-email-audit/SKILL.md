@@ -26,6 +26,8 @@ Are phrases like "I think," "I believe," "might be useful," or "could be a good 
 **4. Redirect ask**
 Does the email include a line for when the recipient isn't the right person — e.g. "If you're not the right person, would you mind passing this along?"
 
+This only applies to organizations (city sites, companies, teams). Skip this check for solo creators — personal travel bloggers, independent writers, one-person sites. A redirect ask reads as filler when there is clearly only one person managing the site.
+
 **5. Logical flow**
 Does each paragraph follow from the last? A reader should never have to guess why two consecutive paragraphs are related. The most common failure: naming a placement location before explaining what ThingsHappening is, so the product description lands without context.
 

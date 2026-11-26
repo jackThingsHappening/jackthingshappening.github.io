@@ -1,6 +1,6 @@
 ---
 name: backlink-outreach
-description: Research a target website, find natural link placement pages, draft a $150 paid backlink pitch, and log everything to the outreach files
+description: Research a target website, find natural link placement pages, draft a $200 paid backlink pitch, and log everything to the outreach files
 argument-hint: <target website URL>
 ---
 
@@ -59,19 +59,40 @@ Pick the top 3 placements. For each, note:
 - Exact suggested anchor text
 - One sentence describing why it fits
 
+## Step 3b — Identify the best ThingsHappening link target
+
+Based on the target site's content, pick the most relevant ThingsHappening.com guide to link to. Guides are almost always a better fit than the homepage.
+
+Available guides (check thingshappening.com/chattanooga/guides/ for the full list):
+- Outdoors: thingshappening.com/chattanooga/guides/outdoors/ — preferred for hiking, nature, and outdoor travel content
+- Cloudland Canyon: thingshappening.com/chattanooga/guides/cloudland-canyon/ — natural fit when the target page mentions Cloudland Canyon specifically
+
+If the target content is about Cloudland Canyon or similar outdoor sites, offer both: outdoors guide as the preferred link, Cloudland Canyon guide as the natural-fit alternative. Use this language: "I'd prefer a link to our outdoors guide (URL) — it covers all Chattanooga outdoor activities. Our Cloudland Canyon guide (URL) is a natural fit too if you'd rather keep it specific."
+
+For non-outdoor content (events, food, festivals), link to the most relevant guide or the homepage if no guide matches.
+
 ## Step 4 — Draft the pitch email
 
-Write a short, direct pitch. Follow these rules:
-- STE writing style: sentences under 20 words, active voice, no filler phrases
+Write a short, direct pitch. Follow these rules strictly:
+
+**Structure (in this order):**
+1. Open by naming their specific page and why it fits — do NOT open with "I run ThingsHappening.com"
+2. One sentence introducing ThingsHappening.com as a Chattanooga events and guides site
+3. The specific link you're proposing (from Step 3b), with the placement location named
+4. Additional placement options if relevant
+5. Redirect ask: "If you're not the right person, would you mind passing this along?"
+
+**Style:**
+- STE: sentences under 20 words, active voice, no filler phrases
 - No em dashes
-- Lead with fit, not features — open by naming their specific page, then explain how ThingsHappening belongs there
-- Make the value case for their audience, not for ThingsHappening ("useful for people exploring the region," not "great for our traffic")
-- Cut hedges — no "I think it would be useful"; just say what it does
-- Name the specific pages and placements so they don't have to do any work
-- Offer $150 for one link on one of the three pages
-- Offer payment via PayPal or Venmo once the link is live
-- Include a redirect ask at the end ("If you're not the right person, would you mind passing this along?")
-- Sign as Jack Byrum, jack@thingshappening.com
+- Cut hedges — no "I think," "might be useful," "could be a good fit"
+- Name the specific pages and placements — they should not have to do any work
+
+**Offer:**
+- $200 for one link on one of the three pages
+- Payment via PayPal or Venmo once the link is live
+
+**Sign as:** Jack Byrum, jack@thingshappening.com
 
 If the site only has a contact form (no email), note that at the top of the draft so the user knows to paste it into the form.
 
@@ -108,7 +129,7 @@ Add a new entry at the bottom:
 
 **Drafted message:**
 
-Subject: Paid link placement — $150
+Subject: Paid link placement — $200
 
 [full email body]
 

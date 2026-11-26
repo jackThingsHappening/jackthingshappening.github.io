@@ -1,20 +1,22 @@
 # Vendor Backlink Outreach Log
 
-| Date | Vendor | Slug | Contact Method | Email Drafted | Contact URL |
-|------|--------|------|----------------|---------------|-------------|
-| 2026-10-11 | Crabtree Farms | crabtree-farms | rcerezo@crabtreefarms.org | Yes | https://crabtreefarms.org/about |
-| 2026-10-11 | Feed Tavern & Table Co. | feed-tavern-table | feedtableandtavern@gmail.com | Yes | https://www.feedtableandtavern.com/contact-us |
-| 2026-10-11 | The Greenhouse Barrel + Taproom | the-greenhouse | Contact Form | Yes | https://www.oddstorybrewing.co/contact |
-| 2026-10-11 | Tremont Tavern | tremont-tavern | No email - Facebook DM or phone | Yes | https://www.facebook.com/TremontTavern/ |
-| 2026-10-11 | Mash and Hops Craft Beers | mash-and-hops | No email - Facebook DM or phone | Yes | https://www.facebook.com/Mash.and.Hops1 |
-| 2026-10-11 | Barking Legs Theater | barking-legs | info@barkinglegs.org | Yes | https://www.barkinglegs.org/ourevents |
-| 2026-10-11 | Reflection Riding | reflection-riding | None - phone 423-821-1160 / social | Yes | https://reflectionriding.org/ |
+| Date | Vendor | Slug | Contact Method | Status | Contact URL |
+|------|--------|------|----------------|--------|-------------|
+| 2026-10-11 | Crabtree Farms | crabtree-farms | rcerezo@crabtreefarms.org | Drafted | https://crabtreefarms.org/about |
+| 2026-10-11 | Feed Tavern & Table Co. | feed-tavern-table | feedtableandtavern@gmail.com | Drafted | https://www.feedtableandtavern.com/contact-us |
+| 2026-10-11 | The Greenhouse Barrel + Taproom | the-greenhouse | Contact Form | Drafted | https://www.oddstorybrewing.co/contact |
+| 2026-10-11 | Tremont Tavern | tremont-tavern | No email - Facebook DM or phone | Drafted | https://www.facebook.com/TremontTavern/ |
+| 2026-10-11 | Mash and Hops Craft Beers | mash-and-hops | No email - Facebook DM or phone | Drafted | https://www.facebook.com/Mash.and.Hops1 |
+| 2026-10-11 | Barking Legs Theater | barking-legs | info@barkinglegs.org | Drafted | https://www.barkinglegs.org/ourevents |
+| 2026-10-11 | Reflection Riding | reflection-riding | None - phone 423-821-1160 / social | Drafted | https://reflectionriding.org/ |
 
 ## Crabtree Farms — 2026-10-11
 
 **ThingsHappening URL:** https://thingshappening.com/chattanooga/events/crabtree-farms/
 
 **Contact:** Rogelio Cerezo, Director of Development — rcerezo@crabtreefarms.org
+
+**Status:** Drafted
 
 **Placement:** https://crabtreefarms.org/ourevents/list/ — footer, next to Google Calendar / iCal subscribe links — "See our events on ThingsHappening.com"
 
@@ -43,6 +45,8 @@ jack@thingshappening.com
 
 **Contact:** feedtableandtavern@gmail.com
 
+**Status:** Drafted
+
 **Placement:** https://www.feedtableandtavern.com/partners — alongside existing community partner logos — "See our weekly events on ThingsHappening.com"
 
 **Drafted message:**
@@ -69,6 +73,8 @@ jack@thingshappening.com
 **ThingsHappening URL:** https://thingshappening.com/chattanooga/events/the-greenhouse/
 
 **Contact:** Contact form at https://www.oddstorybrewing.co/contact — address to Lily Jones, Events Manager
+
+**Status:** Drafted
 
 **Placement:** https://www.oddstorybrewing.co/the-greenhouse-taproom — Weekly Events & Specials section — "See all Greenhouse events on ThingsHappening.com"
 
@@ -97,6 +103,8 @@ jack@thingshappening.com
 
 **Contact:** No email found. Owner: Dustin Choate. Phone: 423-266-1996. Facebook: https://www.facebook.com/TremontTavern/
 
+**Status:** Drafted
+
 **Placement:** http://www.tremonttavern.com/open-mike-night-tuesday — bottom of page, next to Facebook and Instagram links — "See this event on ThingsHappening.com"
 
 **Drafted message:**
@@ -123,6 +131,8 @@ jack@thingshappening.com
 **ThingsHappening URL:** https://thingshappening.com/chattanooga/events/city/cleveland/mash-and-hops/
 
 **Contact:** No email found. Owner: Rob McGowan. Phone: 423-667-9245. Facebook: https://www.facebook.com/Mash.and.Hops1
+
+**Status:** Drafted
 
 **Placement:** https://www.mashandhops.com/when-is-the-next-party — bottom of page, next to Facebook and Instagram links — "See all our events on ThingsHappening.com"
 
@@ -151,6 +161,8 @@ jack@thingshappening.com
 
 **Contact:** info@barkinglegs.org (Ann Law, Founder & Executive Director)
 
+**Status:** Drafted
+
 **Placement:** https://www.barkinglegs.org/ourevents — next to the Instagram, Facebook, and YouTube social links in the footer — "See all Barking Legs events on ThingsHappening.com"
 
 **Drafted message:**
@@ -177,6 +189,8 @@ jack@thingshappening.com
 **ThingsHappening URL:** https://thingshappening.com/chattanooga/events/reflection-riding/
 
 **Contact:** No email or contact form found. Phone only: 423-821-1160. Reach out via Facebook/Instagram or call directly.
+
+**Status:** Drafted
 
 **Placement:** https://reflectionriding.org/plan-your-visit — "Check out our events" section — "Also find our events on ThingsHappening.com"
 

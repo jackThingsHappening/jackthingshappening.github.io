@@ -42,3 +42,4 @@
 | 2026-12-05 11:30am CT | guide-promotion | The Hot Chocolatier / community survival story | confections guide |
 | 2026-12-10 10:45am CT | events | Sister Hazel / Run Santa Run / Mannheim Steamroller / GrungeFest | events page |
 | 2026-11-22 10:35am CT | new-vendor | Chattanooga Zoo | chattanooga-zoo |
+| 2026-11-27 10:35am CT | event-post | Karly Hartzman w/ Verity Den | songbirds-karly-hartzman-w-verity-den |
