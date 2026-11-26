@@ -1,0 +1,28 @@
+{
+  "name": "River City Company",
+  "type": "calendar",
+  "url": "https://www.rivercitycompany.com/events",
+  "outputDir": "src/pages/chattanooga/events/reindeer-on-the-riverfront",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Coolidge Park",
+    "address": "150 River St, Chattanooga, TN 37405",
+    "iconPath": "/images/icons-new/community.png",
+    "eventLink": "https://www.rivercitycompany.com/reindeer-on-the-riverfront",
+    "spotlight": true,
+    "tags": [
+      {
+        "type": "place",
+        "tag": "reindeer-on-the-riverfront"
+      },
+      {
+        "type": "genre",
+        "tag": "live-events"
+      }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 90,
+  "last_checked": "2026-11-26",
+  "notes": "River City Company is a local nonprofit that manages downtown Chattanooga programming. Their /events page returns no results and is not auto-scrapable. Refresh manually each fall to catch Reindeer on the Riverfront date and any new events. Note: Riverfront Nights (summer concert series) is tracked separately under riverfront-nights.json."
+}

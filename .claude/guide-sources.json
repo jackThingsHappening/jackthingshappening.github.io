@@ -115,5 +115,14 @@
     "frequency_days": 30,
     "last_checked": "2026-10-13",
     "last_deepened": "2026-09-26"
+  },
+  {
+    "slug": "only-in-chattanooga",
+    "path": "src/pages/chattanooga/guides/only-in-chattanooga.mdx",
+    "title": "Only in Chattanooga — Unique Local Shops and Experiences",
+    "topic": "unique, one-of-a-kind shops, bars, and experiences found only in Chattanooga, TN — distinctive local spots including a cat cafe, vinyl record shop, teahouse, knife store, makerspace, improv comedy, cigar bar, cheese shop, comic shop, hot sauce shop, antique district, board game lounge, bookshop, alpaca farm cafe, and more",
+    "frequency_days": 30,
+    "last_checked": "2026-11-26",
+    "last_deepened": null
   }
 ]
