@@ -1194,6 +1194,14 @@
     "notes": "Local nonprofit that manages downtown Chattanooga programming including Reindeer on the Riverfront (annual holiday event, Coolidge Park, late November) and Noon Tunes. Events page is not auto-scrapable \u2014 refresh manually each fall. Riverfront Nights (summer concert series) is tracked separately."
   },
   {
+    "name": "Hamilton County Government",
+    "slug": "hamilton-county",
+    "url": "https://www.hamiltontn.gov/",
+    "category": "community",
+    "status": "blocked",
+    "notes": "Hamilton County government community events (Christmas tree lighting, etc.) have no dedicated scrapable calendar — hamiltontn.gov/things-to-do/calendar is 404, parks calendar only covers fitness/race programs. Events announced via press releases each year. Check local news (WDEF, News Channel 9, Chattanoogan) each November for the tree lighting date and details. Update christmas-tree-lighting-2026.mdx manually each year."
+  },
+  {
     "name": "The Read House Hotel",
     "slug": "read-house-hotel",
     "url": "https://www.thereadhousehotel.com/events/",
