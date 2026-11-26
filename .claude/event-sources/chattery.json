@@ -1,0 +1,20 @@
+{
+  "name": "The Chattery",
+  "type": "calendar",
+  "url": "https://thechattery.org/classes",
+  "outputDir": "src/pages/chattanooga/events/chattery",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "The Chattery",
+    "address": "1800 Rossville Ave Suite 108, Chattanooga, TN 37408",
+    "iconPath": "/images/icons-new/calendar.png",
+    "eventLink": "https://thechattery.org/classes",
+    "tags": [
+      { "type": "place", "tag": "chattery" },
+      { "type": "genre", "tag": "live-events" }
+    ],
+    "layout": "../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 7,
+  "last_checked": "2026-11-26"
+}

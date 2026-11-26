@@ -1202,6 +1202,14 @@
     "notes": "Hamilton County government community events (Christmas tree lighting, etc.) have no dedicated scrapable calendar — hamiltontn.gov/things-to-do/calendar is 404, parks calendar only covers fitness/race programs. Events announced via press releases each year. Check local news (WDEF, News Channel 9, Chattanoogan) each November for the tree lighting date and details. Update christmas-tree-lighting-2026.mdx manually each year."
   },
   {
+    "name": "The Chattery",
+    "slug": "chattery",
+    "url": "https://thechattery.org/classes",
+    "category": "community",
+    "status": "pending",
+    "notes": "Women-founded, Black-led community learning space at 1800 Rossville Ave Suite 108, Chattanooga. One-off adult education classes and workshops in arts, food, wellness, and personal development. Calendar at thechattery.org/classes with individual class pages."
+  },
+  {
     "name": "The Read House Hotel",
     "slug": "read-house-hotel",
     "url": "https://www.thereadhousehotel.com/events/",
