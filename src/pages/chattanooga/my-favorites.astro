@@ -66,7 +66,7 @@ import Footer from '../../components/Footer/Footer.astro';
   }
 
   function guideNameFromPath(path: string): string {
-    const slug = path.split('/').pop() || path;
+    const slug = path.replace(/\/$/, '').split('/').pop() || path;
     return slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
   }
 
