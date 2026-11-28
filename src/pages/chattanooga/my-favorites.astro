@@ -15,8 +15,8 @@ import Footer from '../../components/Footer/Footer.astro';
         <div class="max-w-5xl mx-auto px-3">
           <h1 style="font-family: 'Libre Baskerville', serif; font-size: clamp(2.75rem, 5vw, 4.5rem);">My Favorites</h1>
           <div class="text-lg text-white-700 mt-4 max-w-2xl space-y-2">
-            <p>Star any event or guide item to save it here. Your favorites stay saved between visits. Nothing is stored on a server, it all lives in your browser's local storage.</p>
-            <p>To save an event, click the star icon on any event card. To save a guide item, click the star on any item inside an <a href="/chattanooga/guides/tag/interactive" class="underline hover:text-customGreen1">interactive guide</a>.</p>
+            <p><span class="underline decoration-customGreen1 decoration-2 underline-offset-4">Star</span> any <a href="/chattanooga/events/page/1" class="underline decoration-customGreen1 decoration-2 underline-offset-4 hover:text-customGreen1">event</a> or <a href="/chattanooga/guides/tag/interactive" class="underline decoration-customGreen1 decoration-2 underline-offset-4 hover:text-customGreen1">guide</a> item to save it here. Your favorites stay saved between visits. Nothing is stored on a server, it all lives in your browser's local storage.</p>
+            <p>To save an event, click the star icon on any event card. To save a guide item, click the star on any item inside an <a href="/chattanooga/guides/tag/interactive" class="hover:text-customGreen1">interactive guide</a>.</p>
           </div>
         </div>
       </div>
@@ -26,14 +26,19 @@ import Footer from '../../components/Footer/Footer.astro';
           Nothing saved yet. Browse events and guides and click the star to save items.
         </div>
 
+        <div id="sort-controls" class="hidden flex flex-wrap items-center gap-2 mb-8">
+          <button data-sort="recent" class="sort-btn px-3 py-1 rounded-full border border-logoDarkGreen text-sm bg-logoDarkGreen text-white transition-colors">Recent</button>
+          <button data-sort="abc" class="sort-btn px-3 py-1 rounded-full border border-logoDarkGreen text-sm bg-white text-logoDarkGreen transition-colors">A–Z</button>
+        </div>
+
         <section id="events-section" class="hidden mb-12">
           <h2 class="text-3xl mb-6" style="font-family: 'Libre Baskerville', serif;">Saved Events</h2>
-          <ul id="events-list" class="space-y-3"></ul>
+          <ul id="events-list" class="space-y-3 list-none p-0 m-0"></ul>
         </section>
 
         <section id="guides-section" class="hidden">
           <h2 class="text-3xl mb-6" style="font-family: 'Libre Baskerville', serif;">Saved Guide Items</h2>
-          <ul id="guides-list" class="space-y-3"></ul>
+          <ul id="guides-list" class="space-y-3 list-none p-0 m-0"></ul>
         </section>
       </div>
     </main>
@@ -101,11 +106,13 @@ import Footer from '../../components/Footer/Footer.astro';
 
   function buildEventItem(event: SavedEvent): HTMLLIElement {
     const navUrl = event.url.includes('|') ? event.url.split('|')[0] : event.url;
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const isPast = event.pubDate && new Date(event.pubDate + 'T00:00:00') < today;
     const li = document.createElement('li');
-    li.className = 'flex items-start justify-between gap-4 border border-gray-200 rounded-xl px-5 py-4 hover:border-[#3CB371] transition-colors';
+    li.className = 'flex items-start justify-between gap-4 border border-black rounded-xl px-5 py-4 hover:border-[#3CB371] transition-colors max-w-2xl';
     li.innerHTML = `
       <a href="${navUrl}" class="flex-1 min-w-0 group">
-        <p class="text-xl font-medium group-hover:text-[#3CB371] transition-colors">${event.title}</p>
+        <p class="text-xl font-medium group-hover:text-[#3CB371] transition-colors flex items-center gap-2">${event.title}${isPast ? `<span class="inline-block text-sm px-3 py-0.5 rounded-full bg-customGreen1 text-white">Past</span>` : ''}</p>
         ${event.pubDate ? `<p class="text-base text-black mt-0.5">${formatDate(event.pubDate)}</p>` : ''}
       </a>
       <button class="remove-btn flex-shrink-0 text-black hover:text-red-400 transition-colors text-2xl leading-none mt-0.5" aria-label="Remove">×</button>
@@ -118,7 +125,7 @@ import Footer from '../../components/Footer/Footer.astro';
     const guideUrl = item.guidePath + '#item-' + item.number;
     const guideName = guideNameFromPath(item.guidePath);
     const li = document.createElement('li');
-    li.className = 'flex items-start justify-between gap-4 border border-gray-200 rounded-xl px-5 py-4 hover:border-[#3CB371] transition-colors';
+    li.className = 'flex items-start justify-between gap-4 border border-black rounded-xl px-5 py-4 hover:border-[#3CB371] transition-colors max-w-2xl';
     li.innerHTML = `
       <a href="${guideUrl}" class="flex-1 min-w-0 group">
         <p class="text-xl font-medium group-hover:text-[#3CB371] transition-colors">${item.title}</p>
@@ -130,13 +137,50 @@ import Footer from '../../components/Footer/Footer.astro';
     return li;
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
+  let allEvents: SavedEvent[] = [];
+  let allGuideItems: SavedGuideItem[] = [];
+
+  function renderLists(sortKey: string): void {
     const eventsList = document.getElementById('events-list')!;
     const guidesList = document.getElementById('guides-list')!;
 
-    getSavedEvents().forEach((event) => eventsList.appendChild(buildEventItem(event)));
-    getSavedGuideItems().forEach((item) => guidesList.appendChild(buildGuideItem(item)));
+    const sortedEvents = sortKey === 'abc'
+      ? [...allEvents].sort((a, b) => a.title.localeCompare(b.title))
+      : [...allEvents].reverse();
+
+    const sortedGuides = sortKey === 'abc'
+      ? [...allGuideItems].sort((a, b) => a.title.localeCompare(b.title))
+      : [...allGuideItems].reverse();
+
+    eventsList.innerHTML = '';
+    guidesList.innerHTML = '';
+    sortedEvents.forEach((e) => eventsList.appendChild(buildEventItem(e)));
+    sortedGuides.forEach((g) => guidesList.appendChild(buildGuideItem(g)));
+
+    document.querySelectorAll('.sort-btn').forEach((btn) => {
+      const active = (btn as HTMLElement).dataset.sort === sortKey;
+      btn.classList.toggle('bg-logoDarkGreen', active);
+      btn.classList.toggle('text-white', active);
+      btn.classList.toggle('bg-white', !active);
+      btn.classList.toggle('text-logoDarkGreen', !active);
+    });
 
     checkEmpty();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    allEvents = getSavedEvents();
+    allGuideItems = getSavedGuideItems();
+
+    const sortControls = document.getElementById('sort-controls')!;
+    if (allEvents.length > 0 || allGuideItems.length > 0) {
+      sortControls.classList.remove('hidden');
+    }
+
+    renderLists('recent');
+
+    document.querySelectorAll('.sort-btn').forEach((btn) => {
+      btn.addEventListener('click', () => renderLists((btn as HTMLElement).dataset.sort!));
+    });
   });
 </script>

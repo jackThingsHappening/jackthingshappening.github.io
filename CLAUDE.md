@@ -34,6 +34,10 @@ All content written for this site must follow Simplified Technical English (STE)
 
 This applies to guide copy, event descriptions, editorials, and any prose written into MDX files.
 
+## UI Style Rules
+
+No grey fonts or borders. Use black, white, or site colors (customGreen1, logoDarkGreen) instead.
+
 ## Token Efficiency
 
 When processing multiple MDX files in a batch, do not use Read+Edit per file — that doubles tool calls and burns tokens fast. Use a single Bash script with python3 to read and write all files in one pass. Reserve Read+Edit for single-file runs where precision matters.
