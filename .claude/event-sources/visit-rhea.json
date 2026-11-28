@@ -1,0 +1,21 @@
+{
+  "name": "Visit Rhea County",
+  "type": "calendar",
+  "url": "https://visitrhea.com/events/",
+  "outputDir": "src/pages/chattanooga/events/city/dayton-tn/visit-rhea",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Various Dayton & Rhea County Venues",
+    "address": "Dayton, TN 37321",
+    "iconPath": "/images/icons-new/community.png",
+    "eventLink": "https://visitrhea.com/events/",
+    "tags": [
+      { "type": "place", "tag": "visit-rhea" },
+      { "type": "genre", "tag": "community" },
+      { "type": "city", "tag": "dayton-tn" }
+    ],
+    "layout": "../../../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-11-27"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Monkey Town Brewing Co.",
+  "type": "recurring",
+  "url": "https://dayton.monkeytownbrewing.com/",
+  "events": [
+    {
+      "outputPath": "src/pages/chattanooga/events/city/dayton-tn/monkey-town-brewing/trivia-tuesday.mdx",
+      "matchHint": "Trivia Tuesday every Tuesday at 7pm"
+    },
+    {
+      "outputPath": "src/pages/chattanooga/events/city/dayton-tn/monkey-town-brewing/friday-live-music.mdx",
+      "matchHint": "Friday live music every Friday"
+    }
+  ],
+  "frequency_days": 14,
+  "last_checked": "2026-11-27"
+}
