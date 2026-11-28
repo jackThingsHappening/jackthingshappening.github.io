@@ -7,6 +7,7 @@ import Footer from '../../../../components/Footer/Footer.astro';
 import EmailSignup from '../../../../components/EmailSignup.astro';
 import ExploreHeader from '../../../../components/ExploreHeader.astro';
 import { expandEvents, sortEvents } from '../../../../utils/expandEvents';
+import RecurringToggle from '../../../../components/RecurringToggle.astro';
 
 const title = 'Nearby Cities - Events Near Chattanooga';
 const seoDescription = 'Events happening in cities near Chattanooga, TN: Cleveland, Dalton, Ringgold, and more.';
@@ -47,9 +48,15 @@ const activeCities = [...new Set(
         <p class="text-xl text-black mt-12">No upcoming nearby events, check back soon.</p>
       )}
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 mt-10">
+      {sortedEvents.length > 0 && (
+        <div class="mt-6">
+          <RecurringToggle containerId="nearby-events-grid" />
+        </div>
+      )}
+
+      <div id="nearby-events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 mt-6">
         {sortedEvents.map(p => (
-          <div class="col-span-1"><Card post={p} /></div>
+          <div class="col-span-1" data-recurring={p.recurring ? 'true' : 'false'}><Card post={p} /></div>
         ))}
       </div>
 

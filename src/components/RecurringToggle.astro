@@ -1,0 +1,94 @@
+---
+interface Props {
+  containerId: string;
+}
+const { containerId } = Astro.props;
+---
+
+<label class="recurring-toggle" data-container={containerId}>
+  <input type="checkbox" class="rt-input" />
+  <span class="rt-label">Hide recurring</span>
+  <span class="rt-track">
+    <span class="rt-thumb"></span>
+  </span>
+</label>
+
+<style is:global>
+  .recurring-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    width: fit-content;
+  }
+  .rt-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .rt-label {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  .rt-track {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    border-radius: 9999px;
+    border: 2px solid black;
+    background: white;
+    transition: background 0.15s, border-color 0.15s;
+    flex-shrink: 0;
+  }
+  .rt-thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 9999px;
+    background: black;
+    transition: transform 0.15s, background 0.15s;
+  }
+  .rt-input:checked ~ .rt-track {
+    background: #3CB371;
+    border-color: #3CB371;
+  }
+  .rt-input:checked ~ .rt-track .rt-thumb {
+    transform: translateX(20px);
+    background: white;
+  }
+</style>
+
+<script>
+  const LS_KEY = 'hideRecurring';
+
+  function applyFilter(label: HTMLElement, hidden: boolean) {
+    const container = document.getElementById(label.dataset.container!);
+    if (!container) return;
+    if (hidden) {
+      container.querySelectorAll<HTMLElement>('[data-recurring="true"]').forEach((el) => {
+        el.style.display = 'none';
+        el.dataset.recurringHidden = 'true';
+      });
+    } else {
+      container.querySelectorAll<HTMLElement>('[data-recurring-hidden="true"]').forEach((el) => {
+        el.style.display = '';
+        delete el.dataset.recurringHidden;
+      });
+    }
+  }
+
+  document.querySelectorAll<HTMLElement>('.recurring-toggle').forEach((label) => {
+    const input = label.querySelector<HTMLInputElement>('.rt-input')!;
+    const hidden = localStorage.getItem(LS_KEY) === 'true';
+    input.checked = hidden;
+    applyFilter(label, hidden);
+    input.addEventListener('change', () => {
+      localStorage.setItem(LS_KEY, String(input.checked));
+      applyFilter(label, input.checked);
+    });
+  });
+</script>

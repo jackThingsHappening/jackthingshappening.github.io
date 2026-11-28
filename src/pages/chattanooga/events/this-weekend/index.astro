@@ -7,6 +7,7 @@ import Footer from '../../../../components/Footer/Footer.astro';
 import EmailSignup from '../../../../components/EmailSignup.astro';
 import ExploreHeader from '../../../../components/ExploreHeader.astro';
 import { expandEvents, sortEvents } from '../../../../utils/expandEvents';
+import RecurringToggle from '../../../../components/RecurringToggle.astro';
 
 const title = 'This Weekend in Chattanooga';
 const seoDescription = 'Events happening this weekend in Chattanooga, TN.';
@@ -58,9 +59,12 @@ allPostsIncludingMultipleDates = sortEvents(allPostsIncludingMultipleDates);
         <span class="text-customGreen1">#this-weekend</span> events in Chattanooga
       </ExploreHeader>
       <EventsNav active="this-weekend" />
-      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 py-8" data-test="articles-section">
+      <div class="mt-6">
+        <RecurringToggle containerId="this-weekend-grid" />
+      </div>
+      <section id="this-weekend-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 pt-4 pb-8" data-test="articles-section">
         {allPostsIncludingMultipleDates.map(p => (
-          <div class="col-span-1"><Card post={p} /></div>
+          <div class="col-span-1" data-recurring={p.recurring ? 'true' : 'false'}><Card post={p} /></div>
         ))}
         {allPostsIncludingMultipleDates.length === 0 && (
           <p class="col-span-3 text-xl text-black">No events this weekend — check back soon.</p>

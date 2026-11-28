@@ -8,6 +8,7 @@ import Footer from '../../components/Footer/Footer.astro';
 import Paginator from '../../components/Paginator.astro';
 import { expandEvents, sortEvents } from '../../utils/expandEvents';
 import EmailSignup from '../../components/EmailSignup.astro';
+import RecurringToggle from '../../components/RecurringToggle.astro';
 import NearbyCitiesNav from '../../components/NearbyCitiesNav.astro';
 
 interface MarkdownFrontmatter {
@@ -188,16 +189,21 @@ const page = {
           </h1>
         </header>
         <EventsNav active="all" />
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 py-8">
+        <div class="mt-6">
+          <RecurringToggle containerId="chattanooga-events-grid" />
+        </div>
+        <section id="chattanooga-events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 pt-4 pb-8">
           {eventsPage.map((e) => (
-            <div class="col-span-1">
+            <div class="col-span-1" data-recurring={e.recurring ? 'true' : 'false'}>
               <Card post={e} />
             </div>
           ))}
         </section>
-        <EmailSignup />
         <div class="mt-4">
           <a href="/chattanooga/events/page/1" class="text-customGreen1 font-semibold underline decoration-logoDarkGreen hover:opacity-90 transition-colors text-2xl">View More Events</a>
+        </div>
+        <div class="mt-12">
+          <EmailSignup />
         </div>
       </article>
     )}

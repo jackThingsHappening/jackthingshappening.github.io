@@ -7,6 +7,7 @@ import Paginator from '../../../../components/Paginator.astro';
 import ExploreHeader from '../../../../components/ExploreHeader.astro';
 import EventsNav from '../../../../components/EventsNav.astro';
 import { expandEvents, sortEvents } from '../../../../utils/expandEvents';
+import RecurringToggle from '../../../../components/RecurringToggle.astro';
 
 export async function getStaticPaths({ paginate }) {
   const allPosts = (Object.values(import.meta.glob('../**/*.mdx', { eager: true }))).filter(
@@ -45,9 +46,12 @@ const { page } = Astro.props;
         <span class="text-customGreen1">Events</span> in Chattanooga
       </ExploreHeader>
       <EventsNav active="all" />
-      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 py-8" data-test="articles-section">
+      <div class="mt-6">
+        <RecurringToggle containerId="page-events-grid" />
+      </div>
+      <section id="page-events-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 pt-4 pb-8" data-test="articles-section">
         {page.data.map((event) => (
-          <div class="col-span-1"><Card post={event} /></div>
+          <div class="col-span-1" data-recurring={event.recurring ? 'true' : 'false'}><Card post={event} /></div>
         ))}
         {page.data.length === 0 && (
           <p class="col-span-3 text-xl text-black">No upcoming events — check back soon.</p>
