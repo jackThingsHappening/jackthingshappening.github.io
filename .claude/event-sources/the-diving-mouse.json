@@ -4,19 +4,19 @@
   "url": "https://thedivingmouse.com/",
   "events": [
     {
-      "outputPath": "src/pages/chattanooga/events/city/cleveland/the-diving-mouse/singo.mdx",
+      "outputPath": "src/pages/chattanooga/events/city/cleveland-tn/the-diving-mouse/singo.mdx",
       "matchHint": "Singo every Tuesday 4:30pm"
     },
     {
-      "outputPath": "src/pages/chattanooga/events/city/cleveland/the-diving-mouse/karaoke.mdx",
+      "outputPath": "src/pages/chattanooga/events/city/cleveland-tn/the-diving-mouse/karaoke.mdx",
       "matchHint": "Karaoke every Wednesday 4:30pm"
     },
     {
-      "outputPath": "src/pages/chattanooga/events/city/cleveland/the-diving-mouse/open-mic.mdx",
+      "outputPath": "src/pages/chattanooga/events/city/cleveland-tn/the-diving-mouse/open-mic.mdx",
       "matchHint": "Open Mic every Thursday 4:30pm"
     },
     {
-      "outputPath": "src/pages/chattanooga/events/city/cleveland/the-diving-mouse/live-music.mdx",
+      "outputPath": "src/pages/chattanooga/events/city/cleveland-tn/the-diving-mouse/live-music.mdx",
       "matchHint": "Live Music every Friday and Saturday 4:30pm"
     }
   ],

@@ -2,7 +2,7 @@
   "name": "The Princess Theatre",
   "type": "calendar",
   "url": "https://www.theprincesstheatretn.com/events/",
-  "outputDir": "src/pages/chattanooga/events/city/south-pittsburg/princess-theatre",
+  "outputDir": "src/pages/chattanooga/events/city/south-pittsburg-tn/princess-theatre",
   "slugPrefix": "",
   "defaultFrontmatter": {
     "venue": "The Princess Theatre",
@@ -12,7 +12,7 @@
     "tags": [
       { "type": "place", "tag": "princess-theatre" },
       { "type": "genre", "tag": "arts" },
-      { "type": "city", "tag": "south-pittsburg" }
+      { "type": "city", "tag": "south-pittsburg-tn" }
     ],
     "layout": "../../../../../../layouts/BlogPostLayout.astro"
   },

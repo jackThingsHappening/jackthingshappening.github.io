@@ -5,17 +5,17 @@
   "recurring": {
     "events": [
       {
-        "outputPath": "src/pages/chattanooga/events/city/cleveland/mash-and-hops/singles-night.mdx",
+        "outputPath": "src/pages/chattanooga/events/city/cleveland-tn/mash-and-hops/singles-night.mdx",
         "matchHint": "Singles Night every Tuesday 5pm\u20139pm"
       },
       {
-        "outputPath": "src/pages/chattanooga/events/city/cleveland/mash-and-hops/beer-share.mdx",
+        "outputPath": "src/pages/chattanooga/events/city/cleveland-tn/mash-and-hops/beer-share.mdx",
         "matchHint": "Beer Share on the third Sunday of every month"
       }
     ]
   },
   "calendar": {
-    "outputDir": "src/pages/chattanooga/events/city/cleveland/mash-and-hops",
+    "outputDir": "src/pages/chattanooga/events/city/cleveland-tn/mash-and-hops",
     "slugPrefix": "",
     "defaultFrontmatter": {
       "venue": "Mash and Hops Craft Beers",

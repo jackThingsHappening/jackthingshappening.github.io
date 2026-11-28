@@ -4,7 +4,7 @@
   "url": "https://farmersonfirst.org/",
   "events": [
     {
-      "outputPath": "src/pages/chattanooga/events/city/cleveland/farmers-on-first/sunday-market.mdx",
+      "outputPath": "src/pages/chattanooga/events/city/cleveland-tn/farmers-on-first/sunday-market.mdx",
       "matchHint": "Sunday market every Sunday 11am\u20132pm at First Street Square"
     }
   ],

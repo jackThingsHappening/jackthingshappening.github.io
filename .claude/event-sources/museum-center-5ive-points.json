@@ -2,7 +2,7 @@
   "name": "Museum Center at 5ive Points",
   "type": "calendar",
   "url": "https://museumcenter.org/events/",
-  "outputDir": "src/pages/chattanooga/events/city/cleveland/museum-center-5ive-points",
+  "outputDir": "src/pages/chattanooga/events/city/cleveland-tn/museum-center-5ive-points",
   "slugPrefix": "",
   "defaultFrontmatter": {
     "venue": "Museum Center at 5ive Points",
@@ -12,7 +12,7 @@
     "tags": [
       { "type": "place", "tag": "museum-center-5ive-points" },
       { "type": "genre", "tag": "arts" },
-      { "type": "city", "tag": "cleveland" }
+      { "type": "city", "tag": "cleveland-tn" }
     ],
     "layout": "../../../../../../layouts/BlogPostLayout.astro"
   },

@@ -2,7 +2,7 @@
   "name": "MainStreet Cleveland",
   "type": "calendar",
   "url": "https://msctn.org/?page_id=1938",
-  "outputDir": "src/pages/chattanooga/events/city/cleveland/mainstreet-cleveland",
+  "outputDir": "src/pages/chattanooga/events/city/cleveland-tn/mainstreet-cleveland",
   "slugPrefix": "",
   "defaultFrontmatter": {
     "venue": "MainStreet Cleveland",
