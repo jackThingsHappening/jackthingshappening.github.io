@@ -1,0 +1,21 @@
+{
+  "name": "The Princess Theatre",
+  "type": "calendar",
+  "url": "https://www.theprincesstheatretn.com/events/",
+  "outputDir": "src/pages/chattanooga/events/city/south-pittsburg/princess-theatre",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "The Princess Theatre",
+    "address": "215 S Cedar Avenue, South Pittsburg, TN 37380",
+    "iconPath": "/images/icons-new/theater.png",
+    "eventLink": "https://www.theprincesstheatretn.com/events/",
+    "tags": [
+      { "type": "place", "tag": "princess-theatre" },
+      { "type": "genre", "tag": "arts" },
+      { "type": "city", "tag": "south-pittsburg" }
+    ],
+    "layout": "../../../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-11-27"
+}

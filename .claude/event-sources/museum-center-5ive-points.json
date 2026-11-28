@@ -1,0 +1,21 @@
+{
+  "name": "Museum Center at 5ive Points",
+  "type": "calendar",
+  "url": "https://museumcenter.org/events/",
+  "outputDir": "src/pages/chattanooga/events/city/cleveland/museum-center-5ive-points",
+  "slugPrefix": "",
+  "defaultFrontmatter": {
+    "venue": "Museum Center at 5ive Points",
+    "address": "200 Inman Street E, Cleveland, TN 37311",
+    "iconPath": "/images/icons-new/museum.png",
+    "eventLink": "https://museumcenter.org/events/",
+    "tags": [
+      { "type": "place", "tag": "museum-center-5ive-points" },
+      { "type": "genre", "tag": "arts" },
+      { "type": "city", "tag": "cleveland" }
+    ],
+    "layout": "../../../../../../layouts/BlogPostLayout.astro"
+  },
+  "frequency_days": 14,
+  "last_checked": "2026-11-27"
+}
