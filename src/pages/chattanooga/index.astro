@@ -6,7 +6,7 @@ import EventsNav from '../../components/EventsNav.astro';
 import ExploreHeader from '../../components/ExploreHeader.astro';
 import Footer from '../../components/Footer/Footer.astro';
 import Paginator from '../../components/Paginator.astro';
-import { expandEvents } from '../../utils/expandEvents';
+import { expandEvents, sortEvents } from '../../utils/expandEvents';
 import EmailSignup from '../../components/EmailSignup.astro';
 import NearbyCitiesNav from '../../components/NearbyCitiesNav.astro';
 
@@ -49,9 +49,9 @@ const expanded = expandEvents(allEvents);
 const today = new Date();
 today.setHours(0, 0, 0, 0);
 
-const sortedEvents = expanded
-  .filter((e) => new Date(e.pubDate + 'T00:00:00') >= today && !e.tags?.some((t: any) => t.type === 'city'))
-  .sort((a, b) => new Date(a.pubDate + 'T00:00:00') - new Date(b.pubDate + 'T00:00:00'));
+const sortedEvents = sortEvents(
+  expanded.filter((e) => new Date(e.pubDate + 'T00:00:00') >= today && !e.tags?.some((t: any) => t.type === 'city'))
+);
 
 // Merge guides and editorials, sort by lastUpdated
 const allContent = [...guides, ...editorials];
